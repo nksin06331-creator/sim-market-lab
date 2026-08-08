@@ -54,6 +54,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "redwire-rdw",
+      "order": 3,
+      "ticker": "RDW",
+      "quoteSymbol": "RDW",
+      "name": "レッドワイヤー",
+      "nameEn": "Redwire Corporation",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "NYSE",
+      "currency": "USD",
+      "sector": "宇宙インフラ・防衛テクノロジー",
+      "reports": {
+        "company": {
+          "path": "./stocks/redwire-rdw/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/redwire-rdw/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/redwire-rdw/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

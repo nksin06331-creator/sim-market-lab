@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>レッドワイヤー（RDW）｜株価シナリオ</title>
+
+<style>
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.score b{font-size:54px;line-height:1;display:block}.score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(21px,3vw,29px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scenario{border-radius:16px;padding:18px;border:1px solid var(--line);background:#101410;position:relative;overflow:hidden;min-height:320px}.scenario:after{position:absolute;right:4px;top:-12px;font-weight:900;font-size:66px;opacity:.05;line-height:1}.scenario.bear:after{content:"B"}.scenario.base:after{content:"A"}.scenario.bull:after{content:"↑"}.scenario-head{display:flex;justify-content:space-between;gap:10px;font-weight:800}.scenario-head b{padding:4px 9px;border-radius:999px;color:#06210a;background:var(--accent)}.scenario-price{font-size:clamp(31px,4vw,42px);font-weight:900;letter-spacing:-.05em;margin:14px 0 0}.scenario.bear{border-top:4px solid var(--red)}.scenario.base{border-top:4px solid var(--accent);box-shadow:0 0 0 1px rgba(110,226,78,.12)}.scenario.bull{border-top:4px solid var(--accent-bright)}
+.small{font-size:13px;color:var(--muted)}dl{margin:16px 0 0}dl div{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding:8px 0;gap:12px}dt{color:var(--muted)}dd{margin:0;font-weight:800}.position{margin-top:20px}.position-line{height:14px;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--amber),var(--accent));position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.pin{position:absolute;top:-8px;width:7px;height:30px;background:#fff;border:2px solid #050805;border-radius:6px;left:36.1%;box-shadow:0 4px 14px rgba(0,0,0,.55)}.position-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px;gap:7px}.pill{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}
+.zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible{border-color:var(--accent);color:var(--accent)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+@media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
+</style>
+
+</head>
+<body data-stock-ticker="RDW" data-price-source="../../data/prices.json">
+
+<header class="hero">
+<div class="wrap">
+  <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
+  <h1>レッドワイヤー <small>RDW</small></h1>
+  <div class="sub">NYSE｜評価基準日 2026-08-08｜使用手法 高成長宇宙・防衛向け売上倍率シナリオ</div>
+  <div class="verdict">
+    <div class="verdict-main">
+      <span class="pill">まず結論だけ</span>
+
+      <div class="status">標準ケース手前の中立圏</div>
+
+      <p>評価基準株価は悲観〜楽観レンジの26.0%地点です。Q2売上急伸と防衛UAS需要は追い風ですが、赤字・統合・内部統制リスクも残ります。</p>
+      <p class="sub">この試算は2026年8月8日時点の公開情報で固定しています。Q2の詳細は公式10-Q確認前の暫定扱いです。</p>
+    </div>
+
+    <div class="score"><small>分析の参考スコア</small><b>61</b><small>/ 100　売買判断ではありません</small></div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$12.16</b><small data-live-price-date>2026/08/07 16:00 ET（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>$15.00</b><small>+23.4%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>$14.70</b><small>+20.9%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>高い</b><small>小型成長株、赤字、買収統合</small></div>
+  </div>
+
+</div>
+</header>
+
+
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>Q2売上は市場記事で確認した速報値を使っています。公式10-Q公開後に、粗利率・受注残・希薄化を再確認してください。</div></div>
+
+
+<nav class="report-nav"><div class="wrap">
+<button type="button" data-scroll-target="snapshot">結論</button>
+<button type="button" data-scroll-target="scenarios">3シナリオ</button>
+<button type="button" data-scroll-target="logic">計算</button>
+<button type="button" data-scroll-target="sensitivity">感応度</button>
+<button type="button" data-scroll-target="assumptions">前提</button>
+</div></nav>
+
+<main class="wrap">
+
+
+<section class="card" id="snapshot">
+  <h2>いまの株価、どこにいる？</h2>
+  <p class="lead">今の株価は、Q2売上急伸と防衛UASテーマを評価し始めています。ただし、過去高値圏ほど楽観ケースを強く織り込んでいるわけではありません。</p>
+  <div class="grid-2">
+    <div>
+      <h3>今の株価の位置</h3>
+      <p>悲観～楽観ケースの <b>26.0%</b> 地点。判定は <b>標準ケースの手前</b>。Q2の粗利率と受注残が強ければ標準ケースへ寄ります。</p>
+
+      <div class="position"><div class="position-line"><i class="pin" style="left:26.0%"></i></div><div class="position-labels"><span>Bear $8.00</span><span>Base $15.00</span><span>Bull $24.00</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>2.8倍</b>　3ケースを確率でならした値：<b>$14.70</b></p>
+    </div>
+    <div>
+      <h3>今の株価と、この分析の違い</h3>
+      <div class="compare">
+        <div><b>今の株価 26/100</b><div class="meter"><i style="width:26%"></i></div></div>
+        <div><b>この分析 42/100</b><div class="meter"><i style="width:42%"></i></div></div>
+      </div>
+
+      <p>このモデルで逆算すると、今の株価は2027年売上約$600M、EV/Sales 4倍台後半に近い成長期待を織り込む水準です。市場全体の予想ではなく、このモデル上の逆算です。</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="card" id="scenarios">
+  <h2>未来はこの3パターン</h2>
+  <p class="lead">赤字成長企業のためPERではなく売上倍率を使います。SpaceとDefenseの成長、粗利率、内部統制、株式数を主要前提にしました。</p>
+  <div class="scenarios">
+    <article class="scenario bear">
+      <div class="scenario-head"><span>悲観ケース</span><b>30%</b></div>
+      <div class="scenario-price">$8.00</div>
+      <div class="small">現値比 -34.2%</div>
+      <dl><div><dt>2027年売上</dt><dd>$500M</dd></div><div><dt>EV/Sales</dt><dd>3.5倍</dd></div><div><dt>前提</dt><dd>統合遅延・倍率低下</dd></div><div><dt>株式数</dt><dd>約1.99億株</dd></div></dl>
+
+    </article>
+    <article class="scenario base">
+      <div class="scenario-head"><span>標準ケース</span><b>50%</b></div>
+      <div class="scenario-price">$15.00</div>
+      <div class="small">現値比 +23.4%</div>
+      <dl><div><dt>2027年売上</dt><dd>$650M</dd></div><div><dt>EV/Sales</dt><dd>4.5倍</dd></div><div><dt>前提</dt><dd>UASと宇宙が堅調</dd></div><div><dt>株式数</dt><dd>約1.99億株</dd></div></dl>
+    </article>
+    <article class="scenario bull">
+      <div class="scenario-head"><span>楽観ケース</span><b>20%</b></div>
+      <div class="scenario-price">$24.00</div>
+      <div class="small">現値比 +97.4%</div>
+      <dl><div><dt>2027年売上</dt><dd>$800M</dd></div><div><dt>EV/Sales</dt><dd>6.0倍</dd></div><div><dt>前提</dt><dd>防衛UASとSpaceMDが評価拡大</dd></div><div><dt>株式数</dt><dd>約1.99億株</dd></div></dl>
+    </article></div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>この値段ならどう見る？</h2>
+
+    <div class="zone"><div><b>$8未満</b><span>★★★★</span></div><p>悲観ケース以下。赤字や統合不安をかなり織り込む価格帯です。</p></div><div class="zone"><div><b>$8〜$15</b><span>★★★</span></div><p>標準ケース手前。今の株価はこの範囲です。</p></div><div class="zone"><div><b>$15〜$24</b><span>★★</span></div><p>UASと宇宙テーマの両方が評価される価格帯です。</p></div><div class="zone"><div><b>$24超</b><span>★</span></div><p>楽観ケース超。高成長と黒字化の道筋が必要です。</p></div>
+
+  </div>
+  <div class="card">
+    <h2>株価を動かす4つ</h2>
+
+    <div class="signal"><div><b>Q2売上急伸</b><span class="up">追い風</span></div><p>売上$117.07M、過去最高が報じられました。</p></div><div class="signal"><div><b>Q1受注残$498.1M</b><span class="up">追い風</span></div><p>将来売上の見通しを支えます。</p></div><div class="signal"><div><b>買収統合</b><span class="flat">確認</span></div><p>Edge Autonomy統合が売上と利益にどう出るか確認します。</p></div><div class="signal"><div><b>内部統制</b><span class="down">注意</span></div><p>10-Kで重要な不備と是正計画が説明されています。</p></div>
+
+  </div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>ここは普通に強い</h2>
+    <ul class="clean"><li>Q2売上は$117.07M、過去最高売上が報じられました。</li><li>Q1 2026の受注残は$498.1M、Book-to-Billは1.92でした。</li><li>Stalker UASや防衛向け注文が継続しています。</li><li>SpaceMDや施設拡張で長期テーマもあります。</li></ul>
+
+  </div>
+  <div class="card">
+    <h2>ここで事故るかも</h2>
+    <ul class="clean"><li>GAAPでは赤字です。Q1純損失は$76.5Mでした。</li><li>Q2詳細は公式10-Qで粗利率・損失・株式数の確認が必要です。</li><li>買収統合と内部統制の是正が残ります。</li><li>小型株で値動きが大きく、希薄化や政府予算変更もリスクです。</li></ul>
+
+  </div>
+</section>
+
+
+<section class="card" id="logic">
+  <h2>数字の作り方</h2>
+  <p class="lead">主計算は売上倍率です。赤字成長企業のため、短期PERよりも将来売上とEV/Salesを使いました。</p>
+  <div class="table-wrap"><table>
+  <thead><tr><th>ケース</th><th>2027年売上</th><th>EV/Sales</th><th>計算株価</th><th>確率</th><th>確率加重</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>$500M</td><td>3.5倍</td><td>$8.00</td><td>30%</td><td>$2.40</td></tr><tr><td>標準</td><td>$650M</td><td>4.5倍</td><td>$15.00</td><td>50%</td><td>$7.50</td></tr><tr><td>楽観</td><td>$800M</td><td>6.0倍</td><td>$24.00</td><td>20%</td><td>$4.80</td></tr></tbody>
+  </table></div>
+
+  <p class="notice"><b>重要：</b>現在株価に合わせて標準ケースを置いていません。Q2速報、Q1受注残、UAS需要、統合リスクを踏まえた条件付き試算です。</p>
+</section>
+
+
+<section class="card" id="conditions">
+  <h2>この未来になる条件</h2>
+  <details open><summary>悲観ケース：$8 / 確率30%</summary><p>Q2後に利益率や統合不安が重く見られ、評価倍率が下がるケースです。</p></details><details><summary>標準ケース：$15 / 確率50%</summary><p>防衛UASと宇宙インフラが堅調に伸び、売上倍率が適度に維持されるケースです。</p></details><details><summary>楽観ケース：$24 / 確率20%</summary><p>UAS大型受注、SpaceMD、粗利率改善、内部統制改善が重なるケースです。</p></details>
+
+</section>
+
+
+<section class="grid-2" id="sensitivity">
+  <div class="card">
+    <h2>数字がズレるとどうなる？</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>前提</th><th>弱い</th><th>標準</th><th>強い</th></tr></thead>
+      <tbody><tr><td>2027年売上</td><td>$550M → $11</td><td>$650M → $15</td><td>$750M → $19</td></tr><tr><td>EV/Sales</td><td>3.5倍 → $9</td><td>4.5倍 → $15</td><td>5.5倍 → $21</td></tr></tbody>
+    </table></div>
+    <p class="small">1変数だけを動かした簡易感応度です。実際には売上成長と倍率が同時に動きます。</p>
+  </div>
+  <div class="card">
+    <h2>どの価格に行きやすい？</h2>
+    <p class="lead">モンテカルロではなく、悲観・標準・楽観の3点分布です。</p>
+    <div class="dist-row"><span>$8</span><div class="track"><i style="width:30%"></i></div><b>30%</b></div><div class="dist-row"><span>$15</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>$24</span><div class="track"><i style="width:20%"></i></div><b>20%</b></div>
+
+    <p>中心は標準ケースです。ただし小型宇宙・防衛株として、材料と市場倍率で大きく振れやすい銘柄です。</p>
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>次の決算で見る場所</h2>
+  <div class="signal"><div><b>Q2 10-Q</b></div><p>売上、粗利率、純損失、受注残、株式数を確認します。</p></div><div class="signal"><div><b>Stalker UAS注文</b></div><p>追加注文と納入能力を確認します。</p></div><div class="signal"><div><b>内部統制の是正</b></div><p>監査・開示上のリスク低下を確認します。</p></div>
+
+</section>
+
+
+<section class="card" id="assumptions">
+  <h2>使った数字と前提</h2>
+  <div class="table-wrap"><table>
+  <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
+  <tbody><tr><td>評価基準株価</td><td>$12.16</td><td>市場データで確認済み</td><td>2026/08/07終値</td></tr><tr><td>Q2売上</td><td>$117.07M</td><td>市場記事で確認</td><td>2026/08/06</td></tr><tr><td>Q1売上</td><td>$97.0M</td><td>公式情報で確認済み</td><td>2026年1〜3月</td></tr><tr><td>Q1受注残</td><td>$498.1M</td><td>公式情報で確認済み</td><td>2026/03/31</td></tr></tbody>
+  </table></div>
+</section>
+
+
+<section class="card">
+  <h2>詳しく見たい人向け</h2>
+  <details open><summary>手法選定理由</summary><p>Redwireは高成長ですがGAAP赤字です。短期PERではなく、将来売上とEV/Salesを主に使いました。</p></details><details><summary>株式数について</summary><p>2025年10-Kの発行済株式数と市場データを参考に約1.99億株で概算しています。買収や資金調達で変わり得ます。</p></details><details><summary>主要出典</summary><p><a href="https://ir.rdw.com/sec-filings/all-sec-filings/content/0001819810-26-000060/exhibit991redwire03312026e.htm" target="_blank" rel="noopener noreferrer">Q1決算</a>、<a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000029/rdw-20251231.htm" target="_blank" rel="noopener noreferrer">2025年10-K</a>、<a href="https://www.investors.com/news/howmet-aerospace-hwm-stock-breakout-ati-stock-redwire-rdw-caci-international-earnings-rally-defense-stocks/" target="_blank" rel="noopener noreferrer">Q2関連記事</a>、<a href="https://rdw.com/newsroom/redwire-announces-sunsetting-of-edge-autonomy-brand-and-new-organizational-structure-to-align-with-market-opportunities-for-accelerated-growth/" target="_blank" rel="noopener noreferrer">Edge Autonomy統合</a>。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></details>
+
+</section>
+
+<section class="card notice">
+  <h3>免責</h3><p>本資料は情報提供を目的とした試算です。投資助言ではありません。宇宙・防衛関連の小型成長株は、契約、統合、資金調達、市場倍率により大きく変動します。</p>
+</section>
+<footer>SiM MARKET LAB｜レッドワイヤー（RDW）株価シナリオ｜作成日 2026-08-08</footer>
+</main>
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+<script>
+document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var target = document.getElementById(button.dataset.scrollTarget);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body></html>

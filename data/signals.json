@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-08T09:39:29.307007+00:00",
+  "updatedAt": "2026-08-08T12:25:45.743832+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.3,
@@ -26,6 +26,18 @@
       },
       "reportRevision": "rocket-lab-rklb-2026-08-08",
       "summary": "Q1成長、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。"
+    },
+    "redwire-rdw": {
+      "position": 56.8,
+      "zone": "中立",
+      "asOf": "2026-08-08",
+      "components": {
+        "valuation": 49.0,
+        "catalysts": 72.0,
+        "businessRisk": 63.0
+      },
+      "reportRevision": "redwire-rdw-2026-08-08",
+      "summary": "Q2売上急伸、受注残、防衛UAS材料は強い一方、赤字、買収統合、内部統制、希薄化リスクが残るため中立。"
     }
   }
 }
