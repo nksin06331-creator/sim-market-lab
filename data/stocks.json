@@ -162,6 +162,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "asp-isotopes-aspi",
+      "order": 7,
+      "ticker": "ASPI",
+      "quoteSymbol": "ASPI",
+      "name": "ASPアイソトープス",
+      "nameEn": "ASP Isotopes Inc.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "同位体濃縮・先端材料・核燃料",
+      "reports": {
+        "company": {
+          "path": "./stocks/asp-isotopes-aspi/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/asp-isotopes-aspi/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/asp-isotopes-aspi/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }
