@@ -224,7 +224,6 @@ a { color: inherit; }
   .catalog-tools { grid-template-columns: 1fr; }
   .search-box { grid-column: auto; }
   .market-filters, .view-switch { width: 100%; }
-  .view-switch { display: none; }
   .filter-button, .view-button { flex: 1; padding-inline: 8px; }
   .results-head { flex-direction: column; gap: 6px; }
   .stock-grid { grid-template-columns: 1fr; }

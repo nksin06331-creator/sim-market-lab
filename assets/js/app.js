@@ -320,7 +320,7 @@ function render() {
   const compact = compactMediaQuery.matches;
   elements.results.replaceChildren();
   elements.resultStatus.textContent = `${stocks.length}件を表示`;
-  elements.results.className = !compact && state.view === "card" ? "stock-grid" : "";
+  elements.results.className = state.view === "card" ? "stock-grid" : "";
 
   if (!stocks.length) {
     const empty = document.createElement("p");
@@ -330,7 +330,7 @@ function render() {
     return;
   }
 
-  if (compact || state.view === "list") elements.results.append(createList(stocks, compact));
+  if (state.view === "list") elements.results.append(createList(stocks, compact));
   else stocks.forEach((stock) => elements.results.append(createCard(stock)));
 }
 
