@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-08T15:55:15.571152+00:00",
+  "generatedAt": "2026-08-08T23:26:46.166172+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
   "quoteCount": 7,
   "errorCount": 0,
@@ -14,7 +14,7 @@
       "changePct": -2.0722,
       "currency": "JPY",
       "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-08T15:55:11.954188+00:00",
+      "updatedAt": "2026-08-08T23:26:43.314930+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,7 +25,7 @@
       "changePct": 9.4621,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:00+00:00",
-      "updatedAt": "2026-08-08T15:55:12.520449+00:00",
+      "updatedAt": "2026-08-08T23:26:43.821967+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -36,7 +36,7 @@
       "changePct": 14.8774,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:02+00:00",
-      "updatedAt": "2026-08-08T15:55:13.094831+00:00",
+      "updatedAt": "2026-08-08T23:26:44.298504+00:00",
       "status": "ok"
     },
     "paycloud-4015": {
@@ -47,7 +47,7 @@
       "changePct": 1.3084,
       "currency": "JPY",
       "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-08T15:55:13.672530+00:00",
+      "updatedAt": "2026-08-08T23:26:44.783977+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
@@ -58,7 +58,7 @@
       "changePct": -1.3435,
       "currency": "JPY",
       "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-08T15:55:14.281795+00:00",
+      "updatedAt": "2026-08-08T23:26:45.293015+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
@@ -69,7 +69,7 @@
       "changePct": 6.1256,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-08T15:55:14.990056+00:00",
+      "updatedAt": "2026-08-08T23:26:45.731189+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
@@ -80,7 +80,7 @@
       "changePct": 8.0488,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-08T15:55:15.571113+00:00",
+      "updatedAt": "2026-08-08T23:26:46.166151+00:00",
       "status": "ok"
     }
   }
