@@ -108,6 +108,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "sumitomo-electric-5802",
+      "order": 5,
+      "ticker": "5802",
+      "quoteSymbol": "5802.T",
+      "name": "住友電気工業",
+      "nameEn": "Sumitomo Electric Industries, Ltd.",
+      "market": "JP",
+      "marketLabel": "日本株",
+      "exchange": "東京証券取引所プライム市場",
+      "currency": "JPY",
+      "sector": "自動車部品・電線・光通信・電力インフラ",
+      "reports": {
+        "company": {
+          "path": "./stocks/sumitomo-electric-5802/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/sumitomo-electric-5802/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/sumitomo-electric-5802/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

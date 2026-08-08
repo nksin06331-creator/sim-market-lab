@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-08T07:01:00.227320+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 4,
+  "quoteCount": 5,
   "errorCount": 0,
   "errors": {},
   "prices": {
@@ -48,6 +48,17 @@
       "currency": "JPY",
       "marketTime": "2026-07-30T06:30:00+00:00",
       "updatedAt": "2026-08-08T13:00:00+00:00",
+      "status": "ok"
+    },
+    "sumitomo-electric-5802": {
+      "symbol": "5802.T",
+      "price": 2336.5,
+      "previousClose": 2109.5,
+      "change": 227.0,
+      "changePct": 10.7608,
+      "currency": "JPY",
+      "marketTime": "2026-07-31T06:30:00+00:00",
+      "updatedAt": "2026-08-09T00:00:00+00:00",
       "status": "ok"
     }
   }
