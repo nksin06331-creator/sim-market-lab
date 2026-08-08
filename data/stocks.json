@@ -135,6 +135,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "abcellera-abcl",
+      "order": 6,
+      "ticker": "ABCL",
+      "quoteSymbol": "ABCL",
+      "name": "アブセレラ",
+      "nameEn": "AbCellera Biologics Inc.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "抗体創薬・臨床段階バイオ",
+      "reports": {
+        "company": {
+          "path": "./stocks/abcellera-abcl/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/abcellera-abcl/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/abcellera-abcl/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

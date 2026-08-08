@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-08T15:14:18.877381+00:00",
+  "updatedAt": "2026-08-08T15:34:40.083424+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.1,
@@ -62,6 +62,18 @@
       },
       "reportRevision": "sumitomo-electric-5802-2026-08-09",
       "summary": "株価は標準ケース手前まで調整。中計2028、電力・通信テーマは支えだが、1Q後の進捗と需給確認前のため中立。"
+    },
+    "abcellera-abcl": {
+      "position": 43.7,
+      "zone": "中立",
+      "asOf": "2026-08-09",
+      "components": {
+        "valuation": 22.5,
+        "catalysts": 74.0,
+        "businessRisk": 78.0
+      },
+      "reportRevision": "abcellera-abcl-2026-08-09",
+      "summary": "ABCL635のPhase 2読出し待ち。資金力と提携は支えだが、臨床失敗時の下落が大きいため中立。"
     }
   }
 }
