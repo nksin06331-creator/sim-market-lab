@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="日本株・米国株の企業、現在株価、今後のカタリストを読み解く株式リサーチサイト。">
+  <meta name="theme-color" content="#07100c">
+  <title>SiM MARKET LAB | Stock Research</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#reports">銘柄一覧へ移動</a>
+
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="SiM MARKET LAB トップページ">
+      <span class="brand-mark">S<span>i</span>M</span>
+      <span class="brand-name">MARKET LAB</span>
+    </a>
+    <p class="header-status"><span aria-hidden="true"></span> STOCK RESEARCH</p>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">STOCK RESEARCH, MADE CLEAR.</p>
+        <h1 id="hero-title">数字を読み、<br><span>企業を知る。</span></h1>
+        <p>企業の全体像、現在の株価、これからのカタリスト。<br>3つの視点から、株式をわかりやすく整理します。</p>
+        <a class="hero-link" href="#reports">公開銘柄を見る <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <aside class="market-summary" aria-label="掲載状況">
+        <p class="summary-label">RESEARCH STATUS</p>
+        <div class="summary-total">
+          <strong id="total-count">—</strong>
+          <span>掲載銘柄</span>
+        </div>
+        <div class="summary-markets">
+          <div><strong id="japan-count">—</strong><span>日本株</span></div>
+          <div><strong id="us-count">—</strong><span>米国株</span></div>
+        </div>
+        <p id="price-summary" class="summary-note">株価データを確認しています</p>
+      </aside>
+    </section>
+
+    <section class="report-guide" aria-label="レポートの種類">
+      <article><span>01</span><div><strong>企業について</strong><p>事業、強み、リスクを整理</p></div></article>
+      <article><span>02</span><div><strong>現在の株価</strong><p>価格とシナリオを分析</p></div></article>
+      <article><span>03</span><div><strong>今後のカタリスト</strong><p>予定と注目材料を確認</p></div></article>
+    </section>
+
+    <section class="catalog" id="reports" aria-labelledby="catalog-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PUBLISHED RESEARCH</p>
+          <h2 id="catalog-title">銘柄を<span>探す</span></h2>
+        </div>
+        <p>銘柄名やコードで検索し、日本株・米国株を切り替えられます。</p>
+      </div>
+
+      <div class="catalog-tools">
+        <label class="search-box">
+          <span class="search-icon" aria-hidden="true"></span>
+          <span class="sr-only">銘柄を検索</span>
+          <input id="stock-search" type="search" placeholder="銘柄名・コードで検索" autocomplete="off">
+        </label>
+
+        <div class="market-filters" id="market-filters" aria-label="市場で絞り込み">
+          <button class="filter-button is-active" type="button" data-market="all" aria-pressed="true">すべて</button>
+          <button class="filter-button" type="button" data-market="JP" aria-pressed="false">日本株</button>
+          <button class="filter-button" type="button" data-market="US" aria-pressed="false">米国株</button>
+        </div>
+
+        <label class="sort-box">
+          <span>表示順</span>
+          <select id="stock-sort">
+            <option value="default">登録順</option>
+            <option value="name">銘柄名順</option>
+            <option value="price-desc">株価が高い順</option>
+            <option value="signal-asc">売られすぎ順</option>
+            <option value="signal-desc">買われすぎ順</option>
+          </select>
+        </label>
+
+        <div class="view-switch" aria-label="表示形式">
+          <button id="card-view" class="view-button is-active" type="button" aria-pressed="true">カード</button>
+          <button id="list-view" class="view-button" type="button" aria-pressed="false">一覧</button>
+        </div>
+      </div>
+
+      <div class="results-head">
+        <p id="result-status" role="status">銘柄データを読み込んでいます</p>
+        <p class="signal-note">売られすぎ・買われすぎは公開レポートの総合分析です</p>
+      </div>
+
+      <div id="stock-results" class="stock-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="./index.html">
+      <span class="brand-mark">S<span>i</span>M</span>
+      <span class="brand-name">MARKET LAB</span>
+    </a>
+    <div>
+      <p>掲載内容は情報提供を目的としており、投資助言ではありません。</p>
+      <p>株価は遅延する場合があります。投資判断はご自身の責任で行ってください。</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/app.js" defer></script>
+</body>
+</html>

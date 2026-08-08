@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "stocks": [
+    {
+      "id": "kioxia-285a",
+      "order": 1,
+      "ticker": "285A",
+      "quoteSymbol": "285A.T",
+      "name": "キオクシアホールディングス",
+      "nameEn": "Kioxia Holdings Corporation",
+      "market": "JP",
+      "marketLabel": "日本株",
+      "exchange": "東京証券取引所プライム市場",
+      "currency": "JPY",
+      "sector": "半導体・フラッシュメモリ",
+      "reports": {
+        "company": { "path": "./stocks/kioxia-285a/company.html", "available": false },
+        "valuation": { "path": "./stocks/kioxia-285a/valuation.html", "available": false },
+        "catalysts": { "path": "./stocks/kioxia-285a/catalysts.html", "available": false }
+      }
+    },
+    {
+      "id": "rocket-lab-rklb",
+      "order": 2,
+      "ticker": "RKLB",
+      "quoteSymbol": "RKLB",
+      "name": "ロケット・ラボ",
+      "nameEn": "Rocket Lab Corporation",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "宇宙輸送・宇宙システム",
+      "reports": {
+        "company": { "path": "./stocks/rocket-lab-rklb/company.html", "available": false },
+        "valuation": { "path": "./stocks/rocket-lab-rklb/valuation.html", "available": false },
+        "catalysts": { "path": "./stocks/rocket-lab-rklb/catalysts.html", "available": false }
+      }
+    }
+  ]
+}

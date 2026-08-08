@@ -1,0 +1,47 @@
+name: Update stock prices
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 08:00 JST. GitHub Actions schedules are evaluated in UTC.
+    - cron: "0 23 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-stock-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Update prices
+        id: prices
+        continue-on-error: true
+        run: python scripts/update_prices.py
+
+      - name: Commit updated price data
+        run: |
+          if git diff --quiet -- data/prices.json; then
+            echo "No price changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json
+          git commit -m "chore: update stock prices"
+          git push
+
+      - name: Report partial update
+        if: steps.prices.outcome == 'failure'
+        run: echo "One or more quotes failed. Previous valid values were preserved where available."
