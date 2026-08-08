@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-08T15:45:00.840794+00:00",
+  "updatedAt": "2026-08-08T16:02:05.884521+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.1,
@@ -76,15 +76,15 @@
       "summary": "ABCL635のPhase 2読出し待ち。資金力と提携は支えだが、臨床失敗時の下落が大きいため中立。"
     },
     "asp-isotopes-aspi": {
-      "position": 40.5,
+      "position": 45.7,
       "zone": "中立",
       "asOf": "2026-08-09",
       "components": {
-        "valuation": 17.0,
+        "valuation": 25.7,
         "catalysts": 72.0,
         "businessRisk": 82.0
       },
-      "reportRevision": "asp-isotopes-aspi-2026-08-09",
+      "reportRevision": "asp-isotopes-aspi-2026-08-09-unified",
       "summary": "同位体出荷、Renergen、QLE/HALEUが材料。株価は悲観寄りだが、商業化と規制の実行リスクが高いため中立。"
     }
   }

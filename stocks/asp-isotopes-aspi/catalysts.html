@@ -2,62 +2,239 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ASPアイソトープス（ASPI）のSiM MARKET LABレポート">
-<title>ASPアイソトープス（ASPI）｜カタリスト</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ASPアイソトープス（ASPI）の今後のカタリスト、予定時期、株価への影響、今の株価に入っている期待を整理したレポート">
+<title>ASPアイソトープス（ASPI）｜カタリストレポート</title>
+
 <style>
-:root { color-scheme: dark; --bg:#050806; --panel:#101711; --line:#28402c; --text:#f3f7f0; --muted:#aeb8ac; --green:#68e35f; --yellow:#ffd24f; --red:#ff7890; }
-* { box-sizing:border-box; }
-body { margin:0; background:linear-gradient(180deg,#071008,#020402); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.75; }
-a { color:var(--green); }
-.wrap { width:min(1040px, calc(100% - 32px)); margin:0 auto; }
-header { padding:42px 0 24px; border-bottom:1px solid var(--line); }
-.badge { color:var(--green); font-weight:800; letter-spacing:.08em; font-size:13px; }
-h1 { font-size:clamp(34px,7vw,72px); line-height:1.05; margin:10px 0 14px; letter-spacing:0; }
-.lead { color:var(--muted); font-size:18px; max-width:780px; }
-.grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:24px 0 0; }
-.stat,.card,section { background:rgba(16,23,17,.9); border:1px solid var(--line); border-radius:8px; }
-.stat { padding:16px; }
-.stat b { display:block; color:var(--green); font-size:24px; }
-.stat span { color:var(--muted); font-size:13px; }
-main { padding:26px 0 48px; }
-section { margin:16px 0; padding:22px; }
-h2 { margin:0 0 10px; font-size:24px; }
-h3 { margin:18px 0 8px; color:var(--green); }
-ul { padding-left:1.2em; }
-table { width:100%; border-collapse:collapse; margin:12px 0; }
-th,td { border-bottom:1px solid var(--line); padding:10px; text-align:left; vertical-align:top; }
-th { color:var(--muted); }
-.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-.card { padding:16px; }
-.pricebar { height:14px; background:linear-gradient(90deg,#9d2f46,#68e35f,#7bdcff); border-radius:999px; position:relative; margin:28px 0 8px; }
-.pin { position:absolute; top:50%; left:17.0%; width:18px; height:18px; border-radius:50%; background:var(--green); border:3px solid #071008; transform:translate(-50%,-50%); }
-.labels { display:flex; justify-content:space-between; color:var(--muted); font-size:13px; }
-.notice { border-left:4px solid var(--yellow); padding:10px 14px; background:#18160b; }
-footer { border-top:1px solid var(--line); color:var(--muted); padding:24px 0 36px; }
-@media (max-width:760px) { .grid,.cards { grid-template-columns:1fr; } section { padding:18px; } }
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.priced-score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.priced-score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.priced-score b{font-size:clamp(28px,4vw,48px);line-height:1.05;display:block;letter-spacing:-.05em}.priced-score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(19px,3vw,27px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.90);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button,.report-nav .nav-current{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.report-nav button{cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible,.report-nav .nav-current{border-color:var(--accent);color:var(--accent);background:var(--accent-tint)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.small{font-size:12px;color:var(--muted)}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}.fail{border-color:rgba(248,113,113,.45);border-left-color:var(--red);background:rgba(248,113,113,.08)}
+.pill,.chip{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}.chip.amber{color:var(--amber);border-color:rgba(251,191,36,.34);background:rgba(251,191,36,.08)}.chip.red{color:var(--red);border-color:rgba(248,113,113,.34);background:rgba(248,113,113,.08)}.chip.blue{color:var(--blue);border-color:rgba(96,165,250,.34);background:rgba(96,165,250,.08)}
+.priced{padding:18px;background:#101410;border:1px solid var(--line);border-radius:14px}.priced-head{display:flex;justify-content:space-between;gap:12px;align-items:end}.priced-head b{font-size:28px;letter-spacing:-.04em}.range-meter{height:12px;background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-top:11px;position:relative}.range-band{display:block;height:100%;position:absolute;background:linear-gradient(90deg,var(--amber),var(--accent));border-radius:999px;min-width:4px}.priced.unknown{border-style:dashed;color:var(--muted)}
+.surprise{border-top:1px solid var(--line);padding:14px 0}.surprise:first-child{border-top:0}.surprise b{display:block}.surprise p{margin:4px 0;color:var(--muted)}.up{color:var(--accent)}.down{color:var(--red)}.flat{color:var(--amber)}
+.timeline{position:relative;margin-top:18px}.timeline:before{content:"";position:absolute;left:92px;top:8px;bottom:8px;width:1px;background:var(--accent-line)}.time-row{display:grid;grid-template-columns:78px 24px 1fr;gap:12px;align-items:start;margin:0 0 18px}.time-date{text-align:right;color:var(--muted);font-size:12px;font-weight:800;padding-top:3px}.time-dot{width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid #0a0c0a;box-shadow:0 0 0 1px var(--accent-line);margin:5px auto 0;position:relative;z-index:2}.time-body{background:#101410;border:1px solid var(--line);border-radius:13px;padding:13px 15px}.time-body p{margin:4px 0;color:var(--muted);font-size:13px}.time-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.catalyst-card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;margin:16px 0;position:relative;overflow:hidden}.catalyst-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}.catalyst-head{display:flex;justify-content:space-between;gap:16px;align-items:start}.catalyst-head h3{font-size:clamp(20px,3vw,28px);line-height:1.35;margin:8px 0}.chips{display:flex;gap:7px;flex-wrap:wrap}.date-box{min-width:180px;text-align:right}.date-box b{display:block;color:var(--accent);font-size:18px}.date-box span{font-size:11px;color:var(--muted)}
+.mechanism{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0}.mechanism span{padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:#101410;font-size:12px}.mechanism i{font-style:normal;color:var(--accent)}
+.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.outcome{background:#101410;border:1px solid var(--line);border-radius:14px;padding:15px}.outcome.success{border-top:4px solid var(--accent)}.outcome.inline{border-top:4px solid var(--amber)}.outcome.failure{border-top:4px solid var(--red)}.outcome b{font-size:14px}.impact{font-size:24px;font-weight:900;letter-spacing:-.04em;margin:7px 0}.outcome p{font-size:12px;color:var(--muted);margin:6px 0}.outcome ul{padding-left:18px;margin:8px 0;font-size:12px}
+.evidence{display:grid;grid-template-columns:1fr 1fr;gap:10px}.evidence>div{background:#101410;border:1px solid var(--line);border-radius:12px;padding:14px}.evidence h4{margin:0 0 8px}.evidence ul{padding-left:18px;margin:0;color:var(--muted);font-size:13px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}.fact{border-top:1px solid var(--line);padding:11px 0}.fact span{display:block;color:var(--muted);font-size:11px}.fact b{font-size:13px}
+.signal{border-top:1px solid var(--line);padding:14px 0}.signal:first-child{border-top:0}.signal div{display:flex;justify-content:space-between;gap:12px}.signal p{margin:4px 0;color:var(--muted);font-size:14px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}td{font-size:13px}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul,details>div{padding:0 16px 16px;margin:0;color:#c4ccc4}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+@media(max-width:800px){.verdict,.grid-2,.evidence{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.outcomes{grid-template-columns:1fr}.catalyst-head{display:block}.date-box{text-align:left;margin-top:10px}.facts{grid-template-columns:1fr}.timeline:before{left:75px}.time-row{grid-template-columns:62px 18px 1fr;gap:8px}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.priced-score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.priced-score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.priced-score b{font-size:26px}.priced-score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button,.report-nav .nav-current{min-height:44px;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card,.catalyst-card{padding:14px;border-radius:12px}.grid-2,.evidence,.outcomes{gap:8px}.catalyst-card{margin:10px 0}.catalyst-head h3{font-size:20px;margin:6px 0}.date-box b{font-size:16px}.mechanism{margin:10px 0}.mechanism span{padding:6px 8px;font-size:11px}.outcome{padding:12px;border-radius:11px}.impact{font-size:20px;margin:5px 0}.timeline:before{left:55px}.time-row{grid-template-columns:44px 14px 1fr;gap:6px;margin-bottom:12px}.time-date{font-size:9px}.time-body{padding:10px 11px}.time-body p,.outcome p{font-size:11px;line-height:1.55}.priced{padding:13px}.priced-head b{font-size:23px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.notice{padding:11px 12px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}summary{min-height:44px;padding:11px 12px}details>p,details>ul,details>div{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.report-nav{position:static}.hero,.card,.catalyst-card,.kpi,.outcome,.time-body,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.surprise p,.time-body p,.outcome p,.signal p,footer{color:#555!important}.card,.catalyst-card,.kpi,.outcome,details{break-inside:avoid}}
 </style>
 </head>
+
 <body data-stock-ticker="ASPI" data-price-source="../../data/prices.json">
-<header><div class="wrap">
-<div class="badge">カタリスト</div>
-<h1>ASPアイソトープス<br><span style="color:var(--green)">ASPI</span></h1>
-<p class="lead">ASPIはニュースで動きやすい銘柄です。特に初期商業出荷、Renergen、QLE/HALEUの3本を分けて確認します。</p>
-<div class="grid">
-<div class="stat"><b>$3.77</b><span>評価基準株価</span></div>
-<div class="stat"><b>$0.6B</b><span>時価総額の目安</span></div>
-<div class="stat"><b>$290.5M</b><span>現金+短期投資</span></div>
-<div class="stat"><b>Q3 2026</b><span>商業出荷・Renergen確認</span></div>
-</div>
-</div></header>
+
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
+    <h1>ASPアイソトープス <small>ASPI</small></h1>
+    <div class="sub">Nasdaq｜評価基準日 2026-08-09｜最終更新 2026-08-09</div>
+
+    <div class="verdict">
+      <div class="verdict-main">
+        <span class="pill">今後の材料を先読み</span>
+        <div class="status">商業化確認待ち</div>
+        <p>C-14・Yb-176出荷、Renergen Phase 1、Si-28、QLE/HALEUが主な材料です。</p>
+        <p class="sub">全体の織り込み割合は、各材料の価値経路が重なるため単純計算していません。</p>
+      </div>
+      <div class="priced-score">
+        <small>今の株価に入っている期待（推定）</small>
+        <b>算出不能</b>
+        <small>全体割合は出していません｜推定の確かさ 低〜中</small>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
+        <b data-live-price>$4.43</b>
+        <small data-live-price-date>2026/08/07終値（分析基準値）</small>
+      </div>
+      <div class="kpi">
+        <span>次の主要カタリスト</span>
+        <b>C-14・Yb-176初期商業出荷</b>
+        <small>2026年Q3</small>
+      </div>
+      <div class="kpi">
+        <span>日程の確度</span>
+        <b>会社予定</b>
+        <small>確定日・会社目標・当方推定を分離</small>
+      </div>
+      <div class="kpi">
+        <span>掲載カタリスト</span>
+        <b>4件</b>
+        <small>今後18か月＋重要な長期材料</small>
+      </div>
+    </div>
+
+    <div class="hero-tags">
+      <span>内容と時期</span>
+      <span>成功・中立・失敗</span>
+      <span>株価に入った期待は幅で表示</span>
+    </div>
+  </div>
+</header>
+
+
+
+
+<nav class="report-nav">
+  <div class="wrap">
+    <span class="nav-current" aria-current="page">カタリスト</span>
+    <button type="button" data-scroll-target="timeline">時系列</button>
+    <button type="button" data-scroll-target="priced-in">期待の入り方</button>
+    <button type="button" data-scroll-target="details">詳細</button>
+    <button type="button" data-scroll-target="watch">観測項目</button>
+    <button type="button" data-scroll-target="sources">出典</button>
+  </div>
+</nav>
+
 <main class="wrap">
-<p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>
-<section><h2>重要材料まとめ</h2><ul><li>2026年Q3：C-14とYb-176の初期商業出荷目標。</li><li>2026年半ば以降：Si-28の初期商業出荷確認。</li><li>2026年Q3：Renergen Phase 1のLNG/ヘリウム契約・商業生産確認。</li><li>中期：QLEのU-235/HALEU関連、規制、TerraPower関連の進展。</li></ul></section>
-<section><h2>カタリスト別の見方</h2><table><thead><tr><th>材料</th><th>期待以上</th><th>期待外れ</th></tr></thead><tbody><tr><td>同位体出荷</td><td>実売上と顧客継続が見え、標準ケースへ近づく。</td><td>遅延なら技術・顧客・資金への疑念が強まる。</td></tr><tr><td>Renergen</td><td>LNG/ヘリウムの契約と生産が進み、キャッシュフロー材料になる。</td><td>建設、資金、契約、規制で遅れると重荷になる。</td></tr><tr><td>QLE/HALEU</td><td>許認可・資金・顧客が進めば大きなテーマ化。</td><td>規制が重く、未実証のままなら評価は剥落。</td></tr></tbody></table></section>
-<section><h2>織り込み具合</h2><p>現在株価の位置は悲観〜楽観レンジの <b>17.0%</b> です。市場は大型テーマを一部見つつも、実行遅延と希薄化リスクをかなり織り込んでいる状態と見ます。</p></section>
-<section><h2>直近ニュース</h2><p>2026年8月6日、Renergen子会社Tetra4がVirginia Gas ProjectのLNGについて5年take-or-pay契約を締結したと発表されました。会社はPhase 1のLNG想定量の約75%がtake-or-pay契約で支えられると説明しています。</p><p>出典：<a href="https://ir.aspisotopes.com/news-events/press-releases/detail/116/asp-isotopes-inc-announces-that-renergen-limiteds" target="_blank" rel="noopener noreferrer">Renergen契約ニュース</a></p></section>
-<section><h2>公開後に更新すべき点</h2><ul><li>Q2 2026決算が出たら、現金、短期投資、負債、発行済株式を更新。</li><li>商業出荷が確認されたら、レポート2の標準ケースを再計算。</li><li>Renergen Phase 1の契約率と年間売上見通しを更新。</li></ul><p>出典：<a href="https://ir.aspisotopes.com/news-events" target="_blank" rel="noopener noreferrer">ニュース一覧</a>、<a href="https://ir.aspisotopes.com/financial-information/financial-results" target="_blank" rel="noopener noreferrer">決算資料</a>、<a href="https://ir.aspisotopes.com/news-events/presentations" target="_blank" rel="noopener noreferrer">会社プレゼン</a></p></section>
+
+  <section class="grid-2" id="priced-in">
+    <div class="card">
+      <h2>今の株価、どこまで期待済み？</h2>
+      <div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div><p>商業出荷、Renergen、QLE/HALEU、資金調達は価値経路が重なります。単純平均は使いません。</p><p>足りない情報：実出荷量、販売価格、粗利、Renergen生産、液体ヘリウム販売、追加資金調達条件です。</p><p>次に見る数字：売上、現金、短期投資、発行済株式、契約量、設備稼働率です。</p><p>再計算方法：材料ごとの成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>
+      <p class="small">計算方法：価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付きシナリオ再計算でレンジ表示。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-08-09時点で固定されます。</p>
+    </div>
+    <div class="card">
+      <h2>予想との差が株価を動かす</h2>
+      <div class="surprise">
+        <b class="up">上方サプライズの条件</b>
+        <p>同位体の実出荷、Renergenの生産、ヘリウム販売、QLEの許認可進展が同時に見えることです。</p>
+      </div>
+      <div class="surprise">
+        <b class="down">下方サプライズの条件</b>
+        <p>商業出荷遅延、Renergenの資金・生産遅れ、希薄化、規制停滞です。</p>
+      </div>
+      <div class="surprise">
+        <b class="flat">最大リスク</b>
+        <p>テーマが大きい一方、実売上確認前の要素が多く、資金調達と希薄化で株価が大きく下がる可能性です。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="timeline">
+    <h2>これから何が、いつ起きる？</h2>
+    <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
+    <div class="timeline">
+      <div class="time-row"><div class="time-date">2026/Q3</div><div class="time-dot"></div><div class="time-body"><b>C-14・Yb-176初期商業出荷</b><p>最初の売上化確認が焦点。</p><div class="time-meta"><span class="chip">最重要</span></div></div></div><div class="time-row"><div class="time-date">2026/08/06</div><div class="time-dot"></div><div class="time-body"><b>Renergen LNG契約</b><p>Tetra4の5年take-or-pay契約を会社が発表。</p><div class="time-meta"><span class="chip blue">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026後半</div><div class="time-dot"></div><div class="time-body"><b>Renergen Phase 1確認</b><p>LNGと液体ヘリウムの生産・販売を確認。</p><div class="time-meta"><span class="chip">確認</span></div></div></div><div class="time-row"><div class="time-date">中期</div><div class="time-dot"></div><div class="time-body"><b>QLE/HALEU関連</b><p>規制、許認可、資金、顧客を確認。</p><div class="time-meta"><span class="chip blue">大型材料</span></div></div></div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="card">
+      <h2>今後の予定を1件ずつ確認</h2>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
+    </div>
+    <article class="catalyst-card">
+<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>C-14・Yb-176初期商業出荷</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">最重要</span></div></div><div class="date-box"><b>2026年Q3</b><span>会社公表または予定</span></div></div>
+<div class="mechanism"><span>出荷</span><i>→</i><span>売上化</span><i>→</i><span>信頼</span></div>
+<div class="outcomes">
+<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜80%</div><p>実出荷、顧客継続、品質、粗利が確認されれば標準ケースへ近づきます。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+25%</div><p>少量出荷にとどまり、売上規模確認待ちなら中立です。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-25〜-55%</div><p>出荷遅延や品質・顧客不透明なら悲観ケースへ寄ります。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+</div>
+<div class="evidence"><div><h4>根拠</h4><ul><li>会社資料でC-14とYb-176の初期商業出荷が2026年Q3目標と説明されています。</li><li>Q1 2026時点では本格売上化前です。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>出荷遅延</li><li>契約量不足</li><li>資金調達条件の悪化</li></ul></div></div>
+</article><article class="catalyst-card">
+<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Renergen Phase 1</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">ヘリウム</span></div></div><div class="date-box"><b>2026年後半</b><span>会社公表または予定</span></div></div>
+<div class="mechanism"><span>契約</span><i>→</i><span>生産</span><i>→</i><span>現金収入</span></div>
+<div class="outcomes">
+<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜80%</div><p>LNGと液体ヘリウムの契約・生産・販売がそろえば評価拡大です。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+25%</div><p>契約は進むが生産と現金収入の確認待ちなら中立です。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-25〜-55%</div><p>建設・生産・資金で遅れると買収が重荷になります。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+</div>
+<div class="evidence"><div><h4>根拠</h4><ul><li>2026年8月6日にTetra4の5年take-or-pay契約を会社が発表。</li><li>会社はPhase 1 LNG想定量の約75%が契約で支えられると説明しています。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>出荷遅延</li><li>契約量不足</li><li>資金調達条件の悪化</li></ul></div></div>
+</article><article class="catalyst-card">
+<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Si-28初期出荷</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">量子</span></div></div><div class="date-box"><b>2026年半ば以降</b><span>会社公表または予定</span></div></div>
+<div class="mechanism"><span>材料</span><i>→</i><span>顧客</span><i>→</i><span>テーマ継続</span></div>
+<div class="outcomes">
+<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜80%</div><p>量子・半導体向け顧客との継続需要が見えれば上振れです。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+25%</div><p>初期出荷のみなら中期材料です。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-25〜-55%</div><p>遅延や顧客不明ならテーマ剥落です。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+</div>
+<div class="evidence"><div><h4>根拠</h4><ul><li>会社資料でSi-28の初期商業出荷が目標として示されています。</li><li>量子・半導体材料として注目されます。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>出荷遅延</li><li>契約量不足</li><li>資金調達条件の悪化</li></ul></div></div>
+</article><article class="catalyst-card">
+<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>QLE/HALEU関連</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">核燃料</span></div></div><div class="date-box"><b>中期</b><span>会社公表または予定</span></div></div>
+<div class="mechanism"><span>許認可</span><i>→</i><span>資金</span><i>→</i><span>顧客</span></div>
+<div class="outcomes">
+<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜80%</div><p>許認可、顧客、資金が同時に進めば楽観ケース材料です。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+25%</div><p>テーマ維持にとどまるなら短期影響は限定的です。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-25〜-55%</div><p>規制・資金で進まなければ評価は下がります。</p><ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul></div>
+</div>
+<div class="evidence"><div><h4>根拠</h4><ul><li>QLEはU-235やLi-6/7など先進原子力向けテーマを持ちます。</li><li>核燃料関連は規制と許認可が重要です。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>出荷遅延</li><li>契約量不足</li><li>資金調達条件の悪化</li></ul></div></div>
+</article>
+  </section>
+
+  <section class="card" id="dependencies">
+    <h2>予定のつながりと二重計算防止</h2>
+    <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
+    <div class="signal"><div><b>出荷と資金</b><span class="up">連動</span></div><p>良い出荷でも、資金調達条件が悪いと評価は伸びにくいです。</p></div><div class="signal"><div><b>Renergenと契約</b><span class="flat">確認</span></div><p>契約が生産と現金収入に変わるかを見ます。</p></div><div class="signal"><div><b>QLEと規制</b><span class="flat">長期</span></div><p>許認可が進まないと大型テーマは評価されにくいです。</p></div>
+  </section>
+
+  <section class="card" id="watch">
+    <h2>次に確認する数字</h2>
+    <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
+    <div class="signal"><div><b>初期商業出荷</b><span class="up">最重要</span></div><p>出荷日、数量、顧客、粗利を確認します。</p></div><div class="signal"><div><b>Renergen生産</b><span class="up">重要</span></div><p>LNGと液体ヘリウムの稼働を確認します。</p></div><div class="signal"><div><b>現金と株式数</b><span class="down">注意</span></div><p>資金調達と希薄化を確認します。</p></div><div class="signal"><div><b>規制</b><span class="flat">長期</span></div><p>QLE/HALEUの許認可を確認します。</p></div>
+  </section>
+
+  <section class="card" id="assumptions">
+    <h2>使った数字と前提</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
+        </thead>
+        <tbody><tr><td>評価基準株価</td><td>$4.43</td><td>市場データで確認</td><td>2026/08/07</td><td>自動更新後の終値</td></tr><tr><td>現金+短期投資</td><td>$290.5M</td><td>Q1 2026 10-Q</td><td>2026/03/31</td><td>現金$207.3M+短期投資$83.2M</td></tr><tr><td>Renergen契約</td><td>Phase 1 LNGの約75%</td><td>会社発表</td><td>2026/08/06</td><td>take-or-pay契約</td></tr><tr><td>同位体出荷</td><td>2026年Q3中心</td><td>会社資料</td><td>2026-08-09</td><td>初期商業出荷確認が必要</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="sources">
+    <h2>根拠と更新履歴</h2>
+    <details open>
+      <summary>主要出典</summary>
+      <div><ul><li><a href="https://ir.aspisotopes.com/company-information" target="_blank" rel="noopener noreferrer">会社情報</a></li><li><a href="https://ir.aspisotopes.com/financial-information/financial-results" target="_blank" rel="noopener noreferrer">決算資料</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/1921865/000119312526232658/aspi-20260331.htm" target="_blank" rel="noopener noreferrer">Q1 2026 10-Q</a></li><li><a href="https://ir.aspisotopes.com/news-events/press-releases/detail/116/asp-isotopes-inc-announces-that-renergen-limiteds" target="_blank" rel="noopener noreferrer">Renergen契約ニュース</a></li><li><a href="https://ir.aspisotopes.com/news-events/presentations" target="_blank" rel="noopener noreferrer">会社プレゼン</a></li><li><a href="https://stockanalysis.com/stocks/aspi/history/" target="_blank" rel="noopener noreferrer">株価時系列</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+    </details>
+    <details>
+      <summary>Validation結果</summary>
+      <div><p>PASS：会社情報、決算資料、Q1 2026 10-Q、Renergen契約ニュース、株価時系列を確認。WARN：商業出荷、Renergen生産、QLE/HALEUは今後の実行確認が必要です。</p></div>
+    </details>
+    <details>
+      <summary>更新履歴</summary>
+      <div><p>2026-08-09：統一テンプレート版へ修正。Q1 2026 10-Q、Renergen契約、2026年8月7日終値を反映。</p></div>
+    </details>
+  </section>
+
+  <section class="card notice">
+    <h3>免責</h3>
+    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+  </section>
+
+  <footer>SiM MARKET LAB｜ASPアイソトープス（ASPI）カタリスト｜作成日 2026-08-09</footer>
 </main>
-<footer><div class="wrap">SiM MARKET LAB｜ASPアイソトープスカタリスト｜作成日 2026-08-09</div></footer>
+
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+<script>
+document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var target = document.getElementById(button.dataset.scrollTarget);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
 </body>
 </html>
