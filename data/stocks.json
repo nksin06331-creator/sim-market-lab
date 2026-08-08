@@ -14,9 +14,18 @@
       "currency": "JPY",
       "sector": "半導体・フラッシュメモリ",
       "reports": {
-        "company": { "path": "./stocks/kioxia-285a/company.html", "available": false },
-        "valuation": { "path": "./stocks/kioxia-285a/valuation.html", "available": false },
-        "catalysts": { "path": "./stocks/kioxia-285a/catalysts.html", "available": false }
+        "company": {
+          "path": "./stocks/kioxia-285a/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/kioxia-285a/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/kioxia-285a/catalysts.html",
+          "available": true
+        }
       }
     },
     {
@@ -32,9 +41,18 @@
       "currency": "USD",
       "sector": "宇宙輸送・宇宙システム",
       "reports": {
-        "company": { "path": "./stocks/rocket-lab-rklb/company.html", "available": false },
-        "valuation": { "path": "./stocks/rocket-lab-rklb/valuation.html", "available": false },
-        "catalysts": { "path": "./stocks/rocket-lab-rklb/catalysts.html", "available": false }
+        "company": {
+          "path": "./stocks/rocket-lab-rklb/company.html",
+          "available": false
+        },
+        "valuation": {
+          "path": "./stocks/rocket-lab-rklb/valuation.html",
+          "available": false
+        },
+        "catalysts": {
+          "path": "./stocks/rocket-lab-rklb/catalysts.html",
+          "available": false
+        }
       }
     }
   ]

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>キオクシアホールディングス（285A）｜株価シナリオ</title>
+
+<style>
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.score b{font-size:54px;line-height:1;display:block}.score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(21px,3vw,29px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scenario{border-radius:16px;padding:18px;border:1px solid var(--line);background:#101410;position:relative;overflow:hidden;min-height:320px}.scenario:after{position:absolute;right:4px;top:-12px;font-weight:900;font-size:66px;opacity:.05;line-height:1}.scenario.bear:after{content:"B"}.scenario.base:after{content:"A"}.scenario.bull:after{content:"↑"}.scenario-head{display:flex;justify-content:space-between;gap:10px;font-weight:800}.scenario-head b{padding:4px 9px;border-radius:999px;color:#06210a;background:var(--accent)}.scenario-price{font-size:clamp(31px,4vw,42px);font-weight:900;letter-spacing:-.05em;margin:14px 0 0}.scenario.bear{border-top:4px solid var(--red)}.scenario.base{border-top:4px solid var(--accent);box-shadow:0 0 0 1px rgba(110,226,78,.12)}.scenario.bull{border-top:4px solid var(--accent-bright)}
+.small{font-size:13px;color:var(--muted)}dl{margin:16px 0 0}dl div{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding:8px 0;gap:12px}dt{color:var(--muted)}dd{margin:0;font-weight:800}.position{margin-top:20px}.position-line{height:14px;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--amber),var(--accent));position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.pin{position:absolute;top:-8px;width:7px;height:30px;background:#fff;border:2px solid #050805;border-radius:6px;left:36.1%;box-shadow:0 4px 14px rgba(0,0,0,.55)}.position-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px;gap:7px}.pill{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}
+.zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav a{white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700}.report-nav a:hover{border-color:var(--accent);color:var(--accent)}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+@media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav a{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
+</style>
+
+</head>
+<body data-stock-ticker="285A" data-price-source="../../data/prices.json">
+
+<header class="hero">
+<div class="wrap">
+  <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
+  <h1>キオクシアホールディングス <small>285A</small></h1>
+  <div class="sub">東京証券取引所プライム市場｜評価基準日 2026-08-08｜使用手法 景気循環企業向けPERシナリオ</div>
+  <div class="verdict">
+    <div class="verdict-main">
+      <span class="pill">まず結論だけ</span>
+      
+      <div class="status">標準ケース下にいる中立圏</div>
+      
+      <p>評価基準株価は悲観〜楽観レンジの37.7%地点です。強い1Qを考えると割高断定はしにくい一方、NAND市況の反転には注意が必要です。</p>
+      <p class="sub">この試算は2026年8月8日時点の公開情報で固定しています。2026年10月の株式3分割は未反映の株価で表示します。</p>
+    </div>
+    
+    <div class="score"><small>分析の参考スコア</small><b>52</b><small>/ 100　売買判断ではありません</small></div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>47,730円</b><small data-live-price-date>2026/08/07 15:30（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>53,000円</b><small>+11.0%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>53,250円</b><small>+11.6%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>やや高い</b><small>市況株として振れ幅が大きい</small></div>
+  </div>
+
+</div>
+</header>
+
+
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>Q2以降のNAND価格とAI向け需要は変動します。通期会社計画は開示されていないため、12〜18か月の正規化EPSをこのレポートで推定しています。</div></div>
+
+
+<nav class="report-nav"><div class="wrap">
+<a href="#snapshot">結論</a>
+<a href="#scenarios">3シナリオ</a>
+<a href="#logic">計算</a>
+<a href="#sensitivity">感応度</a>
+<a href="#assumptions">前提</a>
+</div></nav>
+
+<main class="wrap">
+
+
+<section class="card" id="snapshot">
+  <h2>いまの株価、どこにいる？</h2>
+  <p class="lead">今の株価は、強いAI需要をかなり評価し始めています。ただし、楽観ケースを強く織り込む水準ではありません。</p>
+  <div class="grid-2">
+    <div>
+      <h3>今の株価の位置</h3>
+      <p>悲観～楽観ケースの <b>37.7%</b> 地点。判定は <b>標準ケースの手前</b>。1Qの利益水準が続くほど標準〜楽観側へ寄ります。</p>
+      
+      <div class="position"><div class="position-line"><i class="pin" style="left:37.7%"></i></div><div class="position-labels"><span>Bear 30,000円</span><span>Base 53,000円</span><span>Bull 77,000円</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>1.7倍</b>　3ケースを確率でならした値：<b>53,250円</b></p>
+    </div>
+    <div>
+      <h3>今の株価と、この分析の違い</h3>
+      <div class="compare">
+        <div><b>今の株価 38/100</b><div class="meter"><i style="width:38%"></i></div></div>
+        <div><b>この分析 49/100</b><div class="meter"><i style="width:49%"></i></div></div>
+      </div>
+      
+      <p>同じPERモデルで見ると、今の株価は正規化EPS約5,000円、PER9.5倍前後を織り込む水準です。市場の本当の予想ではなく、このモデル上の逆算です。</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="card" id="scenarios">
+  <h2>未来はこの3パターン</h2>
+  <p class="lead">現在株価から独立して、12〜18か月先の正規化EPSとPERを置きました。メモリ市況の山谷をならすため、単四半期利益をそのまま年換算していません。</p>
+  <div class="scenarios">
+    <article class="scenario bear">
+      <div class="scenario-head"><span>悲観ケース</span><b>25%</b></div>
+      <div class="scenario-price">30,000円</div>
+      <div class="small">現値比 -37.1%</div>
+      <dl><div><dt>正規化EPS</dt><dd>3,800円</dd></div><div><dt>PER</dt><dd>8.0倍</dd></div><div><dt>利益前提</dt><dd>NAND価格が反落</dd></div><div><dt>株式数</dt><dd>約5.52億株</dd></div></dl>
+      
+    </article>
+    <article class="scenario base">
+      <div class="scenario-head"><span>標準ケース</span><b>50%</b></div>
+      <div class="scenario-price">53,000円</div>
+      <div class="small">現値比 +11.0%</div>
+      <dl><div><dt>正規化EPS</dt><dd>5,600円</dd></div><div><dt>PER</dt><dd>9.5倍</dd></div><div><dt>利益前提</dt><dd>AI向けSSDが堅調</dd></div><div><dt>株式数</dt><dd>約5.52億株</dd></div></dl>
+    </article>
+    <article class="scenario bull">
+      <div class="scenario-head"><span>楽観ケース</span><b>25%</b></div>
+      <div class="scenario-price">77,000円</div>
+      <div class="small">現値比 +61.3%</div>
+      <dl><div><dt>正規化EPS</dt><dd>7,300円</dd></div><div><dt>PER</dt><dd>10.5倍</dd></div><div><dt>利益前提</dt><dd>高ASPとLTAが継続</dd></div><div><dt>株式数</dt><dd>約5.52億株</dd></div></dl>
+    </article></div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>この値段ならどう見る？</h2>
+    
+    <div class="zone"><div><b>3万円未満</b><span>★★★★★</span></div><p>悲観ケース以下。市況悪化をかなり織り込む価格帯です。</p></div><div class="zone"><div><b>3万〜5.3万円</b><span>★★★</span></div><p>標準ケースの手前。今の株価はこの範囲です。</p></div><div class="zone"><div><b>5.3万〜7.7万円</b><span>★★</span></div><p>AI需要継続をかなり評価する価格帯です。</p></div><div class="zone"><div><b>7.7万円超</b><span>★</span></div><p>楽観ケース超。さらに強いNAND市況か倍率拡大が必要です。</p></div>
+    
+  </div>
+  <div class="card">
+    <h2>株価を動かす4つ</h2>
+    
+    <div class="signal"><div><b>AI向けSSD需要</b><span class="up">追い風</span></div><p>データセンター顧客の需要が1Q増収の主因でした。</p></div><div class="signal"><div><b>NAND価格</b><span class="up">追い風</span></div><p>ASP上昇は利益率に強く効きます。反落時は逆回転します。</p></div><div class="signal"><div><b>自社株取得</b><span class="flat">確認</span></div><p>上限8,000億円ですが、実際の取得額と価格が重要です。</p></div><div class="signal"><div><b>訴訟・規制</b><span class="down">注意</span></div><p>Viasat訴訟は引当済みですが、今後の法的手続きは残ります。</p></div>
+    
+  </div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>ここは普通に強い</h2>
+    <ul class="clean"><li>2027年3月期1Qは売上1.77兆円、営業利益1.27兆円と大幅に伸びました。</li><li>2Q見通しも売上2.39兆円、営業利益1.89兆円と強い会社見通しです。</li><li>AI推論向けSSDと第10世代BiCS FLASHで製品ミックス改善を狙えます。</li><li>上限8,000億円の自社株取得枠は資本効率の改善要因です。</li></ul>
+    
+  </div>
+  <div class="card">
+    <h2>ここで事故るかも</h2>
+    <ul class="clean"><li>NAND市況は短期で大きく変わります。価格下落時は利益が急縮小します。</li><li>通期見通しは出ていません。Q1・Q2の強さをそのまま通年化できません。</li><li>設備投資と研究開発投資が大きく、需要鈍化時は固定費負担になります。</li><li>訴訟、為替、輸出規制など外部要因もあります。</li></ul>
+    
+  </div>
+</section>
+
+
+<section class="card" id="logic">
+  <h2>数字の作り方</h2>
+  <p class="lead">主計算はPERです。PERは、1株利益に何倍の評価をつけるかを見る方法です。景気循環の強いメモリ企業なので、直近単四半期ではなく正規化EPSを使いました。</p>
+  <div class="table-wrap"><table>
+  <thead><tr><th>ケース</th><th>正規化EPS</th><th>PER</th><th>計算株価</th><th>確率</th><th>確率加重</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>3,800円</td><td>8.0倍</td><td>30,000円</td><td>25%</td><td>7,500円</td></tr><tr><td>標準</td><td>5,600円</td><td>9.5倍</td><td>53,000円</td><td>50%</td><td>26,500円</td></tr><tr><td>楽観</td><td>7,300円</td><td>10.5倍</td><td>77,000円</td><td>25%</td><td>19,250円</td></tr></tbody>
+  </table></div>
+  
+  <p class="notice"><b>重要：</b>現在株価に合わせて標準ケースを置いていません。Q2会社見通し、NAND市況、AI向け製品ミックスを踏まえ、12〜18か月の利益水準を推定しています。</p>
+</section>
+
+
+<section class="card" id="conditions">
+  <h2>この未来になる条件</h2>
+  <details open><summary>悲観ケース：3万円 / 確率25%</summary><p>AI向け需要は残るものの、NAND価格が反落し、正規化EPSが3,800円程度に下がるケースです。</p></details><details><summary>標準ケース：5.3万円 / 確率50%</summary><p>データセンター需要が堅調で、FY2027前半の強さが一部続くケースです。</p></details><details><summary>楽観ケース：7.7万円 / 確率25%</summary><p>高ASP、LTA、AI向けSSDの製品ミックス改善が重なり、PERもやや拡大するケースです。</p></details>
+  
+</section>
+
+
+<section class="grid-2" id="sensitivity">
+  <div class="card">
+    <h2>数字がズレるとどうなる？</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>前提</th><th>弱い</th><th>標準</th><th>強い</th></tr></thead>
+      <tbody><tr><td>正規化EPS</td><td>4,800円 → 45,600円</td><td>5,600円 → 53,000円</td><td>6,400円 → 60,800円</td></tr><tr><td>PER</td><td>8.5倍 → 47,600円</td><td>9.5倍 → 53,000円</td><td>10.5倍 → 58,800円</td></tr></tbody>
+    </table></div>
+    <p class="small">1変数だけを動かした簡易感応度です。実際にはEPSとPERが同時に動くことがあります。</p>
+  </div>
+  <div class="card">
+    <h2>どの価格に行きやすい？</h2>
+    <p class="lead">モンテカルロではなく、悲観・標準・楽観の3点分布です。</p>
+    <div class="dist-row"><span>3万円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div><div class="dist-row"><span>5.3万円</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>7.7万円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>
+    
+    <p>中心は標準ケースです。ただしメモリ市況株なので、両端への振れも小さくありません。</p>
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>次の決算で見る場所</h2>
+  <div class="signal"><div><b>2026年7〜9月期の実績</b></div><p>会社見通しの売上2.39兆円、営業利益1.89兆円に対する達成度を確認します。</p></div><div class="signal"><div><b>SSD & Storage売上</b></div><p>AIデータセンター需要がどの程度続くかを見ます。</p></div><div class="signal"><div><b>自社株取得の進捗</b></div><p>上限枠に対して実際にどれだけ取得したかを確認します。</p></div>
+  
+</section>
+
+
+<section class="card" id="assumptions">
+  <h2>使った数字と前提</h2>
+  <div class="table-wrap"><table>
+  <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
+  <tbody><tr><td>評価基準株価</td><td>47,730円</td><td>公式市場データで確認済み</td><td>2026/08/07終値</td></tr><tr><td>希薄化後株式数</td><td>約5.52億株</td><td>このレポートの推定</td><td>Q1希薄化EPSから逆算</td></tr><tr><td>1Q売上</td><td>1.77兆円</td><td>公式情報で確認済み</td><td>2026年4〜6月</td></tr><tr><td>2Q売上見通し</td><td>2.39兆円</td><td>会社の目標・予定</td><td>2026年7〜9月</td></tr><tr><td>株式分割</td><td>1株を3株</td><td>会社の目標・予定</td><td>2026/10/01効力発生</td></tr></tbody>
+  </table></div>
+</section>
+
+
+<section class="card">
+  <h2>詳しく見たい人向け</h2>
+  <details open><summary>手法選定理由</summary><p>キオクシアは黒字化済みですが、NAND価格に左右される景気循環企業です。そのため、単純DCFよりも正規化EPSにPERをかける方法を主にしました。</p></details><details><summary>希薄化と株式分割</summary><p>Q1の希薄化EPSから約5.52億株を使いました。2026年10月の1対3株式分割は企業価値を変えないため、分割前株価で表示しています。</p></details><details><summary>主要出典</summary><p><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2859908/00.pdf" target="_blank" rel="noopener noreferrer">1Q決算短信</a>、<a href="https://www.kioxia-holdings.com/content/dam/kioxia-hd/en-jp/ir/library/securities/asset/Annual-Securities-Report-FY2025-EN.pdf" target="_blank" rel="noopener noreferrer">有価証券報告書</a>、<a href="https://www.kioxia-holdings.com/ja-jp/news/2026/20260602-1.html" target="_blank" rel="noopener noreferrer">Investor Day</a>、<a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2859912/00.pdf" target="_blank" rel="noopener noreferrer">株式分割</a>、<a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2859923/00.pdf" target="_blank" rel="noopener noreferrer">自社株取得枠</a>。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></details>
+  
+</section>
+
+<section class="card notice">
+  <h3>免責</h3><p>本資料は情報提供を目的とした試算です。投資助言ではありません。半導体メモリ株は市況、為替、顧客投資、規制で大きく変動します。</p>
+</section>
+<footer>SiM MARKET LAB｜キオクシアホールディングス（285A）株価シナリオ｜作成日 2026-08-08</footer>
+</main>
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+</body></html>

@@ -1,6 +1,19 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": null,
-  "signals": {}
+  "updatedAt": "2026-08-08T07:57:28.730768+00:00",
+  "signals": {
+    "kioxia-285a": {
+      "position": 47.3,
+      "zone": "中立",
+      "asOf": "2026-08-08",
+      "components": {
+        "valuation": 38.0,
+        "catalysts": 65.0,
+        "businessRisk": 55.0
+      },
+      "reportRevision": "kioxia-285a-2026-08-08",
+      "summary": "標準ケースの手前にある一方、AI向け需要と自社株取得が支え。NAND市況の反落リスクも残るため中立。"
+    }
+  }
 }
