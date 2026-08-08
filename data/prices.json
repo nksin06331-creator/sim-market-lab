@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-08T07:01:00.227320+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 3,
+  "quoteCount": 4,
   "errorCount": 0,
   "errors": {},
   "prices": {
@@ -37,6 +37,17 @@
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:00+00:00",
       "updatedAt": "2026-08-08T10:00:00+00:00",
+      "status": "ok"
+    },
+    "paycloud-4015": {
+      "symbol": "4015.T",
+      "price": 540,
+      "previousClose": 540,
+      "change": 0,
+      "changePct": 0.0,
+      "currency": "JPY",
+      "marketTime": "2026-07-30T06:30:00+00:00",
+      "updatedAt": "2026-08-08T13:00:00+00:00",
       "status": "ok"
     }
   }

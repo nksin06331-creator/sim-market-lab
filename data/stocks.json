@@ -81,6 +81,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "paycloud-4015",
+      "order": 4,
+      "ticker": "4015",
+      "quoteSymbol": "4015.T",
+      "name": "ペイクラウドホールディングス",
+      "nameEn": "Paycloud Holdings Inc.",
+      "market": "JP",
+      "marketLabel": "日本株",
+      "exchange": "東京証券取引所グロース市場",
+      "currency": "JPY",
+      "sector": "キャッシュレス決済・デジタルサイネージ",
+      "reports": {
+        "company": {
+          "path": "./stocks/paycloud-4015/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/paycloud-4015/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/paycloud-4015/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

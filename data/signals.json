@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-08T12:25:45.743832+00:00",
+  "updatedAt": "2026-08-08T14:47:44.906546+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.1,
@@ -38,6 +38,18 @@
       },
       "reportRevision": "redwire-rdw-2026-08-08",
       "summary": "Q2売上急伸、受注残、防衛UAS材料は強い一方、赤字、買収統合、内部統制、希薄化リスクが残るため中立。"
+    },
+    "paycloud-4015": {
+      "position": 53.9,
+      "zone": "中立",
+      "asOf": "2026-08-08",
+      "components": {
+        "valuation": 48.9,
+        "catalysts": 66.0,
+        "businessRisk": 54.0
+      },
+      "reportRevision": "paycloud-4015-2026-08-08",
+      "summary": "3Q増収増益と調整後EBITDA進捗は強い一方、現在株価は標準ケース付近で、通期決算と来期見通し確認前のため中立。"
     }
   }
 }
