@@ -406,11 +406,11 @@ def update_site_data() -> None:
     signals = json.loads(signals_path.read_text(encoding="utf-8"))
     signals["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals["signals"]["kioxia-285a"] = {
-        "position": 47.3,
+        "position": 47.1,
         "zone": "中立",
         "asOf": DATE,
         "components": {
-            "valuation": 38.0,
+            "valuation": 37.7,
             "catalysts": 65.0,
             "businessRisk": 55.0,
         },

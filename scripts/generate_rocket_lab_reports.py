@@ -409,11 +409,11 @@ def update_site_data() -> None:
     signals = json.loads(signals_path.read_text(encoding="utf-8"))
     signals["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals["signals"]["rocket-lab-rklb"] = {
-        "position": 64.1,
+        "position": 54.8,
         "zone": "中立",
         "asOf": DATE,
         "components": {
-            "valuation": 58.0,
+            "valuation": 42.5,
             "catalysts": 74.0,
             "businessRisk": 72.0,
         },

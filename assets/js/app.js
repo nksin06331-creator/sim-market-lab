@@ -61,12 +61,14 @@ function formatDate(value) {
 function getSignal(stockId) {
   const source = state.signals[stockId];
   const position = Number(source?.position);
+  const valuationPosition = Number(source?.components?.valuation);
   const allowedZones = ["売られすぎ", "中立", "買われすぎ"];
   if (!Number.isFinite(position) || !allowedZones.includes(source?.zone)) {
-    return { position: 50, zone: "判定準備中", asOf: null, pending: true };
+    return { position: 50, valuationPosition: 50, zone: "判定準備中", asOf: null, pending: true };
   }
   return {
     position: Math.min(100, Math.max(0, position)),
+    valuationPosition: Number.isFinite(valuationPosition) ? Math.min(100, Math.max(0, valuationPosition)) : Math.min(100, Math.max(0, position)),
     zone: source.zone,
     asOf: source.asOf || null,
     pending: false
@@ -125,10 +127,10 @@ function createCard(stock) {
   const signalBlock = document.createElement("div");
   signalBlock.className = "signal-block";
   signalBlock.innerHTML = `
-    <div class="signal-heading"><span>レポート総合判定</span><strong>${signal.zone}</strong></div>
-    <div class="signal-track" aria-label="レポート総合判定 ${signal.zone}"><span class="signal-marker${signal.pending ? " is-pending" : ""}" style="left:${signal.position}%"></span></div>
+    <div class="signal-heading"><span>現在株価の位置</span><strong>${signal.zone}</strong></div>
+    <div class="signal-track" aria-label="現在株価の位置 ${signal.valuationPosition.toFixed(1)}%"><span class="signal-marker${signal.pending ? " is-pending" : ""}" style="left:${signal.valuationPosition}%"></span></div>
     <div class="signal-scale"><span>売られすぎ</span><span>中立</span><span>買われすぎ</span></div>
-    <p class="signal-zone">${signal.asOf ? `分析基準日：${signal.asOf}` : "3つのレポート作成後に判定します"}</p>`;
+    <p class="signal-zone">${signal.asOf ? `レポート2と同じ位置：${signal.valuationPosition.toFixed(1)}%` : "3つのレポート作成後に判定します"}</p>`;
 
   const actions = document.createElement("div");
   actions.className = "card-actions";
@@ -212,8 +214,8 @@ function createCompactRow(stock) {
       <strong>${formatChange(price)}</strong>
     </div>
     <div>
-      <small>レポート判定</small>
-      <strong>${signal.zone}</strong>
+      <small>現在株価の位置</small>
+      <strong>${signal.valuationPosition.toFixed(1)}%</strong>
     </div>`;
 
   const signalNote = document.createElement("p");

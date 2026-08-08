@@ -353,11 +353,11 @@ def upsert_site_data() -> None:
     signals_payload = json.loads(signals_path.read_text(encoding="utf-8"))
     signals_payload["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals_payload.setdefault("signals", {})["redwire-rdw"] = {
-        "position": 56.8,
+        "position": 43.1,
         "zone": "中立",
         "asOf": DATE,
         "components": {
-            "valuation": 49.0,
+            "valuation": 26.0,
             "catalysts": 72.0,
             "businessRisk": 63.0,
         },
