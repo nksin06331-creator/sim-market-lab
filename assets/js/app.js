@@ -12,6 +12,8 @@ const state = {
   view: "card"
 };
 
+const compactMediaQuery = window.matchMedia("(max-width: 760px)");
+
 const elements = {
   results: document.querySelector("#stock-results"),
   resultStatus: document.querySelector("#result-status"),
@@ -140,10 +142,116 @@ function createCard(stock) {
   return card;
 }
 
-function createList(stocks) {
+function closeOtherCompactRows(currentRow) {
+  document.querySelectorAll(".stock-row.is-expanded").forEach((row) => {
+    if (row === currentRow) return;
+    const toggle = row.querySelector(".stock-row-toggle");
+    const details = row.querySelector(".stock-row-details");
+    row.classList.remove("is-expanded");
+    if (toggle) {
+      toggle.textContent = "+";
+      toggle.setAttribute("aria-expanded", "false");
+    }
+    if (details) details.hidden = true;
+  });
+}
+
+function createCompactRow(stock) {
+  const price = state.prices[stock.id] || null;
+  const signal = getSignal(stock.id);
+  const row = document.createElement("article");
+  row.className = "stock-row stock-row-compact";
+
+  const summary = document.createElement("div");
+  summary.className = "stock-row-summary";
+
+  const identity = document.createElement("div");
+  identity.className = "stock-row-identity";
+  const ticker = document.createElement("strong");
+  ticker.textContent = stock.ticker;
+  const name = document.createElement("span");
+  name.textContent = stock.name;
+  identity.append(ticker, name);
+
+  const priceCell = document.createElement("div");
+  priceCell.className = "stock-row-price";
+  const priceLabel = document.createElement("small");
+  priceLabel.textContent = "現在株価";
+  const priceStrong = document.createElement("strong");
+  priceStrong.textContent = formatPrice(Number(price?.price), stock.currency);
+  priceCell.append(priceLabel, priceStrong);
+
+  const toggle = document.createElement("button");
+  toggle.className = "stock-row-toggle";
+  toggle.type = "button";
+  toggle.textContent = "+";
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", `${stock.ticker}の詳細を開く`);
+
+  summary.append(identity, priceCell, toggle);
+
+  const details = document.createElement("div");
+  details.className = "stock-row-details";
+  details.hidden = true;
+
+  const tags = document.createElement("div");
+  tags.className = "stock-row-tags";
+  const market = document.createElement("span");
+  market.textContent = stock.marketLabel;
+  const sector = document.createElement("span");
+  sector.textContent = stock.sector;
+  const date = document.createElement("span");
+  date.textContent = `${formatDate(price?.marketTime)} 更新`;
+  tags.append(market, sector, date);
+
+  const detailGrid = document.createElement("div");
+  detailGrid.className = "stock-row-detail-grid";
+  detailGrid.innerHTML = `
+    <div>
+      <small>前日比</small>
+      <strong>${formatChange(price)}</strong>
+    </div>
+    <div>
+      <small>レポート判定</small>
+      <strong>${signal.zone}</strong>
+    </div>`;
+
+  const signalNote = document.createElement("p");
+  signalNote.className = "stock-row-note";
+  signalNote.textContent = signal.asOf ? `分析基準日：${signal.asOf}` : "3つのレポート作成後に判定します";
+
+  const actions = document.createElement("div");
+  actions.className = "stock-row-actions";
+  actions.append(
+    reportLink(stock.reports.company, "01", "企業について"),
+    reportLink(stock.reports.valuation, "02", "現在の株価"),
+    reportLink(stock.reports.catalysts, "03", "今後のカタリスト")
+  );
+
+  details.append(tags, detailGrid, signalNote, actions);
+  row.append(summary, details);
+
+  toggle.addEventListener("click", () => {
+    const nextExpanded = !row.classList.contains("is-expanded");
+    closeOtherCompactRows(row);
+    row.classList.toggle("is-expanded", nextExpanded);
+    details.hidden = !nextExpanded;
+    toggle.textContent = nextExpanded ? "−" : "+";
+    toggle.setAttribute("aria-expanded", String(nextExpanded));
+    toggle.setAttribute("aria-label", `${stock.ticker}の詳細を${nextExpanded ? "閉じる" : "開く"}`);
+  });
+
+  return row;
+}
+
+function createList(stocks, compact = false) {
   const list = document.createElement("div");
   list.className = "stock-list";
   stocks.forEach((stock) => {
+    if (compact) {
+      list.append(createCompactRow(stock));
+      return;
+    }
     const price = state.prices[stock.id] || null;
     const signal = getSignal(stock.id);
     const row = document.createElement("article");
@@ -209,9 +317,10 @@ function visibleStocks() {
 
 function render() {
   const stocks = visibleStocks();
+  const compact = compactMediaQuery.matches;
   elements.results.replaceChildren();
   elements.resultStatus.textContent = `${stocks.length}件を表示`;
-  elements.results.className = state.view === "card" ? "stock-grid" : "";
+  elements.results.className = !compact && state.view === "card" ? "stock-grid" : "";
 
   if (!stocks.length) {
     const empty = document.createElement("p");
@@ -221,7 +330,7 @@ function render() {
     return;
   }
 
-  if (state.view === "list") elements.results.append(createList(stocks));
+  if (compact || state.view === "list") elements.results.append(createList(stocks, compact));
   else stocks.forEach((stock) => elements.results.append(createCard(stock)));
 }
 
@@ -298,5 +407,11 @@ function setView(view) {
 
 elements.cardView.addEventListener("click", () => setView("card"));
 elements.listView.addEventListener("click", () => setView("list"));
+
+if (compactMediaQuery.addEventListener) {
+  compactMediaQuery.addEventListener("change", render);
+} else {
+  compactMediaQuery.addListener(render);
+}
 
 init();
