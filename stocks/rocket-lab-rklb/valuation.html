@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ロケット・ラボ（RKLB）｜株価シナリオ</title>
+
+<style>
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.score b{font-size:54px;line-height:1;display:block}.score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(21px,3vw,29px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scenario{border-radius:16px;padding:18px;border:1px solid var(--line);background:#101410;position:relative;overflow:hidden;min-height:320px}.scenario:after{position:absolute;right:4px;top:-12px;font-weight:900;font-size:66px;opacity:.05;line-height:1}.scenario.bear:after{content:"B"}.scenario.base:after{content:"A"}.scenario.bull:after{content:"↑"}.scenario-head{display:flex;justify-content:space-between;gap:10px;font-weight:800}.scenario-head b{padding:4px 9px;border-radius:999px;color:#06210a;background:var(--accent)}.scenario-price{font-size:clamp(31px,4vw,42px);font-weight:900;letter-spacing:-.05em;margin:14px 0 0}.scenario.bear{border-top:4px solid var(--red)}.scenario.base{border-top:4px solid var(--accent);box-shadow:0 0 0 1px rgba(110,226,78,.12)}.scenario.bull{border-top:4px solid var(--accent-bright)}
+.small{font-size:13px;color:var(--muted)}dl{margin:16px 0 0}dl div{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding:8px 0;gap:12px}dt{color:var(--muted)}dd{margin:0;font-weight:800}.position{margin-top:20px}.position-line{height:14px;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--amber),var(--accent));position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.pin{position:absolute;top:-8px;width:7px;height:30px;background:#fff;border:2px solid #050805;border-radius:6px;left:36.1%;box-shadow:0 4px 14px rgba(0,0,0,.55)}.position-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px;gap:7px}.pill{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}
+.zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible{border-color:var(--accent);color:var(--accent)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+@media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
+</style>
+
+</head>
+<body data-stock-ticker="RKLB" data-price-source="../../data/prices.json">
+
+<header class="hero">
+<div class="wrap">
+  <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
+  <h1>ロケット・ラボ <small>RKLB</small></h1>
+  <div class="sub">Nasdaq｜評価基準日 2026-08-08｜使用手法 高成長宇宙インフラ向け売上倍率シナリオ</div>
+  <div class="verdict">
+    <div class="verdict-main">
+      <span class="pill">まず結論だけ</span>
+
+      <div class="status">期待先行の中立圏</div>
+
+      <p>評価基準株価は悲観〜楽観レンジの42.5%地点です。Q1成長と受注残は強い一方、現在株価はすでに高い成長を織り込んでいます。</p>
+      <p class="sub">この試算は2026年8月8日時点の公開情報で固定しています。Q2決算は2026年8月10日発表予定のため、未反映です。</p>
+    </div>
+
+    <div class="score"><small>分析の参考スコア</small><b>46</b><small>/ 100　売買判断ではありません</small></div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$82.83</b><small data-live-price-date>2026/08/07 16:00 ET（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>$88.00</b><small>+6.2%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>$88.50</b><small>+6.8%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>高い</b><small>成長期待と赤字・希薄化が同居</small></div>
+  </div>
+
+</div>
+</header>
+
+
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>Q2決算は2026年8月10日予定です。このページは直前時点の会社見通しと公開資料に基づく暫定版です。</div></div>
+
+
+<nav class="report-nav"><div class="wrap">
+<button type="button" data-scroll-target="snapshot">結論</button>
+<button type="button" data-scroll-target="scenarios">3シナリオ</button>
+<button type="button" data-scroll-target="logic">計算</button>
+<button type="button" data-scroll-target="sensitivity">感応度</button>
+<button type="button" data-scroll-target="assumptions">前提</button>
+</div></nav>
+
+<main class="wrap">
+
+
+<section class="card" id="snapshot">
+  <h2>いまの株価、どこにいる？</h2>
+  <p class="lead">今の株価は、強い受注残、防衛宇宙需要、NeutronとIridiumの期待をかなり評価しています。ただし、楽観ケースを完全に織り込む水準ではありません。</p>
+  <div class="grid-2">
+    <div>
+      <h3>今の株価の位置</h3>
+      <p>悲観～楽観ケースの <b>42.5%</b> 地点。判定は <b>標準ケースの少し下</b>。Q2実績とNeutron進捗が良ければ標準〜楽観側へ寄ります。</p>
+
+      <div class="position"><div class="position-line"><i class="pin" style="left:42.5%"></i></div><div class="position-labels"><span>Bear $48.00</span><span>Base $88.00</span><span>Bull $130</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>1.4倍</b>　3ケースを確率でならした値：<b>$88.50</b></p>
+    </div>
+    <div>
+      <h3>今の株価と、この分析の違い</h3>
+      <div class="compare">
+        <div><b>今の株価 42/100</b><div class="meter"><i style="width:42%"></i></div></div>
+        <div><b>この分析 49/100</b><div class="meter"><i style="width:49%"></i></div></div>
+      </div>
+
+      <p>このモデルで逆算すると、今の株価は2028年売上約$1.7B、EV/Sales約30倍前後、またはそれに近い成長期待を織り込む水準です。市場全体の予想ではなく、このモデル上の逆算です。</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="card" id="scenarios">
+  <h2>未来はこの3パターン</h2>
+  <p class="lead">現在株価から独立して、2028年ごろの売上規模、粗利率、Neutron/Space Systemsの進捗、評価倍率を置きました。赤字企業のためPERではなく売上倍率を主に使います。</p>
+  <div class="scenarios">
+    <article class="scenario bear">
+      <div class="scenario-head"><span>悲観ケース</span><b>25%</b></div>
+      <div class="scenario-price">$48.00</div>
+      <div class="small">現値比 -42.1%</div>
+      <dl><div><dt>2028年売上</dt><dd>$1.2B</dd></div><div><dt>EV/Sales</dt><dd>22倍</dd></div><div><dt>前提</dt><dd>Neutron遅延・倍率低下</dd></div><div><dt>株式数</dt><dd>約6.29億株</dd></div></dl>
+
+    </article>
+    <article class="scenario base">
+      <div class="scenario-head"><span>標準ケース</span><b>50%</b></div>
+      <div class="scenario-price">$88.00</div>
+      <div class="small">現値比 +6.2%</div>
+      <dl><div><dt>2028年売上</dt><dd>$1.7B</dd></div><div><dt>EV/Sales</dt><dd>30倍</dd></div><div><dt>前提</dt><dd>Q2達成・防衛宇宙堅調</dd></div><div><dt>株式数</dt><dd>約6.29億株</dd></div></dl>
+    </article>
+    <article class="scenario bull">
+      <div class="scenario-head"><span>楽観ケース</span><b>25%</b></div>
+      <div class="scenario-price">$130</div>
+      <div class="small">現値比 +57.0%</div>
+      <dl><div><dt>2028年売上</dt><dd>$2.2B</dd></div><div><dt>EV/Sales</dt><dd>36倍</dd></div><div><dt>前提</dt><dd>Neutron成功・Iridium統合進展</dd></div><div><dt>株式数</dt><dd>約6.29億株</dd></div></dl>
+    </article></div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>この値段ならどう見る？</h2>
+
+    <div class="zone"><div><b>$48未満</b><span>★★★★</span></div><p>悲観ケース以下。成長鈍化や市場倍率低下をかなり織り込む価格帯です。</p></div><div class="zone"><div><b>$48〜$88</b><span>★★★</span></div><p>標準ケース手前。今の株価はこの範囲です。</p></div><div class="zone"><div><b>$88〜$130</b><span>★★</span></div><p>Q2達成、Neutron、買収統合の成功をかなり評価する価格帯です。</p></div><div class="zone"><div><b>$130超</b><span>★</span></div><p>楽観ケース超。さらに強い売上加速と倍率維持が必要です。</p></div>
+
+  </div>
+  <div class="card">
+    <h2>株価を動かす4つ</h2>
+
+    <div class="signal"><div><b>Q2売上見通し</b><span class="up">追い風</span></div><p>会社は$225M〜$240Mを見込んでいます。</p></div><div class="signal"><div><b>受注残$2.2B</b><span class="up">追い風</span></div><p>将来売上の見通しを支えます。</p></div><div class="signal"><div><b>Iridium買収</b><span class="flat">確認</span></div><p>規模拡大と統合・資金調達リスクが同時にあります。</p></div><div class="signal"><div><b>Neutron</b><span class="down">注意</span></div><p>成功なら大きい一方、遅延やコスト超過は下落要因です。</p></div>
+
+  </div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>ここは普通に強い</h2>
+    <ul class="clean"><li>2026年1Q売上は$200.3M、前年比+63.5%でした。</li><li>受注残は$2.2Bで、Q2売上見通しは$225M〜$240Mです。</li><li>SDA、HASTE、Space Force契約で防衛宇宙の実績が増えています。</li><li>Iridium買収が成立すれば、通信ネットワークと宇宙インフラの統合が進みます。</li></ul>
+
+  </div>
+  <div class="card">
+    <h2>ここで事故るかも</h2>
+    <ul class="clean"><li>GAAPではまだ赤字です。2026年1Q純損失は$45.0Mでした。</li><li>現在株価は売上倍率が高く、少しの失望で大きく下がり得ます。</li><li>Iridium買収は承認、資金調達、統合リスクがあります。</li><li>Neutron開発、打ち上げ失敗、政府予算変更、希薄化がリスクです。</li></ul>
+
+  </div>
+</section>
+
+
+<section class="card" id="logic">
+  <h2>数字の作り方</h2>
+  <p class="lead">主計算は売上倍率です。赤字成長企業のため、短期PERよりも将来売上とEV/Salesを使いました。</p>
+  <div class="table-wrap"><table>
+  <thead><tr><th>ケース</th><th>2028年売上</th><th>EV/Sales</th><th>計算株価</th><th>確率</th><th>確率加重</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>$1.2B</td><td>22倍</td><td>$48.00</td><td>25%</td><td>$12.00</td></tr><tr><td>標準</td><td>$1.7B</td><td>30倍</td><td>$88.00</td><td>50%</td><td>$44.00</td></tr><tr><td>楽観</td><td>$2.2B</td><td>36倍</td><td>$130</td><td>25%</td><td>$32.50</td></tr></tbody>
+  </table></div>
+
+  <p class="notice"><b>重要：</b>市場の正確な予想ではなく、公開情報から置いた条件付きシナリオです。買収、希薄化、ネットキャッシュ、Neutron進捗で大きく変わります。</p>
+</section>
+
+
+<section class="card" id="conditions">
+  <h2>この未来になる条件</h2>
+  <details open><summary>悲観ケース：$48 / 確率25%</summary><p>Q2は達成するが、Neutron遅延、Iridium統合不安、成長株倍率低下が重なるケースです。</p></details><details><summary>標準ケース：$88 / 確率50%</summary><p>Q2会社見通しをおおむね達成し、SDA・HASTE・Space Systemsが順調に伸びるケースです。</p></details><details><summary>楽観ケース：$130 / 確率25%</summary><p>Neutron進捗、Iridium統合、防衛宇宙の大型契約が重なり、倍率が高く保たれるケースです。</p></details>
+
+</section>
+
+
+<section class="grid-2" id="sensitivity">
+  <div class="card">
+    <h2>数字がズレるとどうなる？</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>前提</th><th>弱い</th><th>標準</th><th>強い</th></tr></thead>
+      <tbody><tr><td>2028年売上</td><td>$1.4B → $69</td><td>$1.7B → $88</td><td>$2.0B → $106</td></tr><tr><td>EV/Sales</td><td>24倍 → $63</td><td>30倍 → $88</td><td>36倍 → $113</td></tr></tbody>
+    </table></div>
+    <p class="small">1変数だけを動かした簡易感応度です。実際には売上成長と倍率が同時に動きます。</p>
+  </div>
+  <div class="card">
+    <h2>どの価格に行きやすい？</h2>
+    <p class="lead">モンテカルロではなく、悲観・標準・楽観の3点分布です。</p>
+    <div class="dist-row"><span>$48</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div><div class="dist-row"><span>$88</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>$130</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>
+
+    <p>中心は標準ケースです。ただし宇宙テーマ株として、ニュースと倍率で両端へ大きく振れやすい銘柄です。</p>
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>次の決算で見る場所</h2>
+  <div class="signal"><div><b>2026年Q2決算</b></div><p>売上$225M〜$240M、粗利率、Adjusted EBITDA損失幅を確認します。</p></div><div class="signal"><div><b>Neutron開発</b></div><p>試験、初号機、顧客契約、コスト超過の有無を見ます。</p></div><div class="signal"><div><b>Iridium買収</b></div><p>承認、資金調達、統合計画、希薄化を確認します。</p></div>
+
+</section>
+
+
+<section class="card" id="assumptions">
+  <h2>使った数字と前提</h2>
+  <div class="table-wrap"><table>
+  <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
+  <tbody><tr><td>評価基準株価</td><td>$82.83</td><td>市場データで確認済み</td><td>2026/08/07終値</td></tr><tr><td>Q2売上見通し</td><td>$225M〜$240M</td><td>会社の目標・予定</td><td>2026/05/07</td></tr><tr><td>Q1売上</td><td>$200.3M</td><td>公式情報で確認済み</td><td>2026年1〜3月</td></tr><tr><td>Q2株式数目安</td><td>629M</td><td>会社見通し</td><td>Series A preferred含む</td></tr></tbody>
+  </table></div>
+</section>
+
+
+<section class="card">
+  <h2>詳しく見たい人向け</h2>
+  <details open><summary>手法選定理由</summary><p>Rocket Labは高成長ですがGAAP赤字です。短期PERではなく、将来売上とEV/Salesを主に使いました。</p></details><details><summary>希薄化について</summary><p>Q2会社見通しでは基本加重平均株式数629Mが示されています。買収や資金調達で将来株式数は変わり得ます。</p></details><details><summary>主要出典</summary><p><a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-first-quarter-2026-financial-results" target="_blank" rel="noopener noreferrer">Q1決算</a>、<a href="https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm" target="_blank" rel="noopener noreferrer">2025年10-K</a>、<a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully" target="_blank" rel="noopener noreferrer">Iridium買収</a>、<a href="https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-achieves-milestone-missile-defense-constellation" target="_blank" rel="noopener noreferrer">SDA進捗</a>、<a href="https://investors.rocketlabcorp.com/" target="_blank" rel="noopener noreferrer">投資家向けサイト</a>。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></details>
+
+</section>
+
+<section class="card notice">
+  <h3>免責</h3><p>本資料は情報提供を目的とした試算です。投資助言ではありません。宇宙・防衛関連の成長株は、契約、開発、資金調達、市場倍率により大きく変動します。</p>
+</section>
+<footer>SiM MARKET LAB｜ロケット・ラボ（RKLB）株価シナリオ｜作成日 2026-08-08</footer>
+</main>
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+<script>
+document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var target = document.getElementById(button.dataset.scrollTarget);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body></html>

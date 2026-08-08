@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-08T07:57:28.730768+00:00",
+  "updatedAt": "2026-08-08T09:39:29.307007+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.3,
@@ -14,6 +14,18 @@
       },
       "reportRevision": "kioxia-285a-2026-08-08",
       "summary": "標準ケースの手前にある一方、AI向け需要と自社株取得が支え。NAND市況の反落リスクも残るため中立。"
+    },
+    "rocket-lab-rklb": {
+      "position": 64.1,
+      "zone": "中立",
+      "asOf": "2026-08-08",
+      "components": {
+        "valuation": 58.0,
+        "catalysts": 74.0,
+        "businessRisk": 72.0
+      },
+      "reportRevision": "rocket-lab-rklb-2026-08-08",
+      "summary": "Q1成長、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。"
     }
   }
 }

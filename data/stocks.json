@@ -43,15 +43,15 @@
       "reports": {
         "company": {
           "path": "./stocks/rocket-lab-rklb/company.html",
-          "available": false
+          "available": true
         },
         "valuation": {
           "path": "./stocks/rocket-lab-rklb/valuation.html",
-          "available": false
+          "available": true
         },
         "catalysts": {
           "path": "./stocks/rocket-lab-rklb/catalysts.html",
-          "available": false
+          "available": true
         }
       }
     }
