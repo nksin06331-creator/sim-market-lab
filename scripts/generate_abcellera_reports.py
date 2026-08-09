@@ -246,17 +246,25 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>38%</b></div><p>仮定：ABCL635 Phase 2成功期待を35%、Q2決算の資金余力維持を55%、Jazz提携価値を30%、追加候補の臨床入り期待を25%として置き、重複を控除しました。</p><p>読み方：株価はABCL635成功を一部織り込んでいますが、臨床データ前のため期待はまだ半分未満です。良いデータなら上振れ、失敗なら大きく下振れます。</p><p>次に見る数字：利用可能流動性、R&D費、下流権利付きプログラム数、臨床中分子数、Phase 2有効性です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
-    outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul>"
+    impact_map = {
+        "ABCL635 Phase 2データ": ("+45〜110%", "-15〜+35%", "-45〜-70%", "主力候補の成否で標準ケースと悲観ケースが直接入れ替わるため最大レンジにしています。"),
+        "2026年Q2決算詳細": ("+8〜18%", "-6〜+6%", "-12〜-25%", "資金余力とバーン確認が中心で、臨床データほど企業価値を直接変えないため小さめです。"),
+        "Jazz Pharmaceuticals提携": ("+10〜25%", "-4〜+8%", "-8〜-18%", "提携はプラットフォーム価値を支えますが、短期売上化まで距離があるため中程度です。"),
+        "ABCL688・ABCL386の臨床入り準備": ("+12〜30%", "-6〜+10%", "-12〜-24%", "主力候補依存を下げる材料ですが、まだ初期段階なのでPhase 2より小さくしています。"),
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
+        up, flat, down, reason = impact_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表または予定</span></div></div>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+30〜90%</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+25%</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-30〜-60%</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
 </div>
+<p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>有効性が弱い</li><li>安全性懸念</li><li>キャッシュバーン拡大</li></ul></div></div>
 </article>'''
 

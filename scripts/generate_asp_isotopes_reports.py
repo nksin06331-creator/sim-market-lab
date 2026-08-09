@@ -249,17 +249,25 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>34%</b></div><p>仮定：C-14・Yb-176初期出荷期待を35%、Renergen Phase 1進捗を40%、Si-28期待を25%、QLE/HALEU長期価値を25%、資金調達リスク控除を反映しました。</p><p>読み方：株価は大型テーマを一部見ていますが、実出荷・生産・規制確認前なので織り込みは低めです。出荷確認が出ると標準ケースへ近づきます。</p><p>次に見る数字：売上、現金、短期投資、発行済株式、契約量、設備稼働率です。</p><p>再計算方法：材料ごとの成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
-    outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul>"
+    impact_map = {
+        "C-14・Yb-176初期商業出荷": ("+35〜90%", "-12〜+30%", "-35〜-60%", "本格売上前の会社なので、初期出荷は技術・顧客・売上化を同時に確認する最大材料です。"),
+        "Renergen Phase 1": ("+25〜60%", "-10〜+22%", "-25〜-45%", "LNGとヘリウムの現金収入化に関わるため大きいですが、同位体出荷より買収・設備実行の要素が強いです。"),
+        "Si-28初期出荷": ("+12〜30%", "-6〜+12%", "-12〜-25%", "量子・半導体テーマは強い一方、短期売上規模がまだ見えにくいため中程度です。"),
+        "QLE/HALEU関連": ("+20〜70%", "-8〜+20%", "-18〜-40%", "成功時のテーマは大きいですが、規制・許認可・時間軸が長いためレンジを広くしています。"),
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
+        up, flat, down, reason = impact_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表または予定</span></div></div>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜80%</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+25%</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-25〜-55%</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
 </div>
+<p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>出荷遅延</li><li>契約量不足</li><li>資金調達条件の悪化</li></ul></div></div>
 </article>'''
 

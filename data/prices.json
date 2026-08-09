@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-09T11:05:26.624604+00:00",
+  "generatedAt": "2026-08-09T11:17:46.307989+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
   "quoteCount": 7,
   "errorCount": 0,
@@ -14,7 +14,7 @@
       "changePct": -2.0722,
       "currency": "JPY",
       "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-09T11:05:23.183141+00:00",
+      "updatedAt": "2026-08-09T11:17:42.816761+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,40 +25,7 @@
       "changePct": 9.4621,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:00+00:00",
-      "updatedAt": "2026-08-09T11:05:23.752728+00:00",
-      "status": "ok"
-    },
-    "redwire-rdw": {
-      "symbol": "RDW",
-      "price": 13.59,
-      "previousClose": 11.83,
-      "change": 1.76,
-      "changePct": 14.8774,
-      "currency": "USD",
-      "marketTime": "2026-08-07T20:00:02+00:00",
-      "updatedAt": "2026-08-09T11:05:24.319291+00:00",
-      "status": "ok"
-    },
-    "asp-isotopes-aspi": {
-      "symbol": "ASPI",
-      "price": 4.43,
-      "previousClose": 4.1,
-      "change": 0.33,
-      "changePct": 8.0488,
-      "currency": "USD",
-      "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-09T11:05:24.891946+00:00",
-      "status": "ok"
-    },
-    "paycloud-4015": {
-      "symbol": "4015.T",
-      "price": 542.0,
-      "previousClose": 535.0,
-      "change": 7.0,
-      "changePct": 1.3084,
-      "currency": "JPY",
-      "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-09T11:05:25.450264+00:00",
+      "updatedAt": "2026-08-09T11:17:43.396735+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
@@ -69,7 +36,29 @@
       "changePct": -1.3435,
       "currency": "JPY",
       "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-09T11:05:26.047908+00:00",
+      "updatedAt": "2026-08-09T11:17:44.010374+00:00",
+      "status": "ok"
+    },
+    "redwire-rdw": {
+      "symbol": "RDW",
+      "price": 13.59,
+      "previousClose": 11.83,
+      "change": 1.76,
+      "changePct": 14.8774,
+      "currency": "USD",
+      "marketTime": "2026-08-07T20:00:02+00:00",
+      "updatedAt": "2026-08-09T11:17:44.590527+00:00",
+      "status": "ok"
+    },
+    "paycloud-4015": {
+      "symbol": "4015.T",
+      "price": 542.0,
+      "previousClose": 535.0,
+      "change": 7.0,
+      "changePct": 1.3084,
+      "currency": "JPY",
+      "marketTime": "2026-08-07T06:30:00+00:00",
+      "updatedAt": "2026-08-09T11:17:45.155906+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
@@ -80,7 +69,18 @@
       "changePct": 6.1256,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-09T11:05:26.624593+00:00",
+      "updatedAt": "2026-08-09T11:17:45.734736+00:00",
+      "status": "ok"
+    },
+    "asp-isotopes-aspi": {
+      "symbol": "ASPI",
+      "price": 4.43,
+      "previousClose": 4.1,
+      "change": 0.33,
+      "changePct": 8.0488,
+      "currency": "USD",
+      "marketTime": "2026-08-07T20:00:01+00:00",
+      "updatedAt": "2026-08-09T11:17:46.307963+00:00",
       "status": "ok"
     }
   }

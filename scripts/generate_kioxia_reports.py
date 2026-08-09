@@ -289,18 +289,27 @@ def catalyst_values() -> dict[str, str]:
         '<p>再計算方法：売上、EPS、株式数へ分解し、株価シナリオと同じPERモデルで織り込み度を更新します。</p></div>'
     )
     outcome_common = (
-        "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
+        "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
     )
     cards = []
+    impact_map = {
+        "2026年7〜9月期決算と会社見通しの達成度": ("+10〜24%", "-5〜+8%", "-15〜-30%", "メモリ株では決算とASPがEPSを直接動かすため、短期材料として最大級です。"),
+        "自社株取得枠の実行": ("+6〜14%", "-3〜+5%", "-6〜-14%", "株式数と需給には効きますが、NAND市況や利益水準そのものは変えないため中程度です。"),
+        "1株を3株にする株式分割": ("+2〜7%", "-2〜+3%", "-4〜-8%", "分割は投資単位と流動性の材料で、企業価値を直接変えないため小さくしています。"),
+        "第10世代BiCS FLASHとAI向けSSDの立ち上がり": ("+12〜28%", "-5〜+10%", "-12〜-26%", "AI向けSSDは製品ミックスと将来PERを動かすため、決算に近い大きさで見ます。"),
+    }
+
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
+        up, flat, down, reason = impact_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+12〜24%</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+8%</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-15〜-30%</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
 </div>
+<p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>SSD & Storage売上の減速</li><li>ASP低下や在庫増加</li><li>設備投資負担の増加</li></ul></div></div>
 </article>'''
     cards.append(card(

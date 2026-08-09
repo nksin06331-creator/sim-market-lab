@@ -290,17 +290,25 @@ def catalyst_values() -> dict[str, str]:
         '<p>次に見る数字：Q2売上、粗利率、Adjusted EBITDA、受注残、Neutron進捗、買収条件です。</p>'
         '<p>再計算方法：材料ごとの成功確率を更新し、売上倍率モデルの標準ケースに対する織り込み度として再計算します。</p></div>'
     )
-    outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付き売上倍率再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付き売上倍率再計算を主に使用。</li></ul>"
+    impact_map = {
+        "2026年Q2決算": ("+10〜22%", "-5〜+8%", "-14〜-28%", "直近業績は重要ですが、株価にはすでに高成長期待が入っているため、Neutronや買収より単発影響は抑えています。"),
+        "Iridium買収の承認・統合": ("+18〜40%", "-8〜+12%", "-20〜-38%", "買収は売上規模とキャッシュフロー構造を変えるため大きい一方、承認・希薄化・統合リスクも大きく見ます。"),
+        "Neutron開発と初回打ち上げへの道筋": ("+20〜45%", "-10〜+15%", "-25〜-45%", "Neutronは将来市場の中心材料で、成功時も遅延時も株価倍率を大きく動かすため最大レンジにしています。"),
+        "HASTE / Space Force $266M契約": ("+8〜20%", "-4〜+7%", "-10〜-22%", "防衛契約は信頼性を高めますが、契約済み材料で売上認識も段階的なため中程度です。"),
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
+        up, flat, down, reason = impact_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+15〜30%</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-7〜+8%</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-20〜-40%</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
 </div>
+<p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>粗利率低下</li><li>受注残の伸び鈍化</li><li>開発日程の後ろ倒し</li></ul></div></div>
 </article>'''
 

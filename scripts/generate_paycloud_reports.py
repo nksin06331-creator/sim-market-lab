@@ -242,17 +242,25 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>46%</b></div><p>仮定：4Q決算の標準達成を50%、月次KPI改善を45%、優待電子化の導入拡大を40%、自社株取得後の需給改善を55%として置き、重複を控除しました。</p><p>読み方：3Q進捗は一部評価済みですが、通期決算と来期見通しがまだ残っているため、織り込みは半分弱です。</p><p>次に見る数字：通期売上、営業利益、調整後EBITDA、月次推移です。</p><p>再計算方法：EPS、PER、調整後EBITDA、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
-    outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
+    impact_map = {
+        "2026年8月期通期決算": ("+12〜28%", "-5〜+8%", "-14〜-28%", "小型成長株では通期実績と来期見通しがPERを直接動かすため、最も大きいレンジです。"),
+        "月次業績報告": ("+6〜16%", "-3〜+5%", "-8〜-18%", "毎月出る継続材料なので単発決算より小さい一方、トレンド変化には効きます。"),
+        "株主優待電子化の導入拡大": ("+8〜20%", "-4〜+7%", "-8〜-16%", "導入事例は成長テーマを補強しますが、売上寄与の確認まで時間差があるため中程度です。"),
+        "自己株式取得終了後の需給": ("+3〜10%", "-3〜+4%", "-6〜-14%", "需給材料であり事業価値を直接変えないため、他の事業材料より小さくしています。"),
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
+        up, flat, down, reason = impact_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+10〜25%</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+7%</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-12〜-25%</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
 </div>
+<p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>月次の鈍化</li><li>サイネージ納品の遅れ</li><li>通期予想未達</li></ul></div></div>
 </article>'''
 
