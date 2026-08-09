@@ -241,7 +241,7 @@ def scenario_values() -> dict[str, str]:
 
 
 def catalyst_values() -> dict[str, str]:
-    non_quant = '<div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div><p>4Q決算、月次、優待電子化、自社株取得後の需給は価値経路が重なります。単純平均は使いません。</p><p>足りない情報：4Q売上、来期見通し、月次KPI、導入企業数、粗利率です。</p><p>次に見る数字：通期売上、営業利益、調整後EBITDA、月次推移です。</p><p>再計算方法：EPS、PER、調整後EBITDA、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
+    non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>46%</b></div><p>仮定：4Q決算の標準達成を50%、月次KPI改善を45%、優待電子化の導入拡大を40%、自社株取得後の需給改善を55%として置き、重複を控除しました。</p><p>読み方：3Q進捗は一部評価済みですが、通期決算と来期見通しがまだ残っているため、織り込みは半分弱です。</p><p>次に見る数字：通期売上、営業利益、調整後EBITDA、月次推移です。</p><p>再計算方法：EPS、PER、調整後EBITDA、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
     outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
@@ -270,9 +270,9 @@ def catalyst_values() -> dict[str, str]:
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が複数",
         "SUMMARY_LINE_1": "通期決算、月次、優待電子化、自社株買い終了後の需給が今後の主な材料です。",
-        "SUMMARY_LINE_2": "全体の織り込み割合は、価値経路が重なるため単純計算していません。",
-        "OVERALL_PRICED_IN": "算出不能",
-        "OVERALL_PRICED_LABEL": "全体割合は出していません",
+        "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を46%と推定します。",
+        "OVERALL_PRICED_IN": "46%",
+        "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "ふつう",
         "CURRENT_PRICE": yen(P0),
         "CURRENT_PRICE_NOTE": "2026/07/30 15:30",
@@ -283,7 +283,7 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付きPER再計算でレンジ表示。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、4Q決算、月次KPI、優待電子化、自社株取得後の需給を標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "通期上振れ、強い来期見通し、月次加速、優待電子化の導入拡大です。",
         "SURPRISE_DOWN": "4Q失速、通期未達、来期成長鈍化、自社株買い終了後の需給悪化です。",
         "PRIMARY_RISK": "3Qの好調が株価に入った後で、4Qや来期見通しが普通だと失望される可能性です。",

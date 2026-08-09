@@ -245,7 +245,7 @@ def scenario_values() -> dict[str, str]:
 
 
 def catalyst_values() -> dict[str, str]:
-    non_quant = '<div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div><p>ABCL635、Q2決算、提携、追加候補は価値経路が重なります。単純平均は使いません。</p><p>足りない情報：Q2詳細、Phase 2有効性、次試験設計、キャッシュバーン、提携条件です。</p><p>次に見る数字：利用可能流動性、R&D費、下流権利付きプログラム数、臨床中分子数です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
+    non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>38%</b></div><p>仮定：ABCL635 Phase 2成功期待を35%、Q2決算の資金余力維持を55%、Jazz提携価値を30%、追加候補の臨床入り期待を25%として置き、重複を控除しました。</p><p>読み方：株価はABCL635成功を一部織り込んでいますが、臨床データ前のため期待はまだ半分未満です。良いデータなら上振れ、失敗なら大きく下振れます。</p><p>次に見る数字：利用可能流動性、R&D費、下流権利付きプログラム数、臨床中分子数、Phase 2有効性です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
     outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul>"
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
@@ -274,9 +274,9 @@ def catalyst_values() -> dict[str, str]:
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "データ待ち",
         "SUMMARY_LINE_1": "ABCL635 Phase 2、Q2決算詳細、Jazz提携、追加候補の臨床入りが主な材料です。",
-        "SUMMARY_LINE_2": "全体の織り込み割合は、臨床成功確率と資金価値が重なるため単純計算していません。",
-        "OVERALL_PRICED_IN": "算出不能",
-        "OVERALL_PRICED_LABEL": "全体割合は出していません",
+        "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を38%と推定します。",
+        "OVERALL_PRICED_IN": "38%",
+        "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "低〜中",
         "CURRENT_PRICE": usd(P0),
         "CURRENT_PRICE_NOTE": "取得可能な直近株価",
@@ -287,7 +287,7 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付きシナリオ再計算でレンジ表示。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、ABCL635、Q2資金余力、Jazz提携、追加候補を標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "ABCL635の有効性が明確で、安全性と月1回投与の魅力が保たれることです。",
         "SURPRISE_DOWN": "Phase 2の有効性不足、安全性懸念、キャッシュバーン拡大です。",
         "PRIMARY_RISK": "ABCL635に期待が集中しているため、読出し失敗時の株価下落が大きくなりやすいことです。",

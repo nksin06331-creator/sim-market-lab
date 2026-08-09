@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-08T23:26:46.166172+00:00",
+  "generatedAt": "2026-08-09T11:05:26.624604+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
   "quoteCount": 7,
   "errorCount": 0,
@@ -14,7 +14,7 @@
       "changePct": -2.0722,
       "currency": "JPY",
       "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-08T23:26:43.314930+00:00",
+      "updatedAt": "2026-08-09T11:05:23.183141+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,7 +25,7 @@
       "changePct": 9.4621,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:00+00:00",
-      "updatedAt": "2026-08-08T23:26:43.821967+00:00",
+      "updatedAt": "2026-08-09T11:05:23.752728+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -36,40 +36,7 @@
       "changePct": 14.8774,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:02+00:00",
-      "updatedAt": "2026-08-08T23:26:44.298504+00:00",
-      "status": "ok"
-    },
-    "paycloud-4015": {
-      "symbol": "4015.T",
-      "price": 542.0,
-      "previousClose": 535.0,
-      "change": 7.0,
-      "changePct": 1.3084,
-      "currency": "JPY",
-      "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-08T23:26:44.783977+00:00",
-      "status": "ok"
-    },
-    "sumitomo-electric-5802": {
-      "symbol": "5802.T",
-      "price": 2129.5,
-      "previousClose": 2158.5,
-      "change": -29.0,
-      "changePct": -1.3435,
-      "currency": "JPY",
-      "marketTime": "2026-08-07T06:30:00+00:00",
-      "updatedAt": "2026-08-08T23:26:45.293015+00:00",
-      "status": "ok"
-    },
-    "abcellera-abcl": {
-      "symbol": "ABCL",
-      "price": 6.93,
-      "previousClose": 6.53,
-      "change": 0.4,
-      "changePct": 6.1256,
-      "currency": "USD",
-      "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-08T23:26:45.731189+00:00",
+      "updatedAt": "2026-08-09T11:05:24.319291+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
@@ -80,7 +47,40 @@
       "changePct": 8.0488,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-08T23:26:46.166151+00:00",
+      "updatedAt": "2026-08-09T11:05:24.891946+00:00",
+      "status": "ok"
+    },
+    "paycloud-4015": {
+      "symbol": "4015.T",
+      "price": 542.0,
+      "previousClose": 535.0,
+      "change": 7.0,
+      "changePct": 1.3084,
+      "currency": "JPY",
+      "marketTime": "2026-08-07T06:30:00+00:00",
+      "updatedAt": "2026-08-09T11:05:25.450264+00:00",
+      "status": "ok"
+    },
+    "sumitomo-electric-5802": {
+      "symbol": "5802.T",
+      "price": 2129.5,
+      "previousClose": 2158.5,
+      "change": -29.0,
+      "changePct": -1.3435,
+      "currency": "JPY",
+      "marketTime": "2026-08-07T06:30:00+00:00",
+      "updatedAt": "2026-08-09T11:05:26.047908+00:00",
+      "status": "ok"
+    },
+    "abcellera-abcl": {
+      "symbol": "ABCL",
+      "price": 6.93,
+      "previousClose": 6.53,
+      "change": 0.4,
+      "changePct": 6.1256,
+      "currency": "USD",
+      "marketTime": "2026-08-07T20:00:01+00:00",
+      "updatedAt": "2026-08-09T11:05:26.624593+00:00",
       "status": "ok"
     }
   }

@@ -242,7 +242,7 @@ def scenario_values() -> dict[str, str]:
 
 
 def catalyst_values() -> dict[str, str]:
-    non_quant = '<div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div><p>Q2決算、UAS注文、SpaceMD、内部統制改善は価値経路が重なります。単純平均は使いません。</p><p>足りない情報：Q2 10-Qの詳細、受注残更新、粗利率、株式数、内部統制の進捗です。</p><p>次に見る数字：売上、粗利率、Adjusted EBITDA、受注残、Stalker注文です。</p><p>再計算方法：売上、倍率、株式数、ネットデットを分け、株価シナリオと同じ売上倍率モデルで更新します。</p></div>'
+    non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>54%</b></div><p>仮定：Q2売上急伸の持続を60%、UAS注文拡大を55%、SpaceMDの中期価値を35%、内部統制改善を45%として置き、重複を控除しました。</p><p>読み方：防衛UASと売上成長はかなり評価されていますが、赤字、統合、内部統制の不安も残るため、織り込みは中程度です。</p><p>次に見る数字：売上、粗利率、Adjusted EBITDA、受注残、Stalker注文です。</p><p>再計算方法：売上、倍率、株式数、ネットデットを分け、株価シナリオと同じ売上倍率モデルで更新します。</p></div>'
     outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付き売上倍率再計算を主に使用。</li></ul>"
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
@@ -271,9 +271,9 @@ def catalyst_values() -> dict[str, str]:
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が集中",
         "SUMMARY_LINE_1": "Q2決算詳細、Stalker UAS、SpaceMD、内部統制改善が今後の主な材料です。",
-        "SUMMARY_LINE_2": "全体の織り込み割合は、価値経路が重なるため単純計算していません。",
-        "OVERALL_PRICED_IN": "算出不能",
-        "OVERALL_PRICED_LABEL": "全体割合は出していません",
+        "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を54%と推定します。",
+        "OVERALL_PRICED_IN": "54%",
+        "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "ふつう",
         "CURRENT_PRICE": usd(P0),
         "CURRENT_PRICE_NOTE": "2026/08/07 16:00 ET",
@@ -284,7 +284,7 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付き売上倍率再計算でレンジ表示。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、Q2決算、UAS注文、SpaceMD、内部統制を標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "Q2詳細で粗利率と受注残も強く、UAS追加注文やSpaceMD提携が続くことです。",
         "SURPRISE_DOWN": "Q2詳細で損失拡大、粗利率悪化、統合遅延、希薄化が見えることです。",
         "PRIMARY_RISK": "売上急伸だけが先に評価され、利益率や統合リスクが後から嫌気される可能性です。",

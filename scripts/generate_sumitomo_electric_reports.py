@@ -241,7 +241,7 @@ def scenario_values() -> dict[str, str]:
 
 
 def catalyst_values() -> dict[str, str]:
-    non_quant = '<div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div><p>1Q決算、中計2028、株式分割、電力・データセンター需要は価値経路が重なります。単純平均は使いません。</p><p>足りない情報：2Q進捗、セグメント利益、電力ケーブル受注、光通信需要、株式分割後の需給です。</p><p>次に見る数字：自動車関連利益、電力・通信売上、営業利益率、受注残です。</p><p>再計算方法：EPS、PER、セグメント利益、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
+    non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>49%</b></div><p>仮定：1Q決算の好材料消化を55%、中計2028達成期待を50%、電力・データセンター需要を55%、株式分割後の需給改善を35%として置き、重複を控除しました。</p><p>読み方：電力・通信テーマは一定評価されていますが、2Q進捗とセグメント利益確認前のため、織り込みは中程度です。</p><p>次に見る数字：自動車関連利益、電力・通信売上、営業利益率、受注残です。</p><p>再計算方法：EPS、PER、セグメント利益、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
     outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
@@ -270,9 +270,9 @@ def catalyst_values() -> dict[str, str]:
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が複数",
         "SUMMARY_LINE_1": "1Q決算、中計2028、電力ケーブル、データセンター関連が今後の主な材料です。",
-        "SUMMARY_LINE_2": "全体の織り込み割合は、価値経路が重なるため単純計算していません。",
-        "OVERALL_PRICED_IN": "算出不能",
-        "OVERALL_PRICED_LABEL": "全体割合は出していません",
+        "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を49%と推定します。",
+        "OVERALL_PRICED_IN": "49%",
+        "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "ふつう",
         "CURRENT_PRICE": yen(P0),
         "CURRENT_PRICE_NOTE": "2026/07/31 15:30",
@@ -283,7 +283,7 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付きPER再計算でレンジ表示。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、1Q決算、中計2028、電力・データセンター需要、株式分割後の需給を標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "2Qで自動車採算、電力ケーブル、光通信がそろって強いことです。",
         "SURPRISE_DOWN": "1Q後の期待が剥落し、為替・銅価格・自動車生産の逆風が見えることです。",
         "PRIMARY_RISK": "株式分割後にテーマ性で上がった後、業績確認で倍率が下がる可能性です。",

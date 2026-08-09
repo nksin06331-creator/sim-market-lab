@@ -282,11 +282,11 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = (
-        '<div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div>'
-        '<p>出していない理由：AI向けSSD、NAND価格、自社株取得、株式分割は価値経路が重なります。単純平均は使いません。</p>'
-        '<p>足りない情報：LTAの数量・価格、AI向けSSDの採用額、実際の自社株取得単価です。</p>'
+        '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>58%</b></div>'
+        '<p>仮定：2Q会社見通しの達成を60%、AI向けSSD採用を55%、自社株取得の実行を70%、株式分割後の需給改善を45%として置き、重複を控除しました。</p>'
+        '<p>読み方：AI需要と自社株取得はある程度株価に入っていますが、2Q実績とASPが強ければまだ標準ケース側へ余地があります。</p>'
         '<p>次に見る数字：SSD & Storage売上、ASP、2Q実績、自社株取得進捗です。</p>'
-        '<p>再計算方法：各材料を売上、EPS、株式数へ分け、株価シナリオと同じPERモデルで更新します。</p></div>'
+        '<p>再計算方法：売上、EPS、株式数へ分解し、株価シナリオと同じPERモデルで織り込み度を更新します。</p></div>'
     )
     outcome_common = (
         "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
@@ -351,9 +351,9 @@ def catalyst_values() -> dict[str, str]:
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が複数ある",
         "SUMMARY_LINE_1": "決算、自社株取得、株式分割、AI向けSSDの立ち上がりが今後の主な材料です。",
-        "SUMMARY_LINE_2": "全体の期待割合は、材料同士が重なるため単純計算していません。",
-        "OVERALL_PRICED_IN": "算出不能",
-        "OVERALL_PRICED_LABEL": "全体割合は出していません",
+        "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を58%と推定します。",
+        "OVERALL_PRICED_IN": "58%",
+        "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "ふつう",
         "CURRENT_PRICE": yen(P0),
         "CURRENT_PRICE_NOTE": "2026/08/07 15:30",
@@ -364,7 +364,7 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付きPER再計算でレンジ表示。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、2Q実績、AI向けSSD、自社株取得、株式分割を標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "2Q決算が会社見通しを上回り、SSD & Storage売上とASPの強さが続くことです。",
         "SURPRISE_DOWN": "NAND価格の反落、AI向け需要の鈍化、在庫増加、訴訟費用の追加です。",
         "PRIMARY_RISK": "好業績がすでに株価へ入ったあとで、少しの未達でも失望になりやすい点です。",

@@ -284,11 +284,11 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = (
-        '<div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div>'
-        '<p>出していない理由：Q2決算、Neutron、Iridium買収、防衛契約は価値経路が重なります。単純平均は使いません。</p>'
-        '<p>足りない情報：Iridium買収の最終条件、Neutronの初回打ち上げ日、契約の粗利率、追加希薄化です。</p>'
-        '<p>次に見る数字：Q2売上、粗利率、Adjusted EBITDA、受注残、Neutron進捗です。</p>'
-        '<p>再計算方法：売上、倍率、株式数、ネットキャッシュを分け、株価シナリオと同じ売上倍率モデルで更新します。</p></div>'
+        '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>72%</b></div>'
+        '<p>仮定：Q2決算の達成を70%、Neutron進捗を65%、Iridium買収成立を60%、防衛契約の継続拡大を75%として置き、材料の重複を控除しました。</p>'
+        '<p>読み方：株価はすでに強い成長期待をかなり含みます。好材料でも内容が想定内なら上値は限定されやすく、Neutron遅延や買収条件悪化には敏感です。</p>'
+        '<p>次に見る数字：Q2売上、粗利率、Adjusted EBITDA、受注残、Neutron進捗、買収条件です。</p>'
+        '<p>再計算方法：材料ごとの成功確率を更新し、売上倍率モデルの標準ケースに対する織り込み度として再計算します。</p></div>'
     )
     outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付き売上倍率再計算を主に使用。</li></ul>"
 
@@ -354,10 +354,10 @@ def catalyst_values() -> dict[str, str]:
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が集中",
         "SUMMARY_LINE_1": "Q2決算、Iridium買収、Neutron、HASTE/Space Force契約が今後の主な材料です。",
-        "SUMMARY_LINE_2": "全体の織り込み割合は、価値経路が重なるため単純計算していません。",
-        "OVERALL_PRICED_IN": "算出不能",
-        "OVERALL_PRICED_LABEL": "全体割合は出していません",
-        "PRICED_IN_CONFIDENCE": "ふつう",
+        "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を72%と推定します。",
+        "OVERALL_PRICED_IN": "72%",
+        "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
+        "PRICED_IN_CONFIDENCE": "中〜高",
         "CURRENT_PRICE": usd(P0),
         "CURRENT_PRICE_NOTE": "2026/08/07 16:00 ET",
         "NEXT_CATALYST_TITLE": "2026年Q2決算",
@@ -367,7 +367,7 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付き売上倍率再計算でレンジ表示。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、Q2決算、Neutron、Iridium、防衛契約を標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "Q2上振れ、Neutron進捗、Iridium承認、HASTE追加契約が重なることです。",
         "SURPRISE_DOWN": "Q2未達、粗利率悪化、Neutron遅延、買収条件への懸念です。",
         "PRIMARY_RISK": "期待が高く、好材料が出ても織り込み済みと判断される可能性です。",

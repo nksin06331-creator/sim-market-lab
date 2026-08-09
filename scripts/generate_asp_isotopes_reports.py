@@ -248,7 +248,7 @@ def scenario_values() -> dict[str, str]:
 
 
 def catalyst_values() -> dict[str, str]:
-    non_quant = '<div class="priced unknown"><div class="priced-head"><span>全体割合は出していません</span><b>算出不能</b></div><p>商業出荷、Renergen、QLE/HALEU、資金調達は価値経路が重なります。単純平均は使いません。</p><p>足りない情報：実出荷量、販売価格、粗利、Renergen生産、液体ヘリウム販売、追加資金調達条件です。</p><p>次に見る数字：売上、現金、短期投資、発行済株式、契約量、設備稼働率です。</p><p>再計算方法：材料ごとの成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
+    non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>34%</b></div><p>仮定：C-14・Yb-176初期出荷期待を35%、Renergen Phase 1進捗を40%、Si-28期待を25%、QLE/HALEU長期価値を25%、資金調達リスク控除を反映しました。</p><p>読み方：株価は大型テーマを一部見ていますが、実出荷・生産・規制確認前なので織り込みは低めです。出荷確認が出ると標準ケースへ近づきます。</p><p>次に見る数字：売上、現金、短期投資、発行済株式、契約量、設備稼働率です。</p><p>再計算方法：材料ごとの成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
     outcome_common = "<ul><li>数値化手法A〜Eを検討。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul>"
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
@@ -277,9 +277,9 @@ def catalyst_values() -> dict[str, str]:
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "商業化確認待ち",
         "SUMMARY_LINE_1": "C-14・Yb-176出荷、Renergen Phase 1、Si-28、QLE/HALEUが主な材料です。",
-        "SUMMARY_LINE_2": "全体の織り込み割合は、各材料の価値経路が重なるため単純計算していません。",
-        "OVERALL_PRICED_IN": "算出不能",
-        "OVERALL_PRICED_LABEL": "全体割合は出していません",
+        "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を34%と推定します。",
+        "OVERALL_PRICED_IN": "34%",
+        "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "低〜中",
         "CURRENT_PRICE": usd(P0),
         "CURRENT_PRICE_NOTE": "2026/08/07終値",
@@ -290,7 +290,7 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "価値経路の分離条件を満たさないため、全体割合は非算出。個別材料は条件付きシナリオ再計算でレンジ表示。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、同位体出荷、Renergen、Si-28、QLE/HALEU、資金調達リスクを標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "同位体の実出荷、Renergenの生産、ヘリウム販売、QLEの許認可進展が同時に見えることです。",
         "SURPRISE_DOWN": "商業出荷遅延、Renergenの資金・生産遅れ、希薄化、規制停滞です。",
         "PRIMARY_RISK": "テーマが大きい一方、実売上確認前の要素が多く、資金調達と希薄化で株価が大きく下がる可能性です。",
