@@ -243,18 +243,26 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>54%</b></div><p>仮定：Q2売上急伸の持続を60%、UAS注文拡大を55%、SpaceMDの中期価値を35%、内部統制改善を45%として置き、重複を控除しました。</p><p>読み方：防衛UASと売上成長はかなり評価されていますが、赤字、統合、内部統制の不安も残るため、織り込みは中程度です。</p><p>次に見る数字：売上、粗利率、Adjusted EBITDA、受注残、Stalker注文です。</p><p>再計算方法：売上、倍率、株式数、ネットデットを分け、株価シナリオと同じ売上倍率モデルで更新します。</p></div>'
-    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付き売上倍率再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "Q2決算詳細と10-Q確認": ("+18〜40%", "-8〜+12%", "-22〜-42%", "直近の売上急伸が本物かを確認する材料で、売上倍率と赤字見通しを直接動かすため最大級です。"),
         "Stalker UASと防衛注文": ("+15〜35%", "-6〜+12%", "-18〜-35%", "防衛UASは成長期待の中心ですが、受注から売上・利益まで時間差があるため決算より少し小さめです。"),
         "SpaceMDと宇宙医薬品施設": ("+6〜18%", "-4〜+6%", "-8〜-18%", "長期テーマで短期業績への寄与が限定的なため、影響レンジは小さくしています。"),
         "内部統制と買収統合の改善": ("+8〜22%", "-6〜+8%", "-15〜-30%", "評価倍率の信頼性に効く材料ですが、売上を直接増やすものではないため中程度です。"),
     }
+    description_map = {
+        "Q2決算詳細と10-Q確認": "Q2決算詳細と10-Q確認は、報じられた売上急伸が利益や受注残まで伴っているかを見る材料です。赤字や希薄化の不安が残るため、売上だけでなく粗利率、Adjusted EBITDA、現金も重要です。",
+        "Stalker UASと防衛注文": "Stalker UASと防衛注文は、Redwireの防衛ドローン事業が継続的な受注基盤になるかを見る材料です。追加注文、納入能力、採算がそろうと成長期待が強まります。",
+        "SpaceMDと宇宙医薬品施設": "SpaceMDは宇宙環境を使った医薬品研究・製造の長期テーマです。話題性はありますが、短期売上への寄与はまだ限定的なので、顧客や商業化の具体化を確認します。",
+        "内部統制と買収統合の改善": "内部統制と買収統合は、会社の数字を信頼して評価できるかに関わる材料です。売上を直接増やすものではありませんが、改善すれば評価倍率の重しが軽くなります。",
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
         up, flat, down, reason = impact_map[title]
+        description = description_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
+<p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
 <div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>

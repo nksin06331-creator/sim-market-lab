@@ -242,18 +242,26 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>46%</b></div><p>仮定：4Q決算の標準達成を50%、月次KPI改善を45%、優待電子化の導入拡大を40%、自社株取得後の需給改善を55%として置き、重複を控除しました。</p><p>読み方：3Q進捗は一部評価済みですが、通期決算と来期見通しがまだ残っているため、織り込みは半分弱です。</p><p>次に見る数字：通期売上、営業利益、調整後EBITDA、月次推移です。</p><p>再計算方法：EPS、PER、調整後EBITDA、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
-    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "2026年8月期通期決算": ("+12〜28%", "-5〜+8%", "-14〜-28%", "小型成長株では通期実績と来期見通しがPERを直接動かすため、最も大きいレンジです。"),
         "月次業績報告": ("+6〜16%", "-3〜+5%", "-8〜-18%", "毎月出る継続材料なので単発決算より小さい一方、トレンド変化には効きます。"),
         "株主優待電子化の導入拡大": ("+8〜20%", "-4〜+7%", "-8〜-16%", "導入事例は成長テーマを補強しますが、売上寄与の確認まで時間差があるため中程度です。"),
         "自己株式取得終了後の需給": ("+3〜10%", "-3〜+4%", "-6〜-14%", "需給材料であり事業価値を直接変えないため、他の事業材料より小さくしています。"),
     }
+    description_map = {
+        "2026年8月期通期決算": "通期決算は、3Qまでの好調が最後まで続いたか、来期も成長できるかを確認する最大材料です。売上、営業利益、調整後EBITDA、来期見通しがそろって強いほど評価されやすくなります。",
+        "月次業績報告": "月次業績報告は、決算前に事業の勢いを確認できる継続材料です。独自Payや関連サービスの伸びが続けば、通期決算や来期見通しへの期待が高まります。",
+        "株主優待電子化の導入拡大": "株主優待電子化は、同社のデジタルギフトや独自Payの用途が広がるかを見る材料です。導入企業が増えるほど、単発案件ではなく継続収益のテーマとして評価されます。",
+        "自己株式取得終了後の需給": "自社株買い終了後の需給は、買い支えがなくなった後でも業績期待で株価を保てるかを見る材料です。事業価値を直接変えるものではないため、決算材料より影響は小さめです。",
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
         up, flat, down, reason = impact_map[title]
+        description = description_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
+<p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
 <div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>

@@ -289,7 +289,7 @@ def catalyst_values() -> dict[str, str]:
         '<p>再計算方法：売上、EPS、株式数へ分解し、株価シナリオと同じPERモデルで織り込み度を更新します。</p></div>'
     )
     outcome_common = (
-        "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
+        "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     )
     cards = []
     impact_map = {
@@ -298,11 +298,19 @@ def catalyst_values() -> dict[str, str]:
         "1株を3株にする株式分割": ("+2〜7%", "-2〜+3%", "-4〜-8%", "分割は投資単位と流動性の材料で、企業価値を直接変えないため小さくしています。"),
         "第10世代BiCS FLASHとAI向けSSDの立ち上がり": ("+12〜28%", "-5〜+10%", "-12〜-26%", "AI向けSSDは製品ミックスと将来PERを動かすため、決算に近い大きさで見ます。"),
     }
+    description_map = {
+        "2026年7〜9月期決算と会社見通しの達成度": "次回決算は、NAND市況とAI向けSSD需要が利益にどれだけ反映されたかを見る材料です。売上、営業利益、ASP、在庫の方向感がそろうと、メモリ株として評価されやすくなります。",
+        "自社株取得枠の実行": "自社株取得は、株式数の減少と需給改善を通じて1株価値を押し上げる材料です。ただし事業利益そのものを増やすわけではないため、決算や市況材料とは分けて見ます。",
+        "1株を3株にする株式分割": "株式分割は、投資単位を下げて個人投資家が参加しやすくなる需給材料です。企業価値を直接変えるものではないため、影響は小さめに見ます。",
+        "第10世代BiCS FLASHとAI向けSSDの立ち上がり": "第10世代BiCS FLASHとAI向けSSDは、製品ミックスを高付加価値側へ寄せられるかを見る中期材料です。採用や量産が進めば、将来の利益率とPERを支えます。",
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
         up, flat, down, reason = impact_map[title]
+        description = description_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
+<p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
 <div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>

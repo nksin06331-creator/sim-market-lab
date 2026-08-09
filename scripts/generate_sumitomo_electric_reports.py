@@ -242,18 +242,26 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>49%</b></div><p>仮定：1Q決算の好材料消化を55%、中計2028達成期待を50%、電力・データセンター需要を55%、株式分割後の需給改善を35%として置き、重複を控除しました。</p><p>読み方：電力・通信テーマは一定評価されていますが、2Q進捗とセグメント利益確認前のため、織り込みは中程度です。</p><p>次に見る数字：自動車関連利益、電力・通信売上、営業利益率、受注残です。</p><p>再計算方法：EPS、PER、セグメント利益、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
-    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きPER再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "2026年度1Q決算の消化": ("+5〜13%", "-3〜+5%", "-8〜-16%", "大型株の実績確認材料なので、短期影響は中程度。ただし通期進捗が崩れると下押しします。"),
         "中期経営計画2028": ("+7〜16%", "-4〜+6%", "-8〜-18%", "中計はPERの土台に効くため重要ですが、実績化まで時間があるためレンジを中程度にしています。"),
         "電力ケーブル・インフラ需要": ("+8〜20%", "-4〜+7%", "-10〜-22%", "電力インフラは利益成長の中核候補で、受注と採算が見えると全社評価を押し上げます。"),
         "データセンター関連需要": ("+6〜15%", "-3〜+6%", "-8〜-16%", "光通信・DCテーマは追い風ですが、住友電工全社に占める寄与は段階的なので中程度です。"),
     }
+    description_map = {
+        "2026年度1Q決算の消化": "1Q決算の消化は、発表された内容を市場がどう評価し直すかを見る材料です。自動車、電力、通信のどこが伸びたか、利益率が保てたかで次の中間決算への期待が変わります。",
+        "中期経営計画2028": "中計2028は、住友電工がどの事業に投資し、どの程度の利益成長を目指すかを示す中期材料です。計画そのものより、四半期実績で進捗が確認できるかが重要です。",
+        "電力ケーブル・インフラ需要": "電力ケーブル・インフラ需要は、送電網投資や再エネ関連投資を背景にした成長材料です。受注が増えるだけでなく、採算が良い案件として利益に変わるかを見ます。",
+        "データセンター関連需要": "データセンター関連需要は、AI・クラウド投資に伴う光通信部品や関連製品の伸びを見る材料です。全社規模では段階的な寄与ですが、成長テーマとして倍率を支えます。",
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
         up, flat, down, reason = impact_map[title]
+        description = description_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
+<p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
 <div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>

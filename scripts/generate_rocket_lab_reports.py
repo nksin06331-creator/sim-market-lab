@@ -290,18 +290,26 @@ def catalyst_values() -> dict[str, str]:
         '<p>次に見る数字：Q2売上、粗利率、Adjusted EBITDA、受注残、Neutron進捗、買収条件です。</p>'
         '<p>再計算方法：材料ごとの成功確率を更新し、売上倍率モデルの標準ケースに対する織り込み度として再計算します。</p></div>'
     )
-    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付き売上倍率再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "2026年Q2決算": ("+10〜22%", "-5〜+8%", "-14〜-28%", "直近業績は重要ですが、株価にはすでに高成長期待が入っているため、Neutronや買収より単発影響は抑えています。"),
         "Iridium買収の承認・統合": ("+18〜40%", "-8〜+12%", "-20〜-38%", "買収は売上規模とキャッシュフロー構造を変えるため大きい一方、承認・希薄化・統合リスクも大きく見ます。"),
         "Neutron開発と初回打ち上げへの道筋": ("+20〜45%", "-10〜+15%", "-25〜-45%", "Neutronは将来市場の中心材料で、成功時も遅延時も株価倍率を大きく動かすため最大レンジにしています。"),
         "HASTE / Space Force $266M契約": ("+8〜20%", "-4〜+7%", "-10〜-22%", "防衛契約は信頼性を高めますが、契約済み材料で売上認識も段階的なため中程度です。"),
     }
+    description_map = {
+        "2026年Q2決算": "Q2決算は、Rocket Labの高成長期待が実際の売上、粗利率、Adjusted EBITDAに表れているかを見る材料です。すでに期待が高いため、単に成長しているだけでなく、質の良い成長かが重要です。",
+        "Iridium買収の承認・統合": "Iridium買収は、Rocket Labの売上規模とキャッシュフロー構造を変える大型材料です。承認、資金調達、株式希薄化、統合コストがそろって評価されます。",
+        "Neutron開発と初回打ち上げへの道筋": "Neutronは中大型ロケット市場へ進むための中心材料です。開発試験、初回打ち上げ時期、顧客契約が具体化するほど、将来売上の見方が大きく変わります。",
+        "HASTE / Space Force $266M契約": "HASTEとSpace Force契約は、防衛分野でRocket Labの実績と信頼性を高める材料です。契約済みのため、次はミッション開始、追加注文、採算を確認します。",
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
         up, flat, down, reason = impact_map[title]
+        description = description_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表またはイベント期間</span></div></div>
+<p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
 <div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>

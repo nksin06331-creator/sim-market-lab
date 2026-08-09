@@ -249,18 +249,26 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>34%</b></div><p>仮定：C-14・Yb-176初期出荷期待を35%、Renergen Phase 1進捗を40%、Si-28期待を25%、QLE/HALEU長期価値を25%、資金調達リスク控除を反映しました。</p><p>読み方：株価は大型テーマを一部見ていますが、実出荷・生産・規制確認前なので織り込みは低めです。出荷確認が出ると標準ケースへ近づきます。</p><p>次に見る数字：売上、現金、短期投資、発行済株式、契約量、設備稼働率です。</p><p>再計算方法：材料ごとの成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
-    outcome_common = "<ul><li>株価影響はレポート2の悲観・標準・楽観シナリオとの差から概算。</li><li>このページでは条件付きシナリオ再計算を主に使用。</li></ul>"
+    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "C-14・Yb-176初期商業出荷": ("+35〜90%", "-12〜+30%", "-35〜-60%", "本格売上前の会社なので、初期出荷は技術・顧客・売上化を同時に確認する最大材料です。"),
         "Renergen Phase 1": ("+25〜60%", "-10〜+22%", "-25〜-45%", "LNGとヘリウムの現金収入化に関わるため大きいですが、同位体出荷より買収・設備実行の要素が強いです。"),
         "Si-28初期出荷": ("+12〜30%", "-6〜+12%", "-12〜-25%", "量子・半導体テーマは強い一方、短期売上規模がまだ見えにくいため中程度です。"),
         "QLE/HALEU関連": ("+20〜70%", "-8〜+20%", "-18〜-40%", "成功時のテーマは大きいですが、規制・許認可・時間軸が長いためレンジを広くしています。"),
     }
+    description_map = {
+        "C-14・Yb-176初期商業出荷": "C-14とYb-176の初期商業出荷は、ASPIの同位体分離技術が研究段階から売上段階へ進むかを確認する材料です。出荷数量、顧客継続、品質、粗利が見えるほど会社の信頼度が上がります。",
+        "Renergen Phase 1": "Renergen Phase 1は、LNGと液体ヘリウムの生産・販売が実際に現金収入へ変わるかを見る材料です。契約だけでなく、設備稼働、販売量、資金負担まで確認します。",
+        "Si-28初期出荷": "Si-28は量子・半導体向けの高純度材料として期待されるテーマです。初期出荷が顧客評価や継続注文につながるかで、中期成長材料としての信頼度が変わります。",
+        "QLE/HALEU関連": "QLE/HALEU関連は先進原子力・核燃料分野の長期テーマです。成功時の期待は大きい一方、規制、許認可、資金、顧客確認に時間がかかるため、短期材料とは分けて見ます。",
+    }
 
     def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str) -> str:
         up, flat, down, reason = impact_map[title]
+        description = description_map[title]
         return f'''<article class="catalyst-card">
 <div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表または予定</span></div></div>
+<p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
 <div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
