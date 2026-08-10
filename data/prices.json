@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-10T15:27:06.457935+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 10,
+  "quoteCount": 9,
   "errorCount": 0,
   "errors": {},
   "prices": {
@@ -92,17 +92,6 @@
       "currency": "USD",
       "marketTime": "2026-08-10T15:26:19+00:00",
       "updatedAt": "2026-08-10T15:27:05.307243+00:00",
-      "status": "ok"
-    },
-    "zapata-zpta": {
-      "symbol": "ZPTA",
-      "price": 0.81,
-      "previousClose": 0.7505,
-      "change": 0.0595,
-      "changePct": 7.928,
-      "currency": "USD",
-      "marketTime": "2026-08-07T20:00:00+00:00",
-      "updatedAt": "2026-08-10T15:27:05.883056+00:00",
       "status": "ok"
     },
     "zeta-global-zeta": {

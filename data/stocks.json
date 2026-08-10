@@ -218,35 +218,8 @@
       }
     },
     {
-      "id": "zapata-zpta",
-      "order": 9,
-      "ticker": "ZPTA",
-      "quoteSymbol": "ZPTA",
-      "name": "ザパタ・クオンタム",
-      "nameEn": "Zapata Quantum, Inc.",
-      "market": "US",
-      "marketLabel": "米国株",
-      "exchange": "OTCQB",
-      "currency": "USD",
-      "sector": "量子ソフトウェア・先端AI",
-      "reports": {
-        "company": {
-          "path": "./stocks/zapata-zpta/company.html",
-          "available": true
-        },
-        "valuation": {
-          "path": "./stocks/zapata-zpta/valuation.html",
-          "available": true
-        },
-        "catalysts": {
-          "path": "./stocks/zapata-zpta/catalysts.html",
-          "available": true
-        }
-      }
-    },
-    {
       "id": "zeta-global-zeta",
-      "order": 10,
+      "order": 9,
       "ticker": "ZETA",
       "quoteSymbol": "ZETA",
       "name": "ゼータ・グローバル・ホールディングス",

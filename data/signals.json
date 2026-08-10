@@ -99,18 +99,6 @@
       "reportRevision": "moonlake-mltx-2026-08-10",
       "summary": "HS BLA提出とFDA受理が最大材料。Week 52と資金調達は支えだが、商業化前・単一資産依存のため中立。"
     },
-    "zapata-zpta": {
-      "position": 45.6,
-      "zone": "中立",
-      "asOf": "2026-08-11",
-      "components": {
-        "valuation": 24.9,
-        "catalysts": 70.0,
-        "businessRisk": 88.0
-      },
-      "reportRevision": "zapata-zpta-2026-08-11",
-      "summary": "OTCQB上場、NVIDIA連携、量子ソフトテーマは材料。ただしOTC流動性、売上未確立、希薄化リスクが極めて高いため中立。"
-    },
     "zeta-global-zeta": {
       "position": 49.2,
       "zone": "中立",
