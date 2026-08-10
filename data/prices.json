@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T03:28:08.718972+00:00",
+  "generatedAt": "2026-08-10T07:20:02.991966+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 7,
+  "quoteCount": 8,
   "errorCount": 0,
   "errors": {},
   "prices": {
     "kioxia-285a": {
       "symbol": "285A.T",
-      "price": 47980.0,
+      "price": 48010.0,
       "previousClose": 47730.0,
-      "change": 250.0,
-      "changePct": 0.5238,
+      "change": 280.0,
+      "changePct": 0.5866,
       "currency": "JPY",
-      "marketTime": "2026-08-10T02:30:00+00:00",
-      "updatedAt": "2026-08-10T03:28:05.126571+00:00",
+      "marketTime": "2026-08-10T06:30:00+00:00",
+      "updatedAt": "2026-08-10T07:19:58.766453+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,40 +25,7 @@
       "changePct": 9.4621,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:00+00:00",
-      "updatedAt": "2026-08-10T03:28:05.699648+00:00",
-      "status": "ok"
-    },
-    "abcellera-abcl": {
-      "symbol": "ABCL",
-      "price": 6.93,
-      "previousClose": 6.53,
-      "change": 0.4,
-      "changePct": 6.1256,
-      "currency": "USD",
-      "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-10T03:28:06.276087+00:00",
-      "status": "ok"
-    },
-    "asp-isotopes-aspi": {
-      "symbol": "ASPI",
-      "price": 4.43,
-      "previousClose": 4.1,
-      "change": 0.33,
-      "changePct": 8.0488,
-      "currency": "USD",
-      "marketTime": "2026-08-07T20:00:01+00:00",
-      "updatedAt": "2026-08-10T03:28:06.987667+00:00",
-      "status": "ok"
-    },
-    "paycloud-4015": {
-      "symbol": "4015.T",
-      "price": 544.0,
-      "previousClose": 542.0,
-      "change": 2.0,
-      "changePct": 0.369,
-      "currency": "JPY",
-      "marketTime": "2026-08-10T02:17:41+00:00",
-      "updatedAt": "2026-08-10T03:28:07.550128+00:00",
+      "updatedAt": "2026-08-10T07:19:59.335214+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -69,18 +36,62 @@
       "changePct": 14.8774,
       "currency": "USD",
       "marketTime": "2026-08-07T20:00:02+00:00",
-      "updatedAt": "2026-08-10T03:28:08.114519+00:00",
+      "updatedAt": "2026-08-10T07:19:59.921658+00:00",
+      "status": "ok"
+    },
+    "paycloud-4015": {
+      "symbol": "4015.T",
+      "price": 544.0,
+      "previousClose": 542.0,
+      "change": 2.0,
+      "changePct": 0.369,
+      "currency": "JPY",
+      "marketTime": "2026-08-10T06:30:00+00:00",
+      "updatedAt": "2026-08-10T07:20:00.631086+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
       "symbol": "5802.T",
-      "price": 2183.0,
+      "price": 2161.0,
       "previousClose": 2129.5,
-      "change": 53.5,
-      "changePct": 2.5123,
+      "change": 31.5,
+      "changePct": 1.4792,
       "currency": "JPY",
-      "marketTime": "2026-08-10T02:30:00+00:00",
-      "updatedAt": "2026-08-10T03:28:08.718954+00:00",
+      "marketTime": "2026-08-10T06:30:00+00:00",
+      "updatedAt": "2026-08-10T07:20:01.240057+00:00",
+      "status": "ok"
+    },
+    "abcellera-abcl": {
+      "symbol": "ABCL",
+      "price": 6.93,
+      "previousClose": 6.53,
+      "change": 0.4,
+      "changePct": 6.1256,
+      "currency": "USD",
+      "marketTime": "2026-08-07T20:00:01+00:00",
+      "updatedAt": "2026-08-10T07:20:01.823985+00:00",
+      "status": "ok"
+    },
+    "asp-isotopes-aspi": {
+      "symbol": "ASPI",
+      "price": 4.43,
+      "previousClose": 4.1,
+      "change": 0.33,
+      "changePct": 8.0488,
+      "currency": "USD",
+      "marketTime": "2026-08-07T20:00:01+00:00",
+      "updatedAt": "2026-08-10T07:20:02.426522+00:00",
+      "status": "ok"
+    },
+    "moonlake-mltx": {
+      "symbol": "MLTX",
+      "price": 18.26,
+      "previousClose": 18.03,
+      "change": 0.23,
+      "changePct": 1.2756,
+      "currency": "USD",
+      "marketTime": "2026-08-07T20:00:00+00:00",
+      "updatedAt": "2026-08-10T07:20:02.991940+00:00",
       "status": "ok"
     }
   }

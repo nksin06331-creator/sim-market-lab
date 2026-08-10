@@ -189,6 +189,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "moonlake-mltx",
+      "order": 8,
+      "ticker": "MLTX",
+      "quoteSymbol": "MLTX",
+      "name": "ムーンレイク・イミュノセラピューティクス",
+      "nameEn": "MoonLake Immunotherapeutics AG",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "臨床段階バイオ・免疫疾患",
+      "reports": {
+        "company": {
+          "path": "./stocks/moonlake-mltx/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/moonlake-mltx/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/moonlake-mltx/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }
