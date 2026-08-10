@@ -246,7 +246,6 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>38%</b></div><p>仮定：ABCL635 Phase 2成功期待を35%、Q2決算の資金余力維持を55%、Jazz提携価値を30%、追加候補の臨床入り期待を25%として置き、重複を控除しました。</p><p>読み方：株価はABCL635成功を一部織り込んでいますが、臨床データ前のため期待はまだ半分未満です。良いデータなら上振れ、失敗なら大きく下振れます。</p><p>次に見る数字：利用可能流動性、R&D費、下流権利付きプログラム数、臨床中分子数、Phase 2有効性です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
-    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "ABCL635 Phase 2データ": ("+45〜110%", "-15〜+35%", "-45〜-70%", "主力候補の成否で標準ケースと悲観ケースが直接入れ替わるため最大レンジにしています。"),
         "2026年Q2決算詳細": ("+8〜18%", "-6〜+6%", "-12〜-25%", "資金余力とバーン確認が中心で、臨床データほど企業価値を直接変えないため小さめです。"),
@@ -268,9 +267,9 @@ def catalyst_values() -> dict[str, str]:
 <p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
 </div>
 <p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>有効性が弱い</li><li>安全性懸念</li><li>キャッシュバーン拡大</li></ul></div></div>
@@ -308,7 +307,7 @@ def catalyst_values() -> dict[str, str]:
         "SURPRISE_DOWN": "Phase 2の有効性不足、安全性懸念、キャッシュバーン拡大です。",
         "PRIMARY_RISK": "ABCL635に期待が集中しているため、読出し失敗時の株価下落が大きくなりやすいことです。",
         "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">2026/05/11</div><div class="time-dot"></div><div class="time-body"><b>Q1決算とABCL635 Phase 1中間データ</b><p>良好な忍容性、標的関与、月1回投与可能性を確認。</p><div class="time-meta"><span class="chip">公表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/06/17</div><div class="time-dot"></div><div class="time-body"><b>Jazz提携</b><p>多重特異性抗体探索の提携を発表。</p><div class="time-meta"><span class="chip blue">提携</span></div></div></div><div class="time-row"><div class="time-date">2026/08/05</div><div class="time-dot"></div><div class="time-body"><b>Q2決算発表日の確認</b><p>詳細資料は更新確認が必要。</p><div class="time-meta"><span class="chip">確認</span></div></div></div><div class="time-row"><div class="time-date">2026/Q3</div><div class="time-dot"></div><div class="time-body"><b>ABCL635 Phase 2データ</b><p>最大の価値変動イベント。</p><div class="time-meta"><span class="chip">最重要</span></div></div></div>',
-        "CATALYST_CARDS": "".join(cards),
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>ABCL635と資金余力</b><span class="up">連動</span></div><p>良いデータでも次試験に進む資金余力が重要です。</p></div><div class="signal"><div><b>提携と下流権利</b><span class="flat">長期</span></div><p>短期株価より長期価値の材料です。</p></div><div class="signal"><div><b>追加候補</b><span class="up">分散</span></div><p>ABCL635依存を下げる材料になります。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>Phase 2有効性</b><span class="up">最重要</span></div><p>頻度・重症度の改善幅を確認します。</p></div><div class="signal"><div><b>安全性</b><span class="flat">必須</span></div><p>肝毒性や重い有害事象を確認します。</p></div><div class="signal"><div><b>流動性</b><span class="up">重要</span></div><p>現金、有価証券、政府資金、バーンを確認します。</p></div><div class="signal"><div><b>提携進捗</b><span class="flat">長期</span></div><p>下流権利付きプログラムの質を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "取得可能な直近株価") + tr("利用可能流動性", "約$655M", "会社Q1リリース", "2026/03/31", "政府資金含む") + tr("Q2決算予定", "2026/08/05", "会社リリース", "2026/07/07", "詳細更新確認が必要") + tr("ABCL635", "Phase 2読出し", "会社Q1リリース", "2026年Q3", "最重要"),

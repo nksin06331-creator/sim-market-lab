@@ -242,7 +242,6 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>49%</b></div><p>仮定：1Q決算の好材料消化を55%、中計2028達成期待を50%、電力・データセンター需要を55%、株式分割後の需給改善を35%として置き、重複を控除しました。</p><p>読み方：電力・通信テーマは一定評価されていますが、2Q進捗とセグメント利益確認前のため、織り込みは中程度です。</p><p>次に見る数字：自動車関連利益、電力・通信売上、営業利益率、受注残です。</p><p>再計算方法：EPS、PER、セグメント利益、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
-    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "2026年度1Q決算の消化": ("+5〜13%", "-3〜+5%", "-8〜-16%", "大型株の実績確認材料なので、短期影響は中程度。ただし通期進捗が崩れると下押しします。"),
         "中期経営計画2028": ("+7〜16%", "-4〜+6%", "-8〜-18%", "中計はPERの土台に効くため重要ですが、実績化まで時間があるためレンジを中程度にしています。"),
@@ -264,9 +263,9 @@ def catalyst_values() -> dict[str, str]:
 <p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
 </div>
 <p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>セグメント利益率低下</li><li>為替・銅価格の逆風</li><li>自動車生産の減速</li></ul></div></div>
@@ -304,7 +303,7 @@ def catalyst_values() -> dict[str, str]:
         "SURPRISE_DOWN": "1Q後の期待が剥落し、為替・銅価格・自動車生産の逆風が見えることです。",
         "PRIMARY_RISK": "株式分割後にテーマ性で上がった後、業績確認で倍率が下がる可能性です。",
         "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">2026/05/12</div><div class="time-dot"></div><div class="time-body"><b>通期決算・株式分割・中計2028</b><p>成長戦略と資本政策を確認します。</p><div class="time-meta"><span class="chip">公表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/07/31</div><div class="time-dot"></div><div class="time-body"><b>2026年度1Q決算</b><p>発表後の株価変動が大きく、内容消化が焦点です。</p><div class="time-meta"><span class="chip">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/10-11</div><div class="time-dot"></div><div class="time-body"><b>2Q・中間決算</b><p>自動車、電力、通信の進捗を確認します。</p><div class="time-meta"><span class="chip blue">時期推定</span></div></div></div>',
-        "CATALYST_CARDS": "".join(cards),
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>中計と2Q進捗</b><span class="up">連動</span></div><p>中計が評価されるには、四半期実績で利益改善が必要です。</p></div><div class="signal"><div><b>電力と通信</b><span class="up">成長経路</span></div><p>電力ケーブルとデータセンター関連は評価拡大の材料です。</p></div><div class="signal"><div><b>自動車と為替</b><span class="flat">確認</span></div><p>主力事業の採算と為替影響を確認します。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>セグメント利益</b><span class="up">最重要</span></div><p>自動車、電力、通信のどこが伸びたかを確認します。</p></div><div class="signal"><div><b>通期予想修正</b><span class="up">重要</span></div><p>上方修正や配当方針の変化を確認します。</p></div><div class="signal"><div><b>株式分割後の需給</b><span class="flat">確認</span></div><p>流動性改善と値動きの荒さを確認します。</p></div><div class="signal"><div><b>銅価格・為替</b><span class="down">注意</span></div><p>原材料と為替の利益影響を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", yen(P0), "市場データで確認済み", DATE, "2026/07/31終値") + tr("1Q決算発表", "2026/07/31", "IRカレンダーで確認", "2026年度1Q", "発表済み") + tr("中計2028", "公表済み", "会社発表", "2026/05", "成長戦略") + tr("株式分割", "公表済み", "会社発表", "2026/05/12", "単位比較に注意"),

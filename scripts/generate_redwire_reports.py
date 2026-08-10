@@ -243,7 +243,6 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>54%</b></div><p>仮定：Q2売上急伸の持続を60%、UAS注文拡大を55%、SpaceMDの中期価値を35%、内部統制改善を45%として置き、重複を控除しました。</p><p>読み方：防衛UASと売上成長はかなり評価されていますが、赤字、統合、内部統制の不安も残るため、織り込みは中程度です。</p><p>次に見る数字：売上、粗利率、Adjusted EBITDA、受注残、Stalker注文です。</p><p>再計算方法：売上、倍率、株式数、ネットデットを分け、株価シナリオと同じ売上倍率モデルで更新します。</p></div>'
-    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "Q2決算詳細と10-Q確認": ("+18〜40%", "-8〜+12%", "-22〜-42%", "直近の売上急伸が本物かを確認する材料で、売上倍率と赤字見通しを直接動かすため最大級です。"),
         "Stalker UASと防衛注文": ("+15〜35%", "-6〜+12%", "-18〜-35%", "防衛UASは成長期待の中心ですが、受注から売上・利益まで時間差があるため決算より少し小さめです。"),
@@ -265,9 +264,9 @@ def catalyst_values() -> dict[str, str]:
 <p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
 </div>
 <p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>粗利率低下</li><li>受注残の伸び鈍化</li><li>内部統制の是正遅延</li></ul></div></div>
@@ -305,7 +304,7 @@ def catalyst_values() -> dict[str, str]:
         "SURPRISE_DOWN": "Q2詳細で損失拡大、粗利率悪化、統合遅延、希薄化が見えることです。",
         "PRIMARY_RISK": "売上急伸だけが先に評価され、利益率や統合リスクが後から嫌気される可能性です。",
         "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">2026/08</div><div class="time-dot"></div><div class="time-body"><b>Q2詳細確認</b><p>10-Qで粗利率、損失、受注残、株式数を確認します。</p><div class="time-meta"><span class="chip blue">確認待ち</span></div></div></div><div class="time-row"><div class="time-date">2026後半</div><div class="time-dot"></div><div class="time-body"><b>UAS追加注文</b><p>Stalker関連の追加受注と納入進捗を確認します。</p><div class="time-meta"><span class="chip">継続材料</span></div></div></div><div class="time-row"><div class="time-date">2026-2028</div><div class="time-dot"></div><div class="time-body"><b>SpaceMD商業化</b><p>提携、施設稼働、収益化の道筋を確認します。</p><div class="time-meta"><span class="chip blue">長期</span></div></div></div>',
-        "CATALYST_CARDS": "".join(cards),
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>Q2詳細と倍率</b><span class="up">直結</span></div><p>売上だけでなく利益率が強いほど倍率を支えます。</p></div><div class="signal"><div><b>UAS受注とDefense</b><span class="up">連動</span></div><p>追加注文が受注残と将来売上へつながります。</p></div><div class="signal"><div><b>内部統制と信頼性</b><span class="down">注意</span></div><p>是正が遅れると評価倍率の重しになります。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>Q2粗利率</b><span class="up">最重要</span></div><p>売上成長が利益へ変わっているかを見ます。</p></div><div class="signal"><div><b>受注残</b><span class="up">重要</span></div><p>Q1の$498.1Mから増えたか確認します。</p></div><div class="signal"><div><b>株式数</b><span class="down">注意</span></div><p>買収や資金調達による希薄化を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認済み", DATE, "2026/08/07終値") + tr("Q2売上", "$117.07M", "市場記事で確認", "2026/08/06", "公式10-Q詳細待ち") + tr("Q1受注残", "$498.1M", "会社発表", "2026/05/06", "2026/03/31時点") + tr("Stalker注文", "$20M", "会社発表", "2026/04/14", "フォローオン注文"),

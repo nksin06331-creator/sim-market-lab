@@ -288,9 +288,6 @@ def catalyst_values() -> dict[str, str]:
         '<p>次に見る数字：SSD & Storage売上、ASP、2Q実績、自社株取得進捗です。</p>'
         '<p>再計算方法：売上、EPS、株式数へ分解し、株価シナリオと同じPERモデルで織り込み度を更新します。</p></div>'
     )
-    outcome_common = (
-        "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
-    )
     cards = []
     impact_map = {
         "2026年7〜9月期決算と会社見通しの達成度": ("+10〜24%", "-5〜+8%", "-15〜-30%", "メモリ株では決算とASPがEPSを直接動かすため、短期材料として最大級です。"),
@@ -313,9 +310,9 @@ def catalyst_values() -> dict[str, str]:
 <p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
 </div>
 <p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>SSD & Storage売上の減速</li><li>ASP低下や在庫増加</li><li>設備投資負担の増加</li></ul></div></div>
@@ -391,7 +388,7 @@ def catalyst_values() -> dict[str, str]:
             '<div class="time-row"><div class="time-date">2026/11ごろ</div><div class="time-dot"></div><div class="time-body"><b>2Q決算</b><p>会社見通しに対する達成度を確認します。</p><div class="time-meta"><span class="chip blue">当方推定</span></div></div></div>'
             '<div class="time-row"><div class="time-date">2026後半</div><div class="time-dot"></div><div class="time-body"><b>AI向けSSD・BiCS10</b><p>サンプル、採用、量産への進み方を確認します。</p><div class="time-meta"><span class="chip blue">期間のみ公表</span></div></div></div>'
         ),
-        "CATALYST_CARDS": "".join(cards),
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>AI向けSSDとBiCS10</b><span class="up">同じ価値経路</span></div><p>技術発表、サンプル、顧客採用、売上認識は段階イベントです。単純に足しません。</p></div><div class="signal"><div><b>自社株取得と株式分割</b><span class="flat">別経路</span></div><p>自社株取得は株式数、株式分割は流動性に主に効きます。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>SSD & Storage売上</b><span class="up">最重要</span></div><p>AI需要の継続を見る中心指標です。</p></div><div class="signal"><div><b>ASPとビット出荷</b><span class="up">重要</span></div><p>価格と数量のどちらで伸びたかを分けます。</p></div><div class="signal"><div><b>自社株取得進捗</b><span class="flat">確認</span></div><p>取得株数、取得額、平均単価を確認します。</p></div><div class="signal"><div><b>訴訟の続報</b><span class="down">注意</span></div><p>追加費用や法的手続きの進展を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", yen(P0), "公式市場データで確認済み", DATE, "2026/08/07終値") + tr("2Q会社見通し", "売上2.39兆円、営業利益1.89兆円", "会社の目標・予定", "2026/07/31", "2026年7〜9月") + tr("自社株取得枠", "上限8,000億円", "会社の目標・予定", "2026/07/31", "実際の取得は市場次第") + tr("株式分割", "1株を3株", "会社の目標・予定", "2026/07/31", "効力発生日2026/10/01"),

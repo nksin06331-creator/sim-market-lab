@@ -290,7 +290,6 @@ def catalyst_values() -> dict[str, str]:
         '<p>次に見る数字：Q2売上、粗利率、Adjusted EBITDA、受注残、Neutron進捗、買収条件です。</p>'
         '<p>再計算方法：材料ごとの成功確率を更新し、売上倍率モデルの標準ケースに対する織り込み度として再計算します。</p></div>'
     )
-    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "2026年Q2決算": ("+10〜22%", "-5〜+8%", "-14〜-28%", "直近業績は重要ですが、株価にはすでに高成長期待が入っているため、Neutronや買収より単発影響は抑えています。"),
         "Iridium買収の承認・統合": ("+18〜40%", "-8〜+12%", "-20〜-38%", "買収は売上規模とキャッシュフロー構造を変えるため大きい一方、承認・希薄化・統合リスクも大きく見ます。"),
@@ -312,9 +311,9 @@ def catalyst_values() -> dict[str, str]:
 <p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
 </div>
 <p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>粗利率低下</li><li>受注残の伸び鈍化</li><li>開発日程の後ろ倒し</li></ul></div></div>
@@ -393,7 +392,7 @@ def catalyst_values() -> dict[str, str]:
             '<div class="time-row"><div class="time-date">2026-2027</div><div class="time-dot"></div><div class="time-body"><b>Iridium買収</b><p>承認、資金調達、統合計画を確認します。</p><div class="time-meta"><span class="chip blue">条件付き</span></div></div></div>'
             '<div class="time-row"><div class="time-date">2026-2027</div><div class="time-dot"></div><div class="time-body"><b>Neutron進捗</b><p>試験、初回打ち上げ、顧客契約を確認します。</p><div class="time-meta"><span class="chip blue">期間のみ</span></div></div></div>'
         ),
-        "CATALYST_CARDS": "".join(cards),
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>Q2決算と倍率</b><span class="up">直結</span></div><p>売上と粗利率が期待を上回るほど高い倍率を支えやすくなります。</p></div><div class="signal"><div><b>Iridiumと希薄化</b><span class="flat">同時確認</span></div><p>規模拡大と資金調達の影響を分けて見る必要があります。</p></div><div class="signal"><div><b>Neutronと契約</b><span class="up">連動</span></div><p>開発進捗が大型打ち上げ契約の信頼性に影響します。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>売上成長率</b><span class="up">最重要</span></div><p>Q2会社見通しの上限を超えるか見ます。</p></div><div class="signal"><div><b>GAAP粗利率</b><span class="up">重要</span></div><p>売上成長が利益へ変わっているかを確認します。</p></div><div class="signal"><div><b>受注残</b><span class="flat">確認</span></div><p>大型契約が将来売上へ積み上がっているかを見ます。</p></div><div class="signal"><div><b>株式数</b><span class="down">注意</span></div><p>買収や資金調達による希薄化を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認済み", DATE, "2026/08/07終値") + tr("Q2売上見通し", "$225M〜$240M", "会社の目標・予定", "2026/05/07", "2026年4〜6月") + tr("Iridium買収", "$54/株", "会社発表", "2026/06/29", "承認・完了は未反映") + tr("Space Force契約", "$266M", "会社発表", "2026/07/27", "初回は2026年末以降予定"),

@@ -249,7 +249,6 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>34%</b></div><p>仮定：C-14・Yb-176初期出荷期待を35%、Renergen Phase 1進捗を40%、Si-28期待を25%、QLE/HALEU長期価値を25%、資金調達リスク控除を反映しました。</p><p>読み方：株価は大型テーマを一部見ていますが、実出荷・生産・規制確認前なので織り込みは低めです。出荷確認が出ると標準ケースへ近づきます。</p><p>次に見る数字：売上、現金、短期投資、発行済株式、契約量、設備稼働率です。</p><p>再計算方法：材料ごとの成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>'
-    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "C-14・Yb-176初期商業出荷": ("+35〜90%", "-12〜+30%", "-35〜-60%", "本格売上前の会社なので、初期出荷は技術・顧客・売上化を同時に確認する最大材料です。"),
         "Renergen Phase 1": ("+25〜60%", "-10〜+22%", "-25〜-45%", "LNGとヘリウムの現金収入化に関わるため大きいですが、同位体出荷より買収・設備実行の要素が強いです。"),
@@ -271,9 +270,9 @@ def catalyst_values() -> dict[str, str]:
 <p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
 </div>
 <p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>出荷遅延</li><li>契約量不足</li><li>資金調達条件の悪化</li></ul></div></div>
@@ -311,7 +310,7 @@ def catalyst_values() -> dict[str, str]:
         "SURPRISE_DOWN": "商業出荷遅延、Renergenの資金・生産遅れ、希薄化、規制停滞です。",
         "PRIMARY_RISK": "テーマが大きい一方、実売上確認前の要素が多く、資金調達と希薄化で株価が大きく下がる可能性です。",
         "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">2026/Q3</div><div class="time-dot"></div><div class="time-body"><b>C-14・Yb-176初期商業出荷</b><p>最初の売上化確認が焦点。</p><div class="time-meta"><span class="chip">最重要</span></div></div></div><div class="time-row"><div class="time-date">2026/08/06</div><div class="time-dot"></div><div class="time-body"><b>Renergen LNG契約</b><p>Tetra4の5年take-or-pay契約を会社が発表。</p><div class="time-meta"><span class="chip blue">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026後半</div><div class="time-dot"></div><div class="time-body"><b>Renergen Phase 1確認</b><p>LNGと液体ヘリウムの生産・販売を確認。</p><div class="time-meta"><span class="chip">確認</span></div></div></div><div class="time-row"><div class="time-date">中期</div><div class="time-dot"></div><div class="time-body"><b>QLE/HALEU関連</b><p>規制、許認可、資金、顧客を確認。</p><div class="time-meta"><span class="chip blue">大型材料</span></div></div></div>',
-        "CATALYST_CARDS": "".join(cards),
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>出荷と資金</b><span class="up">連動</span></div><p>良い出荷でも、資金調達条件が悪いと評価は伸びにくいです。</p></div><div class="signal"><div><b>Renergenと契約</b><span class="flat">確認</span></div><p>契約が生産と現金収入に変わるかを見ます。</p></div><div class="signal"><div><b>QLEと規制</b><span class="flat">長期</span></div><p>許認可が進まないと大型テーマは評価されにくいです。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>初期商業出荷</b><span class="up">最重要</span></div><p>出荷日、数量、顧客、粗利を確認します。</p></div><div class="signal"><div><b>Renergen生産</b><span class="up">重要</span></div><p>LNGと液体ヘリウムの稼働を確認します。</p></div><div class="signal"><div><b>現金と株式数</b><span class="down">注意</span></div><p>資金調達と希薄化を確認します。</p></div><div class="signal"><div><b>規制</b><span class="flat">長期</span></div><p>QLE/HALEUの許認可を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", "2026/08/07", "自動更新後の終値") + tr("現金+短期投資", "$290.5M", "Q1 2026 10-Q", "2026/03/31", "現金$207.3M+短期投資$83.2M") + tr("Renergen契約", "Phase 1 LNGの約75%", "会社発表", "2026/08/06", "take-or-pay契約") + tr("同位体出荷", "2026年Q3中心", "会社資料", DATE, "初期商業出荷確認が必要"),

@@ -242,7 +242,6 @@ def scenario_values() -> dict[str, str]:
 
 def catalyst_values() -> dict[str, str]:
     non_quant = '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>46%</b></div><p>仮定：4Q決算の標準達成を50%、月次KPI改善を45%、優待電子化の導入拡大を40%、自社株取得後の需給改善を55%として置き、重複を控除しました。</p><p>読み方：3Q進捗は一部評価済みですが、通期決算と来期見通しがまだ残っているため、織り込みは半分弱です。</p><p>次に見る数字：通期売上、営業利益、調整後EBITDA、月次推移です。</p><p>再計算方法：EPS、PER、調整後EBITDA、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>'
-    outcome_common = "<ul><li>目安：下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅です。</li><li>実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</li></ul>"
     impact_map = {
         "2026年8月期通期決算": ("+12〜28%", "-5〜+8%", "-14〜-28%", "小型成長株では通期実績と来期見通しがPERを直接動かすため、最も大きいレンジです。"),
         "月次業績報告": ("+6〜16%", "-3〜+5%", "-8〜-18%", "毎月出る継続材料なので単発決算より小さい一方、トレンド変化には効きます。"),
@@ -264,9 +263,9 @@ def catalyst_values() -> dict[str, str]:
 <p class="lead">{description}</p>
 <div class="mechanism">{mechanism}</div>
 <div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p>{outcome_common}</div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p>{outcome_common}</div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p>{outcome_common}</div>
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
 </div>
 <p class="notice"><b>この％にした理由：</b>{reason}</p>
 <div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul><li>月次の鈍化</li><li>サイネージ納品の遅れ</li><li>通期予想未達</li></ul></div></div>
@@ -304,7 +303,7 @@ def catalyst_values() -> dict[str, str]:
         "SURPRISE_DOWN": "4Q失速、通期未達、来期成長鈍化、自社株買い終了後の需給悪化です。",
         "PRIMARY_RISK": "3Qの好調が株価に入った後で、4Qや来期見通しが普通だと失望される可能性です。",
         "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">毎月</div><div class="time-dot"></div><div class="time-body"><b>月次業績報告</b><p>独自Payや事業KPIの勢いを確認します。</p><div class="time-meta"><span class="chip">継続材料</span></div></div></div><div class="time-row"><div class="time-date">2026/07/28</div><div class="time-dot"></div><div class="time-body"><b>自己株式取得終了</b><p>買付終了後の需給を確認します。</p><div class="time-meta"><span class="chip">開示済み</span></div></div></div><div class="time-row"><div class="time-date">2026/10ごろ</div><div class="time-dot"></div><div class="time-body"><b>通期決算</b><p>通期予想の達成度と来期見通しを確認します。</p><div class="time-meta"><span class="chip blue">時期推定</span></div></div></div>',
-        "CATALYST_CARDS": "".join(cards),
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>月次と通期決算</b><span class="up">連動</span></div><p>月次が強いほど通期達成と来期見通しを支えます。</p></div><div class="signal"><div><b>優待電子化と独自Pay</b><span class="up">同じ経路</span></div><p>導入事例は独自Pay利用拡大の一部として見ます。</p></div><div class="signal"><div><b>自社株買いと需給</b><span class="flat">確認</span></div><p>終了後は業績評価で株価を保てるかを見ます。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>売上進捗</b><span class="up">最重要</span></div><p>通期115億円に対する4Q達成度を確認します。</p></div><div class="signal"><div><b>営業利益率</b><span class="up">重要</span></div><p>売上成長が利益へ変わっているかを見ます。</p></div><div class="signal"><div><b>月次KPI</b><span class="flat">確認</span></div><p>決算前の勢いを確認します。</p></div><div class="signal"><div><b>出来高</b><span class="down">注意</span></div><p>小型株なので需給の荒れを確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", yen(P0), "市場データで確認済み", DATE, "2026/07/30終値") + tr("3Q売上", "80.57億円", "公開情報で確認済み", "2026/07/14", "進捗率70.0%") + tr("3Q営業利益", "6.61億円", "公開情報で確認済み", "2026/07/14", "前年同期比+6.2%") + tr("調整後EBITDA", "10.56億円", "公開情報で確認済み", "2026/07/14", "進捗率81.2%"),
