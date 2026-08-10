@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T15:27:06.457935+00:00",
+  "generatedAt": "2026-08-10T15:44:06.064064+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 9,
+  "quoteCount": 10,
   "errorCount": 0,
   "errors": {},
   "prices": {
@@ -14,29 +14,29 @@
       "changePct": -1.4977,
       "currency": "JPY",
       "marketTime": "2026-08-10T06:30:00+00:00",
-      "updatedAt": "2026-08-10T15:27:01.222098+00:00",
+      "updatedAt": "2026-08-10T15:44:00.725937+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
       "symbol": "RKLB",
-      "price": 80.65,
+      "price": 81.22,
       "previousClose": 82.83,
-      "change": -2.18,
-      "changePct": -2.6319,
+      "change": -1.61,
+      "changePct": -1.9437,
       "currency": "USD",
-      "marketTime": "2026-08-10T15:27:01+00:00",
-      "updatedAt": "2026-08-10T15:27:01.797353+00:00",
+      "marketTime": "2026-08-10T15:43:59+00:00",
+      "updatedAt": "2026-08-10T15:44:01.300215+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
       "symbol": "RDW",
-      "price": 13.215,
+      "price": 13.325,
       "previousClose": 13.59,
-      "change": -0.375,
-      "changePct": -2.7594,
+      "change": -0.265,
+      "changePct": -1.95,
       "currency": "USD",
-      "marketTime": "2026-08-10T15:27:01+00:00",
-      "updatedAt": "2026-08-10T15:27:02.374507+00:00",
+      "marketTime": "2026-08-10T15:44:00+00:00",
+      "updatedAt": "2026-08-10T15:44:01.879100+00:00",
       "status": "ok"
     },
     "paycloud-4015": {
@@ -47,7 +47,7 @@
       "changePct": 1.6822,
       "currency": "JPY",
       "marketTime": "2026-08-10T06:30:00+00:00",
-      "updatedAt": "2026-08-10T15:27:02.969658+00:00",
+      "updatedAt": "2026-08-10T15:44:02.448220+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
@@ -58,29 +58,29 @@
       "changePct": 0.1158,
       "currency": "JPY",
       "marketTime": "2026-08-10T06:30:00+00:00",
-      "updatedAt": "2026-08-10T15:27:03.581466+00:00",
+      "updatedAt": "2026-08-10T15:44:03.059309+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
       "symbol": "ABCL",
-      "price": 9.225,
+      "price": 9.23,
       "previousClose": 6.93,
-      "change": 2.295,
-      "changePct": 33.1169,
+      "change": 2.3,
+      "changePct": 33.189,
       "currency": "USD",
-      "marketTime": "2026-08-10T15:27:03+00:00",
-      "updatedAt": "2026-08-10T15:27:04.160342+00:00",
+      "marketTime": "2026-08-10T15:44:01+00:00",
+      "updatedAt": "2026-08-10T15:44:03.633659+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
       "symbol": "ASPI",
-      "price": 4.285,
+      "price": 4.31,
       "previousClose": 4.43,
-      "change": -0.145,
-      "changePct": -3.2731,
+      "change": -0.12,
+      "changePct": -2.7088,
       "currency": "USD",
-      "marketTime": "2026-08-10T15:26:58+00:00",
-      "updatedAt": "2026-08-10T15:27:04.738850+00:00",
+      "marketTime": "2026-08-10T15:43:54+00:00",
+      "updatedAt": "2026-08-10T15:44:04.203074+00:00",
       "status": "ok"
     },
     "moonlake-mltx": {
@@ -90,19 +90,30 @@
       "change": -0.9,
       "changePct": -4.9288,
       "currency": "USD",
-      "marketTime": "2026-08-10T15:26:19+00:00",
-      "updatedAt": "2026-08-10T15:27:05.307243+00:00",
+      "marketTime": "2026-08-10T15:43:59+00:00",
+      "updatedAt": "2026-08-10T15:44:04.909585+00:00",
       "status": "ok"
     },
     "zeta-global-zeta": {
       "symbol": "ZETA",
-      "price": 27.19,
+      "price": 27.24,
       "previousClose": 26.64,
-      "change": 0.55,
-      "changePct": 2.0646,
+      "change": 0.6,
+      "changePct": 2.2523,
       "currency": "USD",
-      "marketTime": "2026-08-10T15:27:03+00:00",
-      "updatedAt": "2026-08-10T15:27:06.457892+00:00",
+      "marketTime": "2026-08-10T15:44:04+00:00",
+      "updatedAt": "2026-08-10T15:44:05.485721+00:00",
+      "status": "ok"
+    },
+    "credo-crdo": {
+      "symbol": "CRDO",
+      "price": 249.584,
+      "previousClose": 249.89,
+      "change": -0.306,
+      "changePct": -0.1225,
+      "currency": "USD",
+      "marketTime": "2026-08-10T15:43:56+00:00",
+      "updatedAt": "2026-08-10T15:44:06.064040+00:00",
       "status": "ok"
     }
   }

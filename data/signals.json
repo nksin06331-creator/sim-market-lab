@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-10T15:26:46.145584+00:00",
+  "updatedAt": "2026-08-10T15:43:45.008917+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.1,
@@ -110,6 +110,18 @@
       },
       "reportRevision": "zeta-global-zeta-2026-08-11",
       "summary": "2Q好決算、20四半期連続Beat and Raise、AI提携は強い。株価は高値圏に近く、期待織り込み確認前のため中立。"
+    },
+    "credo-crdo": {
+      "position": 52.0,
+      "zone": "中立",
+      "asOf": "2026-08-11",
+      "components": {
+        "valuation": 37.8,
+        "catalysts": 80.0,
+        "businessRisk": 62.0
+      },
+      "reportRevision": "credo-crdo-2026-08-11",
+      "summary": "FY2026 Q4決算とQ1ガイダンスは強い。AI接続需要と光接続拡大は追い風だが、株価は高期待を織り込むため中立。"
     }
   }
 }

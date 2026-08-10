@@ -243,6 +243,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "credo-crdo",
+      "order": 10,
+      "ticker": "CRDO",
+      "quoteSymbol": "CRDO",
+      "name": "クレド・テクノロジー・グループ",
+      "nameEn": "Credo Technology Group Holding Ltd.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "AIデータセンター接続・高速インターコネクト",
+      "reports": {
+        "company": {
+          "path": "./stocks/credo-crdo/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/credo-crdo/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/credo-crdo/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }
