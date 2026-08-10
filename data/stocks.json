@@ -243,6 +243,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "zeta-global-zeta",
+      "order": 10,
+      "ticker": "ZETA",
+      "quoteSymbol": "ZETA",
+      "name": "ゼータ・グローバル・ホールディングス",
+      "nameEn": "Zeta Global Holdings Corp.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "NYSE",
+      "currency": "USD",
+      "sector": "AIマーケティングクラウド・顧客データ基盤",
+      "reports": {
+        "company": {
+          "path": "./stocks/zeta-global-zeta/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/zeta-global-zeta/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/zeta-global-zeta/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

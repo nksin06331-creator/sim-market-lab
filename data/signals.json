@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-10T15:13:32.460983+00:00",
+  "updatedAt": "2026-08-10T15:26:46.145584+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.1,
@@ -110,6 +110,18 @@
       },
       "reportRevision": "zapata-zpta-2026-08-11",
       "summary": "OTCQB上場、NVIDIA連携、量子ソフトテーマは材料。ただしOTC流動性、売上未確立、希薄化リスクが極めて高いため中立。"
+    },
+    "zeta-global-zeta": {
+      "position": 49.2,
+      "zone": "中立",
+      "asOf": "2026-08-11",
+      "components": {
+        "valuation": 33.3,
+        "catalysts": 82.0,
+        "businessRisk": 58.0
+      },
+      "reportRevision": "zeta-global-zeta-2026-08-11",
+      "summary": "2Q好決算、20四半期連続Beat and Raise、AI提携は強い。株価は高値圏に近く、期待織り込み確認前のため中立。"
     }
   }
 }
