@@ -6,6 +6,7 @@ const state = {
   stocks: [],
   prices: {},
   signals: {},
+  scenarios: {},
   market: "all",
   query: "",
   sort: "default",
@@ -58,10 +59,39 @@ function formatDate(value) {
   }).format(date);
 }
 
+function parseScenarioPrice(text) {
+  if (!text) return null;
+  const normalized = String(text).replace(/,/g, "").replace(/[^\d.-]/g, "");
+  const value = Number(normalized);
+  return Number.isFinite(value) ? value : null;
+}
+
+function clampPercent(value) {
+  if (!Number.isFinite(value)) return null;
+  return Math.min(100, Math.max(0, value));
+}
+
+function zoneFromValuation(position) {
+  if (!Number.isFinite(position)) return "判定準備中";
+  if (position <= 30) return "売られすぎ";
+  if (position >= 70) return "買われすぎ";
+  return "中立";
+}
+
+function liveValuationPosition(stockId) {
+  const price = Number(state.prices[stockId]?.price);
+  const scenario = state.scenarios[stockId];
+  if (!Number.isFinite(price) || !scenario) return null;
+  const { bear, bull } = scenario;
+  if (!Number.isFinite(bear) || !Number.isFinite(bull) || bear === bull) return null;
+  return clampPercent(((price - bear) / (bull - bear)) * 100);
+}
+
 function getSignal(stockId) {
   const source = state.signals[stockId];
   const position = Number(source?.position);
-  const valuationPosition = Number(source?.components?.valuation);
+  const livePosition = liveValuationPosition(stockId);
+  const valuationPosition = Number.isFinite(livePosition) ? livePosition : Number(source?.components?.valuation);
   const allowedZones = ["売られすぎ", "中立", "買われすぎ"];
   if (!Number.isFinite(position) || !allowedZones.includes(source?.zone)) {
     return { position: 50, valuationPosition: 50, zone: "判定準備中", asOf: null, pending: true };
@@ -69,10 +99,38 @@ function getSignal(stockId) {
   return {
     position: Math.min(100, Math.max(0, position)),
     valuationPosition: Number.isFinite(valuationPosition) ? Math.min(100, Math.max(0, valuationPosition)) : Math.min(100, Math.max(0, position)),
-    zone: source.zone,
+    zone: Number.isFinite(livePosition) ? zoneFromValuation(livePosition) : source.zone,
     asOf: source.asOf || null,
     pending: false
   };
+}
+
+function parseScenarioDocument(stock, html) {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  const labels = Array.from(doc.querySelectorAll(".position-labels span"));
+  if (labels.length < 3) return null;
+  const bear = parseScenarioPrice(labels[0].textContent);
+  const base = parseScenarioPrice(labels[1].textContent);
+  const bull = parseScenarioPrice(labels[2].textContent);
+  if (![bear, base, bull].every(Number.isFinite)) return null;
+  return { bear, base, bull };
+}
+
+async function loadScenarioBounds(stocks) {
+  const entries = await Promise.all(stocks.map(async (stock) => {
+    const path = stock.reports?.valuation?.path;
+    if (!path) return null;
+    try {
+      const response = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) return null;
+      const scenario = parseScenarioDocument(stock, await response.text());
+      return scenario ? [stock.id, scenario] : null;
+    } catch (error) {
+      console.warn(`Failed to load scenario bounds for ${stock.id}`, error);
+      return null;
+    }
+  }));
+  return Object.fromEntries(entries.filter(Boolean));
 }
 
 function reportLink(report, number, label, compact = false) {
@@ -130,7 +188,7 @@ function createCard(stock) {
     <div class="signal-heading"><span>現在株価の位置</span><strong>${signal.zone}</strong></div>
     <div class="signal-track" aria-label="現在株価の位置 ${signal.valuationPosition.toFixed(1)}%"><span class="signal-marker${signal.pending ? " is-pending" : ""}" style="left:${signal.valuationPosition}%"></span></div>
     <div class="signal-scale"><span>売られすぎ</span><span>中立</span><span>買われすぎ</span></div>
-    <p class="signal-zone">${signal.asOf ? `レポート2と同じ位置：${signal.valuationPosition.toFixed(1)}%` : "3つのレポート作成後に判定します"}</p>`;
+    <p class="signal-zone">${signal.asOf ? `現在株価で再計算：${signal.valuationPosition.toFixed(1)}%` : "3つのレポート作成後に判定します"}</p>`;
 
   const actions = document.createElement("div");
   actions.className = "card-actions";
@@ -220,7 +278,7 @@ function createCompactRow(stock) {
 
   const signalNote = document.createElement("p");
   signalNote.className = "stock-row-note";
-  signalNote.textContent = signal.asOf ? `分析基準日：${signal.asOf}` : "3つのレポート作成後に判定します";
+  signalNote.textContent = signal.asOf ? `現在株価で再計算：${signal.valuationPosition.toFixed(1)}%` : "3つのレポート作成後に判定します";
 
   const actions = document.createElement("div");
   actions.className = "stock-row-actions";
@@ -368,6 +426,7 @@ async function init() {
     state.stocks = Array.isArray(stockPayload.stocks) ? stockPayload.stocks : [];
     state.prices = pricePayload.prices || {};
     state.signals = signalPayload.signals || {};
+    state.scenarios = await loadScenarioBounds(state.stocks);
     updateSummary(pricePayload);
     render();
   } catch (error) {

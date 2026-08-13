@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T03:14:17.889132+00:00",
+  "generatedAt": "2026-08-13T03:46:06.034966+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
   "quoteCount": 10,
   "errorCount": 0,
@@ -8,13 +8,13 @@
   "prices": {
     "kioxia-285a": {
       "symbol": "285A.T",
-      "price": 55200.0,
+      "price": 54770.0,
       "previousClose": 49870.0,
-      "change": 5330.0,
-      "changePct": 10.6878,
+      "change": 4900.0,
+      "changePct": 9.8255,
       "currency": "JPY",
-      "marketTime": "2026-08-13T02:30:00+00:00",
-      "updatedAt": "2026-08-13T03:14:12.674224+00:00",
+      "marketTime": "2026-08-13T03:30:59+00:00",
+      "updatedAt": "2026-08-13T03:46:00.685572+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,7 +25,7 @@
       "changePct": 1.4498,
       "currency": "USD",
       "marketTime": "2026-08-12T20:00:00+00:00",
-      "updatedAt": "2026-08-13T03:14:13.248521+00:00",
+      "updatedAt": "2026-08-13T03:46:01.261174+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -36,7 +36,7 @@
       "changePct": -0.148,
       "currency": "USD",
       "marketTime": "2026-08-12T20:00:03+00:00",
-      "updatedAt": "2026-08-13T03:14:13.831579+00:00",
+      "updatedAt": "2026-08-13T03:46:01.835877+00:00",
       "status": "ok"
     },
     "paycloud-4015": {
@@ -46,19 +46,19 @@
       "change": 4.0,
       "changePct": 0.7233,
       "currency": "JPY",
-      "marketTime": "2026-08-13T02:15:40+00:00",
-      "updatedAt": "2026-08-13T03:14:14.399429+00:00",
+      "marketTime": "2026-08-13T03:30:00+00:00",
+      "updatedAt": "2026-08-13T03:46:02.413255+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
       "symbol": "5802.T",
-      "price": 2362.5,
+      "price": 2368.5,
       "previousClose": 2270.0,
-      "change": 92.5,
-      "changePct": 4.0749,
+      "change": 98.5,
+      "changePct": 4.3392,
       "currency": "JPY",
-      "marketTime": "2026-08-13T02:30:00+00:00",
-      "updatedAt": "2026-08-13T03:14:15.006256+00:00",
+      "marketTime": "2026-08-13T03:31:01+00:00",
+      "updatedAt": "2026-08-13T03:46:03.029248+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
@@ -69,7 +69,7 @@
       "changePct": 6.0963,
       "currency": "USD",
       "marketTime": "2026-08-12T20:00:01+00:00",
-      "updatedAt": "2026-08-13T03:14:15.579060+00:00",
+      "updatedAt": "2026-08-13T03:46:03.606738+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
@@ -80,7 +80,7 @@
       "changePct": -0.463,
       "currency": "USD",
       "marketTime": "2026-08-12T20:00:01+00:00",
-      "updatedAt": "2026-08-13T03:14:16.157182+00:00",
+      "updatedAt": "2026-08-13T03:46:04.187135+00:00",
       "status": "ok"
     },
     "moonlake-mltx": {
@@ -91,7 +91,7 @@
       "changePct": 3.8577,
       "currency": "USD",
       "marketTime": "2026-08-12T20:00:01+00:00",
-      "updatedAt": "2026-08-13T03:14:16.728167+00:00",
+      "updatedAt": "2026-08-13T03:46:04.896324+00:00",
       "status": "ok"
     },
     "zeta-global-zeta": {
@@ -102,7 +102,7 @@
       "changePct": -2.0583,
       "currency": "USD",
       "marketTime": "2026-08-12T20:00:02+00:00",
-      "updatedAt": "2026-08-13T03:14:17.307126+00:00",
+      "updatedAt": "2026-08-13T03:46:05.463872+00:00",
       "status": "ok"
     },
     "credo-crdo": {
@@ -113,7 +113,7 @@
       "changePct": 8.2644,
       "currency": "USD",
       "marketTime": "2026-08-12T20:00:01+00:00",
-      "updatedAt": "2026-08-13T03:14:17.889106+00:00",
+      "updatedAt": "2026-08-13T03:46:06.034933+00:00",
       "status": "ok"
     }
   }

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-13T03:13:58.451116+00:00",
+  "updatedAt": "2026-08-13T03:46:37.265366+00:00",
   "signals": {
     "kioxia-285a": {
-      "position": 47.1,
+      "position": 56.1,
       "zone": "中立",
       "asOf": "2026-08-08",
       "components": {
-        "valuation": 37.7,
+        "valuation": 52.7,
         "catalysts": 65.0,
         "businessRisk": 55.0
       },
@@ -16,11 +16,11 @@
       "summary": "標準ケースの手前にある一方、AI向け需要と自社株取得が支え。NAND市況の反落リスクも残るため中立。"
     },
     "rocket-lab-rklb": {
-      "position": 54.8,
+      "position": 53.6,
       "zone": "中立",
       "asOf": "2026-08-08",
       "components": {
-        "valuation": 42.5,
+        "valuation": 40.5,
         "catalysts": 74.0,
         "businessRisk": 72.0
       },
@@ -28,11 +28,11 @@
       "summary": "Q1成長、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。"
     },
     "redwire-rdw": {
-      "position": 43.1,
+      "position": 48.0,
       "zone": "中立",
       "asOf": "2026-08-08",
       "components": {
-        "valuation": 26.0,
+        "valuation": 34.3,
         "catalysts": 72.0,
         "businessRisk": 63.0
       },
@@ -40,11 +40,11 @@
       "summary": "Q2売上急伸、受注残、防衛UAS材料は強い一方、赤字、買収統合、内部統制、希薄化リスクが残るため中立。"
     },
     "paycloud-4015": {
-      "position": 53.9,
+      "position": 57.7,
       "zone": "中立",
       "asOf": "2026-08-08",
       "components": {
-        "valuation": 48.9,
+        "valuation": 55.1,
         "catalysts": 66.0,
         "businessRisk": 54.0
       },
@@ -52,11 +52,11 @@
       "summary": "3Q増収増益と調整後EBITDA進捗は強い一方、現在株価は標準ケース付近で、通期決算と来期見通し確認前のため中立。"
     },
     "sumitomo-electric-5802": {
-      "position": 45.9,
+      "position": 47.3,
       "zone": "中立",
       "asOf": "2026-08-09",
       "components": {
-        "valuation": 33.6,
+        "valuation": 36.0,
         "catalysts": 68.0,
         "businessRisk": 58.0
       },
@@ -76,11 +76,11 @@
       "summary": "ABCL635のPhase 2好結果で株価は再評価。次は後期試験設計、資金消費、データ詳細を確認するため中立からやや強気。"
     },
     "asp-isotopes-aspi": {
-      "position": 45.7,
+      "position": 44.7,
       "zone": "中立",
       "asOf": "2026-08-09",
       "components": {
-        "valuation": 25.7,
+        "valuation": 24.0,
         "catalysts": 72.0,
         "businessRisk": 82.0
       },
@@ -88,11 +88,11 @@
       "summary": "同位体出荷、Renergen、QLE/HALEUが材料。株価は悲観寄りだが、商業化と規制の実行リスクが高いため中立。"
     },
     "moonlake-mltx": {
-      "position": 45.8,
+      "position": 43.9,
       "zone": "中立",
       "asOf": "2026-08-10",
       "components": {
-        "valuation": 23.4,
+        "valuation": 20.1,
         "catalysts": 78.0,
         "businessRisk": 82.0
       },
@@ -100,11 +100,11 @@
       "summary": "HS BLA提出とFDA受理が最大材料。Week 52と資金調達は支えだが、商業化前・単一資産依存のため中立。"
     },
     "zeta-global-zeta": {
-      "position": 49.2,
+      "position": 52.5,
       "zone": "中立",
       "asOf": "2026-08-11",
       "components": {
-        "valuation": 33.3,
+        "valuation": 38.9,
         "catalysts": 82.0,
         "businessRisk": 58.0
       },
@@ -112,11 +112,11 @@
       "summary": "2Q好決算、20四半期連続Beat and Raise、AI提携は強い。株価は高値圏に近く、期待織り込み確認前のため中立。"
     },
     "credo-crdo": {
-      "position": 52.0,
+      "position": 58.7,
       "zone": "中立",
       "asOf": "2026-08-11",
       "components": {
-        "valuation": 37.8,
+        "valuation": 49.0,
         "catalysts": 80.0,
         "businessRisk": 62.0
       },
