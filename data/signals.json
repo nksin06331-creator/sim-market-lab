@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-10T15:43:45.008917+00:00",
+  "updatedAt": "2026-08-13T03:13:58.451116+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 47.1,
@@ -64,16 +64,16 @@
       "summary": "株価は標準ケース手前まで調整。中計2028、電力・通信テーマは支えだが、1Q後の進捗と需給確認前のため中立。"
     },
     "abcellera-abcl": {
-      "position": 43.7,
+      "position": 54.3,
       "zone": "中立",
-      "asOf": "2026-08-09",
+      "asOf": "2026-08-13",
       "components": {
-        "valuation": 22.5,
-        "catalysts": 74.0,
-        "businessRisk": 78.0
+        "valuation": 36.3,
+        "catalysts": 88.0,
+        "businessRisk": 70.0
       },
-      "reportRevision": "abcellera-abcl-2026-08-09",
-      "summary": "ABCL635のPhase 2読出し待ち。資金力と提携は支えだが、臨床失敗時の下落が大きいため中立。"
+      "reportRevision": "abcellera-abcl-2026-08-13",
+      "summary": "ABCL635のPhase 2好結果で株価は再評価。次は後期試験設計、資金消費、データ詳細を確認するため中立からやや強気。"
     },
     "asp-isotopes-aspi": {
       "position": 45.7,
