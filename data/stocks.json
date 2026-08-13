@@ -270,6 +270,38 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "sealsq-laes",
+      "order": 11,
+      "ticker": "LAES",
+      "quoteSymbol": "LAES",
+      "name": "シールエスキュー",
+      "nameEn": "SEALSQ Corp",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "ポスト量子セキュリティ半導体・PKI",
+      "themes": [
+        "半導体",
+        "量子",
+        "サイバーセキュリティ"
+      ],
+      "reports": {
+        "company": {
+          "path": "./stocks/sealsq-laes/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/sealsq-laes/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/sealsq-laes/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }
