@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T23:19:29.851223+00:00",
+  "generatedAt": "2026-08-15T23:18:32.059962+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
   "quoteCount": 11,
   "errorCount": 0,
@@ -14,7 +14,7 @@
       "changePct": 3.7452,
       "currency": "JPY",
       "marketTime": "2026-08-14T06:30:00+00:00",
-      "updatedAt": "2026-08-14T23:19:25.338247+00:00",
+      "updatedAt": "2026-08-15T23:18:27.575784+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,7 +25,7 @@
       "changePct": 0.1873,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:00+00:00",
-      "updatedAt": "2026-08-14T23:19:25.788675+00:00",
+      "updatedAt": "2026-08-15T23:18:28.026497+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -36,7 +36,7 @@
       "changePct": 2.8788,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:03+00:00",
-      "updatedAt": "2026-08-14T23:19:26.237828+00:00",
+      "updatedAt": "2026-08-15T23:18:28.473673+00:00",
       "status": "ok"
     },
     "paycloud-4015": {
@@ -47,7 +47,7 @@
       "changePct": 1.6216,
       "currency": "JPY",
       "marketTime": "2026-08-14T06:30:00+00:00",
-      "updatedAt": "2026-08-14T23:19:26.675257+00:00",
+      "updatedAt": "2026-08-15T23:18:28.920009+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
@@ -58,7 +58,7 @@
       "changePct": 2.206,
       "currency": "JPY",
       "marketTime": "2026-08-14T06:30:00+00:00",
-      "updatedAt": "2026-08-14T23:19:27.142222+00:00",
+      "updatedAt": "2026-08-15T23:18:29.392089+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
@@ -69,7 +69,7 @@
       "changePct": 3.7375,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:01+00:00",
-      "updatedAt": "2026-08-14T23:19:27.598207+00:00",
+      "updatedAt": "2026-08-15T23:18:29.842266+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
@@ -80,7 +80,7 @@
       "changePct": -0.2336,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:01+00:00",
-      "updatedAt": "2026-08-14T23:19:28.035901+00:00",
+      "updatedAt": "2026-08-15T23:18:30.289027+00:00",
       "status": "ok"
     },
     "moonlake-mltx": {
@@ -91,7 +91,7 @@
       "changePct": -0.1818,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:01+00:00",
-      "updatedAt": "2026-08-14T23:19:28.479863+00:00",
+      "updatedAt": "2026-08-15T23:18:30.731546+00:00",
       "status": "ok"
     },
     "zeta-global-zeta": {
@@ -102,7 +102,7 @@
       "changePct": -1.9244,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:02+00:00",
-      "updatedAt": "2026-08-14T23:19:28.956993+00:00",
+      "updatedAt": "2026-08-15T23:18:31.168428+00:00",
       "status": "ok"
     },
     "credo-crdo": {
@@ -113,7 +113,7 @@
       "changePct": -2.2896,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:01+00:00",
-      "updatedAt": "2026-08-14T23:19:29.412045+00:00",
+      "updatedAt": "2026-08-15T23:18:31.615575+00:00",
       "status": "ok"
     },
     "sealsq-laes": {
@@ -124,7 +124,7 @@
       "changePct": 5.9859,
       "currency": "USD",
       "marketTime": "2026-08-14T20:00:01+00:00",
-      "updatedAt": "2026-08-14T23:19:29.851199+00:00",
+      "updatedAt": "2026-08-15T23:18:32.059938+00:00",
       "status": "ok"
     }
   }
