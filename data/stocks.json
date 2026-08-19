@@ -302,6 +302,38 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "furukawa-electric-5801",
+      "order": 12,
+      "ticker": "5801",
+      "quoteSymbol": "5801.T",
+      "name": "古河電気工業",
+      "nameEn": "Furukawa Electric Co., Ltd.",
+      "market": "JP",
+      "marketLabel": "日本株",
+      "exchange": "東京証券取引所プライム市場",
+      "currency": "JPY",
+      "sector": "光通信・電力ケーブル・自動車部品・機能製品",
+      "themes": [
+        "データセンタ",
+        "光通信",
+        "電力インフラ"
+      ],
+      "reports": {
+        "company": {
+          "path": "./stocks/furukawa-electric-5801/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/furukawa-electric-5801/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/furukawa-electric-5801/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }
