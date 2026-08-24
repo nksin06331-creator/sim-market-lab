@@ -334,6 +334,38 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "murata-6981",
+      "order": 13,
+      "ticker": "6981",
+      "quoteSymbol": "6981.T",
+      "name": "村田製作所",
+      "nameEn": "Murata Manufacturing Co., Ltd.",
+      "market": "JP",
+      "marketLabel": "日本株",
+      "exchange": "東京証券取引所プライム市場",
+      "currency": "JPY",
+      "sector": "電子部品・MLCC・通信モジュール",
+      "themes": [
+        "AIデータセンタ",
+        "電子部品",
+        "自動車"
+      ],
+      "reports": {
+        "company": {
+          "path": "./stocks/murata-6981/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/murata-6981/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/murata-6981/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

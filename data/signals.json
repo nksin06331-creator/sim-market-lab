@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-19T01:44:27.028709+00:00",
+  "updatedAt": "2026-08-24T12:37:01.375266+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 53.8,
@@ -146,6 +146,18 @@
       },
       "reportRevision": "furukawa-electric-5801-2026-08-19",
       "summary": "1Q決算と通期上方修正は強い。光通信・データセンタ需要と増産投資は追い風だが、株価急騰後の材料織り込みと2Q進捗確認が必要。"
+    },
+    "murata-6981": {
+      "position": 68.3,
+      "zone": "中立",
+      "asOf": "2026-08-24",
+      "components": {
+        "valuation": 67.2,
+        "catalysts": 76.0,
+        "businessRisk": 60.0
+      },
+      "reportRevision": "murata-6981-2026-08-24",
+      "summary": "1Q上振れとAIサーバー需要は強い一方、株価は会社予想EPSの約38倍で成長期待もかなり入っているため中立。"
     }
   }
 }

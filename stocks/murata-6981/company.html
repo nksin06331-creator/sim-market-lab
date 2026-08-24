@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6981 完全入門ガイド</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+
+
+:root {
+  
+  --accent:        #6EE24E;
+  --accent-bright: #8BF56B;
+  --accent-tint:   rgba(110,226,78,.12);
+  --accent-line:   rgba(110,226,78,.38);
+
+  
+  --bg:        #0a0c0a;
+  --surface:   #141815;   
+  --surface-2: #1b201c;   
+
+  
+  --c-primary-50:  var(--accent-tint);        --c-primary-100: rgba(110,226,78,.18);
+  --c-primary-200: rgba(110,226,78,.55);      --c-primary-400: var(--accent);
+  --c-primary-600: var(--accent);             --c-primary-800: var(--accent-bright);
+  --c-accent-50:   var(--accent-tint);        --c-accent-400:  var(--accent);   --c-accent-600: var(--accent-bright);
+
+  
+  --amber-50:  rgba(251,191,36,.13); --amber-400: #fbbf24; --amber-600: #fcd34d; --amber-800: #fde68a;
+  --red-50:    rgba(248,113,113,.13); --red-400:  #f87171; --red-600:   #fca5a5;
+  --blue-50:   rgba(96,165,250,.13); --blue-400:  #60a5fa; --blue-600:  #93c5fd; --blue-800: #bfdbfe;
+  --green-50:  rgba(110,226,78,.13); --green-400: #6EE24E; --green-600: #8bf56b;
+  --violet-50: rgba(167,139,250,.13); --violet-400:#a78bfa; --violet-600:#c4b5fd;
+  --gray-50:  #15191b;               --gray-100: rgba(255,255,255,.06);
+  --gray-200: rgba(255,255,255,.09); --gray-300: #3f463f;
+  --gray-500: #8a948a;               --gray-700: #c3ccc3; --gray-900: #f1f5f1;
+
+  --font-display: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  --font-body:    'Noto Sans JP', 'DM Sans', sans-serif;
+  --font-num:     'DM Sans', 'Noto Sans JP', sans-serif;
+  --radius: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--gray-900); line-height: 1.85; font-size: 16px; -webkit-text-size-adjust: 100%; }
+.g { color: var(--accent); }               
+
+
+.progress-bar { position: fixed; top: 0; left: 0; height: 4px; width: 0%; z-index: 200; background: var(--accent); box-shadow: 0 0 12px var(--accent); transition: width .1s linear; }
+
+
+.hero {
+  background: radial-gradient(120% 90% at 50% -10%, #12251a 0%, #0b0f0c 45%, var(--bg) 75%);
+  color: #fff; padding: 58px 22px 66px; text-align: center; position: relative; overflow: hidden;
+}
+.hero::before { content:''; position:absolute; inset:0;
+  background-image: radial-gradient(var(--accent) 1px, transparent 1.6px);
+  background-size: 15px 15px; opacity: .10;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 120%, #000 0%, transparent 60%);
+          mask-image: radial-gradient(ellipse at 50% 120%, #000 0%, transparent 60%);
+}
+.hero > * { position: relative; z-index: 1; }
+.brandmark { font-family: var(--font-num); font-weight: 700; letter-spacing: .18em; font-size: 13px; color: var(--gray-500); margin-bottom: 18px; }
+.brandmark b { color: #fff; font-weight: 700; }
+.brandmark .g { color: var(--accent); }
+.hero-badge { display: inline-block; background: rgba(110,226,78,.10); border: 1px solid var(--accent-line); border-radius: 999px; padding: 6px 18px; font-size: 12px; letter-spacing: .06em; font-weight: 700; margin-bottom: 18px; color: var(--accent); }
+.hero h1 { font-family: var(--font-display); font-size: clamp(30px,7.5vw,50px); font-weight: 900; line-height: 1.3; margin-bottom: 14px; letter-spacing: .01em; }
+.hero h1 .g { color: var(--accent); }
+.hero p { font-size: 15.5px; color: #c3ccc3; max-width: 560px; margin: 0 auto 26px; line-height: 1.85; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.hero-tag { background: rgba(255,255,255,.04); border: 1px solid var(--gray-200); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500; color: #d8ded8; }
+
+
+.tldr-hero { max-width: 820px; margin: -30px auto 0; padding: 0 16px; position: relative; z-index: 5; }
+.tldr-hero-inner { background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px 20px 8px; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+.tldr-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 17px; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.stat-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 10px; margin-bottom: 14px; }
+.stat { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 12px; text-align: center; }
+.stat-value { font-family: var(--font-num); font-weight: 700; font-size: clamp(24px,6vw,32px); line-height: 1.1; color: #fff; }
+.stat-value.up   { color: var(--accent); }
+.stat-value.down { color: var(--red-400); }
+.stat-label { font-size: 12px; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
+.stat-note  { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
+
+
+.nav-index { background: rgba(10,12,10,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 820px; margin: 0 auto; padding: 0 16px; display: flex; overflow-x: auto; scrollbar-width: none; }
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-item { appearance: none; flex-shrink: 0; padding: 14px 14px; font: inherit; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; background: transparent; border: 0; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; cursor: pointer; }
+.nav-item:hover,.nav-item:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+.nav-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+.container { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+
+
+.section { padding: 46px 0 34px; border-bottom: 1px solid var(--gray-200); opacity: 0; transform: translateY(16px); animation: fadeUp .5s ease forwards; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.section-icon { width: 46px; height: 46px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.section-num { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #06210a; font-family: var(--font-num); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.section-title { font-family: var(--font-display); font-size: clamp(21px,5.4vw,27px); font-weight: 900; color: #fff; line-height: 1.32; position: relative; display: inline-block; padding-bottom: 9px; }
+.section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background: var(--accent); border-radius: 3px; }
+.section-title .g { color: var(--accent); }
+.section-sub { font-size: 13px; color: var(--gray-500); margin-top: 6px; font-weight: 500; }
+
+
+.tldr { background: var(--accent-tint); border: 1px solid var(--accent-line); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px; }
+.tldr-label { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-weight: 900; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
+.tldr ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.tldr li { font-size: 15.5px; font-weight: 500; color: #eef2ee; line-height: 1.7; padding-left: 30px; position: relative; }
+.tldr li::before { content: attr(data-emoji); position: absolute; left: 0; top: 0; font-size: 18px; }
+
+
+.sowhat { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 14px; padding: 12px 16px 12px 46px; margin: 14px 0; position: relative; }
+.sowhat::before { content: '👉'; position: absolute; left: 14px; top: 11px; font-size: 20px; }
+.sowhat b { color: var(--accent); }
+.sowhat p { font-size: 14.5px; color: var(--gray-700); line-height: 1.8; }
+
+
+.signal { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: 12.5px; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
+.signal.bull    { background: var(--green-50); color: var(--accent); }
+.signal.neutral { background: var(--amber-50); color: var(--amber-600); }
+.signal.bear    { background: var(--red-50);   color: var(--red-600); }
+
+
+.rating { font-family: var(--font-num); letter-spacing: 1px; color: var(--accent); font-size: 14px; }
+.rating .off { color: var(--gray-300); }
+
+
+.keypoints { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 8px 0; }
+.keypoints li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.7; color: #e4e9e4; }
+.keypoints .kp-emoji { font-size: 22px; flex-shrink: 0; line-height: 1.4; }
+.keypoints .kp-text b { color: var(--accent); }
+
+
+.card { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; margin-bottom: 12px; }
+.card-sm { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 16px 18px; }
+.card-sm .card-emoji { font-size: 22px; display: inline-flex; width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--gray-200); align-items: center; justify-content: center; margin-bottom: 8px; }
+.card-sm .card-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; margin-bottom: 4px; color: var(--accent); }
+.card-sm .card-desc { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
+
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px,1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; margin: 4px 0 14px; }
+.facts > div { background: var(--surface); padding: 12px 14px; }
+.facts dt { font-size: 11px; color: var(--gray-500); font-weight: 700; margin-bottom: 3px; }
+.facts dd { margin: 0; font-size: 14.5px; color: #fff; font-weight: 700; line-height: 1.5; }
+.block-label { font-family: var(--font-display); font-weight: 900; font-size: 15px; color: #fff; margin: 18px 0 8px; display: flex; align-items: center; gap: 7px; }
+.block-label .g { color: var(--accent); }
+
+
+.term-list { display: flex; flex-direction: column; gap: 10px; }
+.term-item { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; transition: border-color .2s; }
+.term-item:hover { border-color: var(--accent); }
+.term-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; cursor: pointer; gap: 12px; user-select: none; min-height: 56px; }
+.term-header::-webkit-details-marker { display: none; }
+.term-name { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; }
+.term-en { font-size: 11px; color: var(--gray-500); margin-left: 8px; font-weight: 400; }
+.term-arrow { font-size: 20px; color: var(--accent); transition: transform .25s; flex-shrink: 0; }
+.term-item[open] .term-arrow { transform: rotate(180deg); }
+.term-item[open] { border-color: var(--accent); }
+.term-body { padding: 2px 18px 18px; border-top: 1px solid var(--gray-100); }
+.term-body p { font-size: 14.5px; color: var(--gray-700); line-height: 1.85; margin: 10px 0 0; }
+.term-body b { color: var(--accent); }
+
+
+.ex-box, .ex-box-accent, .ex-box-amber, .ex-box-red { border-radius: 0 8px 8px 0; padding: 12px 16px; margin-top: 12px; }
+.ex-box        { background: var(--accent-tint); border-left: 4px solid var(--accent); }
+.ex-box-accent { background: var(--accent-tint); border-left: 4px solid var(--accent); }
+.ex-box-amber  { background: var(--amber-50);  border-left: 4px solid var(--amber-400); }
+.ex-box-red    { background: var(--red-50);    border-left: 4px solid var(--red-400); }
+.ex-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 4px; }
+.ex-label-primary, .ex-label-accent { color: var(--accent); }
+.ex-label-amber { color: var(--amber-600); }
+.ex-label-red { color: var(--red-600); }
+.ex-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
+
+
+.info-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; margin-top: 16px; }
+.info-box { border-radius: 14px; padding: 16px 18px; border: 1px solid var(--gray-200); }
+.info-box-primary { background: var(--accent-tint); }
+.info-box-accent  { background: var(--accent-tint); }
+.info-box-amber   { background: var(--amber-50); }
+.info-box-red     { background: var(--red-50); }
+.info-box-blue    { background: var(--blue-50); }
+.info-box-green   { background: var(--green-50); }
+.info-box-gray    { background: var(--surface-2); }
+.info-title { font-family: var(--font-display); font-weight: 700; font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.info-title-primary, .info-title-accent, .info-title-green { color: var(--accent); }
+.info-title-amber { color: var(--amber-600); }
+.info-title-red { color: var(--red-600); }
+.info-title-blue { color: var(--blue-600); }
+.info-title-gray { color: #d8ded8; }
+.info-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
+
+
+.timeline { position: relative; padding-left: 30px; }
+.timeline::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 6px; width: 3px; background: rgba(110,226,78,.25); border-radius: 3px; }
+.tl-row { position: relative; margin-bottom: 22px; }
+.tl-row::before { content: ''; position: absolute; left: -25px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); box-shadow: 0 0 0 2px var(--accent); }
+.tl-date { font-family: var(--font-num); font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .04em; margin-bottom: 3px; }
+.tl-title { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.tl-desc { font-size: 13.5px; color: var(--gray-500); line-height: 1.75; }
+
+
+.badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 6px; font-weight: 700; }
+.badge-primary { background: var(--accent-tint); color: var(--accent); }
+.badge-accent  { background: var(--accent-tint); color: var(--accent); }
+.badge-amber   { background: var(--amber-50);  color: var(--amber-600); }
+.badge-red     { background: var(--red-50);    color: var(--red-600); }
+.badge-blue    { background: var(--blue-50);   color: var(--blue-600); }
+.badge-green   { background: var(--green-50);  color: var(--accent); }
+.badge-violet  { background: var(--violet-50); color: var(--violet-600); }
+
+
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--gray-200); border-radius: 14px; margin: 12px 0; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 480px; }
+.compare-table th { background: var(--gray-50); padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; color: var(--gray-500); letter-spacing: .03em; border-bottom: 1px solid var(--gray-200); white-space: nowrap; }
+.compare-table td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); vertical-align: top; }
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:hover td { background: rgba(255,255,255,.02); }
+.compare-table .me { background: var(--accent-tint); font-weight: 700; color: var(--accent); }
+
+
+.highlight { background: var(--surface); border: 1.5px solid var(--accent-line); border-radius: var(--radius); padding: 22px 24px; margin: 22px 0; position: relative; overflow: hidden; }
+.highlight::before { content:''; position:absolute; right:-30px; bottom:-30px; width:160px; height:160px;
+  background-image: radial-gradient(var(--accent) 1px, transparent 1.5px); background-size: 13px 13px; opacity:.12; }
+.highlight h3 { font-family: var(--font-display); font-size: 19px; font-weight: 900; margin-bottom: 10px; color: var(--accent); display: flex; align-items: center; gap: 8px; position: relative; }
+.highlight p { font-size: 14.5px; color: #d8ded8; line-height: 1.85; position: relative; }
+.highlight b { color: var(--accent); }
+
+
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; margin: 16px 0; }
+.product-box { border-radius: 14px; padding: 18px 14px; text-align: center; border: 1px solid var(--gray-200); background: var(--surface); }
+.product-symbol { font-family: var(--font-num); font-size: 30px; font-weight: 700; margin-bottom: 4px; color: var(--accent); }
+.product-name { font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px; color: #fff; }
+.product-use { font-size: 12px; line-height: 1.55; color: var(--gray-700); }
+
+
+.lead { font-size: 16.5px; color: #dbe1db; line-height: 1.9; margin-bottom: 20px; font-weight: 500; }
+.lead .g { color: var(--accent); }
+strong { font-weight: 700; color: #fff; }
+strong.g { color: var(--accent); }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; }
+
+
+.footer { padding: 40px 22px; text-align: center; color: var(--gray-500); font-size: 13px; border-top: 1px solid var(--gray-200); margin-top: 32px; }
+.footer .brandmark { margin-bottom: 14px; }
+
+@media (max-width: 480px){
+  body { font-size: 14px; line-height: 1.66; overflow-wrap: anywhere; }
+  .hero { padding: 30px 12px 42px; }
+  .brandmark { font-size: 11px; margin-bottom: 12px; }
+  .hero-badge { padding: 5px 12px; font-size: 10px; margin-bottom: 12px; }
+  .hero h1 { font-size: 30px; line-height: 1.25; margin-bottom: 9px; }
+  .hero p { font-size: 13px; line-height: 1.66; margin-bottom: 16px; }
+  .hero-tags { gap: 5px; }
+  .hero-tag { padding: 5px 9px; font-size: 11px; }
+  .tldr-hero { margin-top: -22px; padding: 0 12px; }
+  .tldr-hero-inner { padding: 14px 12px 5px; border-radius: 12px; }
+  .tldr-hero-title { font-size: 15px; margin-bottom: 9px; }
+  .stat-strip { grid-template-columns: repeat(2,1fr); gap: 6px; margin-bottom: 9px; }
+  .stat { padding: 10px 8px; border-radius: 10px; }
+  .stat-value { font-size: 23px; }
+  .stat-label { font-size: 11px; }
+  .stat-note { font-size: 10px; }
+  .nav-inner { padding: 0 8px; }
+  .nav-item { min-height: 44px; display: flex; align-items: center; padding: 9px 10px; font-size: 11px; }
+  .container { padding: 0 12px; }
+  .section { padding: 26px 0 20px; scroll-margin-top: 52px; }
+  .section-header { gap: 8px; margin-bottom: 13px; }
+  .section-icon { width: 38px; height: 38px; font-size: 18px; }
+  .section-num { width: 27px; height: 27px; font-size: 13px; }
+  .section-title { font-size: 20px; padding-bottom: 7px; }
+  .section-sub { font-size: 11px; margin-top: 4px; }
+  .tldr { padding: 13px 14px; margin-bottom: 14px; border-radius: 12px; }
+  .tldr-label { font-size: 12px; margin-bottom: 7px; }
+  .tldr ul { gap: 6px; }
+  .tldr li { font-size: 14px; line-height: 1.6; padding-left: 25px; }
+  .tldr li::before { font-size: 16px; }
+  .card-grid,.grid-2,.info-row { gap: 8px; }
+  .card,.card-sm { padding: 13px 14px; border-radius: 11px; margin-bottom: 8px; }
+  .facts { grid-template-columns: repeat(2,1fr); border-radius: 11px; }
+  .facts > div { padding: 9px 10px; }
+  .facts dd { font-size: 13px; }
+  .keypoints { gap: 8px; }
+  .keypoints li { font-size: 14px; gap: 8px; }
+  .keypoints .kp-emoji { font-size: 18px; }
+  .highlight { padding: 15px 14px; margin: 14px 0; border-radius: 12px; }
+  .highlight h3 { font-size: 17px; }
+  .highlight p,.lead { font-size: 14px; line-height: 1.66; }
+  .term-list { gap: 7px; }
+  .term-header { min-height: 44px; padding: 11px 12px; }
+  .term-name { font-size: 14px; }
+  .term-body { padding: 1px 12px 12px; }
+  .term-body p { font-size: 13px; line-height: 1.66; }
+  .table-wrap { margin: 8px 0; }
+  .compare-table { font-size: 11px; min-width: 580px; }
+  .compare-table th,.compare-table td { padding: 8px 9px; }
+  .footer { padding: 28px 14px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .section { animation: none; opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+
+<div class="hero">
+  <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
+  <div class="hero-badge">6981 完全入門ガイド ・ 2026-08-24版</div>
+  <h1>村田製作所（6981）を<br><span class="g">まるっと</span>解説</h1>
+  <p>MLCCを中心に、通信、モビリティ、AIサーバー向けの電子部品を世界へ供給する総合電子部品メーカーです。</p>
+  <div class="hero-tags">
+    
+    <span class="hero-tag">日本株</span><span class="hero-tag">MLCC</span><span class="hero-tag">AIサーバー</span><span class="hero-tag">モビリティ</span>
+  </div>
+</div>
+
+
+<div class="tldr-hero">
+  <div class="tldr-hero-inner">
+    <div class="tldr-hero-title">📊 まずは数字でざっくり</div>
+    <div class="stat-strip">
+      
+      <div class="stat"><div class="stat-value">7,091円</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/08/21終値</div></div><div class="stat"><div class="stat-value">12.9兆円</div><div class="stat-label">時価総額の目安</div><div class="stat-note">自己株式控除後で概算</div></div><div class="stat"><div class="stat-value up">5,023億円</div><div class="stat-label">2027年3月期1Q売上</div><div class="stat-note">前年同期比20.7%増</div></div><div class="stat"><div class="stat-value">985億円</div><div class="stat-label">同1Q営業利益</div><div class="stat-note">前年同期比59.8%増</div></div>
+    </div>
+  </div>
+</div>
+
+
+<nav class="nav-index">
+  <div class="nav-inner">
+    <button class="nav-item" type="button" data-scroll-target="sec1">① どんな会社</button>
+    <button class="nav-item" type="button" data-scroll-target="sec2">② 事業モデル</button>
+    <button class="nav-item" type="button" data-scroll-target="sec3">③ 主力製品</button>
+    <button class="nav-item" type="button" data-scroll-target="sec4">④ 需要先</button>
+    <button class="nav-item" type="button" data-scroll-target="sec5">⑤ 競合比較</button>
+    <button class="nav-item" type="button" data-scroll-target="sec6">⑥ 用語辞典</button>
+    <button class="nav-item" type="button" data-scroll-target="sec7">⑦ 株価の見方</button>
+  </div>
+</nav>
+
+<div class="container">
+
+  
+  <section class="section" id="sec1">
+    <div class="section-header">
+      <div class="section-icon">🏢</div><div class="section-num">1</div>
+      <div>
+        <div class="section-title">村田製作所って<span class="g">どんな会社</span>？</div>
+        <div class="section-sub">まず全体像を3秒で</div>
+      </div>
+    </div>
+    <div class="tldr">
+      <div class="tldr-label">⚡ このセクションの3秒まとめ</div>
+      <ul>
+        
+        <li data-emoji="*">MLCCを核に、スマートフォン、車、AIサーバーへ電子部品を供給します。</li><li data-emoji="*">2027年3月期1Qは過去最高の四半期売上でした。</li><li data-emoji="!">為替と電子部品需給で利益が大きく動きます。</li>
+      </ul>
+    </div>
+
+    
+    <div class="facts">
+      <div><dt>正式社名</dt><dd>株式会社村田製作所</dd></div><div><dt>本社</dt><dd>京都府長岡京市</dd></div><div><dt>設立</dt><dd>1950年12月23日</dd></div><div><dt>上場</dt><dd>東証プライム（6981）</dd></div><div><dt>決算期</dt><dd>3月</dd></div><div><dt>会計基準</dt><dd>IFRS</dd></div>
+      
+    </div>
+
+    
+    <div class="card-grid">
+      <div class="card-sm"><span class="card-emoji">🔋</span><div class="card-title">コンデンサ</div><div class="card-desc">2027年3月期会社予想で売上の54.9%。MLCCが中心です。</div></div><div class="card-sm"><span class="card-emoji">📶</span><div class="card-title">通信部品</div><div class="card-desc">高周波モジュールや樹脂多層基板をスマートフォンへ供給します。</div></div><div class="card-sm"><span class="card-emoji">🚗</span><div class="card-title">モビリティ</div><div class="card-desc">電装化とADASで搭載される部品数が増えます。</div></div><div class="card-sm"><span class="card-emoji">🖥️</span><div class="card-title">AIサーバー</div><div class="card-desc">MLCC、電源モジュール、電池の需要拡大が成長を牽引します。</div></div>
+      
+    </div>
+
+    
+    <div class="block-label">💰 どうやって<span class="g">稼いでる</span>？</div>
+    <ul class="keypoints">
+      <li><span class="kp-emoji">🏭</span><span class="kp-text"><b>材料から量産まで</b>：セラミック材料、製品設計、生産技術を社内で磨きます。</span></li><li><span class="kp-emoji">🌍</span><span class="kp-text"><b>世界の機器メーカーへ販売</b>：通信、車、コンピュータ、産業機器へ供給します。</span></li><li><span class="kp-emoji">📈</span><span class="kp-text"><b>高機能化で数量増</b>：機器1台当たりの電子部品数と高付加価値品の比率が利益を動かします。</span></li>
+      
+    </ul>
+
+    
+    <div class="highlight"><h3>村田製作所を見る基本</h3><p>MLCCの数量だけでなく、AIサーバー・車向け高信頼品の構成、工場稼働率、値下げ、為替を分けて確認します。</p></div>
+    
+  </section>
+
+  
+  <section class="section" id="sec2">
+    <div class="section-header">
+      <div class="section-icon">🏭</div><div class="section-num">2</div>
+      <div><div class="section-title">電子部品で<span class="g">どう稼ぐか</span></div><div class="section-sub">数量・製品構成・工場稼働率が利益を決める</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">コンデンサは2027年3月期会社予想売上の約55%です。</li><li data-emoji="*">AIサーバーと車向けは高信頼・高機能品が増えます。</li><li data-emoji="!">市況悪化時は値下げと稼働率低下が重なります。</li></ul></div>
+    <p class="lead">電子部品は大量生産で固定費を回収する事業です。需要増で稼働率が上がると利益が伸びやすい一方、在庫調整では逆回転します。</p><div class="term-list"><details open><summary>数量</summary><p>スマートフォン台数、車両生産、サーバー投資が部品需要を動かします。</p></details><details><summary>製品構成</summary><p>大容量・高信頼・小型品の比率が採算を左右します。</p></details><details><summary>価格</summary><p>一般品の競争と毎期の値下げを、高付加価値化と合理化で吸収できるかが重要です。</p></details><details><summary>為替</summary><p>海外売上が大きく、円安は円換算売上と利益の押し上げ要因です。</p></details></div>
+  </section>
+
+  
+  <section class="section" id="sec3">
+    <div class="section-header">
+      <div class="section-icon">🔬</div><div class="section-num">3</div>
+      <div><div class="section-title">MLCCと<span class="g">コンポーネント</span></div><div class="section-sub">AIサーバーとモビリティが数量・容量を押し上げる</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">1Qコンデンサ売上は2,825億円で前年同期比30.0%増でした。</li><li data-emoji="*">データセンターとモビリティ向けが中心に増えました。</li><li data-emoji="!">供給能力と顧客在庫の変化を確認します。</li></ul></div>
+    <div class="product-grid"><div class="product-box"><div class="product-symbol">MLCC</div><div class="product-name">積層セラミックコンデンサ</div><div class="product-use">電圧安定・ノイズ除去。機器1台に多数搭載。</div></div><div class="product-box"><div class="product-symbol">EMI</div><div class="product-name">ノイズ対策部品</div><div class="product-use">通信・車・サーバーの安定動作を支える。</div></div><div class="product-box"><div class="product-symbol">L</div><div class="product-name">インダクタ</div><div class="product-use">電源と信号を安定させる。</div></div></div><div class="sowhat"><p><b>つまり</b>、AI計算能力や車の電子制御が増えるほど、電源を安定させる部品の数量と性能要求が上がります。</p></div>
+  </section>
+
+  
+  <section class="section" id="sec4">
+    <div class="section-header">
+      <div class="section-icon">🏛️</div><div class="section-num">4</div>
+      <div><div class="section-title">通信・車・<span class="g">AIサーバー</span></div><div class="section-sub">用途ごとの成長速度と循環を分ける</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">1Qのコンピュータ用途は前年同期比47.0%増でした。</li><li data-emoji="*">通信は13.7%増、モビリティは16.1%増でした。</li><li data-emoji="!">スマートフォンと家電は市況・顧客構成の影響が大きいです。</li></ul></div>
+    <ul class="keypoints"><li><span class="kp-emoji">🖥️</span><span class="kp-text"><b>コンピュータ</b>：AIサーバー向けMLCC、電源モジュール、電池が伸びています。</span></li><li><span class="kp-emoji">🚗</span><span class="kp-text"><b>モビリティ</b>：電動化とADASでコンデンサ、フィルタ、センサが増えます。</span></li><li><span class="kp-emoji">📱</span><span class="kp-text"><b>通信</b>：スマートフォン台数と高機能化、主要顧客の製品構成が影響します。</span></li></ul>
+  </section>
+
+  
+  <section class="section" id="sec5">
+    <div class="section-header">
+      <div class="section-icon">⚔️</div><div class="section-num">5</div>
+      <div><div class="section-title">競合と<span class="g">比べる</span></div><div class="section-sub">製品構成と量産力の違いを見る</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">MLCCでは太陽誘電、TDK、Samsung Electro-Mechanicsなどが比較対象です。</li><li data-emoji="*">村田は材料・設計・量産の総合力と幅広い用途を持ちます。</li><li data-emoji="!">競合の増産と価格競争は継続的なリスクです。</li></ul></div>
+    <div class="table-wrap"><table class="compare-table"><thead><tr><th>企業</th><th>主な特徴</th><th>確認点</th></tr></thead><tbody><tr><td class="me">村田製作所</td><td>MLCC、通信モジュール、電源、センサを幅広く展開。</td><td>AIサーバー向け構成と高い評価倍率。</td></tr><tr><td>TDK</td><td>受動部品、センサ、電池などの複合事業。</td><td>電池を含む事業構成が異なる。</td></tr><tr><td>太陽誘電</td><td>コンデンサを中心とする電子部品メーカー。</td><td>MLCC市況への感応度が高い。</td></tr><tr><td>Samsung Electro-Mechanics</td><td>MLCC、基板、カメラモジュールを展開。</td><td>供給能力と価格競争。</td></tr></tbody></table></div>
+  </section>
+
+  
+  <section class="section" id="sec6">
+    <div class="section-header">
+      <div class="section-icon">📖</div><div class="section-num">6</div>
+      <div><div class="section-title">6981のニュースで出る<span class="g">言葉</span> 全辞典</div><div class="section-sub">分からん単語はここで潰す</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li data-emoji="*">MLCC、操業度益、製品ミックスを押さえると読みやすくなります。</li><li data-emoji="*">BBレシオは需給の先行指標です。</li><li data-emoji="!">為替効果と実需成長を分けて見ます。</li></ul></div>
+    <div class="term-list"><details><summary>MLCC</summary><p>積層セラミックコンデンサ。電気を安定させる小型部品で、スマートフォン、車、AIサーバーに多数使われます。</p></details><details><summary>コンデンサ</summary><p>電気を一時的に蓄え、電圧を安定させる部品です。村田製作所の最大事業です。</p></details><details><summary>インダクタ</summary><p>電流の変化を抑え、電源や信号を安定させる電子部品です。</p></details><details><summary>EMIフィルタ</summary><p>電子機器のノイズを減らし、誤動作を防ぐ部品です。</p></details><details><summary>高周波モジュール</summary><p>スマートフォンなどの無線通信を支える複数部品をまとめた製品です。</p></details><details><summary>樹脂多層基板</summary><p>薄い樹脂層を重ねた高密度配線部品です。小型端末で使われます。</p></details><details><summary>電源モジュール</summary><p>機器が必要とする電圧へ効率よく変換する部品です。AIサーバー需要が注目されています。</p></details><details><summary>操業度益</summary><p>工場の稼働率が上がり、固定費を多くの製品へ配分できることで生じる利益改善です。</p></details><details><summary>BBレシオ</summary><p>受注額を出荷額で割った指標です。1を上回ると受注が出荷を上回ります。</p></details><details><summary>製品ミックス</summary><p>利益率の異なる製品の売上構成です。高信頼・大容量品が増えると採算が改善しやすくなります。</p></details><details><summary>中期方針2027</summary><p>2026年3月期から2028年3月期までの会社方針です。AIが生む電子部品需要を重点機会としています。</p></details><details><summary>為替感応度</summary><p>円相場が業績へ与える影響です。会社資料では対ドル1円の変動で年間営業利益約45億円が目安です。</p></details></div>
+  </section>
+
+  
+  <section class="section" id="sec7">
+    <div class="section-header">
+      <div class="section-icon">💹</div><div class="section-num">7</div>
+      <div><div class="section-title">何が6981株を<span class="g">動かす</span>？</div><div class="section-sub">上がる理由・下がる理由を一目で</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li data-emoji="*">10月30日の2Q決算、11月30日のIR Dayが次の確認点です。</li><li data-emoji="*">AIサーバー向け需要と通期上方修正の進捗が中心です。</li><li data-emoji="!">期待先行、為替反転、供給増による価格下落に注意します。</li></ul></div>
+    <div class="timeline"><div class="tl-row"><div class="tl-date">2026/10/30</div><div class="tl-title">2027年3月期2Q決算 <span class="signal bull">重要</span></div><div class="tl-desc">売上1兆400億円、営業利益2,020億円の会社上期予想に対する進捗を確認します。</div></div><div class="tl-row"><div class="tl-date">2026/11/30</div><div class="tl-title">2026年度IR Day <span class="signal neutral">確認</span></div><div class="tl-desc">AIサーバー、MLCC能力増強、中期方針2027の進捗を確認します。</div></div><div class="tl-row"><div class="tl-date">2027/02/02</div><div class="tl-title">2027年3月期3Q決算 <span class="signal neutral">確認</span></div><div class="tl-desc">需要継続と通期予想の確度を確認します。</div></div></div><div class="info-row"><div class="info-box info-box-green"><div class="info-title info-title-green">追い風</div><div class="info-text">AIサーバー、モビリティ、操業度益、自己株式取得。</div></div><div class="info-box info-box-amber"><div class="info-title info-title-amber">確認</div><div class="info-text">MLCC受注、能力増強、製品ミックス、上期進捗。</div></div><div class="info-box info-box-red"><div class="info-title info-title-red">リスク</div><div class="info-text">高い評価倍率、円高、値下げ、顧客在庫、競合増産。</div></div></div><details class="term-item" open><summary class="term-header"><span class="term-name">主要出典</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p><a href="https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2026/0731/26q1-j-fls.ashx?cvid=20260731015630000000&la=ja-jp" target="_blank" rel="noopener noreferrer">2027年3月期1Q決算短信</a>、<a href="https://corporate.murata.com/ja-jp/ir/financial/forecast" target="_blank" rel="noopener noreferrer">会社業績予想</a>、<a href="https://corporate.murata.com/ir/calendar?sc_lang=ja-JP" target="_blank" rel="noopener noreferrer">IRカレンダー</a>、<a href="https://corporate.murata.com/ja-jp/company/business-strategy/mid-term-policy" target="_blank" rel="noopener noreferrer">中期方針2027</a>、<a href="https://corporate.murata.com/ja-jp/company/factsandfigures" target="_blank" rel="noopener noreferrer">会社概要</a>を確認しました。株価は2026年8月21日終値です。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>
+  </section>
+
+</div>
+
+<div class="footer">
+  <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
+  <p style="margin-bottom:8px;font-weight:700;color:#d8ded8">⚠️ 免責事項</p>
+  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。電子部品・MLCC・通信モジュール株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-08-24時点の公開情報に基づきます。</p>
+</div>
+
+<script>
+document.querySelectorAll('details.term-item').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open) document.querySelectorAll('details.term-item').forEach(o => { if (o !== d && o.open) o.removeAttribute('open'); });
+  });
+});
+(function(){
+  var bar = document.getElementById('progressBar');
+  function u(){ var h=document.documentElement; var s=h.scrollTop/(h.scrollHeight-h.clientHeight); bar.style.width=Math.min(100,Math.max(0,s*100))+'%'; }
+  document.addEventListener('scroll', u, {passive:true}); window.addEventListener('resize', u); u();
+})();
+document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var target = document.getElementById(button.dataset.scrollTarget);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+</body>
+</html>
+
+
