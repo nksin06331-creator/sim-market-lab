@@ -150,30 +150,54 @@ def scenario_values() -> dict[str, str]:
 
 
 def catalyst_values() -> dict[str, str]:
-    def outcomes(rows: list[tuple[str, str, str]]) -> str:
-        return '<div class="outcome-grid">' + ''.join(f'<div class="outcome"><b>{a}</b><span>{b}</span><small>{c}</small></div>' for a, b, c in rows) + '</div>'
-    cards = (
-        '<article class="catalyst-card"><h3>2027年3月期 第2四半期決算</h3><p class="lead">上方修正後の上期計画に対し、AIサーバー向け部品と利益率が計画どおり伸びているかを確認します。</p><div class="notice"><b>この％にした理由：</b>直近材料であり、通期EPSと高い評価倍率の両方を直接動かすため影響を大きめにしました。</div>' + outcomes([("期待以上", "+8～+18%", "上期計画超過、コンピュータ用途高成長、追加上方修正"), ("ほぼ想定どおり", "-5～+6%", "会社計画線、通期予想据え置き"), ("期待外れ・遅延", "-18～-8%", "AI需要鈍化、利益率低下、通期下方修正")]) + '</article>'
-        '<article class="catalyst-card"><h3>2026年度 IR Day</h3><p class="lead">AIサーバー向けMLCC・電源部品の需要、供給能力、中期方針2027の進捗を会社が説明する予定です。</p><div class="notice"><b>この％にした理由：</b>中長期EPSと適用PERへ効きますが、決算ほど即時の数値更新を伴わないため幅を抑えました。</div>' + outcomes([("期待以上", "+5～+12%", "AI向け成長見通し・能力増強・収益性が期待以上"), ("ほぼ想定どおり", "-3～+4%", "既存方針の確認にとどまる"), ("期待外れ・遅延", "-12～-5%", "需要や能力増強の慎重化、収益目標の確度低下")]) + '</article>'
-        '<article class="catalyst-card"><h3>MLCC受注・稼働率と製品構成</h3><p class="lead">AIサーバー、モビリティ、一般品の受注と工場稼働が高水準を保てるかを四半期ごとに確認します。</p><div class="notice"><b>この％にした理由：</b>全社売上の過半を占めるコンデンサの数量、価格、利益率を動かす継続材料です。</div>' + outcomes([("期待以上", "+6～+15%", "受注が出荷を上回り、高付加価値品比率も上昇"), ("ほぼ想定どおり", "-4～+5%", "能力増強と需要が均衡"), ("期待外れ・遅延", "-16～-7%", "在庫調整、値下げ、稼働率低下")]) + '</article>'
-        '<p class="small">※上の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>'
-    )
-    sources = details("主要出典", source_link("1Q決算短信", "q1") + "、" + source_link("1Q決算説明資料", "ir") + "、" + source_link("IRカレンダー", "calendar") + "、" + source_link("中期方針2027", "strategy") + '<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a>', True)
+    non_quant = '<div class="priced unknown"><div class="priced-head"><span>主要材料の期待の入り方</span><b>全体割合は出していません</b></div><p><b>出していない理由：</b>2Q決算、IR Day、MLCC需給は同じAI需要と利益率前提に重なり、価値を独立に足せません。</p><p><b>足りない情報：</b>AI向け売上、製品別利益率、能力増強量の会社開示です。</p><p><b>次に見る数字：</b>コンピュータ用途売上、コンデンサ受注、営業利益率、通期予想です。</p><p><b>再計算方法：</b>用途別成長率と利益率をEPSへ反映し、同一PERで条件付き価値を再計算します。</p></div>'
+    impact_map = {
+        "2027年3月期 第2四半期決算": ("+8～+18%", "-5～+6%", "-18～-8%", "直近の数値更新であり、通期EPSと高い評価倍率の両方を直接動かすため、影響を大きめにしました。"),
+        "2026年度 IR Day": ("+5～+12%", "-3～+4%", "-12～-5%", "中長期EPSと適用PERへ効きますが、決算ほど即時の数値更新を伴わないため、幅を抑えました。"),
+        "MLCC受注・稼働率と製品構成": ("+6～+15%", "-4～+5%", "-16～-7%", "全社売上の過半を占めるコンデンサの数量、価格、利益率を動かす継続材料だからです。"),
+    }
+    description_map = {
+        "2027年3月期 第2四半期決算": "上方修正後の上期計画に対し、AIサーバー向け部品と利益率が計画どおり伸びているかを確認します。現在の高い評価倍率を支えられるかが焦点です。",
+        "2026年度 IR Day": "AIサーバー向けMLCC・電源部品の需要、供給能力、中期方針2027の進捗を会社が説明する予定です。成長の持続期間と投資回収を確認します。",
+        "MLCC受注・稼働率と製品構成": "AIサーバー、モビリティ、一般品の受注と工場稼働が高水準を保てるかを四半期ごとに確認します。数量だけでなく高付加価値品の比率が重要です。",
+    }
+
+    def card(title: str, date: str, chips: str, mechanism: str, success: str, inline: str, failure: str, evidence: str, counter: str) -> str:
+        up, flat, down, reason = impact_map[title]
+        return f'''<article class="catalyst-card">
+<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>{title}</h3><div class="chips">{chips}</div></div><div class="date-box"><b>{date}</b><span>会社公表または継続確認</span></div></div>
+<p class="lead">{description_map[title]}</p>
+<div class="mechanism">{mechanism}</div>
+<div class="outcomes">
+<div class="outcome success"><b>期待以上</b><div class="impact up">{up}</div><p>{success}</p></div>
+<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">{flat}</div><p>{inline}</p></div>
+<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">{down}</div><p>{failure}</p></div>
+</div>
+<p class="notice"><b>この％にした理由：</b>{reason}</p>
+<div class="evidence"><div><h4>根拠</h4><ul>{evidence}</ul></div><div><h4>反証・先行指標</h4><ul>{counter}</ul></div></div>
+</article>'''
+
+    cards = [
+        card("2027年3月期 第2四半期決算", "2026/10/30", '<span class="chip">重要度5</span><span class="chip">日程確定</span>', '<span>2Q実績</span><i>→</i><span>通期EPS</span><i>→</i><span>PER</span>', "上期会社予想を上回り、コンピュータ用途の高成長と追加上方修正が確認される状態です。", "会社計画線で着地し、通期予想を据え置く状態です。", "AI需要鈍化、利益率低下、通期下方修正のいずれかが確認される状態です。", "<li>会社の上期予想は売上1兆400億円、営業利益2,020億円です。</li><li>1Q営業利益は985億円で、前年同期比59.8%増でした。</li>", "<li>コンピュータ用途の成長鈍化</li><li>営業利益率の低下</li><li>通期予想の据え置きでも市場期待に未達</li>"),
+        card("2026年度 IR Day", "2026/11/30", '<span class="chip">重要度4</span><span class="chip blue">日程確定</span>', '<span>需要見通し</span><i>→</i><span>能力増強</span><i>→</i><span>中期EPS</span>', "AI向け成長見通し、能力増強、収益性が市場期待を上回る状態です。", "既存の中期方針を具体化するが、数値前提は大きく変わらない状態です。", "需要や能力増強の慎重化、収益目標の確度低下が示される状態です。", "<li>会社は中期方針2027でAIサーバーを重点機会としています。</li><li>IRカレンダーで開催日時が公表されています。</li>", "<li>能力増強計画の後ずれ</li><li>AI向け数量成長の鈍化</li><li>投資額に対する収益目標の不足</li>"),
+        card("MLCC受注・稼働率と製品構成", "四半期ごと", '<span class="chip">重要度5</span><span class="chip blue">継続材料</span>', '<span>受注</span><i>→</i><span>稼働率</span><i>→</i><span>利益率</span>', "受注が出荷を上回り、AI・車向け高付加価値品の比率も上昇する状態です。", "能力増強と需要が均衡し、会社予想どおりの利益率を維持する状態です。", "顧客在庫調整、一般品の値下げ、工場稼働率低下が重なる状態です。", "<li>1Qコンデンサ売上は前年同期比30.0%増でした。</li><li>データセンターとモビリティ向けが増加しました。</li>", "<li>受注出荷比率の低下</li><li>製品価格の下落</li><li>在庫増加と操業度益の縮小</li>"),
+    ]
     return {
         "COMPANY_NAME": COMPANY, "TICKER": TICKER, "EXCHANGE": "東京証券取引所プライム市場", "VALUATION_DATE": DATE, "LAST_UPDATED": "2026/08/24",
         "REPORT_STATUS": "期待が先に高まっている", "CATALYST_COUNT": "3", "NEXT_CATALYST_WINDOW": "2026/10/30", "NEXT_CATALYST_TITLE": "2027年3月期 第2四半期決算",
         "SUMMARY_LINE_1": "AIサーバー向け需要と通期上方修正は強い一方、現在株価には大幅な利益成長がかなり入っています。",
         "SUMMARY_LINE_2": "2Q決算、IR Day、MLCC受注・稼働率を一つの連続した期待経路として確認します。",
         "CURRENT_PRICE": yen(P0), "CURRENT_PRICE_NOTE": "2026/08/21 15:30", "OVERALL_PRICED_IN": "算出していません", "OVERALL_PRICED_LABEL": "全体割合は出していません", "PRICED_IN_CONFIDENCE": "ふつう", "DATE_CONFIDENCE": "高い",
-        "OVERALL_PRICED_BLOCK": '<div class="priced unknown"><h3>全体割合は出していません</h3><p><b>出していない理由：</b>2Q決算、IR Day、MLCC需給は同じAI需要と利益率前提に重なり、価値を独立に足せません。</p><p><b>足りない情報：</b>AI向け売上、製品別利益率、能力増強量の会社開示。</p><p><b>次に見る数字：</b>コンピュータ用途売上、コンデンサ受注、営業利益率、通期予想。</p><p><b>再計算方法：</b>開示された用途別成長率と利益率をEPSへ反映し、同一PERで条件付き価値を再計算します。</p></div>',
+        "OVERALL_PRICED_BLOCK": non_quant,
         "PRICED_IN_METHOD": "材料が同じ利益成長経路を共有するため、個別割合の平均は行いません。", "SURPRISE_UP": "追加上方修正とAI向け能力・採算の強い見通し", "SURPRISE_DOWN": "AI需要鈍化、値下げ、円高、通期予想の未達", "PRIMARY_RISK": "高い期待倍率の反動",
-        "TIMELINE_ROWS": tr([("2026/10/30", "2Q決算", "日程確定", "上期計画と通期予想"), ("2026/11/30", "IR Day", "日程確定", "AIサーバー・能力増強・中期方針"), ("2027/02/02", "3Q決算", "日程確定", "通期達成確度")]),
-        "CATALYST_CARDS": cards,
-        "DEPENDENCY_ROWS": tr([("AI需要・利益率", "一連の材料", "2Q決算→IR Day→四半期需給", "同じ価値を重複加算しない"), ("為替", "共通前提", "会社予想155円/USD", "業績影響として一度だけ反映")]),
-        "WATCH_ROWS": tr([("2Q決算", "2026/10/30", "売上、営業利益、用途別売上、通期予想"), ("IR Day", "2026/11/30", "AI向け需要、供給能力、中期目標"), ("MLCC需給", "四半期", "受注出荷比率、稼働率、値下げ"), ("為替", "随時", "155円/USD前提との差")]),
-        "ASSUMPTION_ROWS": tr([("株価", "7,091円", "2026/08/21終値"), ("会社予想", "売上2兆1,100億円・営業利益4,300億円", "2027年3月期"), ("会社予想EPS", "185.68円", "2027年3月期"), ("為替", "155円/USD", "第2四半期以降の会社前提")]),
-        "SOURCE_DETAILS": sources, "VALIDATION_DETAILS": details("検証結果", "日程は公式IRカレンダーの粒度を維持。3結果の影響幅は同一のEPS・PERモデルで再計算し、重複する材料は合算していません。", True),
-        "UPDATE_HISTORY": "2026/08/24 初版", "NO_CATALYST_NOTICE": "", "WARN_BAND": '<div class="wrap"><div class="notice"><b>注意：</b>好決算の発表だけでは十分ではありません。現在の高い評価倍率を維持できる追加情報が必要です。</div></div>',
+        "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">2026/07/31</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期1Q決算</b><p>通期予想を上方修正し、AIサーバー需要の強さを確認。</p><div class="time-meta"><span class="chip">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/10/30</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期2Q決算</b><p>上方修正後の上期進捗と通期予想を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2026/11/30</div><div class="time-dot"></div><div class="time-body"><b>2026年度 IR Day</b><p>AIサーバー、能力増強、中期方針2027を確認。</p><div class="time-meta"><span class="chip blue">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2027/02/02</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期3Q決算</b><p>通期計画の達成確度を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div>',
+        "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
+        "DEPENDENCY_ROWS": '<div class="signal"><div><b>2Q決算とIR Day</b><span class="up">連動</span></div><p>同じAI需要と中期利益率を確認するため、価値を重複加算しません。</p></div><div class="signal"><div><b>MLCC需給と業績</b><span class="flat">共通前提</span></div><p>受注、稼働率、製品構成が決算数値へ反映されます。</p></div><div class="signal"><div><b>為替</b><span class="down">注意</span></div><p>会社予想155円/USDとの差を業績影響として一度だけ反映します。</p></div>',
+        "WATCH_ROWS": '<div class="signal"><div><b>コンピュータ用途売上</b><span class="up">最重要</span></div><p>AIサーバー向け成長の持続性を確認します。</p></div><div class="signal"><div><b>コンデンサ受注</b><span class="up">重要</span></div><p>受注が出荷を上回る状態が続くかを確認します。</p></div><div class="signal"><div><b>営業利益率</b><span class="flat">確認</span></div><p>操業度益と高付加価値品の効果を確認します。</p></div><div class="signal"><div><b>為替・値下げ</b><span class="down">注意</span></div><p>155円/USD前提と製品価格低下の影響を確認します。</p></div>',
+        "ASSUMPTION_ROWS": tr([("評価基準株価", "7,091円", "市場データで確認済み", "2026/08/21", "終値"), ("通期会社予想", "売上2兆1,100億円", "会社の目標・予定", "2026/07/31", "営業利益4,300億円"), ("会社予想EPS", "185.68円", "会社の目標・予定", "2026/07/31", "2027年3月期"), ("為替前提", "155円/USD", "会社の目標・予定", "2026/07/31", "第2四半期以降")]),
+        "SOURCE_DETAILS": '<ul><li>' + source_link("1Q決算短信", "q1") + '</li><li>' + source_link("公式IR", "ir") + '</li><li>' + source_link("業績予想", "forecast") + '</li><li>' + source_link("IRカレンダー", "calendar") + '</li><li>' + source_link("中期方針2027", "strategy") + '</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
+        "VALIDATION_DETAILS": "<p>PASS：公式IR、1Q決算短信、業績予想、IRカレンダー、中期方針2027、株価時系列を確認。3結果の影響幅は共通のEPS・PERモデルで再計算し、重複材料は合算していません。</p>",
+        "UPDATE_HISTORY": "<p>2026/08/24：初版作成。1Q決算、通期上方修正、AIサーバー需要、公式IR日程を反映。</p>", "NO_CATALYST_NOTICE": "", "WARN_BAND": '<div class="wrap"><div class="notice"><b>注意：</b>好決算の発表だけでは十分ではありません。現在の高い評価倍率を維持できる追加情報が必要です。</div></div>',
         "DISCLAIMER": "本レポートは情報提供を目的とした条件付き試算であり、売買を推奨するものではありません。", "FOOTER_NOTE": "分析値は2026年8月24日時点で固定しています。",
     }
 
