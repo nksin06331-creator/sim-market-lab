@@ -18,6 +18,13 @@ P0 = 7091.0
 PREVIOUS_CLOSE = 7205.0
 SHARES_M = 1819.637
 MARKET_CAP_TN = P0 * SHARES_M / 1_000_000
+BEAR_PRICE = 4200.0
+BASE_PRICE = 6200.0
+BULL_PRICE = 8500.0
+OVERALL_PRICED_RAW = (P0 - BEAR_PRICE) / (BULL_PRICE - BEAR_PRICE) * 100
+OVERALL_PRICED_PCT = round(max(0.0, min(100.0, OVERALL_PRICED_RAW)))
+ADDITIONAL_PRICED_RAW = (P0 - BASE_PRICE) / (BULL_PRICE - BASE_PRICE) * 100
+ADDITIONAL_PRICED_PCT = round(max(0.0, min(100.0, ADDITIONAL_PRICED_RAW)))
 
 SOURCES = {
     "ir": "https://corporate.murata.com/ja-jp/ir",
@@ -109,7 +116,7 @@ def guide_values() -> dict[str, str]:
 
 
 def scenario_values() -> dict[str, str]:
-    bear, base, bull = 4200, 6200, 8500
+    bear, base, bull = BEAR_PRICE, BASE_PRICE, BULL_PRICE
     probs = {"bear": .25, "base": .50, "bull": .25}
     expected = sum((bear * probs["bear"], base * probs["base"], bull * probs["bull"]))
     band = (P0 - bear) / (bull - bear) * 100
@@ -150,7 +157,7 @@ def scenario_values() -> dict[str, str]:
 
 
 def catalyst_values() -> dict[str, str]:
-    non_quant = '<div class="priced unknown"><div class="priced-head"><span>主要材料の期待の入り方</span><b>全体割合は出していません</b></div><p><b>出していない理由：</b>2Q決算、IR Day、MLCC需給は同じAI需要と利益率前提に重なり、価値を独立に足せません。</p><p><b>足りない情報：</b>AI向け売上、製品別利益率、能力増強量の会社開示です。</p><p><b>次に見る数字：</b>コンピュータ用途売上、コンデンサ受注、営業利益率、通期予想です。</p><p><b>再計算方法：</b>用途別成長率と利益率をEPSへ反映し、同一PERで条件付き価値を再計算します。</p></div>'
+    priced_block = f'<div class="priced"><div class="priced-head"><span>総合期待の推定織り込み</span><b>{OVERALL_PRICED_PCT}%</b></div><p><b>仮定：</b>2Q決算、IR Day、MLCC需給を別々に足さず、AI需要と利益率を確認する1つの依存グループとして扱います。Bear {yen(BEAR_PRICE)}を期待失敗側、Bull {yen(BULL_PRICE)}を強い成功側の端点に置き、現在株価{yen(P0)}を逆算しました。</p><p><b>読み方：</b>広いシナリオレンジでは強気側への期待が約{OVERALL_PRICED_PCT}%入っています。一方、Base {yen(BASE_PRICE)}からBullまでの追加上値だけで見ると約{ADDITIONAL_PRICED_PCT}%であり、強気条件をすべて織り込んだ状態ではありません。</p><p><b>次に見る数字：</b>コンピュータ用途売上、コンデンサ受注、営業利益率、通期予想です。</p><p><b>再計算方法：</b>株価だけを更新して再計算する場合は同じBear・Bull端点を使い、決算で事業前提が変わったときは端点自体を更新します。現在のHTML表示は評価基準日時点の固定値です。</p></div>'
     impact_map = {
         "2027年3月期 第2四半期決算": ("+8～+18%", "-5～+6%", "-18～-8%", "直近の数値更新であり、通期EPSと高い評価倍率の両方を直接動かすため、影響を大きめにしました。"),
         "2026年度 IR Day": ("+5～+12%", "-3～+4%", "-12～-5%", "中長期EPSと適用PERへ効きますが、決算ほど即時の数値更新を伴わないため、幅を抑えました。"),
@@ -186,10 +193,10 @@ def catalyst_values() -> dict[str, str]:
         "COMPANY_NAME": COMPANY, "TICKER": TICKER, "EXCHANGE": "東京証券取引所プライム市場", "VALUATION_DATE": DATE, "LAST_UPDATED": "2026/08/24",
         "REPORT_STATUS": "期待が先に高まっている", "CATALYST_COUNT": "3", "NEXT_CATALYST_WINDOW": "2026/10/30", "NEXT_CATALYST_TITLE": "2027年3月期 第2四半期決算",
         "SUMMARY_LINE_1": "AIサーバー向け需要と通期上方修正は強い一方、現在株価には大幅な利益成長がかなり入っています。",
-        "SUMMARY_LINE_2": "2Q決算、IR Day、MLCC受注・稼働率を一つの連続した期待経路として確認します。",
-        "CURRENT_PRICE": yen(P0), "CURRENT_PRICE_NOTE": "2026/08/21 15:30", "OVERALL_PRICED_IN": "算出していません", "OVERALL_PRICED_LABEL": "全体割合は出していません", "PRICED_IN_CONFIDENCE": "ふつう", "DATE_CONFIDENCE": "高い",
-        "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "材料が同じ利益成長経路を共有するため、個別割合の平均は行いません。", "SURPRISE_UP": "追加上方修正とAI向け能力・採算の強い見通し", "SURPRISE_DOWN": "AI需要鈍化、値下げ、円高、通期予想の未達", "PRIMARY_RISK": "高い期待倍率の反動",
+        "SUMMARY_LINE_2": f"重複する材料を一つの期待グループに束ね、全体の推定織り込み度を{OVERALL_PRICED_PCT}%と逆算します。",
+        "CURRENT_PRICE": yen(P0), "CURRENT_PRICE_NOTE": "2026/08/21 15:30", "OVERALL_PRICED_IN": f"{OVERALL_PRICED_PCT}%", "OVERALL_PRICED_LABEL": "総合期待の推定織り込み", "PRICED_IN_CONFIDENCE": "低〜中", "DATE_CONFIDENCE": "高い",
+        "OVERALL_PRICED_BLOCK": priced_block,
+        "PRICED_IN_METHOD": f"依存材料を1グループに束ね、(現在株価{yen(P0)}－Bear {yen(BEAR_PRICE)})÷(Bull {yen(BULL_PRICE)}－Bear {yen(BEAR_PRICE)})で逆算。個別割合は平均していません。", "SURPRISE_UP": "追加上方修正とAI向け能力・採算の強い見通し", "SURPRISE_DOWN": "AI需要鈍化、値下げ、円高、通期予想の未達", "PRIMARY_RISK": "高い期待倍率の反動",
         "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">2026/07/31</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期1Q決算</b><p>通期予想を上方修正し、AIサーバー需要の強さを確認。</p><div class="time-meta"><span class="chip">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/10/30</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期2Q決算</b><p>上方修正後の上期進捗と通期予想を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2026/11/30</div><div class="time-dot"></div><div class="time-body"><b>2026年度 IR Day</b><p>AIサーバー、能力増強、中期方針2027を確認。</p><div class="time-meta"><span class="chip blue">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2027/02/02</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期3Q決算</b><p>通期計画の達成確度を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div>',
         "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>2Q決算とIR Day</b><span class="up">連動</span></div><p>同じAI需要と中期利益率を確認するため、価値を重複加算しません。</p></div><div class="signal"><div><b>MLCC需給と業績</b><span class="flat">共通前提</span></div><p>受注、稼働率、製品構成が決算数値へ反映されます。</p></div><div class="signal"><div><b>為替</b><span class="down">注意</span></div><p>会社予想155円/USDとの差を業績影響として一度だけ反映します。</p></div>',
