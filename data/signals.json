@@ -1,163 +1,163 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-08-24T12:37:01.375266+00:00",
+  "updatedAt": "2026-09-30T02:12:30.856322+00:00",
   "signals": {
     "kioxia-285a": {
-      "position": 53.8,
-      "zone": "中立",
-      "asOf": "2026-08-08",
+      "position": 24.5,
+      "zone": "売られすぎ",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 48.8,
+        "valuation": 0.0,
         "catalysts": 65.0,
         "businessRisk": 55.0
       },
-      "reportRevision": "kioxia-285a-2026-08-08",
-      "summary": "標準ケースの手前にある一方、AI向け需要と自社株取得が支え。NAND市況の反落リスクも残るため中立。"
+      "reportRevision": "kioxia-285a-2026-09-30",
+      "summary": "分割前基準の悲観ケースを下回る価格帯。AI向け需要と自社株取得が支えだが、NAND市況の反落リスクは残る。"
     },
     "rocket-lab-rklb": {
-      "position": 52.1,
+      "position": 45.2,
       "zone": "中立",
-      "asOf": "2026-08-08",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 38.0,
+        "valuation": 26.5,
         "catalysts": 74.0,
         "businessRisk": 72.0
       },
-      "reportRevision": "rocket-lab-rklb-2026-08-08",
-      "summary": "Q1成長、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。"
+      "reportRevision": "rocket-lab-rklb-2026-09-30",
+      "summary": "Q2の62%増収、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。"
     },
     "redwire-rdw": {
-      "position": 46.0,
+      "position": 37.7,
       "zone": "中立",
-      "asOf": "2026-08-08",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 30.9,
+        "valuation": 17.1,
         "catalysts": 72.0,
         "businessRisk": 63.0
       },
-      "reportRevision": "redwire-rdw-2026-08-08",
+      "reportRevision": "redwire-rdw-2026-09-30",
       "summary": "Q2売上急伸、受注残、防衛UAS材料は強い一方、赤字、買収統合、内部統制、希薄化リスクが残るため中立。"
     },
     "paycloud-4015": {
-      "position": 55.3,
+      "position": 47.5,
       "zone": "中立",
-      "asOf": "2026-08-08",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 51.1,
+        "valuation": 38.2,
         "catalysts": 66.0,
         "businessRisk": 54.0
       },
-      "reportRevision": "paycloud-4015-2026-08-08",
+      "reportRevision": "paycloud-4015-2026-09-30",
       "summary": "3Q増収増益と調整後EBITDA進捗は強い一方、現在株価は標準ケース付近で、通期決算と来期見通し確認前のため中立。"
     },
     "sumitomo-electric-5802": {
-      "position": 42.4,
+      "position": 41.8,
       "zone": "中立",
-      "asOf": "2026-08-09",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 27.9,
+        "valuation": 26.8,
         "catalysts": 68.0,
         "businessRisk": 58.0
       },
-      "reportRevision": "sumitomo-electric-5802-2026-08-09",
+      "reportRevision": "sumitomo-electric-5802-2026-09-30",
       "summary": "株価は標準ケース手前まで調整。中計2028、電力・通信テーマは支えだが、1Q後の進捗と需給確認前のため中立。"
     },
     "abcellera-abcl": {
-      "position": 58.1,
-      "zone": "中立",
-      "asOf": "2026-08-13",
+      "position": 76.6,
+      "zone": "買われすぎ",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 42.7,
+        "valuation": 73.5,
         "catalysts": 88.0,
         "businessRisk": 70.0
       },
-      "reportRevision": "abcellera-abcl-2026-08-13",
+      "reportRevision": "abcellera-abcl-2026-09-30",
       "summary": "ABCL635のPhase 2好結果で株価は再評価。次は後期試験設計、資金消費、データ詳細を確認するため中立からやや強気。"
     },
     "asp-isotopes-aspi": {
-      "position": 41.2,
+      "position": 31.4,
       "zone": "中立",
-      "asOf": "2026-08-09",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 18.1,
+        "valuation": 1.8,
         "catalysts": 72.0,
         "businessRisk": 82.0
       },
-      "reportRevision": "asp-isotopes-aspi-2026-08-09-unified",
+      "reportRevision": "asp-isotopes-aspi-2026-09-30",
       "summary": "同位体出荷、Renergen、QLE/HALEUが材料。株価は悲観寄りだが、商業化と規制の実行リスクが高いため中立。"
     },
     "moonlake-mltx": {
-      "position": 42.1,
+      "position": 32.7,
       "zone": "中立",
-      "asOf": "2026-08-10",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 17.2,
+        "valuation": 1.5,
         "catalysts": 78.0,
         "businessRisk": 82.0
       },
-      "reportRevision": "moonlake-mltx-2026-08-10",
+      "reportRevision": "moonlake-mltx-2026-09-30",
       "summary": "HS BLA提出とFDA受理が最大材料。Week 52と資金調達は支えだが、商業化前・単一資産依存のため中立。"
     },
     "zeta-global-zeta": {
-      "position": 51.6,
+      "position": 53.6,
       "zone": "中立",
-      "asOf": "2026-08-11",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 37.4,
+        "valuation": 40.7,
         "catalysts": 82.0,
         "businessRisk": 58.0
       },
-      "reportRevision": "zeta-global-zeta-2026-08-11",
+      "reportRevision": "zeta-global-zeta-2026-09-30",
       "summary": "2Q好決算、20四半期連続Beat and Raise、AI提携は強い。株価は高値圏に近く、期待織り込み確認前のため中立。"
     },
     "credo-crdo": {
-      "position": 51.3,
+      "position": 33.4,
       "zone": "中立",
-      "asOf": "2026-08-11",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 36.6,
+        "valuation": 6.9,
         "catalysts": 80.0,
         "businessRisk": 62.0
       },
-      "reportRevision": "credo-crdo-2026-08-11",
+      "reportRevision": "credo-crdo-2026-09-30",
       "summary": "FY2026 Q4決算とQ1ガイダンスは強い。AI接続需要と光接続拡大は追い風だが、株価は高期待を織り込むため中立。"
     },
     "sealsq-laes": {
-      "position": 41.6,
+      "position": 35.8,
       "zone": "中立",
-      "asOf": "2026-08-13",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 30.5,
+        "valuation": 20.9,
         "catalysts": 68.0,
         "businessRisk": 42.0
       },
-      "reportRevision": "sealsq-laes-2026-08-13",
+      "reportRevision": "sealsq-laes-2026-09-30",
       "summary": "H1 2026予備売上は強く現金余力も大きい。QS7001/QVaultの商用化とパイプライン転換が確認できれば再評価余地がある一方、希薄化と小型株リスクは高い。"
     },
     "furukawa-electric-5801": {
-      "position": 51.2,
+      "position": 47.2,
       "zone": "中立",
-      "asOf": "2026-08-19",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 37.1,
+        "valuation": 30.5,
         "catalysts": 82.0,
         "businessRisk": 56.0
       },
-      "reportRevision": "furukawa-electric-5801-2026-08-19",
+      "reportRevision": "furukawa-electric-5801-2026-09-30",
       "summary": "1Q決算と通期上方修正は強い。光通信・データセンタ需要と増産投資は追い風だが、株価急騰後の材料織り込みと2Q進捗確認が必要。"
     },
     "murata-6981": {
-      "position": 68.3,
-      "zone": "中立",
-      "asOf": "2026-08-24",
+      "position": 80.1,
+      "zone": "買われすぎ",
+      "asOf": "2026-09-30",
       "components": {
-        "valuation": 67.2,
+        "valuation": 86.8,
         "catalysts": 76.0,
         "businessRisk": 60.0
       },
-      "reportRevision": "murata-6981-2026-08-24",
-      "summary": "1Q上振れとAIサーバー需要は強い一方、株価は会社予想EPSの約38倍で成長期待もかなり入っているため中立。"
+      "reportRevision": "murata-6981-2026-09-30",
+      "summary": "AIサーバー需要と通期上方修正は強い一方、株価はBullケースに近く、高い成長期待が入っているため買われすぎ。"
     }
   }
 }

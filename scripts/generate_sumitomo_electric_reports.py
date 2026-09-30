@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "sumitomo-electric-5802"
 
 COMPANY = "住友電気工業"
 TICKER = "5802"
-DATE = "2026-08-09"
-P0 = 2336.5
-PREVIOUS_CLOSE = 2109.5
+DATE = "2026-09-30"
+P0 = 2248.0
+PREVIOUS_CLOSE = 2173.5
 SHARES_M = 3165.0
 MARKET_CAP_TN = P0 * SHARES_M / 1_000_000
 
@@ -54,7 +54,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("英文IR Library", "library_en")}、'
         f'{source_link("IRカレンダー", "calendar")}、'
         f'{source_link("株価時系列", "price")}を確認しました。'
-        "本文の数値は2026年8月9日時点の公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点の公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -187,14 +187,14 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "分散型製造業向けPER・EV/EBITDAシナリオ",
         "VERDICT_STATUS": "標準ケース手前の中立圏",
         "VERDICT_LINE_1": "評価基準株価は悲観〜楽観レンジの33.6%地点です。高値から調整しており、標準ケースまでは余地がありますが、1Q後の業績確認が必要です。",
-        "VERDICT_LINE_2": "この試算は2026年8月9日時点の公開情報で固定しています。株価は2026年7月31日終値2,336.5円を基準にしています。",
+        "VERDICT_LINE_2": "2026年9月30日時点の公開情報と株価を反映しました。Meta・NECとの海底マルチコア光ファイバ協業も中期材料として確認しています。",
         "SCORE": str(score),
         "CURRENT_PRICE": yen(P0),
-        "CURRENT_PRICE_NOTE": "2026/07/31 15:30",
+        "CURRENT_PRICE_NOTE": "2026/09/30 10時台",
         "BASE_PRICE": yen(base),
-        "BASE_DELTA": "+4.9%",
+        "BASE_DELTA": f"{(base / P0 - 1) * 100:+.1f}%",
         "EXPECTED_VALUE": yen(expected),
-        "EXPECTED_DELTA": "+7.0%",
+        "EXPECTED_DELTA": f"{(expected / P0 - 1) * 100:+.1f}%",
         "RISK_CLASS": "中",
         "RISK_NOTE": "大型製造業、為替・銅価格・景気に連動",
         "WARN_BAND": '<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>株式分割後の価格を基準にしています。過去株価との比較では単位変更に注意してください。</div></div>',
@@ -212,8 +212,8 @@ def scenario_values() -> dict[str, str]:
         "BEAR_PROB": "25%",
         "BASE_PROB": "50%",
         "BULL_PROB": "25%",
-        "BEAR_DELTA": "-18.7%",
-        "BULL_DELTA": "+36.9%",
+        "BEAR_DELTA": f"{(bear / P0 - 1) * 100:+.1f}%",
+        "BULL_DELTA": f"{(bull / P0 - 1) * 100:+.1f}%",
         "BEAR_DL_ROWS": dl([("EPS", "150円"), ("PER", "12.7倍"), ("前提", "自動車採算弱含み"), ("営業利益", "4,000億円台")]),
         "BASE_DL_ROWS": dl([("EPS", "175円"), ("PER", "14.0倍"), ("前提", "中計どおり改善"), ("営業利益", "5,000億円前後")]),
         "BULL_DL_ROWS": dl([("EPS", "210円"), ("PER", "15.2倍"), ("前提", "電力・通信が上振れ"), ("営業利益", "5,500億円超")]),
@@ -284,13 +284,13 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が複数",
-        "SUMMARY_LINE_1": "1Q決算、中計2028、電力ケーブル、データセンター関連が今後の主な材料です。",
+        "SUMMARY_LINE_1": "2Q決算、中計2028、電力ケーブル、海底マルチコア光ファイバが今後の主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を49%と推定します。",
         "OVERALL_PRICED_IN": "49%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "ふつう",
         "CURRENT_PRICE": yen(P0),
-        "CURRENT_PRICE_NOTE": "2026/07/31 15:30",
+        "CURRENT_PRICE_NOTE": "2026/09/30 10時台",
         "NEXT_CATALYST_TITLE": "2Q・中間決算",
         "NEXT_CATALYST_WINDOW": "2026年10〜11月ごろ",
         "DATE_CONFIDENCE": "当方推定",
@@ -367,15 +367,15 @@ def upsert_site_data() -> None:
     signals_payload = json.loads(signals_path.read_text(encoding="utf-8"))
     signals_payload["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals_payload.setdefault("signals", {})["sumitomo-electric-5802"] = {
-        "position": 45.9,
+        "position": round(0.60 * ((P0 - 1900) / (3200 - 1900) * 100) + 0.25 * 68.0 + 0.15 * 58.0, 1),
         "zone": "中立",
         "asOf": DATE,
         "components": {
-            "valuation": 33.6,
+            "valuation": round((P0 - 1900) / (3200 - 1900) * 100, 1),
             "catalysts": 68.0,
             "businessRisk": 58.0,
         },
-        "reportRevision": "sumitomo-electric-5802-2026-08-09",
+        "reportRevision": "sumitomo-electric-5802-2026-09-30",
         "summary": "株価は標準ケース手前まで調整。中計2028、電力・通信テーマは支えだが、1Q後の進捗と需給確認前のため中立。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

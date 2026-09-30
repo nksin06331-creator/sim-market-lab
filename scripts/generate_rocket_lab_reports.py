@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "rocket-lab-rklb"
 
 COMPANY = "ロケット・ラボ"
 TICKER = "RKLB"
-DATE = "2026-08-08"
-P0 = 82.83
-SHARES_M = 629.0
+DATE = "2026-09-30"
+P0 = 69.70
+SHARES_M = 670.0
 MARKET_CAP_B = P0 * SHARES_M / 1000
 
 SOURCES = {
@@ -28,6 +28,9 @@ SOURCES = {
     "space_force": "https://investors.rocketlabcorp.com/news",
     "sda": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-achieves-milestone-missile-defense-constellation",
     "q2_date": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-date-second-quarter-2026-financial-results",
+    "q2": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-second-quarter-2026-financial-results-posts",
+    "financing": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-fully-funds-iridium-acquisition-including-completion",
+    "launch96": "https://investors.rocketlabcorp.com/news-releases/news-release-details/mission-success-rocket-lab-launches-96th-electron-mission",
 }
 
 
@@ -86,7 +89,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("Rocket Lab投資家向けサイト", "ir")}、'
         f'{source_link("Iridium買収発表", "iridium")}、'
         f'{source_link("SDA Tranche 3進捗", "sda")}を確認しました。'
-        "本文の数値は2026年8月8日時点の公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点の公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -111,16 +114,16 @@ def guide_values() -> dict[str, str]:
         "TAGLINE": "小型ロケットElectron、開発中の中型ロケットNeutron、衛星・部品・ソフトウェアをまとめて提供する宇宙インフラ企業です。",
         "HERO_TAGS": '<span class="hero-tag">宇宙輸送</span><span class="hero-tag">衛星製造</span><span class="hero-tag">防衛宇宙</span><span class="hero-tag">Nasdaq</span>',
         "HERO_STATS": (
-            f'<div class="stat"><div class="stat-value">{usd(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/08/07終値</div></div>'
+            f'<div class="stat"><div class="stat-value">{usd(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/09/29終値</div></div>'
             f'<div class="stat"><div class="stat-value">${MARKET_CAP_B:.1f}B</div><div class="stat-label">時価総額の目安</div><div class="stat-note">Q2会社見通し株式数で計算</div></div>'
-            '<div class="stat"><div class="stat-value up">$200.3M</div><div class="stat-label">2026年1Q売上</div><div class="stat-note">前年比+63.5%</div></div>'
-            '<div class="stat"><div class="stat-value">$2.2B</div><div class="stat-label">受注残</div><div class="stat-note">2026年1Q末</div></div>'
+            '<div class="stat"><div class="stat-value up">$234.0M</div><div class="stat-label">2026年2Q売上</div><div class="stat-note">前年比+62%</div></div>'
+            '<div class="stat"><div class="stat-value">$2.36B</div><div class="stat-label">受注残</div><div class="stat-note">2026年2Q末</div></div>'
         ),
         "SEC2_LABEL": "事業モデル",
         "SEC3_LABEL": "ロケット",
         "SEC4_LABEL": "宇宙システム",
         "SEC5_LABEL": "競合比較",
-        "SEC1_TLDR": li("Rocket Labは打ち上げと衛星システムを両方持つ宇宙インフラ企業です。", "*") + li("2026年1Qは売上$200.3M、受注残$2.2Bと成長が続きました。", "*") + li("まだ赤字で、Neutron、買収、希薄化、政府契約の実行が株価を大きく動かします。", "!"),
+        "SEC1_TLDR": li("Rocket Labは打ち上げと衛星システムを両方持つ宇宙インフラ企業です。", "*") + li("2026年2Qは売上$234.0M、受注残$2.36Bと成長が続きました。", "*") + li("まだ赤字で、Neutron、買収、希薄化、政府契約の実行が株価を大きく動かします。", "!"),
         "SEC1_FACTS": (
             "<div><dt>正式社名</dt><dd>Rocket Lab Corporation</dd></div><div><dt>本社</dt><dd>Long Beach, California</dd></div>"
             "<div><dt>上場</dt><dd>Nasdaq（RKLB）</dd></div><div><dt>創業</dt><dd>2006年</dd></div>"
@@ -190,10 +193,10 @@ def guide_values() -> dict[str, str]:
         "SEC6_CONTENT": '<div class="term-list">' + "".join(details(name, body) for name, body in terms) + "</div>",
         "SEC7_TLDR": li("Q2決算、Neutron進捗、Iridium買収の承認・統合が大きな材料です。", "*") + li("HASTEとSDA案件は防衛宇宙テーマを支えます。", "*") + li("高い評価倍率、赤字、希薄化が下落リスクです。", "!"),
         "SEC7_CONTENT": (
-            '<div class="timeline"><div class="tl-row"><div class="tl-date">2026/08/10</div><div class="tl-title">Q2決算予定 <span class="signal bull">重要</span></div><div class="tl-desc">会社はQ2売上$225M〜$240Mを見込んでいます。</div></div>'
+            '<div class="timeline"><div class="tl-row"><div class="tl-date">2026/08/10</div><div class="tl-title">Q2決算 <span class="signal bull">発表済み</span></div><div class="tl-desc">売上$234.0M、受注残$2.36Bを確認しました。</div></div>'
             '<div class="tl-row"><div class="tl-date">2026後半</div><div class="tl-title">HASTE / Space Force契約 <span class="signal bull">追い風</span></div><div class="tl-desc">$266M契約。最初の打ち上げは2026年末以降予定です。</div></div>'
             '<div class="tl-row"><div class="tl-date">2026-2027</div><div class="tl-title">Iridium買収とNeutron <span class="signal neutral">確認</span></div><div class="tl-desc">成長加速の可能性と、統合・資金調達・開発遅延リスクを同時に見ます。</div></div></div>'
-            '<div class="info-row"><div class="info-box info-box-green"><div class="info-title info-title-green">追い風</div><div class="info-text">受注残$2.2B、Q2売上見通し、SDA・HASTE契約。</div></div>'
+            '<div class="info-row"><div class="info-box info-box-green"><div class="info-title info-title-green">追い風</div><div class="info-text">Q2売上$234.0M、受注残$2.36B、SDA・HASTE契約。</div></div>'
             '<div class="info-box info-box-amber"><div class="info-title info-title-amber">確認</div><div class="info-text">Neutron開発、Iridium買収条件、粗利率とEBITDA改善。</div></div>'
             '<div class="info-box info-box-red"><div class="info-title info-title-red">リスク</div><div class="info-text">高い評価倍率、赤字継続、希薄化、打ち上げ失敗。</div></div></div>'
             + source_details
@@ -218,18 +221,18 @@ def scenario_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "METHOD": "高成長宇宙インフラ向け売上倍率シナリオ",
         "VERDICT_STATUS": "期待先行の中立圏",
-        "VERDICT_LINE_1": "評価基準株価は悲観〜楽観レンジの42.5%地点です。Q1成長と受注残は強い一方、現在株価はすでに高い成長を織り込んでいます。",
-        "VERDICT_LINE_2": "この試算は2026年8月8日時点の公開情報で固定しています。Q2決算は2026年8月10日発表予定のため、未反映です。",
+        "VERDICT_LINE_1": "評価基準株価は悲観〜楽観レンジの42.5%地点です。Q2の62%増収と受注残$2.36Bは強い一方、現在株価は高い成長を織り込んでいます。",
+        "VERDICT_LINE_2": "2026年8月10日のQ2実績、9月15日のIridium買収資金確保、9月19日の96回目打上げ成功を反映しました。",
         "SCORE": str(score),
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/07 16:00 ET",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "BASE_PRICE": usd(base),
-        "BASE_DELTA": "+6.2%",
+        "BASE_DELTA": f"{(base / P0 - 1) * 100:+.1f}%",
         "EXPECTED_VALUE": usd(expected),
-        "EXPECTED_DELTA": "+6.8%",
+        "EXPECTED_DELTA": f"{(expected / P0 - 1) * 100:+.1f}%",
         "RISK_CLASS": "高い",
         "RISK_NOTE": "成長期待と赤字・希薄化が同居",
-        "WARN_BAND": '<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>Q2決算は2026年8月10日予定です。このページは直前時点の会社見通しと公開資料に基づく暫定版です。</div></div>',
+        "WARN_BAND": '<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>Iridium買収は2027年半ばの完了予定で、規制承認と統合実行が残っています。1株価値はATM増資による希薄化も含めて見ます。</div></div>',
         "SNAPSHOT_LEAD": "今の株価は、強い受注残、防衛宇宙需要、NeutronとIridiumの期待をかなり評価しています。ただし、楽観ケースを完全に織り込む水準ではありません。",
         "BAND_POSITION": f"{band:.1f}%",
         "ZONE_JUDGE": "標準ケースの少し下",
@@ -244,8 +247,8 @@ def scenario_values() -> dict[str, str]:
         "BEAR_PROB": "25%",
         "BASE_PROB": "50%",
         "BULL_PROB": "25%",
-        "BEAR_DELTA": "-42.1%",
-        "BULL_DELTA": "+57.0%",
+        "BEAR_DELTA": f"{(bear / P0 - 1) * 100:+.1f}%",
+        "BULL_DELTA": f"{(bull / P0 - 1) * 100:+.1f}%",
         "BEAR_DL_ROWS": dl([("2028年売上", "$1.2B"), ("EV/Sales", "22倍"), ("前提", "Neutron遅延・倍率低下"), ("株式数", "約6.29億株")]),
         "BASE_DL_ROWS": dl([("2028年売上", "$1.7B"), ("EV/Sales", "30倍"), ("前提", "Q2達成・防衛宇宙堅調"), ("株式数", "約6.29億株")]),
         "BULL_DL_ROWS": dl([("2028年売上", "$2.2B"), ("EV/Sales", "36倍"), ("前提", "Neutron成功・Iridium統合進展"), ("株式数", "約6.29億株")]),
@@ -256,12 +259,12 @@ def scenario_values() -> dict[str, str]:
             '<div class="zone"><div><b>$130超</b><span>★</span></div><p>楽観ケース超。さらに強い売上加速と倍率維持が必要です。</p></div>'
         ),
         "SIGNAL_ROWS": (
-            '<div class="signal"><div><b>Q2売上見通し</b><span class="up">追い風</span></div><p>会社は$225M〜$240Mを見込んでいます。</p></div>'
-            '<div class="signal"><div><b>受注残$2.2B</b><span class="up">追い風</span></div><p>将来売上の見通しを支えます。</p></div>'
+            '<div class="signal"><div><b>Q3売上見通し</b><span class="up">追い風</span></div><p>会社は$250M〜$265Mを見込んでいます。</p></div>'
+            '<div class="signal"><div><b>受注残$2.36B</b><span class="up">追い風</span></div><p>将来売上の見通しを支えます。</p></div>'
             '<div class="signal"><div><b>Iridium買収</b><span class="flat">確認</span></div><p>規模拡大と統合・資金調達リスクが同時にあります。</p></div>'
             '<div class="signal"><div><b>Neutron</b><span class="down">注意</span></div><p>成功なら大きい一方、遅延やコスト超過は下落要因です。</p></div>'
         ),
-        "POSITIVES": "<li>2026年1Q売上は$200.3M、前年比+63.5%でした。</li><li>受注残は$2.2Bで、Q2売上見通しは$225M〜$240Mです。</li><li>SDA、HASTE、Space Force契約で防衛宇宙の実績が増えています。</li><li>Iridium買収が成立すれば、通信ネットワークと宇宙インフラの統合が進みます。</li>",
+        "POSITIVES": "<li>2026年2Q売上は$234.0M、前年比+62%でした。</li><li>受注残は$2.36Bで、Q3売上見通しは$250M〜$265Mです。</li><li>SDA、HASTE、Space Force契約で防衛宇宙の実績が増えています。</li><li>Iridium買収に向け、$1.944BのATM増資を完了しました。</li>",
         "CONCERNS": "<li>GAAPではまだ赤字です。2026年1Q純損失は$45.0Mでした。</li><li>現在株価は売上倍率が高く、少しの失望で大きく下がり得ます。</li><li>Iridium買収は承認、資金調達、統合リスクがあります。</li><li>Neutron開発、打ち上げ失敗、政府予算変更、希薄化がリスクです。</li>",
         "FORMULA": "主計算は売上倍率です。赤字成長企業のため、短期PERよりも将来売上とEV/Salesを使いました。",
         "CALC_TABLE_HEAD": th("ケース", "2028年売上", "EV/Sales", "計算株価", "確率", "確率加重"),
@@ -274,8 +277,8 @@ def scenario_values() -> dict[str, str]:
         "DIST_LEAD": "モンテカルロではなく、悲観・標準・楽観の3点分布です。",
         "DIST_ROWS": '<div class="dist-row"><span>$48</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div><div class="dist-row"><span>$88</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>$130</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>',
         "DIST_SUMMARY": "中心は標準ケースです。ただし宇宙テーマ株として、ニュースと倍率で両端へ大きく振れやすい銘柄です。",
-        "WATCH_ROWS": '<div class="signal"><div><b>2026年Q2決算</b></div><p>売上$225M〜$240M、粗利率、Adjusted EBITDA損失幅を確認します。</p></div><div class="signal"><div><b>Neutron開発</b></div><p>試験、初号機、顧客契約、コスト超過の有無を見ます。</p></div><div class="signal"><div><b>Iridium買収</b></div><p>承認、資金調達、統合計画、希薄化を確認します。</p></div>',
-        "ASSUMPTIONS_ROWS": tr("評価基準株価", usd(P0), "市場データで確認済み", "2026/08/07終値") + tr("Q2売上見通し", "$225M〜$240M", "会社の目標・予定", "2026/05/07") + tr("Q1売上", "$200.3M", "公式情報で確認済み", "2026年1〜3月") + tr("Q2株式数目安", "629M", "会社見通し", "Series A preferred含む"),
+        "WATCH_ROWS": '<div class="signal"><div><b>2026年Q3決算</b></div><p>売上$250M〜$265M、粗利率、Adjusted EBITDA損失幅を確認します。</p></div><div class="signal"><div><b>Neutron開発</b></div><p>試験、初号機、顧客契約、コスト超過の有無を見ます。</p></div><div class="signal"><div><b>Iridium買収</b></div><p>承認、統合計画、資金の使途を確認します。</p></div>',
+        "ASSUMPTIONS_ROWS": tr("評価基準株価", usd(P0), "市場データで確認済み", "2026/09/29終値") + tr("Q2売上", "$234.0M", "公式情報で確認済み", "2026/08/10") + tr("Q2受注残", "$2.36B", "公式情報で確認済み", "2026/06/30") + tr("Q3売上見通し", "$250M〜$265M", "会社の目標・予定", "2026/08/10"),
         "DEEPDIVE_DETAILS": details("手法選定理由", "Rocket Labは高成長ですがGAAP赤字です。短期PERではなく、将来売上とEV/Salesを主に使いました。", True) + details("希薄化について", "Q2会社見通しでは基本加重平均株式数629Mが示されています。買収や資金調達で将来株式数は変わり得ます。") + details("主要出典", f'{source_link("Q1決算", "q1")}、{source_link("2025年10-K", "annual")}、{source_link("Iridium買収", "iridium")}、{source_link("SDA進捗", "sda")}、{source_link("投資家向けサイト", "ir")}。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a>'),
         "DISCLAIMER": "本資料は情報提供を目的とした試算です。投資助言ではありません。宇宙・防衛関連の成長株は、契約、開発、資金調達、市場倍率により大きく変動します。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）株価シナリオ｜作成日 {DATE}",
@@ -285,19 +288,19 @@ def scenario_values() -> dict[str, str]:
 def catalyst_values() -> dict[str, str]:
     non_quant = (
         '<div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>72%</b></div>'
-        '<p>仮定：Q2決算の達成を70%、Neutron進捗を65%、Iridium買収成立を60%、防衛契約の継続拡大を75%として置き、材料の重複を控除しました。</p>'
+        '<p>仮定：Q3決算の達成を70%、Neutron進捗を65%、Iridium買収成立を60%、防衛契約の継続拡大を75%として置き、材料の重複を控除しました。</p>'
         '<p>読み方：株価はすでに強い成長期待をかなり含みます。好材料でも内容が想定内なら上値は限定されやすく、Neutron遅延や買収条件悪化には敏感です。</p>'
-        '<p>次に見る数字：Q2売上、粗利率、Adjusted EBITDA、受注残、Neutron進捗、買収条件です。</p>'
+        '<p>次に見る数字：Q3売上、粗利率、Adjusted EBITDA、受注残、Neutron進捗、買収条件です。</p>'
         '<p>再計算方法：材料ごとの成功確率を更新し、売上倍率モデルの標準ケースに対する織り込み度として再計算します。</p></div>'
     )
     impact_map = {
-        "2026年Q2決算": ("+10〜22%", "-5〜+8%", "-14〜-28%", "直近業績は重要ですが、株価にはすでに高成長期待が入っているため、Neutronや買収より単発影響は抑えています。"),
+        "2026年Q3決算": ("+10〜22%", "-5〜+8%", "-14〜-28%", "直近業績は重要ですが、株価にはすでに高成長期待が入っているため、Neutronや買収より単発影響は抑えています。"),
         "Iridium買収の承認・統合": ("+18〜40%", "-8〜+12%", "-20〜-38%", "買収は売上規模とキャッシュフロー構造を変えるため大きい一方、承認・希薄化・統合リスクも大きく見ます。"),
         "Neutron開発と初回打ち上げへの道筋": ("+20〜45%", "-10〜+15%", "-25〜-45%", "Neutronは将来市場の中心材料で、成功時も遅延時も株価倍率を大きく動かすため最大レンジにしています。"),
         "HASTE / Space Force $266M契約": ("+8〜20%", "-4〜+7%", "-10〜-22%", "防衛契約は信頼性を高めますが、契約済み材料で売上認識も段階的なため中程度です。"),
     }
     description_map = {
-        "2026年Q2決算": "Q2決算は、Rocket Labの高成長期待が実際の売上、粗利率、Adjusted EBITDAに表れているかを見る材料です。すでに期待が高いため、単に成長しているだけでなく、質の良い成長かが重要です。",
+        "2026年Q3決算": "Q3決算は、Q2の62%増収が続き、高成長期待が売上、粗利率、Adjusted EBITDAに表れるかを見る材料です。会社見通し$250M〜$265Mに対する進捗が重要です。",
         "Iridium買収の承認・統合": "Iridium買収は、Rocket Labの売上規模とキャッシュフロー構造を変える大型材料です。承認、資金調達、株式希薄化、統合コストがそろって評価されます。",
         "Neutron開発と初回打ち上げへの道筋": "Neutronは中大型ロケット市場へ進むための中心材料です。開発試験、初回打ち上げ時期、顧客契約が具体化するほど、将来売上の見方が大きく変わります。",
         "HASTE / Space Force $266M契約": "HASTEとSpace Force契約は、防衛分野でRocket Labの実績と信頼性を高める材料です。契約済みのため、次はミッション開始、追加注文、採算を確認します。",
@@ -321,14 +324,14 @@ def catalyst_values() -> dict[str, str]:
 
     cards = [
         card(
-            "2026年Q2決算",
-            "2026/08/10",
-            '<span class="chip">重要度5</span><span class="chip">日程確定</span>',
+            "2026年Q3決算",
+            "2026年11月ごろ",
+            '<span class="chip">重要度5</span><span class="chip blue">時期目安</span>',
             '<span>売上・粗利率</span><i>→</i><span>倍率維持</span><i>→</i><span>株価</span>',
-            "売上がガイダンス上限を超え、粗利率とAdjusted EBITDAも改善する状態です。",
-            "売上$225M〜$240Mの範囲で、利益改善はまだ段階的な状態です。",
+            "売上が$265Mを超え、粗利率とAdjusted EBITDAも改善する状態です。",
+            "売上$250M〜$265Mの範囲で、利益改善は段階的な状態です。",
             "売上未達、粗利率悪化、費用増が見える状態です。",
-            "<li>Q1決算でQ2売上$225M〜$240Mの会社見通しを開示。</li><li>Q2決算日は2026年8月10日と公表。</li>",
+            "<li>Q2は売上$234.0M、前年比+62%で着地。</li><li>会社はQ3売上$250M〜$265Mを見込みます。</li>",
         ),
         card(
             "Iridium買収の承認・統合",
@@ -368,37 +371,37 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が集中",
-        "SUMMARY_LINE_1": "Q2決算、Iridium買収、Neutron、HASTE/Space Force契約が今後の主な材料です。",
+        "SUMMARY_LINE_1": "Q3決算、Iridium買収承認、Neutron、HASTE/Space Force契約が今後の主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を72%と推定します。",
         "OVERALL_PRICED_IN": "72%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "中〜高",
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/07 16:00 ET",
-        "NEXT_CATALYST_TITLE": "2026年Q2決算",
-        "NEXT_CATALYST_WINDOW": "2026/08/10",
-        "DATE_CONFIDENCE": "日程確定",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
+        "NEXT_CATALYST_TITLE": "2026年Q3決算と受注残更新",
+        "NEXT_CATALYST_WINDOW": "2026年11月ごろ",
+        "DATE_CONFIDENCE": "時期目安",
         "CATALYST_COUNT": "4件",
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、Q2決算、Neutron、Iridium、防衛契約を標準ケース価値へ重み付けして推定。",
-        "SURPRISE_UP": "Q2上振れ、Neutron進捗、Iridium承認、HASTE追加契約が重なることです。",
-        "SURPRISE_DOWN": "Q2未達、粗利率悪化、Neutron遅延、買収条件への懸念です。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、Q3決算、Neutron、Iridium、防衛契約を標準ケース価値へ重み付けして推定。",
+        "SURPRISE_UP": "Q3上振れ、Neutron進捗、Iridium承認、HASTE追加契約が重なることです。",
+        "SURPRISE_DOWN": "Q3未達、粗利率悪化、Neutron遅延、買収条件への懸念です。",
         "PRIMARY_RISK": "期待が高く、好材料が出ても織り込み済みと判断される可能性です。",
         "TIMELINE_ROWS": (
-            '<div class="time-row"><div class="time-date">2026/08/10</div><div class="time-dot"></div><div class="time-body"><b>Q2決算</b><p>売上、粗利率、Adjusted EBITDA、受注残を確認します。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div>'
+            '<div class="time-row"><div class="time-date">2026年11月ごろ</div><div class="time-dot"></div><div class="time-body"><b>Q3決算</b><p>売上、粗利率、Adjusted EBITDA、受注残を確認します。</p><div class="time-meta"><span class="chip blue">時期目安</span></div></div></div>'
             '<div class="time-row"><div class="time-date">2026年末以降</div><div class="time-dot"></div><div class="time-body"><b>HASTE契約の初回打ち上げ</b><p>Space Force契約の実行開始を確認します。</p><div class="time-meta"><span class="chip blue">予定</span></div></div></div>'
             '<div class="time-row"><div class="time-date">2026-2027</div><div class="time-dot"></div><div class="time-body"><b>Iridium買収</b><p>承認、資金調達、統合計画を確認します。</p><div class="time-meta"><span class="chip blue">条件付き</span></div></div></div>'
             '<div class="time-row"><div class="time-date">2026-2027</div><div class="time-dot"></div><div class="time-body"><b>Neutron進捗</b><p>試験、初回打ち上げ、顧客契約を確認します。</p><div class="time-meta"><span class="chip blue">期間のみ</span></div></div></div>'
         ),
         "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
-        "DEPENDENCY_ROWS": '<div class="signal"><div><b>Q2決算と倍率</b><span class="up">直結</span></div><p>売上と粗利率が期待を上回るほど高い倍率を支えやすくなります。</p></div><div class="signal"><div><b>Iridiumと希薄化</b><span class="flat">同時確認</span></div><p>規模拡大と資金調達の影響を分けて見る必要があります。</p></div><div class="signal"><div><b>Neutronと契約</b><span class="up">連動</span></div><p>開発進捗が大型打ち上げ契約の信頼性に影響します。</p></div>',
-        "WATCH_ROWS": '<div class="signal"><div><b>売上成長率</b><span class="up">最重要</span></div><p>Q2会社見通しの上限を超えるか見ます。</p></div><div class="signal"><div><b>GAAP粗利率</b><span class="up">重要</span></div><p>売上成長が利益へ変わっているかを確認します。</p></div><div class="signal"><div><b>受注残</b><span class="flat">確認</span></div><p>大型契約が将来売上へ積み上がっているかを見ます。</p></div><div class="signal"><div><b>株式数</b><span class="down">注意</span></div><p>買収や資金調達による希薄化を確認します。</p></div>',
-        "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認済み", DATE, "2026/08/07終値") + tr("Q2売上見通し", "$225M〜$240M", "会社の目標・予定", "2026/05/07", "2026年4〜6月") + tr("Iridium買収", "$54/株", "会社発表", "2026/06/29", "承認・完了は未反映") + tr("Space Force契約", "$266M", "会社発表", "2026/07/27", "初回は2026年末以降予定"),
-        "SOURCE_DETAILS": f'<ul><li>{source_link("Q1決算", "q1")}</li><li>{source_link("2025年10-K", "annual")}</li><li>{source_link("Iridium買収", "iridium")}</li><li>{source_link("Space Force契約", "space_force")}</li><li>{source_link("SDA進捗", "sda")}</li><li>{source_link("Q2決算日程", "q2_date")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
-        "VALIDATION_DETAILS": "<p>PASS：Q1決算、Q2日程、Iridium買収、SDA進捗、HASTE契約を確認。WARN：Q2決算は2026年8月10日予定のため、実績は未反映です。</p>",
-        "UPDATE_HISTORY": f"<p>{DATE}：初版作成。Q1決算、Q2日程、Iridium買収、SDA進捗、Space Force契約を反映。</p>",
+        "DEPENDENCY_ROWS": '<div class="signal"><div><b>Q3決算と倍率</b><span class="up">直結</span></div><p>売上と粗利率が期待を上回るほど高い倍率を支えやすくなります。</p></div><div class="signal"><div><b>Iridiumと希薄化</b><span class="flat">同時確認</span></div><p>規模拡大と資金調達の影響を分けて見る必要があります。</p></div><div class="signal"><div><b>Neutronと契約</b><span class="up">連動</span></div><p>開発進捗が大型打ち上げ契約の信頼性に影響します。</p></div>',
+        "WATCH_ROWS": '<div class="signal"><div><b>売上成長率</b><span class="up">最重要</span></div><p>Q3会社見通し$250M〜$265Mを超えるか見ます。</p></div><div class="signal"><div><b>GAAP粗利率</b><span class="up">重要</span></div><p>売上成長が利益へ変わっているかを確認します。</p></div><div class="signal"><div><b>受注残</b><span class="flat">確認</span></div><p>大型契約が将来売上へ積み上がっているかを見ます。</p></div><div class="signal"><div><b>株式数</b><span class="down">注意</span></div><p>買収や資金調達による希薄化を確認します。</p></div>',
+        "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認済み", DATE, "2026/09/29終値") + tr("Q2売上", "$234.0M", "公式情報で確認済み", "2026/08/10", "前年比+62%") + tr("Q3売上見通し", "$250M〜$265M", "会社の目標・予定", "2026/08/10", "2026年7〜9月") + tr("Iridium買収資金", "$1.944B ATM完了", "会社発表", "2026/09/15", "承認・完了は未反映"),
+        "SOURCE_DETAILS": f'<ul><li>{source_link("Q2公式決算", "q2")}</li><li>{source_link("Iridium買収", "iridium")}</li><li>{source_link("買収資金確保", "financing")}</li><li>{source_link("96回目打上げ", "launch96")}</li><li>{source_link("Space Force契約", "space_force")}</li><li>{source_link("2025年10-K", "annual")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
+        "VALIDATION_DETAILS": "<p>PASS：Q2公式決算で売上2.34億ドル、受注残23.6億ドル、Q3売上見通し2.50〜2.65億ドルを確認。Iridium買収向け19.44億ドルATM完了と96回目打上げ成功も確認。</p>",
+        "UPDATE_HISTORY": f"<p>{DATE}：Q2公式実績、Iridium買収資金確保、96回目打上げ成功、9月29日終値を反映。</p>",
         "DISCLAIMER": "本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）カタリスト｜作成日 {DATE}",
     }
@@ -424,16 +427,16 @@ def update_site_data() -> None:
     signals = json.loads(signals_path.read_text(encoding="utf-8"))
     signals["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals["signals"]["rocket-lab-rklb"] = {
-        "position": 54.8,
+        "position": round(0.60 * ((P0 - 48.0) / (130.0 - 48.0) * 100) + 0.25 * 74.0 + 0.15 * 72.0, 1),
         "zone": "中立",
         "asOf": DATE,
         "components": {
-            "valuation": 42.5,
+            "valuation": round((P0 - 48.0) / (130.0 - 48.0) * 100, 1),
             "catalysts": 74.0,
             "businessRisk": 72.0,
         },
-        "reportRevision": "rocket-lab-rklb-2026-08-08",
-        "summary": "Q1成長、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。",
+        "reportRevision": "rocket-lab-rklb-2026-09-30",
+        "summary": "Q2の62%増収、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。",
     }
     signals_path.write_text(json.dumps(signals, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

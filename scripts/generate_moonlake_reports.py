@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "moonlake-mltx"
 
 COMPANY = "ムーンレイク・イミュノセラピューティクス"
 TICKER = "MLTX"
-DATE = "2026-08-10"
-P0 = 18.26
-PREVIOUS_CLOSE = 18.03
+DATE = "2026-09-30"
+P0 = 11.45
+PREVIOUS_CLOSE = 11.56
 SHARES_M = 85.1
 MARKET_CAP_B = P0 * SHARES_M / 1000
 
@@ -30,6 +30,7 @@ SOURCES = {
     "overview": "https://ir.moonlaketx.com/",
     "events": "https://ir.moonlaketx.com/events-presentations",
     "q1": "https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-immunotherapeutics-announces-positive-outcome-its-final",
+    "q2": "https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-announces-positive-topline-results-phase-3-izar-1-trial",
     "week52": "https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-announces-week-52-results-sonelokimab-its-phase-3-vela",
     "offering": "https://www.globenewswire.com/news-release/2026/06/24/3316568/0/en/moonlake-immunotherapeutics-announces-pricing-of-upsized-200-million-public-offering.html",
     "quote": "https://stockanalysis.com/stocks/mltx/",
@@ -62,7 +63,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("VELA Week 52リリース", "week52")}、'
         f'{source_link("2026年6月増資リリース", "offering")}、'
         f'{source_link("株価・統計", "quote")}を確認しました。'
-        "本文の数値は2026年8月10日時点で取得できた公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -86,10 +87,10 @@ def guide_values() -> dict[str, str]:
         "TAGLINE": "Sonelokimabを軸に、化膿性汗腺炎、乾癬性関節炎、軸性脊椎関節炎など炎症性疾患で承認と商業化を狙う臨床段階バイオ企業です。",
         "HERO_TAGS": '<span class="hero-tag">米国株</span><span class="hero-tag">バイオ</span><span class="hero-tag">免疫疾患</span><span class="hero-tag">Nasdaq</span>',
         "HERO_STATS": (
-            f'<div class="stat"><div class="stat-value">{usd(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/08/07終値</div></div>'
+            f'<div class="stat"><div class="stat-value">{usd(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/09/29終値</div></div>'
             f'<div class="stat"><div class="stat-value">${MARKET_CAP_B:.1f}B</div><div class="stat-label">時価総額の目安</div><div class="stat-note">約8,506万株で計算</div></div>'
-            '<div class="stat"><div class="stat-value up">$357.9M</div><div class="stat-label">現金等</div><div class="stat-note">2026年1Q末</div></div>'
-            '<div class="stat"><div class="stat-value">Sep 2026</div><div class="stat-label">HS BLA提出予定</div><div class="stat-note">会社予定</div></div>'
+            '<div class="stat"><div class="stat-value up">$537.0M</div><div class="stat-label">現金等</div><div class="stat-note">2026年2Q末</div></div>'
+            '<div class="stat"><div class="stat-value">Sep 2026</div><div class="stat-label">HS BLA提出予定</div><div class="stat-note">9月30日時点で確認待ち</div></div>'
         ),
         "SEC2_LABEL": "事業モデル",
         "SEC3_LABEL": "臨床",
@@ -104,7 +105,7 @@ def guide_values() -> dict[str, str]:
         "SEC1_CARDS": (
             '<div class="card-sm"><span class="card-emoji">🧬</span><div class="card-title">何をしている</div><div class="card-desc">IL-17A/Fを狙うSonelokimabで免疫疾患を治療します。</div></div>'
             '<div class="card-sm"><span class="card-emoji">📄</span><div class="card-title">主役</div><div class="card-desc">HS向けBLAを2026年9月末に提出予定です。</div></div>'
-            '<div class="card-sm"><span class="card-emoji">💵</span><div class="card-title">資金</div><div class="card-desc">Q1末現金等に加え、6月に約2億ドルの公募増資を発表しました。</div></div>'
+            '<div class="card-sm"><span class="card-emoji">💵</span><div class="card-title">資金</div><div class="card-desc">Q2末現金等は$537.0Mで、会社はmid-2028までの資金余力を見込みます。</div></div>'
             '<div class="card-sm"><span class="card-emoji">⚠️</span><div class="card-title">リスク</div><div class="card-desc">承認審査、商業化、追加適応データの失敗が主な下落要因です。</div></div>'
         ),
         "SEC1_BIZMODEL": (
@@ -143,9 +144,9 @@ def guide_values() -> dict[str, str]:
         ),
         "SEC4_TITLE": "資金と<span class=\"g\">希薄化</span>",
         "SEC4_SUB": "承認前バイオでは資金余力も材料",
-        "SEC4_TLDR": li("Q1末の現金等は$357.9Mで、会社は2027年末までのランウェイを見込んでいます。", "*") + li("6月に約$200Mの公募増資を発表し、商業化準備資金を厚くしました。", "*") + li("増資は資金面では追い風ですが、1株価値の希薄化は短期の重しになります。", "!"),
+        "SEC4_TLDR": li("Q2末の現金等は$537.0Mで、会社はmid-2028までのランウェイを見込んでいます。", "*") + li("6月の約$200M公募増資で、商業化準備資金を厚くしました。", "*") + li("増資は資金面では追い風ですが、1株価値の希薄化は短期の重しになります。", "!"),
         "SEC4_CONTENT": (
-            '<ul class="keypoints"><li><span class="kp-emoji">💵</span><span class="kp-text"><b>現金等</b>：Q1末で$357.9M。</span></li>'
+            '<ul class="keypoints"><li><span class="kp-emoji">💵</span><span class="kp-text"><b>現金等</b>：Q2末で$537.0M。</span></li>'
             '<li><span class="kp-emoji">🏦</span><span class="kp-text"><b>追加資金</b>：Hercules Capitalの非希薄化資金枠は最大$400M。</span></li>'
             '<li><span class="kp-emoji">📈</span><span class="kp-text"><b>公募増資</b>：6月に約$200Mの資金調達を発表。</span></li></ul>'
             '<div class="sowhat"><p><b>つまり</b>、承認・販売準備に必要な資金は厚くなりましたが、増資後は「資金があるか」より「承認と販売準備が前に進むか」が問われます。</p></div>'
@@ -193,10 +194,10 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "臨床段階バイオ向けリスク調整シナリオ",
         "VERDICT_STATUS": "申請前の高リスク中立",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{BAND_POSITION:.1f}%地点です。HS承認申請の進展は上値材料ですが、審査・商業化・単一資産依存のリスクも大きい局面です。",
-        "VERDICT_LINE_2": "この試算は2026年8月10日時点で取得できた公開情報に基づきます。BLA提出、PDUFA日程、PsAデータで更新が必要です。",
+        "VERDICT_LINE_2": "2026年8月10日のQ2決算とIZAR-1 Phase 3好結果を反映しました。9月末予定のBLA提出は、正式発表を確認するまで未完了として扱います。",
         "SCORE": str(score),
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/07終値",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "BASE_PRICE": usd(BASE),
         "BASE_DELTA": pct(BASE / P0 - 1),
         "EXPECTED_VALUE": usd(expected),
@@ -240,7 +241,7 @@ def scenario_values() -> dict[str, str]:
         "DIST_ROWS": '<div class="dist-row"><span>$11</span><div class="track"><i style="width:28%"></i></div><b>28%</b></div><div class="dist-row"><span>$25</span><div class="track"><i style="width:47%"></i></div><b>47%</b></div><div class="dist-row"><span>$42</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>',
         "DIST_SUMMARY": "期待値は標準ケース寄りですが、実際の株価はBLA受理とPsAデータで上下に振れやすいです。",
         "WATCH_ROWS": '<div class="signal"><div><b>HS BLA提出</b></div><p>予定通り2026年9月末に提出されるかを確認します。</p></div><div class="signal"><div><b>FDA受理・優先審査</b></div><p>11月末見込みのPDUFA日程とPriority Reviewの可否を確認します。</p></div><div class="signal"><div><b>IZAR-1/2</b></div><p>PsAの有効性、安全性、競合比較を確認します。</p></div>',
-        "ASSUMPTIONS_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "2026/08/07終値") + tr("現金等", "$357.9M", "会社Q1リリース", "2026/03/31", "短期市場性債券含む") + tr("公募増資", "約$200M", "会社リリース", "2026/06/23", "商業化準備資金") + tr("HS BLA", "2026年9月末予定", "会社リリース", "2026/06/21", "最大材料"),
+        "ASSUMPTIONS_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "2026/09/29終値") + tr("現金等", "$537.0M", "会社Q2リリース", "2026/06/30", "短期市場性債券含む") + tr("資金余力", "mid-2028まで", "会社Q2リリース", "2026/08/10", "会社見通し") + tr("HS BLA", "2026年9月末予定", "会社リリース", "2026/06/21", "9月30日時点で完了発表を確認できず"),
         "DEEPDIVE_DETAILS": details("手法選定理由", "MLTXは商業化前の臨床段階バイオです。PERではなく、申請・審査・適応拡大の確率を反映したシナリオ法を使います。", True) + details("優先審査について", "Priority Reviewは上振れ材料ですが、FDA判断次第です。取れない場合でも会社は2027年後半の米国ローンチを想定しています。") + details("主要出典", f'{source_link("Q1・Pre-BLAリリース", "q1")}、{source_link("VELA Week 52", "week52")}、{source_link("増資リリース", "offering")}、{source_link("株価・統計", "quote")}。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a>'),
         "DISCLAIMER": "本資料は情報提供を目的とした試算です。投資助言ではありません。臨床段階バイオは治験結果、規制、資金調達で大きく変動します。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）株価シナリオ｜作成日 {DATE}",
@@ -291,13 +292,13 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "申請前",
-        "SUMMARY_LINE_1": "HS BLA提出、FDA受理・Priority Review判断、PsAデータ、商業化準備が主な材料です。",
+        "SUMMARY_LINE_1": "HS BLA提出、FDA受理・Priority Review判断、IZAR-2進捗、商業化準備が主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を42%と推定します。",
         "OVERALL_PRICED_IN": "42%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "低〜中",
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/07終値",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "NEXT_CATALYST_TITLE": "HS BLA提出",
         "NEXT_CATALYST_WINDOW": "2026年9月末",
         "DATE_CONFIDENCE": "会社予定",
@@ -313,10 +314,10 @@ def catalyst_values() -> dict[str, str]:
         "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>BLA提出とFDA受理</b><span class="up">連動</span></div><p>提出後に受理されて初めて審査スケジュールが見えます。</p></div><div class="signal"><div><b>Priority Reviewとローンチ</b><span class="flat">時期</span></div><p>優先審査の有無で販売開始期待が前後します。</p></div><div class="signal"><div><b>PsAと評価レンジ</b><span class="up">拡大</span></div><p>HS以外の価値が見えると標準ケースが上がります。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>BLA提出日</b><span class="up">最重要</span></div><p>9月末までに提出できるかを確認します。</p></div><div class="signal"><div><b>PDUFA日程</b><span class="flat">必須</span></div><p>受理・審査期限・優先審査の可否を確認します。</p></div><div class="signal"><div><b>PsA読出し</b><span class="up">重要</span></div><p>IZAR-1/2の有効性、安全性、競合比較を確認します。</p></div><div class="signal"><div><b>資金消費</b><span class="flat">注意</span></div><p>販売準備費用と追加資金調達リスクを確認します。</p></div>',
-        "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "2026/08/07終値") + tr("現金等", "$357.9M", "会社Q1リリース", "2026/03/31", "短期市場性債券含む") + tr("公募増資", "約$200M", "会社リリース", "2026/06/23", "希薄化も考慮") + tr("HS BLA", "2026年9月末予定", "会社リリース", "2026/06/21", "最大材料"),
-        "SOURCE_DETAILS": f'<ul><li>{source_link("公式IR概要", "overview")}</li><li>{source_link("2026年1Q・Pre-BLAリリース", "q1")}</li><li>{source_link("VELA Week 52リリース", "week52")}</li><li>{source_link("2026年6月増資リリース", "offering")}</li><li>{source_link("株価・統計", "quote")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
-        "VALIDATION_DETAILS": "<p>PASS：公式IR、Q1・Pre-BLAリリース、VELA Week 52、増資リリース、株価・統計ページを確認。WARN：Yahoo Finance APIは429応答だったため、株価初期値は複数の株価ページで確認した2026/08/07終値を使用し、更新スクリプトで再取得対象にします。</p>",
-        "UPDATE_HISTORY": f"<p>{DATE}：初版作成。Q1 2026、Pre-BLA完了、VELA Week 52、6月増資、9月末BLA提出予定、11月末PDUFA日程見込みを反映。</p>",
+        "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "2026/09/29終値") + tr("現金等", "$537.0M", "会社Q2リリース", "2026/06/30", "短期市場性債券含む") + tr("資金余力", "mid-2028まで", "会社Q2リリース", "2026/08/10", "会社見通し") + tr("HS BLA", "2026年9月末予定", "会社リリース", "2026/06/21", "9月30日時点で確認待ち"),
+        "SOURCE_DETAILS": f'<ul><li>{source_link("公式IR概要", "overview")}</li><li>{source_link("2026年Q2・IZAR-1リリース", "q2")}</li><li>{source_link("2026年1Q・Pre-BLAリリース", "q1")}</li><li>{source_link("VELA Week 52リリース", "week52")}</li><li>{source_link("2026年6月増資リリース", "offering")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
+        "VALIDATION_DETAILS": "<p>PASS：公式IR、Q2・IZAR-1 Phase 3結果、Q1・Pre-BLA、VELA Week 52、増資を確認。Q2末現金等5.37億ドルとmid-2028までの資金余力を反映。</p>",
+        "UPDATE_HISTORY": f"<p>{DATE}：Q2決算、IZAR-1 Phase 3好結果、BLA提出確認待ち、9月29日終値を反映。</p>",
         "DISCLAIMER": "本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）カタリスト｜作成日 {DATE}",
     }
@@ -383,7 +384,7 @@ def upsert_site_data() -> None:
             "catalysts": 78.0,
             "businessRisk": 82.0,
         },
-        "reportRevision": "moonlake-mltx-2026-08-10",
+        "reportRevision": "moonlake-mltx-2026-09-30",
         "summary": "HS BLA提出とFDA受理が最大材料。Week 52と資金調達は支えだが、商業化前・単一資産依存のため中立。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

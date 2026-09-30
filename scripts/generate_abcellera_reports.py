@@ -14,10 +14,10 @@ OUT_DIR = ROOT / "stocks" / "abcellera-abcl"
 
 COMPANY = "アブセレラ"
 TICKER = "ABCL"
-DATE = "2026-08-13"
-P0 = 10.355
-PREVIOUS_CLOSE = 9.76
-SHARES_M = 305.38
+DATE = "2026-09-30"
+P0 = 14.82
+PREVIOUS_CLOSE = 13.92
+SHARES_M = 325.89
 MARKET_CAP_B = P0 * SHARES_M / 1000
 
 BEAR = 6.00
@@ -32,6 +32,9 @@ SOURCES = {
     "q1": "https://investors.abcellera.com/news/news-releases/2026/AbCellera-Reports-Q1-2026-Business-Results--Announces-Positive-Interim-Phase-1-Clinical-Data-for-ABCL635/default.aspx",
     "q2_date": "https://investors.abcellera.com/news/news-releases/2026/AbCellera-to-Report-Second-Quarter-2026-Financial-Results-on-August-5-2026/default.aspx",
     "phase2_news": "https://www.barrons.com/articles/abcellera-stock-menopause-drug-f6dfa1ca",
+    "phase2": "https://investors.abcellera.com/news/news-releases/2026/AbCellera-Announces-Positive-Top-Line-Phase-2-Clinical-Trial-Results-for-ABCL635-Demonstrating-Significant-Reduction-in-Frequency-and-Severity-of-Vasomotor-Symptoms-and-a-Favorable-Tolerability-Profile/default.aspx",
+    "offering": "https://investors.abcellera.com/news/news-releases/2026/AbCellera-Announces-Pricing-of-Oversubscribed-200-Million-Public-Offering-of-Common-Shares-and-Pre-Funded-Warrants/default.aspx",
+    "ims": "https://investors.abcellera.com/news/news-releases/2026/AbCellera-Announces-Presentation-of-Phase-2-Data-for-ABCL635-at-the-IMS-World-Congress-on-Menopause-2026/default.aspx",
     "sec_q1": "https://www.sec.gov/Archives/edgar/data/1703057/000170305726000028/abcl-20260331.htm",
     "news": "https://investors.abcellera.com/news/default.aspx",
     "quote": "https://stockanalysis.com/stocks/abcl/",
@@ -65,7 +68,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("ABCL635 Phase 2報道", "phase2_news")}、'
         f'{source_link("SEC 10-Q", "sec_q1")}、'
         f'{source_link("株価・統計", "quote")}を確認しました。'
-        "本文の数値は2026年8月13日時点で取得できた公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -197,10 +200,10 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "臨床段階バイオ向けリスク調整シナリオ",
         "VERDICT_STATUS": "Phase 2好結果後の中立からやや強気",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{BAND_POSITION:.1f}%地点です。Phase 2好結果で標準ケースに近づきましたが、後期試験前のバイオ株としてリスクは残ります。",
-        "VERDICT_LINE_2": "この試算は2026年8月13日時点で取得できた公開情報に基づきます。Phase 2詳細、後期試験設計、Q2以降の資金消費で更新が必要です。",
+        "VERDICT_LINE_2": "この試算は2026年9月30日時点の公開情報を反映しています。8月の2億ドル増資後の株式数と、10月1日のIMS学会発表を更新しました。",
         "SCORE": str(score),
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "取得可能な直近株価",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "BASE_PRICE": usd(BASE),
         "BASE_DELTA": pct(BASE / P0 - 1),
         "EXPECTED_VALUE": usd(expected),
@@ -294,15 +297,15 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "Phase 2好結果後",
-        "SUMMARY_LINE_1": "ABCL635 Phase 2好結果、後期試験計画、Q2以降の資金消費、Jazz提携、追加候補の臨床入りが主な材料です。",
+        "SUMMARY_LINE_1": "ABCL635のIMS学会発表、後期試験計画、増資後の資金消費、ABCL575データが主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を64%と推定します。",
         "OVERALL_PRICED_IN": "64%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "低〜中",
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "Phase 2好結果後の更新基準",
-        "NEXT_CATALYST_TITLE": "ABCL635 Phase 2詳細と後期試験計画",
-        "NEXT_CATALYST_WINDOW": "今後",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
+        "NEXT_CATALYST_TITLE": "ABCL635 Phase 2データのIMS学会発表",
+        "NEXT_CATALYST_WINDOW": "2026/10/01",
         "DATE_CONFIDENCE": "時期未定",
         "CATALYST_COUNT": "4件",
         "WARN_BAND": "",
@@ -317,9 +320,9 @@ def catalyst_values() -> dict[str, str]:
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>ABCL635と資金余力</b><span class="up">連動</span></div><p>良いデータでも次試験に進む資金余力が重要です。</p></div><div class="signal"><div><b>提携と下流権利</b><span class="flat">長期</span></div><p>短期株価より長期価値の材料です。</p></div><div class="signal"><div><b>追加候補</b><span class="up">分散</span></div><p>ABCL635依存を下げる材料になります。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>Phase 2詳細</b><span class="up">最重要</span></div><p>頻度・重症度の改善幅、睡眠、全体的状態、安全性を確認します。</p></div><div class="signal"><div><b>後期試験設計</b><span class="flat">必須</span></div><p>用量、試験規模、主要評価項目、開始時期を確認します。</p></div><div class="signal"><div><b>流動性</b><span class="up">重要</span></div><p>現金、有価証券、政府資金、バーンを確認します。</p></div><div class="signal"><div><b>提携進捗</b><span class="flat">長期</span></div><p>下流権利付きプログラムの質を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "Phase 2好結果後の更新基準") + tr("利用可能流動性", "約$655M", "会社Q1リリース", "2026/03/31", "政府資金含む") + tr("ABCL635 Phase 2", "好結果報道", "報道・公式情報確認", "2026/08", "詳細確認を継続") + tr("次の材料", "後期試験計画", "会社方針と報道から推定", "今後", "最重要"),
-        "SOURCE_DETAILS": f'<ul><li>{source_link("公式IR概要", "overview")}</li><li>{source_link("四半期決算資料", "quarterly")}</li><li>{source_link("Q1決算リリース", "q1")}</li><li>{source_link("ABCL635 Phase 2報道", "phase2_news")}</li><li>{source_link("SEC 10-Q", "sec_q1")}</li><li>{source_link("株価・統計", "quote")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
-        "VALIDATION_DETAILS": "<p>PASS：公式IR、四半期決算ページ、Q1決算リリース、SEC 10-Q、ABCL635 Phase 2報道、株価・統計ページを確認。WARN：Q2詳細本文は取得できた公式ページで未確認のため、公開後も更新確認が必要です。</p>",
-        "UPDATE_HISTORY": f"<p>{DATE}：更新。ABCL635 Phase 2好結果報道、株価反応、後期試験計画への確認軸を反映。</p>",
+        "SOURCE_DETAILS": f'<ul><li>{source_link("公式IR概要", "overview")}</li><li>{source_link("四半期決算資料", "quarterly")}</li><li>{source_link("ABCL635 Phase 2公式発表", "phase2")}</li><li>{source_link("2億ドル増資", "offering")}</li><li>{source_link("IMS学会発表予定", "ims")}</li><li>{source_link("株価・統計", "quote")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
+        "VALIDATION_DETAILS": "<p>PASS：公式IR、ABCL635 Phase 2公式発表、2億ドル増資、IMS学会発表予定、四半期決算資料を確認。増資による株式数増加を時価総額とシナリオへ反映しました。</p>",
+        "UPDATE_HISTORY": f"<p>{DATE}：Phase 2公式結果、2億ドル増資、IMS学会発表予定、9月29日終値を反映。</p>",
         "DISCLAIMER": "本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）カタリスト｜作成日 {DATE}",
     }
@@ -379,14 +382,14 @@ def upsert_site_data() -> None:
     signals_payload["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals_payload.setdefault("signals", {})["abcellera-abcl"] = {
         "position": SIGNAL_POSITION,
-        "zone": "中立",
+        "zone": "買われすぎ",
         "asOf": DATE,
         "components": {
             "valuation": round(BAND_POSITION, 1),
             "catalysts": 88.0,
             "businessRisk": 70.0,
         },
-        "reportRevision": "abcellera-abcl-2026-08-13",
+        "reportRevision": "abcellera-abcl-2026-09-30",
         "summary": "ABCL635のPhase 2好結果で株価は再評価。次は後期試験設計、資金消費、データ詳細を確認するため中立からやや強気。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

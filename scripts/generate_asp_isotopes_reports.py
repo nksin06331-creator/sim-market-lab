@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "asp-isotopes-aspi"
 
 COMPANY = "ASPアイソトープス"
 TICKER = "ASPI"
-DATE = "2026-08-09"
-P0 = 4.43
-PREVIOUS_CLOSE = 4.10
+DATE = "2026-09-30"
+P0 = 2.635
+PREVIOUS_CLOSE = 2.60
 SHARES_M = 153.3
 MARKET_CAP_B = P0 * SHARES_M / 1000
 BEAR = 2.50
@@ -31,6 +31,7 @@ SOURCES = {
     "q1": "https://www.sec.gov/Archives/edgar/data/1921865/000119312526232658/aspi-20260331.htm",
     "news": "https://ir.aspisotopes.com/news-events",
     "renergen": "https://ir.aspisotopes.com/news-events/press-releases/detail/116/asp-isotopes-inc-announces-that-renergen-limiteds",
+    "capital_markets_day": "https://ir.aspisotopes.com/sec-filings/all-sec-filings/content/0001193125-26-384527/aspi-ex99_1.htm",
     "presentation": "https://ir.aspisotopes.com/news-events/presentations",
     "price": "https://stockanalysis.com/stocks/aspi/history/",
 }
@@ -58,7 +59,7 @@ def source_details() -> str:
         f'{source_link("Renergen契約ニュース", "renergen")}、'
         f'{source_link("会社プレゼン", "presentation")}、'
         f'{source_link("株価時系列", "price")}を確認しました。'
-        "本文の数値は2026年8月9日時点で取得できた公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
 
@@ -86,7 +87,7 @@ def guide_values() -> dict[str, str]:
         "TAGLINE": "医療、半導体、量子、原子力向けの濃縮同位体と、Renergen由来のヘリウム/LNG資産を持つ高リスク材料株です。",
         "HERO_TAGS": '<span class="hero-tag">米国株</span><span class="hero-tag">同位体</span><span class="hero-tag">核燃料</span><span class="hero-tag">ヘリウム</span>',
         "HERO_STATS": (
-            f'<div class="stat"><div class="stat-value">{usd(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/08/07終値</div></div>'
+            f'<div class="stat"><div class="stat-value">{usd(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/09/29終値</div></div>'
             f'<div class="stat"><div class="stat-value">${MARKET_CAP_B:.1f}B</div><div class="stat-label">時価総額の目安</div><div class="stat-note">約1.53億株で計算</div></div>'
             '<div class="stat"><div class="stat-value up">$290.5M</div><div class="stat-label">現金+短期投資</div><div class="stat-note">2026年1Q 10-Q</div></div>'
             '<div class="stat"><div class="stat-value">Q3 2026</div><div class="stat-label">重要時期</div><div class="stat-note">商業出荷・Renergen確認</div></div>'
@@ -193,10 +194,10 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "商業化前テーマ株向けリスク調整シナリオ",
         "VERDICT_STATUS": "悲観寄りの高リスク中立",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{BAND_POSITION:.1f}%地点です。上値材料は大きい一方、商業出荷・Renergen・規制の確認前です。",
-        "VERDICT_LINE_2": "この試算は2026年8月9日時点の公開情報と2026年8月7日終値を基準にしています。",
+        "VERDICT_LINE_2": "この試算は2026年9月30日時点の公開情報と9月29日終値を基準にしています。9月のCapital Markets Dayと液体ヘリウム設備の試運転開始を反映しました。",
         "SCORE": str(score),
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/07終値",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "BASE_PRICE": usd(BASE),
         "BASE_DELTA": f"{(BASE / P0 - 1) * 100:+.1f}%",
         "EXPECTED_VALUE": usd(expected),
@@ -291,15 +292,15 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "商業化確認待ち",
-        "SUMMARY_LINE_1": "C-14・Yb-176出荷、Renergen Phase 1、Si-28、QLE/HALEUが主な材料です。",
+        "SUMMARY_LINE_1": "安定同位体の初回商業出荷、Renergenの液体ヘリウム生産、医療事業売上、QLE/HALEUが主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を34%と推定します。",
         "OVERALL_PRICED_IN": "34%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "低〜中",
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/07終値",
-        "NEXT_CATALYST_TITLE": "C-14・Yb-176初期商業出荷",
-        "NEXT_CATALYST_WINDOW": "2026年Q3",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
+        "NEXT_CATALYST_TITLE": "安定同位体の初回商業出荷と液体ヘリウム生産",
+        "NEXT_CATALYST_WINDOW": "今後12カ月",
         "DATE_CONFIDENCE": "会社予定",
         "CATALYST_COUNT": "4件",
         "WARN_BAND": "",
@@ -314,9 +315,9 @@ def catalyst_values() -> dict[str, str]:
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>出荷と資金</b><span class="up">連動</span></div><p>良い出荷でも、資金調達条件が悪いと評価は伸びにくいです。</p></div><div class="signal"><div><b>Renergenと契約</b><span class="flat">確認</span></div><p>契約が生産と現金収入に変わるかを見ます。</p></div><div class="signal"><div><b>QLEと規制</b><span class="flat">長期</span></div><p>許認可が進まないと大型テーマは評価されにくいです。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>初期商業出荷</b><span class="up">最重要</span></div><p>出荷日、数量、顧客、粗利を確認します。</p></div><div class="signal"><div><b>Renergen生産</b><span class="up">重要</span></div><p>LNGと液体ヘリウムの稼働を確認します。</p></div><div class="signal"><div><b>現金と株式数</b><span class="down">注意</span></div><p>資金調達と希薄化を確認します。</p></div><div class="signal"><div><b>規制</b><span class="flat">長期</span></div><p>QLE/HALEUの許認可を確認します。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", "2026/08/07", "自動更新後の終値") + tr("現金+短期投資", "$290.5M", "Q1 2026 10-Q", "2026/03/31", "現金$207.3M+短期投資$83.2M") + tr("Renergen契約", "Phase 1 LNGの約75%", "会社発表", "2026/08/06", "take-or-pay契約") + tr("同位体出荷", "2026年Q3中心", "会社資料", DATE, "初期商業出荷確認が必要"),
-        "SOURCE_DETAILS": f'<ul><li>{source_link("会社情報", "company")}</li><li>{source_link("決算資料", "financials")}</li><li>{source_link("Q1 2026 10-Q", "q1")}</li><li>{source_link("Renergen契約ニュース", "renergen")}</li><li>{source_link("会社プレゼン", "presentation")}</li><li>{source_link("株価時系列", "price")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
-        "VALIDATION_DETAILS": "<p>PASS：会社情報、決算資料、Q1 2026 10-Q、Renergen契約ニュース、株価時系列を確認。WARN：商業出荷、Renergen生産、QLE/HALEUは今後の実行確認が必要です。</p>",
-        "UPDATE_HISTORY": f"<p>{DATE}：統一テンプレート版へ修正。Q1 2026 10-Q、Renergen契約、2026年8月7日終値を反映。</p>",
+        "SOURCE_DETAILS": f'<ul><li>{source_link("会社情報", "company")}</li><li>{source_link("決算資料", "financials")}</li><li>{source_link("Capital Markets Day", "capital_markets_day")}</li><li>{source_link("Renergen契約ニュース", "renergen")}</li><li>{source_link("会社プレゼン", "presentation")}</li><li>{source_link("株価時系列", "price")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
+        "VALIDATION_DETAILS": "<p>PASS：会社情報、Q2決算ページ、Capital Markets Day、Renergenの液体ヘリウム試運転開始を確認。WARN：安定同位体の商業出荷は遅延しており、実出荷の確認が必要です。</p>",
+        "UPDATE_HISTORY": f"<p>{DATE}：Capital Markets Day、液体ヘリウム設備の試運転開始、今後12カ月の事業目標、9月29日終値を反映。</p>",
         "DISCLAIMER": "本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）カタリスト｜作成日 {DATE}",
     }
@@ -382,7 +383,7 @@ def upsert_site_data() -> None:
             "catalysts": 72.0,
             "businessRisk": 82.0,
         },
-        "reportRevision": "asp-isotopes-aspi-2026-08-09-unified",
+        "reportRevision": "asp-isotopes-aspi-2026-09-30",
         "summary": "同位体出荷、Renergen、QLE/HALEUが材料。株価は悲観寄りだが、商業化と規制の実行リスクが高いため中立。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

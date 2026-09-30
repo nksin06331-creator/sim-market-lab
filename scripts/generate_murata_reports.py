@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Generate Murata Manufacturing report HTML files from the SiM templates."""
 
 from __future__ import annotations
@@ -13,9 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "stocks" / "murata-6981"
 COMPANY = "村田製作所"
 TICKER = "6981"
-DATE = "2026-08-24"
-P0 = 7091.0
-PREVIOUS_CLOSE = 7205.0
+DATE = "2026-09-30"
+P0 = 7932.0
+PREVIOUS_CLOSE = 8089.0
 SHARES_M = 1819.637
 MARKET_CAP_TN = P0 * SHARES_M / 1_000_000
 BEAR_PRICE = 4200.0
@@ -86,7 +87,7 @@ def guide_values() -> dict[str, str]:
         "TAGLINE": "MLCCを中心に、通信、モビリティ、AIサーバー向けの電子部品を世界へ供給する総合電子部品メーカーです。",
         "HERO_TAGS": '<span class="hero-tag">日本株</span><span class="hero-tag">MLCC</span><span class="hero-tag">AIサーバー</span><span class="hero-tag">モビリティ</span>',
         "HERO_STATS": (
-            f'<div class="stat"><div class="stat-value">{yen(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/08/21終値</div></div>'
+            f'<div class="stat"><div class="stat-value">{yen(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/09/30 10時台</div></div>'
             f'<div class="stat"><div class="stat-value">{MARKET_CAP_TN:.1f}兆円</div><div class="stat-label">時価総額の目安</div><div class="stat-note">自己株式控除後で概算</div></div>'
             '<div class="stat"><div class="stat-value up">5,023億円</div><div class="stat-label">2027年3月期1Q売上</div><div class="stat-note">前年同期比20.7%増</div></div>'
             '<div class="stat"><div class="stat-value">985億円</div><div class="stat-label">同1Q営業利益</div><div class="stat-note">前年同期比59.8%増</div></div>'
@@ -128,15 +129,15 @@ def scenario_values() -> dict[str, str]:
         "COMPANY_NAME": COMPANY, "TICKER": TICKER, "EXCHANGE": "東京証券取引所プライム市場", "VALUATION_DATE": DATE,
         "METHOD": "景気循環電子部品向けPERシナリオ", "VERDICT_STATUS": "期待がかなり入った価格帯",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{band:.1f}%地点です。1Q上振れとAIサーバー成長を強く反映しています。",
-        "VERDICT_LINE_2": "分析値は2026年8月24日に固定し、株価は8月21日終値7,091円を使用しています。",
-        "SCORE": str(score), "CURRENT_PRICE": yen(P0), "CURRENT_PRICE_NOTE": "2026/08/21 15:30", "BASE_PRICE": yen(base), "BASE_DELTA": "-12.6%", "EXPECTED_VALUE": yen(expected), "EXPECTED_DELTA": "-11.5%",
+        "VERDICT_LINE_2": "2026年9月30日時点の公開情報と株価を反映しました。自己株式取得の進捗を確認し、次は10月30日の2Q決算を見ます。",
+        "SCORE": str(score), "CURRENT_PRICE": yen(P0), "CURRENT_PRICE_NOTE": "2026/09/30 10時台", "BASE_PRICE": yen(base), "BASE_DELTA": f"{(base / P0 - 1) * 100:+.1f}%", "EXPECTED_VALUE": yen(expected), "EXPECTED_DELTA": f"{(expected / P0 - 1) * 100:+.1f}%",
         "RISK_CLASS": "中", "RISK_NOTE": "電子部品循環、為替、高い評価倍率", "WARN_BAND": '<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>会社予想EPS185.68円に対して評価基準株価は約38倍です。好材料が強く入った局面として前提の下振れを確認してください。</div></div>',
         "SNAPSHOT_LEAD": "会社は通期予想を上方修正しました。一方、株価は標準ケースを上回り、AIサーバー成長と利益率改善の継続をかなり先取りしています。",
         "BAND_POSITION": f"{band:.1f}%", "ZONE_JUDGE": "標準ケースより上", "ZONE_NOTE": "楽観ケースにはAIサーバー需要の継続、利益率維持、円安が必要です。",
         "BEAR_PRICE": yen(bear), "BULL_PRICE": yen(bull), "ENDPOINT_RR": f"{rr:.1f}倍", "MARKET_SCORE": str(round(band)), "OWN_SCORE": str(round(own)),
         "MARKET_REVERSE_NOTE": "会社予想EPS185.68円に対する現値PERは約38倍です。このモデルでは、2028年3月期EPSが約220円へ伸び、32倍前後の倍率が続く前提に近い水準です。市場全体の予想ではなくモデル上の逆算です。",
         "SCENARIOS_LEAD": "現在株価から独立して、2028年3月期の正常化EPSと電子部品企業としてのPERを組み合わせました。",
-        "BEAR_PROB": "25%", "BASE_PROB": "50%", "BULL_PROB": "25%", "BEAR_DELTA": "-40.8%", "BULL_DELTA": "+19.9%",
+        "BEAR_PROB": "25%", "BASE_PROB": "50%", "BULL_PROB": "25%", "BEAR_DELTA": f"{(bear / P0 - 1) * 100:+.1f}%", "BULL_DELTA": f"{(bull / P0 - 1) * 100:+.1f}%",
         "BEAR_DL_ROWS": dl([("2028年3月期EPS", "175円"), ("PER", "24.0倍"), ("条件", "AI投資鈍化、円高、値下げ、稼働率低下")]),
         "BASE_DL_ROWS": dl([("2028年3月期EPS", "200円"), ("PER", "31.0倍"), ("条件", "会社予想達成後、AI・車向けが巡航成長")]),
         "BULL_DL_ROWS": dl([("2028年3月期EPS", "225円"), ("PER", "37.8倍"), ("条件", "AIサーバー高成長、製品構成改善、円安継続")]),
@@ -144,7 +145,7 @@ def scenario_values() -> dict[str, str]:
         "SIGNAL_ROWS": tr([("2026/10/30", "2Q決算", "上期会社予想とコンピュータ用途の進捗"), ("2026/11/30", "IR Day", "AIサーバー、能力増強、中期方針"), ("四半期", "MLCC受注・稼働", "受注出荷比率、値下げ、製品構成"), ("随時", "為替", "会社前提155円/USDとの差")]),
         "POSITIVES": li("1Q売上は前年同期比20.7%増、営業利益は59.8%増でした。", "+") + li("会社は通期売上と営業利益を上方修正しました。", "+") + li("コンピュータ用途は1Qに47.0%増加しました。", "+"),
         "CONCERNS": li("株価は会社予想EPSの約38倍で、期待が高い水準です。", "-") + li("会社予想には第2四半期以降155円/USDを使用しています。", "-") + li("電子部品の値下げ、在庫調整、競合増産で利益率が変動します。", "-"),
-        "ASSUMPTIONS_ROWS": tr([("評価時点", "2026/08/24", "公式情報で確認済み"), ("評価基準株価", "7,091円", "2026/08/21終値"), ("希薄化後株式数", "約18.20億株", "1Q期中平均株式数"), ("通期会社予想EPS", "185.68円", "2027年3月期"), ("純現金の目安", "約5,480億円", "現金等－借入金－リース負債")]),
+        "ASSUMPTIONS_ROWS": tr([("評価時点", DATE, "公式情報で確認済み"), ("評価基準株価", yen(P0), "2026/09/30 10時台"), ("希薄化後株式数", "約18.20億株", "1Q期中平均株式数"), ("通期会社予想EPS", "185.68円", "2027年3月期"), ("純現金の目安", "約5,480億円", "現金等－借入金－リース負債")]),
         "CONDITIONS": li("悲観：AI投資減速、円高、一般品の値下げと稼働率低下。", "-") + li("標準：会社予想達成後、AI・車向けが巡航成長。", "*") + li("楽観：AIサーバー向け高成長と製品構成改善が継続。", "+"),
         "CALC_TABLE_HEAD": th(["ケース", "EPS", "PER", "1株価値"]), "CALC_TABLE_ROWS": tr([("悲観", "175円", "24.0倍", yen(bear)), ("標準", "200円", "31.0倍", yen(base)), ("楽観", "225円", "37.8倍", yen(bull))]),
         "FORMULA": "1株価値 ＝ 2028年3月期の条件付きEPS × 条件付きPER", "CALC_NOTICE": "PERは電子部品循環、成長率、財務余力、現在の市場評価を踏まえたこのレポートの推定です。",
@@ -152,7 +153,7 @@ def scenario_values() -> dict[str, str]:
         "DIST_LEAD": "連続分布ではなく、3ケースだけの離散分布です。", "DIST_ROWS": tr([("悲観", yen(bear), "25%"), ("標準", yen(base), "50%"), ("楽観", yen(bull), "25%")]), "DIST_SUMMARY": f"3ケースを確率でならした値は{yen(expected)}です。",
         "DEEPDIVE_DETAILS": details("評価手法と逆算", "景気循環企業として2028年3月期の正常化EPSにPERを掛けました。現値はEPS220円・PER約32倍に相当します。", True) + details("株式数と財務", "1Q期中平均株式数約18.20億株を使用。2026年6月末の現金等5,575億円に対し、借入金とリース負債は約554億円です。自己株取得は将来EPSの上振れ要因ですが、価格と取得時期が未確定のため株式数へ先取りしていません。") + details("主要出典", common_sources + '<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a>'),
         "WATCH_ROWS": tr([("2Q決算", "2026/10/30", "上期売上・利益、用途別売上、通期予想"), ("IR Day", "2026/11/30", "AIサーバー需要、能力増強、中期目標"), ("為替", "随時", "155円/USD前提との差")]),
-        "WARN_MESSAGE": "評価倍率が高いため、業績が伸びても期待未達で下落する可能性があります。", "DISCLAIMER": "本レポートは情報提供を目的とした条件付き試算であり、売買を推奨するものではありません。", "FOOTER_NOTE": "分析値は2026年8月24日時点で固定しています。",
+        "WARN_MESSAGE": "評価倍率が高いため、業績が伸びても期待未達で下落する可能性があります。", "DISCLAIMER": "本レポートは情報提供を目的とした条件付き試算であり、売買を推奨するものではありません。", "FOOTER_NOTE": f"分析値は{DATE}時点で固定しています。",
     }
 
 
@@ -190,22 +191,22 @@ def catalyst_values() -> dict[str, str]:
         card("MLCC受注・稼働率と製品構成", "四半期ごと", '<span class="chip">重要度5</span><span class="chip blue">継続材料</span>', '<span>受注</span><i>→</i><span>稼働率</span><i>→</i><span>利益率</span>', "受注が出荷を上回り、AI・車向け高付加価値品の比率も上昇する状態です。", "能力増強と需要が均衡し、会社予想どおりの利益率を維持する状態です。", "顧客在庫調整、一般品の値下げ、工場稼働率低下が重なる状態です。", "<li>1Qコンデンサ売上は前年同期比30.0%増でした。</li><li>データセンターとモビリティ向けが増加しました。</li>", "<li>受注出荷比率の低下</li><li>製品価格の下落</li><li>在庫増加と操業度益の縮小</li>"),
     ]
     return {
-        "COMPANY_NAME": COMPANY, "TICKER": TICKER, "EXCHANGE": "東京証券取引所プライム市場", "VALUATION_DATE": DATE, "LAST_UPDATED": "2026/08/24",
-        "REPORT_STATUS": "期待が先に高まっている", "CATALYST_COUNT": "3", "NEXT_CATALYST_WINDOW": "2026/10/30", "NEXT_CATALYST_TITLE": "2027年3月期 第2四半期決算",
+        "COMPANY_NAME": COMPANY, "TICKER": TICKER, "EXCHANGE": "東京証券取引所プライム市場", "VALUATION_DATE": DATE, "LAST_UPDATED": DATE,
+        "REPORT_STATUS": "強い期待が株価に入っている", "CATALYST_COUNT": "3", "NEXT_CATALYST_WINDOW": "2026/10/30", "NEXT_CATALYST_TITLE": "2027年3月期 第2四半期決算",
         "SUMMARY_LINE_1": "AIサーバー向け需要と通期上方修正は強い一方、現在株価には大幅な利益成長がかなり入っています。",
         "SUMMARY_LINE_2": f"重複する材料を一つの期待グループに束ね、全体の推定織り込み度を{OVERALL_PRICED_PCT}%と逆算します。",
-        "CURRENT_PRICE": yen(P0), "CURRENT_PRICE_NOTE": "2026/08/21 15:30", "OVERALL_PRICED_IN": f"{OVERALL_PRICED_PCT}%", "OVERALL_PRICED_LABEL": "総合期待の推定織り込み", "PRICED_IN_CONFIDENCE": "低〜中", "DATE_CONFIDENCE": "高い",
+        "CURRENT_PRICE": yen(P0), "CURRENT_PRICE_NOTE": "2026/09/30 10時台", "OVERALL_PRICED_IN": f"{OVERALL_PRICED_PCT}%", "OVERALL_PRICED_LABEL": "総合期待の推定織り込み", "PRICED_IN_CONFIDENCE": "低〜中", "DATE_CONFIDENCE": "高い",
         "OVERALL_PRICED_BLOCK": priced_block,
         "PRICED_IN_METHOD": f"依存材料を1グループに束ね、(現在株価{yen(P0)}－Bear {yen(BEAR_PRICE)})÷(Bull {yen(BULL_PRICE)}－Bear {yen(BEAR_PRICE)})で逆算。個別割合は平均していません。", "SURPRISE_UP": "追加上方修正とAI向け能力・採算の強い見通し", "SURPRISE_DOWN": "AI需要鈍化、値下げ、円高、通期予想の未達", "PRIMARY_RISK": "高い期待倍率の反動",
         "TIMELINE_ROWS": '<div class="time-row"><div class="time-date">2026/07/31</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期1Q決算</b><p>通期予想を上方修正し、AIサーバー需要の強さを確認。</p><div class="time-meta"><span class="chip">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/10/30</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期2Q決算</b><p>上方修正後の上期進捗と通期予想を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2026/11/30</div><div class="time-dot"></div><div class="time-body"><b>2026年度 IR Day</b><p>AIサーバー、能力増強、中期方針2027を確認。</p><div class="time-meta"><span class="chip blue">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2027/02/02</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期3Q決算</b><p>通期計画の達成確度を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div>',
         "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>2Q決算とIR Day</b><span class="up">連動</span></div><p>同じAI需要と中期利益率を確認するため、価値を重複加算しません。</p></div><div class="signal"><div><b>MLCC需給と業績</b><span class="flat">共通前提</span></div><p>受注、稼働率、製品構成が決算数値へ反映されます。</p></div><div class="signal"><div><b>為替</b><span class="down">注意</span></div><p>会社予想155円/USDとの差を業績影響として一度だけ反映します。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>コンピュータ用途売上</b><span class="up">最重要</span></div><p>AIサーバー向け成長の持続性を確認します。</p></div><div class="signal"><div><b>コンデンサ受注</b><span class="up">重要</span></div><p>受注が出荷を上回る状態が続くかを確認します。</p></div><div class="signal"><div><b>営業利益率</b><span class="flat">確認</span></div><p>操業度益と高付加価値品の効果を確認します。</p></div><div class="signal"><div><b>為替・値下げ</b><span class="down">注意</span></div><p>155円/USD前提と製品価格低下の影響を確認します。</p></div>',
-        "ASSUMPTION_ROWS": tr([("評価基準株価", "7,091円", "市場データで確認済み", "2026/08/21", "終値"), ("通期会社予想", "売上2兆1,100億円", "会社の目標・予定", "2026/07/31", "営業利益4,300億円"), ("会社予想EPS", "185.68円", "会社の目標・予定", "2026/07/31", "2027年3月期"), ("為替前提", "155円/USD", "会社の目標・予定", "2026/07/31", "第2四半期以降")]),
+        "ASSUMPTION_ROWS": tr([("評価基準株価", yen(P0), "市場データで確認済み", DATE, "10時台"), ("通期会社予想", "売上2兆1,100億円", "会社の目標・予定", "2026/07/31", "営業利益4,300億円"), ("会社予想EPS", "185.68円", "会社の目標・予定", "2026/07/31", "2027年3月期"), ("為替前提", "155円/USD", "会社の目標・予定", "2026/07/31", "第2四半期以降")]),
         "SOURCE_DETAILS": '<ul><li>' + source_link("1Q決算短信", "q1") + '</li><li>' + source_link("公式IR", "ir") + '</li><li>' + source_link("業績予想", "forecast") + '</li><li>' + source_link("IRカレンダー", "calendar") + '</li><li>' + source_link("中期方針2027", "strategy") + '</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
         "VALIDATION_DETAILS": "<p>PASS：公式IR、1Q決算短信、業績予想、IRカレンダー、中期方針2027、株価時系列を確認。3結果の影響幅は共通のEPS・PERモデルで再計算し、重複材料は合算していません。</p>",
-        "UPDATE_HISTORY": "<p>2026/08/24：初版作成。1Q決算、通期上方修正、AIサーバー需要、公式IR日程を反映。</p>", "NO_CATALYST_NOTICE": "", "WARN_BAND": '<div class="wrap"><div class="notice"><b>注意：</b>好決算の発表だけでは十分ではありません。現在の高い評価倍率を維持できる追加情報が必要です。</div></div>',
-        "DISCLAIMER": "本レポートは情報提供を目的とした条件付き試算であり、売買を推奨するものではありません。", "FOOTER_NOTE": "分析値は2026年8月24日時点で固定しています。",
+        "UPDATE_HISTORY": f"<p>{DATE}：株価、現在地、2Q決算・IR Day日程の確認状況を更新。</p>", "NO_CATALYST_NOTICE": "", "WARN_BAND": '<div class="wrap"><div class="notice"><b>注意：</b>好決算の発表だけでは十分ではありません。現在の高い評価倍率を維持できる追加情報が必要です。</div></div>',
+        "DISCLAIMER": "本レポートは情報提供を目的とした条件付き試算であり、売買を推奨するものではありません。", "FOOTER_NOTE": f"分析値は{DATE}時点で固定しています。",
     }
 
 
@@ -229,7 +230,9 @@ def upsert_site_data() -> None:
     prices["quoteCount"] = len(prices["prices"]); prices["generatedAt"] = now
     prices_path.write_text(json.dumps(prices, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     signals = json.loads(signals_path.read_text(encoding="utf-8"))
-    signals["signals"][stock_id] = {"position": 68.3, "zone": "中立", "asOf": DATE, "components": {"valuation": 67.2, "catalysts": 76.0, "businessRisk": 60.0}, "reportRevision": "murata-6981-2026-08-24", "summary": "1Q上振れとAIサーバー需要は強い一方、株価は会社予想EPSの約38倍で成長期待もかなり入っているため中立。"}
+    valuation = round(max(0.0, min(100.0, OVERALL_PRICED_RAW)), 1)
+    position = round(valuation * 0.60 + 76.0 * 0.25 + 60.0 * 0.15, 1)
+    signals["signals"][stock_id] = {"position": position, "zone": "買われすぎ", "asOf": DATE, "components": {"valuation": valuation, "catalysts": 76.0, "businessRisk": 60.0}, "reportRevision": "murata-6981-2026-09-30", "summary": "AIサーバー需要と通期上方修正は強い一方、株価はBullケースに近く、高い成長期待が入っているため買われすぎ。"}
     signals["updatedAt"] = now
     signals_path.write_text(json.dumps(signals, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

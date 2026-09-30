@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "sealsq-laes"
 
 COMPANY = "シールエスキュー"
 TICKER = "LAES"
-DATE = "2026-08-13"
-P0 = 2.34
-PREVIOUS_CLOSE = 2.48
+DATE = "2026-09-30"
+P0 = 2.32
+PREVIOUS_CLOSE = 2.28
 SHARES_M = 222.77
 MARKET_CAP_M = P0 * SHARES_M
 
@@ -31,6 +31,7 @@ SIGNAL_POSITION = round(0.60 * round(BAND_POSITION, 1) + 0.25 * CATALYST_SCORE +
 SOURCES = {
     "about": "https://www.sealsq.com/about/about-us",
     "h1": "https://www.sec.gov/Archives/edgar/data/1738699/000121390026076377/ea029728301ex99-1.htm",
+    "h1_final": "https://www.sealsq.com/investors/news-releases/sealsq-reports-h1-2026-financial-and-operational-results-revenue-increases-131-to-11.2-million-fy2026-guidance-reaffirmed",
     "quantum": "https://www.sealsq.com/investors/news-releases/sealsq-establishes-pure-play-quantum-platform-through-strategic-acquisitions-and-investments-across-leading-quantum-computing-companies",
     "annual": "https://www.sec.gov/Archives/edgar/data/1951222/000110465926037706/laes-20251231x20f.htm",
     "quote": "https://stockanalysis.com/stocks/laes/",
@@ -62,7 +63,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("量子プラットフォーム発表", "quantum")}、'
         f'{source_link("2025年Form 20-F", "annual")}、'
         f'{source_link("株価・統計", "quote")}を確認しました。'
-        "本文の数値は2026年8月13日時点で取得できた公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -192,10 +193,10 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "ポスト量子半導体・小型成長株向けシナリオ評価",
         "VERDICT_STATUS": "現金厚いが商用化待ち",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{BAND_POSITION:.1f}%地点です。現金余力は大きい一方、売上化の確認はこれからです。",
-        "VERDICT_LINE_2": "この試算は2026年8月13日時点で取得できた公開情報に基づきます。H1正式決算とH2商用化進捗で更新が必要です。",
+        "VERDICT_LINE_2": "2026年9月11日のH1正式決算を反映しました。増収と厚い現金は支えですが、営業赤字とパイプラインの契約化が次の確認点です。",
         "SCORE": str(score),
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/07/28確認値",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "BASE_PRICE": usd(BASE),
         "BASE_DELTA": pct(BASE / P0 - 1),
         "EXPECTED_VALUE": usd(expected),
@@ -290,14 +291,14 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "商用化進捗待ち",
-        "SUMMARY_LINE_1": "H1正式決算、QS7001/QVault商用化、パイプライン契約化、量子投資の実効性が主な材料です。",
+        "SUMMARY_LINE_1": "QS7001/QVault商用化、2.25億ドル超のパイプライン契約化、量子投資の実効性が主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を50%と推定します。",
         "OVERALL_PRICED_IN": "50%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "中",
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/07/28確認値",
-        "NEXT_CATALYST_TITLE": "H1 2026正式決算とH2商用化進捗",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
+        "NEXT_CATALYST_TITLE": "QS7001/QVaultの認証・初期商用売上",
         "NEXT_CATALYST_WINDOW": "H2 2026",
         "DATE_CONFIDENCE": "会社発表ベース",
         "CATALYST_COUNT": "4件",
@@ -313,9 +314,9 @@ def catalyst_values() -> dict[str, str]:
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>認証と商用化</b><span class="up">連動</span></div><p>認証が進むほど顧客採用の確度が上がります。</p></div><div class="signal"><div><b>現金と希薄化</b><span class="flat">重要</span></div><p>現金余力は追い風ですが、追加調達は株価の重しです。</p></div><div class="signal"><div><b>量子投資</b><span class="down">注意</span></div><p>テーマ性は強い一方、短期売上との距離を確認します。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>H1正式売上</b><span class="up">重要</span></div><p>予備値約$11Mとの差を確認します。</p></div><div class="signal"><div><b>QS7001/QVault</b><span class="up">最重要</span></div><p>認証、顧客評価、初期商用売上。</p></div><div class="signal"><div><b>株式数</b><span class="down">注意</span></div><p>希薄化と資金使途を確認します。</p></div><div class="signal"><div><b>パイプライン</b><span class="flat">確認</span></div><p>商談から契約への転換。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "2026/07/28確認値") + tr("H1 2026売上", "約$11M", "会社リリース", "2026/07/06", "予備値、前年比+120%") + tr("FY2026売上見通し", "$27M〜$36M", "会社リリース", "2026/07/06", "前年比50〜100%成長") + tr("現金・短期投資", "約$495M", "会社リリース", "2026/06/30", "資金調達後"),
-        "SOURCE_DETAILS": f'<ul><li>{source_link("会社概要", "about")}</li><li>{source_link("H1 2026予備決算リリース", "h1")}</li><li>{source_link("量子プラットフォーム発表", "quantum")}</li><li>{source_link("2025年Form 20-F", "annual")}</li><li>{source_link("株価・統計", "quote")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
-        "VALIDATION_DETAILS": "<p>PASS：会社概要、H1 2026予備決算リリース、量子プラットフォーム発表、2025年Form 20-F、株価・統計ページを確認。</p>",
-        "UPDATE_HISTORY": f"<p>{DATE}：初版作成。H1 2026予備決算、FY2026見通し、QS7001/QVault、量子投資戦略を反映。</p>",
+        "SOURCE_DETAILS": f'<ul><li>{source_link("会社概要", "about")}</li><li>{source_link("H1 2026正式決算", "h1_final")}</li><li>{source_link("量子プラットフォーム発表", "quantum")}</li><li>{source_link("2025年Form 20-F", "annual")}</li><li>{source_link("株価・統計", "quote")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
+        "VALIDATION_DETAILS": "<p>PASS：H1正式決算で売上1,120万ドル、粗利率約48%、営業損失3,220万ドル、現金等4.861億ドル、FY2026売上見通し2,700万〜3,600万ドルを確認。</p>",
+        "UPDATE_HISTORY": f"<p>{DATE}：H1正式決算、2.25億ドル超の商談パイプライン、QVault連携、9月29日終値を反映。</p>",
         "DISCLAIMER": "本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）カタリスト｜作成日 {DATE}",
     }
@@ -383,7 +384,7 @@ def upsert_site_data() -> None:
             "catalysts": CATALYST_SCORE,
             "businessRisk": BUSINESS_RISK_SCORE,
         },
-        "reportRevision": "sealsq-laes-2026-08-13",
+        "reportRevision": "sealsq-laes-2026-09-30",
         "summary": "H1 2026予備売上は強く現金余力も大きい。QS7001/QVaultの商用化とパイプライン転換が確認できれば再評価余地がある一方、希薄化と小型株リスクは高い。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

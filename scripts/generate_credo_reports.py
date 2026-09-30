@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "credo-crdo"
 
 COMPANY = "クレド・テクノロジー・グループ"
 TICKER = "CRDO"
-DATE = "2026-08-11"
-P0 = 248.00
-PREVIOUS_CLOSE = 249.89
+DATE = "2026-09-30"
+P0 = 192.35
+PREVIOUS_CLOSE = 192.67
 SHARES_M = 186.48
 MARKET_CAP_B = P0 * SHARES_M / 1000
 
@@ -29,6 +29,7 @@ SIGNAL_POSITION = round(0.60 * round(BAND_POSITION, 1) + 0.25 * 80.0 + 0.15 * 62
 SOURCES = {
     "ir": "https://investors.credosemi.com/overview/default.aspx",
     "q4": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/default.aspx",
+    "q1_fy27": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
     "q3": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-Third-Quarter-of-Fiscal-Year-2026-Financial-Results/default.aspx",
     "dust": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Completes-Acquisition-of-DustPhotonics/default.aspx",
     "quote": "https://stockanalysis.com/stocks/crdo/",
@@ -60,7 +61,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("FY2026 Q3決算リリース", "q3")}、'
         f'{source_link("DustPhotonics買収リリース", "dust")}、'
         f'{source_link("株価・統計", "quote")}を確認しました。'
-        "本文の数値は2026年8月11日時点で取得できた公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -190,10 +191,10 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "AI半導体・高成長接続インフラ向けシナリオ評価",
         "VERDICT_STATUS": "高成長だが期待織り込み確認",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{BAND_POSITION:.1f}%地点です。AI接続需要は強い一方、株価は高期待を織り込んでいます。",
-        "VERDICT_LINE_2": "この試算は2026年8月11日時点で取得できた公開情報に基づきます。FY2027 Q1決算と次回ガイダンスで更新が必要です。",
+        "VERDICT_LINE_2": "2026年9月1日発表のFY2027 Q1実績とQ2会社見通しを反映しました。売上成長は強い一方、株価には高成長期待が残ります。",
         "SCORE": str(score),
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/10場中確認",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "BASE_PRICE": usd(BASE),
         "BASE_DELTA": pct(BASE / P0 - 1),
         "EXPECTED_VALUE": usd(expected),
@@ -288,15 +289,15 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "Q1決算待ち",
-        "SUMMARY_LINE_1": "FY2027 Q1決算、DustPhotonics統合、AEC需要、OCP/FMS関連発表が主な材料です。",
+        "SUMMARY_LINE_1": "FY2027 Q2売上見通し、AEC・光接続需要、DustPhotonics統合、1.6T製品展開が主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を60%と推定します。",
         "OVERALL_PRICED_IN": "60%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "中",
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/10場中確認",
-        "NEXT_CATALYST_TITLE": "FY2027 Q1決算と次回ガイダンス",
-        "NEXT_CATALYST_WINDOW": "2026/09/02",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
+        "NEXT_CATALYST_TITLE": "FY2027 Q2決算と次回ガイダンス",
+        "NEXT_CATALYST_WINDOW": "2026年12月ごろ",
         "DATE_CONFIDENCE": "株価情報ページの決算予定",
         "CATALYST_COUNT": "4件",
         "WARN_BAND": "",
@@ -311,9 +312,9 @@ def catalyst_values() -> dict[str, str]:
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>Q1決算と倍率</b><span class="up">連動</span></div><p>高成長が続くほど高い倍率を維持しやすいです。</p></div><div class="signal"><div><b>光接続と粗利率</b><span class="flat">重要</span></div><p>新製品が粗利率を崩さず伸びるかを確認します。</p></div><div class="signal"><div><b>顧客集中</b><span class="down">注意</span></div><p>顧客分散が進むほどリスクは下がります。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>Q1売上</b><span class="up">最重要</span></div><p>$465M〜$475M見通しを上回るか。</p></div><div class="signal"><div><b>非GAAP粗利率</b><span class="up">重要</span></div><p>67〜69%近辺を維持できるか。</p></div><div class="signal"><div><b>光接続</b><span class="flat">AI</span></div><p>DustPhotonics統合と顧客採用。</p></div><div class="signal"><div><b>顧客発注</b><span class="down">注意</span></div><p>大口顧客の需要継続と分散。</p></div>',
         "ASSUMPTION_ROWS": tr("評価基準株価", usd(P0), "市場データで確認", DATE, "2026/08/10場中確認") + tr("FY2026 Q4売上", "$437M", "会社リリース", "2026/05/02", "前年比+157%") + tr("FY2027 Q1売上見通し", "$465M〜$475M", "会社リリース", "2026/08/01期", "会社ガイダンス") + tr("現金・短期投資", "$1.4B", "会社リリース", "2026/05/02", "FY2026末"),
-        "SOURCE_DETAILS": f'<ul><li>{source_link("公式IR", "ir")}</li><li>{source_link("FY2026 Q4決算リリース", "q4")}</li><li>{source_link("FY2026 Q3決算リリース", "q3")}</li><li>{source_link("DustPhotonics買収リリース", "dust")}</li><li>{source_link("株価・統計", "quote")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
-        "VALIDATION_DETAILS": "<p>PASS：公式IR、FY2026 Q4決算、FY2026 Q3決算、DustPhotonics買収リリース、株価・統計ページを確認。</p>",
-        "UPDATE_HISTORY": f"<p>{DATE}：初版作成。FY2026 Q4決算、FY2027 Q1ガイダンス、DustPhotonics買収、AI接続製品を反映。</p>",
+        "SOURCE_DETAILS": f'<ul><li>{source_link("公式IR", "ir")}</li><li>{source_link("FY2027 Q1決算リリース", "q1_fy27")}</li><li>{source_link("FY2026 Q4決算リリース", "q4")}</li><li>{source_link("DustPhotonics買収リリース", "dust")}</li><li>{source_link("株価・統計", "quote")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
+        "VALIDATION_DETAILS": "<p>PASS：FY2027 Q1売上4.79億ドル、非GAAP粗利率68.0%、現金・短期投資7.643億ドル、Q2売上見通し5.25〜5.35億ドルを公式IRで確認。</p>",
+        "UPDATE_HISTORY": f"<p>{DATE}：FY2027 Q1実績、Q2会社見通し、1.6T光接続発表、9月29日終値を反映。</p>",
         "DISCLAIMER": "本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）カタリスト｜作成日 {DATE}",
     }
@@ -380,7 +381,7 @@ def upsert_site_data() -> None:
             "catalysts": 80.0,
             "businessRisk": 62.0,
         },
-        "reportRevision": "credo-crdo-2026-08-11",
+        "reportRevision": "credo-crdo-2026-09-30",
         "summary": "FY2026 Q4決算とQ1ガイダンスは強い。AI接続需要と光接続拡大は追い風だが、株価は高期待を織り込むため中立。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

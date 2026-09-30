@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "furukawa-electric-5801"
 
 COMPANY = "古河電気工業"
 TICKER = "5801"
-DATE = "2026-08-19"
-P0 = 3919.0
-PREVIOUS_CLOSE = 3566.0
+DATE = "2026-09-30"
+P0 = 3793.0
+PREVIOUS_CLOSE = 3684.0
 SHARES_M = 706.67
 MARKET_CAP_TN = P0 * SHARES_M / 1_000_000
 
@@ -67,7 +67,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("業績概要・予想", "highlight")}、'
         f'{source_link("経営方針説明会", "mid")}、'
         f'{source_link("株価時系列", "yahoo")}を確認しました。'
-        "本文の数値は2026年8月19日時点で取得できた公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -199,10 +199,10 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "上方修正後のPER・利益成長シナリオ",
         "VERDICT_STATUS": "強い決算後の中立上限寄り",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{BAND_POSITION:.1f}%地点です。1Q上方修正は強い一方、株価はかなり材料を織り込み始めています。",
-        "VERDICT_LINE_2": "この試算は2026年8月19日時点で取得できた公開情報に基づきます。2Q進捗と利益率で更新が必要です。",
+        "VERDICT_LINE_2": "2026年9月30日時点の公開情報と株価を反映しました。1Q上方修正後の2Q進捗と利益率が次の確認点です。",
         "SCORE": str(score),
         "CURRENT_PRICE": yen(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/05終値",
+        "CURRENT_PRICE_NOTE": "2026/09/30 10時台",
         "BASE_PRICE": yen(BASE),
         "BASE_DELTA": pct(BASE / P0 - 1),
         "EXPECTED_VALUE": yen(expected),
@@ -297,13 +297,13 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "上方修正後の確認局面",
-        "SUMMARY_LINE_1": "1Q上方修正、光通信・データセンタ需要、増産投資、2Q進捗が主な材料です。",
+        "SUMMARY_LINE_1": "2Q進捗、光通信・データセンタ需要、増産投資、メタル事業協業が主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を66%と推定します。",
         "OVERALL_PRICED_IN": "66%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "中",
         "CURRENT_PRICE": yen(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/05終値",
+        "CURRENT_PRICE_NOTE": "2026/09/30 10時台",
         "NEXT_CATALYST_TITLE": "2Q・中間決算での進捗確認",
         "NEXT_CATALYST_WINDOW": "2026年11月ごろ",
         "DATE_CONFIDENCE": "例年スケジュールからの推定",
@@ -390,7 +390,7 @@ def upsert_site_data() -> None:
             "catalysts": CATALYST_SCORE,
             "businessRisk": BUSINESS_RISK_SCORE,
         },
-        "reportRevision": "furukawa-electric-5801-2026-08-19",
+        "reportRevision": "furukawa-electric-5801-2026-09-30",
         "summary": "1Q決算と通期上方修正は強い。光通信・データセンタ需要と増産投資は追い風だが、株価急騰後の材料織り込みと2Q進捗確認が必要。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

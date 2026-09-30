@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "paycloud-4015"
 
 COMPANY = "ペイクラウドホールディングス"
 TICKER = "4015"
-DATE = "2026-08-08"
-P0 = 540
-PREVIOUS_CLOSE = 540
+DATE = "2026-09-30"
+P0 = 511
+PREVIOUS_CLOSE = 516
 SHARES_M = 15.96
 MARKET_CAP_BN = P0 * SHARES_M / 1000
 
@@ -54,7 +54,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("Yahoo!ファイナンス決算要約", "yahoo_financials")}、'
         f'{source_link("適時開示一覧", "disclosure")}、'
         f'{source_link("3Q決算説明動画・書き起こし", "movie")}を確認しました。'
-        "本文の数値は2026年8月8日時点の公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点の公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -187,14 +187,14 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "小型成長株向けPER・EV/EBITDAシナリオ",
         "VERDICT_STATUS": "標準ケース付近の中立圏",
         "VERDICT_LINE_1": "評価基準株価は悲観〜楽観レンジの48.9%地点です。3Qの回復は評価できますが、通期達成と来期成長率の確認が必要です。",
-        "VERDICT_LINE_2": "この試算は2026年8月8日時点の公開情報で固定しています。株価は2026年7月30日の終値540円を基準にしています。",
+        "VERDICT_LINE_2": "2026年9月30日時点の公開情報と株価を反映しました。8月月次まで確認し、次は通期決算と来期見通しを確認します。",
         "SCORE": str(score),
         "CURRENT_PRICE": yen(P0),
-        "CURRENT_PRICE_NOTE": "2026/07/30 15:30",
+        "CURRENT_PRICE_NOTE": "2026/09/30 10時台",
         "BASE_PRICE": yen(base),
-        "BASE_DELTA": "+0.6%",
+        "BASE_DELTA": f"{(base / P0 - 1) * 100:+.1f}%",
         "EXPECTED_VALUE": yen(expected),
-        "EXPECTED_DELTA": "+0.6%",
+        "EXPECTED_DELTA": f"{(expected / P0 - 1) * 100:+.1f}%",
         "RISK_CLASS": "中〜高",
         "RISK_NOTE": "小型株、納品時期、成長率の振れ",
         "WARN_BAND": '<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>3Qは順調ですが、通期達成と来期見通しは未確定です。小型株のため出来高と需給にも注意してください。</div></div>',
@@ -212,8 +212,8 @@ def scenario_values() -> dict[str, str]:
         "BEAR_PROB": "25%",
         "BASE_PROB": "50%",
         "BULL_PROB": "25%",
-        "BEAR_DELTA": "-24.6%",
-        "BULL_DELTA": "+25.7%",
+        "BEAR_DELTA": f"{(bear / P0 - 1) * 100:+.1f}%",
+        "BULL_DELTA": f"{(bull / P0 - 1) * 100:+.1f}%",
         "BEAR_DL_ROWS": dl([("EPS", "19円"), ("PER", "21.4倍"), ("前提", "4Q弱含み"), ("営業利益", "7.0億円")]),
         "BASE_DL_ROWS": dl([("EPS", "22.6円"), ("PER", "24.0倍"), ("前提", "通期計画達成"), ("営業利益", "8.0億円")]),
         "BULL_DL_ROWS": dl([("EPS", "27円"), ("PER", "25.1倍"), ("前提", "来期成長加速"), ("営業利益", "9億円超")]),
@@ -284,13 +284,13 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が複数",
-        "SUMMARY_LINE_1": "通期決算、月次、優待電子化、自社株買い終了後の需給が今後の主な材料です。",
+        "SUMMARY_LINE_1": "2026年8月期通期決算、月次KPI、インド・タイ展開、優待電子化が今後の主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を46%と推定します。",
         "OVERALL_PRICED_IN": "46%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "ふつう",
         "CURRENT_PRICE": yen(P0),
-        "CURRENT_PRICE_NOTE": "2026/07/30 15:30",
+        "CURRENT_PRICE_NOTE": "2026/09/30 10時台",
         "NEXT_CATALYST_TITLE": "2026年8月期通期決算",
         "NEXT_CATALYST_WINDOW": "2026年10月ごろ",
         "DATE_CONFIDENCE": "当方推定",
@@ -367,15 +367,15 @@ def upsert_site_data() -> None:
     signals_payload = json.loads(signals_path.read_text(encoding="utf-8"))
     signals_payload["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals_payload.setdefault("signals", {})["paycloud-4015"] = {
-        "position": 53.9,
+        "position": round(0.60 * ((P0 - 407) / (679 - 407) * 100) + 0.25 * 66.0 + 0.15 * 54.0, 1),
         "zone": "中立",
         "asOf": DATE,
         "components": {
-            "valuation": 48.9,
+            "valuation": round((P0 - 407) / (679 - 407) * 100, 1),
             "catalysts": 66.0,
             "businessRisk": 54.0,
         },
-        "reportRevision": "paycloud-4015-2026-08-08",
+        "reportRevision": "paycloud-4015-2026-09-30",
         "summary": "3Q増収増益と調整後EBITDA進捗は強い一方、現在株価は標準ケース付近で、通期決算と来期見通し確認前のため中立。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -14,9 +14,9 @@ OUT_DIR = ROOT / "stocks" / "zeta-global-zeta"
 
 COMPANY = "ゼータ・グローバル・ホールディングス"
 TICKER = "ZETA"
-DATE = "2026-08-11"
-P0 = 27.33
-PREVIOUS_CLOSE = 26.64
+DATE = "2026-09-30"
+P0 = 28.96
+PREVIOUS_CLOSE = 28.99
 SHARES_M = 251.01
 MARKET_CAP_B = P0 * SHARES_M / 1000
 
@@ -62,7 +62,7 @@ def guide_values() -> dict[str, str]:
         f'{source_link("2026年1Q決算リリース", "q1")}、'
         f'{source_link("Palantir提携リリース", "palantir")}、'
         f'{source_link("株価・統計", "quote")}を確認しました。'
-        "本文の数値は2026年8月11日時点で取得できた公開情報に基づきます。"
+        "本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。"
         '</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>'
     )
     terms = [
@@ -192,10 +192,10 @@ def scenario_values() -> dict[str, str]:
         "METHOD": "高成長SaaS・AIインフラ向けシナリオ評価",
         "VERDICT_STATUS": "好決算後の中立からやや強気",
         "VERDICT_LINE_1": f"評価基準株価は悲観〜楽観レンジの{BAND_POSITION:.1f}%地点です。成長とAI材料は強い一方、株価は高値圏に近づいています。",
-        "VERDICT_LINE_2": "この試算は2026年8月11日時点で取得できた公開情報に基づきます。3Q決算、Athena導入、Palantir連携の進捗で更新が必要です。",
+        "VERDICT_LINE_2": "2026年9月30日時点の公開情報と株価を反映しました。2Q会社計画は維持し、3Q決算、Athena導入、Palantir連携を次に確認します。",
         "SCORE": str(score),
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/10場中確認",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "BASE_PRICE": usd(BASE),
         "BASE_DELTA": pct(BASE / P0 - 1),
         "EXPECTED_VALUE": usd(expected),
@@ -296,7 +296,7 @@ def catalyst_values() -> dict[str, str]:
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
         "PRICED_IN_CONFIDENCE": "中",
         "CURRENT_PRICE": usd(P0),
-        "CURRENT_PRICE_NOTE": "2026/08/10場中確認",
+        "CURRENT_PRICE_NOTE": "2026/09/29終値",
         "NEXT_CATALYST_TITLE": "3Q決算と再上方修正",
         "NEXT_CATALYST_WINDOW": "2026年秋",
         "DATE_CONFIDENCE": "通常決算サイクル",
@@ -382,7 +382,7 @@ def upsert_site_data() -> None:
             "catalysts": 82.0,
             "businessRisk": 58.0,
         },
-        "reportRevision": "zeta-global-zeta-2026-08-11",
+        "reportRevision": "zeta-global-zeta-2026-09-30",
         "summary": "2Q好決算、20四半期連続Beat and Raise、AI提携は強い。株価は高値圏に近く、期待織り込み確認前のため中立。",
     }
     signals_path.write_text(json.dumps(signals_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
