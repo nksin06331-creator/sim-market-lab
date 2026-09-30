@@ -212,7 +212,7 @@ python scripts\update_prices.py
 - `data/stocks.json`の`quoteSymbol`を読む。
 - Yahoo Finance chart endpointから株価を取得する。
 - `data/prices.json`を更新する。
-- レポート2のBear/Bull価格と現在株価から、表示用の現在地バーに使う`data/signals.json`の`components.valuation`と`position`を補助更新する。
+- `data/signals.json`の総合判定は変更しない。現在地バーは表示時に現在株価から再計算する。
 
 取得に失敗した銘柄は、前回値を残して`stale`になる。
 
@@ -234,7 +234,7 @@ lab/assets/js/live-report-price.js
 scripts/update_prices.py
 ```
 
-注意: `docs/signal-methodology.md`には初期方針として「毎朝の株価更新では総合判定を変更しない」とあるが、現在の実装では価格バーのズレを防ぐため、株価更新時に`signals.json`のvaluation位置と総合位置も補助更新している。今後、方針を固定するならドキュメント側を現仕様に合わせて更新する。
+`data/signals.json`の総合判定は3レポートの内容を見直す時だけ更新する。毎日の株価更新では変更しない。
 
 ## 10. 新しい銘柄を追加する時の作業
 
