@@ -16,7 +16,7 @@ COMPANY = "キオクシアホールディングス"
 TICKER = "285A"
 DATE = "2026-09-30"
 P0 = 18345
-N0_M = 552.2
+N0_M = 1656.6
 MARKET_CAP_TN = round(P0 * N0_M / 1_000_000, 1)
 
 SOURCES = {
@@ -98,7 +98,7 @@ def guide_values() -> dict[str, str]:
         ("LTA", "複数年の売買契約です。市況変動が激しいメモリ事業で売上の見通しを安定させる狙いがあります。"),
         ("設備投資", "工場や製造装置への投資です。成長に必要ですが、需要が弱い時は固定費負担になります。"),
         ("為替感応度", "円安なら円建て売上・利益に追い風になりやすい性質です。逆に円高は注意点です。"),
-        ("株式分割", "1株を複数株に分けることです。キオクシアは2026年10月1日に1株を3株に分割予定です。"),
+        ("株式分割", "1株を複数株に分けることです。キオクシアは1対3の株式分割を実施し、2026年9月29日から分割後の株価で取引されています。"),
     ]
     return {
         "TICKER": TICKER,
@@ -109,9 +109,9 @@ def guide_values() -> dict[str, str]:
         "HERO_TAGS": '<span class="hero-tag">NANDフラッシュ</span><span class="hero-tag">SSD</span><span class="hero-tag">AIデータセンター</span><span class="hero-tag">東証プライム</span>',
         "HERO_STATS": (
             f'<div class="stat"><div class="stat-value">{yen(P0)}</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/09/30 10時台</div></div>'
-            f'<div class="stat"><div class="stat-value">{MARKET_CAP_TN}兆円</div><div class="stat-label">時価総額の目安</div><div class="stat-note">希薄化後約5.52億株で計算</div></div>'
+            f'<div class="stat"><div class="stat-value">{MARKET_CAP_TN}兆円</div><div class="stat-label">時価総額の目安</div><div class="stat-note">分割後の希薄化後約16.57億株で計算</div></div>'
             '<div class="stat"><div class="stat-value up">1.77兆円</div><div class="stat-label">2027年3月期1Q売上</div><div class="stat-note">2026年4〜6月</div></div>'
-            '<div class="stat"><div class="stat-value">3分割</div><div class="stat-label">予定株式分割</div><div class="stat-note">2026/10/01効力発生</div></div>'
+            '<div class="stat"><div class="stat-value">1対3</div><div class="stat-label">実施済み株式分割</div><div class="stat-note">2026/09/29から分割後価格</div></div>'
         ),
         "SEC2_LABEL": "NAND業界",
         "SEC3_LABEL": "製品と技術",
@@ -189,7 +189,7 @@ def guide_values() -> dict[str, str]:
         "SEC7_CONTENT": (
             '<div class="timeline"><div class="tl-row"><div class="tl-date">2026/07/31</div><div class="tl-title">1Q決算 <span class="signal bull">追い風</span></div><div class="tl-desc">売上1.77兆円、営業利益1.27兆円。AIデータセンター需要とASP上昇が主因です。</div></div>'
             '<div class="tl-row"><div class="tl-date">2026/08-10</div><div class="tl-title">自社株取得枠 <span class="signal neutral">中立〜追い風</span></div><div class="tl-desc">上限8,000億円、3,000万株。実際の取得ペースを確認します。</div></div>'
-            '<div class="tl-row"><div class="tl-date">2026/10/01</div><div class="tl-title">株式3分割 <span class="signal neutral">中立</span></div><div class="tl-desc">投資単位を下げる政策です。企業価値そのものは変わりません。</div></div></div>'
+            '<div class="tl-row"><div class="tl-date">2026/09/29</div><div class="tl-title">分割後価格で取引開始 <span class="signal neutral">実施済み</span></div><div class="tl-desc">1対3の株式分割を反映した価格で取引されています。法的な効力発生日は10月1日です。</div></div></div>'
             '<div class="info-row"><div class="info-box info-box-green"><div class="info-title info-title-green">追い風</div><div class="info-text">AIサーバー向けSSD需要、ASP上昇、LTA進展。</div></div>'
             '<div class="info-box info-box-amber"><div class="info-title info-title-amber">確認</div><div class="info-text">2Q売上2.39兆円・営業利益1.89兆円の見通し達成度。</div></div>'
             '<div class="info-box info-box-red"><div class="info-title info-title-red">リスク</div><div class="info-text">NAND価格下落、円高、訴訟追加費用、設備投資負担。</div></div></div>'
@@ -199,12 +199,12 @@ def guide_values() -> dict[str, str]:
 
 
 def scenario_values() -> dict[str, str]:
-    bear, base, bull = 30000, 53000, 77000
+    bear, base, bull = 10000, 17667, 25667
     probs = {"bear": 0.25, "base": 0.50, "bull": 0.25}
     expected = bear * probs["bear"] + base * probs["base"] + bull * probs["bull"]
     band = (P0 - bear) / (bull - bear) * 100
     own_score = (expected - bear) / (bull - bear) * 100
-    endpoint_rr = None if P0 <= bear else (bull - P0) / (P0 - bear)
+    endpoint_rr = (bull - P0) / (P0 - bear)
     expected_return = expected / P0 - 1
     bear_downside = (P0 - bear) / P0
     score = round(max(0, min(100, 50 + expected_return * 100 - probs["bear"] * bear_downside * 100)))
@@ -214,9 +214,9 @@ def scenario_values() -> dict[str, str]:
         "EXCHANGE": "東京証券取引所プライム市場",
         "VALUATION_DATE": DATE,
         "METHOD": "景気循環企業向けPERシナリオ",
-        "VERDICT_STATUS": "悲観ケースを下回る価格帯",
-        "VERDICT_LINE_1": f"評価基準株価は分割前の悲観〜楽観レンジの{band:.1f}%地点で、悲観ケースを下回ります。AI向け需要は強い一方、NAND市況と投資負担に注意が必要です。",
-        "VERDICT_LINE_2": "2026年9月30日の株価を使い、10月1日効力の1対3株式分割はまだ反映していません。次回更新時に株価・EPS・シナリオ価格を同時に3分の1へ換算します。",
+        "VERDICT_STATUS": "標準ケース付近の中立圏",
+        "VERDICT_LINE_1": f"評価基準株価は分割後の悲観〜楽観レンジの{band:.1f}%地点です。AI向け需要は強い一方、大型投資とNAND市況の反転には注意が必要です。",
+        "VERDICT_LINE_2": "9月29日の権利落ち日から1対3株式分割後の価格で取引されています。株価、EPS、株式数、シナリオ価格をすべて分割後基準へ統一しています。",
         "SCORE": str(score),
         "CURRENT_PRICE": yen(P0),
         "CURRENT_PRICE_NOTE": "2026/09/30 10時台",
@@ -227,30 +227,30 @@ def scenario_values() -> dict[str, str]:
         "RISK_CLASS": "やや高い",
         "RISK_NOTE": "市況株として振れ幅が大きい",
         "WARN_BAND": '<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>Q2以降のNAND価格とAI向け需要は変動します。通期会社計画は開示されていないため、12〜18か月の正規化EPSをこのレポートで推定しています。</div></div>',
-        "SNAPSHOT_LEAD": "今の株価は悲観ケースを下回っています。AI需要の強さよりも、NAND市況、投資負担、株式分割前後の需給への警戒が強く出ている価格帯です。",
+        "SNAPSHOT_LEAD": "今の株価は標準ケース付近です。AI需要を一定程度評価する一方、楽観ケースをすべて織り込む水準ではありません。",
         "BAND_POSITION": f"{band:.1f}%",
-        "ZONE_JUDGE": "悲観ケース未満",
+        "ZONE_JUDGE": "標準ケース付近",
         "ZONE_NOTE": "1Qの利益水準が続くほど標準〜楽観側へ寄ります。",
         "BEAR_PRICE": yen(bear),
         "BULL_PRICE": yen(bull),
-        "ENDPOINT_RR": "算出対象外" if endpoint_rr is None else f"{endpoint_rr:.1f}倍",
+        "ENDPOINT_RR": f"{endpoint_rr:.1f}倍",
         "MARKET_SCORE": str(round(band)),
         "OWN_SCORE": str(round(own_score)),
-        "MARKET_REVERSE_NOTE": "同じPERモデルで見ると、今の株価は分割前正規化EPS約1,930円、PER9.5倍前後を織り込む水準です。市場の本当の予想ではなく、このモデル上の逆算です。",
+        "MARKET_REVERSE_NOTE": "同じPERモデルで見ると、今の株価は分割後正規化EPS約1,930円、PER9.5倍前後を織り込む水準です。市場の本当の予想ではなく、このモデル上の逆算です。",
         "SCENARIOS_LEAD": "現在株価から独立して、12〜18か月先の正規化EPSとPERを置きました。メモリ市況の山谷をならすため、単四半期利益をそのまま年換算していません。",
         "BEAR_PROB": "25%",
         "BASE_PROB": "50%",
         "BULL_PROB": "25%",
         "BEAR_DELTA": f"{(bear / P0 - 1) * 100:+.1f}%",
         "BULL_DELTA": f"{(bull / P0 - 1) * 100:+.1f}%",
-        "BEAR_DL_ROWS": dl([("正規化EPS", "3,800円"), ("PER", "8.0倍"), ("利益前提", "NAND価格が反落"), ("株式数", "約5.52億株")]),
-        "BASE_DL_ROWS": dl([("正規化EPS", "5,600円"), ("PER", "9.5倍"), ("利益前提", "AI向けSSDが堅調"), ("株式数", "約5.52億株")]),
-        "BULL_DL_ROWS": dl([("正規化EPS", "7,300円"), ("PER", "10.5倍"), ("利益前提", "高ASPとLTAが継続"), ("株式数", "約5.52億株")]),
+        "BEAR_DL_ROWS": dl([("正規化EPS", "1,250円"), ("PER", "8.0倍"), ("利益前提", "NAND価格が反落"), ("株式数", "約16.57億株")]),
+        "BASE_DL_ROWS": dl([("正規化EPS", "1,860円"), ("PER", "9.5倍"), ("利益前提", "AI向けSSDが堅調"), ("株式数", "約16.57億株")]),
+        "BULL_DL_ROWS": dl([("正規化EPS", "2,440円"), ("PER", "10.5倍"), ("利益前提", "高ASPとLTAが継続"), ("株式数", "約16.57億株")]),
         "PRICE_ZONE_ROWS": (
-            '<div class="zone"><div><b>3万円未満</b><span>★★★★★</span></div><p>悲観ケース以下。今の株価はここです。</p></div>'
-            '<div class="zone"><div><b>3万〜5.3万円</b><span>★★★</span></div><p>標準ケースの手前です。</p></div>'
-            '<div class="zone"><div><b>5.3万〜7.7万円</b><span>★★</span></div><p>AI需要継続をかなり評価する価格帯です。</p></div>'
-            '<div class="zone"><div><b>7.7万円超</b><span>★</span></div><p>楽観ケース超。さらに強いNAND市況か倍率拡大が必要です。</p></div>'
+            '<div class="zone"><div><b>1万円未満</b><span>★★★★★</span></div><p>悲観ケース以下。市況悪化をかなり織り込む価格帯です。</p></div>'
+            '<div class="zone"><div><b>1万〜1.77万円</b><span>★★★</span></div><p>標準ケースの手前です。</p></div>'
+            '<div class="zone"><div><b>1.77万〜2.57万円</b><span>★★</span></div><p>AI需要継続をかなり評価する価格帯で、今の株価はここです。</p></div>'
+            '<div class="zone"><div><b>2.57万円超</b><span>★</span></div><p>楽観ケース超。さらに強いNAND市況か倍率拡大が必要です。</p></div>'
         ),
         "SIGNAL_ROWS": (
             '<div class="signal"><div><b>AI向けSSD需要</b><span class="up">追い風</span></div><p>データセンター顧客の需要が1Q増収の主因でした。</p></div>'
@@ -262,18 +262,18 @@ def scenario_values() -> dict[str, str]:
         "CONCERNS": "<li>NAND市況は短期で大きく変わります。価格下落時は利益が急縮小します。</li><li>通期見通しは出ていません。Q1・Q2の強さをそのまま通年化できません。</li><li>設備投資と研究開発投資が大きく、需要鈍化時は固定費負担になります。</li><li>訴訟、為替、輸出規制など外部要因もあります。</li>",
         "FORMULA": "主計算はPERです。PERは、1株利益に何倍の評価をつけるかを見る方法です。景気循環の強いメモリ企業なので、直近単四半期ではなく正規化EPSを使いました。",
         "CALC_TABLE_HEAD": th("ケース", "正規化EPS", "PER", "計算株価", "確率", "確率加重"),
-        "CALC_TABLE_ROWS": tr("悲観", "3,800円", "8.0倍", yen(bear), "25%", "7,500円") + tr("標準", "5,600円", "9.5倍", yen(base), "50%", "26,500円") + tr("楽観", "7,300円", "10.5倍", yen(bull), "25%", "19,250円"),
+        "CALC_TABLE_ROWS": tr("悲観", "1,250円", "8.0倍", yen(bear), "25%", "2,500円") + tr("標準", "1,860円", "9.5倍", yen(base), "50%", "8,834円") + tr("楽観", "2,440円", "10.5倍", yen(bull), "25%", "6,417円"),
         "CALC_NOTICE": "現在株価に合わせて標準ケースを置いていません。Q2会社見通し、NAND市況、AI向け製品ミックスを踏まえ、12〜18か月の利益水準を推定しています。",
-        "CONDITIONS": details("悲観ケース：3万円 / 確率25%", "AI向け需要は残るものの、NAND価格が反落し、分割前正規化EPSが3,800円程度に下がるケースです。", True) + details("標準ケース：5.3万円 / 確率50%", "データセンター需要が堅調で、FY2027前半の強さが一部続くケースです。") + details("楽観ケース：7.7万円 / 確率25%", "高ASP、LTA、AI向けSSDの製品ミックス改善が重なり、PERもやや拡大するケースです。"),
+        "CONDITIONS": details("悲観ケース：1万円 / 確率25%", "AI向け需要は残るものの、NAND価格が反落し、分割後正規化EPSが1,250円程度に下がるケースです。", True) + details("標準ケース：1.77万円 / 確率50%", "データセンター需要が堅調で、FY2027前半の強さが一部続くケースです。") + details("楽観ケース：2.57万円 / 確率25%", "高ASP、LTA、AI向けSSDの製品ミックス改善が重なり、PERもやや拡大するケースです。"),
         "SENSITIVITY_HEAD": th("前提", "弱い", "標準", "強い"),
-        "SENSITIVITY_ROWS": tr("正規化EPS", "4,800円 → 45,600円", "5,600円 → 53,000円", "6,400円 → 60,800円") + tr("PER", "8.5倍 → 47,600円", "9.5倍 → 53,000円", "10.5倍 → 58,800円"),
+        "SENSITIVITY_ROWS": tr("正規化EPS", "1,600円 → 15,200円", "1,860円 → 17,667円", "2,130円 → 20,235円") + tr("PER", "8.5倍 → 15,810円", "9.5倍 → 17,667円", "10.5倍 → 19,530円"),
         "SENSITIVITY_NOTE": "1変数だけを動かした簡易感応度です。実際にはEPSとPERが同時に動くことがあります。",
         "DIST_LEAD": "モンテカルロではなく、悲観・標準・楽観の3点分布です。",
-        "DIST_ROWS": '<div class="dist-row"><span>3万円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div><div class="dist-row"><span>5.3万円</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>7.7万円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>',
+        "DIST_ROWS": '<div class="dist-row"><span>1万円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div><div class="dist-row"><span>1.77万円</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>2.57万円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>',
         "DIST_SUMMARY": "中心は標準ケースです。ただしメモリ市況株なので、両端への振れも小さくありません。",
         "WATCH_ROWS": '<div class="signal"><div><b>2026年7〜9月期の実績</b></div><p>会社見通しの売上2.39兆円、営業利益1.89兆円に対する達成度を確認します。</p></div><div class="signal"><div><b>SSD & Storage売上</b></div><p>AIデータセンター需要がどの程度続くかを見ます。</p></div><div class="signal"><div><b>自社株取得の進捗</b></div><p>上限枠に対して実際にどれだけ取得したかを確認します。</p></div>',
-        "ASSUMPTIONS_ROWS": tr("評価基準株価", yen(P0), "公式市場データで確認済み", "2026/09/30 10時台") + tr("希薄化後株式数", "約5.52億株", "このレポートの推定", "分割前") + tr("1Q売上", "1.77兆円", "公式情報で確認済み", "2026年4〜6月") + tr("2Q売上見通し", "2.39兆円", "会社の目標・予定", "2026年7〜9月") + tr("株式分割", "1株を3株", "会社発表", "2026/10/01効力発生"),
-        "DEEPDIVE_DETAILS": details("手法選定理由", "キオクシアは黒字化済みですが、NAND価格に左右される景気循環企業です。そのため、単純DCFよりも正規化EPSにPERをかける方法を主にしました。", True) + details("希薄化と株式分割", "Q1の希薄化EPSから約5.52億株を使いました。2026年10月1日の1対3分割は企業価値を変えないため、今回は分割前単位で表示します。") + details("主要出典", f'{source_link("1Q決算短信", "q1")}、{source_link("有価証券報告書", "annual")}、{source_link("Investor Day", "investor_day")}、{source_link("株式分割", "split")}、{source_link("自社株取得枠", "buyback")}。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a>'),
+        "ASSUMPTIONS_ROWS": tr("評価基準株価", yen(P0), "公式市場データで確認済み", "2026/09/30 10時台") + tr("希薄化後株式数", "約16.57億株", "このレポートの推定", "分割後換算") + tr("1Q売上", "1.77兆円", "公式情報で確認済み", "2026年4〜6月") + tr("2Q売上見通し", "2.39兆円", "会社の目標・予定", "2026年7〜9月") + tr("株式分割", "1株を3株", "会社発表", "2026/09/29から分割後価格で取引"),
+        "DEEPDIVE_DETAILS": details("手法選定理由", "キオクシアは黒字化済みですが、NAND価格に左右される景気循環企業です。そのため、単純DCFよりも正規化EPSにPERをかける方法を主にしました。", True) + details("希薄化と株式分割", "Q1の希薄化EPSから分割後約16.57億株へ換算しました。株価、EPS、株式数、シナリオ価格はすべて1対3株式分割後の単位です。") + details("主要出典", f'{source_link("1Q決算短信", "q1")}、{source_link("有価証券報告書", "annual")}、{source_link("Investor Day", "investor_day")}、{source_link("株式分割", "split")}、{source_link("自社株取得枠", "buyback")}。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a>'),
         "DISCLAIMER": "本資料は情報提供を目的とした試算です。投資助言ではありません。半導体メモリ株は市況、為替、顧客投資、規制で大きく変動します。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）株価シナリオ｜作成日 {DATE}",
     }
@@ -292,13 +292,13 @@ def catalyst_values() -> dict[str, str]:
     impact_map = {
         "2026年7〜9月期決算と会社見通しの達成度": ("+10〜24%", "-5〜+8%", "-15〜-30%", "メモリ株では決算とASPがEPSを直接動かすため、短期材料として最大級です。"),
         "自社株取得枠の実行": ("+6〜14%", "-3〜+5%", "-6〜-14%", "株式数と需給には効きますが、NAND市況や利益水準そのものは変えないため中程度です。"),
-        "1株を3株にする株式分割": ("+2〜7%", "-2〜+3%", "-4〜-8%", "分割は投資単位と流動性の材料で、企業価値を直接変えないため小さくしています。"),
+        "株式分割後の需給定着": ("+2〜7%", "-2〜+3%", "-4〜-8%", "分割後の売買代金と投資家層の変化は需給に影響しますが、企業価値を直接変えないため小さくしています。"),
         "第10世代BiCS FLASHとAI向けSSDの立ち上がり": ("+12〜28%", "-5〜+10%", "-12〜-26%", "AI向けSSDは製品ミックスと将来PERを動かすため、決算に近い大きさで見ます。"),
     }
     description_map = {
         "2026年7〜9月期決算と会社見通しの達成度": "次回決算は、NAND市況とAI向けSSD需要が利益にどれだけ反映されたかを見る材料です。売上、営業利益、ASP、在庫の方向感がそろうと、メモリ株として評価されやすくなります。",
         "自社株取得枠の実行": "自社株取得は、株式数の減少と需給改善を通じて1株価値を押し上げる材料です。ただし事業利益そのものを増やすわけではないため、決算や市況材料とは分けて見ます。",
-        "1株を3株にする株式分割": "株式分割は、投資単位を下げて個人投資家が参加しやすくなる需給材料です。企業価値を直接変えるものではないため、影響は小さめに見ます。",
+        "株式分割後の需給定着": "1対3の株式分割はすでに価格へ反映されています。ここで確認するのは、投資単位の低下が売買代金や個人投資家の参加につながるかです。",
         "第10世代BiCS FLASHとAI向けSSDの立ち上がり": "第10世代BiCS FLASHとAI向けSSDは、製品ミックスを高付加価値側へ寄せられるかを見る中期材料です。採用や量産が進めば、将来の利益率とPERを支えます。",
     }
 
@@ -338,14 +338,14 @@ def catalyst_values() -> dict[str, str]:
         "<li>上限3,000万株、8,000億円の取得枠を公表。</li><li>期間は2026年8月3日から10月30日。</li>",
     ))
     cards.append(card(
-        "1株を3株にする株式分割",
-        "2026/10/01",
-        '<span class="chip amber">重要度2</span><span class="chip">日程確定</span>',
+        "株式分割後の需給定着",
+        "2026/09/29以降",
+        '<span class="chip amber">重要度2</span><span class="chip">分割実施済み</span>',
         '<span>投資単位低下</span><i>→</i><span>流動性</span><i>→</i><span>投資家層</span>',
         "分割後に売買代金と個人投資家参加が増え、需給が安定する状態です。",
-        "株価水準だけが調整され、企業価値への直接影響は小さい状態です。",
-        "分割前後で短期需給が荒れ、業績評価より値動きが先行する状態です。",
-        "<li>2026年9月30日基準で1株を3株に分割予定。</li><li>投資単位を下げる目的と会社は説明。</li>",
+        "売買代金や投資家層に大きな変化がなく、企業価値への直接影響も小さい状態です。",
+        "分割後に短期需給が荒れ、業績評価より値動きが先行する状態です。",
+        "<li>2026年9月29日から1対3分割後の価格で取引を開始。</li><li>法的な効力発生日は2026年10月1日。</li><li>投資単位を下げる目的と会社は説明。</li>",
     ))
     cards.append(card(
         "第10世代BiCS FLASHとAI向けSSDの立ち上がり",
@@ -364,7 +364,7 @@ def catalyst_values() -> dict[str, str]:
         "VALUATION_DATE": DATE,
         "LAST_UPDATED": DATE,
         "REPORT_STATUS": "重要材料が複数ある",
-        "SUMMARY_LINE_1": "決算、自社株取得、株式分割、AI向けSSDの立ち上がりが今後の主な材料です。",
+        "SUMMARY_LINE_1": "決算、自社株取得、分割後の需給、AI向けSSDの立ち上がりが今後の主な材料です。",
         "SUMMARY_LINE_2": "足りない情報は仮定を置き、主要材料の織り込み度を58%と推定します。",
         "OVERALL_PRICED_IN": "58%",
         "OVERALL_PRICED_LABEL": "主要材料の推定織り込み",
@@ -378,23 +378,23 @@ def catalyst_values() -> dict[str, str]:
         "WARN_BAND": "",
         "NO_CATALYST_NOTICE": "",
         "OVERALL_PRICED_BLOCK": non_quant,
-        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、2Q実績、AI向けSSD、自社株取得、株式分割を標準ケース価値へ重み付けして推定。",
+        "PRICED_IN_METHOD": "未確定情報に仮定確率を置き、2Q実績、AI向けSSD、自社株取得、分割後の需給を標準ケース価値へ重み付けして推定。",
         "SURPRISE_UP": "2Q決算が会社見通しを上回り、SSD & Storage売上とASPの強さが続くことです。",
         "SURPRISE_DOWN": "NAND価格の反落、AI向け需要の鈍化、在庫増加、訴訟費用の追加です。",
         "PRIMARY_RISK": "好業績がすでに株価へ入ったあとで、少しの未達でも失望になりやすい点です。",
         "TIMELINE_ROWS": (
             '<div class="time-row"><div class="time-date">2026/08-10</div><div class="time-dot"></div><div class="time-body"><b>自社株取得枠</b><p>上限8,000億円、3,000万株。市場買付。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div>'
-            '<div class="time-row"><div class="time-date">2026/10/01</div><div class="time-dot"></div><div class="time-body"><b>株式3分割</b><p>投資単位を下げるための分割。企業価値は直接変わりません。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div>'
+            '<div class="time-row"><div class="time-date">2026/09/29</div><div class="time-dot"></div><div class="time-body"><b>分割後価格で取引開始</b><p>1対3分割後の売買代金と投資家層の変化を確認します。</p><div class="time-meta"><span class="chip">実施済み</span></div></div></div>'
             '<div class="time-row"><div class="time-date">2026/11ごろ</div><div class="time-dot"></div><div class="time-body"><b>2Q決算</b><p>会社見通しに対する達成度を確認します。</p><div class="time-meta"><span class="chip blue">当方推定</span></div></div></div>'
             '<div class="time-row"><div class="time-date">2026後半</div><div class="time-dot"></div><div class="time-body"><b>AI向けSSD・BiCS10</b><p>サンプル、採用、量産への進み方を確認します。</p><div class="time-meta"><span class="chip blue">期間のみ公表</span></div></div></div>'
         ),
         "CATALYST_CARDS": "".join(cards) + '<p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>',
         "DEPENDENCY_ROWS": '<div class="signal"><div><b>AI向けSSDとBiCS10</b><span class="up">同じ価値経路</span></div><p>技術発表、サンプル、顧客採用、売上認識は段階イベントです。単純に足しません。</p></div><div class="signal"><div><b>自社株取得と株式分割</b><span class="flat">別経路</span></div><p>自社株取得は株式数、株式分割は流動性に主に効きます。</p></div>',
         "WATCH_ROWS": '<div class="signal"><div><b>SSD & Storage売上</b><span class="up">最重要</span></div><p>AI需要の継続を見る中心指標です。</p></div><div class="signal"><div><b>ASPとビット出荷</b><span class="up">重要</span></div><p>価格と数量のどちらで伸びたかを分けます。</p></div><div class="signal"><div><b>自社株取得進捗</b><span class="flat">確認</span></div><p>取得株数、取得額、平均単価を確認します。</p></div><div class="signal"><div><b>訴訟の続報</b><span class="down">注意</span></div><p>追加費用や法的手続きの進展を確認します。</p></div>',
-        "ASSUMPTION_ROWS": tr("評価基準株価", yen(P0), "公式市場データで確認済み", DATE, "2026/09/30 10時台") + tr("2Q会社見通し", "売上2.39兆円、営業利益1.89兆円", "会社の目標・予定", "2026/07/31", "2026年7〜9月") + tr("自社株取得枠", "上限8,000億円", "会社の目標・予定", "2026/07/31", "実際の取得は市場次第") + tr("株式分割", "1株を3株", "会社の目標・予定", "2026/07/31", "効力発生日2026/10/01"),
+        "ASSUMPTION_ROWS": tr("評価基準株価", yen(P0), "公式市場データで確認済み", DATE, "2026/09/30 10時台") + tr("2Q会社見通し", "売上2.39兆円、営業利益1.89兆円", "会社の目標・予定", "2026/07/31", "2026年7〜9月") + tr("自社株取得枠", "上限8,000億円", "会社の目標・予定", "2026/07/31", "実際の取得は市場次第") + tr("株式分割", "1株を3株", "公式情報で確認済み", "2026/09/29", "分割後価格で取引開始（効力発生日は10/01）"),
         "SOURCE_DETAILS": f'<ul><li>{source_link("1Q決算短信", "q1")}</li><li>{source_link("Investor Day 2026", "investor_day")}</li><li>{source_link("自社株取得枠", "buyback")}</li><li>{source_link("株式分割", "split")}</li><li>{source_link("第10世代BiCS FLASH", "bics10")}</li><li>{source_link("Viasat訴訟判断", "lawsuit")}</li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p>',
         "VALIDATION_DETAILS": "<p>PASS：重要カタリストは公式資料で確認。WARN：2Q決算日は当方推定のため、確定日として表示していません。</p>",
-        "UPDATE_HISTORY": f"<p>{DATE}：初版作成。1Q決算、Investor Day、株式分割、自社株取得枠、訴訟判断を反映。</p>",
+        "UPDATE_HISTORY": f"<p>{DATE}：初版作成。1Q決算、Investor Day、自社株取得枠、訴訟判断を反映。株価・EPS・株式数・シナリオは1対3分割後基準で統一。</p>",
         "DISCLAIMER": "本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。",
         "FOOTER_NOTE": f"SiM MARKET LAB｜{COMPANY}（{TICKER}）カタリスト｜作成日 {DATE}",
     }
@@ -420,16 +420,16 @@ def update_site_data() -> None:
     signals = json.loads(signals_path.read_text(encoding="utf-8"))
     signals["updatedAt"] = datetime.now(timezone.utc).isoformat()
     signals["signals"]["kioxia-285a"] = {
-        "position": round(0.60 * max(0.0, min(100.0, (P0 - 30000) / (77000 - 30000) * 100)) + 0.25 * 65.0 + 0.15 * 55.0, 1),
-        "zone": "売られすぎ",
+        "position": round(0.60 * max(0.0, min(100.0, (P0 - 10000) / (25667 - 10000) * 100)) + 0.25 * 65.0 + 0.15 * 55.0, 1),
+        "zone": "中立",
         "asOf": DATE,
         "components": {
-            "valuation": round(max(0.0, min(100.0, (P0 - 30000) / (77000 - 30000) * 100)), 1),
+            "valuation": round(max(0.0, min(100.0, (P0 - 10000) / (25667 - 10000) * 100)), 1),
             "catalysts": 65.0,
             "businessRisk": 55.0,
         },
         "reportRevision": "kioxia-285a-2026-09-30",
-        "summary": "分割前基準の悲観ケースを下回る価格帯。AI向け需要と自社株取得が支えだが、NAND市況の反落リスクは残る。",
+        "summary": "1対3分割後の標準ケース付近。AI向け需要と自社株取得が支えだが、NAND市況の反落リスクは残る。",
     }
     signals_path.write_text(json.dumps(signals, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

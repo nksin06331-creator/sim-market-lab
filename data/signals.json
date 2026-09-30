@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-09-30T02:12:30.856322+00:00",
+  "updatedAt": "2026-09-30T02:59:47.659154+00:00",
   "signals": {
     "kioxia-285a": {
-      "position": 24.5,
-      "zone": "売られすぎ",
+      "position": 56.5,
+      "zone": "中立",
       "asOf": "2026-09-30",
       "components": {
-        "valuation": 0.0,
+        "valuation": 53.3,
         "catalysts": 65.0,
         "businessRisk": 55.0
       },
       "reportRevision": "kioxia-285a-2026-09-30",
-      "summary": "分割前基準の悲観ケースを下回る価格帯。AI向け需要と自社株取得が支えだが、NAND市況の反落リスクは残る。"
+      "summary": "1対3分割後の標準ケース付近。AI向け需要と自社株取得が支えだが、NAND市況の反落リスクは残る。"
     },
     "rocket-lab-rklb": {
       "position": 45.2,
