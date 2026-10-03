@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-03T01:43:13.424548+00:00",
+  "generatedAt": "2026-10-03T13:57:21.751694+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 13,
+  "quoteCount": 14,
   "errorCount": 0,
   "errors": {},
   "prices": {
@@ -14,7 +14,7 @@
       "changePct": 1.0471,
       "currency": "JPY",
       "marketTime": "2026-10-02T06:30:00+00:00",
-      "updatedAt": "2026-10-03T01:43:08.049605+00:00",
+      "updatedAt": "2026-10-03T13:57:14.144276+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,7 +25,7 @@
       "changePct": 4.9106,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:00+00:00",
-      "updatedAt": "2026-10-03T01:43:08.493816+00:00",
+      "updatedAt": "2026-10-03T13:57:14.721442+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -36,7 +36,7 @@
       "changePct": 2.9328,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:02+00:00",
-      "updatedAt": "2026-10-03T01:43:08.934345+00:00",
+      "updatedAt": "2026-10-03T13:57:15.297554+00:00",
       "status": "ok"
     },
     "paycloud-4015": {
@@ -47,7 +47,7 @@
       "changePct": -0.7619,
       "currency": "JPY",
       "marketTime": "2026-10-02T06:30:00+00:00",
-      "updatedAt": "2026-10-03T01:43:09.374047+00:00",
+      "updatedAt": "2026-10-03T13:57:15.880975+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
@@ -58,7 +58,7 @@
       "changePct": 3.5036,
       "currency": "JPY",
       "marketTime": "2026-10-02T06:30:00+00:00",
-      "updatedAt": "2026-10-03T01:43:09.835851+00:00",
+      "updatedAt": "2026-10-03T13:57:16.485041+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
@@ -69,7 +69,7 @@
       "changePct": -1.2221,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:01+00:00",
-      "updatedAt": "2026-10-03T01:43:10.273814+00:00",
+      "updatedAt": "2026-10-03T13:57:17.062153+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
@@ -80,7 +80,7 @@
       "changePct": 7.7778,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:01+00:00",
-      "updatedAt": "2026-10-03T01:43:10.713362+00:00",
+      "updatedAt": "2026-10-03T13:57:17.639022+00:00",
       "status": "ok"
     },
     "moonlake-mltx": {
@@ -91,7 +91,7 @@
       "changePct": -0.5231,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:01+00:00",
-      "updatedAt": "2026-10-03T01:43:11.154319+00:00",
+      "updatedAt": "2026-10-03T13:57:18.222449+00:00",
       "status": "ok"
     },
     "credo-crdo": {
@@ -102,7 +102,7 @@
       "changePct": 4.0301,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:01+00:00",
-      "updatedAt": "2026-10-03T01:43:11.592200+00:00",
+      "updatedAt": "2026-10-03T13:57:18.800856+00:00",
       "status": "ok"
     },
     "zeta-global-zeta": {
@@ -113,7 +113,7 @@
       "changePct": 0.7099,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:02+00:00",
-      "updatedAt": "2026-10-03T01:43:12.031753+00:00",
+      "updatedAt": "2026-10-03T13:57:19.375782+00:00",
       "status": "ok"
     },
     "sealsq-laes": {
@@ -124,7 +124,7 @@
       "changePct": 0.4237,
       "currency": "USD",
       "marketTime": "2026-10-02T20:00:01+00:00",
-      "updatedAt": "2026-10-03T01:43:12.484103+00:00",
+      "updatedAt": "2026-10-03T13:57:19.961139+00:00",
       "status": "ok"
     },
     "furukawa-electric-5801": {
@@ -135,7 +135,7 @@
       "changePct": 7.683,
       "currency": "JPY",
       "marketTime": "2026-10-02T06:30:00+00:00",
-      "updatedAt": "2026-10-03T01:43:12.949169+00:00",
+      "updatedAt": "2026-10-03T13:57:20.565038+00:00",
       "status": "ok"
     },
     "murata-6981": {
@@ -146,7 +146,18 @@
       "changePct": -0.5404,
       "currency": "JPY",
       "marketTime": "2026-10-02T06:30:00+00:00",
-      "updatedAt": "2026-10-03T01:43:13.424530+00:00",
+      "updatedAt": "2026-10-03T13:57:21.181055+00:00",
+      "status": "ok"
+    },
+    "gorilla-technology-grrr": {
+      "symbol": "GRRR",
+      "price": 13.17,
+      "previousClose": 13.58,
+      "change": -0.41,
+      "changePct": -3.0191,
+      "currency": "USD",
+      "marketTime": "2026-10-02T20:00:00+00:00",
+      "updatedAt": "2026-10-03T13:57:21.751657+00:00",
       "status": "ok"
     }
   }

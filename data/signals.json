@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-09-30T02:59:47.659154+00:00",
+  "updatedAt": "2026-10-03T13:57:03.186749+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 56.5,
@@ -158,6 +158,18 @@
       },
       "reportRevision": "murata-6981-2026-09-30",
       "summary": "AIサーバー需要と通期上方修正は強い一方、株価はBullケースに近く、高い成長期待が入っているため買われすぎ。"
+    },
+    "gorilla-technology-grrr": {
+      "position": 35.9,
+      "zone": "中立",
+      "asOf": "2026-10-03",
+      "components": {
+        "valuation": 21.5,
+        "catalysts": 45.0,
+        "businessRisk": 78.0
+      },
+      "reportRevision": "gorilla-technology-grrr-2026-10-03",
+      "summary": "上期99%増収と大型AI案件は強い一方、赤字、納入・回収、$232Mの転換社債と希薄化リスクから中立。"
     }
   }
 }

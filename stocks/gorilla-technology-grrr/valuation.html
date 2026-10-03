@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ゴリラ・テクノロジー・グループ（GRRR）｜株価シナリオ</title>
+
+<style>
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.score b{font-size:54px;line-height:1;display:block}.score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(21px,3vw,29px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scenario{border-radius:16px;padding:18px;border:1px solid var(--line);background:#101410;position:relative;overflow:hidden;min-height:320px}.scenario:after{position:absolute;right:4px;top:-12px;font-weight:900;font-size:66px;opacity:.05;line-height:1}.scenario.bear:after{content:"B"}.scenario.base:after{content:"A"}.scenario.bull:after{content:"↑"}.scenario-head{display:flex;justify-content:space-between;gap:10px;font-weight:800}.scenario-head b{padding:4px 9px;border-radius:999px;color:#06210a;background:var(--accent)}.scenario-price{font-size:clamp(31px,4vw,42px);font-weight:900;letter-spacing:-.05em;margin:14px 0 0}.scenario.bear{border-top:4px solid var(--red)}.scenario.base{border-top:4px solid var(--accent);box-shadow:0 0 0 1px rgba(110,226,78,.12)}.scenario.bull{border-top:4px solid var(--accent-bright)}
+.small{font-size:13px;color:var(--muted)}dl{margin:16px 0 0}dl div{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding:8px 0;gap:12px}dt{color:var(--muted)}dd{margin:0;font-weight:800}.position{margin-top:20px}.position-line{height:14px;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--amber),var(--accent));position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.pin{position:absolute;top:-8px;width:7px;height:30px;background:#fff;border:2px solid #050805;border-radius:6px;left:36.1%;box-shadow:0 4px 14px rgba(0,0,0,.55)}.position-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px;gap:7px}.pill{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}
+.zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible{border-color:var(--accent);color:var(--accent)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+@media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
+</style>
+
+</head>
+<body data-stock-ticker="GRRR" data-price-source="../../data/prices.json">
+
+<header class="hero">
+<div class="wrap">
+  <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
+  <h1>ゴリラ・テクノロジー・グループ <small>GRRR</small></h1>
+  <div class="sub">Nasdaq｜評価基準日 2026-10-03｜使用手法 AIインフラ・プロジェクト企業向けEV/Sシナリオ</div>
+  <div class="verdict">
+    <div class="verdict-main">
+      <span class="pill">まず結論だけ</span>
+      
+      <div class="status">成長余地と実行リスクが併存</div>
+      
+      <p>評価基準株価は悲観〜楽観レンジの21.5%地点です。大型AI契約は上値材料ですが、納入・利益・回収の確認前です。</p>
+      <p class="sub">転換社債込み約3,840万株の潜在希薄化株式数を強気側の評価に反映し、契約総額をそのまま企業価値にしていません。</p>
+    </div>
+    
+    <div class="score"><small>分析の参考スコア</small><b>81</b><small>/ 100　売買判断ではありません</small></div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$13.17</b><small data-live-price-date>2026/10/02終値（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>$20.00</b><small>+51.9%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>$18.80</b><small>+42.7%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>高</b><small>小型株、赤字、大型資本投下、転換社債、回収リスク</small></div>
+  </div>
+
+</div>
+</header>
+
+
+
+
+
+<nav class="report-nav"><div class="wrap">
+<button type="button" data-scroll-target="snapshot">結論</button>
+<button type="button" data-scroll-target="scenarios">3シナリオ</button>
+<button type="button" data-scroll-target="logic">計算</button>
+<button type="button" data-scroll-target="sensitivity">感応度</button>
+<button type="button" data-scroll-target="assumptions">前提</button>
+</div></nav>
+
+<main class="wrap">
+
+
+<section class="card" id="snapshot">
+  <h2>いまの株価、どこにいる？</h2>
+  <p class="lead">今の株価は悲観ケースから標準ケースの間です。通期$200M達成と大型設備の稼働が確認できれば標準側へ近づきます。</p>
+  <div class="grid-2">
+    <div>
+      <h3>今の株価の位置</h3>
+      <p>悲観～楽観ケースの <b data-live-position-text>21.5%</b> 地点。判定は <b>悲観〜標準の間</b>。Q3とYotta/Batamの実行確認で標準側へ、遅延や追加調達で悲観側へ寄ります。</p>
+      
+      <div class="position"><div class="position-line"><i class="pin" data-live-position-pin style="left:21.5%"></i></div><div class="position-labels"><span>Bear $8.00</span><span>Base $20.00</span><span>Bull $32.00</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>3.6倍</b>　3ケースを確率でならした値：<b>$18.80</b></p>
+    </div>
+    <div>
+      <h3>今の株価と、この分析の違い</h3>
+      <div class="compare">
+        <div><b data-live-market-score>今の株価 22/100</b><div class="meter"><i data-live-market-meter style="width:22%"></i></div></div>
+        <div><b>この分析 45/100</b><div class="meter"><i style="width:45%"></i></div></div>
+      </div>
+      
+      <p>市場は2026年の増収を一部評価しつつ、2027年計画の実行と転換社債負担に大きな割引を置いていると見ます。</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="card" id="scenarios">
+  <h2>未来はこの3パターン</h2>
+  <p class="lead">現在株価から独立して、2027年売上、利益率、キャッシュ回収、転換社債、希薄化を置きました。</p>
+  <div class="scenarios">
+    <article class="scenario bear">
+      <div class="scenario-head"><span>悲観ケース</span><b>30%</b></div>
+      <div class="scenario-price">$8.00</div>
+      <div class="small">現値比 -39.3%</div>
+      <dl><div><dt>2027売上</dt><dd>$250M前後</dd></div><div><dt>実行</dt><dd>遅延・低稼働</dd></div><div><dt>資金</dt><dd>負債負担が残る</dd></div><div><dt>株価</dt><dd>$8.00</dd></div></dl>
+      
+    </article>
+    <article class="scenario base">
+      <div class="scenario-head"><span>標準ケース</span><b>50%</b></div>
+      <div class="scenario-price">$20.00</div>
+      <div class="small">現値比 +51.9%</div>
+      <dl><div><dt>2027売上</dt><dd>$450M前後</dd></div><div><dt>実行</dt><dd>Yotta/Batamを段階稼働</dd></div><div><dt>利益</dt><dd>EBITDA黒字化</dd></div><div><dt>株価</dt><dd>$20.00</dd></div></dl>
+    </article>
+    <article class="scenario bull">
+      <div class="scenario-head"><span>楽観ケース</span><b>20%</b></div>
+      <div class="scenario-price">$32.00</div>
+      <div class="small">現値比 +143.0%</div>
+      <dl><div><dt>2027売上</dt><dd>$500M以上</dd></div><div><dt>実行</dt><dd>高稼働・追加案件</dd></div><div><dt>資金</dt><dd>回収改善・転換後も吸収</dd></div><div><dt>株価</dt><dd>$32.00</dd></div></dl>
+    </article></div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>この値段ならどう見る？</h2>
+    
+    <div class="zone"><div><b>$8未満</b><span>★★</span></div><p>大型案件の遅延や資金負担を強く織り込む価格帯です。</p></div><div class="zone"><div><b>$8〜$20</b><span>★★★</span></div><p>実行確認待ちの価格帯で、今の株価はここです。</p></div><div class="zone"><div><b>$20〜$32</b><span>★★</span></div><p>2027年成長と黒字化を評価する価格帯です。</p></div><div class="zone"><div><b>$32超</b><span>★</span></div><p>複数案件の高稼働と希薄化吸収が必要です。</p></div>
+    
+  </div>
+  <div class="card">
+    <h2>株価を動かす4つ</h2>
+    
+    <div class="signal"><div><b>売上成長</b><span class="up">強い</span></div><p>上期+99%、Q3計画$48M〜$50M。</p></div><div class="signal"><div><b>大型契約</b><span class="up">材料</span></div><p>Yotta、Batam、台湾案件。</p></div><div class="signal"><div><b>利益</b><span class="down">赤字</span></div><p>上期調整後EBITDAは-$14.6M。</p></div><div class="signal"><div><b>負債・希薄化</b><span class="down">注意</span></div><p>$232Mの転換社債と潜在株式。</p></div>
+    
+  </div>
+</section>
+
+
+<section class="grid-2">
+  <div class="card">
+    <h2>ここは普通に強い</h2>
+    <ul class="clean"><li>2026年上期売上は前年同期比99%増です。</li><li>営業キャッシュ流出は$4.3Mへ縮小しました。</li><li>Yotta、Batam、台湾で実行中の案件があります。</li><li>ソブリンAIと国家セキュリティの需要は中期追い風です。</li></ul>
+    
+  </div>
+  <div class="card">
+    <h2>ここで事故るかも</h2>
+    <ul class="clean"><li>上期調整後EBITDAは$14.6Mの赤字です。</li><li>契約資産は6月末に$104.8Mへ増え、回収確認が必要です。</li><li>6月と7月の転換社債元本は合計$232Mです。</li><li>大型案件の同時実行と顧客集中にリスクがあります。</li></ul>
+    
+  </div>
+</section>
+
+
+<section class="card" id="logic">
+  <h2>数字の作り方</h2>
+  <p class="lead">2027年売上レンジに実行確率を反映したEV/Sを置き、負債・現金と潜在希薄化後株式数で調整しました。</p>
+  <div class="table-wrap"><table>
+  <thead><tr><th>ケース</th><th>2027年売上前提</th><th>価値の見方</th><th>計算株価</th><th>確率</th><th>確率加重</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>$250M前後</td><td>遅延・低倍率</td><td>$8.00</td><td>30%</td><td>$2.40</td></tr><tr><td>標準</td><td>$450M前後</td><td>段階稼働・黒字化</td><td>$20.00</td><td>50%</td><td>$10.00</td></tr><tr><td>楽観</td><td>$500M以上</td><td>高稼働・追加案件</td><td>$32.00</td><td>20%</td><td>$6.40</td></tr></tbody>
+  </table></div>
+  
+  <p class="notice"><b>重要：</b>契約総額をそのまま時価総額にせず、年間売上、利益率、資金負担、潜在株式数を反映した条件付き試算です。</p>
+</section>
+
+
+<section class="card" id="conditions">
+  <h2>この未来になる条件</h2>
+  <details open><summary>悲観ケース：$8 / 確率30%</summary><p>Yotta/Batamが遅延し、黒字化が遠のき、負債負担が重く残るケースです。</p></details><details><summary>標準ケース：$20 / 確率50%</summary><p>通期$200M以上を達成し、2027年にYotta/Batamを段階稼働させるケースです。</p></details><details><summary>楽観ケース：$32 / 確率20%</summary><p>2027年売上$500M以上、EBITDA黒字化、現金回収改善を同時に確認するケースです。</p></details>
+  
+</section>
+
+
+<section class="grid-2" id="sensitivity">
+  <div class="card">
+    <h2>数字がズレるとどうなる？</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>前提</th><th>弱い</th><th>標準</th><th>強い</th></tr></thead>
+      <tbody><tr><td>2027売上</td><td>$250M → $8</td><td>$450M → $20</td><td>$500M+ → $32</td></tr><tr><td>利益</td><td>EBITDA赤字継続</td><td>黒字化</td><td>高稼働で利益拡大</td></tr><tr><td>完全希薄化後株式数</td><td>追加増加</td><td>約38.4M</td><td>回収と成長で吸収</td></tr></tbody>
+    </table></div>
+    <p class="small">強気ケースで株価が転換価格に近づくほど、転換社債の希薄化を重く見る必要があります。</p>
+  </div>
+  <div class="card">
+    <h2>どの価格に行きやすい？</h2>
+    <p class="lead">モンテカルロではなく、実行進捗を置いた3点シナリオです。</p>
+    <div class="dist-row"><span>$8</span><div class="track"><i style="width:30%"></i></div><b>30%</b></div><div class="dist-row"><span>$20</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>$32</span><div class="track"><i style="width:20%"></i></div><b>20%</b></div>
+    
+    <p>確率加重価格は$18.80ですが、納入と資金調達のニュースで大きく変動します。</p>
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>次の決算で見る場所</h2>
+  <div class="signal"><div><b>Q3売上・粗利</b></div><p>$48M〜$50Mと利益率を確認します。</p></div><div class="signal"><div><b>Yotta/Batam納入</b></div><p>台数、稼働、顧客利用開始を確認します。</p></div><div class="signal"><div><b>契約資産と現金</b></div><p>請求・回収と資本支出を確認します。</p></div>
+  
+</section>
+
+
+<section class="card" id="assumptions">
+  <h2>使った数字と前提</h2>
+  <div class="table-wrap"><table>
+  <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
+  <tbody><tr><td>評価基準株価</td><td>$13.17</td><td>市場データで確認</td><td>2026-10-03</td><td>2026/10/02終値</td></tr><tr><td>現在株式数</td><td>約27.5M</td><td>市場データ</td><td>2026-10-03</td><td>転換社債転換前</td></tr><tr><td>潜在希薄化後株式数</td><td>約38.4M</td><td>転換価格から試算</td><td>2026-10-03</td><td>$232Mを$25.4826で転換、RSU等を含む概算</td></tr><tr><td>2026年売上見通し</td><td>$200M以上</td><td>会社の目標・予定</td><td>2026/08/24</td><td>Q3計画$48M〜$50M</td></tr><tr><td>転換社債</td><td>$232M・年利7.5%</td><td>SEC提出資料</td><td>2026/07/17</td><td>初期転換価格$25.4826</td></tr></tbody>
+  </table></div>
+</section>
+
+
+<section class="card">
+  <h2>詳しく見たい人向け</h2>
+  <details open><summary>手法選定理由</summary><p>GRRRは利益が安定せず、大型契約の実行時期で売上が変動するため、PERよりも実行調整後EV/Sシナリオを使いました。</p></details><details><summary>契約額の扱い</summary><p>$2.8Bや$2.5Bは複数年の計画値であり、当年売上や利益とは異なります。</p></details><details><summary>主要出典</summary><p><a href="https://investors.gorilla-technology.com/gorilla-technology-h1-revenue-surges-99-to-us78-4-million-raises-fy2026-revenue-outlook-to-at-least-us200-million/" target="_blank" rel="noopener noreferrer">2026年上期決算</a>、<a href="https://www.sec.gov/Archives/edgar/data/1903145/000143774926028827/ex_974013.htm" target="_blank" rel="noopener noreferrer">SEC上期資料</a>、<a href="https://www.sec.gov/Archives/edgar/data/1903145/000121390026065898/ea0293736-6k_gorilla.htm" target="_blank" rel="noopener noreferrer">6月転換社債</a>、<a href="https://www.sec.gov/Archives/edgar/data/1903145/000121390026079193/ea0298371-6k_gorilla.htm" target="_blank" rel="noopener noreferrer">7月転換社債</a>、<a href="https://stockanalysis.com/stocks/grrr/" target="_blank" rel="noopener noreferrer">株価・統計</a>。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></details>
+  
+</section>
+
+<section class="card notice">
+  <h3>免責</h3><p>本資料は情報提供を目的とした試算です。投資助言ではありません。GRRRは大型案件の実行、資金調達、希薄化、為替、政府顧客で大きく変動します。</p>
+</section>
+<footer>SiM MARKET LAB｜ゴリラ・テクノロジー・グループ（GRRR）株価シナリオ｜作成日 2026-10-03</footer>
+</main>
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+<script>
+document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var target = document.getElementById(button.dataset.scrollTarget);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body></html>

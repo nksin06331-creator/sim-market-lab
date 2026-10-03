@@ -366,6 +366,38 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "gorilla-technology-grrr",
+      "order": 14,
+      "ticker": "GRRR",
+      "quoteSymbol": "GRRR",
+      "name": "ゴリラ・テクノロジー・グループ",
+      "nameEn": "Gorilla Technology Group Inc.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "AIインフラ・スマートシティ・セキュリティ",
+      "themes": [
+        "AIインフラ",
+        "データセンタ",
+        "サイバーセキュリティ"
+      ],
+      "reports": {
+        "company": {
+          "path": "./stocks/gorilla-technology-grrr/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/gorilla-technology-grrr/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/gorilla-technology-grrr/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }
