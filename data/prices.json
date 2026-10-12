@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T01:33:33.903530+00:00",
+  "generatedAt": "2026-10-12T02:03:44.035361+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
   "quoteCount": 14,
   "errorCount": 0,
@@ -14,7 +14,7 @@
       "changePct": -2.2067,
       "currency": "JPY",
       "marketTime": "2026-10-09T06:30:00+00:00",
-      "updatedAt": "2026-10-11T01:33:27.076063+00:00",
+      "updatedAt": "2026-10-12T02:03:36.748551+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,7 +25,7 @@
       "changePct": -0.2778,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:00+00:00",
-      "updatedAt": "2026-10-11T01:33:27.587764+00:00",
+      "updatedAt": "2026-10-12T02:03:37.270640+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -36,7 +36,7 @@
       "changePct": -1.8443,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:02+00:00",
-      "updatedAt": "2026-10-11T01:33:28.096469+00:00",
+      "updatedAt": "2026-10-12T02:03:37.917011+00:00",
       "status": "ok"
     },
     "paycloud-4015": {
@@ -47,7 +47,7 @@
       "changePct": 0.3752,
       "currency": "JPY",
       "marketTime": "2026-10-09T06:30:00+00:00",
-      "updatedAt": "2026-10-11T01:33:28.605522+00:00",
+      "updatedAt": "2026-10-12T02:03:38.450140+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
@@ -58,7 +58,7 @@
       "changePct": -1.5638,
       "currency": "JPY",
       "marketTime": "2026-10-09T06:30:00+00:00",
-      "updatedAt": "2026-10-11T01:33:29.161546+00:00",
+      "updatedAt": "2026-10-12T02:03:39.005825+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
@@ -69,7 +69,7 @@
       "changePct": 4.3677,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:01+00:00",
-      "updatedAt": "2026-10-11T01:33:29.725825+00:00",
+      "updatedAt": "2026-10-12T02:03:39.594158+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
@@ -80,7 +80,7 @@
       "changePct": -6.3604,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:01+00:00",
-      "updatedAt": "2026-10-11T01:33:30.239676+00:00",
+      "updatedAt": "2026-10-12T02:03:40.125348+00:00",
       "status": "ok"
     },
     "moonlake-mltx": {
@@ -91,7 +91,7 @@
       "changePct": 2.2684,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:01+00:00",
-      "updatedAt": "2026-10-11T01:33:30.748794+00:00",
+      "updatedAt": "2026-10-12T02:03:40.656242+00:00",
       "status": "ok"
     },
     "credo-crdo": {
@@ -102,7 +102,7 @@
       "changePct": 2.2137,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:01+00:00",
-      "updatedAt": "2026-10-11T01:33:31.315680+00:00",
+      "updatedAt": "2026-10-12T02:03:41.285471+00:00",
       "status": "ok"
     },
     "zeta-global-zeta": {
@@ -113,7 +113,7 @@
       "changePct": 0.1817,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:02+00:00",
-      "updatedAt": "2026-10-11T01:33:31.824062+00:00",
+      "updatedAt": "2026-10-12T02:03:41.809514+00:00",
       "status": "ok"
     },
     "sealsq-laes": {
@@ -124,7 +124,7 @@
       "changePct": -6.2222,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:01+00:00",
-      "updatedAt": "2026-10-11T01:33:32.337172+00:00",
+      "updatedAt": "2026-10-12T02:03:42.346893+00:00",
       "status": "ok"
     },
     "furukawa-electric-5801": {
@@ -135,7 +135,7 @@
       "changePct": -2.9384,
       "currency": "JPY",
       "marketTime": "2026-10-09T06:30:00+00:00",
-      "updatedAt": "2026-10-11T01:33:32.868817+00:00",
+      "updatedAt": "2026-10-12T02:03:42.949384+00:00",
       "status": "ok"
     },
     "murata-6981": {
@@ -146,7 +146,7 @@
       "changePct": -3.5926,
       "currency": "JPY",
       "marketTime": "2026-10-09T06:30:00+00:00",
-      "updatedAt": "2026-10-11T01:33:33.389835+00:00",
+      "updatedAt": "2026-10-12T02:03:43.500928+00:00",
       "status": "ok"
     },
     "gorilla-technology-grrr": {
@@ -157,7 +157,7 @@
       "changePct": -6.7839,
       "currency": "USD",
       "marketTime": "2026-10-09T20:00:01+00:00",
-      "updatedAt": "2026-10-11T01:33:33.903511+00:00",
+      "updatedAt": "2026-10-12T02:03:44.035343+00:00",
       "status": "ok"
     }
   }
