@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T00:39:00.857474+00:00",
+  "generatedAt": "2026-10-19T00:48:59.003406+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
   "quoteCount": 14,
   "errorCount": 0,
@@ -8,13 +8,13 @@
   "prices": {
     "kioxia-285a": {
       "symbol": "285A.T",
-      "price": 13375.0,
-      "previousClose": 12880.0,
-      "change": 495.0,
-      "changePct": 3.8432,
+      "price": 13090.0,
+      "previousClose": 13375.0,
+      "change": -285.0,
+      "changePct": -2.1308,
       "currency": "JPY",
-      "marketTime": "2026-10-16T06:30:00+00:00",
-      "updatedAt": "2026-10-18T00:38:54.697454+00:00",
+      "marketTime": "2026-10-19T00:33:51+00:00",
+      "updatedAt": "2026-10-19T00:48:52.807759+00:00",
       "status": "ok"
     },
     "rocket-lab-rklb": {
@@ -25,7 +25,7 @@
       "changePct": -7.9819,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:00+00:00",
-      "updatedAt": "2026-10-18T00:38:55.158097+00:00",
+      "updatedAt": "2026-10-19T00:48:53.266933+00:00",
       "status": "ok"
     },
     "redwire-rdw": {
@@ -36,29 +36,29 @@
       "changePct": -5.8361,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:03+00:00",
-      "updatedAt": "2026-10-18T00:38:55.618895+00:00",
+      "updatedAt": "2026-10-19T00:48:53.727284+00:00",
       "status": "ok"
     },
     "paycloud-4015": {
       "symbol": "4015.T",
-      "price": 534.0,
-      "previousClose": 520.0,
-      "change": 14.0,
-      "changePct": 2.6923,
+      "price": 527.0,
+      "previousClose": 534.0,
+      "change": -7.0,
+      "changePct": -1.3109,
       "currency": "JPY",
-      "marketTime": "2026-10-16T06:30:00+00:00",
-      "updatedAt": "2026-10-18T00:38:56.077345+00:00",
+      "marketTime": "2026-10-19T00:31:53+00:00",
+      "updatedAt": "2026-10-19T00:48:54.194437+00:00",
       "status": "ok"
     },
     "sumitomo-electric-5802": {
       "symbol": "5802.T",
-      "price": 2121.0,
-      "previousClose": 2107.5,
-      "change": 13.5,
-      "changePct": 0.6406,
+      "price": 2014.0,
+      "previousClose": 2121.0,
+      "change": -107.0,
+      "changePct": -5.0448,
       "currency": "JPY",
-      "marketTime": "2026-10-16T06:30:00+00:00",
-      "updatedAt": "2026-10-18T00:38:56.561099+00:00",
+      "marketTime": "2026-10-19T00:33:53+00:00",
+      "updatedAt": "2026-10-19T00:48:54.706102+00:00",
       "status": "ok"
     },
     "abcellera-abcl": {
@@ -69,7 +69,7 @@
       "changePct": -6.9401,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:01+00:00",
-      "updatedAt": "2026-10-18T00:38:57.018780+00:00",
+      "updatedAt": "2026-10-19T00:48:55.169155+00:00",
       "status": "ok"
     },
     "asp-isotopes-aspi": {
@@ -80,7 +80,7 @@
       "changePct": -3.1674,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:01+00:00",
-      "updatedAt": "2026-10-18T00:38:57.479740+00:00",
+      "updatedAt": "2026-10-19T00:48:55.628377+00:00",
       "status": "ok"
     },
     "moonlake-mltx": {
@@ -91,7 +91,7 @@
       "changePct": -6.9201,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:01+00:00",
-      "updatedAt": "2026-10-18T00:38:57.944712+00:00",
+      "updatedAt": "2026-10-19T00:48:56.101851+00:00",
       "status": "ok"
     },
     "credo-crdo": {
@@ -102,7 +102,7 @@
       "changePct": -4.93,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:02+00:00",
-      "updatedAt": "2026-10-18T00:38:58.409616+00:00",
+      "updatedAt": "2026-10-19T00:48:56.569157+00:00",
       "status": "ok"
     },
     "zeta-global-zeta": {
@@ -113,7 +113,7 @@
       "changePct": -5.1863,
       "currency": "USD",
       "marketTime": "2026-10-16T20:03:58+00:00",
-      "updatedAt": "2026-10-18T00:38:58.890290+00:00",
+      "updatedAt": "2026-10-19T00:48:57.029908+00:00",
       "status": "ok"
     },
     "sealsq-laes": {
@@ -124,29 +124,29 @@
       "changePct": -7.2539,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:01+00:00",
-      "updatedAt": "2026-10-18T00:38:59.352667+00:00",
+      "updatedAt": "2026-10-19T00:48:57.566950+00:00",
       "status": "ok"
     },
     "furukawa-electric-5801": {
       "symbol": "5801.T",
-      "price": 3366.0,
-      "previousClose": 3376.0,
-      "change": -10.0,
-      "changePct": -0.2962,
+      "price": 3210.0,
+      "previousClose": 3366.0,
+      "change": -156.0,
+      "changePct": -4.6346,
       "currency": "JPY",
-      "marketTime": "2026-10-16T06:30:00+00:00",
-      "updatedAt": "2026-10-18T00:38:59.890805+00:00",
+      "marketTime": "2026-10-19T00:33:57+00:00",
+      "updatedAt": "2026-10-19T00:48:58.060594+00:00",
       "status": "ok"
     },
     "murata-6981": {
       "symbol": "6981.T",
-      "price": 6900.0,
-      "previousClose": 6749.0,
-      "change": 151.0,
-      "changePct": 2.2374,
+      "price": 6589.0,
+      "previousClose": 6900.0,
+      "change": -311.0,
+      "changePct": -4.5072,
       "currency": "JPY",
-      "marketTime": "2026-10-16T06:30:00+00:00",
-      "updatedAt": "2026-10-18T00:39:00.369930+00:00",
+      "marketTime": "2026-10-19T00:33:57+00:00",
+      "updatedAt": "2026-10-19T00:48:58.541214+00:00",
       "status": "ok"
     },
     "gorilla-technology-grrr": {
@@ -157,7 +157,7 @@
       "changePct": -7.4911,
       "currency": "USD",
       "marketTime": "2026-10-16T20:00:02+00:00",
-      "updatedAt": "2026-10-18T00:39:00.857451+00:00",
+      "updatedAt": "2026-10-19T00:48:59.003382+00:00",
       "status": "ok"
     }
   }
