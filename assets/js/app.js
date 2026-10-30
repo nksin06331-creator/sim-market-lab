@@ -71,35 +71,27 @@ function clampPercent(value) {
   return Math.min(100, Math.max(0, value));
 }
 
-function zoneFromValuation(position) {
-  if (!Number.isFinite(position)) return "判定準備中";
-  if (position <= 30) return "売られすぎ";
-  if (position >= 70) return "買われすぎ";
-  return "中立";
-}
-
 function liveValuationPosition(stockId) {
-  const price = Number(state.prices[stockId]?.price);
+  const price = state.prices[stockId]?.price;
   const scenario = state.scenarios[stockId];
   if (!Number.isFinite(price) || !scenario) return null;
   const { bear, bull } = scenario;
-  if (!Number.isFinite(bear) || !Number.isFinite(bull) || bear === bull) return null;
+  if (!Number.isFinite(bear) || !Number.isFinite(bull) || bear >= bull) return null;
   return clampPercent(((price - bear) / (bull - bear)) * 100);
 }
 
 function getSignal(stockId) {
   const source = state.signals[stockId];
-  const position = Number(source?.position);
+  const position = source?.position;
   const livePosition = liveValuationPosition(stockId);
-  const valuationPosition = Number.isFinite(livePosition) ? livePosition : Number(source?.components?.valuation);
   const allowedZones = ["売られすぎ", "中立", "買われすぎ"];
   if (!Number.isFinite(position) || !allowedZones.includes(source?.zone)) {
-    return { position: 50, valuationPosition: 50, zone: "判定準備中", asOf: null, pending: true };
+    return { position: 50, valuationPosition: livePosition, zone: "判定保留", asOf: null, pending: true };
   }
   return {
     position: Math.min(100, Math.max(0, position)),
-    valuationPosition: Number.isFinite(valuationPosition) ? Math.min(100, Math.max(0, valuationPosition)) : Math.min(100, Math.max(0, position)),
-    zone: Number.isFinite(livePosition) ? zoneFromValuation(livePosition) : source.zone,
+    valuationPosition: livePosition,
+    zone: source.zone,
     asOf: source.asOf || null,
     pending: false
   };
@@ -119,7 +111,7 @@ function parseScenarioDocument(stock, html) {
 async function loadScenarioBounds(stocks) {
   const entries = await Promise.all(stocks.map(async (stock) => {
     const path = stock.reports?.valuation?.path;
-    if (!path) return null;
+    if (!stock.reports?.valuation?.available || !path) return null;
     try {
       const response = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
       if (!response.ok) return null;
@@ -145,6 +137,16 @@ function reportLink(report, number, label, compact = false) {
   const numberLabel = compact ? number : `REPORT ${number}`;
   link.innerHTML = `<small>${numberLabel}</small><span>${label}${available ? " →" : "（準備中）"}</span>`;
   return link;
+}
+
+function quoteStatusText(price) {
+  return `${formatDate(price?.marketTime)}${price?.status === "stale" ? "（取得失敗・前回の正常値）" : ""}`;
+}
+
+function signalNoteText(signal) {
+  const analysis = signal.asOf ? `分析基準日：${signal.asOf}` : "3つのレポート作成後に判定します";
+  const current = Number.isFinite(signal.valuationPosition) ? ` ／ 現在株価の位置（参考）：${signal.valuationPosition.toFixed(1)}%` : "";
+  return analysis + current;
 }
 
 function createCard(stock) {
@@ -185,10 +187,10 @@ function createCard(stock) {
   const signalBlock = document.createElement("div");
   signalBlock.className = "signal-block";
   signalBlock.innerHTML = `
-    <div class="signal-heading"><span>現在株価の位置</span><strong>${signal.zone}</strong></div>
-    <div class="signal-track" aria-label="現在株価の位置 ${signal.valuationPosition.toFixed(1)}%"><span class="signal-marker${signal.pending ? " is-pending" : ""}" style="left:${signal.valuationPosition}%"></span></div>
+    <div class="signal-heading"><span>3レポート総合判定</span><strong>${signal.zone}</strong></div>
+    <div class="signal-track" aria-label="3レポート総合判定 ${signal.zone}"><span class="signal-marker${signal.pending ? " is-pending" : ""}" style="left:${signal.position}%"></span></div>
     <div class="signal-scale"><span>売られすぎ</span><span>中立</span><span>買われすぎ</span></div>
-    <p class="signal-zone">${signal.asOf ? `現在株価で再計算：${signal.valuationPosition.toFixed(1)}%` : "3つのレポート作成後に判定します"}</p>`;
+    <p class="signal-zone">${signalNoteText(signal)}</p>`;
 
   const actions = document.createElement("div");
   actions.className = "card-actions";
@@ -261,7 +263,7 @@ function createCompactRow(stock) {
   const sector = document.createElement("span");
   sector.textContent = stock.sector;
   const date = document.createElement("span");
-  date.textContent = `${formatDate(price?.marketTime)} 更新`;
+  date.textContent = quoteStatusText(price);
   tags.append(market, sector, date);
 
   const detailGrid = document.createElement("div");
@@ -272,13 +274,13 @@ function createCompactRow(stock) {
       <strong>${formatChange(price)}</strong>
     </div>
     <div>
-      <small>現在株価の位置</small>
-      <strong>${signal.valuationPosition.toFixed(1)}%</strong>
+      <small>3レポート総合判定</small>
+      <strong>${signal.zone}</strong>
     </div>`;
 
   const signalNote = document.createElement("p");
   signalNote.className = "stock-row-note";
-  signalNote.textContent = signal.asOf ? `現在株価で再計算：${signal.valuationPosition.toFixed(1)}%` : "3つのレポート作成後に判定します";
+  signalNote.textContent = signalNoteText(signal);
 
   const actions = document.createElement("div");
   actions.className = "stock-row-actions";
@@ -334,7 +336,7 @@ function createList(stocks, compact = false) {
     const priceStrong = document.createElement("strong");
     priceStrong.textContent = formatPrice(Number(price?.price), stock.currency);
     const priceSmall = document.createElement("small");
-    priceSmall.textContent = formatChange(price);
+    priceSmall.textContent = `${formatChange(price)} ／ ${quoteStatusText(price)}`;
     priceCell.append(priceStrong, priceSmall);
 
     const signalCell = document.createElement("div");
@@ -342,7 +344,7 @@ function createList(stocks, compact = false) {
     const signalStrong = document.createElement("strong");
     signalStrong.textContent = signal.zone;
     const signalSmall = document.createElement("small");
-    signalSmall.textContent = "レポート判定";
+    signalSmall.textContent = signal.asOf ? `分析基準日：${signal.asOf}` : "判定保留";
     signalCell.append(signalStrong, signalSmall);
 
     const actions = document.createElement("div");
@@ -369,8 +371,13 @@ function visibleStocks() {
   return filtered.sort((a, b) => {
     if (state.sort === "name") return a.name.localeCompare(b.name, "ja");
     if (state.sort === "price-desc") return (Number(state.prices[b.id]?.price) || -Infinity) - (Number(state.prices[a.id]?.price) || -Infinity);
-    if (state.sort === "signal-asc") return (Number(state.signals[a.id]?.position) || Infinity) - (Number(state.signals[b.id]?.position) || Infinity);
-    if (state.sort === "signal-desc") return (Number(state.signals[b.id]?.position) || -Infinity) - (Number(state.signals[a.id]?.position) || -Infinity);
+    if (state.sort === "signal-asc" || state.sort === "signal-desc") {
+      const left = getSignal(a.id);
+      const right = getSignal(b.id);
+      if (left.pending !== right.pending) return left.pending ? 1 : -1;
+      if (left.pending) return a.order - b.order;
+      return state.sort === "signal-asc" ? left.position - right.position : right.position - left.position;
+    }
     return a.order - b.order;
   });
 }
@@ -398,9 +405,13 @@ function updateSummary(pricePayload) {
   elements.totalCount.textContent = state.stocks.length;
   elements.japanCount.textContent = state.stocks.filter((stock) => stock.market === "JP").length;
   elements.usCount.textContent = state.stocks.filter((stock) => stock.market === "US").length;
-  elements.priceSummary.textContent = pricePayload.generatedAt
-    ? `株価データ更新：${formatDate(pricePayload.generatedAt)}`
-    : "株価データは初回更新前です";
+  const quotes = Object.values(state.prices);
+  const times = quotes.map((quote) => quote.marketTime).filter((time) => time && Number.isFinite(Date.parse(time)));
+  times.sort((a, b) => Date.parse(a) - Date.parse(b));
+  const staleCount = quotes.filter((quote) => quote.status === "stale").length;
+  const failedCount = Math.max(staleCount, Number(pricePayload.errorCount) || 0);
+  const range = times.length ? `${formatDate(times[0])}〜${formatDate(times[times.length - 1])}` : "未取得";
+  elements.priceSummary.textContent = `株価の基準日時：${range}${failedCount ? ` ／ ${failedCount}銘柄で取得失敗（前回値または未取得）` : ""}`;
 }
 
 function showLoadError(error) {
