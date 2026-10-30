@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-30T02:24:21.035548+00:00",
+  "generatedAt": "2026-10-30T21:07:48.052712+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 14,
+  "quoteCount": 15,
   "errorCount": 0,
   "errors": {},
   "prices": {
@@ -158,6 +158,17 @@
       "currency": "USD",
       "marketTime": "2026-10-29T20:00:01+00:00",
       "updatedAt": "2026-10-30T02:24:21.035531+00:00",
+      "status": "ok"
+    },
+    "eli-lilly-lly": {
+      "symbol": "LLY",
+      "price": 1417.54,
+      "previousClose": 1373.7,
+      "change": 43.84,
+      "changePct": 3.1914,
+      "currency": "USD",
+      "marketTime": "2026-10-30T20:02:34+00:00",
+      "updatedAt": "2026-10-30T21:07:48.052695+00:00",
       "status": "ok"
     }
   }

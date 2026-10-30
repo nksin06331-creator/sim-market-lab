@@ -1,0 +1,1305 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Eli Lilly and Company",
+    "ticker": "LLY",
+    "exchange": "NYSE",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-10-31",
+    "source_cutoff": "2026-10-30T21:04:33.471075+00:00",
+    "generated_at": "2026-10-30T21:04:33.471075+00:00",
+    "price": 1417.54,
+    "price_as_of": "2026-10-30T20:02:34+00:00",
+    "benchmark": "S&P 500"
+  },
+  "capital_structure": {
+    "basic_shares": 890745031,
+    "diluted_shares": 892245031,
+    "market_cap": 1264793021243.74,
+    "cash": 4885000000.0,
+    "liquid_securities": 0,
+    "restricted_cash": 0,
+    "minimum_operating_cash": 0,
+    "debt": 49503000000.0,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "burn_one_off_adjustments": null,
+    "runway_months": null,
+    "source_ids": [
+      "S2",
+      "S4"
+    ],
+    "dilution_notes": [
+      "10月26日法定株式数940,745,031株から年次開示の信託50百万株を控除。3Qの希薄化893.4百万株と基本891.9百万株の差1.5百万株を加え、現時点892,245,031株と推定。信託残高不変と希薄化差継続を仮定し、加重平均株式数を時点実数と同一視しない。",
+      "ゼロの投資・制限現金・非普通株請求権はPE評価に別加算しない入力方針。存在しないという断定ではない。現金と借入は財務リスクの参考。ランウェイは未計算。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "Eli Lilly and Company、NYSE: LLY、USD、12月決算。1876年創業、1901年法人化。本社インディアナポリス。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "Q3",
+      "statement": "2026年3Q売上243.97億ドル、前年同期比39%増。GAAP純利益64.51億ドル、希薄化EPS7.22ドル。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MIX",
+      "statement": "3QのMounjaro売上107.23億ドル、Zepbound53.52億ドル。合計160.75億ドルで売上の65.9%。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "16075/24397*100",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "PRICE_VOLUME",
+      "statement": "3Qは数量53%増、実現価格15%減。約9億ドルの一時的な売上押上げを含み、うちJardianceマイルストーン4.10億ドルは最終回。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "2026年通期売上会社予想910～920億ドル、非GAAP EPS35～36ドル。9月末以降の買収研究開発費は含まない。想定株式数約8.94億株。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "9月末の現金48.85億ドル、短期借入等25.17億ドル、長期借入469.86億ドル。1～9月営業CF274.20億ドル。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "SHARES",
+      "statement": "10月26日法定株式数940,745,031株から年次開示の信託50百万株を控除。3Qの希薄化893.4百万株と基本891.9百万株の差1.5百万株を加え、現時点892,245,031株と推定。信託残高不変と希薄化差継続を仮定し、加重平均株式数を時点実数と同一視しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S2",
+        "S4"
+      ],
+      "calculation_id": "940745031-50000000+(893400000-891900000)",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "PRODUCT",
+      "statement": "MounjaroとZepboundは同一成分tirzepatideのブランド。Foundayo（orforglipron）は経口GLP-1。米国肥満症承認・発売は完了しており今後の未達成イベントに数えない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C1",
+      "statement": "Foundayoの販売拡大、Mounjaro・Zepboundの保険アクセス拡大が進行中。MedicareのGLP-1 Bridgeは2026年7月～2027年12月。患者数の拡大とネット価格低下を同時に検証する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C2",
+      "statement": "Retatrutideは開発中。会社は肥満症・糖尿病の3相で主要評価項目達成を報告。次の規制申請・審査の確定日は確認できず、承認済みとは扱わない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C3",
+      "statement": "会社はHouston65億ドル、Richmond50億ドルの製造拠点着工を報告。増産能力は今後数年で稼働予定。着工と商業出荷を区別する。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "同じ慢性疾患治療では他社の既存薬・新薬、保険者の採用条件、価格・有効性・忍容性・供給安定性が競争軸。年次資料はNovo Nordiskなどを競争相手として記載。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "評価基準株価1417.54 USD、価格時刻2026-10-30T20:02:34+00:00。市場価格の暫定取得元はYahoo Finance。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-30T20:02:34+00:00",
+      "source_ids": [
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL",
+      "statement": "2027年末評価。売上1050/1200/1350億ドル、調整後純利益率32/36/39%、PER26/32/38倍、希薄化株式900/895/890百万株。2026年会社売上予想中点915億ドルからの売上成長率は14.8/31.1/47.5%。会社予想ではなく幅の広い当方仮定。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "revenue*adjusted_net_margin*PE/future_diluted_shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "DILUTION",
+      "statement": "将来株式数は現在推定892.245百万株に対し、悲観は純増7.755、標準は純増2.755、楽観は純減2.245百万株。新株報酬と買戻しの純額を仮定。新規公募増資・転換社債発行は仮定しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S2",
+        "S4"
+      ],
+      "calculation_id": "future_shares=N0+net_SBC_minus_buybacks",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MARGIN",
+      "statement": "2026年会社の非GAAP EPS中点35.5×894百万株÷売上中点915億ドル＝純利益率34.69%の目安。2027年利益率32/36/39%は薬価・製品構成・研究開発・税負担を含む仮定。買収IPR&D発生年のGAAP利益とは異なる。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "35.5*894e6/91.5e9",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MULTIPLE",
+      "statement": "PER26/32/38倍は同業比較から確定した適正倍率ではなく、成長持続性に対する感応度を測る評価仮定。現値から標準価格を合わせていない。2026年会社EPS中点基準の現値PERも独立した参考として表示。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S5"
+      ],
+      "calculation_id": "PE_sensitivity_and_P0/35.5",
+      "confidence": "LOW"
+    },
+    {
+      "id": "EVENT_MODEL",
+      "statement": "各材料の結果は同じ2027年純利益×PERモデルの条件付き再評価。短期イベントリターンではない。個別価格幅は合算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "calculation_id": "conditional_revenue_margin_PE_share_model",
+      "confidence": "LOW"
+    },
+    {
+      "id": "RISK",
+      "statement": "売上の主力薬集中、薬価下落、保険者判断、供給品質、治験・規制、買収研究費、財務負担、競合が主要なリスク。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "全体期待は3材料を1つの共通成長グループに束ねた失敗側・成功側株主価値で逆算。個別割合は帰属を分離できないため非表示。これは同じ価値モデルを市場が使う仮定であり真の成功確率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "calculation_id": "(P0*N0-EQbear)/(EQbull-EQbear)*100",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "総合判定は株価評価45、カタリスト55、企業基盤リスク45の加重平均47.5。株価評価45はレンジ位置約35に調整後利益・評価倍率の不確実性を10ポイント上乗せした当方判断。カタリスト55は販売拡大の追い風に対し薬価低下と成長期待の先行を考慮。企業45は黒字・営業CFを評価し、主力集中・借入を減点。全て分析基準日時点の主観評価であり、株価更新では変更しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-31",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "45*.60+55*.25+45*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE_STATS",
+      "statement": "LLYの52週高値1449.68ドル、安値834.19ドル。米国2026-10-30まで20営業日LLY価格リターン24.04%、S&P 500価格指数-1.85%、単純差25.88ポイント。配当・リスク調整なし。補助情報のみで総合判定へ使わない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-10-30T20:02:34+00:00",
+      "source_ids": [
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "100*(close_t/close_tminus20-1);excess=LLY-SP500",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年3Q決算リリース（2026-10-29）",
+      "publisher": "Eli Lilly and Company / SEC",
+      "url": "https://investor.lilly.com/static-files/ef6bbff3-8d3c-4ca0-a5e9-1e49403f031e",
+      "published_at": "2026-10-29",
+      "accessed_at": "2026-10-30T21:04:33.471075+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "Q3",
+        "MIX",
+        "PRICE_VOLUME",
+        "GUIDANCE",
+        "PRODUCT",
+        "C2",
+        "MODEL",
+        "MARGIN",
+        "MULTIPLE",
+        "EVENT_MODEL",
+        "RISK",
+        "OVERALL",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "2026年3Q Form 10-Q",
+      "publisher": "Eli Lilly and Company / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm",
+      "published_at": "2026-10-29",
+      "accessed_at": "2026-10-30T21:04:33.471075+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "Q3",
+        "CAPITAL",
+        "SHARES",
+        "PRODUCT",
+        "C1",
+        "C2",
+        "C3",
+        "MODEL",
+        "DILUTION",
+        "EVENT_MODEL",
+        "RISK",
+        "OVERALL",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "2026年3Q決算説明会資料",
+      "publisher": "Eli Lilly and Company / SEC",
+      "url": "https://investor.lilly.com/static-files/4580c401-611c-406b-8964-88cb8d887bd4",
+      "published_at": "2026-10-29",
+      "accessed_at": "2026-10-30T21:04:33.471075+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "EVENT_MODEL",
+        "OVERALL",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "2025年 Form 10-K",
+      "publisher": "Eli Lilly and Company / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm",
+      "published_at": "2026-02-12",
+      "accessed_at": "2026-10-30T21:04:33.471075+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "SHARES",
+        "COMPETITION",
+        "DILUTION",
+        "RISK",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Yahoo Finance LLY日足・市場価格",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/LLY?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-10-30T21:04:33.471075+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE",
+        "MULTIPLE",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Yahoo Finance S&P 500日足",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-10-30T21:04:33.471075+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE_STATS"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "糖尿病・肥満症治療薬を主力に、がん・免疫・神経疾患の薬を研究開発し、製造・販売する米国の製薬会社です。",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "Q3",
+        "MIX"
+      ],
+      "sec2": [
+        "PRICE_VOLUME",
+        "COMPETITION"
+      ],
+      "sec3": [
+        "PRODUCT",
+        "C2"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "C3",
+        "SHARES"
+      ],
+      "sec5": [
+        "COMPETITION",
+        "RISK"
+      ],
+      "sec6": [
+        "PRODUCT",
+        "GUIDANCE"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISK"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "PE",
+    "method_explanation": "2027年の当方推定調整後純利益＝売上×純利益率。株主価値＝純利益×PER、1株価値＝株主価値÷将来希薄化株式数。PER法なので現金・借入を再加減しない。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.25,
+        "enterprise_value": null,
+        "equity_value": 873600000000.0,
+        "diluted_shares": 900000000.0,
+        "price": 970.6666666666666,
+        "conditions": [
+          "販売量増を薬価低下が相殺。買収費や供給費が残り、利益率32%、PER26倍。",
+          "PER法で税・利息を反映した調整後純利益を評価。現金・借入を株主価値へ再加減しない。",
+          "将来株式報酬・買戻しは純株式数に反映。増資資金の別加算は行わない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "MARGIN",
+          "MULTIPLE",
+          "DILUTION"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.5,
+        "enterprise_value": null,
+        "equity_value": 1382400000000.0,
+        "diluted_shares": 895000000.0,
+        "price": 1544.5810055865923,
+        "conditions": [
+          "既存薬と経口薬が拡大し、薬価下落を数量・製品構成で吸収。利益率36%、PER32倍。",
+          "PER法で税・利息を反映した調整後純利益を評価。現金・借入を株主価値へ再加減しない。",
+          "将来株式報酬・買戻しは純株式数に反映。増資資金の別加算は行わない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "MARGIN",
+          "MULTIPLE",
+          "DILUTION"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.25,
+        "enterprise_value": null,
+        "equity_value": 2000700000000.0,
+        "diluted_shares": 890000000.0,
+        "price": 2247.9775280898875,
+        "conditions": [
+          "販売・供給拡大と開発進展が揃う。利益率39%、PER38倍。承認や高倍率継続を保証しない。",
+          "PER法で税・利息を反映した調整後純利益を評価。現金・借入を株主価値へ再加減しない。",
+          "将来株式報酬・買戻しは純株式数に反映。増資資金の別加算は行わない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "MARGIN",
+          "MULTIPLE",
+          "DILUTION"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 1576.9515514824348,
+      "expected_delta_pct": 11.245647493716927,
+      "raw_band_position_pct": 34.98547979427754,
+      "display_band_position_pct": 34.98547979427754,
+      "endpoint_rr": 1.8583286720097139,
+      "market_score": 35,
+      "own_score": 47,
+      "supplemental_score": 53
+    },
+    "risk_class": "MEDIUM",
+    "risk_reasons": [
+      "シナリオ幅が現値の50%以上100%未満。",
+      "薬価・承認・主力薬集中・倍率の変化に依存。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "2027年売上（USD）",
+        "low": 108000000000.0,
+        "base": 120000000000.0,
+        "high": 132000000000.0,
+        "result_prices": [
+          1390.122905027933,
+          1544.5810055865923,
+          1699.0391061452515
+        ]
+      },
+      {
+        "variable": "2027年PER（倍）",
+        "low": 26,
+        "base": 32,
+        "high": 38,
+        "result_prices": [
+          1254.9720670391062,
+          1544.5810055865923,
+          1834.1899441340781
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "肥満症・糖尿病薬の販売と保険アクセス拡大",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 5,
+        "date": {
+          "display_text": "進行中／Bridge制度は2027年末まで",
+          "start_date": "2026-07-01",
+          "end_date": "2027-12-31",
+          "precision": "WINDOW",
+          "basis": "CONFIRMED",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        },
+        "plain_language": "Foundayoの販売拡大、Mounjaro・Zepboundの保険アクセス拡大が進行中。MedicareのGLP-1 Bridgeは2026年7月～2027年12月。患者数の拡大とネット価格低下を同時に検証する。",
+        "mechanism": [
+          "製品需要・保険採用・規制・供給の変化",
+          "2027年の数量・実現価格・費用・成長期待",
+          "調整後利益またはPERの変化"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "数量増が実現価格低下を上回り、2027年売上1250～1350億ドル、純利益率37～39%のモデル条件に届く。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              1653.6312849162011,
+              1882.4581005586592
+            ],
+            "price_change_pct_range": [
+              16.65499985299894,
+              32.797529562386906
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上125～135十億USD、純利益率37～39%、PER32～32倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "数量増と値下げが均衡し、2027年売上1150～1250億ドル、純利益率35～37%となる。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              1439.1061452513966,
+              1653.6312849162011
+            ],
+            "price_change_pct_range": [
+              1.5213782504477136,
+              16.65499985299894
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上115～125十億USD、純利益率35～37%、PER32～32倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "価格下落・採用鈍化が数量増を抑え、売上1050～1150億ドル、純利益率32～34%にとどまる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              1201.340782122905,
+              1397.9888268156424
+            ],
+            "price_change_pct_range": [
+              -15.251719025713207,
+              -1.3792325567079322
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上105～115十億USD、純利益率32～34%、PER32～32倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "会社は数量拡大と開発進捗を報告している。"
+          ],
+          "evidence_against": [
+            "ネット価格低下と開発・供給・買収費の負担がある。"
+          ],
+          "caveats": [
+            "経口薬、注射薬、供給能力、価格、他のパイプラインが同じ2027年利益へ重なり、個別材料を除いた事業価値を一次開示から切り分けられません。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "経口薬、注射薬、供給能力、価格、他のパイプラインが同じ2027年利益へ重なり、個別材料を除いた事業価値を一次開示から切り分けられません。",
+            "missing_information": [
+              "製品別の2027年ネット売上・利益率",
+              "新規薬と既存薬の置換率・純増利益"
+            ],
+            "next_checks": [
+              "製品別売上・数量と実現価格",
+              "製造稼働と研究開発費・承認範囲"
+            ],
+            "recalculation_method": "製品別純増利益が開示された時点で、材料除外時と追加時の利益を同じPERと株式数で再評価し差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "製品別売上と実現価格",
+          "治験の主要評価項目と安全性",
+          "製造稼働・粗利率"
+        ],
+        "sell_the_news_risk": "好材料でもモデルの標準条件を上回らない場合、期待差で価格が下がり得る。固定の下落率は置かない。",
+        "financing_risk": "黒字・営業CF創出企業だが大型投資と買収で借入増。新規増資なしの仮定は条件変更時に見直す。",
+        "update_triggers": [
+          "製品別業績・会社予想の更新",
+          "公式な申請・審査・安全性情報",
+          "工場稼働・資本支出計画の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "claim_ids": [
+          "C1",
+          "PRICE_VOLUME",
+          "GUIDANCE",
+          "EVENT_MODEL"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "Retatrutideの規制・臨床進捗",
+        "category": "R_AND_D",
+        "status": "TBD",
+        "importance": 4,
+        "date": {
+          "display_text": "次の申請・審査判断は時期未定",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        },
+        "plain_language": "Retatrutideは開発中。会社は肥満症・糖尿病の3相で主要評価項目達成を報告。次の規制申請・審査の確定日は確認できず、承認済みとは扱わない。",
+        "mechanism": [
+          "製品需要・保険採用・規制・供給の変化",
+          "2027年の数量・実現価格・費用・成長期待",
+          "調整後利益またはPERの変化"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "追加データと申請進展で成長持続性の不確実性が下がり、同じ2027年利益にPER34～36倍を許容する仮定。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              1641.1173184357542,
+              1737.6536312849162
+            ],
+            "price_change_pct_range": [
+              15.772205259516792,
+              22.582334980664818
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上120～120十億USD、純利益率36～36%、PER34～36倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "データは概ね既知情報を追認。申請・適応範囲は確認待ちでPER30～32倍の仮定。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              1448.04469273743,
+              1544.5810055865923
+            ],
+            "price_change_pct_range": [
+              2.1519458172206907,
+              8.96207553836874
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上120～120十億USD、純利益率36～36%、PER30～32倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "安全性・追加試験・遅延で成長の持続性に疑念が生じ、同じ利益にPER26～28倍の仮定。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              1254.9720670391062,
+              1351.508379888268
+            ],
+            "price_change_pct_range": [
+              -11.4683136250754,
+              -4.65818390392736
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上120～120十億USD、純利益率36～36%、PER26～28倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "会社は数量拡大と開発進捗を報告している。"
+          ],
+          "evidence_against": [
+            "ネット価格低下と開発・供給・買収費の負担がある。"
+          ],
+          "caveats": [
+            "経口薬、注射薬、供給能力、価格、他のパイプラインが同じ2027年利益へ重なり、個別材料を除いた事業価値を一次開示から切り分けられません。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "経口薬、注射薬、供給能力、価格、他のパイプラインが同じ2027年利益へ重なり、個別材料を除いた事業価値を一次開示から切り分けられません。",
+            "missing_information": [
+              "製品別の2027年ネット売上・利益率",
+              "新規薬と既存薬の置換率・純増利益"
+            ],
+            "next_checks": [
+              "製品別売上・数量と実現価格",
+              "製造稼働と研究開発費・承認範囲"
+            ],
+            "recalculation_method": "製品別純増利益が開示された時点で、材料除外時と追加時の利益を同じPERと株式数で再評価し差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "製品別売上と実現価格",
+          "治験の主要評価項目と安全性",
+          "製造稼働・粗利率"
+        ],
+        "sell_the_news_risk": "好材料でもモデルの標準条件を上回らない場合、期待差で価格が下がり得る。固定の下落率は置かない。",
+        "financing_risk": "黒字・営業CF創出企業だが大型投資と買収で借入増。新規増資なしの仮定は条件変更時に見直す。",
+        "update_triggers": [
+          "製品別業績・会社予想の更新",
+          "公式な申請・審査・安全性情報",
+          "工場稼働・資本支出計画の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ],
+        "claim_ids": [
+          "C2",
+          "EVENT_MODEL"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "製造拠点拡張と供給能力の立上げ",
+        "category": "CAPACITY",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／稼働は今後数年、個別確定日なし",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S2",
+            "S3"
+          ]
+        },
+        "plain_language": "会社はHouston65億ドル、Richmond50億ドルの製造拠点着工を報告。増産能力は今後数年で稼働予定。着工と商業出荷を区別する。",
+        "mechanism": [
+          "製品需要・保険採用・規制・供給の変化",
+          "2027年の数量・実現価格・費用・成長期待",
+          "調整後利益またはPERの変化"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "供給・製造効率改善が進み、同じ売上に純利益率37～39%の仮定。新工場の即時全面寄与は仮定しない。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              1587.486033519553,
+              1673.296089385475
+            ],
+            "price_change_pct_range": [
+              11.988799858878973,
+              18.042248499899483
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上120～120十億USD、純利益率37～39%、PER32～32倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "段階的に立ち上がり、先行費用と効率化が均衡。純利益率35～36%の仮定。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              1501.6759776536312,
+              1544.5810055865923
+            ],
+            "price_change_pct_range": [
+              5.935351217858487,
+              8.96207553836874
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上120～120十億USD、純利益率35～36%、PER32～32倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "品質・稼働遅延と費用増で利益率32～34%となる。着工済みでも商業出荷成功とはしない。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              1372.9608938547485,
+              1458.7709497206704
+            ],
+            "price_change_pct_range": [
+              -3.1448217436722437,
+              2.9086268973482543
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年売上120～120十億USD、純利益率32～34%、PER32～32倍、株式895百万株。短期の反応予測ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "既存薬の代替と供給増が重なり、単独の事業価値差分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "2027年売上・純利益率・PER・株式数へ結果条件を反映して同一式で再計算するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得日を揃えたイベント前後の独立した市場予想データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算と開発ニュースが同時発生し、単独発表の比較可能な対照標本を確保していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "薬効、開発段階、利益構成が同一な他社標本と異常リターンを検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "会社は数量拡大と開発進捗を報告している。"
+          ],
+          "evidence_against": [
+            "ネット価格低下と開発・供給・買収費の負担がある。"
+          ],
+          "caveats": [
+            "経口薬、注射薬、供給能力、価格、他のパイプラインが同じ2027年利益へ重なり、個別材料を除いた事業価値を一次開示から切り分けられません。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "経口薬、注射薬、供給能力、価格、他のパイプラインが同じ2027年利益へ重なり、個別材料を除いた事業価値を一次開示から切り分けられません。",
+            "missing_information": [
+              "製品別の2027年ネット売上・利益率",
+              "新規薬と既存薬の置換率・純増利益"
+            ],
+            "next_checks": [
+              "製品別売上・数量と実現価格",
+              "製造稼働と研究開発費・承認範囲"
+            ],
+            "recalculation_method": "製品別純増利益が開示された時点で、材料除外時と追加時の利益を同じPERと株式数で再評価し差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "製品別売上と実現価格",
+          "治験の主要評価項目と安全性",
+          "製造稼働・粗利率"
+        ],
+        "sell_the_news_risk": "好材料でもモデルの標準条件を上回らない場合、期待差で価格が下がり得る。固定の下落率は置かない。",
+        "financing_risk": "黒字・営業CF創出企業だが大型投資と買収で借入増。新規増資なしの仮定は条件変更時に見直す。",
+        "update_triggers": [
+          "製品別業績・会社予想の更新",
+          "公式な申請・審査・安全性情報",
+          "工場稼働・資本支出計画の変更"
+        ],
+        "source_ids": [
+          "S2",
+          "S3"
+        ],
+        "claim_ids": [
+          "C3",
+          "EVENT_MODEL"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "代謝疾患薬の共通成長と供給・開発",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じ患者・数量・利益への影響を共通モデルで1回のみ評価。個別再評価の価格・割合は加算しない。",
+        "full_success_incremental_equity_value": 1127100000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        24.70792487301393,
+        44.70792487301393
+      ],
+      "raw_implied_pct": 34.70792487301393,
+      "all_events_excluded_equity_value": 873600000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "1つの共通成長グループで、既存事業を残す失敗側株主価値8736億ドルと成功側2兆7億ドルを独立仮定。全体逆算=(評価基準株価×推定現在株式数−失敗側株主価値)÷両端点の差。±10ポイントは統計的区間でなく、端点・株式数・倍率の不確実性を表す表示幅。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "Mounjaro・Zepbound・Foundayo売上、実現価格、保険採用",
+        "frequency": "各四半期と重要開示時",
+        "update_trigger": "会社予想改訂または価格と数量の方向が変わる",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "Retatrutide申請・安全性・承認範囲",
+        "frequency": "公式発表時",
+        "update_trigger": "申請受理・追加試験・安全性情報",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "供給能力、品質、粗利率、設備投資、純借入",
+        "frequency": "各四半期",
+        "update_trigger": "稼働予定・設備投資・財務負担の変更",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-10-30T21:04:33.471075+00:00",
+    "messages": [
+      "時点希薄化株式数は信託・潜在株を明示して推定。",
+      "2027年利益・PER・確率・個別価格レンジは当方仮定で確度が低い。",
+      "個別材料の期待割合は非表示。全体は共通価値グループの条件付き逆算で真の成功確率ではない。"
+    ]
+  }
+}

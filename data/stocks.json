@@ -398,6 +398,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "eli-lilly-lly",
+      "order": 15,
+      "ticker": "LLY",
+      "quoteSymbol": "LLY",
+      "name": "イーライリリー",
+      "nameEn": "Eli Lilly and Company",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "NYSE",
+      "currency": "USD",
+      "sector": "医薬品・糖尿病・肥満症治療",
+      "reports": {
+        "company": {
+          "path": "./stocks/eli-lilly-lly/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/eli-lilly-lly/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/eli-lilly-lly/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

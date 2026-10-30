@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-10-03T13:57:03.186749+00:00",
+  "updatedAt": "2026-10-30T21:07:48.052712+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 56.5,
@@ -170,6 +170,18 @@
       },
       "reportRevision": "gorilla-technology-grrr-2026-10-03",
       "summary": "上期99%増収と大型AI案件は強い一方、赤字、納入・回収、$232Mの転換社債と希薄化リスクから中立。"
+    },
+    "eli-lilly-lly": {
+      "position": 47.5,
+      "zone": "中立",
+      "asOf": "2026-10-31",
+      "components": {
+        "valuation": 45.0,
+        "catalysts": 55.0,
+        "businessRisk": 45.0
+      },
+      "reportRevision": "eli-lilly-lly-2026-10-31-v1",
+      "summary": "主力薬の販売拡大と営業CFは強い一方、薬価低下・主力集中・開発規制・借入・倍率の不確実性を考慮。3レポートに分析根拠と当方仮定を明示。"
     }
   }
 }
