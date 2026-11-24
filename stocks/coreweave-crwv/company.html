@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRWV 完全入門ガイド</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/*
+ ================================================================
+  STOCK GUIDE TEMPLATE v4  SiM MARKET LAB ダーク版 / ChatGPT index.html
+  ----------------------------------------------------------------
+  ★★ デザインロック（ぶれ防止）★★
+  ・この <style> ブロックとページ骨格は「改変禁止」。1文字も変えない。逐語コピーする。
+  ・色はSiMグリーンで固定。銘柄・業界でアクセント色を変えない。
+  ・差し替えてよいのは {{ }} プレースホルダーの中身（＝テキスト）だけ。
+  ・セクションの数・順番・各コンポーネントの個数（SEC1のcard-smは4枚 等）は固定。
+    追加・削除・並べ替えをしない。
+  ----------------------------------------------------------------
+  ブランド：黒背景 × ネオングリーン × 白文字（キーワードだけ緑）。Instagram(sim.marketlab)準拠。
+  設計思想：「表層＝3秒で意味が取れる／深層＝読みたい人だけ開く」の2層構造。
+  ・見出しの重要ワードは <span class="g">…</span> で緑ハイライト。
+ ================================================================
+*/
+
+:root {
+  /* ── ブランド・アクセント：SiMグリーンで固定（銘柄・業界で変えない＝デザインぶれ防止） ── */
+  --accent:        #6EE24E;
+  --accent-bright: #8BF56B;
+  --accent-tint:   rgba(110,226,78,.12);
+  --accent-line:   rgba(110,226,78,.38);
+
+  /* ── ダークシェル（変更不要・全銘柄共通） ── */
+  --bg:        #0a0c0a;
+  --surface:   #141815;   /* カード面 */
+  --surface-2: #1b201c;   /* 少し明るい面 */
+
+  /* レガシー変数マッピング（本文markupが参照。名前は据え置き、意味をダーク用に再定義） */
+  --c-primary-50:  var(--accent-tint);        --c-primary-100: rgba(110,226,78,.18);
+  --c-primary-200: rgba(110,226,78,.55);      --c-primary-400: var(--accent);
+  --c-primary-600: var(--accent);             --c-primary-800: var(--accent-bright);
+  --c-accent-50:   var(--accent-tint);        --c-accent-400:  var(--accent);   --c-accent-600: var(--accent-bright);
+
+  /* システム色（ダーク版：薄背景は半透明の暗色、文字は明るい色に反転） */
+  --amber-50:  rgba(251,191,36,.13); --amber-400: #fbbf24; --amber-600: #fcd34d; --amber-800: #fde68a;
+  --red-50:    rgba(248,113,113,.13); --red-400:  #f87171; --red-600:   #fca5a5;
+  --blue-50:   rgba(96,165,250,.13); --blue-400:  #60a5fa; --blue-600:  #93c5fd; --blue-800: #bfdbfe;
+  --green-50:  rgba(110,226,78,.13); --green-400: #6EE24E; --green-600: #8bf56b;
+  --violet-50: rgba(167,139,250,.13); --violet-400:#a78bfa; --violet-600:#c4b5fd;
+  --gray-50:  #15191b;               --gray-100: rgba(255,255,255,.06);
+  --gray-200: rgba(255,255,255,.09); --gray-300: #3f463f;
+  --gray-500: #8a948a;               --gray-700: #c3ccc3; --gray-900: #f1f5f1;
+
+  --font-display: 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
+  --font-body:    'Noto Sans JP', 'DM Sans', sans-serif;
+  --font-num:     'DM Sans', 'Noto Sans JP', sans-serif;
+  --radius: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--gray-900); line-height: 1.85; font-size: 16px; -webkit-text-size-adjust: 100%; }
+.g { color: var(--accent); }               /* 緑キーワード */
+
+/* 読了プログレスバー */
+.progress-bar { position: fixed; top: 0; left: 0; height: 4px; width: 0%; z-index: 200; background: var(--accent); box-shadow: 0 0 12px var(--accent); transition: width .1s linear; }
+
+/* ── HERO（黒＋緑グロー＋ハーフトーン・ドット） ── */
+.hero {
+  background: radial-gradient(120% 90% at 50% -10%, #12251a 0%, #0b0f0c 45%, var(--bg) 75%);
+  color: #fff; padding: 58px 22px 66px; text-align: center; position: relative; overflow: hidden;
+}
+.hero::before { content:''; position:absolute; inset:0;
+  background-image: radial-gradient(var(--accent) 1px, transparent 1.6px);
+  background-size: 15px 15px; opacity: .10;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 120%, #000 0%, transparent 60%);
+          mask-image: radial-gradient(ellipse at 50% 120%, #000 0%, transparent 60%);
+}
+.hero > * { position: relative; z-index: 1; }
+.brandmark { font-family: var(--font-num); font-weight: 700; letter-spacing: .18em; font-size: 13px; color: var(--gray-500); margin-bottom: 18px; }
+.brandmark b { color: #fff; font-weight: 700; }
+.brandmark .g { color: var(--accent); }
+.hero-badge { display: inline-block; background: rgba(110,226,78,.10); border: 1px solid var(--accent-line); border-radius: 999px; padding: 6px 18px; font-size: 12px; letter-spacing: .06em; font-weight: 700; margin-bottom: 18px; color: var(--accent); }
+.hero h1 { font-family: var(--font-display); font-size: clamp(30px,7.5vw,50px); font-weight: 900; line-height: 1.3; margin-bottom: 14px; letter-spacing: .01em; }
+.hero h1 .g { color: var(--accent); }
+.hero p { font-size: 15.5px; color: #c3ccc3; max-width: 560px; margin: 0 auto 26px; line-height: 1.85; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.hero-tag { background: rgba(255,255,255,.04); border: 1px solid var(--gray-200); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500; color: #d8ded8; }
+
+/* ── 30秒サマリー（でかい数字カード） ── */
+.tldr-hero { max-width: 820px; margin: -30px auto 0; padding: 0 16px; position: relative; z-index: 5; }
+.tldr-hero-inner { background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px 20px 8px; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+.tldr-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 17px; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.stat-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 10px; margin-bottom: 14px; }
+.stat { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 14px 12px; text-align: center; }
+.stat-value { font-family: var(--font-num); font-weight: 700; font-size: clamp(24px,6vw,32px); line-height: 1.1; color: #fff; }
+.stat-value.up   { color: var(--accent); }
+.stat-value.down { color: var(--red-400); }
+.stat-label { font-size: 12px; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
+.stat-note  { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
+
+/* ── NAV ── */
+.nav-index { background: rgba(10,12,10,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
+.nav-inner { max-width: 820px; margin: 0 auto; padding: 0 16px; display: flex; overflow-x: auto; scrollbar-width: none; }
+.nav-inner::-webkit-scrollbar { display: none; }
+.nav-item { flex-shrink: 0; padding: 14px 14px; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; }
+.nav-item:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.container { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+
+/* ── SECTION ── */
+.section { padding: 46px 0 34px; border-bottom: 1px solid var(--gray-200); opacity: 0; transform: translateY(16px); animation: fadeUp .5s ease forwards; }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.section-icon { width: 46px; height: 46px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.section-num { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: #06210a; font-family: var(--font-num); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.section-title { font-family: var(--font-display); font-size: clamp(21px,5.4vw,27px); font-weight: 900; color: #fff; line-height: 1.32; position: relative; display: inline-block; padding-bottom: 9px; }
+.section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 3px; background: var(--accent); border-radius: 3px; }
+.section-title .g { color: var(--accent); }
+.section-sub { font-size: 13px; color: var(--gray-500); margin-top: 6px; font-weight: 500; }
+
+/* ── ⚡3秒まとめ ── */
+.tldr { background: var(--accent-tint); border: 1px solid var(--accent-line); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px; }
+.tldr-label { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-weight: 900; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
+.tldr ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.tldr li { font-size: 15.5px; font-weight: 500; color: #eef2ee; line-height: 1.7; padding-left: 30px; position: relative; }
+.tldr li::before { content: attr(data-emoji); position: absolute; left: 0; top: 0; font-size: 18px; }
+
+/* ── 👉つまり ── */
+.sowhat { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 14px; padding: 12px 16px 12px 46px; margin: 14px 0; position: relative; }
+.sowhat::before { content: '👉'; position: absolute; left: 14px; top: 11px; font-size: 20px; }
+.sowhat b { color: var(--accent); }
+.sowhat p { font-size: 14.5px; color: var(--gray-700); line-height: 1.8; }
+
+/* ── シグナル判定ピル ── */
+.signal { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: 12.5px; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
+.signal.bull    { background: var(--green-50); color: var(--accent); }
+.signal.neutral { background: var(--amber-50); color: var(--amber-600); }
+.signal.bear    { background: var(--red-50);   color: var(--red-600); }
+
+/* ── ★重要度 ── */
+.rating { font-family: var(--font-num); letter-spacing: 1px; color: var(--accent); font-size: 14px; }
+.rating .off { color: var(--gray-300); }
+
+/* ── 絵文字箇条書き ── */
+.keypoints { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 8px 0; }
+.keypoints li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.7; color: #e4e9e4; }
+.keypoints .kp-emoji { font-size: 22px; flex-shrink: 0; line-height: 1.4; }
+.keypoints .kp-text b { color: var(--accent); }
+
+/* ── CARDS ── */
+.card { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; margin-bottom: 12px; }
+.card-sm { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 16px 18px; }
+.card-sm .card-emoji { font-size: 22px; display: inline-flex; width: 40px; height: 40px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--gray-200); align-items: center; justify-content: center; margin-bottom: 8px; }
+.card-sm .card-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; margin-bottom: 4px; color: var(--accent); }
+.card-sm .card-desc { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
+
+/* ── 会社クイックデータ（企業詳細を厚くする一覧） ── */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px,1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; margin: 4px 0 14px; }
+.facts > div { background: var(--surface); padding: 12px 14px; }
+.facts dt { font-size: 11px; color: var(--gray-500); font-weight: 700; margin-bottom: 3px; }
+.facts dd { margin: 0; font-size: 14.5px; color: #fff; font-weight: 700; line-height: 1.5; }
+.block-label { font-family: var(--font-display); font-weight: 900; font-size: 15px; color: #fff; margin: 18px 0 8px; display: flex; align-items: center; gap: 7px; }
+.block-label .g { color: var(--accent); }
+
+/* ── TERM ACCORDION ── */
+.term-list { display: flex; flex-direction: column; gap: 10px; }
+.term-item { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; transition: border-color .2s; }
+.term-item:hover { border-color: var(--accent); }
+.term-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; cursor: pointer; gap: 12px; user-select: none; min-height: 56px; }
+.term-header::-webkit-details-marker { display: none; }
+.term-name { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; }
+.term-en { font-size: 11px; color: var(--gray-500); margin-left: 8px; font-weight: 400; }
+.term-arrow { font-size: 20px; color: var(--accent); transition: transform .25s; flex-shrink: 0; }
+.term-item[open] .term-arrow { transform: rotate(180deg); }
+.term-item[open] { border-color: var(--accent); }
+.term-body { padding: 2px 18px 18px; border-top: 1px solid var(--gray-100); }
+.term-body p { font-size: 14.5px; color: var(--gray-700); line-height: 1.85; margin: 10px 0 0; }
+.term-body b { color: var(--accent); }
+
+/* ── CALL-OUT ── */
+.ex-box, .ex-box-accent, .ex-box-amber, .ex-box-red { border-radius: 0 8px 8px 0; padding: 12px 16px; margin-top: 12px; }
+.ex-box        { background: var(--accent-tint); border-left: 4px solid var(--accent); }
+.ex-box-accent { background: var(--accent-tint); border-left: 4px solid var(--accent); }
+.ex-box-amber  { background: var(--amber-50);  border-left: 4px solid var(--amber-400); }
+.ex-box-red    { background: var(--red-50);    border-left: 4px solid var(--red-400); }
+.ex-label { font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 4px; }
+.ex-label-primary, .ex-label-accent { color: var(--accent); }
+.ex-label-amber { color: var(--amber-600); }
+.ex-label-red { color: var(--red-600); }
+.ex-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
+
+/* ── INFO BOXES（リスク4分類） ── */
+.info-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; margin-top: 16px; }
+.info-box { border-radius: 14px; padding: 16px 18px; border: 1px solid var(--gray-200); }
+.info-box-primary { background: var(--accent-tint); }
+.info-box-accent  { background: var(--accent-tint); }
+.info-box-amber   { background: var(--amber-50); }
+.info-box-red     { background: var(--red-50); }
+.info-box-blue    { background: var(--blue-50); }
+.info-box-green   { background: var(--green-50); }
+.info-box-gray    { background: var(--surface-2); }
+.info-title { font-family: var(--font-display); font-weight: 700; font-size: 14px; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.info-title-primary, .info-title-accent, .info-title-green { color: var(--accent); }
+.info-title-amber { color: var(--amber-600); }
+.info-title-red { color: var(--red-600); }
+.info-title-blue { color: var(--blue-600); }
+.info-title-gray { color: #d8ded8; }
+.info-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
+
+/* ── TIMELINE ── */
+.timeline { position: relative; padding-left: 30px; }
+.timeline::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 6px; width: 3px; background: rgba(110,226,78,.25); border-radius: 3px; }
+.tl-row { position: relative; margin-bottom: 22px; }
+.tl-row::before { content: ''; position: absolute; left: -25px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: 3px solid var(--bg); box-shadow: 0 0 0 2px var(--accent); }
+.tl-date { font-family: var(--font-num); font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .04em; margin-bottom: 3px; }
+.tl-title { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.tl-desc { font-size: 13.5px; color: var(--gray-500); line-height: 1.75; }
+
+/* ── BADGES ── */
+.badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 6px; font-weight: 700; }
+.badge-primary { background: var(--accent-tint); color: var(--accent); }
+.badge-accent  { background: var(--accent-tint); color: var(--accent); }
+.badge-amber   { background: var(--amber-50);  color: var(--amber-600); }
+.badge-red     { background: var(--red-50);    color: var(--red-600); }
+.badge-blue    { background: var(--blue-50);   color: var(--blue-600); }
+.badge-green   { background: var(--green-50);  color: var(--accent); }
+.badge-violet  { background: var(--violet-50); color: var(--violet-600); }
+
+/* ── COMPARE TABLE ── */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--gray-200); border-radius: 14px; margin: 12px 0; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 480px; }
+.compare-table th { background: var(--gray-50); padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; color: var(--gray-500); letter-spacing: .03em; border-bottom: 1px solid var(--gray-200); white-space: nowrap; }
+.compare-table td { padding: 12px 14px; border-bottom: 1px solid var(--gray-100); color: var(--gray-700); vertical-align: top; }
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:hover td { background: rgba(255,255,255,.02); }
+.compare-table .me { background: var(--accent-tint); font-weight: 700; color: var(--accent); }
+
+/* ── HIGHLIGHT（インスタの“まとめ”枠：ダーク＋緑ボーダー） ── */
+.highlight { background: var(--surface); border: 1.5px solid var(--accent-line); border-radius: var(--radius); padding: 22px 24px; margin: 22px 0; position: relative; overflow: hidden; }
+.highlight::before { content:''; position:absolute; right:-30px; bottom:-30px; width:160px; height:160px;
+  background-image: radial-gradient(var(--accent) 1px, transparent 1.5px); background-size: 13px 13px; opacity:.12; }
+.highlight h3 { font-family: var(--font-display); font-size: 19px; font-weight: 900; margin-bottom: 10px; color: var(--accent); display: flex; align-items: center; gap: 8px; position: relative; }
+.highlight p { font-size: 14.5px; color: #d8ded8; line-height: 1.85; position: relative; }
+.highlight b { color: var(--accent); }
+
+/* ── PRODUCT GRID ── */
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; margin: 16px 0; }
+.product-box { border-radius: 14px; padding: 18px 14px; text-align: center; border: 1px solid var(--gray-200); background: var(--surface); }
+.product-symbol { font-family: var(--font-num); font-size: 30px; font-weight: 700; margin-bottom: 4px; color: var(--accent); }
+.product-name { font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px; color: #fff; }
+.product-use { font-size: 12px; line-height: 1.55; color: var(--gray-700); }
+
+/* ── MISC ── */
+.lead { font-size: 16.5px; color: #dbe1db; line-height: 1.9; margin-bottom: 20px; font-weight: 500; }
+.lead .g { color: var(--accent); }
+strong { font-weight: 700; color: #fff; }
+strong.g { color: var(--accent); }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; }
+
+/* ── FOOTER ── */
+.footer { padding: 40px 22px; text-align: center; color: var(--gray-500); font-size: 13px; border-top: 1px solid var(--gray-200); margin-top: 32px; }
+.footer .brandmark { margin-bottom: 14px; }
+
+@media (max-width: 480px){
+  body { font-size: 14px; line-height: 1.66; overflow-wrap: anywhere; }
+  .hero { padding: 30px 12px 42px; }
+  .brandmark { font-size: 11px; margin-bottom: 12px; }
+  .hero-badge { padding: 5px 12px; font-size: 10px; margin-bottom: 12px; }
+  .hero h1 { font-size: 30px; line-height: 1.25; margin-bottom: 9px; }
+  .hero p { font-size: 13px; line-height: 1.66; margin-bottom: 16px; }
+  .hero-tags { gap: 5px; }
+  .hero-tag { padding: 5px 9px; font-size: 11px; }
+  .tldr-hero { margin-top: -22px; padding: 0 12px; }
+  .tldr-hero-inner { padding: 14px 12px 5px; border-radius: 12px; }
+  .tldr-hero-title { font-size: 15px; margin-bottom: 9px; }
+  .stat-strip { grid-template-columns: repeat(2,1fr); gap: 6px; margin-bottom: 9px; }
+  .stat { padding: 10px 8px; border-radius: 10px; }
+  .stat-value { font-size: 23px; }
+  .stat-label { font-size: 11px; }
+  .stat-note { font-size: 10px; }
+  .nav-inner { padding: 0 8px; }
+  .nav-item { min-height: 44px; display: flex; align-items: center; padding: 9px 10px; font-size: 11px; }
+  .container { padding: 0 12px; }
+  .section { padding: 26px 0 20px; scroll-margin-top: 52px; }
+  .section-header { gap: 8px; margin-bottom: 13px; }
+  .section-icon { width: 38px; height: 38px; font-size: 18px; }
+  .section-num { width: 27px; height: 27px; font-size: 13px; }
+  .section-title { font-size: 20px; padding-bottom: 7px; }
+  .section-sub { font-size: 11px; margin-top: 4px; }
+  .tldr { padding: 13px 14px; margin-bottom: 14px; border-radius: 12px; }
+  .tldr-label { font-size: 12px; margin-bottom: 7px; }
+  .tldr ul { gap: 6px; }
+  .tldr li { font-size: 14px; line-height: 1.6; padding-left: 25px; }
+  .tldr li::before { font-size: 16px; }
+  .card-grid,.grid-2,.info-row { gap: 8px; }
+  .card,.card-sm { padding: 13px 14px; border-radius: 11px; margin-bottom: 8px; }
+  .facts { grid-template-columns: repeat(2,1fr); border-radius: 11px; }
+  .facts > div { padding: 9px 10px; }
+  .facts dd { font-size: 13px; }
+  .keypoints { gap: 8px; }
+  .keypoints li { font-size: 14px; gap: 8px; }
+  .keypoints .kp-emoji { font-size: 18px; }
+  .highlight { padding: 15px 14px; margin: 14px 0; border-radius: 12px; }
+  .highlight h3 { font-size: 17px; }
+  .highlight p,.lead { font-size: 14px; line-height: 1.66; }
+  .term-list { gap: 7px; }
+  .term-header { min-height: 44px; padding: 11px 12px; }
+  .term-name { font-size: 14px; }
+  .term-body { padding: 1px 12px 12px; }
+  .term-body p { font-size: 13px; line-height: 1.66; }
+  .table-wrap { margin: 8px 0; }
+  .compare-table { font-size: 11px; min-width: 580px; }
+  .compare-table th,.compare-table td { padding: 8px 9px; }
+  .footer { padding: 28px 14px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce){
+  .section { animation: none; opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ========================================================
+  HERO
+  CRWV コアウィーブ AI向けGPUクラウド AIの学習と推論に必要なGPUクラウドを、ソフトウェア・運用・電力設備と一体で提供する企業です。 <span class="hero-tag">米国株</span><span class="hero-tag">Nasdaq</span><span class="hero-tag">GPUクラウド</span><span class="hero-tag">設備投資型</span> 2026-11-24
+  ※見出しの重要ワードは <span class="g">…</span> で緑ハイライト
+======================================================== -->
+<div class="hero">
+  <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
+  <div class="hero-badge">CRWV 完全入門ガイド ・ 2026-11-24版</div>
+  <h1>コアウィーブ（CRWV）を<br><span class="g">まるっと</span>解説</h1>
+  <p>AIの学習と推論に必要なGPUクラウドを、ソフトウェア・運用・電力設備と一体で提供する企業です。</p>
+  <div class="hero-tags">
+    <!-- 例: <span class="hero-tag">⚛️ 同位体って何？</span> -->
+    <span class="hero-tag">米国株</span><span class="hero-tag">Nasdaq</span><span class="hero-tag">GPUクラウド</span><span class="hero-tag">設備投資型</span>
+  </div>
+</div>
+
+<!-- 30秒サマリー：でかい数字カード3〜4枚（上昇は .up / 下落は .down） -->
+<div class="tldr-hero">
+  <div class="tldr-hero-inner">
+    <div class="tldr-hero-title">📊 まずは数字でざっくり</div>
+    <div class="stat-strip">
+      <!-- 例:
+      <div class="stat"><div class="stat-value">$12.34</div><div class="stat-label">現在の株価</div><div class="stat-note">52週 $4〜$18</div></div>
+      <div class="stat"><div class="stat-value up">+180%</div><div class="stat-label">直近1年</div></div>
+      <div class="stat"><div class="stat-value">$1.2B</div><div class="stat-label">時価総額</div></div>
+      <div class="stat"><div class="stat-value">2027</div><div class="stat-label">黒字化目標</div></div>
+      -->
+      <div class="stat"><div class="stat-value">$48.33</div><div class="stat-label">評価基準株価</div><div class="stat-note">米国2026/11/23取引分</div></div><div class="stat"><div class="stat-value">$3.661B</div><div class="stat-label">2026年3Q売上</div><div class="stat-note">2026年7～9月 [S1]</div></div><div class="stat"><div class="stat-value">−$709M</div><div class="stat-label">2026年3Q純損益</div><div class="stat-note">GAAP純損失 [S1]</div></div><div class="stat"><div class="stat-value">$132.5B</div><div class="stat-label">契約残高</div><div class="stat-note">9月末・会社定義 [S1]</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY NAV -->
+<nav class="nav-index">
+  <div class="nav-inner">
+    <a class="nav-item" href="#sec1">① どんな会社</a>
+    <a class="nav-item" href="#sec2">② 業界</a>
+    <a class="nav-item" href="#sec3">③ 製品・設備</a>
+    <a class="nav-item" href="#sec4">④ 財務・供給</a>
+    <a class="nav-item" href="#sec5">⑤ 競合</a>
+    <a class="nav-item" href="#sec6">⑥ 用語辞典</a>
+    <a class="nav-item" href="#sec7">⑦ 株価の見方</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- SEC1: 会社概要　⚡3秒まとめ → 会社データ → card-sm 4枚 → どう稼ぐ → highlight「基本ルール」 -->
+  <section class="section" id="sec1">
+    <div class="section-header">
+      <div class="section-icon">🏢</div><div class="section-num">1</div>
+      <div>
+        <div class="section-title">コアウィーブって<span class="g">どんな会社</span>？</div>
+        <div class="section-sub">まず全体像を3秒で</div>
+      </div>
+    </div>
+    <div class="tldr">
+      <div class="tldr-label">⚡ このセクションの3秒まとめ</div>
+      <ul>
+        <!-- 例: <li data-emoji="🏭">◯◯を作ってる△△業界の会社</li> -->
+        <li>AI向けの計算能力と運用をクラウドとして提供します。</li><li>設備と資金を先に用意し、長期契約の売上へつなげます。</li><li>営業利益やEBITDAの黒字と、純利益・現金収支は別です。</li>
+      </ul>
+    </div>
+
+    <!-- 会社データ（クイックファクト）：設立/本社/従業員/CEO/上場/売上規模 等。不明は「非開示」 -->
+    <div class="facts">
+      <div class="info-row"><div class="info-box"><div class="info-title">会社と沿革</div><div class="info-text">CoreWeave, Inc.／Nasdaq: CRWV／USD／12月決算。2017年設立、2020年クラウド開始、2025年3月上場。本社Livingston, New Jersey。 [S1,S4]</div></div><div class="info-box"><div class="info-title">直近四半期</div><div class="info-text">2026年3Q売上36.61億ドル、GAAP営業利益2.07億ドル、純損失7.09億ドル、純支払利息8.46億ドル。調整後EBITDA22.56億ドル・同マージン62%、調整後営業利益3.79億ドル。償却・利息・設備投資を含めて読まなければならない。 [S1,S2]</div></div></div>
+      <!-- 例:
+      <div><dt>設立</dt><dd>2019年</dd></div>
+      <div><dt>本社</dt><dd>東京</dd></div>
+      <div><dt>従業員数</dt><dd>約12,000人</dd></div>
+      <div><dt>CEO</dt><dd>◯◯ ◯◯</dd></div>
+      <div><dt>上場</dt><dd>東証プライム（285A）</dd></div>
+      <div><dt>売上規模</dt><dd>約2.3兆円</dd></div>
+      -->
+    </div>
+
+    <!-- 4枚カード：何をしてる/主力事業/直近の業績/なぜ注目 -->
+    <div class="card-grid">
+      <div class="card-grid"><div class="info-box"><div class="info-title">何をする会社</div><div class="info-text">GPUクラスタ、ネットワーク、ストレージと運用を組み合わせるAIクラウド。[S2]</div></div><div class="info-box"><div class="info-title">主力</div><div class="info-text">AIの学習・推論向けクラウドと運用ソフト。GPUメーカーそのものではありません。[S1,S2]</div></div><div class="info-box"><div class="info-title">直近業績</div><div class="info-text">3Q売上36.61億ドルに対し純損失7.09億ドル。利息と償却を確認。[S1]</div></div><div class="info-box"><div class="info-title">注目点</div><div class="info-text">契約残高を稼働・売上へ変えられるか。資金と設備供給の両方が必要。[S1,S2]</div></div></div>
+      <!-- 例: <div class="card-sm"><span class="card-emoji">🏭</span><div class="card-title">何をしてる</div><div class="card-desc">…</div></div> を4枚 -->
+    </div>
+
+    <!-- どうやって稼ぐ？：ビジネスモデルと売上の内訳を平易に -->
+    <div class="block-label">💰 どうやって<span class="g">稼いでる</span>？</div>
+    <ul class="keypoints">
+      <div class="info-row"><div class="info-box"><div class="info-title">収益の流れ</div><div class="info-text">GPU・電力・施設を準備→顧客へ提供→契約条件に従い収益認識。前受金の受領と売上計上の時点は異なります。[S2]</div></div><div class="info-box"><div class="info-title">顧客</div><div class="info-text">3Qの顧客A・B売上比率は24%・30%。匿名区分と顧客実名を勝手に対応させない。会社はMicrosoft・OpenAI等を主要顧客と記載し、Metaとの長期契約も開示。大口顧客集中は続く見込み。 [S2]</div></div></div>
+      <!-- 例: <li><span class="kp-emoji">🧩</span><span class="kp-text"><b>主力</b>：◯◯を作って△△に売る。売上の約7割。</span></li> を2〜4件（売上構成・主要顧客・課金の仕組み等） -->
+    </ul>
+
+    <!-- 会社の“基本ルール”（この銘柄を見るうえで最初に押さえる勘所） -->
+    <div class="highlight-box">契約額・契約電力・稼働電力・売上・自由現金は別の指標です。同じ数字として比較しないことが重要です。[S1,S2]</div>
+    <!-- 例: <div class="highlight"><h3>📏 ◯◯株の基本ルール</h3><p>…</p></div> -->
+  </section>
+
+  <!-- SEC2: 業界の基本　⚡まとめ → lead(比喩) → sowhat → term-list 4〜6 -->
+  <section class="section" id="sec2">
+    <div class="section-header">
+      <div class="section-icon">◇</div><div class="section-num">2</div>
+      <div><div class="section-title">AI計算需要と電力・設備の制約</div><div class="section-sub">半導体だけを買えば完成する事業ではない</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>顧客は計算能力・通信性能・可用性を利用します。</li><li>電力・冷却・ネットワークの引渡しが売上化を左右します。</li><li>市場規模・シェアの未確認推計は使っていません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">需要</div><div class="info-text">GPUとネットワーク・ストレージを統合したAIクラウドを提供。学習・推論基盤と運用ソフトウェアで顧客の計算需要を支える。クラウド設備は電力・冷却・回線・GPUの全てが稼働して収益化する。 [S1,S2,S4]</div></div><div class="info-box"><div class="info-title">供給</div><div class="info-text">9月末稼働電力は1.7GW超、契約電力は4.6GW超。契約電力を稼働済みと数えない。会社は年間1.85GW超を目標としている。 [S1]</div></div><div class="info-box"><div class="info-title">価格と契約</div><div class="info-text">GPUの世代更新と供給状況、顧客の交渉力が採算に影響します。長期契約は需要の見通しを支えますが、設備提供の義務も伴います。[S2,S4]</div></div></div>
+  </section>
+
+  <!-- SEC3: 主要製品・技術　⚡まとめ → product-grid → term-list 3〜5 -->
+  <section class="section" id="sec3">
+    <div class="section-header">
+      <div class="section-icon">🔬</div><div class="section-num">3</div>
+      <div><div class="section-title">GPUクラウドと運用サービス</div><div class="section-sub">販売中と新たな導入発表を区別</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>学習・推論にはGPUと通信・保存を組み合わせます。</li><li>CoreWeave ForgeやMission Control等を会社は展開。</li><li>性能の宣伝値は比較条件を揃えず一般化しません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">GPU計算とクラウド</div><div class="info-text">会社はNVIDIA GPUを組み込んだAI基盤を提供。導入発表、稼働、顧客の利用開始を分けて確認します。[S1,S2]</div></div><div class="info-box"><div class="info-title">ソフトウェア・運用</div><div class="info-text">会社はForgeをAI開発環境として、Mission Controlを監視・運用統合の基盤として説明しています。独立した売上を未確認のまま足し上げません。[S1,S2]</div></div><div class="info-box"><div class="info-title">契約残高の定義</div><div class="info-text">9月末の会社定義のRevenue backlogは約1325億ドル。残存履行義務に加え、契約下で将来収益化を見込む額を含む。設備引渡し・可用性など条件を満たして初めて売上になる。 [S1]</div></div></div>
+  </section>
+
+  <!-- SEC4: 技術詳細・規制　⚡まとめ → keypoints → term-list 4〜6 -->
+  <section class="section" id="sec4">
+    <div class="section-header">
+      <div class="section-icon">🏛️</div><div class="section-num">4</div>
+      <div><div class="section-title">売上拡大を支える資金と借入</div><div class="section-sub">現金・制限現金・返済と前受金</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>設備投資が営業CFを大幅に上回っています。</li><li>前受金・借入・借換え・株式発行が重要です。</li><li>内部統制の重要な不備も開示されています。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">9月末財務</div><div class="info-text">9月末現金・同等物41.22億ドル、制限現金22.82億ドル。借入元本475.05億ドルとファイナンスリース6.49億ドルを合わせた評価用負債は481.54億ドル。営業リース186.97億ドルは賃借料控除後利益への接続と整合させ、EVから二重控除しない。 [S2]</div></div><div class="info-box"><div class="info-title">資金収支</div><div class="info-text">2026年1～9月営業CF56.38億ドル、現金設備投資235.58億ドル。前年同期間営業CF14.99億ドル・設備投資62.49億ドル、2025年通期30.58億ドル・103.09億ドル。売上成長・EBITDAの黒字とフリーCFは異なる。 [S2,S4]</div></div><div class="info-box"><div class="info-title">資金調達</div><div class="info-text">会社は決算発表後約3か月の顧客前受金・預託金を約90億ドルと予想。資金は借入・営業CF・前受金等に依存する。前受金は利益や恒久資本ではなく、借換えと契約履行も必要。ATMは最大3500万株、9月末時点で売却なし。 [S1,S2]</div></div><div class="info-box"><div class="info-title">管理・運営リスク</div><div class="info-text">GPUの陳腐化、電力・建設・冷却遅延、NVIDIA等サプライヤー、顧客集中、金利・借換え、制限現金、希薄化がリスク。9月末の開示統制は重要な内部統制不備により有効でないと会社が記載。高い調整後EBITDAを株主CFと同一視しない。 [S2,S4]</div></div></div>
+  </section>
+
+  <!-- SEC5: 競合比較　⚡まとめ → table-wrap>compare-table(自社=me) → highlight「差別化」 -->
+  <section class="section" id="sec5">
+    <div class="section-header">
+      <div class="section-icon">⚔️</div><div class="section-num">5</div>
+      <div><div class="section-title">大手クラウドと専門GPUクラウド</div><div class="section-sub">AI専業の運用力と総合クラウドの資金力</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>大手クラウドは競合であり顧客にもなり得ます。</li><li>価格だけでなく可用性・通信・開発環境で比較します。</li><li>最新シェアや同業倍率の未調査数値は置きません。</li></ul></div>
+    <div class="table-wrap"><table class="compare-table"><thead><tr><th>比較先</th><th>比較軸</th><th>注意</th></tr></thead><tbody><tr><td>CoreWeave</td><td>AI向けGPU運用・クラスタ統合</td><td>設備・顧客・財務への集中。</td></tr><tr><td>AWS・Azure・Google Cloud・Oracle</td><td>幅広いサービス、資金力、既存顧客基盤</td><td>競合と顧客の関係が重なる場合がある。</td></tr><tr><td>専門GPUクラウド</td><td>GPU供給・価格・サービス品質</td><td>同じ設備世代と契約条件で比較する。</td></tr></tbody></table></div><p>AWS、Microsoft Azure、Google Cloud、Oracleや他のGPUクラウドが競合。大手クラウドには製品範囲・資金力の利点がある。CoreWeaveはAI向け運用・GPUクラスタ性能を訴求するが会社説明と独立評価を分ける。 [S2,S4]</p>
+  </section>
+
+  <!-- SEC6: 用語辞典　⚡まとめ(特にこの3つ) → term-list 10〜12（①定義→②なぜ重要→③この銘柄では） -->
+  <section class="section" id="sec6">
+    <div class="section-header">
+      <div class="section-icon">📖</div><div class="section-num">6</div>
+      <div><div class="section-title">CRWVのニュースで出る<span class="g">言葉</span> 全辞典</div><div class="section-sub">分からん単語はここで潰す</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li>ARRは最終月の年換算で、通期売上ではありません。</li><li>調整後EBITDAは株主の自由現金ではありません。</li><li>転換・ATMは株式数と資金を同時に確認します。</li></ul></div>
+    <div class="term-list"><details class="term-item"><summary class="term-header"><span class="term-name">GPU</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>大量の並列計算を行う半導体。AI学習・推論に使い、CoreWeaveの設備投資と売上の基盤です。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">学習</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>データからAIモデルのパラメータを調整する処理。大規模GPUクラスタと通信性能が重要です。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">推論</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>学習済みモデルで回答等を作る処理。利用量と応答速度・単価が収益を左右します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">稼働電力</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>サービス提供に使える電力容量。契約電力や建設中容量と区別します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">契約残高</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>将来売上を見込む契約額。設備引渡し・可用性等の条件を満たす必要があり、現金や当期売上ではありません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">ARR</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>最終月の売上を12倍した年換算指標。2026年通期の実績売上と混同しません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">調整後EBITDA</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>利息・税・償却等を調整した指標。GPU設備更新、借入返済、株式報酬の負担は別に見ます。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">フリーキャッシュフロー</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>営業CFから設備投資等を引いた現金収支。売上や調整後利益が増えてもマイナスになり得ます。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">顧客前受金</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>サービス提供前に受け取る現金。資金を支えますが履行義務があり、そのまま利益ではありません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">転換社債</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>条件を満たすと株式等へ転換できる借入。株式に変える場合は元本の負債控除も外します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">ATM</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>市場で株式を段階的に売却できる仕組み。調達現金と株式数の両方に影響します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">キャップドコール</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>一定範囲で転換による希薄化等を軽減する取引。本試算は効果を見込まず保守的に扱います。</p></div></details></div>
+  </section>
+
+  <!-- SEC7: 株価の見方　⚡まとめ → timeline(signal+rating) → リスク4分類 info-row → highlight → 数字まとめ table -->
+  <section class="section" id="sec7">
+    <div class="section-header">
+      <div class="section-icon">💹</div><div class="section-num">7</div>
+      <div><div class="section-title">何がCRWV株を<span class="g">動かす</span>？</div><div class="section-sub">上がる理由・下がる理由を一目で</div></div>
+    </div>
+    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li>契約を稼働・売上へ変えられるか。</li><li>電力・GPU・施設・資金のどれが制約か。</li><li>利息・希薄化・顧客集中で1株の取り分が変わります。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">追い風</div><div class="info-text">契約需要と売上成長、稼働電力拡大。[S1]</div></div><div class="info-box"><div class="info-title">要確認</div><div class="info-text">引渡し条件、顧客入金、設備稼働、償却と利益率。[S2]</div></div><div class="info-box"><div class="info-title">注意</div><div class="info-text">借換え、利息、転換・ATM、GPU更新、統制不備。[S2,S4]</div></div></div><details><summary>観測する数字</summary><p>稼働電力、売上、GAAP営業利益、純支払利息、設備投資、自由現金、借入実行・返済と株式発行。</p></details><div class="term-list"><details class="term-item"><summary class="term-header"><span class="term-name">主要出典</span><span class="term-arrow">⌄</span></summary><div class="term-body"><ul><li><a href="https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表</a>（取得：2026-11-24）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q Form 10-Q</a>（取得：2026-11-24）</li><li><a href="https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-4Q-and-FY2026-Outlook-Presentation-_1_.pdf" target="_blank" rel="noopener noreferrer">S3：2026年4Q・通期見通し資料</a>（取得：2026-11-24）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm" target="_blank" rel="noopener noreferrer">S4：2025年 Form 10-K</a>（取得：2026-11-24）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/CRWV?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：CRWV日足・市場価格</a>（取得：2026-11-24）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S6：S&amp;P 500日足</a>（取得：2026-11-24）</li></ul><p>分析基準株価$48.33／2026-11-23T21:00:01+00:00（米国2026/11/23取引分）。分析対象は2027年末。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details></div>
+  </section>
+
+</div><!-- /container -->
+
+<div class="footer">
+  <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
+  <p style="margin-bottom:8px;font-weight:700;color:#d8ded8">⚠️ 免責事項</p>
+  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。AI向けGPUクラウド株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-11-24時点の公開情報に基づきます。</p>
+</div>
+
+<script>
+document.querySelectorAll('details.term-item').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open) document.querySelectorAll('details.term-item').forEach(o => { if (o !== d && o.open) o.removeAttribute('open'); });
+  });
+});
+(function(){
+  var bar = document.getElementById('progressBar');
+  function u(){ var h=document.documentElement; var s=h.scrollTop/(h.scrollHeight-h.clientHeight); bar.style.width=Math.min(100,Math.max(0,s*100))+'%'; }
+  document.addEventListener('scroll', u, {passive:true}); window.addEventListener('resize', u); u();
+})();
+</script>
+
+</body>
+</html>
+
+<!--
+================================================================
+  デザインロック（重要）
+  ・アクセント色はSiMグリーンで固定。銘柄・業界で変えない。
+  ・以前あった「業界別カラー早見表」は廃止（色を変えると銘柄ごとに見た目がぶれるため）。
+  ・この <style> と骨格は改変禁止。{{ }} の中身だけ差し替える。
+================================================================
+  ChatGPT用ルール: 完成HTMLは必ず index.html というファイル名で保存・出力する。
+================================================================
+-->

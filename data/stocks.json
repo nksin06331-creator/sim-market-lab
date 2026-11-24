@@ -425,6 +425,33 @@
           "available": true
         }
       }
+    },
+    {
+      "id": "coreweave-crwv",
+      "order": 16,
+      "ticker": "CRWV",
+      "quoteSymbol": "CRWV",
+      "name": "コアウィーブ",
+      "nameEn": "CoreWeave, Inc.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "AI・GPUクラウド",
+      "reports": {
+        "company": {
+          "path": "./stocks/coreweave-crwv/company.html",
+          "available": true
+        },
+        "valuation": {
+          "path": "./stocks/coreweave-crwv/valuation.html",
+          "available": true
+        },
+        "catalysts": {
+          "path": "./stocks/coreweave-crwv/catalysts.html",
+          "available": true
+        }
+      }
     }
   ]
 }

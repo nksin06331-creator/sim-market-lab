@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-23T03:30:30.169322+00:00",
+  "generatedAt": "2026-11-24T06:30:17.184689+00:00",
   "source": "Yahoo Finance chart endpoint (provisional)",
-  "quoteCount": 15,
+  "quoteCount": 16,
   "errorCount": 0,
   "errors": {},
   "prices": {
@@ -169,6 +169,17 @@
       "currency": "USD",
       "marketTime": "2026-11-20T21:02:49+00:00",
       "updatedAt": "2026-11-23T03:30:30.169300+00:00",
+      "status": "ok"
+    },
+    "coreweave-crwv": {
+      "symbol": "CRWV",
+      "price": 48.33,
+      "previousClose": 39.51,
+      "change": 8.82,
+      "changePct": 22.3235,
+      "currency": "USD",
+      "marketTime": "2026-11-23T21:00:01+00:00",
+      "updatedAt": "2026-11-24T06:30:17.184650+00:00",
       "status": "ok"
     }
   }

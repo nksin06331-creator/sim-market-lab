@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="コアウィーブ（CRWV）の今後のカタリスト、予定時期、株価への影響、今の株価に入っている期待を整理したレポート">
+<title>コアウィーブ（CRWV）｜カタリストレポート</title>
+
+<style>
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.priced-score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.priced-score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.priced-score b{font-size:clamp(28px,4vw,48px);line-height:1.05;display:block;letter-spacing:-.05em}.priced-score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(19px,3vw,27px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.90);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button,.report-nav .nav-current{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}.report-nav button{cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible,.report-nav .nav-current{border-color:var(--accent);color:var(--accent);background:var(--accent-tint)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.small{font-size:12px;color:var(--muted)}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}.fail{border-color:rgba(248,113,113,.45);border-left-color:var(--red);background:rgba(248,113,113,.08)}
+.pill,.chip{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}.chip.amber{color:var(--amber);border-color:rgba(251,191,36,.34);background:rgba(251,191,36,.08)}.chip.red{color:var(--red);border-color:rgba(248,113,113,.34);background:rgba(248,113,113,.08)}.chip.blue{color:var(--blue);border-color:rgba(96,165,250,.34);background:rgba(96,165,250,.08)}
+.priced{padding:18px;background:#101410;border:1px solid var(--line);border-radius:14px}.priced-head{display:flex;justify-content:space-between;gap:12px;align-items:end}.priced-head b{font-size:28px;letter-spacing:-.04em}.range-meter{height:12px;background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-top:11px;position:relative}.range-band{display:block;height:100%;position:absolute;background:linear-gradient(90deg,var(--amber),var(--accent));border-radius:999px;min-width:4px}.priced.unknown{border-style:dashed;color:var(--muted)}
+.surprise{border-top:1px solid var(--line);padding:14px 0}.surprise:first-child{border-top:0}.surprise b{display:block}.surprise p{margin:4px 0;color:var(--muted)}.up{color:var(--accent)}.down{color:var(--red)}.flat{color:var(--amber)}
+.timeline{position:relative;margin-top:18px}.timeline:before{content:"";position:absolute;left:92px;top:8px;bottom:8px;width:1px;background:var(--accent-line)}.time-row{display:grid;grid-template-columns:78px 24px 1fr;gap:12px;align-items:start;margin:0 0 18px}.time-date{text-align:right;color:var(--muted);font-size:12px;font-weight:800;padding-top:3px}.time-dot{width:13px;height:13px;border-radius:50%;background:var(--accent);border:3px solid #0a0c0a;box-shadow:0 0 0 1px var(--accent-line);margin:5px auto 0;position:relative;z-index:2}.time-body{background:#101410;border:1px solid var(--line);border-radius:13px;padding:13px 15px}.time-body p{margin:4px 0;color:var(--muted);font-size:13px}.time-meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.catalyst-card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;margin:16px 0;position:relative;overflow:hidden}.catalyst-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}.catalyst-head{display:flex;justify-content:space-between;gap:16px;align-items:start}.catalyst-head h3{font-size:clamp(20px,3vw,28px);line-height:1.35;margin:8px 0}.chips{display:flex;gap:7px;flex-wrap:wrap}.date-box{min-width:180px;text-align:right}.date-box b{display:block;color:var(--accent);font-size:18px}.date-box span{font-size:11px;color:var(--muted)}
+.mechanism{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0}.mechanism span{padding:8px 11px;border:1px solid var(--line);border-radius:10px;background:#101410;font-size:12px}.mechanism i{font-style:normal;color:var(--accent)}
+.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.outcome{background:#101410;border:1px solid var(--line);border-radius:14px;padding:15px}.outcome.success{border-top:4px solid var(--accent)}.outcome.inline{border-top:4px solid var(--amber)}.outcome.failure{border-top:4px solid var(--red)}.outcome b{font-size:14px}.impact{font-size:24px;font-weight:900;letter-spacing:-.04em;margin:7px 0}.outcome p{font-size:12px;color:var(--muted);margin:6px 0}.outcome ul{padding-left:18px;margin:8px 0;font-size:12px}
+.evidence{display:grid;grid-template-columns:1fr 1fr;gap:10px}.evidence>div{background:#101410;border:1px solid var(--line);border-radius:12px;padding:14px}.evidence h4{margin:0 0 8px}.evidence ul{padding-left:18px;margin:0;color:var(--muted);font-size:13px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}.fact{border-top:1px solid var(--line);padding:11px 0}.fact span{display:block;color:var(--muted);font-size:11px}.fact b{font-size:13px}
+.signal{border-top:1px solid var(--line);padding:14px 0}.signal:first-child{border-top:0}.signal div{display:flex;justify-content:space-between;gap:12px}.signal p{margin:4px 0;color:var(--muted);font-size:14px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}td{font-size:13px}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul,details>div{padding:0 16px 16px;margin:0;color:#c4ccc4}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+@media(max-width:800px){.verdict,.grid-2,.evidence{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.outcomes{grid-template-columns:1fr}.catalyst-head{display:block}.date-box{text-align:left;margin-top:10px}.facts{grid-template-columns:1fr}.timeline:before{left:75px}.time-row{grid-template-columns:62px 18px 1fr;gap:8px}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.priced-score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.priced-score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.priced-score b{font-size:26px}.priced-score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button,.report-nav .nav-current{min-height:44px;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card,.catalyst-card{padding:14px;border-radius:12px}.grid-2,.evidence,.outcomes{gap:8px}.catalyst-card{margin:10px 0}.catalyst-head h3{font-size:20px;margin:6px 0}.date-box b{font-size:16px}.mechanism{margin:10px 0}.mechanism span{padding:6px 8px;font-size:11px}.outcome{padding:12px;border-radius:11px}.impact{font-size:20px;margin:5px 0}.timeline:before{left:55px}.time-row{grid-template-columns:44px 14px 1fr;gap:6px;margin-bottom:12px}.time-date{font-size:9px}.time-body{padding:10px 11px}.time-body p,.outcome p{font-size:11px;line-height:1.55}.priced{padding:13px}.priced-head b{font-size:23px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.notice{padding:11px 12px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}summary{min-height:44px;padding:11px 12px}details>p,details>ul,details>div{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.report-nav{position:static}.hero,.card,.catalyst-card,.kpi,.outcome,.time-body,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.surprise p,.time-body p,.outcome p,.signal p,footer{color:#555!important}.card,.catalyst-card,.kpi,.outcome,details{break-inside:avoid}}
+</style>
+</head>
+
+<body data-stock-ticker="CRWV" data-price-source="../../data/prices.json">
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
+    <h1>コアウィーブ <small>CRWV</small></h1>
+    <div class="sub">Nasdaq／USD｜評価基準日 2026-11-24｜最終更新 2026-11-24</div>
+
+    <div class="verdict">
+      <div class="verdict-main">
+        <span class="pill">今後の材料を先読み</span>
+        <div class="status">契約・設備・資金の連動を確認</div>
+        <p>契約売上化、電力・GPU設備、資金調達の3材料を扱います。全て同じ事業の成立条件なので価格幅や期待割合を足し合わせません。</p>
+        <p class="sub">発表済みの契約・GPU導入・調達は過去の事実。今後は引渡し、稼働、入金と株主価値を追います。</p>
+      </div>
+      <div class="priced-score">
+        <small>今の株価に入っている期待（推定）</small>
+        <b>15～35%</b>
+        <small>共通運営価値の条件付き推定｜推定の確かさ 低い</small>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
+        <b data-live-price>$48.33</b>
+        <small data-live-price-date>米国2026/11/23取引分（分析基準値）</small>
+      </div>
+      <div class="kpi">
+        <span>次の主要カタリスト</span>
+        <b>契約売上化</b>
+        <small>進行中／各四半期に確認</small>
+      </div>
+      <div class="kpi">
+        <span>日程の確度</span>
+        <b>進行中・会社目標</b>
+        <small>確定日・会社目標・当方推定を分離</small>
+      </div>
+      <div class="kpi">
+        <span>掲載カタリスト</span>
+        <b>3件</b>
+        <small>今後18か月＋重要な長期材料</small>
+      </div>
+    </div>
+
+    <div class="hero-tags">
+      <span>内容と時期</span>
+      <span>成功・中立・失敗</span>
+      <span>株価に入った期待は幅で表示</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap"><p class="notice">資金調達依存の高い条件付き試算です。過去投資ペースによる簡易資金余力は約1.25か月ですが、資金枯渇日を予測する数値ではありません。将来前受金・借入枠・借換え・ATM等の成立を各ケースの条件とし、未確保資金は確約と扱いません。</p></div>
+
+
+<nav class="report-nav">
+  <div class="wrap">
+    <span class="nav-current" aria-current="page">カタリスト</span>
+    <button type="button" data-scroll-target="timeline">時系列</button>
+    <button type="button" data-scroll-target="priced-in">期待の入り方</button>
+    <button type="button" data-scroll-target="details">詳細</button>
+    <button type="button" data-scroll-target="watch">観測項目</button>
+    <button type="button" data-scroll-target="sources">出典</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section class="grid-2" id="priced-in">
+    <div class="card">
+      <h2>今の株価、どこまで期待済み？</h2>
+      <div class="priced"><div class="priced-head"><b>15～35%</b><span>このレポートの条件付き推定</span></div><p>中心24.8%。真の成功確率ではありません。</p><p>全材料を1つの共通設備・契約価値グループへ集約。標準の資金条件（負債681.54億・自由現金50億ドル）を固定し、失敗側EV700億、成功側EV1620億から失敗側株主価値68.46億、成功増分920億ドルを置く。逆算中心24.82%。借入・転換・株式数が変わる3ケース帯の価格位置とは異なる。 [S1,S2,S3]</p></div>
+      <p class="small">計算方法：資金条件を標準に固定して、同じ設備・契約の共通成長を失敗側EV700億ドルと成功側1620億ドルで評価。株主価値の成功増分920億ドルを1回計上する。表示±10ポイントは統計区間ではなく端点の不確実性を示す主観幅。真の成功確率ではない。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-24時点で固定されます。</p>
+    </div>
+    <div class="card">
+      <h2>予想との差が株価を動かす</h2>
+      <div class="surprise">
+        <b class="up">上方サプライズの条件</b>
+        <p>引渡し・稼働・顧客入金が揃い、売上と営業利益が当方標準を超え、資金負担が抑えられる。</p>
+      </div>
+      <div class="surprise">
+        <b class="down">下方サプライズの条件</b>
+        <p>設備・電力・入金の遅延や高金利・希薄化により、成長しても1株価値が伸びない。</p>
+      </div>
+      <div class="surprise">
+        <b class="flat">最大リスク</b>
+        <p>設備投資と借換えの継続が必要。大口顧客・GPU更新・内部統制のリスクも重なる。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" id="timeline">
+    <h2>これから何が、いつ起きる？</h2>
+    <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
+    <div class="timeline">
+      <div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>契約済み能力の引渡し・売上化</b><p>進行中／各四半期に確認</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>電力・GPU設備の稼働拡大</b><p>年末1.85GW超は会社目標／その後も進行中</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>前受金受領・借換え・資金調達</b><p>前受金は決算発表後約3か月の会社見通し／借換えは継続</p></div></div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="card">
+      <h2>今後の予定を1件ずつ確認</h2>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
+    </div>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>契約済み能力の引渡し・売上化</h3><span class="chip">重要度5</span></div><div class="date-box"><b>進行中／各四半期に確認</b></div><p>契約済み計算能力の引渡しと売上化が進行中。契約残高の増加だけでなく、稼働電力・利用可能なGPU・売上計上を確認。今後の決算公表の確定日は取得資料から確認できず、日付を創作しない。</p><p>結果は当方モデル条件との比較です。市場予想との差を実測したものではありません。短期反応率やイベント確率を表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$84.96～$108.19</div><p>基準価格比 +75.8%～+123.9%</p><p>引渡しが進み売上300～340億ドル、営業利益率15%以上を目指せる条件。</p><p>このレポートの条件付き2027年末再評価。売上のみ変更し倍率4倍、追加純借入200億ドル、自由現金50億ドル。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 売上300～340億ドル。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$61.04～$84.96</div><p>基準価格比 +26.3%～+75.8%</p><p>売上260～300億ドル、利益率は標準15%付近。</p><p>このレポートの条件付き2027年末再評価。売上のみ変更し倍率4倍、追加純借入200億ドル、自由現金50億ドル。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 売上260～300億ドル。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$25.18～$49.09</div><p>基準価格比 -47.9%～+1.6%</p><p>売上200～240億ドルにとどまり、遅延・低利用率が利益を圧迫。</p><p>このレポートの条件付き2027年末再評価。売上のみ変更し倍率4倍、追加純借入200億ドル、自由現金50億ドル。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 売上200～240億ドル。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：契約引渡し、GPU・電力稼働と資金調達が同じ設備と売上を共有し、個別イベントを除く利益価値を一次資料から分離できない。</p><p>足りない情報：契約別売上計上・利益率・資金拘束、個別拠点の稼働費と資金調達条件</p><p>次に見る数字：稼働電力、売上、営業利益、前受金と借入条件</p><p>再計算方法：個別設備・契約の売上、営業利益、純資金需要が判明したら、共通モデルから除いた価値と追加後価値を比較して逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典 [S1,S2,S3]。契約残高・稼働電力・売上の成長。 設備投資・借換え・顧客集中・統制不備。</p><p>先行指標：売上と稼働電力、前受金・借入実行・金利・希薄化、営業利益・償却・設備投資</p><p>材料出尽くし：設備や資金調達の発表があっても、利息・希薄化負担が増えると株主価値は低下し得る。</p><p>資金需要：過去の投資ペースを延ばす簡易資金余力は短く、前受金・借入枠・借換え・株式発行の成立が必要。未確保資金を確約とは扱わない。</p><p>更新条件：会社予想・稼働予定の変更、調達条件・転換・株式発行の変更、顧客の引渡し条件・入金の変更</p></p></details><details><summary>価格レンジの手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。引渡し・電力・資金は同じ設備の価値を共有し、単独の利益増分を確定できないため。</li><li>共通シナリオ再評価：採用。2027年売上、倍率、資金・株式数を共通モデルへ入れて結果別に再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有していないため。</li><li>同社イベント比較：不採用・適用外。決算・資金調達・供給発表が重なり単独イベントの価格反応を分離して検証していないため。</li><li>他社イベント比較：不採用・適用外。設備構成・顧客契約・負債条件の揃う他社標本を確保していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>電力・GPU設備の稼働拡大</h3><span class="chip">重要度5</span></div><div class="date-box"><b>年末1.85GW超は会社目標／その後も進行中</b></div><p>電力・データセンター・次世代GPUの立上げが進行中。年末1.85GW超は会社目標。個別工事・電力接続の確定稼働日は未確認。最新GPUの導入発表自体は完了済みとして、今後の稼働・採算を追う。</p><p>結果は当方モデル条件との比較です。市場予想との差を実測したものではありません。短期反応率やイベント確率を表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$81.37～$93.92</div><p>基準価格比 +68.4%～+94.3%</p><p>稼働電力と品質・効率が改善し、モデル営業利益率18～20%を許容する条件。</p><p>このレポートの条件付き2027年末再評価。利益率の変化を倍率3.5～4.5倍の範囲へ対応させる評価仮定。売上280億ドル・資金条件固定。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 倍率4.2～4.5倍。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$64.63～$81.37</div><p>基準価格比 +33.7%～+68.4%</p><p>稼働拡大と償却・運営費が概ね均衡し、利益率15%付近。</p><p>このレポートの条件付き2027年末再評価。利益率の変化を倍率3.5～4.5倍の範囲へ対応させる評価仮定。売上280億ドル・資金条件固定。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 倍率3.8～4.2倍。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$52.08～$64.63</div><p>基準価格比 +7.8%～+33.7%</p><p>電力・設備遅延や償却負担により利益率8～12%へ低下する条件。</p><p>このレポートの条件付き2027年末再評価。利益率の変化を倍率3.5～4.5倍の範囲へ対応させる評価仮定。売上280億ドル・資金条件固定。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 倍率3.5～3.8倍。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：契約引渡し、GPU・電力稼働と資金調達が同じ設備と売上を共有し、個別イベントを除く利益価値を一次資料から分離できない。</p><p>足りない情報：契約別売上計上・利益率・資金拘束、個別拠点の稼働費と資金調達条件</p><p>次に見る数字：稼働電力、売上、営業利益、前受金と借入条件</p><p>再計算方法：個別設備・契約の売上、営業利益、純資金需要が判明したら、共通モデルから除いた価値と追加後価値を比較して逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典 [S1,S2,S3]。契約残高・稼働電力・売上の成長。 設備投資・借換え・顧客集中・統制不備。</p><p>先行指標：売上と稼働電力、前受金・借入実行・金利・希薄化、営業利益・償却・設備投資</p><p>材料出尽くし：設備や資金調達の発表があっても、利息・希薄化負担が増えると株主価値は低下し得る。</p><p>資金需要：過去の投資ペースを延ばす簡易資金余力は短く、前受金・借入枠・借換え・株式発行の成立が必要。未確保資金を確約とは扱わない。</p><p>更新条件：会社予想・稼働予定の変更、調達条件・転換・株式発行の変更、顧客の引渡し条件・入金の変更</p></p></details><details><summary>価格レンジの手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。引渡し・電力・資金は同じ設備の価値を共有し、単独の利益増分を確定できないため。</li><li>共通シナリオ再評価：採用。2027年売上、倍率、資金・株式数を共通モデルへ入れて結果別に再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有していないため。</li><li>同社イベント比較：不採用・適用外。決算・資金調達・供給発表が重なり単独イベントの価格反応を分離して検証していないため。</li><li>他社イベント比較：不採用・適用外。設備構成・顧客契約・負債条件の揃う他社標本を確保していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>前受金受領・借換え・資金調達</h3><span class="chip">重要度5</span></div><div class="date-box"><b>前受金は決算発表後約3か月の会社見通し／借換えは継続</b></div><p>顧客前受金の受領、借換え、借入枠の実行、ATM等の資金調達が継続的な観測対象。2027年の借入元本返済予定は109.74億ドル。調達完了の発表を将来の確約と混同しない。</p><p>結果は当方モデル条件との比較です。市場予想との差を実測したものではありません。短期反応率やイベント確率を表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$75.99～$80.47</div><p>基準価格比 +57.2%～+66.5%</p><p>顧客入金・金利条件が改善し、追加純借入150～180億ドルで設備計画を実行できる条件。</p><p>このレポートの条件付き2027年末再評価。売上280億ドル・倍率4倍・自由現金50億ドルを固定し、追加純借入を変更。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 追加純借入150～180億ドル。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$70.01～$75.99</div><p>基準価格比 +44.9%～+57.2%</p><p>前受金と借入を組み合わせ、追加純借入180～220億ドル。</p><p>このレポートの条件付き2027年末再評価。売上280億ドル・倍率4倍・自由現金50億ドルを固定し、追加純借入を変更。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 追加純借入180～220億ドル。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$62.54～$67.02</div><p>基準価格比 +29.4%～+38.7%</p><p>入金・借換え条件悪化で追加純借入240～270億ドル。ATM等は同条件の仮定で別途感応度を確認。</p><p>このレポートの条件付き2027年末再評価。売上280億ドル・倍率4倍・自由現金50億ドルを固定し、追加純借入を変更。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 追加純借入240～270億ドル。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：契約引渡し、GPU・電力稼働と資金調達が同じ設備と売上を共有し、個別イベントを除く利益価値を一次資料から分離できない。</p><p>足りない情報：契約別売上計上・利益率・資金拘束、個別拠点の稼働費と資金調達条件</p><p>次に見る数字：稼働電力、売上、営業利益、前受金と借入条件</p><p>再計算方法：個別設備・契約の売上、営業利益、純資金需要が判明したら、共通モデルから除いた価値と追加後価値を比較して逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典 [S1,S2,S3]。契約残高・稼働電力・売上の成長。 設備投資・借換え・顧客集中・統制不備。</p><p>先行指標：売上と稼働電力、前受金・借入実行・金利・希薄化、営業利益・償却・設備投資</p><p>材料出尽くし：設備や資金調達の発表があっても、利息・希薄化負担が増えると株主価値は低下し得る。</p><p>資金需要：過去の投資ペースを延ばす簡易資金余力は短く、前受金・借入枠・借換え・株式発行の成立が必要。未確保資金を確約とは扱わない。</p><p>更新条件：会社予想・稼働予定の変更、調達条件・転換・株式発行の変更、顧客の引渡し条件・入金の変更</p></p></details><details><summary>価格レンジの手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。引渡し・電力・資金は同じ設備の価値を共有し、単独の利益増分を確定できないため。</li><li>共通シナリオ再評価：採用。2027年売上、倍率、資金・株式数を共通モデルへ入れて結果別に再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有していないため。</li><li>同社イベント比較：不採用・適用外。決算・資金調達・供給発表が重なり単独イベントの価格反応を分離して検証していないため。</li><li>他社イベント比較：不採用・適用外。設備構成・顧客契約・負債条件の揃う他社標本を確保していないため。</li></ul></p></details></article>
+  </section>
+
+  <section class="card" id="dependencies">
+    <h2>予定のつながりと二重計算防止</h2>
+    <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
+    <p>契約・電力・GPU・調達を1つの共通設備価値グループへ束ねます。個別価格幅を合算しません。契約残高を企業価値へ直接加算もしません。</p><p>全体期待は標準の資金条件を固定した運営価値端点。3ケースの株価は将来負債・希薄化・転換条件も変えるため、価格帯位置と全体期待の中心値は一致しません。</p>
+  </section>
+
+  <section class="card" id="watch">
+    <h2>次に確認する数字</h2>
+    <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
+    <div class="signal"><div><b>契約引渡し・売上・営業利益</b></div><p>各四半期：売上または稼働見通しの変更</p></div><div class="signal"><div><b>稼働電力・設備投資・GPU稼働</b></div><p>会社開示時：工事・電力接続・採算の変更</p></div><div class="signal"><div><b>現金・前受金・借換え・ATM・転換</b></div><p>各決算と資金調達発表時：調達条件・返済・株式発行の変更</p></div>
+  </section>
+
+  <section class="card" id="assumptions">
+    <h2>使った数字と前提</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
+        </thead>
+        <tbody><tr><td>分析株価</td><td>$48.33</td><td>市場データ</td><td>2026-11-24</td><td>2026-11-23T21:00:01+00:00 [S5]</td></tr><tr><td>現在株式・希薄化</td><td>614.126百万株</td><td>このレポートの推定</td><td>2026-11-24</td><td>10月30日時点A株465,847,732＋B株90,277,992＝556,125,724株。9月末のEPSから除外されたオプション2300万、RSU等3100万、ワラント400万を加え、評価用株式614,125,724株と推定。期間差があり確定時点希薄化株式数ではない。転換社債100百万株は別扱い。 [S2]</td></tr><tr><td>評価用負債</td><td>$48.154B</td><td>公式情報で確認済み</td><td>2026-11-24</td><td>借入元本47.505B＋ファイナンスリース0.649B。営業リースは利益に接続。[S2]</td></tr><tr><td>2026年会社予想</td><td>売上$13.0～13.3B／設備投資$37～39B</td><td>会社の目標・予定</td><td>2026-11-24</td><td>2026年会社予想は売上130～133億ドル、調整後営業利益12.75～13.75億ドル、設備投資370～390億ドル。年末稼働電力1.85GW超、年末ARR200～210億ドル。ARRは最終月売上×12であり年間売上ではない。4Q支払利息予想10.5～11.5億ドル。 [S1,S3]</td></tr><tr><td>2027年売上・倍率</td><td>20／28／36B、3.5／4／4.5倍</td><td>このレポートの推定</td><td>2026-11-24</td><td>2027年末の条件付きEV/Sales評価。悲観・標準・楽観で2027年売上200／280／360億ドル、倍率3.5／4.0／4.5倍、賃借料・償却控除後のモデル営業利益率8／15／20%。倍率は最新同業中央値ではなく当方仮定。2026年末ARR予想を足場に、設備引渡しと稼働率で年売上を変える。</td></tr><tr><td>資金調達・株式</td><td>ATM3500万株等</td><td>このレポートの推定</td><td>2026-11-24</td><td>9月末から2027年末までの仮定。純新規借入100／200／250億ドル、期末自由現金30／50／70億ドル。ATM3500万株を仮定価格50ドル・費用2%で発行し純調達17.15億ドル。既存評価用株式に将来報酬等1000万／2000万／3000万株を加える。公募の実施・価格は未確定。</td></tr><tr><td>転換</td><td>価格に応じ元本と株式を同時調整</td><td>このレポートの推定</td><td>2026-11-24</td><td>悲観・標準は株価が転換価格未満のため転換社債を負債として保持。楽観では価格が3銘柄の初期転換価格を上回り、各転換率で株式を追加し対応元本107.88億ドルを負債から除く経済的転換試算。実際の転換時期・現金決済・転換調整条項は別。株式追加と元本二重控除をしない。</td></tr><tr><td>資金予算</td><td>前受金を営業CFに含める</td><td>このレポートの推定</td><td>2026-11-24</td><td>資金計画の整合用仮定。9月末～2027年末の営業CF（前受金を含む）120／180／250億ドル。期末現金を満たす投資等純支出は248.37／388.37／488.37億ドル。式は期首自由現金＋営業CF＋純新規借入＋ATM純調達−投資等純支出＝期末現金。前受金を別途重複加算しない。借換えは純借入の内訳に含める。</td></tr><tr><td>簡易資金余力</td><td>約1.25か月</td><td>このレポートの推定</td><td>2026-11-24</td><td>TTM営業CF71.97億ドル、現金設備投資276.18億ドル。総現金64.04−制限現金22.82−仮定最低運転資金20＝使用可能21.22億ドル。過去投資ペースによる簡易ランウェイ1.25か月。これは資金枯渇日予測ではない。将来前受金・借入枠・投資時期・借換えを含まないため、各シナリオで資金調達を条件化。</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="sources">
+    <h2>根拠と更新履歴</h2>
+    <details open>
+      <summary>主要出典</summary>
+      <div><ul><li><a href="https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表</a>（取得：2026-11-24）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q Form 10-Q</a>（取得：2026-11-24）</li><li><a href="https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-4Q-and-FY2026-Outlook-Presentation-_1_.pdf" target="_blank" rel="noopener noreferrer">S3：2026年4Q・通期見通し資料</a>（取得：2026-11-24）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm" target="_blank" rel="noopener noreferrer">S4：2025年 Form 10-K</a>（取得：2026-11-24）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/CRWV?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：CRWV日足・市場価格</a>（取得：2026-11-24）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S6：S&amp;P 500日足</a>（取得：2026-11-24）</li></ul></div>
+    </details>
+    <details>
+      <summary>Validation結果</summary>
+      <div><p>共通データのJSON形式、算術、出典ID、確率、日程、依存関係、HTMLと表示を検証します。以下は分析上の制約です。</p><ul><li>資金調達依存が高く、簡易ランウェイは将来資金調達を含まない。</li><li>売上・倍率・将来負債・転換・ATM価格・株式報酬は当方の条件付き仮定。</li><li>顧客集中・GPU陳腐化・内部統制不備に注意。個別期待割合を分離していない。</li></ul></div>
+    </details>
+    <details>
+      <summary>更新履歴</summary>
+      <div><p>2026-11-24初版。2026年3Q決算・10-Q・年次開示・会社見通しを共有。分析値は自動更新しません。</p></div>
+    </details>
+  </section>
+
+  <section class="card notice">
+    <h3>免責</h3>
+    <p>情報提供・教育目的の資料です。投資助言・売買推奨ではありません。売上、倍率、資金調達、転換、将来株式数は当方の仮定です。会社予想・確認済み事実と分けて読んでください。配当は価格比較に含みません。</p>
+  </section>
+
+  <footer>分析基準株価$48.33／2026-11-23T21:00:01+00:00（米国2026/11/23取引分）。分析対象は2027年末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
+</main>
+
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+<script>
+document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    var target = document.getElementById(button.dataset.scrollTarget);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+</body>
+</html>
