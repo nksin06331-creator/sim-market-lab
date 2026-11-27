@@ -500,17 +500,19 @@
       "reports": {
         "company": {
           "path": "./stocks/spacex-spcx/company.html",
-          "available": false
+          "available": true
         },
         "valuation": {
           "path": "./stocks/spacex-spcx/valuation.html",
-          "available": false
+          "available": true
         },
         "catalysts": {
           "path": "./stocks/spacex-spcx/catalysts.html",
-          "available": false
+          "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-28",
+      "reportRevision": "spacex-spcx-2026-11-28-v1"
     },
     {
       "id": "tesla-tsla",
@@ -527,17 +529,19 @@
       "reports": {
         "company": {
           "path": "./stocks/tesla-tsla/company.html",
-          "available": false
+          "available": true
         },
         "valuation": {
           "path": "./stocks/tesla-tsla/valuation.html",
-          "available": false
+          "available": true
         },
         "catalysts": {
           "path": "./stocks/tesla-tsla/catalysts.html",
-          "available": false
+          "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-28",
+      "reportRevision": "tesla-tsla-2026-11-28-v1"
     }
   ]
 }

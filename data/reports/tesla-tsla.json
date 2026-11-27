@@ -1,0 +1,1325 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Tesla, Inc.",
+    "ticker": "TSLA",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-28",
+    "source_cutoff": "2026-11-27T18:09:16.204058+00:00",
+    "generated_at": "2026-11-27T18:09:16.204058+00:00",
+    "price": 400.0,
+    "price_as_of": "2026-11-27T18:00:00+00:00",
+    "benchmark": null
+  },
+  "capital_structure": {
+    "basic_shares": 3952757946,
+    "diluted_shares": 4000000000,
+    "market_cap": 1600000000000.0,
+    "cash": 17853000000,
+    "liquid_securities": 27594000000,
+    "restricted_cash": 0,
+    "minimum_operating_cash": 15000000000,
+    "debt": 9540000000,
+    "preferred_stock": 0,
+    "minority_interest": 600000000,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": 18710000000,
+    "ttm_capex": 15407000000,
+    "runway_months": null,
+    "source_ids": [
+      "S1",
+      "S2"
+    ],
+    "dilution_notes": [
+      "10月15日時点の発行済3,952,757,946株を起点に、評価株式40億株を当方概算とする。Q3希薄化EPS用35.41億株は期間平均で、発行済に含まれる制限株式と定義が異なる。301百万株の希薄化差や2025年CEO報酬423.7百万株を発行済へ機械的に再加算しない。将来41／42／43億株は報酬・権利行使・失効の純額仮定で完全な証券別TSMではない。現金178.53億、短期投資275.94億、負債92.84億＋金融リース2.56億。非支配持分5.46億＋償還可能持分0.54億を控除。[S1]",
+      "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+      "自由現金は制限現金を含まないためrestricted_cash=0として再控除しない。実際の別建て制限現金は1.15十億ドル。",
+      "デジタル資産9.62億ドルと、SpaceX投資20億＋1〜9月評価益8.63億＝28.63億ドル（当方計算）を合計38.25億ドル。9月末の帳簿値起点で将来も固定。持分の独立再評価・売却税・流動性は未検証。[S1]"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "米国テキサス州Austinに本社を置くTesla, Inc.、Nasdaq: TSLA。12月決算・米国GAAP。自動車・サービス等とエネルギーの実績を持ち、自動運転・ロボットの事業化を進める。[S1]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "BUSINESS",
+      "statement": "電気自動車の販売・リース、整備・充電、蓄電池・太陽光、FSD（監督付き）・Robotaxi、開発中のOptimusを展開する。監督付き運転支援を無人運行の承認と混同しない。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "FINANCIAL",
+      "statement": "2026年7〜9月は売上280.46億ドル、GAAP営業利益7.18億、普通株帰属純利益7.87億。1〜9月累計は売上786.69億、普通株帰属純利益23.80億。9月までの車両引渡し約132万台、蓄電池設置36.0GWh。Q3単独引渡し486,532台。売上や設置量の増加を利益の増加と同一視しない。[S1,S2,S3]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RISK",
+      "statement": "自動車価格競争、関税、エネルギー販売単価、FSD・Robotaxiの安全性・規制、AI投資と株式報酬、経営者・関連当事者への集中が主要リスク。1〜9月営業CF148.97億に対して設備投資130.14億、2026年の投資増で現金創出は会計利益と別に確認する。[S1]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "会社は2026年設備投資を200億ドル超と見込む。Cybercabは2026年9月に展開、Semi等の立上げとOptimusの量産準備を説明するが、2027年の当方売上・倍率を会社予想としない。次期決算発表と地域別無人運行拡大の確定日は、取得資料では未確認。[S1,S2]",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "10月15日時点の発行済3,952,757,946株を起点に、評価株式40億株を当方概算とする。Q3希薄化EPS用35.41億株は期間平均で、発行済に含まれる制限株式と定義が異なる。301百万株の希薄化差や2025年CEO報酬423.7百万株を発行済へ機械的に再加算しない。将来41／42／43億株は報酬・権利行使・失効の純額仮定で完全な証券別TSMではない。現金178.53億、短期投資275.94億、負債92.84億＋金融リース2.56億。非支配持分5.46億＋償還可能持分0.54億を控除。[S1]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "latest point shares plus disclosed/proxy dilution; securities-by-security TSM unverified",
+      "confidence": "LOW"
+    },
+    {
+      "id": "LIQUIDITY",
+      "statement": "9月末現金・短期投資454.47億ドル。未使用融資枠300億ドルは現金へ加えない。TTM営業CF187.10億−設備投資154.07億＝33.03億ドルのプラスだが、会社の2026年設備投資200億ドル超計画と翌期投資で変わる。最低運転現金150億ドルは当方仮定。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "cash+securities-minimum operating cash; disclosed cash-flow period; no assumed unused-facility cash",
+      "confidence": "LOW"
+    },
+    {
+      "id": "ASSETS",
+      "statement": "デジタル資産9.62億ドルと、SpaceX投資20億＋1〜9月評価益8.63億＝28.63億ドル（当方計算）を合計38.25億ドル。9月末の帳簿値起点で将来も固定。持分の独立再評価・売却税・流動性は未検証。[S1]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "disclosed digital assets plus cost and accumulated fair-value gain of the equity investment",
+      "confidence": "LOW"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "自動車はBYD等のEV・既存自動車各社、蓄電池は他の系統蓄電・機器企業、自動運転はWaymo等、ロボットは専業と産業機器企業が比較候補。車両販売・乗車サービス・ソフト契約を同じ売上単位で比較しない。独立した同業倍率や市場予想は未取得。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "qualitative comparison by customer function; market share and multiples unverified",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL",
+      "statement": "対象は2027年末。自動車・サービス、エネルギー、自動運転の追加収益、ロボットの追加収益をEV/Salesで分ける条件付きSOTP。自動運転・ロボット売上は会社の確定予想ではない。自動車等の営業利益率5／8／11%、エネルギー12／18／22%、追加自動運転10／25／35%、ロボット-10／5／15%とセットで解釈。既存FSDと追加サービスを重複計上せず、合計EVへ将来自由現金を加え、最低運転現金・負債・持分を控除する。高い追加事業倍率は2027年以降の成功も必要とする。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "sum(segment_sales*segment_EV_sales)+future_cash+other_assets-minimum_cash-future_debt-minority, divided by future shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FUNDING",
+      "statement": "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "future_cash=current_cash+current_securities+OCF-capex+future_debt-current_debt",
+      "confidence": "LOW"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観35%・標準45%・楽観20%。実績と事業化リスクを踏まえた粗い主観配分。高い成長倍率と資金・規制条件の不確実性から下側を厚く置くが統計的成功率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "subjective 0.35+0.45+0.20=1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "基準株価$400.00、時刻2026-11-27T18:00:00+00:00。米国取引時間中の時点値で終値とは限らない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL_BEAR",
+      "statement": "2027年末の悲観：自動車・サービス（既存FSD込み）：売上110.00十億ドル×1.5倍、営業利益率5% ／ エネルギー：売上15.00十億ドル×3倍、営業利益率12% ／ 自動運転の追加収益：売上5.00十億ドル×5倍、営業利益率10% ／ ロボットの追加収益：売上0.00十億ドル×0倍、営業利益率-10%。自由現金・短期証券45.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等10.00十億ドル、非支配等0.60十億ドル、将来株式4.1十億株。現在から対象時点までの営業CF−設備投資等の純額を-0.91十億ドルとする現金ブリッジ。新規借入増減0.46十億ドルは現金にも反映する。将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "SOTP model; segment revenues*EV/Sales and explicit balance-sheet bridge",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL_BASE",
+      "statement": "2027年末の標準：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。現在から対象時点までの営業CF−設備投資等の純額を2.09十億ドルとする現金ブリッジ。新規借入増減2.46十億ドルは現金にも反映する。将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "SOTP model; segment revenues*EV/Sales and explicit balance-sheet bridge",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL_BULL",
+      "statement": "2027年末の楽観：自動車・サービス（既存FSD込み）：売上150.00十億ドル×3.5倍、営業利益率11% ／ エネルギー：売上30.00十億ドル×7倍、営業利益率22% ／ 自動運転の追加収益：売上35.00十億ドル×20倍、営業利益率35% ／ ロボットの追加収益：売上8.00十億ドル×20倍、営業利益率15%。自由現金・短期証券55.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等15.00十億ドル、非支配等0.60十億ドル、将来株式4.3十億株。現在から対象時点までの営業CF−設備投資等の純額を4.09十億ドルとする現金ブリッジ。新規借入増減5.46十億ドルは現金にも反映する。将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "SOTP model; segment revenues*EV/Sales and explicit balance-sheet bridge",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C1",
+      "statement": "過去のサービス開始を今後の予定にせず、無人運行の実施範囲・安全性と有償利用、既存FSDとは別の収益を確認する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C1_CONDITIONS",
+      "statement": "2027年の追加売上250〜350億ドルへ向かう条件。許認可と運行費吸収が必要。 ／ 追加売上120〜180億ドルの当方標準経路。事業化は進むが段階的。 ／ 追加売上30〜80億ドル側。遅延・安全性・規制・費用で収益化が鈍る。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C2",
+      "statement": "車両引渡しと蓄電池GWhだけでなく、単価・規制クレジット・関税・粗利・運転資本を確認する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C2_CONDITIONS",
+      "statement": "車両・サービス売上1400〜1500億ドルを支え、値引きだけに依存しない。 ／ 売上1250〜1350億ドルの当方標準経路。 ／ 売上1050〜1150億ドル側、需要・価格競争で採算が弱まる。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C3",
+      "statement": "量産準備・試用の説明と外部顧客売上を分け、設備投資・株式数・報酬の費用対効果を確認する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C3_CONDITIONS",
+      "statement": "2027年外部売上50〜80億ドルへ進む条件。外販と生産品質の検証が必要。 ／ 外部売上10〜30億ドルの当方標準経路。 ／ 外部売上0〜5億ドル側、試用・量産準備が長期化。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "現在株価評価100、カタリスト85、企業基盤リスク60。60/25/15%で総合90.2、買われすぎ。株価スコアは悲観→標準を0→50、標準→楽観を50→100で補間し、SOTP倍率・希薄化・事業化の不確実性で5点加算、0〜100へ制限。材料85は成長実績に対し複数の未完了条件と期待先行が大きいとの主観評価。企業リスクは財務・投資・集中・規制を根拠とする主観評価。日々の株価から自動再計算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "piecewise price position +5; valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "共通の全事業・資金条件を1群にまとめ、失敗側株主価値258.23十億ドル、成功側1,623.22十億ドルから逆算。中心98.3%。表示幅は中心±10ポイントを0〜100へ制限し、統計区間・成功率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "(price*current_diluted_shares-bear_equity)/(bull_equity-bear_equity)*100",
+      "confidence": "LOW"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年3Q Form 10-Q",
+      "publisher": "Tesla, Inc.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066775/tsla-20260930.htm",
+      "published_at": "2026-10-22",
+      "accessed_at": "2026-11-27T18:09:16.204058+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "GUIDANCE",
+        "CAPITAL",
+        "LIQUIDITY",
+        "ASSETS",
+        "COMPETITION",
+        "MODEL",
+        "FUNDING",
+        "PROB",
+        "MODEL_BEAR",
+        "MODEL_BASE",
+        "MODEL_BULL",
+        "C1",
+        "C1_CONDITIONS",
+        "C2",
+        "C2_CONDITIONS",
+        "C3",
+        "C3_CONDITIONS",
+        "SIGNAL",
+        "OVERALL"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Q3 2026 Update（決算添付資料）",
+      "publisher": "Tesla, Inc.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
+      "published_at": "2026-10-21",
+      "accessed_at": "2026-11-27T18:09:16.204058+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "GUIDANCE",
+        "CAPITAL",
+        "LIQUIDITY",
+        "COMPETITION",
+        "MODEL",
+        "FUNDING",
+        "PROB",
+        "MODEL_BEAR",
+        "MODEL_BASE",
+        "MODEL_BULL",
+        "C1",
+        "C1_CONDITIONS",
+        "C2",
+        "C2_CONDITIONS",
+        "C3",
+        "C3_CONDITIONS",
+        "SIGNAL",
+        "OVERALL"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "2026年3Q 生産・引渡し・蓄電池設置発表",
+      "publisher": "Tesla, Inc.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026064366/exhibit991111111.htm",
+      "published_at": "2026-10-02",
+      "accessed_at": "2026-11-27T18:09:16.204058+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": []
+    },
+    {
+      "id": "S4",
+      "title": "最新SEC提出履歴",
+      "publisher": "SEC",
+      "url": "https://data.sec.gov/submissions/CIK0001318605.json",
+      "published_at": null,
+      "accessed_at": "2026-11-27T18:09:16.204058+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": []
+    },
+    {
+      "id": "S5",
+      "title": "市場価格（日足・時点値）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T18:09:16.204058+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "電気自動車の販売・リース、整備・充電、蓄電池・太陽光、FSD（監督付き）・Robotaxi、開発中のOptimusを展開する。監督付き運転支援を無人運行の承認と混同しない。[S1,S2]",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "FINANCIAL"
+      ],
+      "sec2": [
+        "BUSINESS",
+        "RISK"
+      ],
+      "sec3": [
+        "BUSINESS",
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "LIQUIDITY"
+      ],
+      "sec5": [
+        "COMPETITION"
+      ],
+      "sec6": [
+        "CAPITAL"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISK"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "SOTP",
+    "method_explanation": "対象は2027年末。自動車・サービス、エネルギー、自動運転の追加収益、ロボットの追加収益をEV/Salesで分ける条件付きSOTP。自動運転・ロボット売上は会社の確定予想ではない。自動車等の営業利益率5／8／11%、エネルギー12／18／22%、追加自動運転10／25／35%、ロボット-10／5／15%とセットで解釈。既存FSDと追加サービスを重複計上せず、合計EVへ将来自由現金を加え、最低運転現金・負債・持分を控除する。高い追加事業倍率は2027年以降の成功も必要とする。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.35,
+        "enterprise_value": 235000000000.0,
+        "equity_value": 258225000000.0,
+        "diluted_shares": 4100000000.0,
+        "price": 62.98170731707317,
+        "conditions": [
+          "自動車・サービス（既存FSD込み）：売上110.00十億ドル×1.5倍、営業利益率5% ／ エネルギー：売上15.00十億ドル×3倍、営業利益率12% ／ 自動運転の追加収益：売上5.00十億ドル×5倍、営業利益率10% ／ ロボットの追加収益：売上0.00十億ドル×0倍、営業利益率-10%。自由現金・短期証券45.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等10.00十億ドル、非支配等0.60十億ドル、将来株式4.1十億株。",
+          "現在から対象時点までの営業CF−設備投資等の純額を-0.91十億ドルとする現金ブリッジ。新規借入増減0.46十億ドルは現金にも反映する。",
+          "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 645000000000.0,
+        "equity_value": 671225000000.0,
+        "diluted_shares": 4200000000.0,
+        "price": 159.8154761904762,
+        "conditions": [
+          "自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。",
+          "現在から対象時点までの営業CF−設備投資等の純額を2.09十億ドルとする現金ブリッジ。新規借入増減2.46十億ドルは現金にも反映する。",
+          "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.2,
+        "enterprise_value": 1595000000000.0,
+        "equity_value": 1623225000000.0,
+        "diluted_shares": 4300000000.0,
+        "price": 377.49418604651163,
+        "conditions": [
+          "自動車・サービス（既存FSD込み）：売上150.00十億ドル×3.5倍、営業利益率11% ／ エネルギー：売上30.00十億ドル×7倍、営業利益率22% ／ 自動運転の追加収益：売上35.00十億ドル×20倍、営業利益率35% ／ ロボットの追加収益：売上8.00十億ドル×20倍、営業利益率15%。自由現金・短期証券55.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等15.00十億ドル、非支配等0.60十億ドル、将来株式4.3十億株。",
+          "現在から対象時点までの営業CF−設備投資等の純額を4.09十億ドルとする現金ブリッジ。新規借入増減5.46十億ドルは現金にも反映する。",
+          "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 169.45939905599224,
+      "expected_delta_pct": -57.63515023600194,
+      "raw_band_position_pct": 107.15577774351178,
+      "display_band_position_pct": 100.0,
+      "endpoint_rr": null,
+      "market_score": 100,
+      "own_score": 34,
+      "supplemental_score": 0
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "自動車価格競争、関税、エネルギー販売単価、FSD・Robotaxiの安全性・規制、AI投資と株式報酬、経営者・関連当事者への集中が主要リスク。1〜9月営業CF148.97億に対して設備投資130.14億、2026年の投資増で現金創出は会計利益と別に確認する。[S1]",
+      "大きな将来成長・高い売上倍率と未確定の事業化・資金条件に依存する。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "全セグメント売上倍率（標準の比率）",
+        "low": 0.8,
+        "base": 1,
+        "high": 1.2,
+        "result_prices": [
+          129.10119047619048,
+          159.8154761904762,
+          190.5297619047619
+        ]
+      },
+      {
+        "variable": "全セグメント売上（標準の比率）",
+        "low": 0.8,
+        "base": 1,
+        "high": 1.2,
+        "result_prices": [
+          129.10119047619048,
+          159.8154761904762,
+          190.5297619047619
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "Robotaxi拡大とFSDの追加収益化",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 5,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "過去のサービス開始を今後の予定にせず、無人運行の実施範囲・安全性と有償利用、既存FSDとは別の収益を確認する。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "2027年の追加売上250〜350億ドルへ向かう条件。許認可と運行費吸収が必要。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              188.38690476190476,
+              216.95833333333334
+            ],
+            "price_change_pct_range": [
+              -52.90327380952381,
+              -45.76041666666666
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上25.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上35.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "追加売上120〜180億ドルの当方標準経路。事業化は進むが段階的。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              151.24404761904762,
+              168.38690476190476
+            ],
+            "price_change_pct_range": [
+              -62.188988095238095,
+              -57.9032738095238
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上12.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上18.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "追加売上30〜80億ドル側。遅延・安全性・規制・費用で収益化が鈍る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              125.5297619047619,
+              139.8154761904762
+            ],
+            "price_change_pct_range": [
+              -68.61755952380952,
+              -65.04613095238095
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上3.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上8.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月は売上280.46億ドル、GAAP営業利益7.18億、普通株帰属純利益7.87億。1〜9月累計は売上786.69億、普通株帰属純利益23.80億。9月までの車両引渡し約132万台、蓄電池設置36.0GWh。Q3単独引渡し486,532台。売上や設置量の増加を利益の増加と同一視しない。[S1,S2,S3]"
+          ],
+          "evidence_against": [
+            "自動車価格競争、関税、エネルギー販売単価、FSD・Robotaxiの安全性・規制、AI投資と株式報酬、経営者・関連当事者への集中が主要リスク。1〜9月営業CF148.97億に対して設備投資130.14億、2026年の投資増で現金創出は会計利益と別に確認する。[S1]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "公式運行地域・規制条件",
+          "有償走行・利用率",
+          "追加売上",
+          "事故・安全性"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "9月末現金・短期投資454.47億ドル。未使用融資枠300億ドルは現金へ加えない。TTM営業CF187.10億−設備投資154.07億＝33.03億ドルのプラスだが、会社の2026年設備投資200億ドル超計画と翌期投資で変わる。最低運転現金150億ドルは当方仮定。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C1",
+          "C1_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "自動車・蓄電池の販売単価と収益性",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "車両引渡しと蓄電池GWhだけでなく、単価・規制クレジット・関税・粗利・運転資本を確認する。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "車両・サービス売上1400〜1500億ドルを支え、値引きだけに依存しない。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              165.76785714285714,
+              171.7202380952381
+            ],
+            "price_change_pct_range": [
+              -58.558035714285715,
+              -57.069940476190474
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上140.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上150.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "売上1250〜1350億ドルの当方標準経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              156.83928571428572,
+              162.79166666666666
+            ],
+            "price_change_pct_range": [
+              -60.79017857142857,
+              -59.302083333333336
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上125.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上135.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "売上1050〜1150億ドル側、需要・価格競争で採算が弱まる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              144.9345238095238,
+              150.88690476190476
+            ],
+            "price_change_pct_range": [
+              -63.76636904761905,
+              -62.27827380952381
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上105.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上115.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上2.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月は売上280.46億ドル、GAAP営業利益7.18億、普通株帰属純利益7.87億。1〜9月累計は売上786.69億、普通株帰属純利益23.80億。9月までの車両引渡し約132万台、蓄電池設置36.0GWh。Q3単独引渡し486,532台。売上や設置量の増加を利益の増加と同一視しない。[S1,S2,S3]"
+          ],
+          "evidence_against": [
+            "自動車価格競争、関税、エネルギー販売単価、FSD・Robotaxiの安全性・規制、AI投資と株式報酬、経営者・関連当事者への集中が主要リスク。1〜9月営業CF148.97億に対して設備投資130.14億、2026年の投資増で現金創出は会計利益と別に確認する。[S1]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "引渡し台数",
+          "価格",
+          "クレジット除く粗利",
+          "GWh",
+          "蓄電池単価・利益率"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "9月末現金・短期投資454.47億ドル。未使用融資枠300億ドルは現金へ加えない。TTM営業CF187.10億−設備投資154.07億＝33.03億ドルのプラスだが、会社の2026年設備投資200億ドル超計画と翌期投資で変わる。最低運転現金150億ドルは当方仮定。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C2",
+          "C2_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "Optimusの量産・外販と投資・報酬負担",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "量産準備・試用の説明と外部顧客売上を分け、設備投資・株式数・報酬の費用対効果を確認する。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "2027年外部売上50〜80億ドルへ進む条件。外販と生産品質の検証が必要。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              170.5297619047619,
+              181.24404761904762
+            ],
+            "price_change_pct_range": [
+              -57.36755952380952,
+              -54.6889880952381
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上5.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上8.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "外部売上10〜30億ドルの当方標準経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              156.24404761904762,
+              163.38690476190476
+            ],
+            "price_change_pct_range": [
+              -60.9389880952381,
+              -59.15327380952381
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上1.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上3.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "外部売上0〜5億ドル側、試用・量産準備が長期化。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              152.67261904761904,
+              154.45833333333334
+            ],
+            "price_change_pct_range": [
+              -61.83184523809524,
+              -61.38541666666666
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上0.00十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。 上限：自動車・サービス（既存FSD込み）：売上130.00十億ドル×2.5倍、営業利益率8% ／ エネルギー：売上22.00十億ドル×5倍、営業利益率18% ／ 自動運転の追加収益：売上15.00十億ドル×12倍、営業利益率25% ／ ロボットの追加収益：売上0.50十億ドル×15倍、営業利益率5%。自由現金・短期証券50.00十億ドル、その他資産3.83十億ドル、最低運転現金15.00十億ドル、負債等12.00十億ドル、非支配等0.60十億ドル、将来株式4.2十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月は売上280.46億ドル、GAAP営業利益7.18億、普通株帰属純利益7.87億。1〜9月累計は売上786.69億、普通株帰属純利益23.80億。9月までの車両引渡し約132万台、蓄電池設置36.0GWh。Q3単独引渡し486,532台。売上や設置量の増加を利益の増加と同一視しない。[S1,S2,S3]"
+          ],
+          "evidence_against": [
+            "自動車価格競争、関税、エネルギー販売単価、FSD・Robotaxiの安全性・規制、AI投資と株式報酬、経営者・関連当事者への集中が主要リスク。1〜9月営業CF148.97億に対して設備投資130.14億、2026年の投資増で現金創出は会計利益と別に確認する。[S1]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "外部販売台数・単価・歩留まり",
+          "設備投資",
+          "報酬費用",
+          "発行済株式"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "9月末現金・短期投資454.47億ドル。未使用融資枠300億ドルは現金へ加えない。TTM営業CF187.10億−設備投資154.07億＝33.03億ドルのプラスだが、会社の2026年設備投資200億ドル超計画と翌期投資で変わる。最低運転現金150億ドルは当方仮定。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C3",
+          "C3_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "事業拡大・設備・資金・規制の共通SOTP",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "内部取引・事業売上と設備・資金を重複加算しない。全事業と資本条件の同時シナリオを1群として一度だけ評価。個別価格幅や個別割合を合算しない。",
+        "full_success_incremental_equity_value": 1365000000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        88.2985347985348,
+        100
+      ],
+      "raw_implied_pct": 98.2985347985348,
+      "all_events_excluded_equity_value": 258225000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "共通の全事業・資金条件を1群にまとめ、失敗側株主価値258.23十億ドル、成功側1,623.22十億ドルから逆算。中心98.3%。表示幅は中心±10ポイントを0〜100へ制限し、統計区間・成功率ではない。 現在の評価株式と各ケースの将来株式が違うため、株価帯の位置とは一致しない。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "公式運行地域・規制条件、有償走行・利用率、追加売上、事故・安全性",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "引渡し台数、価格、クレジット除く粗利、GWh、蓄電池単価・利益率",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "外部販売台数・単価・歩留まり、設備投資、報酬費用、発行済株式",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 4,
+    "generated_at": "2026-11-27T18:09:16.204058+00:00",
+    "messages": [
+      "将来の売上・利益率・倍率・確率・財務は当方仮定で会社予想ではない。",
+      "希薄化は時点と期間平均の違いを含む概算で、証券別TSMの独立検証は未実施。",
+      "独立DCF・同業倍率・市場予想・短期イベント統計は未取得。",
+      "9月末現金・短期投資454.47億ドル。未使用融資枠300億ドルは現金へ加えない。TTM営業CF187.10億−設備投資154.07億＝33.03億ドルのプラスだが、会社の2026年設備投資200億ドル超計画と翌期投資で変わる。最低運転現金150億ドルは当方仮定。"
+    ]
+  }
+}
