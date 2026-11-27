@@ -484,6 +484,60 @@
       },
       "reportAsOf": "2026-11-27",
       "reportRevision": "coreweave-crwv-2026-11-27-v2"
+    },
+    {
+      "id": "spacex-spcx",
+      "order": 17,
+      "ticker": "SPCX",
+      "quoteSymbol": "SPCX",
+      "name": "スペースエックス",
+      "nameEn": "Space Exploration Technologies Corp.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "宇宙輸送・衛星通信",
+      "reports": {
+        "company": {
+          "path": "./stocks/spacex-spcx/company.html",
+          "available": false
+        },
+        "valuation": {
+          "path": "./stocks/spacex-spcx/valuation.html",
+          "available": false
+        },
+        "catalysts": {
+          "path": "./stocks/spacex-spcx/catalysts.html",
+          "available": false
+        }
+      }
+    },
+    {
+      "id": "tesla-tsla",
+      "order": 18,
+      "ticker": "TSLA",
+      "quoteSymbol": "TSLA",
+      "name": "テスラ",
+      "nameEn": "Tesla, Inc.",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "電気自動車・エネルギー・AI",
+      "reports": {
+        "company": {
+          "path": "./stocks/tesla-tsla/company.html",
+          "available": false
+        },
+        "valuation": {
+          "path": "./stocks/tesla-tsla/valuation.html",
+          "available": false
+        },
+        "catalysts": {
+          "path": "./stocks/tesla-tsla/catalysts.html",
+          "available": false
+        }
+      }
     }
   ]
 }
