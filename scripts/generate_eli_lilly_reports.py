@@ -54,8 +54,8 @@ def render(materials, name, values):
     required = set(re.findall(r'{{([A-Z0-9_]+)}}', template))
     if missing := required - values.keys():
         raise ValueError(f'{name}: missing {sorted(missing)}')
-    # Only placeholder substitution. Keep the supplied CSS, HTML skeleton and JS unchanged.
-    return re.sub(r'{{([A-Z0-9_]+)}}', lambda m: values[m[1]], template)
+    from apply_report_ui import apply
+    return apply(re.sub(r'{{([A-Z0-9_]+)}}', lambda m: values[m[1]], template))
 
 
 def build(materials):

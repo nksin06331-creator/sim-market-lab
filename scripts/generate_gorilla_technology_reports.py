@@ -69,7 +69,8 @@ def render_template(name: str, values: dict[str, str]) -> str:
     leftovers = sorted(set(re.findall(r"{{[A-Z0-9_]+}}", template)))
     if leftovers:
         raise RuntimeError(f"{name}: unresolved placeholders: {leftovers}")
-    return template
+    from apply_report_ui import apply
+    return apply(template)
 
 
 def usd(value: int | float) -> str:
