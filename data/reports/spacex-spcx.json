@@ -1,0 +1,1325 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Space Exploration Technologies Corp.",
+    "ticker": "SPCX",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-28",
+    "source_cutoff": "2026-11-27T18:09:16.203930+00:00",
+    "generated_at": "2026-11-27T18:09:16.203930+00:00",
+    "price": 133.59,
+    "price_as_of": "2026-11-27T18:00:00+00:00",
+    "benchmark": null
+  },
+  "capital_structure": {
+    "basic_shares": 13581063709,
+    "diluted_shares": 14133063709,
+    "market_cap": 1888035980885.31,
+    "cash": 51294000000,
+    "liquid_securities": 38561000000,
+    "restricted_cash": 0,
+    "minimum_operating_cash": 20000000000,
+    "debt": 38989000000,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "runway_months": null,
+    "source_ids": [
+      "S1",
+      "S2"
+    ],
+    "dilution_notes": [
+      "10月15日のClass A 8,246,541,218株＋Class B 5,334,522,491株＝13,581,063,709株。Q3希薄化差533百万株と除外潜在株19百万株を追加し、評価株式14,133,063,709株とする時点・期間平均混用の近似。完全な証券別TSMではない。将来14.4／14.6／14.8十億株。現金512.94億＋短期証券385.61億、総負債・金融リース389.89億（帳簿388.44億ではなく額面等を保守的に使用）。制限現金20.92億は上記自由現金に含めない。[S1]",
+      "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+      "自由現金は制限現金を含まないためrestricted_cash=0として再控除しない。実際の別建て制限現金は2.09十億ドル。",
+      "デジタル資産15.73億ドルを9月末帳簿値で固定。評価益や取得済みCursorの買収対価を別途再加算しない。売却税・流動性の独立再評価は未実施。[S1]"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "2002年設立。米国テキサス州Starbaseに本社を置く。NasdaqのClass A普通株SPCX。Class AとClass Bを合計して1株価値を評価する。2026年9月期10-QはSpace、Connectivity、SIの3セグメントを開示。[S1]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "BUSINESS",
+      "statement": "Falcon・Dragon・Starship等の宇宙輸送、Starlink通信、Grok・X・Cursorを含むSI（AI）事業を運営する。内部の衛星打上げを外部売上として足さず、AIの取得額を企業価値に再加算しない。[S1]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "FINANCIAL",
+      "statement": "2026年7〜9月の売上145.75億ドル、GAAP営業利益27.91億、純利益44.04億。Space売上17.67億・営業損失0.07億、Connectivity売上52.48億・営業利益23.67億、SI売上75.60億・営業利益4.31億。1〜9月は売上270.83億、純損失4.13億（普通株帰属損失10.84億）。単独四半期を単純年率化しない。[S1]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RISK",
+      "statement": "Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "Starshipの開発・再利用、次世代衛星、SI計算設備の拡張を会社は進めている。取得した10-Qと決算資料だけでは、当方が使う2027年のセグメント売上・倍率・FCFを会社の確定予想とは扱えない。次期決算・試験の確定日時は未確認として掲載しない。[S1,S2]",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "10月15日のClass A 8,246,541,218株＋Class B 5,334,522,491株＝13,581,063,709株。Q3希薄化差533百万株と除外潜在株19百万株を追加し、評価株式14,133,063,709株とする時点・期間平均混用の近似。完全な証券別TSMではない。将来14.4／14.6／14.8十億株。現金512.94億＋短期証券385.61億、総負債・金融リース389.89億（帳簿388.44億ではなく額面等を保守的に使用）。制限現金20.92億は上記自由現金に含めない。[S1]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "latest point shares plus disclosed/proxy dilution; securities-by-security TSM unverified",
+      "confidence": "LOW"
+    },
+    {
+      "id": "LIQUIDITY",
+      "statement": "自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "cash+securities-minimum operating cash; disclosed cash-flow period; no assumed unused-facility cash",
+      "confidence": "LOW"
+    },
+    {
+      "id": "ASSETS",
+      "statement": "デジタル資産15.73億ドルを9月末帳簿値で固定。評価益や取得済みCursorの買収対価を別途再加算しない。売却税・流動性の独立再評価は未実施。[S1]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "disclosed digital assets plus cost and accumulated fair-value gain of the equity investment",
+      "confidence": "LOW"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "宇宙輸送ではRocket Lab、Blue Origin、ULA等、通信では地上回線・衛星通信、AIではOpenAI・Anthropic・Google等が比較対象。打上げ回数を利益や通信売上へ直接変換しない。独立した最新シェア・同業倍率は未取得。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "qualitative comparison by customer function; market share and multiples unverified",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL",
+      "statement": "対象は2027年末。各事業の2027年通期売上×EV/Salesを合計し、自由現金・短期証券とデジタル資産15.73億を加え、最低運転現金200億と負債・金融リースを控除して将来株式で割る。売上・倍率・将来財務は全て当方仮定。売上倍率はSpaceの将来営業利益率-5／10／20%、Connectivity 35／40／43%、SI -15／5／15%と対で考える。高い倍率には2027年以降の成長が必要で、2027年利益だけでは支えにくい。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "sum(segment_sales*segment_EV_sales)+future_cash+other_assets-minimum_cash-future_debt-minority, divided by future shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FUNDING",
+      "statement": "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "future_cash=current_cash+current_securities+OCF-capex+future_debt-current_debt",
+      "confidence": "LOW"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観35%・標準45%・楽観20%。実績と事業化リスクを踏まえた粗い主観配分。高い成長倍率と資金・規制条件の不確実性から下側を厚く置くが統計的成功率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "subjective 0.35+0.45+0.20=1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "基準株価$133.59、時刻2026-11-27T18:00:00+00:00。米国取引時間中の時点値で終値とは限らない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL_BEAR",
+      "statement": "2027年末の悲観：Space：売上6.00十億ドル×6倍、営業利益率-5% ／ Connectivity：売上22.00十億ドル×10倍、営業利益率35% ／ SI：売上25.00十億ドル×6倍、営業利益率-15%。自由現金・短期証券50.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等45.00十億ドル、非支配等0.00十億ドル、将来株式14.4十億株。現在から対象時点までの営業CF−設備投資等の純額を-45.87十億ドルとする現金ブリッジ。新規借入増減6.01十億ドルは現金にも反映する。将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "SOTP model; segment revenues*EV/Sales and explicit balance-sheet bridge",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL_BASE",
+      "statement": "2027年末の標準：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。現在から対象時点までの営業CF−設備投資等の純額を-35.87十億ドルとする現金ブリッジ。新規借入増減11.01十億ドルは現金にも反映する。将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "SOTP model; segment revenues*EV/Sales and explicit balance-sheet bridge",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL_BULL",
+      "statement": "2027年末の楽観：Space：売上11.00十億ドル×14倍、営業利益率20% ／ Connectivity：売上38.00十億ドル×18倍、営業利益率43% ／ SI：売上65.00十億ドル×18倍、営業利益率15%。自由現金・短期証券80.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等55.00十億ドル、非支配等0.00十億ドル、将来株式14.8十億株。現在から対象時点までの営業CF−設備投資等の純額を-25.87十億ドルとする現金ブリッジ。新規借入増減16.01十億ドルは現金にも反映する。将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "SOTP model; segment revenues*EV/Sales and explicit balance-sheet bridge",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C1",
+      "statement": "9月末13.6百万回線、Q3 ARPU69ドルを起点に回線増と単価・衛星更新費を確認する。回線増加だけで利益増とは判定しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C1_CONDITIONS",
+      "statement": "回線増と単価が両立し、Connectivity売上330〜380億ドル側を支え、利益率40%前後を維持。 ／ 売上280〜320億ドル相当の当方標準経路。ARPU低下を回線増が吸収。 ／ 単価低下・競争・更新費増で売上220〜260億ドル側、利益率が弱含む。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C2",
+      "statement": "開発・試験の進展と商業売上・原価への寄与を分ける。取得資料で次回試験の確定日を確認できていない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C2_CONDITIONS",
+      "statement": "開発が進み外部売上100〜110億ドルの経路と費用効率改善を支える。 ／ 売上75〜85億ドルの当方標準経路。試験・開発費は継続。 ／ 遅延・事故・許認可で売上60〜70億ドル側。社内衛星輸送を追加売上にしない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C3",
+      "statement": "取得完了を将来イベントにせず、統合後の顧客・売上、計算設備の稼働、償却・報酬とFCFを確認する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C3_CONDITIONS",
+      "statement": "SI売上550〜650億ドルと費用吸収へ進む条件。 ／ 売上400〜500億ドルの当方標準経路だが投資と償却の負担が残る。 ／ 売上250〜350億ドル側、統合費・競争・資金需要が増える。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "現在株価評価100、カタリスト85、企業基盤リスク80。60/25/15%で総合93.2、買われすぎ。株価スコアは悲観→標準を0→50、標準→楽観を50→100で補間し、SOTP倍率・希薄化・事業化の不確実性で5点加算、0〜100へ制限。材料85は成長実績に対し複数の未完了条件と期待先行が大きいとの主観評価。企業リスクは財務・投資・集中・規制を根拠とする主観評価。日々の株価から自動再計算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "piecewise price position +5; valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "共通の全事業・資金条件を1群にまとめ、失敗側株主価値392.57十億ドル、成功側2,014.57十億ドルから逆算。中心92.2%。表示幅は中心±10ポイントを0〜100へ制限し、統計区間・成功率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "(price*current_diluted_shares-bear_equity)/(bull_equity-bear_equity)*100",
+      "confidence": "LOW"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年3Q Form 10-Q",
+      "publisher": "Space Exploration Technologies Corp.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm",
+      "published_at": "2026-10-22",
+      "accessed_at": "2026-11-27T18:09:16.203930+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "GUIDANCE",
+        "CAPITAL",
+        "LIQUIDITY",
+        "ASSETS",
+        "COMPETITION",
+        "MODEL",
+        "FUNDING",
+        "PROB",
+        "MODEL_BEAR",
+        "MODEL_BASE",
+        "MODEL_BULL",
+        "C1",
+        "C1_CONDITIONS",
+        "C2",
+        "C2_CONDITIONS",
+        "C3",
+        "C3_CONDITIONS",
+        "SIGNAL",
+        "OVERALL"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "2026年3Q決算発表資料",
+      "publisher": "Space Exploration Technologies Corp.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm",
+      "published_at": "2026-10-20",
+      "accessed_at": "2026-11-27T18:09:16.203930+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "GUIDANCE",
+        "CAPITAL",
+        "LIQUIDITY",
+        "COMPETITION",
+        "MODEL",
+        "FUNDING",
+        "PROB",
+        "MODEL_BEAR",
+        "MODEL_BASE",
+        "MODEL_BULL",
+        "C1",
+        "C1_CONDITIONS",
+        "C2",
+        "C2_CONDITIONS",
+        "C3",
+        "C3_CONDITIONS",
+        "SIGNAL",
+        "OVERALL"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "取締役辞任の8-K（既知事実の確認）",
+      "publisher": "Space Exploration Technologies Corp.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026071689/spcx-20261104.htm",
+      "published_at": "2026-11-06",
+      "accessed_at": "2026-11-27T18:09:16.203930+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": []
+    },
+    {
+      "id": "S4",
+      "title": "最新SEC提出履歴",
+      "publisher": "SEC",
+      "url": "https://data.sec.gov/submissions/CIK0001181412.json",
+      "published_at": null,
+      "accessed_at": "2026-11-27T18:09:16.203930+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": []
+    },
+    {
+      "id": "S5",
+      "title": "市場価格（日足・時点値）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SPCX?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T18:09:16.203930+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "Falcon・Dragon・Starship等の宇宙輸送、Starlink通信、Grok・X・Cursorを含むSI（AI）事業を運営する。内部の衛星打上げを外部売上として足さず、AIの取得額を企業価値に再加算しない。[S1]",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "FINANCIAL"
+      ],
+      "sec2": [
+        "BUSINESS",
+        "RISK"
+      ],
+      "sec3": [
+        "BUSINESS",
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "LIQUIDITY"
+      ],
+      "sec5": [
+        "COMPETITION"
+      ],
+      "sec6": [
+        "CAPITAL"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISK"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "SOTP",
+    "method_explanation": "対象は2027年末。各事業の2027年通期売上×EV/Salesを合計し、自由現金・短期証券とデジタル資産15.73億を加え、最低運転現金200億と負債・金融リースを控除して将来株式で割る。売上・倍率・将来財務は全て当方仮定。売上倍率はSpaceの将来営業利益率-5／10／20%、Connectivity 35／40／43%、SI -15／5／15%と対で考える。高い倍率には2027年以降の成長が必要で、2027年利益だけでは支えにくい。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.35,
+        "enterprise_value": 406000000000.0,
+        "equity_value": 392573000000.0,
+        "diluted_shares": 14400000000.0,
+        "price": 27.262013888888887,
+        "conditions": [
+          "Space：売上6.00十億ドル×6倍、営業利益率-5% ／ Connectivity：売上22.00十億ドル×10倍、営業利益率35% ／ SI：売上25.00十億ドル×6倍、営業利益率-15%。自由現金・短期証券50.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等45.00十億ドル、非支配等0.00十億ドル、将来株式14.4十億株。",
+          "現在から対象時点までの営業CF−設備投資等の純額を-45.87十億ドルとする現金ブリッジ。新規借入増減6.01十億ドルは現金にも反映する。",
+          "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 1040000000000.0,
+        "equity_value": 1036573000000.0,
+        "diluted_shares": 14600000000.0,
+        "price": 70.9981506849315,
+        "conditions": [
+          "Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。",
+          "現在から対象時点までの営業CF−設備投資等の純額を-35.87十億ドルとする現金ブリッジ。新規借入増減11.01十億ドルは現金にも反映する。",
+          "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.2,
+        "enterprise_value": 2008000000000.0,
+        "equity_value": 2014573000000.0,
+        "diluted_shares": 14800000000.0,
+        "price": 136.1197972972973,
+        "conditions": [
+          "Space：売上11.00十億ドル×14倍、営業利益率20% ／ Connectivity：売上38.00十億ドル×18倍、営業利益率43% ／ SI：売上65.00十億ドル×18倍、営業利益率15%。自由現金・短期証券80.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等55.00十億ドル、非支配等0.00十億ドル、将来株式14.8十億株。",
+          "現在から対象時点までの営業CF−設備投資等の純額を-25.87十億ドルとする現金ブリッジ。新規借入増減16.01十億ドルは現金にも反映する。",
+          "将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 68.71483212878975,
+      "expected_delta_pct": -48.56289233566153,
+      "raw_band_position_pct": 97.67605290307436,
+      "display_band_position_pct": 97.67605290307436,
+      "endpoint_rr": 0.023792393609841415,
+      "market_score": 98,
+      "own_score": 38,
+      "supplemental_score": 0
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]",
+      "大きな将来成長・高い売上倍率と未確定の事業化・資金条件に依存する。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "全セグメント売上倍率（標準の比率）",
+        "low": 0.8,
+        "base": 1,
+        "high": 1.2,
+        "result_prices": [
+          56.751575342465756,
+          70.9981506849315,
+          85.24472602739726
+        ]
+      },
+      {
+        "variable": "全セグメント売上（標準の比率）",
+        "low": 0.8,
+        "base": 1,
+        "high": 1.2,
+        "result_prices": [
+          56.751575342465756,
+          70.9981506849315,
+          85.24472602739726
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "Starlink回線成長と実現単価・設備効率",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 5,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "9月末13.6百万回線、Q3 ARPU69ドルを起点に回線増と単価・衛星更新費を確認する。回線増加だけで利益増とは判定しない。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "回線増と単価が両立し、Connectivity売上330〜380億ドル側を支え、利益率40%前後を維持。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              73.87486301369863,
+              78.66938356164384
+            ],
+            "price_change_pct_range": [
+              -44.70030465326849,
+              -41.11132303193066
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上33.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上38.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "売上280〜320億ドル相当の当方標準経路。ARPU低下を回線増が吸収。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              69.08034246575342,
+              72.91595890410959
+            ],
+            "price_change_pct_range": [
+              -48.289286274606326,
+              -45.41810097753606
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上28.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上32.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "単価低下・競争・更新費増で売上220〜260億ドル側、利益率が弱含む。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              63.32691780821918,
+              67.16253424657535
+            ],
+            "price_change_pct_range": [
+              -52.5960642202117,
+              -49.724878923141446
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上22.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上26.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月の売上145.75億ドル、GAAP営業利益27.91億、純利益44.04億。Space売上17.67億・営業損失0.07億、Connectivity売上52.48億・営業利益23.67億、SI売上75.60億・営業利益4.31億。1〜9月は売上270.83億、純損失4.13億（普通株帰属損失10.84億）。単独四半期を単純年率化しない。[S1]"
+          ],
+          "evidence_against": [
+            "Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "消費者サービス回線",
+          "ARPU",
+          "企業契約売上",
+          "Connectivity利益率・設備投資"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C1",
+          "C1_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "Starshipの開発・再利用と外部顧客売上",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "開発・試験の進展と商業売上・原価への寄与を分ける。取得資料で次回試験の確定日を確認できていない。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "開発が進み外部売上100〜110億ドルの経路と費用効率改善を支える。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              72.36801369863014,
+              73.05294520547945
+            ],
+            "price_change_pct_range": [
+              -45.828270305688946,
+              -45.31555864549783
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上10.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上11.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "売上75〜85億ドルの当方標準経路。試験・開発費は継続。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              70.65568493150685,
+              71.34061643835616
+            ],
+            "price_change_pct_range": [
+              -47.110049456166735,
+              -46.597337795975626
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上7.50十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上8.50十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "遅延・事故・許認可で売上60〜70億ドル側。社内衛星輸送を追加売上にしない。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              69.62828767123288,
+              70.31321917808219
+            ],
+            "price_change_pct_range": [
+              -47.879116946453415,
+              -47.36640528626231
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上6.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上7.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月の売上145.75億ドル、GAAP営業利益27.91億、純利益44.04億。Space売上17.67億・営業損失0.07億、Connectivity売上52.48億・営業利益23.67億、SI売上75.60億・営業利益4.31億。1〜9月は売上270.83億、純損失4.13億（普通株帰属損失10.84億）。単独四半期を単純年率化しない。[S1]"
+          ],
+          "evidence_against": [
+            "Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "試験・回収・再使用実績",
+          "公式許認可",
+          "外部打上げ売上",
+          "開発費"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C2",
+          "C2_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "SI・Cursor統合と巨額投資の収益化",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "取得完了を将来イベントにせず、統合後の顧客・売上、計算設備の稼働、償却・報酬とFCFを確認する。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "SI売上550〜650億ドルと費用吸収へ進む条件。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              79.21732876712329,
+              87.43650684931507
+            ],
+            "price_change_pct_range": [
+              -40.70115370377776,
+              -34.54861378148435
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上55.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上65.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "売上400〜500億ドルの当方標準経路だが投資と償却の負担が残る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              66.88856164383562,
+              75.1077397260274
+            ],
+            "price_change_pct_range": [
+              -49.9299635872179,
+              -43.77742366492446
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上40.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上50.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "売上250〜350億ドル側、統合費・競争・資金需要が増える。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              54.559794520547946,
+              62.77897260273973
+            ],
+            "price_change_pct_range": [
+              -59.15877347065803,
+              -53.0062335483646
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上25.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 上限：Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上35.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月の売上145.75億ドル、GAAP営業利益27.91億、純利益44.04億。Space売上17.67億・営業損失0.07億、Connectivity売上52.48億・営業利益23.67億、SI売上75.60億・営業利益4.31億。1〜9月は売上270.83億、純損失4.13億（普通株帰属損失10.84億）。単独四半期を単純年率化しない。[S1]"
+          ],
+          "evidence_against": [
+            "Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "SI外部売上",
+          "運営利益率",
+          "設備投資",
+          "株式報酬",
+          "現金・負債"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C3",
+          "C3_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "事業拡大・設備・資金・規制の共通SOTP",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "内部取引・事業売上と設備・資金を重複加算しない。全事業と資本条件の同時シナリオを1群として一度だけ評価。個別価格幅や個別割合を合算しない。",
+        "full_success_incremental_equity_value": 1622000000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        82.19870412363194,
+        100
+      ],
+      "raw_implied_pct": 92.19870412363194,
+      "all_events_excluded_equity_value": 392573000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "共通の全事業・資金条件を1群にまとめ、失敗側株主価値392.57十億ドル、成功側2,014.57十億ドルから逆算。中心92.2%。表示幅は中心±10ポイントを0〜100へ制限し、統計区間・成功率ではない。 現在の評価株式と各ケースの将来株式が違うため、株価帯の位置とは一致しない。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "消費者サービス回線、ARPU、企業契約売上、Connectivity利益率・設備投資",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "試験・回収・再使用実績、公式許認可、外部打上げ売上、開発費",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "SI外部売上、運営利益率、設備投資、株式報酬、現金・負債",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 4,
+    "generated_at": "2026-11-27T18:09:16.203930+00:00",
+    "messages": [
+      "将来の売上・利益率・倍率・確率・財務は当方仮定で会社予想ではない。",
+      "希薄化は時点と期間平均の違いを含む概算で、証券別TSMの独立検証は未実施。",
+      "独立DCF・同業倍率・市場予想・短期イベント統計は未取得。",
+      "自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。"
+    ]
+  }
+}

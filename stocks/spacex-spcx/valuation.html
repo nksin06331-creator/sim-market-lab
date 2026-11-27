@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>スペースエックス（SPCX）｜株価シナリオ</title>
+
+<style>
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.score b{font-size:54px;line-height:1;display:block}.score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(21px,3vw,29px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scenario{border-radius:16px;padding:18px;border:1px solid var(--line);background:#101410;position:relative;overflow:hidden;min-height:320px}.scenario:after{position:absolute;right:4px;top:-12px;font-weight:900;font-size:66px;opacity:.05;line-height:1}.scenario.bear:after{content:"B"}.scenario.base:after{content:"A"}.scenario.bull:after{content:"↑"}.scenario-head{display:flex;justify-content:space-between;gap:10px;font-weight:800}.scenario-head b{padding:4px 9px;border-radius:999px;color:#06210a;background:var(--accent)}.scenario-price{font-size:clamp(31px,4vw,42px);font-weight:900;letter-spacing:-.05em;margin:14px 0 0}.scenario.bear{border-top:4px solid var(--red)}.scenario.base{border-top:4px solid var(--accent);box-shadow:0 0 0 1px rgba(110,226,78,.12)}.scenario.bull{border-top:4px solid var(--accent-bright)}
+.small{font-size:13px;color:var(--muted)}dl{margin:16px 0 0}dl div{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding:8px 0;gap:12px}dt{color:var(--muted)}dd{margin:0;font-weight:800}.position{margin-top:20px}.position-line{height:14px;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--amber),var(--accent));position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.pin{position:absolute;top:-8px;width:7px;height:30px;background:#fff;border:2px solid #050805;border-radius:6px;left:36.1%;box-shadow:0 4px 14px rgba(0,0,0,.55)}.position-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px;gap:7px}.pill{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}
+.zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav a{white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700}.report-nav a:hover{border-color:var(--accent);color:var(--accent)}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+@media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav a{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
+</style>
+
+<link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
+</head>
+<body data-report-kind="valuation" data-stock-ticker="SPCX" data-price-source="../../data/prices.json">
+<nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
+<!-- ================================================================
+  SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
+  ・CSSと各セクション構成はキオクシア版と同一（サイト掲載の見た目を維持）。
+  ・{{ }} を report_data の値で置換して使う。数値・確率・結論は改変しない。
+  ・ファイル名は銘柄名（例: 285A.html / IONQ.html）。
+================================================================ -->
+<header class="hero">
+<div class="wrap">
+  <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
+  <h1>スペースエックス <small>SPCX</small></h1>
+  <div class="sub">Nasdaq／USD｜評価基準日 2026-11-28｜使用手法 事業別SOTP／売上・利益率・資金・株式</div>
+  <div class="verdict">
+    <div class="verdict-main">
+      <span class="pill">まず結論だけ</span>
+      <!-- decision.status＋一言結論（絵文字は先頭1個まで、45文字目安） -->
+      <div class="status">事業の進展と高い期待を分けて見る</div>
+      <!-- 現値ポジショニングと市場逆算を1〜2文で -->
+      <p>標準ケース$71.00。基準株価は標準〜楽観の間。将来の売上・利益率と資金条件が成立する場合の価値です。</p>
+      <p class="sub">事業別の条件付きSOTPで比較。高い売上倍率は2027年以降の成長も必要とし、成功しても現在価格を支えるとは限りません。</p>
+    </div>
+    <!-- 総合スコアは“補助指標”。売買判断そのものではない旨を必ず添える -->
+    <details class="score-detail"><summary>シナリオの参考スコア（総合判定とは別）</summary><div class="score"><small>分析の参考スコア</small><b>0</b><small>/ 100　売買判断ではありません</small></div></details>
+  </div>
+  <div class="analysis-basis"><p><strong>計算に使った基準株価：$133.59</strong> ／ 2026-11-27T18:00:00+00:00 時点値（分析基準値）</p><p>シナリオ・騰落率・参考スコアはこの基準で固定。現在株価の更新では再計算しません。</p></div>
+<div class="kpis">
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$133.59</b><small data-live-price-date>2026-11-27T18:00:00+00:00 時点値（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>$71.00</b><small>-46.9%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>$68.71</b><small>-48.6%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>高い</b><small>事業化・高い倍率・資金・規制条件に依存</small></div>
+  </div>
+
+</div>
+</header>
+
+<!-- Validation：WARNがあれば下の注意帯を残す（なければ丸ごと削除）。FAIL時は完成版にしない。 -->
+<div class="wrap"><p class="notice">将来売上・利益率・倍率・資金・株式数は当方仮定です。Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]</p></div>
+<!-- 例（WARN時）:
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>将来売上・利益率・倍率・資金・株式数は当方仮定です。Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]</div></div>
+-->
+
+<nav class="report-nav"><div class="wrap">
+<a href="#snapshot">結論</a>
+<a href="#scenarios">3シナリオ</a>
+<a href="#logic">計算</a>
+<a href="#sensitivity">感応度</a>
+<a href="#assumptions">前提</a>
+</div></nav>
+
+<main class="wrap">
+
+<!-- Layer2-1：いまどこ？（現値ポジショニング＋市場逆算） -->
+<section class="card" id="snapshot">
+  <h2>いまの株価、どこにいる？</h2>
+  <p class="lead">分析基準株価$133.59／2026-11-27T18:00:00+00:00。分析基準日2026-11-28。対象2027年末。時点値で終値とは限りません。</p>
+  <div class="grid-2">
+    <div>
+      <h3>今の株価の位置</h3>
+      <p>悲観～楽観ケースの <b>97.7%</b> 地点。判定は <b>標準〜楽観の間</b>。丸め前の帯位置97.7%。0〜100%外は表示ピンだけ端へ固定します。真の成功率ではありません。</p>
+      <!-- pin の left:% を band_position_pct に合わせる -->
+      <div class="position"><div class="position-line"><i class="pin" style="left:97.7%"></i></div><div class="position-labels"><span>Bear $27.26</span><span>Base $71.00</span><span>Bull $136.12</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>0.02倍（確率を含まない）</b>　3ケースを確率でならした値：<b>$68.71</b></p>
+    </div>
+    <div>
+      <h3>今の株価と、この分析の違い</h3>
+      <div class="compare">
+        <div><b>今の株価 98/100</b><div class="meter"><i style="width:98%"></i></div></div>
+        <div><b>この分析 38/100</b><div class="meter"><i style="width:38%"></i></div></div>
+      </div>
+      <!-- market_reverse.conclusion：現値が自分のどの前提に相当するか -->
+      <p>標準事業売上と資金条件・現在評価株式を固定すると、基準価格が要求する事業価値は1,891.46十億ドル。標準の全売上倍率を一斉に1.82倍する条件に相当します。実際の市場予想を観測した値ではありません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Layer1/2：3シナリオ。dl の項目は使用手法に合わせて変える（rNPV/SOTP/EV-Sales/PER等） -->
+<section class="card" id="scenarios">
+  <h2>未来はこの3パターン</h2>
+  <p class="lead">2027年末に2027年の通期収益力とそれ以降の成長期待を評価。現在株価に合わせて標準入力を作っていません。</p>
+  <div class="scenarios">
+    <article class="scenario bear">
+      <div class="scenario-head"><span>悲観ケース</span><b>35%</b></div>
+      <div class="scenario-price">$27.26</div>
+      <div class="small">現値比 -79.6%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>406.00十億ドル</dd></div><div><dt>株主価値</dt><dd>392.57十億ドル</dd></div><div><dt>将来株式</dt><dd>14.4十億株</dd></div></dl>
+      <!-- 例: <div><dt>事業価値</dt><dd>25.9兆円</dd></div> を手法に応じて数行 -->
+    </article>
+    <article class="scenario base">
+      <div class="scenario-head"><span>標準ケース</span><b>45%</b></div>
+      <div class="scenario-price">$71.00</div>
+      <div class="small">現値比 -46.9%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>1,040.00十億ドル</dd></div><div><dt>株主価値</dt><dd>1,036.57十億ドル</dd></div><div><dt>将来株式</dt><dd>14.6十億株</dd></div></dl>
+    </article>
+    <article class="scenario bull">
+      <div class="scenario-head"><span>楽観ケース</span><b>20%</b></div>
+      <div class="scenario-price">$136.12</div>
+      <div class="small">現値比 +1.9%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>2,008.00十億ドル</dd></div><div><dt>株主価値</dt><dd>2,014.57十億ドル</dd></div><div><dt>将来株式</dt><dd>14.8十億株</dd></div></dl>
+    </article></div>
+</section>
+
+<!-- Layer2：価格別アクションマップ ＋ 株価を動かす材料 -->
+<section class="grid-2">
+  <div class="card">
+    <h2>この値段ならどう見る？</h2>
+    <!-- 4〜5帯。「買い/売り」は断定しない。星は割安度の目安 -->
+    <div class="zone"><div><b>$27.26未満</b></div><p>当方悲観モデルより低い。前提の追加悪化や別のリスクを再検討。</p></div><div class="zone"><div><b>$27.26〜$71.00</b></div><p>悲観と標準の間。標準の達成を保証しない。</p></div><div class="zone"><div><b>$71.00〜$136.12</b></div><p>成長と高い評価倍率、資金・規制条件が必要。</p></div><div class="zone"><div><b>$136.12超</b></div><p>当方楽観ケース以上の収益化・倍率等が必要。売買指示ではない。</p></div>
+    <!-- 例: <div class="zone"><div><b>48,000円未満</b><span>★★★★★</span></div><p>悲観ケース以下。下方リスクを相当織り込む</p></div> -->
+  </div>
+  <div class="card">
+    <h2>株価を動かす4つ</h2>
+    <!-- 各材料に up=追い風 / down=注意 / flat を付ける -->
+    <div class="signal"><div><b>Starlink回線成長と実現単価・設備効率</b></div><p>9月末13.6百万回線、Q3 ARPU69ドルを起点に回線増と単価・衛星更新費を確認する。回線増加だけで利益増とは判定しない。 [S1,S2]</p></div><div class="signal"><div><b>Starshipの開発・再利用と外部顧客売上</b></div><p>開発・試験の進展と商業売上・原価への寄与を分ける。取得資料で次回試験の確定日を確認できていない。 [S1,S2]</p></div><div class="signal"><div><b>SI・Cursor統合と巨額投資の収益化</b></div><p>取得完了を将来イベントにせず、統合後の顧客・売上、計算設備の稼働、償却・報酬とFCFを確認する。 [S1,S2]</p></div>
+    <!-- 例: <div class="signal"><div><b>AI向けSSD需要</b><span class="up">追い風</span></div><p>…</p></div> -->
+  </div>
+</section>
+
+<!-- Layer2：良い点 / 気になる点（対比） -->
+<section class="grid-2">
+  <div class="card">
+    <h2>ここは普通に強い</h2>
+    <ul class="clean"><li>Falcon・Dragon・Starship等の宇宙輸送、Starlink通信、Grok・X・Cursorを含むSI（AI）事業を運営する。内部の衛星打上げを外部売上として足さず、AIの取得額を企業価値に再加算しない。[S1]</li><li>2026年7〜9月の売上145.75億ドル、GAAP営業利益27.91億、純利益44.04億。Space売上17.67億・営業損失0.07億、Connectivity売上52.48億・営業利益23.67億、SI売上75.60億・営業利益4.31億。1〜9月は売上270.83億、純損失4.13億（普通株帰属損失10.84億）。単独四半期を単純年率化しない。[S1]</li><li>Starshipの開発・再利用、次世代衛星、SI計算設備の拡張を会社は進めている。取得した10-Qと決算資料だけでは、当方が使う2027年のセグメント売上・倍率・FCFを会社の確定予想とは扱えない。次期決算・試験の確定日時は未確認として掲載しない。[S1,S2]</li></ul>
+    <!-- 例: <li>FY2025売上2.34兆円で過去最高。</li> を3〜5件 -->
+  </div>
+  <div class="card">
+    <h2>ここで事故るかも</h2>
+    <ul class="clean"><li>Starship試験・打上げ許認可、衛星の更新費、通信単価低下、SI投資と買収後の報酬・償却、関連当事者取引、Class Bの支配権が主要リスク。2026年1〜9月営業CF130.97億に対し設備投資480.69億、差額マイナス349.72億。四半期黒字を資金自立と同一視しない。[S1]</li><li>自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。</li><li>独立DCF・同業倍率・市場予想を用いる別手法の検証は未実施。</li></ul>
+    <!-- 2つ目のカードのliは自動で赤「!」になる -->
+  </div>
+</section>
+
+<!-- Layer3：計算ロジック -->
+<section class="card" id="logic">
+  <h2>数字の作り方</h2>
+  <p class="lead">EV＝Σ（事業別売上×売上倍率）。株主価値＝EV＋将来自由現金・短期証券＋その他資産−最低運転現金−負債・金融リース−非支配等。1株価値＝株主価値÷将来希薄化株式。</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
+  <thead><tr><th>ケース</th><th>領域</th><th>売上／合計EV</th><th>営業利益率／調整</th><th>倍率／株主価値</th><th>事業価値／1株価値</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>Space</td><td>6.00十億ドル</td><td>-5%</td><td>6倍</td><td>36.00十億ドル</td></tr><tr><td>悲観</td><td>Connectivity</td><td>22.00十億ドル</td><td>35%</td><td>10倍</td><td>220.00十億ドル</td></tr><tr><td>悲観</td><td>SI</td><td>25.00十億ドル</td><td>-15%</td><td>6倍</td><td>150.00十億ドル</td></tr><tr><td>悲観</td><td>合計EV→株主価値</td><td>406.00十億ドル</td><td>資金・請求権調整後</td><td>392.57十億ドル</td><td>$27.26／株</td></tr><tr><td>標準</td><td>Space</td><td>8.00十億ドル</td><td>10%</td><td>10倍</td><td>80.00十億ドル</td></tr><tr><td>標準</td><td>Connectivity</td><td>30.00十億ドル</td><td>40%</td><td>14倍</td><td>420.00十億ドル</td></tr><tr><td>標準</td><td>SI</td><td>45.00十億ドル</td><td>5%</td><td>12倍</td><td>540.00十億ドル</td></tr><tr><td>標準</td><td>合計EV→株主価値</td><td>1,040.00十億ドル</td><td>資金・請求権調整後</td><td>1,036.57十億ドル</td><td>$71.00／株</td></tr><tr><td>楽観</td><td>Space</td><td>11.00十億ドル</td><td>20%</td><td>14倍</td><td>154.00十億ドル</td></tr><tr><td>楽観</td><td>Connectivity</td><td>38.00十億ドル</td><td>43%</td><td>18倍</td><td>684.00十億ドル</td></tr><tr><td>楽観</td><td>SI</td><td>65.00十億ドル</td><td>15%</td><td>18倍</td><td>1,170.00十億ドル</td></tr><tr><td>楽観</td><td>合計EV→株主価値</td><td>2,008.00十億ドル</td><td>資金・請求権調整後</td><td>2,014.57十億ドル</td><td>$136.12／株</td></tr></tbody>
+  </table></div>
+  <!-- 現値に合わせた逆算ではない旨、未開示前提の注意など -->
+  <p class="notice"><b>重要：</b>対象は2027年末。各事業の2027年通期売上×EV/Salesを合計し、自由現金・短期証券とデジタル資産15.73億を加え、最低運転現金200億と負債・金融リースを控除して将来株式で割る。売上・倍率・将来財務は全て当方仮定。売上倍率はSpaceの将来営業利益率-5／10／20%、Connectivity 35／40／43%、SI -15／5／15%と対で考える。高い倍率には2027年以降の成長が必要で、2027年利益だけでは支えにくい。 デジタル資産15.73億ドルを9月末帳簿値で固定。評価益や取得済みCursorの買収対価を別途再加算しない。売却税・流動性の独立再評価は未実施。[S1]</p>
+</section>
+
+<!-- Layer3：成立条件 -->
+<section class="card" id="conditions">
+  <h2>この未来になる条件</h2>
+  <details><summary>悲観：$27.26／主観確率35%</summary><p>Space：売上6.00十億ドル×6倍、営業利益率-5% ／ Connectivity：売上22.00十億ドル×10倍、営業利益率35% ／ SI：売上25.00十億ドル×6倍、営業利益率-15%。自由現金・短期証券50.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等45.00十億ドル、非支配等0.00十億ドル、将来株式14.4十億株。 現在から対象時点までの営業CF−設備投資等の純額を-45.87十億ドルとする現金ブリッジ。新規借入増減6.01十億ドルは現金にも反映する。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。 事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。</p></details><details><summary>標準：$71.00／主観確率45%</summary><p>Space：売上8.00十億ドル×10倍、営業利益率10% ／ Connectivity：売上30.00十億ドル×14倍、営業利益率40% ／ SI：売上45.00十億ドル×12倍、営業利益率5%。自由現金・短期証券65.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等50.00十億ドル、非支配等0.00十億ドル、将来株式14.6十億株。 現在から対象時点までの営業CF−設備投資等の純額を-35.87十億ドルとする現金ブリッジ。新規借入増減11.01十億ドルは現金にも反映する。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。 事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。</p></details><details><summary>楽観：$136.12／主観確率20%</summary><p>Space：売上11.00十億ドル×14倍、営業利益率20% ／ Connectivity：売上38.00十億ドル×18倍、営業利益率43% ／ SI：売上65.00十億ドル×18倍、営業利益率15%。自由現金・短期証券80.00十億ドル、その他資産1.57十億ドル、最低運転現金20.00十億ドル、負債等55.00十億ドル、非支配等0.00十億ドル、将来株式14.8十億株。 現在から対象時点までの営業CF−設備投資等の純額を-25.87十億ドルとする現金ブリッジ。新規借入増減16.01十億ドルは現金にも反映する。 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。 事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。</p></details>
+  <!-- 例: <details open><summary>Base：$71.00 / 確率45%</summary><p>…</p></details> を3つ -->
+</section>
+
+<!-- Layer3：感応度 ＋ 分布（モンテカルロは実施時のみ） -->
+<section class="grid-2" id="sensitivity">
+  <div class="card">
+    <h2>数字がズレるとどうなる？</h2>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
+      <thead><tr><th>動かす変数</th><th>80%</th><th>100%</th><th>120%</th></tr></thead>
+      <tbody><tr><td>全セグメント売上倍率（標準の比率）</td><td>$56.75</td><td>$71.00</td><td>$85.24</td></tr><tr><td>全セグメント売上（標準の比率）</td><td>$56.75</td><td>$71.00</td><td>$85.24</td></tr></tbody>
+    </table></div>
+    <p class="small">標準の全事業売上、または全事業倍率を1つずつ80/100/120%へ変更。他の変数は固定。売上と倍率を独立確率とみなす表ではありません。</p>
+  </div>
+  <div class="card">
+    <h2>どの価格に行きやすい？</h2>
+    <p class="lead">3点の離散分布のみ。モンテカルロ未実施。</p>
+    <div class="signal"><div><b>悲観：$27.26</b></div><p>当方主観確率35%</p></div><div class="signal"><div><b>標準：$71.00</b></div><p>当方主観確率45%</p></div><div class="signal"><div><b>楽観：$136.12</b></div><p>当方主観確率20%</p></div>
+    <!-- 例: <div class="dist-row"><span>5万円未満</span><div class="track"><i style="width:7.6%"></i></div><b>7.6%</b></div> -->
+    <p>悲観35%・標準45%・楽観20%。実績と事業化リスクを踏まえた粗い主観配分。高い成長倍率と資金・規制条件の不確実性から下側を厚く置くが統計的成功率ではない。</p>
+  </div>
+</section>
+
+<!-- 次の決算/イベントで見る場所（watch_items） -->
+<section class="card">
+  <h2>次の決算で見る場所</h2>
+  <div class="signal"><div><b>Starlink回線成長と実現単価・設備効率</b></div><p>9月末13.6百万回線、Q3 ARPU69ドルを起点に回線増と単価・衛星更新費を確認する。回線増加だけで利益増とは判定しない。 [S1,S2]</p></div><div class="signal"><div><b>Starshipの開発・再利用と外部顧客売上</b></div><p>開発・試験の進展と商業売上・原価への寄与を分ける。取得資料で次回試験の確定日を確認できていない。 [S1,S2]</p></div><div class="signal"><div><b>SI・Cursor統合と巨額投資の収益化</b></div><p>取得完了を将来イベントにせず、統合後の顧客・売上、計算設備の稼働、償却・報酬とFCFを確認する。 [S1,S2]</p></div>
+  <!-- 例: <div class="signal"><div><b>2026年7月31日の1Q決算</b></div><p>…</p></div> -->
+</section>
+
+<!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
+<section class="card" id="assumptions">
+  <h2>使った数字と前提</h2>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
+  <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
+  <tbody><tr><td>基準株価</td><td>$133.59</td><td>市場の時点値</td><td>2026-11-27T18:00:00+00:00 [S5]</td></tr><tr><td>会社実績</td><td>2026年7〜9月の売上145.75億ドル、GAAP営業利益27.91億、純利益44.04億。Space売上17.67億・営業損失0.07億、Connectivity売上52.48億・営業利益23.67億、SI売上75.60億・営業利益4.31億。1〜9月は売上270.83億、純損失4.13億（普通株帰属損失10.84億）。単独四半期を単純年率化しない。[S1]</td><td>公式情報で確認</td><td>対象期間と通貨を固定 [S1]</td></tr><tr><td>会社計画</td><td>Starshipの開発・再利用、次世代衛星、SI計算設備の拡張を会社は進めている。取得した10-Qと決算資料だけでは、当方が使う2027年のセグメント売上・倍率・FCFを会社の確定予想とは扱えない。次期決算・試験の確定日時は未確認として掲載しない。[S1,S2]</td><td>会社の計画・予定</td><td>達成保証ではない [S1,S2]</td></tr><tr><td>SOTP</td><td>対象は2027年末。各事業の2027年通期売上×EV/Salesを合計し、自由現金・短期証券とデジタル資産15.73億を加え、最低運転現金200億と負債・金融リースを控除して将来株式で割る。売上・倍率・将来財務は全て当方仮定。売上倍率はSpaceの将来営業利益率-5／10／20%、Connectivity 35／40／43%、SI -15／5／15%と対で考える。高い倍率には2027年以降の成長が必要で、2027年利益だけでは支えにくい。</td><td>当方の条件付き仮定</td><td>同業観測倍率ではない。</td></tr><tr><td>株式・財務</td><td>10月15日のClass A 8,246,541,218株＋Class B 5,334,522,491株＝13,581,063,709株。Q3希薄化差533百万株と除外潜在株19百万株を追加し、評価株式14,133,063,709株とする時点・期間平均混用の近似。完全な証券別TSMではない。将来14.4／14.6／14.8十億株。現金512.94億＋短期証券385.61億、総負債・金融リース389.89億（帳簿388.44億ではなく額面等を保守的に使用）。制限現金20.92億は上記自由現金に含めない。[S1]</td><td>公式数値＋当方概算</td><td>時点と期間平均の違い、報酬の重複に注意。</td></tr><tr><td>資金</td><td>将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。</td><td>当方の条件付き仮定</td><td>自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。</td></tr><tr><td>その他資産</td><td>デジタル資産15.73億ドルを9月末帳簿値で固定。評価益や取得済みCursorの買収対価を別途再加算しない。売却税・流動性の独立再評価は未実施。[S1]</td><td>帳簿値起点の当方計算</td><td>取得済み資産・子会社を再加算しない。</td></tr><tr><td>確率</td><td>悲観35%／標準45%／楽観20%</td><td>粗い主観配分</td><td>統計的確率や成功率ではない。</td></tr></tbody>
+  </table></div>
+</section>
+
+<!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
+<section class="card">
+  <h2>詳しく見たい人向け</h2>
+  <details><summary>利益との接続・補助比較</summary><p>悲観の想定営業利益3.65十億ドル、EV/営業利益111.2倍。標準の想定営業利益15.05十億ドル、EV/営業利益69.1倍。楽観の想定営業利益28.29十億ドル、EV/営業利益71.0倍。これはSOTPと同じ入力に基づく妥当性点検で、独立したDCFではありません。赤字や極端な倍率はモデルの弱点として読みます。</p></details><details><summary>資金・希薄化</summary><p>10月15日のClass A 8,246,541,218株＋Class B 5,334,522,491株＝13,581,063,709株。Q3希薄化差533百万株と除外潜在株19百万株を追加し、評価株式14,133,063,709株とする時点・期間平均混用の近似。完全な証券別TSMではない。将来14.4／14.6／14.8十億株。現金512.94億＋短期証券385.61億、総負債・金融リース389.89億（帳簿388.44億ではなく額面等を保守的に使用）。制限現金20.92億は上記自由現金に含めない。[S1] 将来の現金・短期証券＝現在の自由現金・短期証券＋営業CF−設備投資等＋負債増減。追加の株式調達現金は置かない。将来株式数は既存報酬等の純額で、増資を使う場合は調達現金も同時に再計算する。 自由現金・短期証券898.55億ドルから当方の最低運転現金200億を除く。1〜9月のCF差額349.72億÷9か月という簡易ペースでは約18か月。これはTTMを正規化したrunwayでも資金枯渇日でもなく、投資ペースと前受金・追加調達で大きく変わる。</p></details><details><summary>総合判定</summary><p>現在株価評価100、カタリスト85、企業基盤リスク80。60/25/15%で総合93.2、買われすぎ。株価スコアは悲観→標準を0→50、標準→楽観を50→100で補間し、SOTP倍率・希薄化・事業化の不確実性で5点加算、0〜100へ制限。材料85は成長実績に対し複数の未完了条件と期待先行が大きいとの主観評価。企業リスクは財務・投資・集中・規制を根拠とする主観評価。日々の株価から自動再計算しない。</p></details><details><summary>主要出典・制約</summary><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm" target="_blank" rel="noopener noreferrer">S1：2026年3Q Form 10-Q</a>（公開：2026-10-22／取得：2026-11-28）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026066482/spaceexplorationtechnologi.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q決算発表資料</a>（公開：2026-10-20／取得：2026-11-28）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1181412/000162828026071689/spcx-20261104.htm" target="_blank" rel="noopener noreferrer">S3：取締役辞任の8-K（既知事実の確認）</a>（公開：2026-11-06／取得：2026-11-28）</li><li><a href="https://data.sec.gov/submissions/CIK0001181412.json" target="_blank" rel="noopener noreferrer">S4：最新SEC提出履歴</a>（公開：取得時点で確認／取得：2026-11-28）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/SPCX?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：市場価格（日足・時点値）</a>（公開：取得時点で確認／取得：2026-11-28）</li></ul><p>分析基準株価$133.59／2026-11-27T18:00:00+00:00。分析基準日2026-11-28。対象2027年末。時点値で終値とは限りません。</p><p>独立DCF・市場コンセンサス・同業横断倍率・オプション・空売りの取得は未実施。</p></details>
+  <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
+       転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
+       それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->
+</section>
+
+<section class="card notice">
+  <h3>免責</h3><p>情報提供・教育目的の条件付き分析であり、投資助言・売買推奨ではありません。会社実績・見通しと当方仮定を区別してください。分析値は固定し、配当を価格比較へ含めません。</p>
+</section>
+<footer>分析基準株価$133.59／2026-11-27T18:00:00+00:00。分析基準日2026-11-28。対象2027年末。時点値で終値とは限りません。<br><a href="../../index.html">銘柄一覧へ戻る</a></footer>
+</main>
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+</body></html>

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-11-27T14:36:48.447376+00:00",
+  "updatedAt": "2026-11-27T18:14:33.736750+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 42.0,
@@ -194,6 +194,30 @@
       },
       "reportRevision": "coreweave-crwv-2026-11-27-v2",
       "summary": "11月27日に最新公式資料を再取得。3Qの契約需要を評価する一方、設備投資・借換え・希薄化・顧客集中・統制不備の負担が残り総合59.0を維持。基準株価と分析指標は再計算。"
+    },
+    "spacex-spcx": {
+      "position": 93.2,
+      "zone": "買われすぎ",
+      "asOf": "2026-11-28",
+      "components": {
+        "valuation": 100,
+        "catalysts": 85,
+        "businessRisk": 80
+      },
+      "reportRevision": "spacex-spcx-2026-11-28-v1",
+      "summary": "事業別SOTPの条件付き評価。高い成長期待と実現・資金・規制リスクを総合。会社の成功確率や売買推奨ではない。"
+    },
+    "tesla-tsla": {
+      "position": 90.2,
+      "zone": "買われすぎ",
+      "asOf": "2026-11-28",
+      "components": {
+        "valuation": 100,
+        "catalysts": 85,
+        "businessRisk": 60
+      },
+      "reportRevision": "tesla-tsla-2026-11-28-v1",
+      "summary": "事業別SOTPの条件付き評価。高い成長期待と実現・資金・規制リスクを総合。会社の成功確率や売買推奨ではない。"
     }
   }
 }
