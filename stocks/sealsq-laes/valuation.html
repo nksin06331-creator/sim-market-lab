@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>シールエスキュー（LAES）｜ドパガキ株価シナリオ</title>
+<title>シールエスキュー（LAES）｜株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -25,7 +25,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body data-stock-ticker="LAES" data-price-source="../../data/prices.json">
+<body data-report-kind="valuation" data-stock-ticker="LAES" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
@@ -161,7 +161,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
   <p class="lead">2027年末事業価値＋同時点自由現金−負債−非支配持分＝株主価値。これを同じケースの将来株式数で割る。未成熟な半導体・PKI事業と量子投資持分の合算。事業価値は2027年売上$30–80M程度、粗利益率45–55%、商業化投資後の利益改善を前提に幅を置く当方仮定。量子投資の仮定価値は出資額やSPAC発表評価額をそのまま持ち込んだものではない。営業リースは事業費に含み、別控除しない。市場価格が資産価値を保証しない。</p>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>ケース</th><th>事業価値</th><th>自由現金</th><th>負債・少数持分</th><th>株主価値</th><th>将来株式</th><th>1株価値</th></tr></thead>
   <tbody><tr><td>悲観</td><td>$65.0M</td><td>$220.0M</td><td>$8.8M</td><td>$276.2M</td><td>250.00M</td><td>$1.10</td></tr><tr><td>標準</td><td>$220.0M</td><td>$350.0M</td><td>$8.8M</td><td>$561.2M</td><td>245.00M</td><td>$2.29</td></tr><tr><td>楽観</td><td>$450.0M</td><td>$420.0M</td><td>$8.8M</td><td>$861.2M</td><td>240.00M</td><td>$3.59</td></tr></tbody>
   </table></div>
@@ -180,7 +180,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
       <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
       <tbody><tr><td>標準事業価値（USD）</td><td>$2.11</td><td>$2.29</td><td>$2.47</td></tr><tr><td>標準の将来株式数</td><td>$2.55</td><td>$2.29</td><td>$2.08</td></tr></tbody>
     </table></div>
@@ -205,7 +205,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
   <tbody><tr><td>最新の確定業績</td><td>2026年上期売上$11.2M、粗利益$5.4M、営業損失$32.2M、純損失$27.8M。これは四半期ではなく1～6月の合計。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>現在財務</td><td>6月末自由現金$479.797M、制限現金$6.311M。借入$1.251Mとファイナンスリース$0.090M、非支配持分$7.457M。現金は11月末残高ではない。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>株式と潜在株</td><td>6月末普通株223,430,764、F株1,499,800。F株は普通株5株との交換権を持つ。半期後の既知オプション行使45,000株を普通株へ加え、残存オプション166,158を含め評価用231,140,922普通株相当と推定。半期後未開示変動や買収対価発行の可能性に注意。</td><td>このレポートの推定を含む</td><td>確認期末・分析日を区別</td></tr><tr><td>2027年価値仮定</td><td>未成熟な半導体・PKI事業と量子投資持分の合算。事業価値は2027年売上$30–80M程度、粗利益率45–55%、商業化投資後の利益改善を前提に幅を置く当方仮定。量子投資の仮定価値は出資額やSPAC発表評価額をそのまま持ち込んだものではない。営業リースは事業費に含み、別控除しない。市場価格が資産価値を保証しない。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>資金と将来株式</td><td>2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>主観確率</td><td>35%, 45%, 20%</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr></tbody>
   </table></div>
@@ -214,7 +214,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details><summary>計算・資金・希薄化</summary><p>2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p></details><details><summary>分析上の制約・未取得情報</summary><p>TTM資金余力は再編・投資の対象期間を揃えられないため算出していません。最近のCFと現金、今後の投資・借入・株式数を別に確認します。オプション市場や空売り統計、独立した最新コンセンサスは未取得。</p></details><details><summary>市場データの補助情報</summary><p>株価1.07 USD、時刻2026-11-25T21:00:02+00:00。52週高値5.48・安値0.881USD。20営業日終値価格リターン-33.95%（配当調整なし）。値動きは総合判定の根拠に使わない。</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定40.8・中立。株価評価25は条件付き価値・希薄化・資金負担を評価。材料60は予定の実行と既存期待、企業リスク72は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。</p></details><details><summary>主要出典と更新履歴</summary><p><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026099476/ea030513901ex99-1.htm" target="_blank" rel="noopener noreferrer">S1：2026年上期財務諸表</a>（公表2026-09-14／取得2026-11-27）</li><li><a href="https://www.sealsq.com/investors/news-releases/sealsq-reports-h1-2026-financial-and-operational-results-revenue-increases-131-to-11.2-million-fy2026-guidance-reaffirmed" target="_blank" rel="noopener noreferrer">S2：2026年上期決算・会社見通し</a>（公表2026-09-11／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026113318/ea0309878-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S3：QS7001認証の更新6-K</a>（公表2026-10-28／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026109266/ea0308039-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S4：Quantisimo合併契約6-K</a>（公表2026-10-14／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026122291/ea0312819-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S5：QuintessenceLabs非拘束LOI6-K</a>（公表2026-11-19／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026124218/ea0313614-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S6：パリ上場承認6-K</a>（公表2026-11-25／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/LAES?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul><p>2026-11-27全体更新。分析値は共通bundleから生成。</p></p></details>
+  <details><summary>計算・資金・希薄化</summary><p>2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p></details><details><summary>分析上の制約・未取得情報</summary><p>TTM資金余力は再編・投資の対象期間を揃えられないため算出していません。最近のCFと現金、今後の投資・借入・株式数を別に確認します。オプション市場や空売り統計、独立した最新コンセンサスは未取得。</p></details><details><summary>市場データの補助情報</summary><p>株価1.07 USD、時刻2026-11-25T21:00:02+00:00。52週高値5.48・安値0.881USD。20営業日終値価格リターン-33.95%（配当調整なし）。値動きは総合判定の根拠に使わない。</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定40.8・中立。株価評価25は条件付き価値・希薄化・資金負担を評価。材料60は予定の実行と既存期待、企業リスク72は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。</p></details><details><summary>主要出典と更新履歴</summary><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026099476/ea030513901ex99-1.htm" target="_blank" rel="noopener noreferrer">S1：2026年上期財務諸表</a>（公表2026-09-14／取得2026-11-27）</li><li><a href="https://www.sealsq.com/investors/news-releases/sealsq-reports-h1-2026-financial-and-operational-results-revenue-increases-131-to-11.2-million-fy2026-guidance-reaffirmed" target="_blank" rel="noopener noreferrer">S2：2026年上期決算・会社見通し</a>（公表2026-09-11／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026113318/ea0309878-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S3：QS7001認証の更新6-K</a>（公表2026-10-28／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026109266/ea0308039-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S4：Quantisimo合併契約6-K</a>（公表2026-10-14／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026122291/ea0312819-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S5：QuintessenceLabs非拘束LOI6-K</a>（公表2026-11-19／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026124218/ea0313614-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S6：パリ上場承認6-K</a>（公表2026-11-25／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/LAES?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul><p>2026-11-27全体更新。分析値は共通bundleから生成。</p></details>
   <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
        転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
        それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->

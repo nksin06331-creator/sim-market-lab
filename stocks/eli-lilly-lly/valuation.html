@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>イーライリリー（LLY）｜ドパガキ株価シナリオ</title>
+<title>イーライリリー（LLY）｜株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -25,7 +25,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body data-stock-ticker="LLY" data-price-source="../../data/prices.json">
+<body data-report-kind="valuation" data-stock-ticker="LLY" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
@@ -161,7 +161,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
   <p class="lead">2027年の当方推定調整後純利益＝売上×純利益率。株主価値＝純利益×PER、1株価値＝株主価値÷将来希薄化株式数。PER法なので現金・借入を再加減しない。</p>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>ケース</th><th>2027年売上</th><th>純利益率</th><th>調整後純利益</th><th>PER</th><th>希薄化株式</th><th>1株価値</th></tr></thead>
   <tbody><tr><td>悲観</td><td>$105B</td><td>32%</td><td>$33.6B</td><td>26倍</td><td>900百万株</td><td>$970.67</td></tr><tr><td>標準</td><td>$120B</td><td>36%</td><td>$43.2B</td><td>32倍</td><td>895百万株</td><td>$1,544.58</td></tr><tr><td>楽観</td><td>$135B</td><td>39%</td><td>$52.65B</td><td>38倍</td><td>890百万株</td><td>$2,247.98</td></tr></tbody>
   </table></div>
@@ -180,7 +180,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
       <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
       <tbody><tr><td>2027年売上（USD）</td><td>$1,390.12</td><td>$1,544.58</td><td>$1,699.04</td></tr><tr><td>2027年PER（倍）</td><td>$1,254.97</td><td>$1,544.58</td><td>$1,834.19</td></tr></tbody>
     </table></div>
@@ -205,7 +205,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
   <tbody><tr><td>評価基準株価</td><td>$1,392.22</td><td>市場データ</td><td>2026-11-25T21:02:16+00:00 [S5]</td></tr><tr><td>現在株式数</td><td>892.245百万株</td><td>このレポートの推定</td><td>10月26日法定株式数940,745,031株から年次開示の信託50百万株を控除。3Qの希薄化893.4百万株と基本891.9百万株の差1.5百万株を加え、現時点892,245,031株と推定。信託残高不変と希薄化差継続を仮定し、加重平均株式数を時点実数と同一視しない。 [S2,S4]</td></tr><tr><td>現在株主価値</td><td>$1,242.20B</td><td>このレポートの推定</td><td>評価株価×推定株式数。市場公表時価総額の転載ではない。</td></tr><tr><td>2026年会社予想</td><td>売上$91～92B／非GAAP EPS$35～36</td><td>会社の目標・予定</td><td>9月末後の取得研究開発費を含まない。[S1]</td></tr><tr><td>2027年利益・倍率</td><td>売上×純利益率×PER</td><td>このレポートの推定</td><td>2027年末評価。売上1050/1200/1350億ドル、調整後純利益率32/36/39%、PER26/32/38倍、希薄化株式900/895/890百万株。2026年会社売上予想中点915億ドルからの売上成長率は14.8/31.1/47.5%。会社予想ではなく幅の広い当方仮定。</td></tr><tr><td>希薄化と買戻し</td><td>900／895／890百万株</td><td>このレポートの推定</td><td>将来株式数は現在推定892.245百万株に対し、悲観は純増7.755、標準は純増2.755、楽観は純減2.245百万株。新株報酬と買戻しの純額を仮定。新規公募増資・転換社債発行は仮定しない。</td></tr><tr><td>現金・借入</td><td>$4.885B／$49.503B</td><td>公式情報で確認済み</td><td>2026年9月末。PER法では株主価値へ二重加減しない。[S2]</td></tr><tr><td>確率</td><td>25%／50%／25%</td><td>このレポートの推定</td><td>2026年3Qの数量成長を標準中心とし、薬価・規制・供給の上下不確実性を対称に置く主観配分。統計確率ではない。</td></tr></tbody>
   </table></div>
@@ -214,7 +214,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details><summary>株式数・信託・希薄化</summary><p>10月26日法定株式数940,745,031株から年次開示の信託50百万株を控除。3Qの希薄化893.4百万株と基本891.9百万株の差1.5百万株を加え、現時点892,245,031株と推定。信託残高不変と希薄化差継続を仮定し、加重平均株式数を時点実数と同一視しない。 将来株式数は現在推定892.245百万株に対し、悲観は純増7.755、標準は純増2.755、楽観は純減2.245百万株。新株報酬と買戻しの純額を仮定。新規公募増資・転換社債発行は仮定しない。</p></details><details><summary>利益率と倍率の仮定</summary><p>2026年会社の非GAAP EPS中点35.5×894百万株÷売上中点915億ドル＝純利益率34.69%の目安。2027年利益率32/36/39%は薬価・製品構成・研究開発・税負担を含む仮定。買収IPR&amp;D発生年のGAAP利益とは異なる。 PER26/32/38倍は同業比較から確定した適正倍率ではなく、成長持続性に対する感応度を測る評価仮定。現値から標準価格を合わせていない。2026年会社EPS中点基準の現値PERも独立した参考として表示。</p></details><details><summary>独立した照合と未取得情報</summary><p>2026年会社EPS中点でのPERは39.2倍、モデル2027年標準EPSでは28.8倍です。これは同じ式の期間照合であり独立評価法による裏付けではありません。独立したDCFや同業倍率の最新比較は未実施。市場コンセンサスを会社予想の代用で表示していません。</p></details><details><summary>市場データの補助情報</summary><p>LLYの52週高値1475.25、安値850.51USD。20営業日価格リターン8.07%。比較指数の新規取得は本3社更新では未実施のため相対値を新たに主張しない。これらを総合判定へ使わない。 これらを総合判定や材料の期待割合へ直接使っていません。</p></details><details><summary>メインページの3レポート総合判定</summary><p>総合判定は株価評価45、カタリスト55、企業基盤リスク45の加重平均47.5。株価評価は利益・倍率のモデル不確実性、材料55は販売拡大と12月Innovation Dayでの期待差、企業45は黒字・営業CFと主力薬集中・借入を根拠に置く主観評価。旧値の自動据置ではなく、最新3Q・11月公式予定・株価を再確認し再評価した。 株価シナリオの補助スコア53とは別の尺度です。</p></details><details><summary>出典と更新履歴</summary><p><ul><li><a href="https://investor.lilly.com/static-files/ef6bbff3-8d3c-4ca0-a5e9-1e49403f031e" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算リリース（2026-10-29）</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q Form 10-Q</a>（取得：2026-11-27）</li><li><a href="https://investor.lilly.com/static-files/4580c401-611c-406b-8964-88cb8d887bd4" target="_blank" rel="noopener noreferrer">S3：2026年3Q決算説明会資料</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm" target="_blank" rel="noopener noreferrer">S4：2025年 Form 10-K</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/LLY?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：Yahoo Finance LLY日足・市場価格</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S6：Yahoo Finance S&amp;P 500日足</a>（取得：2026-11-27）</li><li><a href="https://investor.lilly.com/news-releases/news-release-details/lilly-host-innovation-day-2026" target="_blank" rel="noopener noreferrer">S7：Innovation Day 2026の開催案内（11月23日発表）</a>（取得：2026-11-27）</li></ul><p>2026-11-27初版。全ての分析値は共通bundleから生成。</p></p></details><details><summary>11月27日の再確認</summary><p>3Q決算・10-Q・年次開示を再取得。11月23日の会社予定を追加し、11月25日米国株価で分析を更新しました。</p></details>
+  <details><summary>株式数・信託・希薄化</summary><p>10月26日法定株式数940,745,031株から年次開示の信託50百万株を控除。3Qの希薄化893.4百万株と基本891.9百万株の差1.5百万株を加え、現時点892,245,031株と推定。信託残高不変と希薄化差継続を仮定し、加重平均株式数を時点実数と同一視しない。 将来株式数は現在推定892.245百万株に対し、悲観は純増7.755、標準は純増2.755、楽観は純減2.245百万株。新株報酬と買戻しの純額を仮定。新規公募増資・転換社債発行は仮定しない。</p></details><details><summary>利益率と倍率の仮定</summary><p>2026年会社の非GAAP EPS中点35.5×894百万株÷売上中点915億ドル＝純利益率34.69%の目安。2027年利益率32/36/39%は薬価・製品構成・研究開発・税負担を含む仮定。買収IPR&amp;D発生年のGAAP利益とは異なる。 PER26/32/38倍は同業比較から確定した適正倍率ではなく、成長持続性に対する感応度を測る評価仮定。現値から標準価格を合わせていない。2026年会社EPS中点基準の現値PERも独立した参考として表示。</p></details><details><summary>独立した照合と未取得情報</summary><p>2026年会社EPS中点でのPERは39.2倍、モデル2027年標準EPSでは28.8倍です。これは同じ式の期間照合であり独立評価法による裏付けではありません。独立したDCFや同業倍率の最新比較は未実施。市場コンセンサスを会社予想の代用で表示していません。</p></details><details><summary>市場データの補助情報</summary><p>LLYの52週高値1475.25、安値850.51USD。20営業日価格リターン8.07%。比較指数の新規取得は本3社更新では未実施のため相対値を新たに主張しない。これらを総合判定へ使わない。 これらを総合判定や材料の期待割合へ直接使っていません。</p></details><details><summary>メインページの3レポート総合判定</summary><p>総合判定は株価評価45、カタリスト55、企業基盤リスク45の加重平均47.5。株価評価は利益・倍率のモデル不確実性、材料55は販売拡大と12月Innovation Dayでの期待差、企業45は黒字・営業CFと主力薬集中・借入を根拠に置く主観評価。旧値の自動据置ではなく、最新3Q・11月公式予定・株価を再確認し再評価した。 株価シナリオの補助スコア53とは別の尺度です。</p></details><details><summary>出典と更新履歴</summary><ul><li><a href="https://investor.lilly.com/static-files/ef6bbff3-8d3c-4ca0-a5e9-1e49403f031e" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算リリース（2026-10-29）</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q Form 10-Q</a>（取得：2026-11-27）</li><li><a href="https://investor.lilly.com/static-files/4580c401-611c-406b-8964-88cb8d887bd4" target="_blank" rel="noopener noreferrer">S3：2026年3Q決算説明会資料</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/lly-20251231.htm" target="_blank" rel="noopener noreferrer">S4：2025年 Form 10-K</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/LLY?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：Yahoo Finance LLY日足・市場価格</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S6：Yahoo Finance S&amp;P 500日足</a>（取得：2026-11-27）</li><li><a href="https://investor.lilly.com/news-releases/news-release-details/lilly-host-innovation-day-2026" target="_blank" rel="noopener noreferrer">S7：Innovation Day 2026の開催案内（11月23日発表）</a>（取得：2026-11-27）</li></ul><p>2026-11-27初版。全ての分析値は共通bundleから生成。</p></details><details><summary>11月27日の再確認</summary><p>3Q決算・10-Q・年次開示を再取得。11月23日の会社予定を追加し、11月25日米国株価で分析を更新しました。</p></details>
   <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
        転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
        それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->

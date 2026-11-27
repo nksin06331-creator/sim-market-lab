@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ムーンレイク（MLTX）｜ドパガキ株価シナリオ</title>
+<title>ムーンレイク（MLTX）｜株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -25,7 +25,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body data-stock-ticker="MLTX" data-price-source="../../data/prices.json">
+<body data-report-kind="valuation" data-stock-ticker="MLTX" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
@@ -161,7 +161,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
   <p class="lead">2027年末からの資産別成功時税後CFを割引し、適応別成功確率を1回乗じて残存開発費を控除。2027年末の自由現金を加え、借入・その他請求権を控除。必要ならオプション行使現金と株式を同時反映する。</p>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>ケース</th><th>主資産確率</th><th>CF倍率</th><th>割引率</th><th>残存開発費PV</th><th>資産価値</th><th>期末現金等</th><th>借入</th><th>将来株式</th><th>価格</th></tr></thead>
   <tbody><tr><td>悲観</td><td>35%</td><td>0.7倍</td><td>14%</td><td>$160M</td><td>$109.1M</td><td>$378.5M</td><td>$300.0M</td><td>91.60M</td><td>$2.05</td></tr><tr><td>標準</td><td>65%</td><td>1倍</td><td>12%</td><td>$180M</td><td>$810.4M</td><td>$318.5M</td><td>$200.0M</td><td>89.60M</td><td>$10.37</td></tr><tr><td>楽観</td><td>85%</td><td>1.4倍</td><td>10%</td><td>$220M</td><td>$1936.2M</td><td>$258.5M</td><td>$100.0M</td><td>91.21M</td><td>$23.39</td></tr></tbody>
   </table></div>
@@ -180,7 +180,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
       <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
       <tbody><tr><td>主要資産成功確率</td><td>$8.29</td><td>$10.37</td><td>$12.45</td></tr><tr><td>割引率</td><td>$11.79</td><td>$10.37</td><td>$9.14</td></tr></tbody>
     </table></div>
@@ -205,7 +205,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
   <tbody><tr><td>基準株価</td><td>$13.22</td><td>市場データ</td><td>2026-11-25T21:00:02+00:00 [S3]</td></tr><tr><td>株式数</td><td>86.60百万株</td><td>このレポートの推定</td><td>現在評価用希薄化株式86,604,627株。普通株85,106,685、RSU等497,942、前払ワラント1,000,000、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。</td></tr><tr><td>成功確率・CF・費用</td><td>ケース別に表示</td><td>このレポートの推定</td><td>患者数・単価・普及率・CF率を条件に置く。会社予想ではない。</td></tr><tr><td>現金・有価証券</td><td>$498.462M</td><td>公式情報で確認済み</td><td>2026年9月末 [S2]</td></tr><tr><td>将来支出・借入・株式</td><td>2027年末前後を分ける</td><td>このレポートの推定</td><td>悲観は2027年末まで純支出320百万USD、新規借入200百万USD、その他請求権控除0百万USD、追加報酬5百万株。標準は2027年末まで純支出280百万USD、新規借入100百万USD、その他請求権控除0百万USD、追加報酬3百万株。楽観は2027年末まで純支出240百万USD、新規借入0百万USD、その他請求権控除0百万USD、追加報酬2百万株。Herculesの新規借入は現金と負債へ同額計上。条件付き枠の実行を確約とは扱わない。2027年末前の支出と2028年以降の残存開発費を分ける。行使されるオプションの行使現金と追加株式を同時計上する。</td></tr><tr><td>総合判定</td><td>3レポート総合判定64.2、中立。構成は株価評価60.0、カタリスト65.0、企業基盤リスク80.0。資産rNPVへの期待負担、公式予定と資金・単一資産リスクから付けた主観評価。株価指標から自動生成しない。</td><td>このレポートの推定</td><td>3レポートの事業・材料・評価リスクを分析日時点で再評価。</td></tr></tbody>
   </table></div>
@@ -214,7 +214,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details><summary>SLK-HS</summary><p>2028～2037年の成功時税後CF。ピークは仮定8万人×年ネット単価1万ドル×CF率40%＝320百万ドル。<p>成功時CF（百万USD、2028年から年順）：0、40、100、180、260、300、320、320、300、250</p></p></details><details><summary>SLK-PsA</summary><p>2028～2037年の成功時税後CF。ピークは仮定15万人×年ネット単価8000ドル×CF率35%＝420百万ドル。HSと別の患者需要を置く。PPP等の追加価値は加算しない。<p>成功時CF（百万USD、2028年から年順）：0、0、30、80、150、250、350、400、420、400</p></p></details><details><summary>現在株式・潜在株</summary><p>現在評価用希薄化株式86,604,627株。普通株85,106,685、RSU等497,942、前払ワラント1,000,000、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。 [S2]</p></details><details><summary>資金・将来支出</summary><p>悲観は2027年末まで純支出320百万USD、新規借入200百万USD、その他請求権控除0百万USD、追加報酬5百万株。標準は2027年末まで純支出280百万USD、新規借入100百万USD、その他請求権控除0百万USD、追加報酬3百万株。楽観は2027年末まで純支出240百万USD、新規借入0百万USD、その他請求権控除0百万USD、追加報酬2百万株。Herculesの新規借入は現金と負債へ同額計上。条件付き枠の実行を確約とは扱わない。2027年末前の支出と2028年以降の残存開発費を分ける。行使されるオプションの行使現金と追加株式を同時計上する。 過去12か月営業CF-244.041、設備投資0.000百万USD。最低運転資金50百万USDは当方仮定。簡易資金余力は22.1か月。将来費用の増加を予測した値ではなく、会社の資金見通しと異なる。 [S2]</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定64.2、中立。構成は株価評価60.0、カタリスト65.0、企業基盤リスク80.0。資産rNPVへの期待負担、公式予定と資金・単一資産リスクから付けた主観評価。株価指標から自動生成しない。</p></details><details><summary>市場データの補助情報</summary><p>52週高値23.29・安値9.46USD。20営業日価格リターン7.39%。新しい比較指数・オプション・空売りは未取得。価格指標を総合判定や成功確率へ使わない。 [S3]</p></details><details><summary>主要出典・更新履歴</summary><p><ul><li><a href="https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-reports-third-quarter-2026-financial-results-and" target="_blank" rel="noopener noreferrer">S1：MLTX 2026年3Q決算公式発表</a>（取得 2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1821586/000182158626000015/mnlk-20260930.htm" target="_blank" rel="noopener noreferrer">S2：MLTX 2026年3Q Form 10-Q</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/MLTX?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S3：MLTX Yahoo Finance日足・価格</a>（取得 2026-11-27）</li></ul><p>2026-11-27 全面再作成。</p></p></details>
+  <details><summary>SLK-HS</summary>2028～2037年の成功時税後CF。ピークは仮定8万人×年ネット単価1万ドル×CF率40%＝320百万ドル。<p>成功時CF（百万USD、2028年から年順）：0、40、100、180、260、300、320、320、300、250</p></details><details><summary>SLK-PsA</summary>2028～2037年の成功時税後CF。ピークは仮定15万人×年ネット単価8000ドル×CF率35%＝420百万ドル。HSと別の患者需要を置く。PPP等の追加価値は加算しない。<p>成功時CF（百万USD、2028年から年順）：0、0、30、80、150、250、350、400、420、400</p></details><details><summary>現在株式・潜在株</summary><p>現在評価用希薄化株式86,604,627株。普通株85,106,685、RSU等497,942、前払ワラント1,000,000、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。 [S2]</p></details><details><summary>資金・将来支出</summary><p>悲観は2027年末まで純支出320百万USD、新規借入200百万USD、その他請求権控除0百万USD、追加報酬5百万株。標準は2027年末まで純支出280百万USD、新規借入100百万USD、その他請求権控除0百万USD、追加報酬3百万株。楽観は2027年末まで純支出240百万USD、新規借入0百万USD、その他請求権控除0百万USD、追加報酬2百万株。Herculesの新規借入は現金と負債へ同額計上。条件付き枠の実行を確約とは扱わない。2027年末前の支出と2028年以降の残存開発費を分ける。行使されるオプションの行使現金と追加株式を同時計上する。 過去12か月営業CF-244.041、設備投資0.000百万USD。最低運転資金50百万USDは当方仮定。簡易資金余力は22.1か月。将来費用の増加を予測した値ではなく、会社の資金見通しと異なる。 [S2]</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定64.2、中立。構成は株価評価60.0、カタリスト65.0、企業基盤リスク80.0。資産rNPVへの期待負担、公式予定と資金・単一資産リスクから付けた主観評価。株価指標から自動生成しない。</p></details><details><summary>市場データの補助情報</summary><p>52週高値23.29・安値9.46USD。20営業日価格リターン7.39%。新しい比較指数・オプション・空売りは未取得。価格指標を総合判定や成功確率へ使わない。 [S3]</p></details><details><summary>主要出典・更新履歴</summary><ul><li><a href="https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-reports-third-quarter-2026-financial-results-and" target="_blank" rel="noopener noreferrer">S1：MLTX 2026年3Q決算公式発表</a>（取得 2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1821586/000182158626000015/mnlk-20260930.htm" target="_blank" rel="noopener noreferrer">S2：MLTX 2026年3Q Form 10-Q</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/MLTX?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S3：MLTX Yahoo Finance日足・価格</a>（取得 2026-11-27）</li></ul><p>2026-11-27 全面再作成。</p></details>
   <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
        転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
        それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->

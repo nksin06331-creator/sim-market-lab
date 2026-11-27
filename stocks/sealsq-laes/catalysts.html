@@ -34,7 +34,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
 
-<body data-stock-ticker="LAES" data-price-source="../../data/prices.json">
+<body data-report-kind="catalysts" data-stock-ticker="LAES" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!--
   SiM MARKET LAB / CATALYST TEMPLATE v1.0
@@ -164,7 +164,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
   <section class="card" id="assumptions">
     <h2>使った数字と前提</h2>
-    <div class="table-wrap">
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表">
       <table>
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
