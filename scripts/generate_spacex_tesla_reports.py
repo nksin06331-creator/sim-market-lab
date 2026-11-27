@@ -10,7 +10,6 @@ from datetime import datetime, timezone
 from copy import deepcopy
 from generate_eli_lilly_reports import esc, row, bullets, detail, guide_box, signal, render
 from report_support.bundle_validator import Validator, calc
-from apply_report_ui import apply as apply_report_ui
 
 ROOT = Path(__file__).resolve().parents[1]
 MATERIALS = ROOT.parent / 'report-generation-materials'
@@ -132,31 +131,6 @@ def render_reports(c,b):
     return source_html,overall_html,cards,basis
 
 
-def render_spacex_compact(c,b,source_html,overall_html,cards,basis):
-    """A dedicated mobile-first view: all three catalysts precede long analysis."""
-    compact=[('Starlinkの成長と採算','回線数・ARPU・通信利益率','回線増と単価を両立','値下げ・衛星更新費の増加'),('Starshipの開発・商業化','再使用・許認可・外部売上','試験進展が外部収益へ接続','事故・遅延・開発費の増加'),('AI・Cursor統合と投資回収','SI売上・設備投資・営業CF','売上増で投資・償却を吸収','競争・費用増・追加調達')]
-    overview=''.join(f'<article class="overview-row"><div class="overview-heading"><h2>{i+1}. {esc(title)}</h2><span class="ongoing">進行中</span></div><div class="overview-kpi">見る数字：{esc(kpi)}</div><div class="overview-cases"><span>上振れ：{esc(up)}</span><span>下振れ：{esc(down)}</span></div><a class="detail-jump" href="#c{i+1}-detail">結果別条件・試算を見る ↓</a></article>' for i,(title,kpi,up,down) in enumerate(compact))
-    expanded=''.join(f'<details class="compact-detail" id="c{i+1}-detail"><summary>{i+1}. {esc(compact[i][0])}の詳細</summary>{card}</details>' for i,card in enumerate(cards))
-    value_table='<div class="table-wrap" tabindex="0" role="region" aria-label="全材料の条件付き価格比較"><table><thead><tr><th>材料</th><th>期待以上</th><th>想定どおり</th><th>期待外れ</th></tr></thead><tbody>'+''.join(row(esc(compact[i][0]),*[usd(o['price_range'][0])+'〜'+usd(o['price_range'][1]) for o in event['outcomes']]) for i,event in enumerate(b['catalyst_report']['catalysts']))+'</tbody></table></div>'
-    css='''
-:root{--accent:#79ee5f;--line:#2a382e;--ink:#f1f5f1;--muted:#acb7ad;--surface:#111a14;color-scheme:dark}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#09100b;color:var(--ink);font:14px/1.65 -apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;overflow-wrap:anywhere}
-a{color:var(--accent)}.wrap{max-width:1080px;margin:auto;padding:0 18px}.compact-header{padding-top:16px;padding-bottom:12px;border-bottom:1px solid var(--line)}h1{margin:0 0 4px;font-size:24px;line-height:1.35}.report-meta{font-size:12px;color:var(--muted)}.quote-strip{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:13px}.quote-strip small{display:block;color:var(--muted)}.basis-note{font-size:12px;color:var(--muted);margin-top:6px}.compact-main{padding-top:12px;padding-bottom:40px}.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.overview-row{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);min-width:0}.overview-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px}.overview-heading h2{margin:0;font-size:16px;line-height:1.45}.ongoing{font-size:11px;color:var(--muted);white-space:nowrap}.overview-kpi{font-size:13px;margin-top:5px;color:#dbe3dc}.overview-cases{display:flex;flex-direction:column;font-size:12px;margin-top:4px;color:var(--muted)}.detail-jump{display:inline-flex;align-items:center;min-height:44px;font-size:12px;text-decoration:none}.compact-warning{padding:10px 12px;margin:12px 0;border-left:3px solid #e5c95d;background:#1a1b11;font-size:13px}.compact-section-title{margin:18px 0 8px;font-size:17px}.compact-detail{margin:8px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);scroll-margin-top:12px}.compact-detail>summary{padding:12px 14px;min-height:48px;cursor:pointer;font-size:14px;font-weight:700}.compact-detail>article,.compact-detail>.detail-content{padding:0 14px 14px}.catalyst-card h3{margin:6px 0;font-size:16px}.catalyst-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.chip{font-size:12px;color:var(--muted)}.outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.outcome{padding:12px;border:1px solid var(--line);border-radius:8px}.outcome h4{margin:0;font-size:14px}.impact{font-size:17px;font-weight:700;margin:6px 0}.outcome p{margin:6px 0}.catalyst-card details{margin:8px 0;border-top:1px solid var(--line)}.catalyst-card summary{padding:10px 0;min-height:44px;cursor:pointer}.catalyst-card details p{margin:8px 0}.table-wrap{max-width:100%;overflow:auto;border:1px solid var(--line);border-radius:8px}.table-wrap table{border-collapse:collapse;min-width:640px;width:100%}th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--accent)}.priced{padding:12px}.priced-head{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}.priced-head b{font-size:20px}.priced-head span{font-size:12px;color:var(--muted)}footer{padding:20px 0;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.detail-content li{margin:6px 0}.detail-content ul{padding-left:20px}
-@media(max-width:520px){.wrap{padding-left:12px;padding-right:12px}.compact-header{padding-top:12px;padding-bottom:10px}h1{font-size:22px}.overview-grid{grid-template-columns:minmax(0,1fr);gap:6px}.overview-row{padding:9px 11px}.overview-heading h2{font-size:15px}.overview-cases{flex-direction:row;flex-wrap:wrap;gap:0 12px}.overview-kpi{font-size:13px}.detail-jump{min-height:36px}.compact-main{padding-top:10px}.compact-warning{font-size:12px;margin:10px 0}.outcomes{grid-template-columns:minmax(0,1fr)}.compact-detail>summary{padding:11px 12px}.compact-header .quote-strip{font-size:12px}}
-@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-'''
-    # A plain compact page deliberately avoids the large hero, KPI tiles and timeline duplication.
-    html='<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SpaceX（SPCX）｜カタリスト一覧</title><link rel="stylesheet" href="../../lab/assets/css/report-ui.css"><style>'+css+'</style></head>'
-    html+='<body data-report-kind="catalysts" data-stock-ticker="SPCX" data-price-source="../../data/prices.json"><nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>'
-    html+=f'<header class="compact-header wrap"><h1>SpaceX <small>SPCX</small>｜カタリスト</h1><div class="report-meta">分析基準日 {DATE}／3件とも進行中・確定日は未確認</div><div class="quote-strip"><div>計算基準 <strong>{usd(c["price"])}</strong></div><div>現在株価 <strong data-live-price>{usd(c["price"])}</strong><small data-live-price-date>{esc(c["price_as_of"])} 時点値</small></div></div><div class="basis-note">試算は2027年末の条件付き価値。現在株価の更新では再計算しません。</div></header>'
-    html+='<main class="wrap compact-main"><section class="overview-grid" aria-label="3つのカタリスト一覧">'+overview+'</section><div class="compact-warning">高い成長期待、資金消費、規制・開発遅延に注意。良い結果でも基準株価を支えるとは限りません。短期の値動き予測・売買推奨ではありません。</div>'
-    html+='<h2 class="compact-section-title">条件と価格幅を確認</h2>'+expanded
-    html+='<details class="compact-detail"><summary>3材料の価格幅を比較</summary><div class="detail-content"><div>他の標準入力を固定し、対象事業売上だけを変更した2027年末の試算です。個別価格幅は合算しません。</div>'+value_table+'</div></details>'
-    html+='<details class="compact-detail"><summary>株価に入った期待と共通モデル</summary><div class="detail-content">'+overall_html+'<div>材料・設備・資金は共通の1群へ集約。個別の期待割合を平均・合算しません。表示幅は統計的信頼区間ではありません。</div></div></details>'
-    html+='<details class="compact-detail"><summary>資金・希薄化・モデルの制約</summary><div class="detail-content"><p>'+esc(c['capital'])+'</p><p>'+esc(c['liquidity'])+'</p><p>'+esc(c['funding_note'])+'</p><p>'+esc(c['model_note'])+'</p></div></details>'
-    html+='<details class="compact-detail"><summary>出典・分析基準・検証の制約</summary><div class="detail-content">'+source_html+'<p>'+esc(basis)+'</p><ul>'+bullets(*b['validation_summary']['messages'])+'</ul></div></details></main><footer class="wrap">情報提供・教育目的。会社実績と当方仮定を区別してください。分析値は固定。'+esc(DATE)+'初版。<br><a href="../../index.html">銘柄一覧へ戻る</a></footer><script src="../../lab/assets/js/live-report-price.js" defer></script></body></html>'
-    (ROOT/'stocks'/c['id']/'catalysts.html').write_text(apply_report_ui(html),encoding='utf-8')
-
 
 def main():
     configs=json.loads((ROOT/'data/report-inputs/spacex-tesla-20261128.json').read_text())
@@ -169,10 +143,8 @@ def main():
             if result['fail_count']: raise SystemExit(1)
         (ROOT/'data/reports'/f'{c["id"]}.json').write_text(json.dumps(b,ensure_ascii=False,indent=2)+'\n')
         rendered=render_reports(c,b)
-        # All six reports exist before the dedicated mobile pass, per the request.
+        # Website reports always use the shared templates.
         integrations[c['id']]=(c,b,s,rendered)
-    c,b,s,rendered=integrations['spacex-spcx']
-    render_spacex_compact(c,b,*rendered)
     stocks=json.loads((ROOT/'data/stocks.json').read_text());signals=json.loads((ROOT/'data/signals.json').read_text())
     for stock in stocks['stocks']:
         if stock['id'] not in integrations:continue
