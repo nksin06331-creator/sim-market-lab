@@ -23,8 +23,10 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 @media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
 </style>
 
+<link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
 <body data-stock-ticker="ZETA" data-price-source="../../data/prices.json">
+<nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
   ・CSSと各セクション構成はキオクシア版と同一（サイト掲載の見た目を維持）。
@@ -46,9 +48,10 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
       <p class="sub">公式の最新事実を反映し、2027年の事業・資金・株式数は当方の条件付き仮定として分けます。</p>
     </div>
     <!-- 総合スコアは“補助指標”。売買判断そのものではない旨を必ず添える -->
-    <div class="score"><small>分析の参考スコア</small><b>52</b><small>/ 100　売買判断ではありません</small></div>
+    <details class="score-detail"><summary>シナリオの参考スコア（総合判定とは別）</summary><div class="score"><small>分析の参考スコア</small><b>52</b><small>/ 100　売買判断ではありません</small></div></details>
   </div>
-  <div class="kpis">
+  <div class="analysis-basis"><p><strong>計算に使った基準株価：$31.97</strong> ／ 2026-11-25T21:00:02+00:00（分析基準値）</p><p>シナリオ・騰落率・参考スコアはこの基準で固定。現在株価の更新では再計算しません。</p></div>
+<div class="kpis">
     <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$31.97</b><small data-live-price-date>2026-11-25T21:00:02+00:00（分析基準値）</small></div>
     <div class="kpi"><span>標準ケースの株価</span><b>$34.22</b><small>+7.1%</small></div>
     <div class="kpi"><span>3ケースを確率でならした値</span><b>$35.00</b><small>+9.5%</small></div>

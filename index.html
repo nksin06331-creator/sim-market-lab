@@ -20,43 +20,18 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">STOCK RESEARCH, MADE CLEAR.</p>
-        <h1 id="hero-title">数字を読み、<br><span>企業を知る。</span></h1>
-        <p>企業の全体像、現在の株価、これからのカタリスト。<br>3つの視点から、株式をわかりやすく整理します。</p>
-        <a class="hero-link" href="#reports">公開銘柄を見る <span aria-hidden="true">↓</span></a>
-      </div>
-
-      <aside class="market-summary" aria-label="掲載状況">
-        <p class="summary-label">RESEARCH STATUS</p>
-        <div class="summary-total">
-          <strong id="total-count">—</strong>
-          <span>掲載銘柄</span>
-        </div>
-        <div class="summary-markets">
-          <div><strong id="japan-count">—</strong><span>日本株</span></div>
-          <div><strong id="us-count">—</strong><span>米国株</span></div>
-        </div>
-        <p id="price-summary" class="summary-note">株価データを確認しています</p>
+    <section class="research-overview" aria-labelledby="hero-title">
+      <div><h1 id="hero-title">銘柄リサーチ</h1><p>企業概要・株価シナリオ・カタリスト</p></div>
+      <aside class="research-counts" aria-label="掲載状況">
+        <span><strong id="total-count">—</strong> 銘柄</span>
+        <span>日本株 <strong id="japan-count">—</strong></span>
+        <span>米国株 <strong id="us-count">—</strong></span>
       </aside>
-    </section>
-
-    <section class="report-guide" aria-label="レポートの種類">
-      <article><span>01</span><div><strong>企業について</strong><p>事業、強み、リスクを整理</p></div></article>
-      <article><span>02</span><div><strong>現在の株価</strong><p>価格とシナリオを分析</p></div></article>
-      <article><span>03</span><div><strong>今後のカタリスト</strong><p>予定と注目材料を確認</p></div></article>
+      <p id="price-summary" class="quote-summary">株価データを確認しています</p>
     </section>
 
     <section class="catalog" id="reports" aria-labelledby="catalog-title">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">PUBLISHED RESEARCH</p>
-          <h2 id="catalog-title">銘柄を<span>探す</span></h2>
-        </div>
-        <p>銘柄名やコードで検索し、日本株・米国株を切り替えられます。</p>
-      </div>
-
+      <h2 id="catalog-title" class="sr-only">銘柄一覧</h2>
       <div class="catalog-tools">
         <label class="search-box">
           <span class="search-icon" aria-hidden="true"></span>
@@ -75,15 +50,15 @@
           <select id="stock-sort">
             <option value="default">登録順</option>
             <option value="name">銘柄名順</option>
-            <option value="price-desc">株価が高い順</option>
+            <option value="price-desc">株価順（市場指定時）</option>
             <option value="signal-asc">売られすぎ順</option>
             <option value="signal-desc">買われすぎ順</option>
           </select>
         </label>
 
         <div class="view-switch" aria-label="表示形式">
-          <button id="card-view" class="view-button is-active" type="button" aria-pressed="true">カード</button>
-          <button id="list-view" class="view-button" type="button" aria-pressed="false">一覧</button>
+          <button id="card-view" class="view-button" type="button" aria-pressed="false">カード</button>
+          <button id="list-view" class="view-button is-active" type="button" aria-pressed="true">一覧</button>
         </div>
       </div>
 

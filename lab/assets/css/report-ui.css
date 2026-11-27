@@ -1,0 +1,34 @@
+/* Shared reading controls; valuation assumptions and conclusions stay fixed. */
+:root { --muted: #acb7ad; }
+.report-backbar { position: relative; z-index: 60; border-bottom: 1px solid var(--line); background: #101610; }
+.report-backbar a { display: inline-flex; align-items: center; min-height: 48px; font-size: 14px; font-weight: 700; text-decoration: none; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.verdict { grid-template-columns: 1fr; }
+.score-detail { margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); box-shadow: none; }
+.score-detail summary { min-height: 48px; padding: 12px 16px; font-size: 14px; }
+.score-detail .score { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: baseline; gap: 10px; padding: 12px 16px; color: var(--ink); background: transparent; box-shadow: none; border: 0; }
+.score-detail .score b { font-size: 22px; }
+.score-detail .score small { color: var(--muted); font-size: 12px; }
+.analysis-basis { position: relative; z-index: 1; margin: 12px 0 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; color: var(--ink); background: var(--surface); }
+.analysis-basis p { margin: 3px 0; }
+.report-nav a { min-height: 44px; display: inline-flex; align-items: center; font-size: 13px; }
+body .small, body .sub, body .lead, body .info-text { font-size: 14px; }
+body .kpi span, body .kpi small, body .pill, body .hero-tags span,
+body .position-labels, body .eyebrow, body footer { font-size: 12px; }
+body th, body td { font-size: 14px; }
+@media (max-width: 760px) {
+  body { font-size: 15px; line-height: 1.75; }
+  body .hero h1 small { font-size: 12px; }
+  body .zone p, body .signal p, body .dist-row, body .time-date { font-size: 14px; }
+  body .kpi { min-height: 104px; }
+  body .kpi b { font-size: 18px; }
+  body .position-labels { flex-wrap: wrap; }
+  body .table-wrap { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+@media print { .report-backbar { display: none; } .analysis-basis { color: #111; background: #fff; } }
+/* Template-specific mobile rules and inline footnotes must remain legible. */
+body p, body li, body td, body th, body dt, body dd { font-size: 14px !important; }
+body small { font-size: 12px !important; }

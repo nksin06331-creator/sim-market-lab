@@ -10,8 +10,34 @@ const state = {
   market: "all",
   query: "",
   sort: "default",
-  view: "card"
+  view: "list"
 };
+
+const VIEW_STORAGE_KEY = "sim-market-lab-view-v1";
+let savedScroll = 0;
+try {
+  const saved = JSON.parse(sessionStorage.getItem(VIEW_STORAGE_KEY) || "null");
+  if (saved) {
+    if (["all", "JP", "US"].includes(saved.market)) state.market = saved.market;
+    if (["default", "name", "price-desc", "signal-asc", "signal-desc"].includes(saved.sort)) state.sort = saved.sort;
+    if (["card", "list"].includes(saved.view)) state.view = saved.view;
+    if (typeof saved.query === "string") state.query = saved.query;
+    if (Number.isFinite(saved.scroll)) savedScroll = Math.max(0, saved.scroll);
+  }
+} catch { /* Storage can be unavailable in private browsing. */ }
+
+function saveView() {
+  try {
+    sessionStorage.setItem(VIEW_STORAGE_KEY, JSON.stringify({
+      market: state.market, query: state.query, sort: state.sort, view: state.view,
+      scroll: window.scrollY
+    }));
+  } catch { /* Browsing remains usable without storage. */ }
+}
+window.addEventListener("pagehide", saveView);
+document.addEventListener("click", (event) => {
+  if (event.target.closest("a[href]")) saveView();
+});
 
 const compactMediaQuery = window.matchMedia("(max-width: 760px)");
 
@@ -182,7 +208,7 @@ function createCard(stock) {
   pricePanel.className = "price-panel";
   pricePanel.innerHTML = `
     <div><span class="metric-label">現在株価</span><strong class="price-value">${formatPrice(Number(price?.price), stock.currency)}</strong><small class="price-date">${formatDate(price?.marketTime)}</small></div>
-    <div><span class="metric-label">前日比</span><strong class="change-value${changeClass}">${formatChange(price)}</strong><small class="price-date">${price?.status === "stale" ? "前回の正常値を表示中" : "終値ベース"}</small></div>`;
+    <div><span class="metric-label">前日比</span><strong class="change-value${changeClass}">${formatChange(price)}</strong><small class="price-date">${price?.status === "stale" ? "前回の正常値を表示中" : "前営業日との比較"}</small></div>`;
 
   const signalBlock = document.createElement("div");
   signalBlock.className = "signal-block";
@@ -190,7 +216,7 @@ function createCard(stock) {
     <div class="signal-heading"><span>3レポート総合判定</span><strong>${signal.zone}</strong></div>
     <div class="signal-track" aria-label="3レポート総合判定 ${signal.zone}"><span class="signal-marker${signal.pending ? " is-pending" : ""}" style="left:${signal.position}%"></span></div>
     <div class="signal-scale"><span>売られすぎ</span><span>中立</span><span>買われすぎ</span></div>
-    <p class="signal-zone">${signalNoteText(signal)}</p>`;
+    <p class="signal-zone" data-signal-note="${stock.id}">${signalNoteText(signal)}</p>`;
 
   const actions = document.createElement("div");
   actions.className = "card-actions";
@@ -250,6 +276,10 @@ function createCompactRow(stock) {
   toggle.setAttribute("aria-expanded", "false");
   toggle.setAttribute("aria-label", `${stock.ticker}の詳細を開く`);
 
+  const judgment = document.createElement("small");
+  judgment.className = "compact-judgment";
+  judgment.textContent = `総合判定：${signal.zone}`;
+  identity.append(judgment);
   summary.append(identity, priceCell, toggle);
 
   const details = document.createElement("div");
@@ -280,6 +310,7 @@ function createCompactRow(stock) {
 
   const signalNote = document.createElement("p");
   signalNote.className = "stock-row-note";
+  signalNote.dataset.signalNote = stock.id;
   signalNote.textContent = signalNoteText(signal);
 
   const actions = document.createElement("div");
@@ -382,7 +413,25 @@ function visibleStocks() {
   });
 }
 
+function syncControls() {
+  if (state.market === "all" && state.sort === "price-desc") state.sort = "default";
+  elements.sort.querySelector('[value="price-desc"]').disabled = state.market === "all";
+  elements.search.value = state.query;
+  elements.sort.value = state.sort;
+  elements.filters.querySelectorAll("[data-market]").forEach((item) => {
+    const active = item.dataset.market === state.market;
+    item.classList.toggle("is-active", active);
+    item.setAttribute("aria-pressed", String(active));
+  });
+  for (const [button, view] of [[elements.cardView, "card"], [elements.listView, "list"]]) {
+    button.classList.toggle("is-active", state.view === view);
+    button.setAttribute("aria-pressed", String(state.view === view));
+  }
+}
+
 function render() {
+  syncControls();
+  saveView();
   const stocks = visibleStocks();
   const compact = compactMediaQuery.matches;
   elements.results.replaceChildren();
@@ -437,9 +486,19 @@ async function init() {
     state.stocks = Array.isArray(stockPayload.stocks) ? stockPayload.stocks : [];
     state.prices = pricePayload.prices || {};
     state.signals = signalPayload.signals || {};
-    state.scenarios = await loadScenarioBounds(state.stocks);
     updateSummary(pricePayload);
     render();
+    requestAnimationFrame(() => {
+      if (!location.hash && savedScroll) window.scrollTo({ top: savedScroll, behavior: "instant" });
+    });
+    // Scenario positions are supplementary; they never delay the catalogue.
+    loadScenarioBounds(state.stocks).then((scenarios) => {
+      state.scenarios = scenarios;
+      // Update only the supplementary text, preserving focus and expanded rows.
+      document.querySelectorAll("[data-signal-note]").forEach((node) => {
+        node.textContent = signalNoteText(getSignal(node.dataset.signalNote));
+      });
+    });
   } catch (error) {
     showLoadError(error);
   }

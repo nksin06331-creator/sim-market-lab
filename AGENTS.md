@@ -25,6 +25,7 @@ This repository contains the public SiM MARKET LAB static website and its stock-
 
 ## Verification
 
+- After regenerating reports, run `python scripts/apply_report_ui.py` to preserve shared reading controls.
 - Run `python scripts/validate_site.py`; publishing must stop if it reports an error.
 - Parse every changed JSON file.
 - Run `python scripts/update_prices.py` when network access is available.
