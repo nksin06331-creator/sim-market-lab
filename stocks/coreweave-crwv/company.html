@@ -324,7 +324,7 @@ strong.g { color: var(--accent); }
 </style>
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body>
+<body data-report-kind="company">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 
 <div class="progress-bar" id="progressBar"></div>
@@ -337,7 +337,7 @@ strong.g { color: var(--accent); }
 <div class="hero">
   <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
   <div class="hero-badge">CRWV 完全入門ガイド ・ 2026-11-27版</div>
-  <h1>コアウィーブ（CRWV）を<br><span class="g">まるっと</span>解説</h1>
+  <h1>コアウィーブ（CRWV）<span class="report-title-kind">企業概要</span></h1>
   <p>AIの学習と推論に必要なGPUクラウドを、ソフトウェア・運用・電力設備と一体で提供する企業です。</p>
   <div class="hero-tags">
     <!-- 例: <span class="hero-tag">⚛️ 同位体って何？</span> -->
@@ -395,7 +395,7 @@ strong.g { color: var(--accent); }
 
     <!-- 会社データ（クイックファクト）：設立/本社/従業員/CEO/上場/売上規模 等。不明は「非開示」 -->
     <div class="facts">
-      <div class="info-row"><div class="info-box"><div class="info-title">会社と沿革</div><div class="info-text">CoreWeave, Inc.／Nasdaq: CRWV／USD／12月決算。2017年設立、2020年クラウド開始、2025年3月上場。本社Livingston, New Jersey。 [S1,S4]</div></div><div class="info-box"><div class="info-title">直近四半期</div><div class="info-text">2026年3Q売上36.61億ドル、GAAP営業利益2.07億ドル、純損失7.09億ドル、純支払利息8.46億ドル。調整後EBITDA22.56億ドル・同マージン62%、調整後営業利益3.79億ドル。償却・利息・設備投資を含めて読まなければならない。 [S1,S2]</div></div></div>
+      <div class="info-box"><div class="info-title">会社と沿革</div><div class="info-text">CoreWeave, Inc.／Nasdaq: CRWV／USD／12月決算。2017年設立、2020年クラウド開始、2025年3月上場。本社Livingston, New Jersey。 [S1,S4]</div></div><div class="info-box"><div class="info-title">直近四半期</div><div class="info-text">2026年3Q売上36.61億ドル、GAAP営業利益2.07億ドル、純損失7.09億ドル、純支払利息8.46億ドル。調整後EBITDA22.56億ドル・同マージン62%、調整後営業利益3.79億ドル。償却・利息・設備投資を含めて読まなければならない。 [S1,S2]</div></div>
       <!-- 例:
       <div><dt>設立</dt><dd>2019年</dd></div>
       <div><dt>本社</dt><dd>東京</dd></div>
@@ -408,7 +408,7 @@ strong.g { color: var(--accent); }
 
     <!-- 4枚カード：何をしてる/主力事業/直近の業績/なぜ注目 -->
     <div class="card-grid">
-      <div class="card-grid"><div class="info-box"><div class="info-title">何をする会社</div><div class="info-text">GPUクラスタ、ネットワーク、ストレージと運用を組み合わせるAIクラウド。[S2]</div></div><div class="info-box"><div class="info-title">主力</div><div class="info-text">AIの学習・推論向けクラウドと運用ソフト。GPUメーカーそのものではありません。[S1,S2]</div></div><div class="info-box"><div class="info-title">直近業績</div><div class="info-text">3Q売上36.61億ドルに対し純損失7.09億ドル。利息と償却を確認。[S1]</div></div><div class="info-box"><div class="info-title">注目点</div><div class="info-text">契約残高を稼働・売上へ変えられるか。資金と設備供給の両方が必要。[S1,S2]</div></div></div>
+      <div class="info-box"><div class="info-title">何をする会社</div><div class="info-text">GPUクラスタ、ネットワーク、ストレージと運用を組み合わせるAIクラウド。[S2]</div></div><div class="info-box"><div class="info-title">主力</div><div class="info-text">AIの学習・推論向けクラウドと運用ソフト。GPUメーカーそのものではありません。[S1,S2]</div></div><div class="info-box"><div class="info-title">直近業績</div><div class="info-text">3Q売上36.61億ドルに対し純損失7.09億ドル。利息と償却を確認。[S1]</div></div><div class="info-box"><div class="info-title">注目点</div><div class="info-text">契約残高を稼働・売上へ変えられるか。資金と設備供給の両方が必要。[S1,S2]</div></div>
       <!-- 例: <div class="card-sm"><span class="card-emoji">🏭</span><div class="card-title">何をしてる</div><div class="card-desc">…</div></div> を4枚 -->
     </div>
 
@@ -461,7 +461,7 @@ strong.g { color: var(--accent); }
       <div><div class="section-title">大手クラウドと専門GPUクラウド</div><div class="section-sub">AI専業の運用力と総合クラウドの資金力</div></div>
     </div>
     <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>大手クラウドは競合であり顧客にもなり得ます。</li><li>価格だけでなく可用性・通信・開発環境で比較します。</li><li>最新シェアや同業倍率の未調査数値は置きません。</li></ul></div>
-    <div class="table-wrap"><table class="compare-table"><thead><tr><th>比較先</th><th>比較軸</th><th>注意</th></tr></thead><tbody><tr><td>CoreWeave</td><td>AI向けGPU運用・クラスタ統合</td><td>設備・顧客・財務への集中。</td></tr><tr><td>AWS・Azure・Google Cloud・Oracle</td><td>幅広いサービス、資金力、既存顧客基盤</td><td>競合と顧客の関係が重なる場合がある。</td></tr><tr><td>専門GPUクラウド</td><td>GPU供給・価格・サービス品質</td><td>同じ設備世代と契約条件で比較する。</td></tr></tbody></table></div><p>AWS、Microsoft Azure、Google Cloud、Oracleや他のGPUクラウドが競合。大手クラウドには製品範囲・資金力の利点がある。CoreWeaveはAI向け運用・GPUクラスタ性能を訴求するが会社説明と独立評価を分ける。 [S2,S4]</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table class="compare-table"><thead><tr><th>比較先</th><th>比較軸</th><th>注意</th></tr></thead><tbody><tr><td>CoreWeave</td><td>AI向けGPU運用・クラスタ統合</td><td>設備・顧客・財務への集中。</td></tr><tr><td>AWS・Azure・Google Cloud・Oracle</td><td>幅広いサービス、資金力、既存顧客基盤</td><td>競合と顧客の関係が重なる場合がある。</td></tr><tr><td>専門GPUクラウド</td><td>GPU供給・価格・サービス品質</td><td>同じ設備世代と契約条件で比較する。</td></tr></tbody></table></div><p>AWS、Microsoft Azure、Google Cloud、Oracleや他のGPUクラウドが競合。大手クラウドには製品範囲・資金力の利点がある。CoreWeaveはAI向け運用・GPUクラスタ性能を訴求するが会社説明と独立評価を分ける。 [S2,S4]</p>
   </section>
 
   <!-- SEC6: 用語辞典　⚡まとめ(特にこの3つ) → term-list 10〜12（①定義→②なぜ重要→③この銘柄では） -->

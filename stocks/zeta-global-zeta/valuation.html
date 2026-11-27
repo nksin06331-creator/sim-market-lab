@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ゼータ・グローバル（ZETA）｜ドパガキ株価シナリオ</title>
+<title>ゼータ・グローバル（ZETA）｜株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -25,7 +25,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body data-stock-ticker="ZETA" data-price-source="../../data/prices.json">
+<body data-report-kind="valuation" data-stock-ticker="ZETA" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
@@ -161,7 +161,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
   <p class="lead">2027年末事業価値＋同時点自由現金−負債−非支配持分＝株主価値。これを同じケースの将来株式数で割る。2027年の当方仮定。2026年会社売上予想中点$1.855Bからの成長率は約8%／24%／40%。倍率14／17／20倍は同業中央値として確認した数値ではなく感応度用の評価仮定。調整後EBITDAは株式報酬・償却等を除くため、株主利益や自由現金と同一視せず、将来株式数と現金収支を別に置く。資本化開発費もFCF照合で確認する。</p>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>ケース</th><th>事業価値</th><th>自由現金</th><th>負債・少数持分</th><th>株主価値</th><th>将来株式</th><th>1株価値</th></tr></thead>
   <tbody><tr><td>悲観</td><td>$6,160.0M</td><td>$300.0M</td><td>$250.0M</td><td>$6,210.0M</td><td>280.00M</td><td>$22.18</td></tr><tr><td>標準</td><td>$9,775.0M</td><td>$400.0M</td><td>$250.0M</td><td>$9,925.0M</td><td>290.00M</td><td>$34.22</td></tr><tr><td>楽観</td><td>$14,560.0M</td><td>$500.0M</td><td>$250.0M</td><td>$14,810.0M</td><td>300.00M</td><td>$49.37</td></tr></tbody>
   </table></div>
@@ -180,7 +180,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
       <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
       <tbody><tr><td>標準事業価値（USD）</td><td>$27.48</td><td>$34.22</td><td>$40.97</td></tr><tr><td>標準の将来株式数</td><td>$38.03</td><td>$34.22</td><td>$31.11</td></tr></tbody>
     </table></div>
@@ -205,7 +205,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
   <tbody><tr><td>最新の確定業績</td><td>2026年3Q売上約$493M、前年同期比46%増。GAAP営業利益$45.948M、純利益$38.273M、希薄化EPS$0.14。調整後EBITDA約$121M・利益率24.6%。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>現在財務</td><td>会社はMarigoldと政治候補者売上を除く3Q成長率を30%と説明。総成長率46%と同一視しない。Super-Scaled顧客212社、同顧客ARPU約$2.0Mは会社定義のKPI。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>株式と潜在株</td><td>11月2日A・B合計255,458,977株。9月末RSU等14,445,635とオプション14,554,628（平均行使価格$13.84）を把握。評価用株式はRSU等を全加算し、オプションを基準株価で自己株方式調整した約278.16M株。</td><td>このレポートの推定を含む</td><td>確認期末・分析日を区別</td></tr><tr><td>2027年価値仮定</td><td>2027年の当方仮定。2026年会社売上予想中点$1.855Bからの成長率は約8%／24%／40%。倍率14／17／20倍は同業中央値として確認した数値ではなく感応度用の評価仮定。調整後EBITDAは株式報酬・償却等を除くため、株主利益や自由現金と同一視せず、将来株式数と現金収支を別に置く。資本化開発費もFCF照合で確認する。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>資金と将来株式</td><td>2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>主観確率</td><td>25%, 50%, 25%</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr></tbody>
   </table></div>
@@ -214,7 +214,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details><summary>計算・資金・希薄化</summary><p>2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p></details><details><summary>分析上の制約・未取得情報</summary><p>TTM資金余力は再編・投資の対象期間を揃えられないため算出していません。最近のCFと現金、今後の投資・借入・株式数を別に確認します。オプション市場や空売り統計、独立した最新コンセンサスは未取得。</p></details><details><summary>市場データの補助情報</summary><p>株価31.97 USD、時刻2026-11-25T21:00:02+00:00。52週高値38.8・安値14.365USD。20営業日終値価格リターン-4.42%（配当調整なし）。値動きは総合判定の根拠に使わない。</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定55.2・中立。株価評価55は条件付き価値・希薄化・資金負担を評価。材料60は予定の実行と既存期待、企業リスク48は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。</p></details><details><summary>主要出典と更新履歴</summary><p><ul><li><a href="https://s25.q4cdn.com/525061491/files/content_files/ZETA-3Q_26-Earnings-Press-Release_FINAL.pdf" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表・見通し</a>（公表2026-11-09／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1851003/000119312526453696/zeta-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q 10-Q</a>（公表2026-11-09／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul><p>2026-11-27全体更新。分析値は共通bundleから生成。</p></p></details>
+  <details><summary>計算・資金・希薄化</summary><p>2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p></details><details><summary>分析上の制約・未取得情報</summary><p>TTM資金余力は再編・投資の対象期間を揃えられないため算出していません。最近のCFと現金、今後の投資・借入・株式数を別に確認します。オプション市場や空売り統計、独立した最新コンセンサスは未取得。</p></details><details><summary>市場データの補助情報</summary><p>株価31.97 USD、時刻2026-11-25T21:00:02+00:00。52週高値38.8・安値14.365USD。20営業日終値価格リターン-4.42%（配当調整なし）。値動きは総合判定の根拠に使わない。</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定55.2・中立。株価評価55は条件付き価値・希薄化・資金負担を評価。材料60は予定の実行と既存期待、企業リスク48は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。</p></details><details><summary>主要出典と更新履歴</summary><ul><li><a href="https://s25.q4cdn.com/525061491/files/content_files/ZETA-3Q_26-Earnings-Press-Release_FINAL.pdf" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表・見通し</a>（公表2026-11-09／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1851003/000119312526453696/zeta-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q 10-Q</a>（公表2026-11-09／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul><p>2026-11-27全体更新。分析値は共通bundleから生成。</p></details>
   <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
        転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
        それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->

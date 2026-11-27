@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>レッドワイヤー（RDW）｜ドパガキ株価シナリオ</title>
+<title>レッドワイヤー（RDW）｜株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -25,7 +25,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body data-stock-ticker="RDW" data-price-source="../../data/prices.json">
+<body data-report-kind="valuation" data-stock-ticker="RDW" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
@@ -161,7 +161,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
   <p class="lead">事業価値＝将来年売上×売上倍率。株主価値＝事業価値＋将来自由現金−将来負債等。1株価値＝株主価値÷将来希薄化株式数。利益率への接続、調達資金と発行株式の両側を確認。</p>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>ケース</th><th>年売上</th><th>倍率</th><th>営業利益率</th><th>EV</th><th>現金</th><th>負債等</th><th>将来株式</th><th>株価</th></tr></thead>
   <tbody><tr><td>悲観</td><td>$550M</td><td>2倍</td><td>3%</td><td>$1100M</td><td>$300M</td><td>$50M</td><td>265M</td><td>$5.09</td></tr><tr><td>標準</td><td>$700M</td><td>3倍</td><td>10%</td><td>$2100M</td><td>$350M</td><td>$50M</td><td>270M</td><td>$8.89</td></tr><tr><td>楽観</td><td>$900M</td><td>4倍</td><td>15%</td><td>$3600M</td><td>$400M</td><td>$50M</td><td>275M</td><td>$14.36</td></tr></tbody>
   </table></div>
@@ -180,7 +180,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
       <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
       <tbody><tr><td>年売上（USD）</td><td>$7.33</td><td>$8.89</td><td>$10.44</td></tr><tr><td>EV/Sales倍率</td><td>$7.33</td><td>$8.89</td><td>$10.44</td></tr></tbody>
     </table></div>
@@ -205,7 +205,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
   <tbody><tr><td>基準株価</td><td>$5.89</td><td>市場データ</td><td>2026-11-25T21:00:02+00:00 [SQ]</td></tr><tr><td>最新決算</td><td>2026年3Q売上109.035百万USD、GAAP純損失23.178百万USD。Space売上61.266百万、Defense Tech47.769百万。1～9月売上323.081百万USD、純損失140.651百万USD。[S1,S2]</td><td>公式情報で確認済み</td><td>[S1,S2]</td></tr><tr><td>会社見通し</td><td>会社は2026年通期売上450～500百万USDを維持。9月末受注残619.666百万USD、3Q受注188.7百万USD、book-to-bill1.73。売上計上には履行条件がある。[S1,S2]</td><td>会社の目標・予定</td><td>[S1]</td></tr><tr><td>現在評価用株式</td><td>255.964957百万株</td><td>このレポートの推定</td><td>11月2日普通株250.219316百万株に、オプション1.313776百万、未確定RSU2.429018百万・PSU2.002847百万を加えて255.964957百万株の保守的評価用株式とする。条件付きPSU全確定を仮定し、確定時点実数ではない。優先株は9月末ゼロ。私募ワラントは2026年9月2日に満期を迎え、将来希薄化へ再加算しない。[S2]</td></tr><tr><td>企業価値モデル</td><td>評価は2028年6月末。2026年会社売上予想450～500百万USDを出発点に、2028年近傍の年売上550／700／900百万USDを仮定。倍率2／3／4倍は当方評価仮定で市場コンセンサスではない。</td><td>このレポートの推定</td><td>株価に合わせて標準前提を逆算しない。</td></tr><tr><td>資金・将来株式</td><td>将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。</td><td>このレポートの推定</td><td>費用・純調達現金・株式を同時に整合。</td></tr><tr><td>資金余力</td><td>1～9月の営業CFと設備投資を単純年率換算すると年147百万USD前後の資金使用。現金から最低運転資金50百万USDを控除した粗い余力は約36か月。TTM実績ではなく、受注引渡し・資金調達・運転資金で変動する参考値。[S2]</td><td>このレポートの推定</td><td>簡易期間換算でTTMではない場合を明記。</td></tr></tbody>
   </table></div>
@@ -214,7 +214,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details><summary>資金・株式・請求権の扱い</summary><p>11月2日普通株250.219316百万株に、オプション1.313776百万、未確定RSU2.429018百万・PSU2.002847百万を加えて255.964957百万株の保守的評価用株式とする。条件付きPSU全確定を仮定し、確定時点実数ではない。優先株は9月末ゼロ。私募ワラントは2026年9月2日に満期を迎え、将来希薄化へ再加算しない。[S2] 将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。</p></details><details><summary>資金余力と更新条件</summary><p>1～9月の営業CFと設備投資を単純年率換算すると年147百万USD前後の資金使用。現金から最低運転資金50百万USDを控除した粗い余力は約36か月。TTM実績ではなく、受注引渡し・資金調達・運転資金で変動する参考値。[S2]</p></details><details><summary>メインページの3レポート総合判定</summary><p>構成スコアは株価評価30、材料60、企業基盤リスク65。現金余力と受注残を評価するが、赤字・固定価格契約・統合と増資後株式数を反映した中立。 株価評価は当方ケース位置と財務不確実性、材料は最新の契約・開発段階、企業基盤は損益・資金・集中を踏まえた主観判断。日々の株価から自動算出しません。</p></details><details><summary>未取得情報と出典</summary><p><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000139/exhibit991redwire09302026e.htm" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000142/rdw-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q Form 10-Q</a>（取得：2026-11-27）</li><li><a href="https://ir.rdw.com/financial-information/financial-results" target="_blank" rel="noopener noreferrer">S3：公式投資家向け決算資料一覧</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/RDW?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：RDW日足・基準株価（暫定取得元）</a>（取得：2026-11-27）</li></ul><p>同時点の市場コンセンサス、空売り・オプション統計、独立DCFは未取得または未実施。未確認値をゼロや会社予想で代用しません。更新日2026-11-27。</p></p></details>
+  <details><summary>資金・株式・請求権の扱い</summary><p>11月2日普通株250.219316百万株に、オプション1.313776百万、未確定RSU2.429018百万・PSU2.002847百万を加えて255.964957百万株の保守的評価用株式とする。条件付きPSU全確定を仮定し、確定時点実数ではない。優先株は9月末ゼロ。私募ワラントは2026年9月2日に満期を迎え、将来希薄化へ再加算しない。[S2] 将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。</p></details><details><summary>資金余力と更新条件</summary><p>1～9月の営業CFと設備投資を単純年率換算すると年147百万USD前後の資金使用。現金から最低運転資金50百万USDを控除した粗い余力は約36か月。TTM実績ではなく、受注引渡し・資金調達・運転資金で変動する参考値。[S2]</p></details><details><summary>メインページの3レポート総合判定</summary><p>構成スコアは株価評価30、材料60、企業基盤リスク65。現金余力と受注残を評価するが、赤字・固定価格契約・統合と増資後株式数を反映した中立。 株価評価は当方ケース位置と財務不確実性、材料は最新の契約・開発段階、企業基盤は損益・資金・集中を踏まえた主観判断。日々の株価から自動算出しません。</p></details><details><summary>未取得情報と出典</summary><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000139/exhibit991redwire09302026e.htm" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000142/rdw-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q Form 10-Q</a>（取得：2026-11-27）</li><li><a href="https://ir.rdw.com/financial-information/financial-results" target="_blank" rel="noopener noreferrer">S3：公式投資家向け決算資料一覧</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/RDW?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：RDW日足・基準株価（暫定取得元）</a>（取得：2026-11-27）</li></ul><p>同時点の市場コンセンサス、空売り・オプション統計、独立DCFは未取得または未実施。未確認値をゼロや会社予想で代用しません。更新日2026-11-27。</p></details>
   <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
        転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
        それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->

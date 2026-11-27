@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>古河電気工業（5801）｜ドパガキ株価シナリオ</title>
+<title>古河電気工業（5801）｜株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -25,7 +25,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body data-stock-ticker="5801" data-price-source="../../data/prices.json">
+<body data-report-kind="valuation" data-stock-ticker="5801" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
@@ -161,7 +161,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
   <p class="lead">正常化した親会社帰属利益×PER＝株主価値。株主価値÷将来希薄化後株式数＝1株価値。税・利息・非支配持分を反映した利益なので、現金・負債・非支配持分を再加減しない。</p>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>ケース</th><th>株主価値</th><th>将来希薄化株式</th><th>1株価値</th></tr></thead>
   <tbody><tr><td>悲観</td><td>7,000億円</td><td>714.243百万株</td><td>980円</td></tr><tr><td>標準</td><td>15,400億円</td><td>707.206百万株</td><td>2,178円</td></tr><tr><td>楽観</td><td>26,100億円</td><td>703.688百万株</td><td>3,709円</td></tr></tbody>
   </table></div>
@@ -180,7 +180,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
       <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
       <tbody><tr><td>正常化親会社利益（円）</td><td>1,742円</td><td>2,178円</td><td>2,613円</td></tr><tr><td>PER（倍）</td><td>1,866円</td><td>2,178円</td><td>2,489円</td></tr></tbody>
     </table></div>
@@ -205,7 +205,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
   <tbody><tr><td>基準株価</td><td>1,804円</td><td>市場データ</td><td>2026-11-27T05:15:30+00:00</td></tr><tr><td>株式数</td><td>703.688百万株</td><td>このレポートの推定</td><td>2026年7月1日に1株を10株へ分割。発行済706,669,170株からBBT信託を含む自己株式2,981,317株を控除し703,687,853株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等による変化を見込む当方仮定。</td></tr><tr><td>最新半期業績</td><td>2027年3月期上期（2026年4～9月）売上7376.91億円、営業利益576.18億円、親会社株主帰属純利益587.81億円。売上20.8%増、営業利益201.1%増。日本基準の連結累計。</td><td>公式情報で確認済み</td><td>S1</td></tr><tr><td>会社見通し</td><td>2027年3月期会社予想は売上1兆5700億円、営業利益1360億円、親会社株主帰属純利益1180億円、EPS167.71円。11月9日に上方修正。2028年3月期モデルは別の当方仮定。</td><td>会社の目標・予定</td><td>S1</td></tr><tr><td>2028年3月モデル</td><td>2028年3月末の正常化親会社利益を悲観・標準・楽観で[70.0, 110.0, 145.0]十億円、PERを[10, 14, 18]倍とする当方仮定。足元の利益の単純年率換算や現値への逆算ではない。景気・需要・製品構成・価格の持続性に応じた幅。将来株式数は現在推定の1.015／1.005／1.000倍。公募増資の現金加算は仮定せず、報酬等の純増を見込む。</td><td>このレポートの推定</td><td>会社予想ではない</td></tr><tr><td>確率</td><td>悲観30%・標準45%・楽観25%はこのレポートの主観確率。需要・市況・投資の不確実性を上下に置き、統計的な成功率とはしない。</td><td>このレポートの推定</td><td>統計確率ではない</td></tr></tbody>
   </table></div>
@@ -214,7 +214,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details><summary>株式分割・自己株式・希薄化</summary><p>2026年7月1日に1株を10株へ分割。発行済706,669,170株からBBT信託を含む自己株式2,981,317株を控除し703,687,853株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等による変化を見込む当方仮定。</p></details><details><summary>総合判定の根拠</summary><p>総合判定43.9・中立。株価評価34.4は分析時点の正常化利益モデルで悲観0・標準50・楽観100へ区分補間。材料60は各3材料の実現性と期待負担、企業基盤55は収益分散・財務・市況/投資リスクの主観評価。最新公式開示の3レポートを根拠とし、日々の株価更新で総合判定を変えない。</p></details><details><summary>市場補助情報と限界</summary><p>分析基準価格1803.5円、時刻2026-11-27T05:15:30+00:00。52週高値6241.0円・安値884.1円。株価と全モデルを分割後に統一。 同じ日足系列の直近20営業日価格変化は当銘柄-38.4%、日経225-8.2%、単純差-30.1ポイント。配当調整・リスク調整なし、株式分割を跨ぐ系列の供給元調整へ依存。総合判定には使わない。 独立コンセンサス、オプション・空売り統計は取得しておらずゼロで代用していません。</p></details><details><summary>主要出典・更新履歴</summary><p><ul><li><a href="https://www.furukawaelectric.com/ir/library/finalreport/pdf/2027/20261109.pdf" target="_blank" rel="noopener noreferrer">S1：2027年3月期中間決算短信</a>（取得 2026-11-27）</li><li><a href="https://www.furukawaelectric.com/ir/library/finalreport/pdf/2027/20261109_pre.pdf" target="_blank" rel="noopener noreferrer">S2：2027年3月期中間決算説明資料</a>（取得 2026-11-27）</li><li><a href="https://www.furukawaelectric.com/ir/library/sr/pdf/205_half.pdf" target="_blank" rel="noopener noreferrer">S3：第205期半期報告書</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/5801.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：基準株価・Yahoo Finance日足</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SB：日経225・Yahoo Finance日足</a>（取得 2026-11-27）</li></ul><p>2026-11-27全面改訂。分析値は固定。</p></p></details>
+  <details><summary>株式分割・自己株式・希薄化</summary><p>2026年7月1日に1株を10株へ分割。発行済706,669,170株からBBT信託を含む自己株式2,981,317株を控除し703,687,853株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等による変化を見込む当方仮定。</p></details><details><summary>総合判定の根拠</summary><p>総合判定43.9・中立。株価評価34.4は分析時点の正常化利益モデルで悲観0・標準50・楽観100へ区分補間。材料60は各3材料の実現性と期待負担、企業基盤55は収益分散・財務・市況/投資リスクの主観評価。最新公式開示の3レポートを根拠とし、日々の株価更新で総合判定を変えない。</p></details><details><summary>市場補助情報と限界</summary><p>分析基準価格1803.5円、時刻2026-11-27T05:15:30+00:00。52週高値6241.0円・安値884.1円。株価と全モデルを分割後に統一。 同じ日足系列の直近20営業日価格変化は当銘柄-38.4%、日経225-8.2%、単純差-30.1ポイント。配当調整・リスク調整なし、株式分割を跨ぐ系列の供給元調整へ依存。総合判定には使わない。 独立コンセンサス、オプション・空売り統計は取得しておらずゼロで代用していません。</p></details><details><summary>主要出典・更新履歴</summary><ul><li><a href="https://www.furukawaelectric.com/ir/library/finalreport/pdf/2027/20261109.pdf" target="_blank" rel="noopener noreferrer">S1：2027年3月期中間決算短信</a>（取得 2026-11-27）</li><li><a href="https://www.furukawaelectric.com/ir/library/finalreport/pdf/2027/20261109_pre.pdf" target="_blank" rel="noopener noreferrer">S2：2027年3月期中間決算説明資料</a>（取得 2026-11-27）</li><li><a href="https://www.furukawaelectric.com/ir/library/sr/pdf/205_half.pdf" target="_blank" rel="noopener noreferrer">S3：第205期半期報告書</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/5801.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：基準株価・Yahoo Finance日足</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SB：日経225・Yahoo Finance日足</a>（取得 2026-11-27）</li></ul><p>2026-11-27全面改訂。分析値は固定。</p></details>
   <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
        転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
        それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->

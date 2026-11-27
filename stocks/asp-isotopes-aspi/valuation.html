@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ASPアイソトープス（ASPI）｜ドパガキ株価シナリオ</title>
+<title>ASPアイソトープス（ASPI）｜株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -25,7 +25,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 
 <link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
 </head>
-<body data-stock-ticker="ASPI" data-price-source="../../data/prices.json">
+<body data-report-kind="valuation" data-stock-ticker="ASPI" data-price-source="../../data/prices.json">
 <nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
 <!-- ================================================================
   SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
@@ -161,7 +161,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
   <p class="lead">2027年末事業価値＋同時点自由現金−負債−非支配持分＝株主価値。これを同じケースの将来株式数で割る。合算価値は会社の評価額でも市場コンセンサスでもなく、2027年末の資産別条件付き仮定。現在売上に単一倍率を掛けず、同位体・ヘリウム・LNGと核燃料の異なる段階を分ける。端点は稼働・設備費・契約・許認可の不確実性を含む幅であり、独立DCFでの裏付けは未実施。現在現金は期末現金へ置換し、両方を加算しない。</p>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>ケース</th><th>事業価値</th><th>自由現金</th><th>負債・少数持分</th><th>株主価値</th><th>将来株式</th><th>1株価値</th></tr></thead>
   <tbody><tr><td>悲観</td><td>$180.0M</td><td>$40.0M</td><td>$149.3M</td><td>$70.7M</td><td>225.07M</td><td>$0.31</td></tr><tr><td>標準</td><td>$500.0M</td><td>$80.0M</td><td>$149.3M</td><td>$430.7M</td><td>188.07M</td><td>$2.29</td></tr><tr><td>楽観</td><td>$1,000.0M</td><td>$120.0M</td><td>$149.3M</td><td>$970.7M</td><td>170.07M</td><td>$5.71</td></tr></tbody>
   </table></div>
@@ -180,7 +180,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
-    <div class="table-wrap"><table>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
       <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
       <tbody><tr><td>標準事業価値（USD）</td><td>$1.76</td><td>$2.29</td><td>$2.82</td></tr><tr><td>標準の将来株式数</td><td>$2.54</td><td>$2.29</td><td>$2.08</td></tr></tbody>
     </table></div>
@@ -205,7 +205,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
-  <div class="table-wrap"><table>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
   <tbody><tr><td>最新の確定業績</td><td>2026年3Q売上$5.124M、粗利益$0.793M、営業損失$40.515M。継続事業純損失$30.868M、親会社株主帰属損失$30.371M。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>現在財務</td><td>9月末の自由現金$201.663M、制限現金$20.882M。借入$52.958M、別途転換負債の公正価値$85.860M、ファイナンスリース$0.492M、非支配持分$9.986M。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>株式と潜在株</td><td>11月16日普通株155,834,430株。9月末未権利確定株8,334,892、オプション828,340、ワラント69,778株を保守的に全加算し評価用165,067,440株。オプション行使代金は加算しない。</td><td>このレポートの推定を含む</td><td>確認期末・分析日を区別</td></tr><tr><td>2027年価値仮定</td><td>合算価値は会社の評価額でも市場コンセンサスでもなく、2027年末の資産別条件付き仮定。現在売上に単一倍率を掛けず、同位体・ヘリウム・LNGと核燃料の異なる段階を分ける。端点は稼働・設備費・契約・許認可の不確実性を含む幅であり、独立DCFでの裏付けは未実施。現在現金は期末現金へ置換し、両方を加算しない。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>資金と将来株式</td><td>9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>主観確率</td><td>35%, 45%, 20%</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr></tbody>
   </table></div>
@@ -214,7 +214,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 <!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details><summary>計算・資金・希薄化</summary><p>9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p></details><details><summary>分析上の制約・未取得情報</summary><p>TTM資金余力は再編・投資の対象期間を揃えられないため算出していません。最近のCFと現金、今後の投資・借入・株式数を別に確認します。オプション市場や空売り統計、独立した最新コンセンサスは未取得。</p></details><details><summary>市場データの補助情報</summary><p>株価1.3 USD、時刻2026-11-25T21:00:01+00:00。52週高値8.6・安値1.0USD。20営業日終値価格リターン-35.96%（配当調整なし）。値動きは総合判定の根拠に使わない。</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定53.5・中立。株価評価40は条件付き価値・希薄化・資金負担を評価。材料65は予定の実行と既存期待、企業リスク88は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。</p></details><details><summary>主要出典と更新履歴</summary><p><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1921865/000119312526463698/aspi-20260930.htm" target="_blank" rel="noopener noreferrer">S1：2026年3Q 10-Q</a>（公表2026-11-16／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1921865/000147793226007217/aspi_425.htm" target="_blank" rel="noopener noreferrer">S2：Renergen/ENDRA取引の最新425</a>（公表2026-11-20／取得2026-11-27）</li><li><a href="https://ir.aspisotopes.com/news-events/press-releases/detail/121/asp-isotopes-inc-announces-that-renergen-limiteds" target="_blank" rel="noopener noreferrer">S3：安定液体ヘリウム生産の会社発表</a>（公表2026-10-26／取得2026-11-27）</li><li><a href="https://ir.aspisotopes.com/news-events/press-releases/detail/120/quantum-leap-energy-and-necsa-sign-binding-heads-of" target="_blank" rel="noopener noreferrer">S4：QLE・Necsa合意</a>（公表2026-10-07／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1921865/000147793226007283/aspi_def14a.htm" target="_blank" rel="noopener noreferrer">S5：年次株主総会委任状</a>（公表2026-11-24／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ASPI?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul><p>2026-11-27全体更新。分析値は共通bundleから生成。</p></p></details>
+  <details><summary>計算・資金・希薄化</summary><p>9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p></details><details><summary>分析上の制約・未取得情報</summary><p>TTM資金余力は再編・投資の対象期間を揃えられないため算出していません。最近のCFと現金、今後の投資・借入・株式数を別に確認します。オプション市場や空売り統計、独立した最新コンセンサスは未取得。</p></details><details><summary>市場データの補助情報</summary><p>株価1.3 USD、時刻2026-11-25T21:00:01+00:00。52週高値8.6・安値1.0USD。20営業日終値価格リターン-35.96%（配当調整なし）。値動きは総合判定の根拠に使わない。</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定53.5・中立。株価評価40は条件付き価値・希薄化・資金負担を評価。材料65は予定の実行と既存期待、企業リスク88は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。</p></details><details><summary>主要出典と更新履歴</summary><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1921865/000119312526463698/aspi-20260930.htm" target="_blank" rel="noopener noreferrer">S1：2026年3Q 10-Q</a>（公表2026-11-16／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1921865/000147793226007217/aspi_425.htm" target="_blank" rel="noopener noreferrer">S2：Renergen/ENDRA取引の最新425</a>（公表2026-11-20／取得2026-11-27）</li><li><a href="https://ir.aspisotopes.com/news-events/press-releases/detail/121/asp-isotopes-inc-announces-that-renergen-limiteds" target="_blank" rel="noopener noreferrer">S3：安定液体ヘリウム生産の会社発表</a>（公表2026-10-26／取得2026-11-27）</li><li><a href="https://ir.aspisotopes.com/news-events/press-releases/detail/120/quantum-leap-energy-and-necsa-sign-binding-heads-of" target="_blank" rel="noopener noreferrer">S4：QLE・Necsa合意</a>（公表2026-10-07／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1921865/000147793226007283/aspi_def14a.htm" target="_blank" rel="noopener noreferrer">S5：年次株主総会委任状</a>（公表2026-11-24／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ASPI?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul><p>2026-11-27全体更新。分析値は共通bundleから生成。</p></details>
   <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
        転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
        それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->
