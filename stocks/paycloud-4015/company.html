@@ -8,27 +8,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-
+/*
+ ================================================================
+  STOCK GUIDE TEMPLATE v4  SiM MARKET LAB ダーク版 / ChatGPT index.html
+  ----------------------------------------------------------------
+  ★★ デザインロック（ぶれ防止）★★
+  ・この <style> ブロックとページ骨格は「改変禁止」。1文字も変えない。逐語コピーする。
+  ・色はSiMグリーンで固定。銘柄・業界でアクセント色を変えない。
+  ・差し替えてよいのは {{ }} プレースホルダーの中身（＝テキスト）だけ。
+  ・セクションの数・順番・各コンポーネントの個数（SEC1のcard-smは4枚 等）は固定。
+    追加・削除・並べ替えをしない。
+  ----------------------------------------------------------------
+  ブランド：黒背景 × ネオングリーン × 白文字（キーワードだけ緑）。Instagram(sim.marketlab)準拠。
+  設計思想：「表層＝3秒で意味が取れる／深層＝読みたい人だけ開く」の2層構造。
+  ・見出しの重要ワードは <span class="g">…</span> で緑ハイライト。
+ ================================================================
+*/
 
 :root {
-
+  /* ── ブランド・アクセント：SiMグリーンで固定（銘柄・業界で変えない＝デザインぶれ防止） ── */
   --accent:        #6EE24E;
   --accent-bright: #8BF56B;
   --accent-tint:   rgba(110,226,78,.12);
   --accent-line:   rgba(110,226,78,.38);
 
-
+  /* ── ダークシェル（変更不要・全銘柄共通） ── */
   --bg:        #0a0c0a;
-  --surface:   #141815;
-  --surface-2: #1b201c;
+  --surface:   #141815;   /* カード面 */
+  --surface-2: #1b201c;   /* 少し明るい面 */
 
-
+  /* レガシー変数マッピング（本文markupが参照。名前は据え置き、意味をダーク用に再定義） */
   --c-primary-50:  var(--accent-tint);        --c-primary-100: rgba(110,226,78,.18);
   --c-primary-200: rgba(110,226,78,.55);      --c-primary-400: var(--accent);
   --c-primary-600: var(--accent);             --c-primary-800: var(--accent-bright);
   --c-accent-50:   var(--accent-tint);        --c-accent-400:  var(--accent);   --c-accent-600: var(--accent-bright);
 
-
+  /* システム色（ダーク版：薄背景は半透明の暗色、文字は明るい色に反転） */
   --amber-50:  rgba(251,191,36,.13); --amber-400: #fbbf24; --amber-600: #fcd34d; --amber-800: #fde68a;
   --red-50:    rgba(248,113,113,.13); --red-400:  #f87171; --red-600:   #fca5a5;
   --blue-50:   rgba(96,165,250,.13); --blue-400:  #60a5fa; --blue-600:  #93c5fd; --blue-800: #bfdbfe;
@@ -47,12 +62,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); background: var(--bg); color: var(--gray-900); line-height: 1.85; font-size: 16px; -webkit-text-size-adjust: 100%; }
-.g { color: var(--accent); }
+.g { color: var(--accent); }               /* 緑キーワード */
 
-
+/* 読了プログレスバー */
 .progress-bar { position: fixed; top: 0; left: 0; height: 4px; width: 0%; z-index: 200; background: var(--accent); box-shadow: 0 0 12px var(--accent); transition: width .1s linear; }
 
-
+/* ── HERO（黒＋緑グロー＋ハーフトーン・ドット） ── */
 .hero {
   background: radial-gradient(120% 90% at 50% -10%, #12251a 0%, #0b0f0c 45%, var(--bg) 75%);
   color: #fff; padding: 58px 22px 66px; text-align: center; position: relative; overflow: hidden;
@@ -74,7 +89,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .hero-tag { background: rgba(255,255,255,.04); border: 1px solid var(--gray-200); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500; color: #d8ded8; }
 
-
+/* ── 30秒サマリー（でかい数字カード） ── */
 .tldr-hero { max-width: 820px; margin: -30px auto 0; padding: 0 16px; position: relative; z-index: 5; }
 .tldr-hero-inner { background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px 20px 8px; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
 .tldr-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 17px; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
@@ -86,17 +101,16 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .stat-label { font-size: 12px; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
 .stat-note  { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
 
-
+/* ── NAV ── */
 .nav-index { background: rgba(10,12,10,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
 .nav-inner { max-width: 820px; margin: 0 auto; padding: 0 16px; display: flex; overflow-x: auto; scrollbar-width: none; }
 .nav-inner::-webkit-scrollbar { display: none; }
-.nav-item { appearance: none; flex-shrink: 0; padding: 14px 14px; font: inherit; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; background: transparent; border: 0; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; cursor: pointer; }
-.nav-item:hover,.nav-item:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
-.nav-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.nav-item { flex-shrink: 0; padding: 14px 14px; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; }
+.nav-item:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 .container { max-width: 820px; margin: 0 auto; padding: 0 16px; }
 
-
+/* ── SECTION ── */
 .section { padding: 46px 0 34px; border-bottom: 1px solid var(--gray-200); opacity: 0; transform: translateY(16px); animation: fadeUp .5s ease forwards; }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -107,36 +121,36 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .section-title .g { color: var(--accent); }
 .section-sub { font-size: 13px; color: var(--gray-500); margin-top: 6px; font-weight: 500; }
 
-
+/* ── ⚡3秒まとめ ── */
 .tldr { background: var(--accent-tint); border: 1px solid var(--accent-line); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px; }
 .tldr-label { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-weight: 900; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
 .tldr ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .tldr li { font-size: 15.5px; font-weight: 500; color: #eef2ee; line-height: 1.7; padding-left: 30px; position: relative; }
 .tldr li::before { content: attr(data-emoji); position: absolute; left: 0; top: 0; font-size: 18px; }
 
-
+/* ── 👉つまり ── */
 .sowhat { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 14px; padding: 12px 16px 12px 46px; margin: 14px 0; position: relative; }
 .sowhat::before { content: '👉'; position: absolute; left: 14px; top: 11px; font-size: 20px; }
 .sowhat b { color: var(--accent); }
 .sowhat p { font-size: 14.5px; color: var(--gray-700); line-height: 1.8; }
 
-
+/* ── シグナル判定ピル ── */
 .signal { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: 12.5px; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
 .signal.bull    { background: var(--green-50); color: var(--accent); }
 .signal.neutral { background: var(--amber-50); color: var(--amber-600); }
 .signal.bear    { background: var(--red-50);   color: var(--red-600); }
 
-
+/* ── ★重要度 ── */
 .rating { font-family: var(--font-num); letter-spacing: 1px; color: var(--accent); font-size: 14px; }
 .rating .off { color: var(--gray-300); }
 
-
+/* ── 絵文字箇条書き ── */
 .keypoints { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 8px 0; }
 .keypoints li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.7; color: #e4e9e4; }
 .keypoints .kp-emoji { font-size: 22px; flex-shrink: 0; line-height: 1.4; }
 .keypoints .kp-text b { color: var(--accent); }
 
-
+/* ── CARDS ── */
 .card { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; margin-bottom: 12px; }
 .card-sm { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 16px 18px; }
@@ -144,7 +158,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .card-sm .card-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; margin-bottom: 4px; color: var(--accent); }
 .card-sm .card-desc { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── 会社クイックデータ（企業詳細を厚くする一覧） ── */
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px,1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; margin: 4px 0 14px; }
 .facts > div { background: var(--surface); padding: 12px 14px; }
 .facts dt { font-size: 11px; color: var(--gray-500); font-weight: 700; margin-bottom: 3px; }
@@ -152,7 +166,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .block-label { font-family: var(--font-display); font-weight: 900; font-size: 15px; color: #fff; margin: 18px 0 8px; display: flex; align-items: center; gap: 7px; }
 .block-label .g { color: var(--accent); }
 
-
+/* ── TERM ACCORDION ── */
 .term-list { display: flex; flex-direction: column; gap: 10px; }
 .term-item { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; transition: border-color .2s; }
 .term-item:hover { border-color: var(--accent); }
@@ -167,7 +181,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .term-body p { font-size: 14.5px; color: var(--gray-700); line-height: 1.85; margin: 10px 0 0; }
 .term-body b { color: var(--accent); }
 
-
+/* ── CALL-OUT ── */
 .ex-box, .ex-box-accent, .ex-box-amber, .ex-box-red { border-radius: 0 8px 8px 0; padding: 12px 16px; margin-top: 12px; }
 .ex-box        { background: var(--accent-tint); border-left: 4px solid var(--accent); }
 .ex-box-accent { background: var(--accent-tint); border-left: 4px solid var(--accent); }
@@ -179,7 +193,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .ex-label-red { color: var(--red-600); }
 .ex-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── INFO BOXES（リスク4分類） ── */
 .info-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; margin-top: 16px; }
 .info-box { border-radius: 14px; padding: 16px 18px; border: 1px solid var(--gray-200); }
 .info-box-primary { background: var(--accent-tint); }
@@ -197,7 +211,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .info-title-gray { color: #d8ded8; }
 .info-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── TIMELINE ── */
 .timeline { position: relative; padding-left: 30px; }
 .timeline::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 6px; width: 3px; background: rgba(110,226,78,.25); border-radius: 3px; }
 .tl-row { position: relative; margin-bottom: 22px; }
@@ -206,7 +220,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .tl-title { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .tl-desc { font-size: 13.5px; color: var(--gray-500); line-height: 1.75; }
 
-
+/* ── BADGES ── */
 .badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 6px; font-weight: 700; }
 .badge-primary { background: var(--accent-tint); color: var(--accent); }
 .badge-accent  { background: var(--accent-tint); color: var(--accent); }
@@ -216,7 +230,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .badge-green   { background: var(--green-50);  color: var(--accent); }
 .badge-violet  { background: var(--violet-50); color: var(--violet-600); }
 
-
+/* ── COMPARE TABLE ── */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--gray-200); border-radius: 14px; margin: 12px 0; }
 .compare-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 480px; }
 .compare-table th { background: var(--gray-50); padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; color: var(--gray-500); letter-spacing: .03em; border-bottom: 1px solid var(--gray-200); white-space: nowrap; }
@@ -225,7 +239,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .compare-table tr:hover td { background: rgba(255,255,255,.02); }
 .compare-table .me { background: var(--accent-tint); font-weight: 700; color: var(--accent); }
 
-
+/* ── HIGHLIGHT（インスタの“まとめ”枠：ダーク＋緑ボーダー） ── */
 .highlight { background: var(--surface); border: 1.5px solid var(--accent-line); border-radius: var(--radius); padding: 22px 24px; margin: 22px 0; position: relative; overflow: hidden; }
 .highlight::before { content:''; position:absolute; right:-30px; bottom:-30px; width:160px; height:160px;
   background-image: radial-gradient(var(--accent) 1px, transparent 1.5px); background-size: 13px 13px; opacity:.12; }
@@ -233,21 +247,21 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .highlight p { font-size: 14.5px; color: #d8ded8; line-height: 1.85; position: relative; }
 .highlight b { color: var(--accent); }
 
-
+/* ── PRODUCT GRID ── */
 .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; margin: 16px 0; }
 .product-box { border-radius: 14px; padding: 18px 14px; text-align: center; border: 1px solid var(--gray-200); background: var(--surface); }
 .product-symbol { font-family: var(--font-num); font-size: 30px; font-weight: 700; margin-bottom: 4px; color: var(--accent); }
 .product-name { font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px; color: #fff; }
 .product-use { font-size: 12px; line-height: 1.55; color: var(--gray-700); }
 
-
+/* ── MISC ── */
 .lead { font-size: 16.5px; color: #dbe1db; line-height: 1.9; margin-bottom: 20px; font-weight: 500; }
 .lead .g { color: var(--accent); }
 strong { font-weight: 700; color: #fff; }
 strong.g { color: var(--accent); }
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; }
 
-
+/* ── FOOTER ── */
 .footer { padding: 40px 22px; text-align: center; color: var(--gray-500); font-size: 13px; border-top: 1px solid var(--gray-200); margin-top: 32px; }
 .footer .brandmark { margin-bottom: 14px; }
 
@@ -313,45 +327,54 @@ strong.g { color: var(--accent); }
 
 <div class="progress-bar" id="progressBar"></div>
 
-
+<!-- ========================================================
+  HERO
+  4015 ペイクラウドホールディングス キャッシュレス決済・デジタルサイネージ 店舗の独自Pay・デジタルギフト・株主優待電子化と、電子看板・メール配信等を提供する。初期導入、継続利用料、機器納品など収益の性質が異なる。 <span class="hero-tag">東証グロース</span><span class="hero-tag">JPY</span><span class="hero-tag">キャッシュレス決済・デジタルサイネージ</span> 2026-11-27
+  ※見出しの重要ワードは <span class="g">…</span> で緑ハイライト
+======================================================== -->
 <div class="hero">
   <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
-  <div class="hero-badge">4015 完全入門ガイド ・ 2026-09-30版</div>
+  <div class="hero-badge">4015 完全入門ガイド ・ 2026-11-27版</div>
   <h1>ペイクラウドホールディングス（4015）を<br><span class="g">まるっと</span>解説</h1>
-  <p>独自Pay、デジタルギフト、株主優待電子化、デジタルサイネージを展開するキャッシュレス・DX支援企業です。</p>
+  <p>店舗の独自Pay・デジタルギフト・株主優待電子化と、電子看板・メール配信等を提供する。初期導入、継続利用料、機器納品など収益の性質が異なる。</p>
   <div class="hero-tags">
-
-    <span class="hero-tag">日本株</span><span class="hero-tag">独自Pay</span><span class="hero-tag">キャッシュレス決済</span><span class="hero-tag">東証グロース</span>
+    <!-- 例: <span class="hero-tag">⚛️ 同位体って何？</span> -->
+    <span class="hero-tag">東証グロース</span><span class="hero-tag">JPY</span><span class="hero-tag">キャッシュレス決済・デジタルサイネージ</span>
   </div>
 </div>
 
-
+<!-- 30秒サマリー：でかい数字カード3〜4枚（上昇は .up / 下落は .down） -->
 <div class="tldr-hero">
   <div class="tldr-hero-inner">
     <div class="tldr-hero-title">📊 まずは数字でざっくり</div>
     <div class="stat-strip">
-
-      <div class="stat"><div class="stat-value">511円</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/07/30終値</div></div><div class="stat"><div class="stat-value">8.2億円</div><div class="stat-label">時価総額の目安</div><div class="stat-note">約1,596万株で計算</div></div><div class="stat"><div class="stat-value up">80.57億円</div><div class="stat-label">2026年8月期3Q売上</div><div class="stat-note">前年同期比+5.4%</div></div><div class="stat"><div class="stat-value">10.56億円</div><div class="stat-label">3Q調整後EBITDA</div><div class="stat-note">進捗率81.2%</div></div>
+      <!-- 例:
+      <div class="stat"><div class="stat-value">$12.34</div><div class="stat-label">現在の株価</div><div class="stat-note">52週 $4〜$18</div></div>
+      <div class="stat"><div class="stat-value up">+180%</div><div class="stat-label">直近1年</div></div>
+      <div class="stat"><div class="stat-value">$1.2B</div><div class="stat-label">時価総額</div></div>
+      <div class="stat"><div class="stat-value">2027</div><div class="stat-label">黒字化目標</div></div>
+      -->
+      <div class="stat"><div class="stat-value">316円</div><div class="stat-label">評価基準株価</div><div class="stat-note">日時付き時点値 [S5]</div></div><div class="stat"><div class="stat-value">15.63百万株</div><div class="stat-label">評価用希薄化株式</div><div class="stat-note">時点と期間差を含む推定 [S1,S2]</div></div><div class="stat"><div class="stat-value">38.34億円</div><div class="stat-label">現金・同等物</div><div class="stat-note">最新決算対象期末 [S1,S2]</div></div><div class="stat"><div class="stat-value">17.10億円</div><div class="stat-label">短長借入</div><div class="stat-note">借入金、利益評価と二重加減しない</div></div>
     </div>
   </div>
 </div>
 
-
+<!-- STICKY NAV -->
 <nav class="nav-index">
   <div class="nav-inner">
-    <button class="nav-item" type="button" data-scroll-target="sec1">① どんな会社</button>
-    <button class="nav-item" type="button" data-scroll-target="sec2">② 事業モデル</button>
-    <button class="nav-item" type="button" data-scroll-target="sec3">③ 独自Pay</button>
-    <button class="nav-item" type="button" data-scroll-target="sec4">④ サイネージ</button>
-    <button class="nav-item" type="button" data-scroll-target="sec5">⑤ 競合比較</button>
-    <button class="nav-item" type="button" data-scroll-target="sec6">⑥ 用語辞典</button>
-    <button class="nav-item" type="button" data-scroll-target="sec7">⑦ 株価の見方</button>
+    <a class="nav-item" href="#sec1">① どんな会社</a>
+    <a class="nav-item" href="#sec2">② 事業構造</a>
+    <a class="nav-item" href="#sec3">③ 製品・技術</a>
+    <a class="nav-item" href="#sec4">④ 財務・リスク</a>
+    <a class="nav-item" href="#sec5">⑤ 競合</a>
+    <a class="nav-item" href="#sec6">⑥ 用語辞典</a>
+    <a class="nav-item" href="#sec7">⑦ 株価の見方</a>
   </div>
 </nav>
 
 <div class="container">
 
-
+  <!-- SEC1: 会社概要　⚡3秒まとめ → 会社データ → card-sm 4枚 → どう稼ぐ → highlight「基本ルール」 -->
   <section class="section" id="sec1">
     <div class="section-header">
       <div class="section-icon">🏢</div><div class="section-num">1</div>
@@ -363,101 +386,108 @@ strong.g { color: var(--accent); }
     <div class="tldr">
       <div class="tldr-label">⚡ このセクションの3秒まとめ</div>
       <ul>
-
-        <li data-emoji="*">独自Pay、株主優待電子化、デジタルサイネージを展開する小型グロース株です。</li><li data-emoji="*">2026年8月期3Qは売上80.57億円、営業利益6.61億円で増収増益でした。</li><li data-emoji="!">通期予想への進捗は順調ですが、成長率・小型株の流動性・納品時期には注意です。</li>
+        <!-- 例: <li data-emoji="🏭">◯◯を作ってる△△業界の会社</li> -->
+        <li>店舗の独自Pay・デジタルギフト・株主優待電子化と、電子看板・メール配信等を提供する。初期導入、継続利用料、機器納品など収益の性質が異なる。</li><li>2026年8月期は売上111.42億円、営業利益8.28億円、純利益4.18億円、調整後EBITDA13.57億円。売上8.9%増、営業利益13.3%増。調整後EBITDAは営業利益＋償却＋株式報酬。営業CF2.27億円は前年14.08億円から減少。</li><li>11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</li>
       </ul>
     </div>
 
-
+    <!-- 会社データ（クイックファクト）：設立/本社/従業員/CEO/上場/売上規模 等。不明は「非開示」 -->
     <div class="facts">
-      <div><dt>正式社名</dt><dd>ペイクラウドホールディングス</dd></div><div><dt>本社</dt><dd>東京都港区南青山</dd></div><div><dt>上場</dt><dd>東証グロース（4015）</dd></div><div><dt>決算期</dt><dd>8月</dd></div><div><dt>主な子会社</dt><dd>バリューデザイン</dd></div><div><dt>事業</dt><dd>キャッシュレス / サイネージ / ソリューション</dd></div>
-
+      <div class="info-row"><div class="info-box"><div class="info-title">会社</div><div class="info-text">東京都港区南青山に本社。東証グロース4015、8月決算。持株会社としてキャッシュレスサービス、デジタルサイネージ、ソリューションを展開する。</div></div><div class="info-box"><div class="info-title">最新公表決算</div><div class="info-text">2026年8月期は売上111.42億円、営業利益8.28億円、純利益4.18億円、調整後EBITDA13.57億円。売上8.9%増、営業利益13.3%増。調整後EBITDAは営業利益＋償却＋株式報酬。営業CF2.27億円は前年14.08億円から減少。</div></div></div>
+      <!-- 例:
+      <div><dt>設立</dt><dd>2019年</dd></div>
+      <div><dt>本社</dt><dd>東京</dd></div>
+      <div><dt>従業員数</dt><dd>約12,000人</dd></div>
+      <div><dt>CEO</dt><dd>◯◯ ◯◯</dd></div>
+      <div><dt>上場</dt><dd>東証プライム（285A）</dd></div>
+      <div><dt>売上規模</dt><dd>約2.3兆円</dd></div>
+      -->
     </div>
 
-
+    <!-- 4枚カード：何をしてる/主力事業/直近の業績/なぜ注目 -->
     <div class="card-grid">
-      <div class="card-sm"><span class="card-emoji">💳</span><div class="card-title">何をしている</div><div class="card-desc">店舗・企業向けに独自Payやデジタルギフトを提供します。</div></div><div class="card-sm"><span class="card-emoji">🎫</span><div class="card-title">注目サービス</div><div class="card-desc">株主優待券の電子化支援が外食・小売向けに広がっています。</div></div><div class="card-sm"><span class="card-emoji">📺</span><div class="card-title">もう一つの柱</div><div class="card-desc">デジタルサイネージ関連事業も売上を作ります。</div></div><div class="card-sm"><span class="card-emoji">📈</span><div class="card-title">直近業績</div><div class="card-desc">3Q累計で売上80.57億円、営業利益6.61億円です。</div></div>
-
+      <div class="card-grid"><div class="info-box"><div class="info-title">何をする会社</div><div class="info-text">店舗の独自Pay・デジタルギフト・株主優待電子化と、電子看板・メール配信等を提供する。初期導入、継続利用料、機器納品など収益の性質が異なる。</div></div><div class="info-box"><div class="info-title">主力製品・サービス</div><div class="info-text">小売・飲食等の自社決済。導入店と継続利用が収益源。</div></div><div class="info-box"><div class="info-title">最新業績</div><div class="info-text">2026年8月期は売上111.42億円、営業利益8.28億円、純利益4.18億円、調整後EBITDA13.57億円。売上8.9%増、営業利益13.3%増。調整後EBITDAは営業利益＋償却＋株式報酬。営業CF2.27億円は前年14.08億円から減少。</div></div><div class="info-box"><div class="info-title">注目点</div><div class="info-text">再発防止・顧客保護と費用が収益力にどう影響するか。</div></div></div>
+      <!-- 例: <div class="card-sm"><span class="card-emoji">🏭</span><div class="card-title">何をしてる</div><div class="card-desc">…</div></div> を4枚 -->
     </div>
 
-
+    <!-- どうやって稼ぐ？：ビジネスモデルと売上の内訳を平易に -->
     <div class="block-label">💰 どうやって<span class="g">稼いでる</span>？</div>
     <ul class="keypoints">
-      <li><span class="kp-emoji">💳</span><span class="kp-text"><b>キャッシュレス</b>：独自Pay、ポイント、デジタルギフトで店舗の販促と決済を支援します。</span></li><li><span class="kp-emoji">📺</span><span class="kp-text"><b>サイネージ</b>：電子看板・広告配信などの導入で売上を作ります。</span></li><li><span class="kp-emoji">🧩</span><span class="kp-text"><b>ソリューション</b>：顧客ごとのシステム開発やDX支援を行います。</span></li>
-
+      <div class="info-row"><div class="info-box"><div class="info-title">収益の作り方</div><div class="info-text">店舗の独自Pay・デジタルギフト・株主優待電子化と、電子看板・メール配信等を提供する。初期導入、継続利用料、機器納品など収益の性質が異なる。</div></div><div class="info-box"><div class="info-title">需要と契約</div><div class="info-text">紙券の電子化と配布・管理。利用者保護とコード管理が重要。</div></div></div>
+      <!-- 例: <li><span class="kp-emoji">🧩</span><span class="kp-text"><b>主力</b>：◯◯を作って△△に売る。売上の約7割。</span></li> を2〜4件（売上構成・主要顧客・課金の仕組み等） -->
     </ul>
 
-
-    <div class="highlight"><h3>ペイクラウドを見る基本ルール</h3><p>独自Payと株主優待電子化は継続成長のテーマです。一方で、サイネージの納品時期や小型株の流動性により、四半期ごとの見え方は変わりやすいです。</p></div>
-
+    <!-- 会社の“基本ルール”（この銘柄を見るうえで最初に押さえる勘所） -->
+    <div class="highlight-box">最新資料の対象期間を揃え、会社予想と実績を分けます。株価が更新されても分析の前提は固定です。[S1–S4]</div>
+    <!-- 例: <div class="highlight"><h3>📏 ◯◯株の基本ルール</h3><p>…</p></div> -->
   </section>
 
-
+  <!-- SEC2: 業界の基本　⚡まとめ → lead(比喩) → sowhat → term-list 4〜6 -->
   <section class="section" id="sec2">
     <div class="section-header">
-      <div class="section-icon">💳</div><div class="section-num">2</div>
-      <div><div class="section-title">事業モデルの<span class="g">基本</span></div><div class="section-sub">決済・販促・店舗DXをまとめて見る</div></div>
+      <div class="section-icon">◇</div><div class="section-num">2</div>
+      <div><div class="section-title">何が需要と収益を動かすか</div><div class="section-sub">顧客が選ぶ理由と供給・費用の制約</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">キャッシュレスサービスが成長の中心です。</li><li data-emoji="*">デジタルサイネージは納品タイミングで売上が振れます。</li><li data-emoji="*">ソリューション事業は顧客DX需要を拾います。</li></ul></div>
-    <p class="lead">ペイクラウドは、企業や店舗のキャッシュレス化、販促、デジタル表示、株主優待電子化を支援します。単なる決済会社ではなく、店舗と顧客をつなぐデジタル基盤を提供する会社です。</p><div class="sowhat"><p><b>つまり</b>、4015は「決済回数」だけでなく「導入企業数」「ギフト・優待電子化」「サイネージ納品」を見る銘柄です。</p></div><div class="term-list"><details open><summary>キャッシュレスサービス</summary><p>独自Pay、電子マネー、ポイント、デジタルギフトを提供します。小売、外食、自治体、イベントなどに導入余地があります。</p></details><details><summary>デジタルサイネージ</summary><p>店舗や施設に設置する電子看板です。導入案件の納品時期で四半期売上が変わることがあります。</p></details><details><summary>株主優待電子化</summary><p>紙の優待券をデジタル化します。一風堂を中心に展開する力の源HDなどの支援事例が出ています。</p></details><details><summary>月次開示</summary><p>毎月の業績報告が出るため、決算前に事業の勢いを確認しやすい点があります。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>店舗の独自Pay・デジタルギフト・株主優待電子化と、電子看板・メール配信等を提供する。初期導入、継続利用料、機器納品など収益の性質が異なる。</li><li>価格だけでなく顧客採用・継続、品質、供給、費用が重要。</li><li>未確認の市場規模・シェアは置いていません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">収益構造</div><div class="info-text">店舗の独自Pay・デジタルギフト・株主優待電子化と、電子看板・メール配信等を提供する。初期導入、継続利用料、機器納品など収益の性質が異なる。</div></div><div class="info-box"><div class="info-title">競争と選択</div><div class="info-text">競争軸は決済・販促管理、導入実績、費用、セキュリティ、店舗オペレーション。汎用決済や他の販促・サイネージ事業者も選択肢。最新シェアの未確認数値や競合の優劣は置かない。</div></div><div class="info-box"><div class="info-title">需要と費用</div><div class="info-text">11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</div></div></div>
   </section>
 
-
+  <!-- SEC3: 主要製品・技術　⚡まとめ → product-grid → term-list 3〜5 -->
   <section class="section" id="sec3">
     <div class="section-header">
       <div class="section-icon">🔬</div><div class="section-num">3</div>
-      <div><div class="section-title">独自Payと<span class="g">優待電子化</span></div><div class="section-sub">店舗・外食・小売のDX需要を拾う</div></div>
+      <div><div class="section-title">主力と次の展開を分けて見る</div><div class="section-sub">製品発表・顧客採用・売上化は同じではない</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">独自Payは企業ブランドで使える決済・販促基盤です。</li><li data-emoji="*">株主優待電子化は紙券の管理コストを下げるテーマです。</li><li data-emoji="!">導入社数、取扱高、継続率が重要です。</li></ul></div>
-    <div class="product-grid"><div class="product-box"><div class="product-symbol">PAY</div><div class="product-name">独自Pay</div><div class="product-use">自社ブランドの電子マネー・ポイント。</div></div><div class="product-box"><div class="product-symbol">GIFT</div><div class="product-name">デジタルギフト</div><div class="product-use">販促・優待・キャンペーンに利用。</div></div><div class="product-box"><div class="product-symbol">DX</div><div class="product-name">優待電子化</div><div class="product-use">紙券からデジタルへ移行。</div></div></div><div class="term-list"><details open><summary>独自Payの強み</summary><p>顧客企業が自社ブランドで決済やポイントを運用でき、店舗と顧客の接点を増やせます。</p></details><details><summary>株主優待電子化</summary><p>優待券の発送、利用、管理をデジタル化します。外食・小売で導入余地があります。</p></details><details><summary>おまいりPay</summary><p>寺院・神社専用キャッシュレス決済の提供など、用途特化型の展開もあります。</p></details><details><summary>確認指標</summary><p>導入件数、利用額、月次業績、解約率、粗利率を見ます。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>独自Pay・デジタルギフト：小売・飲食等の自社決済。導入店と継続利用が収益源。</li><li>株主優待電子化：紙券の電子化と配布・管理。利用者保護とコード管理が重要。</li><li>デジタルサイネージ：電子看板の導入・運用。案件納品時期で売上が動く。</li></ul></div>
+    <div class="table-wrap"><table class="compare-table"><thead><tr><th>製品・領域</th><th>役割と確認点</th></tr></thead><tbody><tr><td>独自Pay・デジタルギフト</td><td>小売・飲食等の自社決済。導入店と継続利用が収益源。</td></tr><tr><td>株主優待電子化</td><td>紙券の電子化と配布・管理。利用者保護とコード管理が重要。</td></tr><tr><td>デジタルサイネージ</td><td>電子看板の導入・運用。案件納品時期で売上が動く。</td></tr><tr><td>ソリューション</td><td>メール配信等。障害・セキュリティの信頼が採用に影響。</td></tr></tbody></table></div><p>製品・事業情報：[S1–S4]。会社の優位性の説明を独立した保証とは扱いません。</p>
   </section>
 
-
+  <!-- SEC4: 技術詳細・規制　⚡まとめ → keypoints → term-list 4〜6 -->
   <section class="section" id="sec4">
     <div class="section-header">
       <div class="section-icon">🏛️</div><div class="section-num">4</div>
-      <div><div class="section-title">サイネージと<span class="g">業績の振れ</span></div><div class="section-sub">納品タイミングが四半期を動かす</div></div>
+      <div><div class="section-title">資金と費用、株式数の定義</div><div class="section-sub">黒字や成長だけでは1株価値は決まらない</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">サイネージは大型案件の納品時期で売上が動きます。</li><li data-emoji="*">1Hの遅れは3Qで回復したと会社側は説明しています。</li><li data-emoji="!">通期達成には4Qの納品と月次推移が重要です。</li></ul></div>
-    <ul class="keypoints"><li><span class="kp-emoji">📺</span><span class="kp-text"><b>納品型売上</b>：サイネージは案件納品の時期で四半期売上が振れます。</span></li><li><span class="kp-emoji">📈</span><span class="kp-text"><b>3Q回復</b>：会社説明では、上期の遅れを3Qで取り戻したとされています。</span></li><li><span class="kp-emoji">🗓️</span><span class="kp-text"><b>月次確認</b>：月次業績報告で、期末へ向けた勢いを確認します。</span></li></ul><div class="sowhat"><p><b>つまり</b>、四半期だけで判断せず、月次と納品時期を合わせて見る必要があります。</p></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>2026年8月末の発行済16,022,148株−自己株600,771株＝15,421,377株。評価株式15,631,377株は潜在株式差を概算21万株加えた推定。将来16百万株は報酬・権利行使余地を含む仮定。現金38.3435億円、短長借入17.09914億円。</li><li>11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">財務・株式数</div><div class="info-text">2026年8月末の発行済16,022,148株−自己株600,771株＝15,421,377株。評価株式15,631,377株は潜在株式差を概算21万株加えた推定。将来16百万株は報酬・権利行使余地を含む仮定。現金38.3435億円、短長借入17.09914億円。</div></div><div class="info-box"><div class="info-title">確認すべきリスク</div><div class="info-text">11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</div></div><div class="info-box"><div class="info-title">営業収益と現金</div><div class="info-text">2026年8月期は売上111.42億円、営業利益8.28億円、純利益4.18億円、調整後EBITDA13.57億円。売上8.9%増、営業利益13.3%増。調整後EBITDAは営業利益＋償却＋株式報酬。営業CF2.27億円は前年14.08億円から減少。</div></div></div>
   </section>
 
-
+  <!-- SEC5: 競合比較　⚡まとめ → table-wrap>compare-table(自社=me) → highlight「差別化」 -->
   <section class="section" id="sec5">
     <div class="section-header">
       <div class="section-icon">⚔️</div><div class="section-num">5</div>
-      <div><div class="section-title">競合と<span class="g">比べる</span></div><div class="section-sub">決済・販促DXの小型株として見る</div></div>
+      <div><div class="section-title">同じ顧客課題を解く選択肢</div><div class="section-sub">仕様・価格・顧客採用・信頼性を揃えて比較</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">比較対象は決済、ポイント、販促DX、サイネージ関連企業です。</li><li data-emoji="*">独自Payと優待電子化の組み合わせが特徴です。</li><li data-emoji="!">大手決済会社に比べると規模と流動性は小さいです。</li></ul></div>
-    <div class="table-wrap"><table class="compare-table"><thead><tr><th>企業群</th><th>主な強み</th><th>注意点</th></tr></thead><tbody><tr><td class="me">ペイクラウド</td><td>独自Pay、デジタルギフト、優待電子化、サイネージ。</td><td>小型株、納品時期、成長率の振れ。</td></tr><tr><td>大手決済会社</td><td>加盟店網、資本力、決済量。</td><td>汎用決済中心で、独自Pay特化とは違う。</td></tr><tr><td>販促DX企業</td><td>CRM、ポイント、キャンペーン運用。</td><td>決済基盤を自前で持つかは企業ごとに違う。</td></tr><tr><td>サイネージ企業</td><td>広告・店舗表示システム。</td><td>案件型売上で時期が振れやすい。</td></tr></tbody></table></div><div class="highlight"><h3>差別化の見方</h3><p>ペイクラウドは、決済、ギフト、株主優待、サイネージを横断できる点が特徴です。小型株なので、導入事例と月次KPIが評価を左右しやすいです。</p></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>競争軸は決済・販促管理、導入実績、費用、セキュリティ、店舗オペレーション。汎用決済や他の販促・サイネージ事業者も選択肢。最新シェアの未確認数値や競合の優劣は置かない。</li><li>最新の同業倍率・市場シェアを取得済みと主張しません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">比較の対象と条件</div><div class="info-text">競争軸は決済・販促管理、導入実績、費用、セキュリティ、店舗オペレーション。汎用決済や他の販促・サイネージ事業者も選択肢。最新シェアの未確認数値や競合の優劣は置かない。</div></div><div class="info-box"><div class="info-title">自社で見る点</div><div class="info-text">11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</div></div></div>
   </section>
 
-
+  <!-- SEC6: 用語辞典　⚡まとめ(特にこの3つ) → term-list 10〜12（①定義→②なぜ重要→③この銘柄では） -->
   <section class="section" id="sec6">
     <div class="section-header">
       <div class="section-icon">📖</div><div class="section-num">6</div>
       <div><div class="section-title">4015のニュースで出る<span class="g">言葉</span> 全辞典</div><div class="section-sub">分からん単語はここで潰す</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li data-emoji="*">独自Pay、調整後EBITDA、月次、納品時期を押さえると読みやすいです。</li><li data-emoji="*">優待電子化は分かりやすい成長テーマです。</li><li data-emoji="!">小型株の流動性リスクは忘れないことが大事です。</li></ul></div>
-    <div class="term-list"><details><summary>独自Pay</summary><p>企業や店舗が自社ブランドで電子マネー・ポイント・デジタルギフトを発行する仕組みです。</p></details><details><summary>バリューデザイン</summary><p>ペイクラウドグループのキャッシュレスサービス中核会社です。独自Pay、株主優待電子化、ギフト関連を担います。</p></details><details><summary>キャッシュレスサービス</summary><p>独自Pay、電子マネー、ポイント、ギフトなど、決済・販促をデジタル化する事業です。</p></details><details><summary>デジタルサイネージ</summary><p>店舗や施設の電子看板・広告配信システムです。導入や納品時期で売上が振れます。</p></details><details><summary>ソリューション事業</summary><p>システム開発やデジタル施策支援です。顧客のDX需要を取り込みます。</p></details><details><summary>調整後EBITDA</summary><p>営業利益に減価償却などを足し戻した収益力の目安です。3Q累計は10.56億円でした。</p></details><details><summary>月次業績報告</summary><p>会社が毎月開示する取扱高や事業KPIの確認資料です。短期の勢いを見る材料になります。</p></details><details><summary>株主優待電子化</summary><p>紙の優待券をデジタル化するサービスです。外食・小売などで導入余地があります。</p></details><details><summary>自己株式取得</summary><p>会社が自社株を買う施策です。需給と1株価値にプラスになり得ます。</p></details><details><summary>東証グロース</summary><p>成長企業向け市場です。小型株が多く、流動性や値動きには注意が必要です。</p></details><details><summary>進捗率</summary><p>通期予想に対してどこまで達成したかを見る指標です。3Q売上進捗は70.0%でした。</p></details><details><summary>PER</summary><p>株価が1株利益の何倍かを見る指標です。成長期待が高いとPERは高くなりやすいです。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li>実績と会社予想、当方推定を分けます。</li><li>純利益と調整後指標は異なります。</li><li>株式数と対象期間・通貨を揃えます。</li></ul></div>
+    <div class="term-list"><details class="term-item"><summary class="term-header"><span class="term-name">会社予想</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>会社が示す将来計画。実績や保証ではありません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">時点値</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>その日時に取得した価格。取引時間中の場合、終値とは限りません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">純利益</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>税金等を控除した株主に帰属する利益。PER評価の分子に使います。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">PER</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>株価が1株利益の何倍かを示す指標。成長・金利・不確実性で変わります。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">EPS</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>利益を株式数で割った1株利益。期間平均株式と時点株式の違いに注意します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">希薄化</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>株式報酬や権利行使等で1株の取り分が変わること。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">営業CF</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>営業活動の現金収支。会計利益と運転資金の動きにより異なります。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">調整後利益</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>会社独自の調整を含む指標。会計利益と同じ値とは扱いません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">利益率</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>利益÷売上。どの利益を使うかと対象期間を揃えます。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">当方推定</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>このレポートが置く条件付き前提。会社や市場の予想ではありません。</p></div></details></div>
   </section>
 
-
+  <!-- SEC7: 株価の見方　⚡まとめ → timeline(signal+rating) → リスク4分類 info-row → highlight → 数字まとめ table -->
   <section class="section" id="sec7">
     <div class="section-header">
       <div class="section-icon">💹</div><div class="section-num">7</div>
       <div><div class="section-title">何が4015株を<span class="g">動かす</span>？</div><div class="section-sub">上がる理由・下がる理由を一目で</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li data-emoji="*">4Q決算、月次業績、自社株取得終了、株主優待が主な材料です。</li><li data-emoji="*">3Qで上期遅れを回復した点は追い風です。</li><li data-emoji="!">通期達成度と来期成長率が次の焦点です。</li></ul></div>
-    <div class="timeline"><div class="tl-row"><div class="tl-date">2026/07/14</div><div class="tl-title">3Q決算 <span class="signal bull">追い風</span></div><div class="tl-desc">売上80.57億円、営業利益6.61億円。増収増益で上期遅れを回復。</div></div><div class="tl-row"><div class="tl-date">2026/07/28</div><div class="tl-title">6月月次・自己株式取得終了 <span class="signal neutral">確認</span></div><div class="tl-desc">月次の勢いと資本政策の進捗を確認します。</div></div><div class="tl-row"><div class="tl-date">2026/10ごろ</div><div class="tl-title">通期決算 <span class="signal bull">重要</span></div><div class="tl-desc">通期予想の達成度と来期見通しが次の大きな材料です。</div></div></div><div class="info-row"><div class="info-box info-box-green"><div class="info-title info-title-green">追い風</div><div class="info-text">3Q売上・営業利益の過去最高、月次開示、優待電子化テーマ。</div></div><div class="info-box info-box-amber"><div class="info-title info-title-amber">確認</div><div class="info-text">4Q納品、通期予想達成、来期成長率、自己株式取得後の需給。</div></div><div class="info-box info-box-red"><div class="info-title info-title-red">リスク</div><div class="info-text">小型株の流動性、納品期ズレ、成長鈍化、無配。</div></div></div><details class="term-item" open><summary class="term-header"><span class="term-name">主要出典</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p><a href="https://www.paycloud.inc/ir/?lang=ja" target="_blank" rel="noopener noreferrer">ペイクラウド公式IR</a>、<a href="https://disclosure.catr.jp/companies/75be7/84566/tdnet/fbd5b/742154" target="_blank" rel="noopener noreferrer">2026年8月期3Q決算情報</a>、<a href="https://finance.yahoo.co.jp/quote/4015.T/financials" target="_blank" rel="noopener noreferrer">Yahoo!ファイナンス決算要約</a>、<a href="https://finance.yahoo.co.jp/quote/4015.T/disclosure" target="_blank" rel="noopener noreferrer">適時開示一覧</a>、<a href="https://www.paycloud.inc/ir/movie/?lang=japage%2F2%2Fpage%2F2%2Fpage%2F3%2Fpage%2F2%2Fpage%2F4%2F" target="_blank" rel="noopener noreferrer">3Q決算説明動画・書き起こし</a>を確認しました。本文の数値は2026年9月30日時点の公開情報に基づきます。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>
+    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li>セキュリティ再点検・顧客対応と業績影響：再発防止・顧客保護と費用が収益力にどう影響するか。</li><li>成長計画アップデート：11月24日資料は2027年2月に投資計画・成長戦略のアップデートを予定。</li><li>通期売上・利益率と継続利用の確認：売上成長だけでなく営業CFと継続利用を追う。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">セキュリティ再点検・顧客対応と業績影響</div><div class="info-text">再発防止・顧客保護と費用が収益力にどう影響するか。</div></div><div class="info-box"><div class="info-title">成長計画アップデート</div><div class="info-text">11月24日資料は2027年2月に投資計画・成長戦略のアップデートを予定。</div></div><div class="info-box"><div class="info-title">通期売上・利益率と継続利用の確認</div><div class="info-text">売上成長だけでなく営業CFと継続利用を追う。</div></div></div><details><summary>主要出典</summary><p><ul><li><a href="https://contents.xj-storage.jp/xcontents/AS71226/817a7bc3/2600/4196/8f8d/c83727093631/140120261015551091.pdf" target="_blank" rel="noopener noreferrer">S1：2026年8月期本決算短信</a>（公開：2026-10-15／取得：2026-11-27）</li><li><a href="https://www.paycloud.inc/dcms_media/other/20261030_FY26_4Q.pdf" target="_blank" rel="noopener noreferrer">S2：2026年8月期決算説明資料</a>（公開：2026-10-30／取得：2026-11-27）</li><li><a href="https://www.paycloud.inc/dcms_media/other/20261124_Businessplanandgrowthpotential.pdf" target="_blank" rel="noopener noreferrer">S3：事業計画及び成長可能性に関する事項</a>（公開：2026-11-24／取得：2026-11-27）</li><li><a href="https://contents.xj-storage.jp/xcontents/AS71226/11457cb9/b53f/44df/8ad2/d28683c4156b/140120261118582408.pdf" target="_blank" rel="noopener noreferrer">S4：子会社システム不正アクセス第2報</a>（公開：2026-11-18／取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/4015.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：Yahoo Finance 市場価格（日足）</a>（公開：資料内参照／取得：2026-11-27）</li></ul><p>分析基準株価 316円／2026-11-27T04:51:30+00:00。時点値。分析基準日2026-11-27。対象2027年末。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></p></details>
   </section>
 
-</div>
+</div><!-- /container -->
 
 <div class="footer">
   <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
   <p style="margin-bottom:8px;font-weight:700;color:#d8ded8">⚠️ 免責事項</p>
-  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。キャッシュレス決済・デジタルサイネージ株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-09-30時点の公開情報に基づきます。</p>
+  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。キャッシュレス決済・デジタルサイネージ株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-11-27時点の公開情報に基づきます。</p>
 </div>
 
 <script>
@@ -471,13 +501,18 @@ document.querySelectorAll('details.term-item').forEach(d => {
   function u(){ var h=document.documentElement; var s=h.scrollTop/(h.scrollHeight-h.clientHeight); bar.style.width=Math.min(100,Math.max(0,s*100))+'%'; }
   document.addEventListener('scroll', u, {passive:true}); window.addEventListener('resize', u); u();
 })();
-document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
-  button.addEventListener('click', function () {
-    var target = document.getElementById(button.dataset.scrollTarget);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
 </script>
 
 </body>
 </html>
+
+<!--
+================================================================
+  デザインロック（重要）
+  ・アクセント色はSiMグリーンで固定。銘柄・業界で変えない。
+  ・以前あった「業界別カラー早見表」は廃止（色を変えると銘柄ごとに見た目がぶれるため）。
+  ・この <style> と骨格は改変禁止。{{ }} の中身だけ差し替える。
+================================================================
+  ChatGPT用ルール: 完成HTMLは必ず index.html というファイル名で保存・出力する。
+================================================================
+-->

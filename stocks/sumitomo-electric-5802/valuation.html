@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>住友電気工業（5802）｜株価シナリオ</title>
+<title>住友電気工業（5802）｜ドパガキ株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -17,209 +17,210 @@ main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(
 .zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
 details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
-.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible{border-color:var(--accent);color:var(--accent)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav a{white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700}.report-nav a:hover{border-color:var(--accent);color:var(--accent)}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
 @media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
-@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav a{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
 @media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
 </style>
 
 </head>
 <body data-stock-ticker="5802" data-price-source="../../data/prices.json">
-
+<!-- ================================================================
+  SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
+  ・CSSと各セクション構成はキオクシア版と同一（サイト掲載の見た目を維持）。
+  ・{{ }} を report_data の値で置換して使う。数値・確率・結論は改変しない。
+  ・ファイル名は銘柄名（例: 285A.html / IONQ.html）。
+================================================================ -->
 <header class="hero">
 <div class="wrap">
   <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
   <h1>住友電気工業 <small>5802</small></h1>
-  <div class="sub">東京証券取引所プライム市場｜評価基準日 2026-09-30｜使用手法 分散型製造業向けPER・EV/EBITDAシナリオ</div>
+  <div class="sub">東証プライム／JPY｜評価基準日 2026-11-27｜使用手法 正常化親会社利益×PER</div>
   <div class="verdict">
     <div class="verdict-main">
       <span class="pill">まず結論だけ</span>
-
-      <div class="status">標準ケース手前の中立圏</div>
-
-      <p>評価基準株価は悲観〜楽観レンジの33.6%地点です。高値から調整しており、標準ケースまでは余地がありますが、1Q後の業績確認が必要です。</p>
-      <p class="sub">2026年9月30日時点の公開情報と株価を反映しました。Meta・NECとの海底マルチコア光ファイバ協業も中期材料として確認しています。</p>
+      <!-- decision.status＋一言結論（絵文字は先頭1個まで、45文字目安） -->
+      <div class="status">利益の持続性と期待負担を分ける</div>
+      <!-- 現値ポジショニングと市場逆算を1〜2文で -->
+      <p>標準ケース1,786円。分析基準価格は悲観～楽観帯の24.5%地点です。</p>
+      <p class="sub">会社の最新半期開示を確認。今後の利益・倍率・株式数は独立した当方仮定です。</p>
     </div>
-
-    <div class="score"><small>分析の参考スコア</small><b>57</b><small>/ 100　売買判断ではありません</small></div>
+    <!-- 総合スコアは“補助指標”。売買判断そのものではない旨を必ず添える -->
+    <div class="score"><small>分析の参考スコア</small><b>69</b><small>/ 100　売買判断ではありません</small></div>
   </div>
   <div class="kpis">
-    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>2,248円</b><small data-live-price-date>2026/09/30 10時台（分析基準値）</small></div>
-    <div class="kpi"><span>標準ケースの株価</span><b>2,450円</b><small>+9.0%</small></div>
-    <div class="kpi"><span>3ケースを確率でならした値</span><b>2,500円</b><small>+11.2%</small></div>
-    <div class="kpi"><span>値動きリスク</span><b>中</b><small>大型製造業、為替・銅価格・景気に連動</small></div>
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>1,356円</b><small data-live-price-date>分析基準時点の市場価格（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>1,786円</b><small>+31.8%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>1,742円</b><small>+28.5%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>やや高い</b><small>市況・利益持続性・投資・倍率の不確実性</small></div>
   </div>
 
 </div>
 </header>
 
-
-<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>株式分割後の価格を基準にしています。過去株価との比較では単位変更に注意してください。</div></div>
-
+<!-- Validation：WARNがあれば下の注意帯を残す（なければ丸ごと削除）。FAIL時は完成版にしない。 -->
+<div class="wrap"><p class="notice">正常化利益・PER・確率・将来株式数は当方の仮定です。会社予想や保証価格ではありません。株式分割後の価格・株式数へ統一し、自己株式・潜在株の時点差を明示しています。</p></div>
+<!-- 例（WARN時）:
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>正常化利益・PER・確率・将来株式数は当方の仮定です。会社予想や保証価格ではありません。株式分割後の価格・株式数へ統一し、自己株式・潜在株の時点差を明示しています。</div></div>
+-->
 
 <nav class="report-nav"><div class="wrap">
-<button type="button" data-scroll-target="snapshot">結論</button>
-<button type="button" data-scroll-target="scenarios">3シナリオ</button>
-<button type="button" data-scroll-target="logic">計算</button>
-<button type="button" data-scroll-target="sensitivity">感応度</button>
-<button type="button" data-scroll-target="assumptions">前提</button>
+<a href="#snapshot">結論</a>
+<a href="#scenarios">3シナリオ</a>
+<a href="#logic">計算</a>
+<a href="#sensitivity">感応度</a>
+<a href="#assumptions">前提</a>
 </div></nav>
 
 <main class="wrap">
 
-
+<!-- Layer2-1：いまどこ？（現値ポジショニング＋市場逆算） -->
 <section class="card" id="snapshot">
   <h2>いまの株価、どこにいる？</h2>
-  <p class="lead">今の株価は、悲観ケースより上、標準ケースより少し下です。中計や電力・通信テーマは支えですが、1Q後の進捗確認が必要です。</p>
+  <p class="lead">分析基準価格1,356円／市場時刻2026-11-27T05:15:21+00:00。分析基準日2026-11-27、対象2028年3月末。</p>
   <div class="grid-2">
     <div>
       <h3>今の株価の位置</h3>
-      <p>悲観～楽観ケースの <b data-live-position-text>26.8%</b> 地点。判定は <b>標準ケースの手前</b>。2Qで自動車、電力、通信の進捗が強ければ標準〜楽観側へ寄ります。</p>
-
-      <div class="position"><div class="position-line"><i class="pin" data-live-position-pin style="left:26.8%"></i></div><div class="position-labels"><span>Bear 1,900円</span><span>Base 2,450円</span><span>Bull 3,200円</span></div></div>
-      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>2.7倍</b>　3ケースを確率でならした値：<b>2,500円</b></p>
+      <p>悲観～楽観ケースの <b>24.5%</b> 地点。判定は <b>悲観と標準の間</b>。raw位置24.5%。帯外の場合はピンのみ0～100%へ固定。分析価格と確率は日々の株価更新で変更しません。</p>
+      <!-- pin の left:% を band_position_pct に合わせる -->
+      <div class="position"><div class="position-line"><i class="pin" style="left:24.5%"></i></div><div class="position-labels"><span>Bear 947円</span><span>Base 1,786円</span><span>Bull 2,616円</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>3.09倍（確率を含まない端点比較）</b>　3ケースを確率でならした値：<b>1,742円</b></p>
     </div>
     <div>
       <h3>今の株価と、この分析の違い</h3>
       <div class="compare">
-        <div><b data-live-market-score>今の株価 27/100</b><div class="meter"><i data-live-market-meter style="width:27%"></i></div></div>
-        <div><b>この分析 46/100</b><div class="meter"><i style="width:46%"></i></div></div>
+        <div><b>今の株価 24/100</b><div class="meter"><i style="width:24%"></i></div></div>
+        <div><b>この分析 48/100</b><div class="meter"><i style="width:48%"></i></div></div>
       </div>
-
-      <p>このモデルで逆算すると、今の株価は分割後EPSに対してPER13〜14倍程度、または中計成長を一部織り込む水準です。市場全体の予想ではなく、このモデル上の逆算です。</p>
+      <!-- market_reverse.conclusion：現値が自分のどの前提に相当するか -->
+      <p>現値が要求する正常化利益は、基準価格×現在推定株式数÷標準PERで逆算できます。標準の将来株式数と現在推定株式数は異なるため価格位置と混同しません。独立したDCF・最新同業倍率比較は未実施です。</p>
     </div>
   </div>
 </section>
 
-
+<!-- Layer1/2：3シナリオ。dl の項目は使用手法に合わせて変える（rNPV/SOTP/EV-Sales/PER等） -->
 <section class="card" id="scenarios">
   <h2>未来はこの3パターン</h2>
-  <p class="lead">現在株価から独立して、営業利益、EPS、PER、電力・通信の成長期待を置きました。分散型製造業なのでPERとEV/EBITDAを併用します。</p>
+  <p class="lead">2028年3月末の正常化親会社利益を悲観・標準・楽観で[300.0, 400.0, 480.0]十億円、PERを[10, 14, 17]倍とする当方仮定。足元の利益の単純年率換算や現値への逆算ではない。景気・需要・製品構成・価格の持続性に応じた幅。将来株式数は現在推定の1.015／1.005／1.000倍。公募増資の現金加算は仮定せず、報酬等の純増を見込む。</p>
   <div class="scenarios">
     <article class="scenario bear">
-      <div class="scenario-head"><span>悲観ケース</span><b>25%</b></div>
-      <div class="scenario-price">1,900円</div>
-      <div class="small">現値比 -15.5%</div>
-      <dl><div><dt>EPS</dt><dd>150円</dd></div><div><dt>PER</dt><dd>12.7倍</dd></div><div><dt>前提</dt><dd>自動車採算弱含み</dd></div><div><dt>営業利益</dt><dd>4,000億円台</dd></div></dl>
-
+      <div class="scenario-head"><span>悲観ケース</span><b>30%</b></div>
+      <div class="scenario-price">947円</div>
+      <div class="small">現値比 -30.1%</div>
+      <dl><div><dt>対象</dt><dd>2028年3月末</dd></div><div><dt>株主価値</dt><dd>30,000億円</dd></div><div><dt>株式</dt><dd>3166.471百万株</dd></div></dl>
+      <!-- 例: <div><dt>事業価値</dt><dd>25.9兆円</dd></div> を手法に応じて数行 -->
     </article>
     <article class="scenario base">
-      <div class="scenario-head"><span>標準ケース</span><b>50%</b></div>
-      <div class="scenario-price">2,450円</div>
-      <div class="small">現値比 +9.0%</div>
-      <dl><div><dt>EPS</dt><dd>175円</dd></div><div><dt>PER</dt><dd>14.0倍</dd></div><div><dt>前提</dt><dd>中計どおり改善</dd></div><div><dt>営業利益</dt><dd>5,000億円前後</dd></div></dl>
+      <div class="scenario-head"><span>標準ケース</span><b>45%</b></div>
+      <div class="scenario-price">1,786円</div>
+      <div class="small">現値比 +31.8%</div>
+      <dl><div><dt>対象</dt><dd>2028年3月末</dd></div><div><dt>株主価値</dt><dd>56,000億円</dd></div><div><dt>株式</dt><dd>3135.275百万株</dd></div></dl>
     </article>
     <article class="scenario bull">
       <div class="scenario-head"><span>楽観ケース</span><b>25%</b></div>
-      <div class="scenario-price">3,200円</div>
-      <div class="small">現値比 +42.3%</div>
-      <dl><div><dt>EPS</dt><dd>210円</dd></div><div><dt>PER</dt><dd>15.2倍</dd></div><div><dt>前提</dt><dd>電力・通信が上振れ</dd></div><div><dt>営業利益</dt><dd>5,500億円超</dd></div></dl>
+      <div class="scenario-price">2,616円</div>
+      <div class="small">現値比 +93.0%</div>
+      <dl><div><dt>対象</dt><dd>2028年3月末</dd></div><div><dt>株主価値</dt><dd>81,600億円</dd></div><div><dt>株式</dt><dd>3119.676百万株</dd></div></dl>
     </article></div>
 </section>
 
-
+<!-- Layer2：価格別アクションマップ ＋ 株価を動かす材料 -->
 <section class="grid-2">
   <div class="card">
     <h2>この値段ならどう見る？</h2>
-
-    <div class="zone"><div><b>1,900円未満</b><span>★★★★</span></div><p>悲観ケース以下。景気悪化や採算低下をかなり織り込む価格帯です。</p></div><div class="zone"><div><b>1,900〜2,450円</b><span>★★★</span></div><p>標準ケース手前。今の株価はこの範囲です。</p></div><div class="zone"><div><b>2,450〜3,200円</b><span>★★</span></div><p>中計達成と電力・通信成長を評価する価格帯です。</p></div><div class="zone"><div><b>3,200円超</b><span>★</span></div><p>楽観ケース超。さらに強い利益成長と倍率拡大が必要です。</p></div>
-
+    <!-- 4〜5帯。「買い/売り」は断定しない。星は割安度の目安 -->
+    <div class="zone"><div><b>947円未満</b></div><p>悲観より弱い利益・倍率の条件が反映される可能性。</p></div><div class="zone"><div><b>947円～1,786円</b></div><p>悲観と標準の間。標準達成は保証しない。</p></div><div class="zone"><div><b>1,786円～2,616円</b></div><p>需要と利益・投資回収に強い条件が必要。</p></div><div class="zone"><div><b>2,616円超</b></div><p>当方の楽観条件を超える根拠を再確認。</p></div>
+    <!-- 例: <div class="zone"><div><b>48,000円未満</b><span>★★★★★</span></div><p>悲観ケース以下。下方リスクを相当織り込む</p></div> -->
   </div>
   <div class="card">
     <h2>株価を動かす4つ</h2>
-
-    <div class="signal"><div><b>中計2028</b><span class="up">追い風</span></div><p>成長投資と事業ポートフォリオの方向性を示します。</p></div><div class="signal"><div><b>電力・通信需要</b><span class="up">追い風</span></div><p>電力ケーブルとデータセンター関連が注目です。</p></div><div class="signal"><div><b>自動車採算</b><span class="flat">確認</span></div><p>人件費、物流費、価格転嫁を確認します。</p></div><div class="signal"><div><b>株価変動</b><span class="down">注意</span></div><p>分割後に値動きが大きくなっています。</p></div>
-
+    <!-- 各材料に up=追い風 / down=注意 / flat を付ける -->
+    <div class="signal"><div><b>データセンター向け光製品</b></div><p>情報通信の上期営業利益612億円、前年同期比392億円増。光配線・光デバイスの販売数量と採算を確認。</p></div><div class="signal"><div><b>電力ケーブル・自動車</b></div><p>電力ケーブル、平角巻線、ワイヤーハーネス等の需要と銅価格・生産性・販売価格を追う。銅価格による売上増を実需増と混同しない。</p></div><div class="signal"><div><b>中計2028・利益還元</b></div><p>設備投資と事業ポートフォリオ、ROIC、配当・財務余力を確認。2028年度目標の進捗であって確約ではない。</p></div><div class="signal"><div><b>株式数と利益の単位</b></div><p>分割後の価格と株式数、親会社利益と連結利益を揃えて確認。[S1]</p></div>
+    <!-- 例: <div class="signal"><div><b>AI向けSSD需要</b><span class="up">追い風</span></div><p>…</p></div> -->
   </div>
 </section>
 
-
+<!-- Layer2：良い点 / 気になる点（対比） -->
 <section class="grid-2">
   <div class="card">
     <h2>ここは普通に強い</h2>
-    <ul class="clean"><li>自動車、電力、通信、電子、素材と事業が分散しています。</li><li>電力ケーブルとデータセンター関連は中期成長テーマです。</li><li>中期経営計画2028で成長戦略が明確化されています。</li><li>株式分割により投資単位低下と流動性改善が期待されます。</li></ul>
-
+    <ul class="clean"><li>最新の半期業績と収益・CFの進捗を確認。[S1]</li><li>需要・製品構成の改善が利益を支える可能性。[S1]</li><li>設備・技術・資本政策で中期の事業基盤を整える。[S1]</li></ul>
+    <!-- 例: <li>FY2025売上2.34兆円で過去最高。</li> を3〜5件 -->
   </div>
   <div class="card">
     <h2>ここで事故るかも</h2>
-    <ul class="clean"><li>株価は2026年に大きく上昇した後、調整も大きくなっています。</li><li>為替、銅価格、車両生産、人件費で利益が変動します。</li><li>事業が広いため、成長テーマだけで全社利益が決まるわけではありません。</li><li>1Q後の詳しい進捗確認が必要です。</li></ul>
-
+    <ul class="clean"><li>需要反転・顧客在庫・価格下落で利益が正常化する可能性。</li><li>投資の立上げと稼働・投資回収は別の段階。</li><li>為替・原材料・競争・財務負担が採算へ影響。</li><li>倍率・将来株式数・確率は当方仮定で確度は低い。</li></ul>
+    <!-- 2つ目のカードのliは自動で赤「!」になる -->
   </div>
 </section>
 
-
+<!-- Layer3：計算ロジック -->
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
-  <p class="lead">主計算はPERです。補助的にEV/EBITDAを見ます。大型製造業なので、短期テーマだけでなく利益水準と倍率を分けて見ました。</p>
+  <p class="lead">正常化した親会社帰属利益×PER＝株主価値。株主価値÷将来希薄化後株式数＝1株価値。税・利息・非支配持分を反映した利益なので、現金・負債・非支配持分を再加減しない。</p>
   <div class="table-wrap"><table>
-  <thead><tr><th>ケース</th><th>EPS</th><th>PER</th><th>計算株価</th><th>確率</th><th>確率加重</th></tr></thead>
-  <tbody><tr><td>悲観</td><td>150円</td><td>12.7倍</td><td>1,900円</td><td>25%</td><td>475円</td></tr><tr><td>標準</td><td>175円</td><td>14.0倍</td><td>2,450円</td><td>50%</td><td>1,225円</td></tr><tr><td>楽観</td><td>210円</td><td>15.2倍</td><td>3,200円</td><td>25%</td><td>800円</td></tr></tbody>
+  <thead><tr><th>ケース</th><th>株主価値</th><th>将来希薄化株式</th><th>1株価値</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>30,000億円</td><td>3166.471百万株</td><td>947円</td></tr><tr><td>標準</td><td>56,000億円</td><td>3135.275百万株</td><td>1,786円</td></tr><tr><td>楽観</td><td>81,600億円</td><td>3119.676百万株</td><td>2,616円</td></tr></tbody>
   </table></div>
-
-  <p class="notice"><b>重要：</b>現在株価に合わせて標準ケースを置いていません。中計、電力・通信、自動車採算、株式分割後の需給を踏まえた条件付き試算です。</p>
+  <!-- 現値に合わせた逆算ではない旨、未開示前提の注意など -->
+  <p class="notice"><b>重要：</b>現金・借入・非支配持分を親会社利益×PERに重複加減しません。新規公募の調達現金を足さず、将来報酬等の小幅株数増のみ仮定します。</p>
 </section>
 
-
+<!-- Layer3：成立条件 -->
 <section class="card" id="conditions">
   <h2>この未来になる条件</h2>
-  <details open><summary>悲観ケース：1,900円 / 確率25%</summary><p>自動車採算や景気が弱く、電力・通信の成長期待も縮むケースです。</p></details><details><summary>標準ケース：2,450円 / 確率50%</summary><p>中計に沿って利益改善が進み、PERが適度に維持されるケースです。</p></details><details><summary>楽観ケース：3,200円 / 確率25%</summary><p>電力ケーブル、データセンター関連、自動車採算改善が重なるケースです。</p></details>
-
+  <details><summary>悲観：947円／確率30%</summary><p>正常化親会社利益300十億円、PER10倍、将来株式数3166.471百万株。 PERは税・利息・非支配持分控除後の親会社利益を評価。現金・負債・非支配持分を重複加減しない。 発行済株式・自己株式・潜在株式・分割調整の前提が変われば全3レポートを更新する。</p></details><details><summary>標準：1,786円／確率45%</summary><p>正常化親会社利益400十億円、PER14倍、将来株式数3135.275百万株。 PERは税・利息・非支配持分控除後の親会社利益を評価。現金・負債・非支配持分を重複加減しない。 発行済株式・自己株式・潜在株式・分割調整の前提が変われば全3レポートを更新する。</p></details><details><summary>楽観：2,616円／確率25%</summary><p>正常化親会社利益480十億円、PER17倍、将来株式数3119.676百万株。 PERは税・利息・非支配持分控除後の親会社利益を評価。現金・負債・非支配持分を重複加減しない。 発行済株式・自己株式・潜在株式・分割調整の前提が変われば全3レポートを更新する。</p></details>
+  <!-- 例: <details open><summary>Base：1,786円 / 確率45%</summary><p>…</p></details> を3つ -->
 </section>
 
-
+<!-- Layer3：感応度 ＋ 分布（モンテカルロは実施時のみ） -->
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
     <div class="table-wrap"><table>
-      <thead><tr><th>前提</th><th>弱い</th><th>標準</th><th>強い</th></tr></thead>
-      <tbody><tr><td>EPS</td><td>160円 → 2,240円</td><td>175円 → 2,450円</td><td>190円 → 2,660円</td></tr><tr><td>PER</td><td>12倍 → 2,100円</td><td>14倍 → 2,450円</td><td>16倍 → 2,800円</td></tr></tbody>
+      <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
+      <tbody><tr><td>正常化親会社利益（円）</td><td>1,429円</td><td>1,786円</td><td>2,143円</td></tr><tr><td>PER（倍）</td><td>1,531円</td><td>1,786円</td><td>2,041円</td></tr></tbody>
     </table></div>
-    <p class="small">1変数だけを動かした簡易感応度です。実際にはEPSとPERが同時に動きます。</p>
+    <p class="small">標準利益±20%と標準PER±2倍を1変数ずつ変更。他の条件は標準に固定。組合せの独立確率を意味しません。</p>
   </div>
   <div class="card">
     <h2>どの価格に行きやすい？</h2>
-    <p class="lead">モンテカルロではなく、悲観・標準・楽観の3点分布です。</p>
-    <div class="dist-row"><span>1,900円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div><div class="dist-row"><span>2,450円</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>3,200円</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>
-
-    <p>中心は標準ケースです。大型株ですが、分割後の需給とテーマ性で値動きは大きめです。</p>
+    <p class="lead">3点の離散分布。モンテカルロ未実施。</p>
+    <div class="signal"><div><b>悲観：947円</b></div><p>当方主観確率30%</p></div><div class="signal"><div><b>標準：1,786円</b></div><p>当方主観確率45%</p></div><div class="signal"><div><b>楽観：2,616円</b></div><p>当方主観確率25%</p></div>
+    <!-- 例: <div class="dist-row"><span>5万円未満</span><div class="track"><i style="width:7.6%"></i></div><b>7.6%</b></div> -->
+    <p>悲観30%・標準45%・楽観25%はこのレポートの主観確率。需要・市況・投資の不確実性を上下に置き、統計的な成功率とはしない。</p>
   </div>
 </section>
 
-
+<!-- 次の決算/イベントで見る場所（watch_items） -->
 <section class="card">
   <h2>次の決算で見る場所</h2>
-  <div class="signal"><div><b>2Q・中間決算</b></div><p>自動車、電力、通信の利益進捗を確認します。</p></div><div class="signal"><div><b>電力ケーブル受注</b></div><p>大型案件の採算と納期を確認します。</p></div><div class="signal"><div><b>データセンター関連</b></div><p>光通信関連の需要継続を確認します。</p></div>
-
+  <div class="signal"><div><b>データセンター向け光製品</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div><div class="signal"><div><b>電力ケーブル・自動車</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div><div class="signal"><div><b>中計2028・利益還元</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div>
+  <!-- 例: <div class="signal"><div><b>2026年7月31日の1Q決算</b></div><p>…</p></div> -->
 </section>
 
-
+<!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
   <div class="table-wrap"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
-  <tbody><tr><td>評価基準株価</td><td>2,248円</td><td>市場データで確認済み</td><td>2026/07/31終値</td></tr><tr><td>株式分割</td><td>公表済み</td><td>会社発表</td><td>2026/05/12</td><td>比較時は単位に注意</td></tr><tr><td>中期経営計画</td><td>中計2028</td><td>会社発表</td><td>2026/05</td><td>成長戦略の前提</td></tr><tr><td>1Q決算発表日</td><td>2026/07/31</td><td>IRカレンダーで確認</td><td>2026年度1Q</td><td>詳細資料確認が必要</td></tr></tbody>
+  <tbody><tr><td>基準株価</td><td>1,356円</td><td>市場データ</td><td>2026-11-27T05:15:21+00:00</td></tr><tr><td>株式数</td><td>3119.676百万株</td><td>このレポートの推定</td><td>2026年7月1日に1株を4株へ分割。発行済3,175,762,284株から自己株式56,085,955株を控除し3,119,676,329株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等の変化を小幅に見込む当方仮定。</td></tr><tr><td>最新半期業績</td><td>2027年3月期上期（2026年4～9月）売上高2兆7649.12億円、営業利益2195.67億円、親会社株主帰属中間純利益1593.84億円。売上16.5%増、営業利益43.5%増。日本基準の連結累計。</td><td>公式情報で確認済み</td><td>S1</td></tr><tr><td>会社見通し</td><td>2027年3月期会社予想は売上5兆7500億円、営業利益5000億円、親会社株主帰属純利益3700億円、EPS118.60円。7月予想から増額。年間配当予想44円は分割後。2028年3月期のモデルと混同しない。</td><td>会社の目標・予定</td><td>S1</td></tr><tr><td>2028年3月モデル</td><td>2028年3月末の正常化親会社利益を悲観・標準・楽観で[300.0, 400.0, 480.0]十億円、PERを[10, 14, 17]倍とする当方仮定。足元の利益の単純年率換算や現値への逆算ではない。景気・需要・製品構成・価格の持続性に応じた幅。将来株式数は現在推定の1.015／1.005／1.000倍。公募増資の現金加算は仮定せず、報酬等の純増を見込む。</td><td>このレポートの推定</td><td>会社予想ではない</td></tr><tr><td>確率</td><td>悲観30%・標準45%・楽観25%はこのレポートの主観確率。需要・市況・投資の不確実性を上下に置き、統計的な成功率とはしない。</td><td>このレポートの推定</td><td>統計確率ではない</td></tr></tbody>
   </table></div>
 </section>
 
-
+<!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details open><summary>手法選定理由</summary><p>住友電工は黒字の大型製造業です。PERを主に使い、電力・通信テーマの倍率変化を補助的に見ます。</p></details><details><summary>株式分割について</summary><p>2026年5月に株式分割を公表しています。このレポートでは分割後株価水準で表示しています。</p></details><details><summary>主要出典</summary><p><a href="https://sumitomoelectric.com/jp/ir" target="_blank" rel="noopener noreferrer">公式IR</a>、<a href="https://sumitomoelectric.com/jp/ir/library" target="_blank" rel="noopener noreferrer">IR資料室</a>、<a href="https://sumitomoelectric.com/jp/ir/calendar" target="_blank" rel="noopener noreferrer">IRカレンダー</a>、<a href="https://jp.investing.com/equities/sumitomo-electric-industries-ltd.-historical-data" target="_blank" rel="noopener noreferrer">株価時系列</a>。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></details>
-
+  <details><summary>株式分割・自己株式・希薄化</summary><p>2026年7月1日に1株を4株へ分割。発行済3,175,762,284株から自己株式56,085,955株を控除し3,119,676,329株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等の変化を小幅に見込む当方仮定。</p></details><details><summary>総合判定の根拠</summary><p>総合判定34.3・中立。株価評価24.3は分析時点の正常化利益モデルで悲観0・標準50・楽観100へ区分補間。材料55は各3材料の実現性と期待負担、企業基盤40は収益分散・財務・市況/投資リスクの主観評価。最新公式開示の3レポートを根拠とし、日々の株価更新で総合判定を変えない。</p></details><details><summary>市場補助情報と限界</summary><p>分析基準価格1355.5円、時刻2026-11-27T05:15:21+00:00。52週高値3712.5円・安値1220.0円。株価と全モデルを分割後に統一。 同じ日足系列の直近20営業日価格変化は当銘柄-27.2%、日経225-8.2%、単純差-19.0ポイント。配当調整・リスク調整なし、株式分割を跨ぐ系列の供給元調整へ依存。総合判定には使わない。 独立コンセンサス、オプション・空売り統計は取得しておらずゼロで代用していません。</p></details><details><summary>主要出典・更新履歴</summary><p><ul><li><a href="https://sumitomoelectric.com/jp/sites/japan/files/2026-10/download_documents/2026_2m.pdf" target="_blank" rel="noopener noreferrer">S1：2027年3月期中間決算短信</a>（取得 2026-11-27）</li><li><a href="https://sumitomoelectric.com/jp/sites/japan/files/2026-10/download_documents/2026_2_hosokum.pdf" target="_blank" rel="noopener noreferrer">S2：2027年3月期中間決算補足資料</a>（取得 2026-11-27）</li><li><a href="https://sumitomoelectric.com/jp/sites/japan/files/2026-11/download_documents/yuuka157-1.pdf" target="_blank" rel="noopener noreferrer">S3：第157期半期報告書</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/5802.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：基準株価・Yahoo Finance日足</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SB：日経225・Yahoo Finance日足</a>（取得 2026-11-27）</li></ul><p>2026-11-27全面改訂。分析値は固定。</p></p></details>
+  <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
+       転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
+       それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->
 </section>
 
 <section class="card notice">
-  <h3>免責</h3><p>本資料は情報提供を目的とした試算です。投資助言ではありません。製造業株は景気、為替、原材料、顧客生産、投資計画により大きく変動します。</p>
+  <h3>免責</h3><p>情報提供・教育目的の条件付き分析です。投資助言・売買推奨ではありません。市況・需給・為替・投資回収・倍率で結果は変わります。配当は価格比較へ含めません。</p>
 </section>
-<footer>SiM MARKET LAB｜住友電気工業（5802）株価シナリオ｜作成日 2026-09-30</footer>
+<footer>分析基準価格1,356円／市場時刻2026-11-27T05:15:21+00:00。分析基準日2026-11-27、対象2028年3月末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 <script src="../../lab/assets/js/live-report-price.js" defer></script>
-<script>
-document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
-  button.addEventListener('click', function () {
-    var target = document.getElementById(button.dataset.scrollTarget);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
 </body></html>

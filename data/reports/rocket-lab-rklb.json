@@ -1,0 +1,1164 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Rocket Lab Corporation",
+    "ticker": "RKLB",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T14:36:48.412998+00:00",
+    "generated_at": "2026-11-27T14:36:48.412998+00:00",
+    "price": 47.02,
+    "price_as_of": "2026-11-25T21:00:01+00:00",
+    "benchmark": "S&P 500"
+  },
+  "capital_structure": {
+    "basic_shares": 632020915,
+    "diluted_shares": 691848784,
+    "market_cap": 32530729823.68,
+    "cash": 4447665000,
+    "liquid_securities": 256184000,
+    "restricted_cash": 8414000,
+    "minimum_operating_cash": 500000000,
+    "debt": 16090000,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "burn_one_off_adjustments": null,
+    "runway_months": null,
+    "source_ids": [
+      "S2"
+    ],
+    "dilution_notes": [
+      "11月4日普通株632.020915百万株、参加型優先株40.951250百万、潜在オプション/RSU11.169834百万、残存転換株0.255585百万と担保発行株7.451200百万を保守的に加え691.848784百万株と推定。潜在株は期日差・重複の可能性がある保守的上限近似。優先株を株式へ入れたため別の優先請求権を控除しない。残存転換元本は株式化し、負債から除外。[S2]",
+      "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。",
+      "換金資産・請求権は出典記載範囲のみ。ゼロの非事業価値や非支配請求権は追加評価を仮定しない入力で、存在しないという断定ではない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "米国Long Beachを拠点とするRocket Lab Corporation。小型打上げとSpace Systemsの2事業。米国上場はNasdaq、12月決算。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RESULTS",
+      "statement": "2026年3Q売上267.834百万USD（前年比73%増）、GAAP純損失79.677百万USD。3Q営業CFは+7.2百万USD、1～9月営業CFは−127.254百万USDであり、四半期黒字を通期CF黒字とは扱わない。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "会社の4Q予想は売上270～290百万USD、GAAP粗利率34～36%、調整後EBITDA損失14～20百万USD。期末受注残は約3.57十億USD。未実現受注を売上・現金へ直接足さない。[S1]",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "9月末現金4,447.665百万USD、短期有価証券160.290百万・長期95.894百万USD。大半はIridium買収・開発等へ使用予定。自由に余剰分配できる現金と同一視しない。[S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "SHARES",
+      "statement": "11月4日普通株632.020915百万株、参加型優先株40.951250百万、潜在オプション/RSU11.169834百万、残存転換株0.255585百万と担保発行株7.451200百万を保守的に加え691.848784百万株と推定。潜在株は期日差・重複の可能性がある保守的上限近似。優先株を株式へ入れたため別の優先請求権を控除しない。残存転換元本は株式化し、負債から除外。[S2]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FINANCE",
+      "statement": "Iridium買収は株主承認・資金確保が進む一方、完了予定は2027年で規制等の条件が残る。既存Iridium借入約1.8十億USDは買収後維持予定。過去の「2026年打上げ」等の日付を撤回し最新開示へ更新。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "打上げではSpaceX等、衛星・宇宙システムでは大手防衛宇宙企業・専門部品企業と競争。統合供給の利便性は強みだが大型競合の価格・実績・資金力は脅威。[S2,S3]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RISK",
+      "statement": "Neutronの開発・初号機失敗、固定価格契約、買収の承認・統合、顧客集中、発行株増が重要。現金増の多くは増資由来で、本業の利益拡大と区別する。[S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL",
+      "statement": "評価は2028年6月末（約19か月先）。売上倍率16／18／22倍は成長オプションを強く含む当方仮定で、同業中央値ではない。悲観は単体、標準・楽観はIridium統合後なので事業範囲が異なる。買収価格へ標準株価を合わせていない。統合価格や将来売上の確度は低い。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FUNDING",
+      "statement": "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "RUNWAY",
+      "statement": "1～9月営業CF−127.254百万・設備投資84.185百万USD。買収用現金を含むため単純な現金÷バーンを余剰資金の指標にしない。次の開発・買収に充当する現金を明示。[S2]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "47.02 USD / 2026-11-25T21:00:01+00:00。52週高値151.0、安値39.98。価格推移をレポート総合判定の根拠には使わない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "SQ"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C1",
+      "statement": "Neutronのハードウェア統合・試験が進み、初号機へ到達するか。既受注を初回成功と混同しない。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "C2",
+      "statement": "必要承認とクロージング、通信基盤の統合。取得先借入と発行株を同時に確認する。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "C3",
+      "statement": "3.57十億USDの受注残から引渡し・回収・粗利へつながるか。受注額を利益と同一視しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年3Q決算発表",
+      "publisher": "Rocket Lab Corporation / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000073/rklb-11092026ex991.htm",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-27T14:36:48.412998+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "RESULTS",
+        "GUIDANCE",
+        "FINANCE",
+        "MODEL",
+        "FUNDING",
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "2026年3Q Form 10-Q",
+      "publisher": "Rocket Lab Corporation / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000074/rklb-20260930.htm",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-27T14:36:48.412998+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "RESULTS",
+        "CAPITAL",
+        "SHARES",
+        "FINANCE",
+        "COMPETITION",
+        "RISK",
+        "MODEL",
+        "FUNDING",
+        "RUNWAY",
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "2025年 Form 10-K",
+      "publisher": "Rocket Lab Corporation / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819994/000181999426000013/rklb-20251231.htm",
+      "published_at": "2026-02-26",
+      "accessed_at": "2026-11-27T14:36:48.412998+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "COMPETITION"
+      ]
+    },
+    {
+      "id": "SQ",
+      "title": "RKLB日足・基準株価（暫定取得元）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/RKLB?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T14:36:48.412998+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "Electron・HASTEの打上げ、衛星製造・宇宙部品を提供し、中型ロケットNeutronを開発する宇宙企業です。",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "RESULTS"
+      ],
+      "sec2": [
+        "GUIDANCE",
+        "FINANCE"
+      ],
+      "sec3": [
+        "IDENTITY",
+        "GUIDANCE"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "SHARES",
+        "FINANCE"
+      ],
+      "sec5": [
+        "COMPETITION"
+      ],
+      "sec6": [
+        "SHARES",
+        "GUIDANCE"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISK"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2028-06-30",
+    "primary_method": "EV_SALES",
+    "method_explanation": "事業価値＝将来年売上×売上倍率。株主価値＝事業価値＋将来自由現金−将来負債等。1株価値＝株主価値÷将来希薄化株式数。利益率への接続、調達資金と発行株式の両側を確認。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.3,
+        "enterprise_value": 19200000000.0,
+        "equity_value": 22180000000.0,
+        "diluted_shares": 710000000.0,
+        "price": 31.239436619718308,
+        "conditions": [
+          "買収未完了の単体ケース。Neutronは低頻度・低寄与。売上12億USD、営業利益率5%を置く。現金30億USDは未使用買収資金を含む。",
+          "EV=売上1200百万USD×16倍。現金3000百万、負債等20百万USDを加減し、株式710百万で除す。",
+          "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FUNDING",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 46800000000.0,
+        "equity_value": 45600000000.0,
+        "diluted_shares": 760000000.0,
+        "price": 60.0,
+        "conditions": [
+          "Iridium買収完了・統合が成立。売上26億USDには通信事業の仮定10億USDを含む。営業利益率15%、買収対価と開発支出後の現金8億USD。",
+          "EV=売上2600百万USD×18倍。現金800百万、負債等2000百万USDを加減し、株式760百万で除す。",
+          "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FUNDING",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.25,
+        "enterprise_value": 70400000000.0,
+        "equity_value": 69400000000.0,
+        "diluted_shares": 770000000.0,
+        "price": 90.12987012987013,
+        "conditions": [
+          "買収統合とNeutron稼働・衛星製造が上振れ。売上32億USD、営業利益率20%。高い成長倍率の維持も必要。",
+          "EV=売上3200百万USD×22倍。現金1000百万、負債等2000百万USDを加減し、株式770百万で除す。",
+          "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FUNDING",
+          "SHARES"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 58.90429851838302,
+      "expected_delta_pct": 25.27498621519144,
+      "raw_band_position_pct": 26.79648024251912,
+      "display_band_position_pct": 26.79648024251912,
+      "endpoint_rr": 2.731833401064581,
+      "market_score": 27,
+      "own_score": 47,
+      "supplemental_score": 65
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "Neutronの開発・初号機失敗、固定価格契約、買収の承認・統合、顧客集中、発行株増が重要。現金増の多くは増資由来で、本業の利益拡大と区別する。[S2]",
+      "価格幅と資金・開発・希薄化依存が大きい。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "年売上（USD）",
+        "low": 2080000000.0,
+        "base": 2600000000.0,
+        "high": 3120000000.0,
+        "result_prices": [
+          47.68421052631579,
+          60.0,
+          72.3157894736842
+        ]
+      },
+      {
+        "variable": "EV/Sales倍率",
+        "low": 14.4,
+        "base": 18,
+        "high": 21.599999999999998,
+        "result_prices": [
+          47.68421052631579,
+          60.0,
+          72.3157894736842
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "Neutronの統合試験・初回打上げ",
+        "category": "R_AND_D",
+        "status": "CONTINGENT",
+        "importance": 5,
+        "date": {
+          "display_text": "2027年以降が会社目標。確定打上げ日なし",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "Neutronのハードウェア統合・試験が進み、初号機へ到達するか。既受注を初回成功と混同しない。",
+        "mechanism": [
+          "契約・技術・稼働・資金",
+          "売上・利益と資金需要",
+          "負債・希薄化後の1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "当方標準を上回る売上・引渡し・回収と資金条件が成立。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              63.078947368421055,
+              72.3157894736842
+            ],
+            "price_change_pct_range": [
+              34.15343974568492,
+              53.79793592872013
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上2730～3120百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "当方標準近辺の稼働・利益・資金条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              53.8421052631579,
+              63.078947368421055
+            ],
+            "price_change_pct_range": [
+              14.508943562649712,
+              34.15343974568492
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上2340～2730百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "遅延・コスト・回収または資金条件が標準を下回る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              44.60526315789474,
+              53.8421052631579
+            ],
+            "price_change_pct_range": [
+              -5.135552620385497,
+              14.508943562649712
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上1950～2340百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と契約・設備の進捗。"
+          ],
+          "evidence_against": [
+            "Neutronの開発・初号機失敗、固定価格契約、買収の承認・統合、顧客集中、発行株増が重要。現金増の多くは増資由来で、本業の利益拡大と区別する。[S2]"
+          ],
+          "caveats": [
+            "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。",
+            "missing_information": [
+              "案件ごとの売上・利益・純資金需要",
+              "個別成功に必要な追加株式と調達条件"
+            ],
+            "next_checks": [
+              "公式な引渡し・稼働・会社見通し",
+              "現金・借入・株式発行と回収"
+            ],
+            "recalculation_method": "案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上と営業利益率",
+          "設備・契約の引渡しと回収",
+          "現金・借入・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。",
+        "financing_risk": "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。",
+        "update_triggers": [
+          "公式な会社見通し・日程変更",
+          "追加資金調達・契約の条件変更",
+          "現金回収・利益率の変化"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C1",
+          "MODEL",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "Iridium買収の承認・完了・統合",
+        "category": "M_AND_A",
+        "status": "CONTINGENT",
+        "importance": 5,
+        "date": {
+          "display_text": "2027年の完了予定。条件付き",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "必要承認とクロージング、通信基盤の統合。取得先借入と発行株を同時に確認する。",
+        "mechanism": [
+          "契約・技術・稼働・資金",
+          "売上・利益と資金需要",
+          "負債・希薄化後の1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "当方標準を上回る売上・引渡し・回収と資金条件が成立。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              63.078947368421055,
+              72.3157894736842
+            ],
+            "price_change_pct_range": [
+              34.15343974568492,
+              53.79793592872013
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上2730～3120百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "当方標準近辺の稼働・利益・資金条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              53.8421052631579,
+              63.078947368421055
+            ],
+            "price_change_pct_range": [
+              14.508943562649712,
+              34.15343974568492
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上2340～2730百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "遅延・コスト・回収または資金条件が標準を下回る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              44.60526315789474,
+              53.8421052631579
+            ],
+            "price_change_pct_range": [
+              -5.135552620385497,
+              14.508943562649712
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上1950～2340百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と契約・設備の進捗。"
+          ],
+          "evidence_against": [
+            "Neutronの開発・初号機失敗、固定価格契約、買収の承認・統合、顧客集中、発行株増が重要。現金増の多くは増資由来で、本業の利益拡大と区別する。[S2]"
+          ],
+          "caveats": [
+            "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。",
+            "missing_information": [
+              "案件ごとの売上・利益・純資金需要",
+              "個別成功に必要な追加株式と調達条件"
+            ],
+            "next_checks": [
+              "公式な引渡し・稼働・会社見通し",
+              "現金・借入・株式発行と回収"
+            ],
+            "recalculation_method": "案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上と営業利益率",
+          "設備・契約の引渡しと回収",
+          "現金・借入・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。",
+        "financing_risk": "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。",
+        "update_triggers": [
+          "公式な会社見通し・日程変更",
+          "追加資金調達・契約の条件変更",
+          "現金回収・利益率の変化"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C2",
+          "MODEL",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "打上げ・衛星受注の売上化",
+        "category": "EARNINGS",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／各四半期",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "3.57十億USDの受注残から引渡し・回収・粗利へつながるか。受注額を利益と同一視しない。",
+        "mechanism": [
+          "契約・技術・稼働・資金",
+          "売上・利益と資金需要",
+          "負債・希薄化後の1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "当方標準を上回る売上・引渡し・回収と資金条件が成立。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              63.078947368421055,
+              72.3157894736842
+            ],
+            "price_change_pct_range": [
+              34.15343974568492,
+              53.79793592872013
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上2730～3120百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "当方標準近辺の稼働・利益・資金条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              53.8421052631579,
+              63.078947368421055
+            ],
+            "price_change_pct_range": [
+              14.508943562649712,
+              34.15343974568492
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上2340～2730百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "遅延・コスト・回収または資金条件が標準を下回る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              44.60526315789474,
+              53.8421052631579
+            ],
+            "price_change_pct_range": [
+              -5.135552620385497,
+              14.508943562649712
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上1950～2340百万USD、倍率18倍、現金800百万・負債等2000百万USD、株式760百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と契約・設備の進捗。"
+          ],
+          "evidence_against": [
+            "Neutronの開発・初号機失敗、固定価格契約、買収の承認・統合、顧客集中、発行株増が重要。現金増の多くは増資由来で、本業の利益拡大と区別する。[S2]"
+          ],
+          "caveats": [
+            "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。",
+            "missing_information": [
+              "案件ごとの売上・利益・純資金需要",
+              "個別成功に必要な追加株式と調達条件"
+            ],
+            "next_checks": [
+              "公式な引渡し・稼働・会社見通し",
+              "現金・借入・株式発行と回収"
+            ],
+            "recalculation_method": "案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上と営業利益率",
+          "設備・契約の引渡しと回収",
+          "現金・借入・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。",
+        "financing_risk": "悲観は増資済み現金から開発支出を賄う。標準・楽観は買収支払・開発を控除した期末現金、取得先借入を含む期末負債をモデル化。将来株式710／760／770百万株には優先転換・買収株式・株式報酬等を包含する。追加公募調達現金は仮定しない。交換比率は株価に依存し、将来株式数は確定値ではない。",
+        "update_triggers": [
+          "公式な会社見通し・日程変更",
+          "追加資金調達・契約の条件変更",
+          "現金回収・利益率の変化"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C3",
+          "MODEL",
+          "FUNDING"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "共通の契約・稼働・資金価値",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "契約・稼働・資金は同じ事業価値に重なるため、全体の運営価値を1回のみ計上。",
+        "full_success_incremental_equity_value": 51200000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        18.380331686875,
+        38.380331686874996
+      ],
+      "raw_implied_pct": 28.380331686875,
+      "all_events_excluded_equity_value": 18000000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "全体期待は標準の現金・負債条件を固定し、悲観側・楽観側の運営価値端点で逆算。個別イベント割合の平均ではない。±10ポイントは主観的な表示幅で統計区間ではない。株式数と資金条件を変える3ケース価格帯とは異なる。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "Neutronの統合試験・初回打上げ",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "Neutronのハードウェア統合・試験が進み、初号機へ到達するか。既受注を初回成功と混同しない。",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "Iridium買収の承認・完了・統合",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "必要承認とクロージング、通信基盤の統合。取得先借入と発行株を同時に確認する。",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "打上げ・衛星受注の売上化",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "3.57十億USDの受注残から引渡し・回収・粗利へつながるか。受注額を利益と同一視しない。",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T14:36:48.412998+00:00",
+    "messages": [
+      "将来売上・倍率・確率・資金・株式数は会社予想ではなく当方仮定。",
+      "個別材料を独立価値へ分離できず、同じモデルの条件付き再評価として表示。",
+      "Neutronの開発・初号機失敗、固定価格契約、買収の承認・統合、顧客集中、発行株増が重要。現金増の多くは増資由来で、本業の利益拡大と区別する。[S2]"
+    ]
+  }
+}

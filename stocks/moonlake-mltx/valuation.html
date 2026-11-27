@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ムーンレイク・イミュノセラピューティクス（MLTX）｜株価シナリオ</title>
+<title>ムーンレイク（MLTX）｜ドパガキ株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -17,209 +17,210 @@ main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(
 .zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
 details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
-.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible{border-color:var(--accent);color:var(--accent)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav a{white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700}.report-nav a:hover{border-color:var(--accent);color:var(--accent)}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
 @media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
-@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav a{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
 @media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
 </style>
 
 </head>
 <body data-stock-ticker="MLTX" data-price-source="../../data/prices.json">
-
+<!-- ================================================================
+  SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
+  ・CSSと各セクション構成はキオクシア版と同一（サイト掲載の見た目を維持）。
+  ・{{ }} を report_data の値で置換して使う。数値・確率・結論は改変しない。
+  ・ファイル名は銘柄名（例: 285A.html / IONQ.html）。
+================================================================ -->
 <header class="hero">
 <div class="wrap">
   <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
-  <h1>ムーンレイク・イミュノセラピューティクス <small>MLTX</small></h1>
-  <div class="sub">Nasdaq｜評価基準日 2026-09-30｜使用手法 臨床段階バイオ向けリスク調整シナリオ</div>
+  <h1>ムーンレイク <small>MLTX</small></h1>
+  <div class="sub">Nasdaq／USD｜評価基準日 2026-11-27｜使用手法 資産別rNPV＋資金・希薄化調整</div>
   <div class="verdict">
     <div class="verdict-main">
       <span class="pill">まず結論だけ</span>
-
-      <div class="status">申請前の高リスク中立</div>
-
-      <p>評価基準株価は悲観〜楽観レンジの1.5%地点です。HS承認申請の進展は上値材料ですが、審査・商業化・単一資産依存のリスクも大きい局面です。</p>
-      <p class="sub">2026年8月10日のQ2決算とIZAR-1 Phase 3好結果を反映しました。9月末予定のBLA提出は、正式発表を確認するまで未完了として扱います。</p>
+      <!-- decision.status＋一言結論（絵文字は先頭1個まで、45文字目安） -->
+      <div class="status">臨床と資金の条件を分けて読む</div>
+      <!-- 現値ポジショニングと市場逆算を1〜2文で -->
+      <p>標準ケース$10.37、3ケース加重値$11.13。現在価格は悲観～楽観帯の中。</p>
+      <p class="sub">未承認資産の成功時CFを割引き、成功確率を1回だけ反映。費用・資金と将来株式も明示します。</p>
     </div>
-
-    <div class="score"><small>分析の参考スコア</small><b>100</b><small>/ 100　売買判断ではありません</small></div>
+    <!-- 総合スコアは“補助指標”。売買判断そのものではない旨を必ず添える -->
+    <div class="score"><small>分析の参考スコア</small><b>9</b><small>/ 100　売買判断ではありません</small></div>
   </div>
   <div class="kpis">
-    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$11.45</b><small data-live-price-date>2026/09/29終値（分析基準値）</small></div>
-    <div class="kpi"><span>標準ケースの株価</span><b>$25.00</b><small>+118.3%</small></div>
-    <div class="kpi"><span>3ケースを確率でならした値</span><b>$25.33</b><small>+121.2%</small></div>
-    <div class="kpi"><span>値動きリスク</span><b>高</b><small>承認申請前の臨床段階バイオ</small></div>
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$13.22</b><small data-live-price-date>米国2026/11/25取引分（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>$10.37</b><small>-21.6%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>$11.13</b><small>-15.8%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>高い</b><small>臨床・規制・将来CFと希薄化に依存</small></div>
   </div>
 
 </div>
 </header>
 
-
-<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>MLTXは臨床段階バイオです。FDA審査、治験結果、資金調達、商業化計画で株価が大きく変動します。</div></div>
-
+<!-- Validation：WARNがあれば下の注意帯を残す（なければ丸ごと削除）。FAIL時は完成版にしない。 -->
+<div class="wrap"><p class="notice">未承認資産の価値を扱う高リスクの条件付き試算です。将来の患者数、価格、成功時CF、成功確率、開発費は当方仮定で、会社予想や臨床成功の統計予測ではありません。借入条件・規制判断・希薄化も確認してください。</p></div>
+<!-- 例（WARN時）:
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>未承認資産の価値を扱う高リスクの条件付き試算です。将来の患者数、価格、成功時CF、成功確率、開発費は当方仮定で、会社予想や臨床成功の統計予測ではありません。借入条件・規制判断・希薄化も確認してください。</div></div>
+-->
 
 <nav class="report-nav"><div class="wrap">
-<button type="button" data-scroll-target="snapshot">結論</button>
-<button type="button" data-scroll-target="scenarios">3シナリオ</button>
-<button type="button" data-scroll-target="logic">計算</button>
-<button type="button" data-scroll-target="sensitivity">感応度</button>
-<button type="button" data-scroll-target="assumptions">前提</button>
+<a href="#snapshot">結論</a>
+<a href="#scenarios">3シナリオ</a>
+<a href="#logic">計算</a>
+<a href="#sensitivity">感応度</a>
+<a href="#assumptions">前提</a>
 </div></nav>
 
 <main class="wrap">
 
-
+<!-- Layer2-1：いまどこ？（現値ポジショニング＋市場逆算） -->
 <section class="card" id="snapshot">
   <h2>いまの株価、どこにいる？</h2>
-  <p class="lead">今の株価は悲観寄りです。HSのBLA提出・受理を一部織り込む一方、承認審査と販売立ち上げの不確実性も残っています。</p>
+  <p class="lead">評価基準株価$13.22／市場時刻2026-11-25T21:00:02+00:00。分析基準日2026-11-27、評価対象2027年末。</p>
   <div class="grid-2">
     <div>
       <h3>今の株価の位置</h3>
-      <p>悲観～楽観ケースの <b data-live-position-text>1.5%</b> 地点。判定は <b>悲観寄りの中立圏</b>。BLAが予定通り進めば標準側へ、遅延や審査懸念が出れば悲観側へ寄ります。</p>
-
-      <div class="position"><div class="position-line"><i class="pin" data-live-position-pin style="left:1.5%"></i></div><div class="position-labels"><span>Bear $11.00</span><span>Base $25.00</span><span>Bull $42.00</span></div></div>
-      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>67.9倍</b>　3ケースを確率でならした値：<b>$25.33</b></p>
+      <p>悲観～楽観ケースの <b>52.4%</b> 地点。判定は <b>悲観～楽観帯の中</b>。丸め前の価格帯位置は52.4%。帯外でも表示ピンのみ0～100%へ固定し、真の成功確率とは扱いません。</p>
+      <!-- pin の left:% を band_position_pct に合わせる -->
+      <div class="position"><div class="position-line"><i class="pin" style="left:52.4%"></i></div><div class="position-labels"><span>Bear $2.05</span><span>Base $10.37</span><span>Bull $23.39</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>0.91倍</b>　3ケースを確率でならした値：<b>$11.13</b></p>
     </div>
     <div>
       <h3>今の株価と、この分析の違い</h3>
       <div class="compare">
-        <div><b data-live-market-score>今の株価 1/100</b><div class="meter"><i data-live-market-meter style="width:1%"></i></div></div>
-        <div><b>この分析 46/100</b><div class="meter"><i style="width:46%"></i></div></div>
+        <div><b>今の株価 52/100</b><div class="meter"><i style="width:52%"></i></div></div>
+        <div><b>この分析 43/100</b><div class="meter"><i style="width:43%"></i></div></div>
       </div>
-
-      <p>このモデルで逆算すると、市場はHS承認申請の進展を評価しつつも、商業化前・単一資産依存・希薄化を強く割り引いています。</p>
+      <!-- market_reverse.conclusion：現値が自分のどの前提に相当するか -->
+      <p>同じ資産CFと資金条件を市場も使うという仮定で、悲観・楽観の株主価値端点から現在時価総額の位置を逆算します。現値に合うよう成功CFを先に調整していません。独立DCF・市場コンセンサスによる検証は未実施です。</p>
     </div>
   </div>
 </section>
 
-
+<!-- Layer1/2：3シナリオ。dl の項目は使用手法に合わせて変える（rNPV/SOTP/EV-Sales/PER等） -->
 <section class="card" id="scenarios">
   <h2>未来はこの3パターン</h2>
-  <p class="lead">現在株価から独立して、HS承認確率、PsA拡大余地、資金余力、商業化前リスクを置きました。</p>
+  <p class="lead">対象は2027年末。2028～2037年の成功時税後CFを割引き、資産別成功確率を反映して残存開発費を控除。2027年末前の支出と2028年以降の開発費を分けます。</p>
   <div class="scenarios">
     <article class="scenario bear">
-      <div class="scenario-head"><span>悲観ケース</span><b>28%</b></div>
-      <div class="scenario-price">$11.00</div>
-      <div class="small">現値比 -3.9%</div>
-      <dl><div><dt>HS BLA</dt><dd>遅延・受理懸念</dd></div><div><dt>PsA</dt><dd>弱いデータ</dd></div><div><dt>資金</dt><dd>追加希薄化懸念</dd></div><div><dt>株価</dt><dd>$11.00</dd></div></dl>
-
+      <div class="scenario-head"><span>悲観ケース</span><b>30%</b></div>
+      <div class="scenario-price">$2.05</div>
+      <div class="small">現値比 -84.5%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>資産価値</dt><dd>$109.1M</dd></div><div><dt>株主価値</dt><dd>$187.5M</dd></div><div><dt>将来株式</dt><dd>91.60M</dd></div></dl>
+      <!-- 例: <div><dt>事業価値</dt><dd>25.9兆円</dd></div> を手法に応じて数行 -->
     </article>
     <article class="scenario base">
-      <div class="scenario-head"><span>標準ケース</span><b>47%</b></div>
-      <div class="scenario-price">$25.00</div>
-      <div class="small">現値比 +118.3%</div>
-      <dl><div><dt>HS BLA</dt><dd>予定通り提出・受理</dd></div><div><dt>PsA</dt><dd>一定の有効性</dd></div><div><dt>資金</dt><dd>商業化準備に十分</dd></div><div><dt>株価</dt><dd>$25.00</dd></div></dl>
+      <div class="scenario-head"><span>標準ケース</span><b>45%</b></div>
+      <div class="scenario-price">$10.37</div>
+      <div class="small">現値比 -21.6%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>資産価値</dt><dd>$810.4M</dd></div><div><dt>株主価値</dt><dd>$928.9M</dd></div><div><dt>将来株式</dt><dd>89.60M</dd></div></dl>
     </article>
     <article class="scenario bull">
       <div class="scenario-head"><span>楽観ケース</span><b>25%</b></div>
-      <div class="scenario-price">$42.00</div>
-      <div class="small">現値比 +266.8%</div>
-      <dl><div><dt>HS BLA</dt><dd>優先審査期待</dd></div><div><dt>PsA</dt><dd>強いデータ</dd></div><div><dt>販売準備</dt><dd>高評価</dd></div><div><dt>株価</dt><dd>$42.00</dd></div></dl>
+      <div class="scenario-price">$23.39</div>
+      <div class="small">現値比 +76.9%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>資産価値</dt><dd>$1936.2M</dd></div><div><dt>株主価値</dt><dd>$2133.1M</dd></div><div><dt>将来株式</dt><dd>91.21M</dd></div></dl>
     </article></div>
 </section>
 
-
+<!-- Layer2：価格別アクションマップ ＋ 株価を動かす材料 -->
 <section class="grid-2">
   <div class="card">
     <h2>この値段ならどう見る？</h2>
-
-    <div class="zone"><div><b>$11未満</b><span>★★★</span></div><p>申請遅延や安全性懸念を強く織り込む価格帯です。</p></div><div class="zone"><div><b>$11〜$25</b><span>★★★</span></div><p>申請前の中立圏。今の株価はここです。</p></div><div class="zone"><div><b>$25〜$42</b><span>★★</span></div><p>BLA進展とPsA成功を評価し始める価格帯です。</p></div><div class="zone"><div><b>$42超</b><span>★</span></div><p>優先審査、強いPsA、商業化期待が同時に必要です。</p></div>
-
+    <!-- 4〜5帯。「買い/売り」は断定しない。星は割安度の目安 -->
+    <div class="zone"><div><b>$2.05未満</b></div><p>悲観モデル外。臨床・資金の追加悪化を検討。</p></div><div class="zone"><div><b>$2.05～$10.37</b></div><p>悲観と標準の間。標準達成を保証しない。</p></div><div class="zone"><div><b>$10.37～$23.39</b></div><p>開発成功・採用と資金の強い条件が必要。</p></div><div class="zone"><div><b>$23.39超</b></div><p>今回の楽観端点以外の価値が必要。前提の再検証が重要。</p></div>
+    <!-- 例: <div class="zone"><div><b>48,000円未満</b><span>★★★★★</span></div><p>悲観ケース以下。下方リスクを相当織り込む</p></div> -->
   </div>
   <div class="card">
     <h2>株価を動かす4つ</h2>
-
-    <div class="signal"><div><b>HS BLA提出</b><span class="up">最重要</span></div><p>2026年9月末予定の提出完了が最大材料です。</p></div><div class="signal"><div><b>PDUFA日程</b><span class="up">確認</span></div><p>11月末見込みの受理・優先審査判断を確認します。</p></div><div class="signal"><div><b>PsAデータ</b><span class="up">上値</span></div><p>IZARの読出しがHS以外の価値を左右します。</p></div><div class="signal"><div><b>希薄化</b><span class="down">注意</span></div><p>公募増資後も追加資金調達リスクは監視します。</p></div>
-
+    <!-- 各材料に up=追い風 / down=注意 / flat を付ける -->
+    <div class="signal"><div><b>HSのBLA受理・審査計画</b></div><p>BLA受理判断を11月末まで、PDUFA目標日通知を12月中旬までに見込む。優先審査や承認は未確定。確定した審査期限は取得資料で確認できない。 [S1,S2]</p></div><div class="signal"><div><b>PsAのIZAR・P-OLARISデータ</b></div><p>IZAR-2の16週トップラインはQ1、IZAR-1の52週はQ2、IZAR-2の52週はQ4 2027予定。P-OLARISはearly 2027であり確定日ではない。 [S1,S2]</p></div><div class="signal"><div><b>潜在上市・資金と製造準備</b></div><p>会社は米国初回発売を2027年後半に見込む。承認・製造・保険アクセス・資金確保が条件。製品販売開始を完了済みとして扱わない。 [S1,S2]</p></div><div class="signal"><div><b>臨床と財務の反証</b></div><p>SLK単一資産への集中、規制受理・追加データ・安全性・ラベル範囲、上市後採用と資金支出がリスク。会社の発売見通し2027年後半は承認を条件とする。借入枠は無条件の非希薄化資金ではない。 [S1,S2]</p></div>
+    <!-- 例: <div class="signal"><div><b>AI向けSSD需要</b><span class="up">追い風</span></div><p>…</p></div> -->
   </div>
 </section>
 
-
+<!-- Layer2：良い点 / 気になる点（対比） -->
 <section class="grid-2">
   <div class="card">
     <h2>ここは普通に強い</h2>
-    <ul class="clean"><li>HSのWeek 52データで持続性と安全性が示されました。</li><li>Pre-BLA完了により、申請方針が具体化しています。</li><li>6月の増資で商業化準備資金が厚くなりました。</li><li>PsA、axSpA、PPPへ適応拡大余地があります。</li></ul>
-
+    <ul class="clean"><li>主要候補について臨床・規制の次の開発計画を会社が説明。[S1,S2]</li><li>現金・有価証券を保有。未使用枠と区別して計上。[S2]</li><li>成功時の適応・普及拡大余地を検討できるが、保証ではない。</li></ul>
+    <!-- 例: <li>FY2025売上2.34兆円で過去最高。</li> を3〜5件 -->
   </div>
   <div class="card">
     <h2>ここで事故るかも</h2>
-    <ul class="clean"><li>商業化前で売上はまだありません。</li><li>Sonelokimabへの依存が大きいです。</li><li>FDA審査や優先審査の結果で評価が大きく変わります。</li><li>増資による希薄化が株価の重しになります。</li></ul>
-
+    <ul class="clean"><li>SLK単一資産への集中、規制受理・追加データ・安全性・ラベル範囲、上市後採用と資金支出がリスク。会社の発売見通し2027年後半は承認を条件とする。借入枠は無条件の非希薄化資金ではない。</li><li>成功時CF・価格・費用・確率への感応度が大きい。</li><li>臨床成功だけで承認・上市・保険採用は保証されない。</li></ul>
+    <!-- 2つ目のカードのliは自動で赤「!」になる -->
   </div>
 </section>
 
-
+<!-- Layer3：計算ロジック -->
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
-  <p class="lead">臨床段階バイオのため、短期利益倍率ではなく、承認申請と適応拡大の成功確率を反映した悲観・標準・楽観シナリオで見ました。</p>
+  <p class="lead">2027年末からの資産別成功時税後CFを割引し、適応別成功確率を1回乗じて残存開発費を控除。2027年末の自由現金を加え、借入・その他請求権を控除。必要ならオプション行使現金と株式を同時反映する。</p>
   <div class="table-wrap"><table>
-  <thead><tr><th>ケース</th><th>主な前提</th><th>価値の見方</th><th>計算株価</th><th>確率</th><th>確率加重</th></tr></thead>
-  <tbody><tr><td>悲観</td><td>BLA遅延・PsA弱い</td><td>現金価値と限定的パイプライン</td><td>$11.00</td><td>28%</td><td>$3.08</td></tr><tr><td>標準</td><td>BLA提出・受理</td><td>HS承認期待を中心に評価</td><td>$25.00</td><td>47%</td><td>$11.75</td></tr><tr><td>楽観</td><td>優先審査・PsA強い</td><td>複数適応と商業化を評価</td><td>$42.00</td><td>25%</td><td>$10.50</td></tr></tbody>
+  <thead><tr><th>ケース</th><th>主資産確率</th><th>CF倍率</th><th>割引率</th><th>残存開発費PV</th><th>資産価値</th><th>期末現金等</th><th>借入</th><th>将来株式</th><th>価格</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>35%</td><td>0.7倍</td><td>14%</td><td>$160M</td><td>$109.1M</td><td>$378.5M</td><td>$300.0M</td><td>91.60M</td><td>$2.05</td></tr><tr><td>標準</td><td>65%</td><td>1倍</td><td>12%</td><td>$180M</td><td>$810.4M</td><td>$318.5M</td><td>$200.0M</td><td>89.60M</td><td>$10.37</td></tr><tr><td>楽観</td><td>85%</td><td>1.4倍</td><td>10%</td><td>$220M</td><td>$1936.2M</td><td>$258.5M</td><td>$100.0M</td><td>91.21M</td><td>$23.39</td></tr></tbody>
   </table></div>
-
-  <p class="notice"><b>重要：</b>現在株価に合わせた逆算ではありません。申請・審査・追加データの成否で評価レンジが大きく変わる前提です。</p>
+  <!-- 現値に合わせた逆算ではない旨、未開示前提の注意など -->
+  <p class="notice"><b>重要：</b>将来CFと成功確率は当方仮定。資産価値は残存開発費控除後。その他請求権・行使現金・追加株式を株主価値の橋渡しで処理。現金と融資枠を重複加算しません。</p>
 </section>
 
-
+<!-- Layer3：成立条件 -->
 <section class="card" id="conditions">
   <h2>この未来になる条件</h2>
-  <details open><summary>悲観ケース：$11.00 / 確率28%</summary><p>BLA提出や受理に遅れが出る、またはPsAデータが弱く、承認後の市場浸透にも疑問が残るケースです。</p></details><details><summary>標準ケース：$25.00 / 確率47%</summary><p>HS BLAが予定通り提出・受理され、優先審査は不確定ながら承認期待が保たれるケースです。</p></details><details><summary>楽観ケース：$42.00 / 確率25%</summary><p>優先審査期待が高まり、PsAデータも強く、HS以外の価値も上乗せされるケースです。</p></details>
-
+  <details><summary>悲観：$2.05／30%</summary><p>2027年末評価。主要資産成功確率35%、CF倍率0.7、割引率14%。残存開発費PV160百万USD。 2027年末まで純支出320百万USD、新規借入200百万USD、その他請求権控除0百万USD。期末自由現金378.462百万USD、負債300.010百万USD。 追加報酬5百万株。行使現金0.000百万USDを株式追加と同時反映。開発の成功・融資・採用は確約されない。</p></details><details><summary>標準：$10.37／45%</summary><p>2027年末評価。主要資産成功確率65%、CF倍率1、割引率12%。残存開発費PV180百万USD。 2027年末まで純支出280百万USD、新規借入100百万USD、その他請求権控除0百万USD。期末自由現金318.462百万USD、負債200.010百万USD。 追加報酬3百万株。行使現金0.000百万USDを株式追加と同時反映。開発の成功・融資・採用は確約されない。</p></details><details><summary>楽観：$23.39／25%</summary><p>2027年末評価。主要資産成功確率85%、CF倍率1.4、割引率10%。残存開発費PV220百万USD。 2027年末まで純支出240百万USD、新規借入0百万USD、その他請求権控除0百万USD。期末自由現金258.462百万USD、負債100.010百万USD。 追加報酬2百万株。行使現金38.448百万USDを株式追加と同時反映。開発の成功・融資・採用は確約されない。</p></details>
+  <!-- 例: <details open><summary>Base：$10.37 / 確率45%</summary><p>…</p></details> を3つ -->
 </section>
 
-
+<!-- Layer3：感応度 ＋ 分布（モンテカルロは実施時のみ） -->
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
     <div class="table-wrap"><table>
-      <thead><tr><th>前提</th><th>弱い</th><th>標準</th><th>強い</th></tr></thead>
-      <tbody><tr><td>HS承認確率</td><td>遅延・追加照会 → $11</td><td>予定通り受理 → $25</td><td>優先審査期待 → $42</td></tr><tr><td>PsA価値</td><td>失敗・遅延</td><td>一部評価</td><td>複数適応の柱</td></tr><tr><td>資金評価</td><td>追加希薄化懸念</td><td>2027年末まで余力</td><td>商業化準備を評価</td></tr></tbody>
+      <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
+      <tbody><tr><td>主要資産成功確率</td><td>$8.29</td><td>$10.37</td><td>$12.45</td></tr><tr><td>割引率</td><td>$11.79</td><td>$10.37</td><td>$9.14</td></tr></tbody>
     </table></div>
-    <p class="small">臨床バイオでは、1つの規制イベントで成功確率と倍率が同時に動きます。</p>
+    <p class="small">主要資産成功確率と割引率を1つずつ変更。他は標準ケースに固定し、オプション行使を必要に応じ再判定。CFと確率の独立性を保証する表ではありません。</p>
   </div>
   <div class="card">
     <h2>どの価格に行きやすい？</h2>
-    <p class="lead">モンテカルロではなく、申請前イベントの3点分布です。</p>
-    <div class="dist-row"><span>$11</span><div class="track"><i style="width:28%"></i></div><b>28%</b></div><div class="dist-row"><span>$25</span><div class="track"><i style="width:47%"></i></div><b>47%</b></div><div class="dist-row"><span>$42</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>
-
-    <p>期待値は標準ケース寄りですが、実際の株価はBLA受理とPsAデータで上下に振れやすいです。</p>
+    <p class="lead">3点の離散分布のみ。モンテカルロは未実施。</p>
+    <div class="signal"><div><b>悲観：$2.05</b></div><p>当方主観確率 30%</p></div><div class="signal"><div><b>標準：$10.37</b></div><p>当方主観確率 45%</p></div><div class="signal"><div><b>楽観：$23.39</b></div><p>当方主観確率 25%</p></div>
+    <!-- 例: <div class="dist-row"><span>5万円未満</span><div class="track"><i style="width:7.6%"></i></div><b>7.6%</b></div> -->
+    <p>悲観30%／標準45%／楽観25%の主観配分。臨床・規制・資金リスクを悲観側へやや厚く置く分析上の仮定で、実測成功率ではありません。</p>
   </div>
 </section>
 
-
+<!-- 次の決算/イベントで見る場所（watch_items） -->
 <section class="card">
   <h2>次の決算で見る場所</h2>
-  <div class="signal"><div><b>HS BLA提出</b></div><p>予定通り2026年9月末に提出されるかを確認します。</p></div><div class="signal"><div><b>FDA受理・優先審査</b></div><p>11月末見込みのPDUFA日程とPriority Reviewの可否を確認します。</p></div><div class="signal"><div><b>IZAR-1/2</b></div><p>PsAの有効性、安全性、競合比較を確認します。</p></div>
-
+  <div class="signal"><div><b>HSのBLA受理・審査計画</b></div><p>公式発表・各決算時：予定・データ・資金条件の変更</p></div><div class="signal"><div><b>PsAのIZAR・P-OLARISデータ</b></div><p>公式発表・各決算時：予定・データ・資金条件の変更</p></div><div class="signal"><div><b>潜在上市・資金と製造準備</b></div><p>公式発表・各決算時：予定・データ・資金条件の変更</p></div>
+  <!-- 例: <div class="signal"><div><b>2026年7月31日の1Q決算</b></div><p>…</p></div> -->
 </section>
 
-
+<!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
   <div class="table-wrap"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
-  <tbody><tr><td>評価基準株価</td><td>$11.45</td><td>市場データで確認</td><td>2026-09-30</td><td>2026/09/29終値</td></tr><tr><td>現金等</td><td>$537.0M</td><td>会社Q2リリース</td><td>2026/06/30</td><td>短期市場性債券含む</td></tr><tr><td>資金余力</td><td>mid-2028まで</td><td>会社Q2リリース</td><td>2026/08/10</td><td>会社見通し</td></tr><tr><td>HS BLA</td><td>2026年9月末予定</td><td>会社リリース</td><td>2026/06/21</td><td>9月30日時点で完了発表を確認できず</td></tr></tbody>
+  <tbody><tr><td>基準株価</td><td>$13.22</td><td>市場データ</td><td>2026-11-25T21:00:02+00:00 [S3]</td></tr><tr><td>株式数</td><td>86.60百万株</td><td>このレポートの推定</td><td>現在評価用希薄化株式86,604,627株。普通株85,106,685、RSU等497,942、前払ワラント1,000,000、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。</td></tr><tr><td>成功確率・CF・費用</td><td>ケース別に表示</td><td>このレポートの推定</td><td>患者数・単価・普及率・CF率を条件に置く。会社予想ではない。</td></tr><tr><td>現金・有価証券</td><td>$498.462M</td><td>公式情報で確認済み</td><td>2026年9月末 [S2]</td></tr><tr><td>将来支出・借入・株式</td><td>2027年末前後を分ける</td><td>このレポートの推定</td><td>悲観は2027年末まで純支出320百万USD、新規借入200百万USD、その他請求権控除0百万USD、追加報酬5百万株。標準は2027年末まで純支出280百万USD、新規借入100百万USD、その他請求権控除0百万USD、追加報酬3百万株。楽観は2027年末まで純支出240百万USD、新規借入0百万USD、その他請求権控除0百万USD、追加報酬2百万株。Herculesの新規借入は現金と負債へ同額計上。条件付き枠の実行を確約とは扱わない。2027年末前の支出と2028年以降の残存開発費を分ける。行使されるオプションの行使現金と追加株式を同時計上する。</td></tr><tr><td>総合判定</td><td>3レポート総合判定64.2、中立。構成は株価評価60.0、カタリスト65.0、企業基盤リスク80.0。資産rNPVへの期待負担、公式予定と資金・単一資産リスクから付けた主観評価。株価指標から自動生成しない。</td><td>このレポートの推定</td><td>3レポートの事業・材料・評価リスクを分析日時点で再評価。</td></tr></tbody>
   </table></div>
 </section>
 
-
+<!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details open><summary>手法選定理由</summary><p>MLTXは商業化前の臨床段階バイオです。PERではなく、申請・審査・適応拡大の確率を反映したシナリオ法を使います。</p></details><details><summary>優先審査について</summary><p>Priority Reviewは上振れ材料ですが、FDA判断次第です。取れない場合でも会社は2027年後半の米国ローンチを想定しています。</p></details><details><summary>主要出典</summary><p><a href="https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-immunotherapeutics-announces-positive-outcome-its-final" target="_blank" rel="noopener noreferrer">Q1・Pre-BLAリリース</a>、<a href="https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-announces-week-52-results-sonelokimab-its-phase-3-vela" target="_blank" rel="noopener noreferrer">VELA Week 52</a>、<a href="https://www.globenewswire.com/news-release/2026/06/24/3316568/0/en/moonlake-immunotherapeutics-announces-pricing-of-upsized-200-million-public-offering.html" target="_blank" rel="noopener noreferrer">増資リリース</a>、<a href="https://stockanalysis.com/stocks/mltx/" target="_blank" rel="noopener noreferrer">株価・統計</a>。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></details>
-
+  <details><summary>SLK-HS</summary><p>2028～2037年の成功時税後CF。ピークは仮定8万人×年ネット単価1万ドル×CF率40%＝320百万ドル。<p>成功時CF（百万USD、2028年から年順）：0、40、100、180、260、300、320、320、300、250</p></p></details><details><summary>SLK-PsA</summary><p>2028～2037年の成功時税後CF。ピークは仮定15万人×年ネット単価8000ドル×CF率35%＝420百万ドル。HSと別の患者需要を置く。PPP等の追加価値は加算しない。<p>成功時CF（百万USD、2028年から年順）：0、0、30、80、150、250、350、400、420、400</p></p></details><details><summary>現在株式・潜在株</summary><p>現在評価用希薄化株式86,604,627株。普通株85,106,685、RSU等497,942、前払ワラント1,000,000、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。 [S2]</p></details><details><summary>資金・将来支出</summary><p>悲観は2027年末まで純支出320百万USD、新規借入200百万USD、その他請求権控除0百万USD、追加報酬5百万株。標準は2027年末まで純支出280百万USD、新規借入100百万USD、その他請求権控除0百万USD、追加報酬3百万株。楽観は2027年末まで純支出240百万USD、新規借入0百万USD、その他請求権控除0百万USD、追加報酬2百万株。Herculesの新規借入は現金と負債へ同額計上。条件付き枠の実行を確約とは扱わない。2027年末前の支出と2028年以降の残存開発費を分ける。行使されるオプションの行使現金と追加株式を同時計上する。 過去12か月営業CF-244.041、設備投資0.000百万USD。最低運転資金50百万USDは当方仮定。簡易資金余力は22.1か月。将来費用の増加を予測した値ではなく、会社の資金見通しと異なる。 [S2]</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定64.2、中立。構成は株価評価60.0、カタリスト65.0、企業基盤リスク80.0。資産rNPVへの期待負担、公式予定と資金・単一資産リスクから付けた主観評価。株価指標から自動生成しない。</p></details><details><summary>市場データの補助情報</summary><p>52週高値23.29・安値9.46USD。20営業日価格リターン7.39%。新しい比較指数・オプション・空売りは未取得。価格指標を総合判定や成功確率へ使わない。 [S3]</p></details><details><summary>主要出典・更新履歴</summary><p><ul><li><a href="https://ir.moonlaketx.com/news-releases/news-release-details/moonlake-reports-third-quarter-2026-financial-results-and" target="_blank" rel="noopener noreferrer">S1：MLTX 2026年3Q決算公式発表</a>（取得 2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1821586/000182158626000015/mnlk-20260930.htm" target="_blank" rel="noopener noreferrer">S2：MLTX 2026年3Q Form 10-Q</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/MLTX?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S3：MLTX Yahoo Finance日足・価格</a>（取得 2026-11-27）</li></ul><p>2026-11-27 全面再作成。</p></p></details>
+  <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
+       転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
+       それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->
 </section>
 
 <section class="card notice">
-  <h3>免責</h3><p>本資料は情報提供を目的とした試算です。投資助言ではありません。臨床段階バイオは治験結果、規制、資金調達で大きく変動します。</p>
+  <h3>免責</h3><p>情報提供・教育目的の条件付き分析です。投資助言・売買推奨ではありません。未承認薬の有効性・安全性・販売成功を保証せず、臨床・規制・資金条件で大きく変わります。価格比較は配当を含みません。</p>
 </section>
-<footer>SiM MARKET LAB｜ムーンレイク・イミュノセラピューティクス（MLTX）株価シナリオ｜作成日 2026-09-30</footer>
+<footer>評価基準株価$13.22／市場時刻2026-11-25T21:00:02+00:00。分析基準日2026-11-27、評価対象2027年末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 <script src="../../lab/assets/js/live-report-price.js" defer></script>
-<script>
-document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
-  button.addEventListener('click', function () {
-    var target = document.getElementById(button.dataset.scrollTarget);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
 </body></html>

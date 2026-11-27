@@ -8,27 +8,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-
+/*
+ ================================================================
+  STOCK GUIDE TEMPLATE v4  SiM MARKET LAB ダーク版 / ChatGPT index.html
+  ----------------------------------------------------------------
+  ★★ デザインロック（ぶれ防止）★★
+  ・この <style> ブロックとページ骨格は「改変禁止」。1文字も変えない。逐語コピーする。
+  ・色はSiMグリーンで固定。銘柄・業界でアクセント色を変えない。
+  ・差し替えてよいのは {{ }} プレースホルダーの中身（＝テキスト）だけ。
+  ・セクションの数・順番・各コンポーネントの個数（SEC1のcard-smは4枚 等）は固定。
+    追加・削除・並べ替えをしない。
+  ----------------------------------------------------------------
+  ブランド：黒背景 × ネオングリーン × 白文字（キーワードだけ緑）。Instagram(sim.marketlab)準拠。
+  設計思想：「表層＝3秒で意味が取れる／深層＝読みたい人だけ開く」の2層構造。
+  ・見出しの重要ワードは <span class="g">…</span> で緑ハイライト。
+ ================================================================
+*/
 
 :root {
-
+  /* ── ブランド・アクセント：SiMグリーンで固定（銘柄・業界で変えない＝デザインぶれ防止） ── */
   --accent:        #6EE24E;
   --accent-bright: #8BF56B;
   --accent-tint:   rgba(110,226,78,.12);
   --accent-line:   rgba(110,226,78,.38);
 
-
+  /* ── ダークシェル（変更不要・全銘柄共通） ── */
   --bg:        #0a0c0a;
-  --surface:   #141815;
-  --surface-2: #1b201c;
+  --surface:   #141815;   /* カード面 */
+  --surface-2: #1b201c;   /* 少し明るい面 */
 
-
+  /* レガシー変数マッピング（本文markupが参照。名前は据え置き、意味をダーク用に再定義） */
   --c-primary-50:  var(--accent-tint);        --c-primary-100: rgba(110,226,78,.18);
   --c-primary-200: rgba(110,226,78,.55);      --c-primary-400: var(--accent);
   --c-primary-600: var(--accent);             --c-primary-800: var(--accent-bright);
   --c-accent-50:   var(--accent-tint);        --c-accent-400:  var(--accent);   --c-accent-600: var(--accent-bright);
 
-
+  /* システム色（ダーク版：薄背景は半透明の暗色、文字は明るい色に反転） */
   --amber-50:  rgba(251,191,36,.13); --amber-400: #fbbf24; --amber-600: #fcd34d; --amber-800: #fde68a;
   --red-50:    rgba(248,113,113,.13); --red-400:  #f87171; --red-600:   #fca5a5;
   --blue-50:   rgba(96,165,250,.13); --blue-400:  #60a5fa; --blue-600:  #93c5fd; --blue-800: #bfdbfe;
@@ -47,12 +62,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); background: var(--bg); color: var(--gray-900); line-height: 1.85; font-size: 16px; -webkit-text-size-adjust: 100%; }
-.g { color: var(--accent); }
+.g { color: var(--accent); }               /* 緑キーワード */
 
-
+/* 読了プログレスバー */
 .progress-bar { position: fixed; top: 0; left: 0; height: 4px; width: 0%; z-index: 200; background: var(--accent); box-shadow: 0 0 12px var(--accent); transition: width .1s linear; }
 
-
+/* ── HERO（黒＋緑グロー＋ハーフトーン・ドット） ── */
 .hero {
   background: radial-gradient(120% 90% at 50% -10%, #12251a 0%, #0b0f0c 45%, var(--bg) 75%);
   color: #fff; padding: 58px 22px 66px; text-align: center; position: relative; overflow: hidden;
@@ -74,7 +89,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .hero-tag { background: rgba(255,255,255,.04); border: 1px solid var(--gray-200); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500; color: #d8ded8; }
 
-
+/* ── 30秒サマリー（でかい数字カード） ── */
 .tldr-hero { max-width: 820px; margin: -30px auto 0; padding: 0 16px; position: relative; z-index: 5; }
 .tldr-hero-inner { background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px 20px 8px; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
 .tldr-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 17px; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
@@ -86,17 +101,16 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .stat-label { font-size: 12px; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
 .stat-note  { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
 
-
+/* ── NAV ── */
 .nav-index { background: rgba(10,12,10,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
 .nav-inner { max-width: 820px; margin: 0 auto; padding: 0 16px; display: flex; overflow-x: auto; scrollbar-width: none; }
 .nav-inner::-webkit-scrollbar { display: none; }
-.nav-item { appearance: none; flex-shrink: 0; padding: 14px 14px; font: inherit; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; background: transparent; border: 0; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; cursor: pointer; }
-.nav-item:hover,.nav-item:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
-.nav-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.nav-item { flex-shrink: 0; padding: 14px 14px; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; }
+.nav-item:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 .container { max-width: 820px; margin: 0 auto; padding: 0 16px; }
 
-
+/* ── SECTION ── */
 .section { padding: 46px 0 34px; border-bottom: 1px solid var(--gray-200); opacity: 0; transform: translateY(16px); animation: fadeUp .5s ease forwards; }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -107,36 +121,36 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .section-title .g { color: var(--accent); }
 .section-sub { font-size: 13px; color: var(--gray-500); margin-top: 6px; font-weight: 500; }
 
-
+/* ── ⚡3秒まとめ ── */
 .tldr { background: var(--accent-tint); border: 1px solid var(--accent-line); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px; }
 .tldr-label { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-weight: 900; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
 .tldr ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .tldr li { font-size: 15.5px; font-weight: 500; color: #eef2ee; line-height: 1.7; padding-left: 30px; position: relative; }
 .tldr li::before { content: attr(data-emoji); position: absolute; left: 0; top: 0; font-size: 18px; }
 
-
+/* ── 👉つまり ── */
 .sowhat { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 14px; padding: 12px 16px 12px 46px; margin: 14px 0; position: relative; }
 .sowhat::before { content: '👉'; position: absolute; left: 14px; top: 11px; font-size: 20px; }
 .sowhat b { color: var(--accent); }
 .sowhat p { font-size: 14.5px; color: var(--gray-700); line-height: 1.8; }
 
-
+/* ── シグナル判定ピル ── */
 .signal { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: 12.5px; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
 .signal.bull    { background: var(--green-50); color: var(--accent); }
 .signal.neutral { background: var(--amber-50); color: var(--amber-600); }
 .signal.bear    { background: var(--red-50);   color: var(--red-600); }
 
-
+/* ── ★重要度 ── */
 .rating { font-family: var(--font-num); letter-spacing: 1px; color: var(--accent); font-size: 14px; }
 .rating .off { color: var(--gray-300); }
 
-
+/* ── 絵文字箇条書き ── */
 .keypoints { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 8px 0; }
 .keypoints li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.7; color: #e4e9e4; }
 .keypoints .kp-emoji { font-size: 22px; flex-shrink: 0; line-height: 1.4; }
 .keypoints .kp-text b { color: var(--accent); }
 
-
+/* ── CARDS ── */
 .card { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; margin-bottom: 12px; }
 .card-sm { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 16px 18px; }
@@ -144,7 +158,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .card-sm .card-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; margin-bottom: 4px; color: var(--accent); }
 .card-sm .card-desc { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── 会社クイックデータ（企業詳細を厚くする一覧） ── */
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px,1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; margin: 4px 0 14px; }
 .facts > div { background: var(--surface); padding: 12px 14px; }
 .facts dt { font-size: 11px; color: var(--gray-500); font-weight: 700; margin-bottom: 3px; }
@@ -152,7 +166,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .block-label { font-family: var(--font-display); font-weight: 900; font-size: 15px; color: #fff; margin: 18px 0 8px; display: flex; align-items: center; gap: 7px; }
 .block-label .g { color: var(--accent); }
 
-
+/* ── TERM ACCORDION ── */
 .term-list { display: flex; flex-direction: column; gap: 10px; }
 .term-item { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; transition: border-color .2s; }
 .term-item:hover { border-color: var(--accent); }
@@ -167,7 +181,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .term-body p { font-size: 14.5px; color: var(--gray-700); line-height: 1.85; margin: 10px 0 0; }
 .term-body b { color: var(--accent); }
 
-
+/* ── CALL-OUT ── */
 .ex-box, .ex-box-accent, .ex-box-amber, .ex-box-red { border-radius: 0 8px 8px 0; padding: 12px 16px; margin-top: 12px; }
 .ex-box        { background: var(--accent-tint); border-left: 4px solid var(--accent); }
 .ex-box-accent { background: var(--accent-tint); border-left: 4px solid var(--accent); }
@@ -179,7 +193,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .ex-label-red { color: var(--red-600); }
 .ex-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── INFO BOXES（リスク4分類） ── */
 .info-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; margin-top: 16px; }
 .info-box { border-radius: 14px; padding: 16px 18px; border: 1px solid var(--gray-200); }
 .info-box-primary { background: var(--accent-tint); }
@@ -197,7 +211,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .info-title-gray { color: #d8ded8; }
 .info-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── TIMELINE ── */
 .timeline { position: relative; padding-left: 30px; }
 .timeline::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 6px; width: 3px; background: rgba(110,226,78,.25); border-radius: 3px; }
 .tl-row { position: relative; margin-bottom: 22px; }
@@ -206,7 +220,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .tl-title { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .tl-desc { font-size: 13.5px; color: var(--gray-500); line-height: 1.75; }
 
-
+/* ── BADGES ── */
 .badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 6px; font-weight: 700; }
 .badge-primary { background: var(--accent-tint); color: var(--accent); }
 .badge-accent  { background: var(--accent-tint); color: var(--accent); }
@@ -216,7 +230,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .badge-green   { background: var(--green-50);  color: var(--accent); }
 .badge-violet  { background: var(--violet-50); color: var(--violet-600); }
 
-
+/* ── COMPARE TABLE ── */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--gray-200); border-radius: 14px; margin: 12px 0; }
 .compare-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 480px; }
 .compare-table th { background: var(--gray-50); padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; color: var(--gray-500); letter-spacing: .03em; border-bottom: 1px solid var(--gray-200); white-space: nowrap; }
@@ -225,7 +239,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .compare-table tr:hover td { background: rgba(255,255,255,.02); }
 .compare-table .me { background: var(--accent-tint); font-weight: 700; color: var(--accent); }
 
-
+/* ── HIGHLIGHT（インスタの“まとめ”枠：ダーク＋緑ボーダー） ── */
 .highlight { background: var(--surface); border: 1.5px solid var(--accent-line); border-radius: var(--radius); padding: 22px 24px; margin: 22px 0; position: relative; overflow: hidden; }
 .highlight::before { content:''; position:absolute; right:-30px; bottom:-30px; width:160px; height:160px;
   background-image: radial-gradient(var(--accent) 1px, transparent 1.5px); background-size: 13px 13px; opacity:.12; }
@@ -233,21 +247,21 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .highlight p { font-size: 14.5px; color: #d8ded8; line-height: 1.85; position: relative; }
 .highlight b { color: var(--accent); }
 
-
+/* ── PRODUCT GRID ── */
 .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; margin: 16px 0; }
 .product-box { border-radius: 14px; padding: 18px 14px; text-align: center; border: 1px solid var(--gray-200); background: var(--surface); }
 .product-symbol { font-family: var(--font-num); font-size: 30px; font-weight: 700; margin-bottom: 4px; color: var(--accent); }
 .product-name { font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px; color: #fff; }
 .product-use { font-size: 12px; line-height: 1.55; color: var(--gray-700); }
 
-
+/* ── MISC ── */
 .lead { font-size: 16.5px; color: #dbe1db; line-height: 1.9; margin-bottom: 20px; font-weight: 500; }
 .lead .g { color: var(--accent); }
 strong { font-weight: 700; color: #fff; }
 strong.g { color: var(--accent); }
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; }
 
-
+/* ── FOOTER ── */
 .footer { padding: 40px 22px; text-align: center; color: var(--gray-500); font-size: 13px; border-top: 1px solid var(--gray-200); margin-top: 32px; }
 .footer .brandmark { margin-bottom: 14px; }
 
@@ -313,45 +327,54 @@ strong.g { color: var(--accent); }
 
 <div class="progress-bar" id="progressBar"></div>
 
-
+<!-- ========================================================
+  HERO
+  ABCL アブセレラ 臨床段階バイオ・抗体医薬 抗体医薬候補を探索・開発する。提携契約から研究費、契約一時金、将来のマイルストーン・ロイヤルティを得る。自社候補の臨床開発にも投資する。提携一時金受領と売上計上は時点が異なる。 <span class="hero-tag">米国株</span><span class="hero-tag">Nasdaq</span><span class="hero-tag">臨床開発</span><span class="hero-tag">承認前</span> 2026-11-27
+  ※見出しの重要ワードは <span class="g">…</span> で緑ハイライト
+======================================================== -->
 <div class="hero">
   <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
-  <div class="hero-badge">ABCL 完全入門ガイド ・ 2026-09-30版</div>
+  <div class="hero-badge">ABCL 完全入門ガイド ・ 2026-11-27版</div>
   <h1>アブセレラ（ABCL）を<br><span class="g">まるっと</span>解説</h1>
-  <p>AIと実験基盤を使って抗体医薬を発見し、自社パイプラインと提携プログラムの両方で価値化を狙う臨床段階バイオ企業です。</p>
+  <p>抗体医薬候補を探索・開発する。提携契約から研究費、契約一時金、将来のマイルストーン・ロイヤルティを得る。自社候補の臨床開発にも投資する。提携一時金受領と売上計上は時点が異なる。</p>
   <div class="hero-tags">
-
-    <span class="hero-tag">米国株</span><span class="hero-tag">バイオ</span><span class="hero-tag">抗体創薬</span><span class="hero-tag">Nasdaq</span>
+    <!-- 例: <span class="hero-tag">⚛️ 同位体って何？</span> -->
+    <span class="hero-tag">米国株</span><span class="hero-tag">Nasdaq</span><span class="hero-tag">臨床開発</span><span class="hero-tag">承認前</span>
   </div>
 </div>
 
-
+<!-- 30秒サマリー：でかい数字カード3〜4枚（上昇は .up / 下落は .down） -->
 <div class="tldr-hero">
   <div class="tldr-hero-inner">
     <div class="tldr-hero-title">📊 まずは数字でざっくり</div>
     <div class="stat-strip">
-
-      <div class="stat"><div class="stat-value">$14.82</div><div class="stat-label">評価基準株価</div><div class="stat-note">Phase 2好結果後の更新基準</div></div><div class="stat"><div class="stat-value">$4.8B</div><div class="stat-label">時価総額の目安</div><div class="stat-note">約3.05億株で計算</div></div><div class="stat"><div class="stat-value up">$655M</div><div class="stat-label">利用可能流動性</div><div class="stat-note">2026年1Q末</div></div><div class="stat"><div class="stat-value up">Positive</div><div class="stat-label">重要読出し</div><div class="stat-note">ABCL635 Phase 2</div></div>
+      <!-- 例:
+      <div class="stat"><div class="stat-value">$12.34</div><div class="stat-label">現在の株価</div><div class="stat-note">52週 $4〜$18</div></div>
+      <div class="stat"><div class="stat-value up">+180%</div><div class="stat-label">直近1年</div></div>
+      <div class="stat"><div class="stat-value">$1.2B</div><div class="stat-label">時価総額</div></div>
+      <div class="stat"><div class="stat-value">2027</div><div class="stat-label">黒字化目標</div></div>
+      -->
+      <div class="stat"><div class="stat-value">$10.59</div><div class="stat-label">評価基準株価</div><div class="stat-note">米国2026/11/25取引分</div></div><div class="stat"><div class="stat-value">$764.4M</div><div class="stat-label">現金等</div><div class="stat-note">2026年9月末・自由現金＋有価証券</div></div><div class="stat"><div class="stat-value">ABCL635</div><div class="stat-label">主な開発資産</div><div class="stat-note">未承認・開発中</div></div>
     </div>
   </div>
 </div>
 
-
+<!-- STICKY NAV -->
 <nav class="nav-index">
   <div class="nav-inner">
-    <button class="nav-item" type="button" data-scroll-target="sec1">① どんな会社</button>
-    <button class="nav-item" type="button" data-scroll-target="sec2">② 事業モデル</button>
-    <button class="nav-item" type="button" data-scroll-target="sec3">③ パイプライン</button>
-    <button class="nav-item" type="button" data-scroll-target="sec4">④ 提携</button>
-    <button class="nav-item" type="button" data-scroll-target="sec5">⑤ 競合比較</button>
-    <button class="nav-item" type="button" data-scroll-target="sec6">⑥ 用語辞典</button>
-    <button class="nav-item" type="button" data-scroll-target="sec7">⑦ 株価の見方</button>
+    <a class="nav-item" href="#sec1">① どんな会社</a>
+    <a class="nav-item" href="#sec2">② 業界</a>
+    <a class="nav-item" href="#sec3">③ 開発候補</a>
+    <a class="nav-item" href="#sec4">④ 資金</a>
+    <a class="nav-item" href="#sec5">⑤ 競合</a>
+    <a class="nav-item" href="#sec6">⑥ 用語辞典</a>
+    <a class="nav-item" href="#sec7">⑦ 株価の見方</a>
   </div>
 </nav>
 
 <div class="container">
 
-
+  <!-- SEC1: 会社概要　⚡3秒まとめ → 会社データ → card-sm 4枚 → どう稼ぐ → highlight「基本ルール」 -->
   <section class="section" id="sec1">
     <div class="section-header">
       <div class="section-icon">🏢</div><div class="section-num">1</div>
@@ -363,101 +386,108 @@ strong.g { color: var(--accent); }
     <div class="tldr">
       <div class="tldr-label">⚡ このセクションの3秒まとめ</div>
       <ul>
-
-        <li data-emoji="*">AbCelleraは抗体創薬プラットフォームから、自社開発型の臨床段階バイオへ移行中です。</li><li data-emoji="*">ABCL635のPhase 2で頻度・重症度低下と良好な忍容性が報じられ、株価は大きく反応しました。</li><li data-emoji="!">次は後期試験計画、資金消費、Q2以降の決算詳細を確認します。</li>
+        <!-- 例: <li data-emoji="🏭">◯◯を作ってる△△業界の会社</li> -->
+        <li>承認前の開発企業で、臨床・規制と資金の両方が重要です。</li><li>臨床データの達成と、承認・保険採用・販売成功を区別します。</li><li>会社の予定と当方の価値モデルを分けて表示します。</li>
       </ul>
     </div>
 
-
+    <!-- 会社データ（クイックファクト）：設立/本社/従業員/CEO/上場/売上規模 等。不明は「非開示」 -->
     <div class="facts">
-      <div><dt>正式社名</dt><dd>AbCellera Biologics Inc.</dd></div><div><dt>本社</dt><dd>Vancouver, British Columbia</dd></div><div><dt>上場</dt><dd>Nasdaq（ABCL）</dd></div><div><dt>業種</dt><dd>バイオテクノロジー</dd></div><div><dt>主な領域</dt><dd>内分泌、女性ヘルス、免疫、がん</dd></div><div><dt>決算期</dt><dd>12月</dd></div>
-
+      <div class="info-row"><div class="info-box"><div class="info-title">会社と沿革</div><div class="info-text">カナダ・バンクーバーを本拠とする臨床段階の抗体医薬開発企業。2012年創業、Nasdaq: ABCL、12月決算、報告通貨USD。抗体探索プラットフォームと自社臨床パイプラインを併せ持つ。 [S1,S2,S4]</div></div><div class="info-box"><div class="info-title">直近業績</div><div class="info-text">2026年3Q売上10.639百万ドル、研究開発費43.535百万ドル、純損失40.758百万ドル。9月末の現金・同等物163.800百万ドル、有価証券600.624百万ドル。会社の約890百万ドルの流動性には制限現金・未使用政府支援等も含み、自由現金と同一ではない。 [S1,S2]</div></div></div>
+      <!-- 例:
+      <div><dt>設立</dt><dd>2019年</dd></div>
+      <div><dt>本社</dt><dd>東京</dd></div>
+      <div><dt>従業員数</dt><dd>約12,000人</dd></div>
+      <div><dt>CEO</dt><dd>◯◯ ◯◯</dd></div>
+      <div><dt>上場</dt><dd>東証プライム（285A）</dd></div>
+      <div><dt>売上規模</dt><dd>約2.3兆円</dd></div>
+      -->
     </div>
 
-
+    <!-- 4枚カード：何をしてる/主力事業/直近の業績/なぜ注目 -->
     <div class="card-grid">
-      <div class="card-sm"><span class="card-emoji">🧬</span><div class="card-title">何をしている</div><div class="card-desc">抗体医薬候補を発見し、自社開発と提携で価値化します。</div></div><div class="card-sm"><span class="card-emoji">💊</span><div class="card-title">主役</div><div class="card-desc">ABCL635は更年期症状向けのNK3R抗体候補です。</div></div><div class="card-sm"><span class="card-emoji">💵</span><div class="card-title">資金力</div><div class="card-desc">Q1末で約$655Mの利用可能流動性を持ちます。</div></div><div class="card-sm"><span class="card-emoji">⚠️</span><div class="card-title">リスク</div><div class="card-desc">臨床データ失敗、開発遅延、赤字継続が主なリスクです。</div></div>
-
+      <div class="card-grid"><div class="info-box"><div class="info-title">何をする会社</div><div class="info-text">抗体医薬候補を探索・開発する。提携契約から研究費、契約一時金、将来のマイルストーン・ロイヤルティを得る。自社候補の臨床開発にも投資する。提携一時金受領と売上計上は時点が異なる。 [S1,S2]</div></div><div class="info-box"><div class="info-title">主力</div><div class="info-text">ABCL635と抗体探索・提携。ABCL575の第1相以降の開発価値は加算しません。 [S2]</div></div><div class="info-box"><div class="info-title">直近業績</div><div class="info-text">2026年3Q売上10.639百万ドル、研究開発費43.535百万ドル、純損失40.758百万ドル。9月末の現金・同等物163.800百万ドル、有価証券600.624百万ドル。会社の約890百万ドルの流動性には制限現金・未使用政府支援等も含み、自由現金と同一ではない。 [S1,S2]</div></div><div class="info-box"><div class="info-title">注目点</div><div class="info-text">臨床・規制の不確実性を減らせるか。費用・資金・希薄化とセットで確認します。[S1,S2]</div></div></div>
+      <!-- 例: <div class="card-sm"><span class="card-emoji">🏭</span><div class="card-title">何をしてる</div><div class="card-desc">…</div></div> を4枚 -->
     </div>
 
-
+    <!-- どうやって稼ぐ？：ビジネスモデルと売上の内訳を平易に -->
     <div class="block-label">💰 どうやって<span class="g">稼いでる</span>？</div>
     <ul class="keypoints">
-      <li><span class="kp-emoji">🧬</span><span class="kp-text"><b>創薬基盤</b>：抗体探索、実験、データ解析、製造基盤を統合しています。</span></li><li><span class="kp-emoji">💊</span><span class="kp-text"><b>自社開発</b>：ABCL635、ABCL575など臨床プログラムを進めます。</span></li><li><span class="kp-emoji">🤝</span><span class="kp-text"><b>提携</b>：製薬会社との提携でマイルストンや将来ロイヤルティを狙います。</span></li>
-
+      <div class="info-row"><div class="info-box"><div class="info-title">収益と投資</div><div class="info-text">抗体医薬候補を探索・開発する。提携契約から研究費、契約一時金、将来のマイルストーン・ロイヤルティを得る。自社候補の臨床開発にも投資する。提携一時金受領と売上計上は時点が異なる。 [S1,S2]</div></div><div class="info-box"><div class="info-title">資金の読み方</div><div class="info-text">8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。 [S1,S2]</div></div></div>
+      <!-- 例: <li><span class="kp-emoji">🧩</span><span class="kp-text"><b>主力</b>：◯◯を作って△△に売る。売上の約7割。</span></li> を2〜4件（売上構成・主要顧客・課金の仕組み等） -->
     </ul>
 
-
-    <div class="highlight"><h3>ABCLを見る基本ルール</h3><p>短期売上よりも、臨床データ、資金残高、提携数、下流権利の質を見ます。特にABCL635のPhase 2データは、株価の評価レンジを大きく動かす可能性があります。</p></div>
-
+    <!-- 会社の“基本ルール”（この銘柄を見るうえで最初に押さえる勘所） -->
+    <div class="highlight-box">未承認薬です。試験結果、申請提出、受理、審査目標日、承認、販売開始は別の事実です。</div>
+    <!-- 例: <div class="highlight"><h3>📏 ◯◯株の基本ルール</h3><p>…</p></div> -->
   </section>
 
-
+  <!-- SEC2: 業界の基本　⚡まとめ → lead(比喩) → sowhat → term-list 4〜6 -->
   <section class="section" id="sec2">
     <div class="section-header">
-      <div class="section-icon">🧬</div><div class="section-num">2</div>
-      <div><div class="section-title">事業モデルの<span class="g">基本</span></div><div class="section-sub">創薬基盤から自社パイプラインへ</div></div>
+      <div class="section-icon">◇</div><div class="section-num">2</div>
+      <div><div class="section-title">薬効・規制・採用が価値を作る</div><div class="section-sub">良いデータだけでは売上が確定しない</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">昔は提携型プラットフォーム色が強く、今は自社臨床パイプラインが評価の中心です。</li><li data-emoji="*">Q1 2026売上は$8.3M、純損失は$43.2Mでした。</li><li data-emoji="!">十分な資金は強みですが、臨床失敗時の下落リスクは大きいです。</li></ul></div>
-    <p class="lead">AbCelleraは、抗体を見つける技術基盤、前臨床・臨床開発、製造インフラを組み合わせて、抗体医薬の価値化を狙います。</p><div class="sowhat"><p><b>つまり</b>、ABCLは「売上成長株」ではなく「臨床データで価値が変わるバイオ株」として見るのが自然です。</p></div><div class="term-list"><details open><summary>自社開発型への移行</summary><p>提携だけでなく、自社で臨床プログラムを持つことでアップサイドを大きくできます。</p></details><details><summary>利用可能流動性</summary><p>Q1 2026末の利用可能流動性は約$655Mです。開発継続の余裕を示します。</p></details><details><summary>赤字継続</summary><p>Q1 2026の純損失は$43.2Mでした。臨床段階では通常ですが、資金管理が重要です。</p></details><details><summary>下流権利</summary><p>提携先が開発を進めるほど、将来のマイルストンやロイヤルティ価値が出ます。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>治験・規制・製造・保険アクセスを順に確認します。</li><li>別の試験の反応率をそのまま横比較しません。</li><li>市場規模・将来シェアは未確認の数値を置きません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">患者と医療現場</div><div class="info-text">薬の効果だけでなく安全性・忍容性・投与頻度が選択に影響します。保険採用と自己負担が普及を左右します。</div></div><div class="info-box"><div class="info-title">開発から販売</div><div class="info-text">治験設計と評価項目を満たし、規制判断・製造・販売体制を整える必要があります。[S1,S2]</div></div><div class="info-box"><div class="info-title">競争の軸</div><div class="info-text">VMSでは既存のホルモン療法や非ホルモン薬等が選択肢。月1回投与候補の持続性・安全性・忍容性・保険採用を比較する。Phase2と他剤の別試験を直接優劣比較しない。探索提携では他の抗体探索企業・製薬内製部門が競合。 [S1,S2]</div></div></div>
   </section>
 
-
+  <!-- SEC3: 主要製品・技術　⚡まとめ → product-grid → term-list 3〜5 -->
   <section class="section" id="sec3">
     <div class="section-header">
       <div class="section-icon">🔬</div><div class="section-num">3</div>
-      <div><div class="section-title">ABCL635と<span class="g">臨床データ</span></div><div class="section-sub">Phase 2好結果後は後期試験設計が焦点</div></div>
+      <div><div class="section-title">主要候補の現在地</div><div class="section-sub">最新公式開示と未確定事項</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">ABCL635は更年期の血管運動症状を狙う抗体候補です。</li><li data-emoji="*">Phase 2では症状の頻度・重症度低下、睡眠・全体的な状態の改善、良好な忍容性が報じられました。</li><li data-emoji="!">次は効果量の詳細、後期試験設計、競合薬との差別化を確認します。</li></ul></div>
-    <div class="product-grid"><div class="product-box"><div class="product-symbol">635</div><div class="product-name">ABCL635</div><div class="product-use">NK3R抗体、VMS対象。</div></div><div class="product-box"><div class="product-symbol">575</div><div class="product-name">ABCL575</div><div class="product-use">臨床段階の自社候補。</div></div><div class="product-box"><div class="product-symbol">688</div><div class="product-name">ABCL688</div><div class="product-use">IND/CTA準備段階。</div></div></div><div class="term-list"><details open><summary>ABCL635</summary><p>NK3Rを標的にした抗体候補です。Phase 1では肝毒性なし、良好な忍容性、標的関与の持続が示されました。</p></details><details><summary>Phase 2データ</summary><p>対象患者で症状改善を確認する段階です。好結果が報じられたため、次は後期試験へ進める質かを確認します。</p></details><details><summary>ABCL575</summary><p>臨床中の別プログラムです。安全性と早期薬効シグナルの確認が焦点です。</p></details><details><summary>前臨床候補</summary><p>ABCL688とABCL386はIND/CTA準備段階です。臨床入りすればパイプラインの厚みが増します。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>完了した試験・提出と今後の判断を分けます。</li><li>取得資料で確認できない受理・承認を既成事実化しません。</li><li>開発継続を止める候補は価値に足しません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">開発状況</div><div class="info-text">ABCL635は更年期の中等度～重度の血管運動症状（VMS）向け抗NK3R抗体。2026年8月のPhase2で主要評価項目達成を報告。92人の試験であり、後期試験・米国規制判断が必要。ABCL575はPhase1で全評価項目達成だが、現時点でPhase1以降の開発を進めないと明記。575を将来価値へ加算しない。 [S1,S2]</div></div><div class="info-box"><div class="info-title">事業の広がり</div><div class="info-text">抗体医薬候補を探索・開発する。提携契約から研究費、契約一時金、将来のマイルストーン・ロイヤルティを得る。自社候補の臨床開発にも投資する。提携一時金受領と売上計上は時点が異なる。 [S1,S2]</div></div></div>
   </section>
 
-
+  <!-- SEC4: 技術詳細・規制　⚡まとめ → keypoints → term-list 4〜6 -->
   <section class="section" id="sec4">
     <div class="section-header">
       <div class="section-icon">🏛️</div><div class="section-num">4</div>
-      <div><div class="section-title">提携と<span class="g">下流権利</span></div><div class="section-sub">自社開発以外の価値源</div></div>
+      <div><div class="section-title">開発を続けるための財務余力</div><div class="section-sub">未使用枠は今の現金ではない</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">製薬会社との提携は、研究収入と将来の下流権利につながります。</li><li data-emoji="*">2026年6月にはJazz Pharmaceuticalsとの提携を発表しました。</li><li data-emoji="!">ただし提携プログラムの進捗は外部要因に左右されます。</li></ul></div>
-    <ul class="keypoints"><li><span class="kp-emoji">🤝</span><span class="kp-text"><b>Jazz提携</b>：多重特異性抗体探索で新しい提携を追加しました。</span></li><li><span class="kp-emoji">📄</span><span class="kp-text"><b>下流権利</b>：Q1末時点で進捗中と考える下流権利付きプログラムは40件です。</span></li><li><span class="kp-emoji">🔬</span><span class="kp-text"><b>臨床分子</b>：下流権利を持つ臨床中分子は14件と説明されています。</span></li></ul><div class="sowhat"><p><b>つまり</b>、自社データだけでなく、提携先の臨床進展も長期価値の材料になります。</p></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>現金・有価証券と制限現金を分けます。</li><li>条件付き融資や政府枠を自由現金へ足しません。</li><li>試験費・発売準備・希薄化の変化を追います。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">現在の資金</div><div class="info-text">2026年3Q売上10.639百万ドル、研究開発費43.535百万ドル、純損失40.758百万ドル。9月末の現金・同等物163.800百万ドル、有価証券600.624百万ドル。会社の約890百万ドルの流動性には制限現金・未使用政府支援等も含み、自由現金と同一ではない。 [S1,S2]</div></div><div class="info-box"><div class="info-title">会社の資金見通し</div><div class="info-text">8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。 [S1,S2]</div></div><div class="info-box"><div class="info-title">簡易資金余力</div><div class="info-text">過去12か月営業CF-15.430、設備投資17.420百万USD。契約一時金・和解金120百万USDを正常化で除外。最低運転資金50百万USDは当方仮定。簡易資金余力は56.1か月。将来費用の増加を予測した値ではなく、会社の資金見通しと異なる。 [S2]</div></div><div class="info-box"><div class="info-title">リスク</div><div class="info-text">ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。 [S1,S2]</div></div></div>
   </section>
 
-
+  <!-- SEC5: 競合比較　⚡まとめ → table-wrap>compare-table(自社=me) → highlight「差別化」 -->
   <section class="section" id="sec5">
     <div class="section-header">
       <div class="section-icon">⚔️</div><div class="section-num">5</div>
-      <div><div class="section-title">競合と<span class="g">比べる</span></div><div class="section-sub">抗体創薬基盤と臨床バイオの中間</div></div>
+      <div><div class="section-title">同じ患者課題を解く治療と比べる</div><div class="section-sub">薬効と事業化条件を揃える</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">比較対象はSchrodinger、Recursion、Generate、臨床段階バイオです。</li><li data-emoji="*">ABCLはAI創薬だけでなく、抗体探索と実験基盤に強みがあります。</li><li data-emoji="!">最終的には臨床データと資金効率で評価されます。</li></ul></div>
-    <div class="table-wrap"><table class="compare-table"><thead><tr><th>企業</th><th>強み</th><th>注意点</th></tr></thead><tbody><tr><td class="me">AbCellera</td><td>抗体探索基盤、自社臨床、提携下流権利、資金力。</td><td>売上は小さく、臨床データ依存が大きい。</td></tr><tr><td>AI創薬企業</td><td>計算・探索基盤の広がり。</td><td>臨床成功まで時間がかかる。</td></tr><tr><td>臨床バイオ</td><td>単一プログラムの成功で大きく上がる。</td><td>失敗時の下落が大きい。</td></tr><tr><td>大手製薬</td><td>資金力と販売網。</td><td>成長率は低めになりやすい。</td></tr></tbody></table></div><div class="highlight"><h3>差別化の見方</h3><p>AbCelleraは創薬基盤と自社臨床を両方持つ点が特徴です。プラットフォームの夢だけでなく、ABCL635の実データで評価される段階に入っています。</p></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>承認済み薬には販売・安全性の蓄積があります。</li><li>新薬候補の優位は同じ比較条件で確認します。</li><li>取得していない競合売上や市場シェアは表示しません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">治療選択肢</div><div class="info-text">VMSでは既存のホルモン療法や非ホルモン薬等が選択肢。月1回投与候補の持続性・安全性・忍容性・保険採用を比較する。Phase2と他剤の別試験を直接優劣比較しない。探索提携では他の抗体探索企業・製薬内製部門が競合。 [S1,S2]</div></div><div class="info-box"><div class="info-title">確認する差</div><div class="info-text">有効性、安全性、投与負担、対象患者、価格、保険採用を比較します。別試験の数値だけで優劣を断定しません。</div></div></div>
   </section>
 
-
+  <!-- SEC6: 用語辞典　⚡まとめ(特にこの3つ) → term-list 10〜12（①定義→②なぜ重要→③この銘柄では） -->
   <section class="section" id="sec6">
     <div class="section-header">
       <div class="section-icon">📖</div><div class="section-num">6</div>
       <div><div class="section-title">ABCLのニュースで出る<span class="g">言葉</span> 全辞典</div><div class="section-sub">分からん単語はここで潰す</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li data-emoji="*">ABCL635、Phase 2、下流権利、流動性を押さえると読みやすいです。</li><li data-emoji="*">売上よりも臨床データと資金残高が重要です。</li><li data-emoji="!">Phase 2好結果後は、後期試験の設計と資金余力が確認点です。</li></ul></div>
-    <div class="term-list"><details><summary>抗体創薬</summary><p>抗体を使った医薬品候補を発見・開発する領域です。</p></details><details><summary>臨床段階バイオ</summary><p>製品売上よりも治験データ、資金残高、パートナー契約が評価材料になります。</p></details><details><summary>ABCL635</summary><p>更年期の血管運動症状を対象にしたNK3R抗体候補です。Phase 2で頻度・重症度低下と良好な忍容性が報じられました。</p></details><details><summary>ABCL575</summary><p>炎症・免疫系を狙う臨床プログラムです。初期段階のため安全性と薬効シグナルが焦点です。</p></details><details><summary>ABCL688</summary><p>IND/CTA申請前の開発候補です。次の臨床入りが材料になります。</p></details><details><summary>ABCL386</summary><p>IND/CTA申請前の開発候補です。パイプライン厚みの確認材料です。</p></details><details><summary>下流権利</summary><p>提携先が開発を進めた場合、マイルストンやロイヤルティを受け取る権利です。</p></details><details><summary>流動性</summary><p>現金、現金同等物、有価証券、利用可能な政府資金を合わせた資金余力です。</p></details><details><summary>Phase 1</summary><p>主に安全性、忍容性、薬物動態を確認する初期試験です。</p></details><details><summary>Phase 2</summary><p>対象患者で有効性の初期確認を行う試験です。バイオ株では株価材料になりやすい段階です。</p></details><details><summary>Jazz提携</summary><p>2026年6月に発表された多重特異性抗体探索の提携です。</p></details><details><summary>キャッシュバーン</summary><p>研究開発と運営で現金が減る速度です。資金調達リスクを見る指標です。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li>申請の提出・受理・承認は別です。</li><li>成功確率は当方のモデル仮定です。</li><li>融資は実行条件と返済条件まで確認します。</li></ul></div>
+    <div class="term-list"><details class="term-item"><summary class="term-header"><span class="term-name">抗体医薬</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>特定の標的に結合する抗体を利用する薬。標的の理屈だけで臨床での有効性は確定しません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">臨床試験</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>人で安全性・有効性を調べる試験。第1相、第2相、第3相では目的と必要証拠が異なります。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">主要評価項目</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>治験で中心となる判定指標。複数指標や解析集団の違いを混同しません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">BLA</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>米国で生物学的製剤の承認を求める申請。提出、受理、承認は別の段階です。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">IND</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>米国で治験を行うための手続き。提出だけで全試験の実施許可を保証するものではありません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">PDUFA目標日</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>FDAの審査判断の目安。割当て前に確定日を創作せず、承認確約とも扱いません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">成功確率</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>モデル上の不確実性を表す仮定。臨床で実測した確率や市場の真の予想ではありません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">rNPV</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>将来の成功時現金収支を割引き、開発リスクを調整した資産価値。確率を重ね掛けしません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">残存開発費</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>今後必要となる治験・開発費。2027年末前の支出と2028年以降を分け、二重控除しません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">前払ワラント</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>大部分の行使代金を払った株式取得権。普通株に加えて潜在株へ反映します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">資金ランウェイ</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>過去支出からみた簡易的な資金余力。将来の試験費や借入条件が変われば変化します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">希薄化</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>株式報酬や資金調達で1株の取り分が減ること。行使現金と追加株式を同時に反映します。</p></div></details></div>
   </section>
 
-
+  <!-- SEC7: 株価の見方　⚡まとめ → timeline(signal+rating) → リスク4分類 info-row → highlight → 数字まとめ table -->
   <section class="section" id="sec7">
     <div class="section-header">
       <div class="section-icon">💹</div><div class="section-num">7</div>
       <div><div class="section-title">何がABCL株を<span class="g">動かす</span>？</div><div class="section-sub">上がる理由・下がる理由を一目で</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li data-emoji="*">最大材料だったABCL635のPhase 2は好結果として株価に反映されました。</li><li data-emoji="*">次は後期試験計画、Q2以降の決算詳細、追加候補の臨床入りが材料です。</li><li data-emoji="!">データ詳細の解釈、赤字継続、資金調達懸念には注意です。</li></ul></div>
-    <div class="timeline"><div class="tl-row"><div class="tl-date">2026/05/11</div><div class="tl-title">Q1決算とABCL635 Phase 1中間データ <span class="signal bull">追い風</span></div><div class="tl-desc">忍容性、薬物動態、標的関与が良好と発表されました。</div></div><div class="tl-row"><div class="tl-date">2026/06/17</div><div class="tl-title">Jazz Pharmaceuticals提携 <span class="signal bull">提携</span></div><div class="tl-desc">次世代T細胞誘導型多重特異性抗体探索で提携しました。</div></div><div class="tl-row"><div class="tl-date">2026/08</div><div class="tl-title">ABCL635 Phase 2好結果 <span class="signal bull">公表済み</span></div><div class="tl-desc">頻度・重症度低下、睡眠改善、良好な忍容性が報じられました。</div></div><div class="tl-row"><div class="tl-date">次回</div><div class="tl-title">後期試験計画 <span class="signal bull">最重要</span></div><div class="tl-desc">用量、対象患者、試験規模、規制当局との協議を確認します。</div></div></div><div class="info-row"><div class="info-box info-box-green"><div class="info-title info-title-green">追い風</div><div class="info-text">Phase 1良好、資金力、Jazz提携、Q3読出し。</div></div><div class="info-box info-box-amber"><div class="info-title info-title-amber">確認</div><div class="info-text">Phase 2詳細、後期試験設計、キャッシュバーン。</div></div><div class="info-box info-box-red"><div class="info-title info-title-red">リスク</div><div class="info-text">臨床失敗、開発遅延、赤字継続、希薄化。</div></div></div><details class="term-item" open><summary class="term-header"><span class="term-name">主要出典</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p><a href="https://investors.abcellera.com/overview/" target="_blank" rel="noopener noreferrer">公式IR概要</a>、<a href="https://investors.abcellera.com/financials/quarterly-results/default.aspx" target="_blank" rel="noopener noreferrer">四半期決算資料</a>、<a href="https://investors.abcellera.com/news/news-releases/2026/AbCellera-Reports-Q1-2026-Business-Results--Announces-Positive-Interim-Phase-1-Clinical-Data-for-ABCL635/default.aspx" target="_blank" rel="noopener noreferrer">2026年1Q決算リリース</a>、<a href="https://investors.abcellera.com/news/news-releases/2026/AbCellera-to-Report-Second-Quarter-2026-Financial-Results-on-August-5-2026/default.aspx" target="_blank" rel="noopener noreferrer">2026年2Q発表日リリース</a>、<a href="https://www.barrons.com/articles/abcellera-stock-menopause-drug-f6dfa1ca" target="_blank" rel="noopener noreferrer">ABCL635 Phase 2報道</a>、<a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000028/abcl-20260331.htm" target="_blank" rel="noopener noreferrer">SEC 10-Q</a>、<a href="https://stockanalysis.com/stocks/abcl/" target="_blank" rel="noopener noreferrer">株価・統計</a>を確認しました。本文の数値は2026年9月30日時点で取得できた公開情報に基づきます。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>
+    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li>臨床・規制の次の確認点を追います。</li><li>試験・製造・上市準備の費用と資金を見ます。</li><li>一つの資産へ重なる材料を別価値として足しません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">公式の進捗</div><div class="info-text">会社は2027年にVMSの後期開発開始を見込む。米国IND受理・試験設計の確定を別途確認する。 [S1,S2]</div></div><div class="info-box"><div class="info-title">次の開発</div><div class="info-text">乳がん・前立腺がん治療に伴うVMSの臨床試験は2027年開始予定。ABCL992、ABCL385、ABCL646はIND準備段階。635と992の重複価値を足さない。 [S1,S2]</div></div><div class="info-box"><div class="info-title">資金と事業化</div><div class="info-text">提携一時金、研究収益、政府支援と開発支出を追う。未使用政府枠を自由現金と混同しない。 [S1,S2]</div></div></div><details><summary>主要出典と基準</summary><p><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000058/q32026earningspressrelease.htm" target="_blank" rel="noopener noreferrer">S1：ABCL 2026年3Q決算公式発表</a>（取得 2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000059/abcl-20260930.htm" target="_blank" rel="noopener noreferrer">S2：ABCL 2026年3Q Form 10-Q</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ABCL?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S3：ABCL Yahoo Finance日足・価格</a>（取得 2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000012/abcl-20251231.htm" target="_blank" rel="noopener noreferrer">S4：AbCellera 2025年Form 10-K（創業・企業概要）</a>（取得 2026-11-27）</li></ul><p>評価基準株価$10.59／市場時刻2026-11-25T21:00:02+00:00。分析基準日2026-11-27、評価対象2027年末。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></p></details>
   </section>
 
-</div>
+</div><!-- /container -->
 
 <div class="footer">
   <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
   <p style="margin-bottom:8px;font-weight:700;color:#d8ded8">⚠️ 免責事項</p>
-  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。抗体創薬・臨床段階バイオ株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-09-30時点の公開情報に基づきます。</p>
+  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。臨床段階バイオ・抗体医薬株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-11-27時点の公開情報に基づきます。</p>
 </div>
 
 <script>
@@ -471,13 +501,18 @@ document.querySelectorAll('details.term-item').forEach(d => {
   function u(){ var h=document.documentElement; var s=h.scrollTop/(h.scrollHeight-h.clientHeight); bar.style.width=Math.min(100,Math.max(0,s*100))+'%'; }
   document.addEventListener('scroll', u, {passive:true}); window.addEventListener('resize', u); u();
 })();
-document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
-  button.addEventListener('click', function () {
-    var target = document.getElementById(button.dataset.scrollTarget);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
 </script>
 
 </body>
 </html>
+
+<!--
+================================================================
+  デザインロック（重要）
+  ・アクセント色はSiMグリーンで固定。銘柄・業界で変えない。
+  ・以前あった「業界別カラー早見表」は廃止（色を変えると銘柄ごとに見た目がぶれるため）。
+  ・この <style> と骨格は改変禁止。{{ }} の中身だけ差し替える。
+================================================================
+  ChatGPT用ルール: 完成HTMLは必ず index.html というファイル名で保存・出力する。
+================================================================
+-->

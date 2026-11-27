@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="5801" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>古河電気工業 <small>5801</small></h1>
-    <div class="sub">東京証券取引所プライム市場｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">東証プライム／JPY｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">上方修正後の確認局面</div>
-        <p>2Q進捗、光通信・データセンタ需要、増産投資、メタル事業協業が主な材料です。</p>
-        <p class="sub">足りない情報は仮定を置き、主要材料の織り込み度を66%と推定します。</p>
+        <div class="status">需要・設備・財務の連動を確認</div>
+        <p>最新の半期開示に基づく今後18か月と重要な長期材料。日程未確認は時期未定と表示。</p>
+        <p class="sub">同じ正常化利益に影響する材料を1グループで扱い、個別価格・割合を加算しません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>66%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ 中</small>
+        <b>20～40%</b>
+        <small>共通利益モデルでの条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>3,793円</b>
-        <small data-live-price-date>2026/09/30 10時台（分析基準値）</small>
+        <b data-live-price>1,804円</b>
+        <small data-live-price-date>分析基準時点の市場価格（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>2Q・中間決算での進捗確認</b>
-        <small>2026年11月ごろ</small>
+        <b>光・データセンター製品の収益化</b>
+        <small>進行中／個別確定日は未確認</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>例年スケジュールからの推定</b>
+        <b>会社計画・時期未定を含む</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">正常化利益・PER・確率・将来株式数は当方の仮定です。会社予想や保証価格ではありません。株式分割後の価格・株式数へ統一し、自己株式・潜在株の時点差を明示しています。</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>66%</b></div><p>仮定：1Q上方修正を80%、光通信・データセンタ需要を70%、光ファイバ増産投資を55%、2Qでの再上方期待を50%として置き、急騰後の材料織り込みを控除しました。</p><p>読み方：1Qの好材料はかなり織り込まれていますが、2Q以降の利益率持続と増産投資の回収はまだ確認余地があります。</p><p>次に見る数字：情報通信ソリューション利益、エネルギーインフラ利益、通期予想再修正、営業利益率、設備投資額です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のBear/Base/Bullを見直します。</p></div>
-      <p class="small">計算方法：1Q上方修正、光通信需要、増産投資、2Q再確認、株価急騰後の材料消化を重み付けして推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>20～40%</b><span>条件付き推定</span></div><p>raw中心29.8%。0～100%外なら表示だけ端へ固定します。</p><p>全3材料を1つの正常化利益グループへ束ね、失敗側株主価値7e+11円と成功側2.61e+12円の差で逆算。中心29.8%。個別割合の平均ではなく、同じ価値モデルを市場が使う条件下の期待。真の成功確率ではない。</p></div>
+      <p class="small">計算方法：失敗側と成功側の独立した正常化利益・PERから共通グループの期待を逆算。表示±10ポイントは統計区間ではなく前提の不確実性を表す主観幅。rawが帯外なら端に丸め、その事実を明記する。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>2Qでも利益率が高く、通期再上方修正余地と光通信の高採算成長が同時に見えることです。</p>
+        <p>数量・単価・製品構成・投資回収が当方標準の正常化利益を上回る。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>1Q偏重、光通信の価格下落、投資負担、材料出尽くしです。</p>
+        <p>需要・価格・稼働・コストが悪化し、標準利益を下回る。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>上方修正後に株価が先に織り込み、2Qで期待を超えられない場合に倍率が下がることです。</p>
+        <p>複数の材料が同じ利益へ影響する。景気・市況と投資の同時悪化。</p>
       </div>
     </div>
   </section>
@@ -131,72 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026/05/12</div><div class="time-dot"></div><div class="time-body"><b>2026年3月期決算</b><p>データセンタ関連製品の増収と収益改善を確認。</p><div class="time-meta"><span class="chip">決算</span></div></div></div><div class="time-row"><div class="time-date">2026/08/04</div><div class="time-dot"></div><div class="time-body"><b>光ファイバ・光ケーブル投資</b><p>需要増への生産能力対応を確認。</p><div class="time-meta"><span class="chip blue">成長投資</span></div></div></div><div class="time-row"><div class="time-date">2026/08/06</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期1Q決算</b><p>通期業績予想を大きく上方修正。</p><div class="time-meta"><span class="chip">最重要</span></div></div></div><div class="time-row"><div class="time-date">2026/11ごろ</div><div class="time-dot"></div><div class="time-body"><b>2Q・中間決算</b><p>上方修正後の進捗を確認。</p><div class="time-meta"><span class="chip">確認</span></div></div></div>
+      <div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>光・データセンター製品の収益化</b><p>進行中／個別確定日は未確認</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>供給能力の段階的拡大</b><p>進行中／個別確定日は未確認。長期計画を含む。</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>電力・自動車・銅価格と資金</b><p>進行中／個別確定日は未確認</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>2027年3月期1Q決算と上方修正</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">発表済み</span></div></div><div class="date-box"><b>2026/08/06</b><span>会社公表または予定</span></div></div>
-<p class="lead">2026年8月6日の1Q決算で、営業利益・経常利益が大きく伸び、通期予想も引き上げられました。発表済みですが、株価の基準を変えた最大材料です。</p>
-<div class="mechanism"><span>1Q実績</span><i>→</i><span>通期修正</span><i>→</i><span>PER</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+10〜24%</div><p>上方修正後も保守的と見られ、再上方期待が高まる状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+8%</div><p>発表内容はおおむね織り込まれ、2Q待ちの状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-12〜-24%</div><p>材料出尽くしや一過性要因が意識される状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>大型株としては大きな上方修正ですが、発表済み材料のため追加反応は2Qへの期待次第です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>1Q経常利益は前年同期比で大幅増。</li><li>通期経常利益予想は1,000億円から1,430億円へ上方修正。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>営業利益率の低下</li><li>光通信製品の価格下落</li><li>銅価格・為替の逆風</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>光通信・データセンタ需要の継続</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">DC需要</span></div></div><div class="date-box"><b>2026-2027</b><span>会社公表または予定</span></div></div>
-<p class="lead">AI・クラウド投資に伴う光ファイバ、光ケーブル、光部品需要が続くかを確認します。古河電工の再評価の中心です。</p>
-<div class="mechanism"><span>AI投資</span><i>→</i><span>光需要</span><i>→</i><span>利益率</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+14〜32%</div><p>光ファイバ・光部品の需要と採算が続けば楽観側です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+10%</div><p>需要は強いが、株価も織り込んでいる状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-14〜-28%</div><p>需要減速や価格競争が見えると下押しです。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>いまの評価の中心で、需要継続と採算改善が確認されるとPERを支えるためです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>会社はデータセンタ関連製品が収益伸長に貢献すると説明。</li><li>情報通信ソリューションの収益改善が注目点。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>営業利益率の低下</li><li>光通信製品の価格下落</li><li>銅価格・為替の逆風</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>光ファイバ・光ケーブル増産投資</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">成長投資</span></div></div><div class="date-box"><b>2026/08/04</b><span>会社公表または予定</span></div></div>
-<p class="lead">2026年8月4日に開示された固定資産取得は、強い需要に対応する成長投資です。設備投資が高採算売上に変わるかを見ます。</p>
-<div class="mechanism"><span>投資</span><i>→</i><span>能力増強</span><i>→</i><span>売上</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+8〜20%</div><p>高稼働・高採算で投資回収が見えれば上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-4〜+7%</div><p>投資発表だけなら中立です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-10〜-20%</div><p>需要変化や稼働遅れが出ると負担になります。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>成長投資は将来売上を押し上げますが、投資回収まで時間差があるためです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>光ファイバおよび光ファイバケーブル生産に係る固定資産取得を開示。</li><li>AIデータセンタ市場向け需要が背景。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>営業利益率の低下</li><li>光通信製品の価格下落</li><li>銅価格・為替の逆風</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>2Q・中間決算での進捗確認</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">次の確認</span></div></div><div class="date-box"><b>2026/11ごろ</b><span>会社公表または予定</span></div></div>
-<p class="lead">上方修正後の進捗確認です。情報通信、エネルギー、電装、機能製品のどこが利益を伸ばすかで評価が変わります。</p>
-<div class="mechanism"><span>2Q</span><i>→</i><span>利益率</span><i>→</i><span>再評価</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+12〜28%</div><p>情報通信と電力がそろって強く、再上方修正余地が見えれば上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+9%</div><p>修正後計画どおりなら標準ケース維持です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-15〜-30%</div><p>1Q偏重や利益率低下が見えると下落要因です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>上方修正後の最初の確認点で、利益率の持続性を市場が評価し直すためです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>上方修正後の最初の大型確認点。</li><li>セグメント別利益の持続性が重要。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>営業利益率の低下</li><li>光通信製品の価格下落</li><li>銅価格・為替の逆風</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>光・データセンター製品の収益化</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／個別確定日は未確認</b></div><p>光ソリューションの需要・単価・製品構成、光半導体・高周波基板用銅箔・冷却製品を追う。好市況と一時要因を区別。</p><p>結果は当方の共通利益条件との比較。市場コンセンサスの実測ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">2,395円～2,613円</div><p>基準価格比 +32.8%～+44.9%</p><p>数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の110～120%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の110～120%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">1,960円～2,395円</div><p>基準価格比 +8.7%～+32.8%</p><p>数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の90～110%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の90～110%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">1,415円～1,960円</div><p>基準価格比 -21.5%～+8.7%</p><p>数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の65～90%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の65～90%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。</p><p>足りない情報：製品別の純増利益と設備稼働・投資回収、材料除外時の正常化利益と市場倍率</p><p>次に見る数字：次の決算の数量・単価・利益率・CF、設備能力と還元・資本構成の変更</p><p>再計算方法：各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>[S1] 公式決算に示された需要・収益・投資の進捗。 市況反転・設備立上げ・コスト・資金負担の不確実性。</p><p>先行指標：売上・営業利益・純利益、数量・単価・製品構成、設備投資・営業CF・資本政策</p><p>資金：投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。</p><p>材料出尽くし：好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。</p><p>更新：会社予想・事業環境・投資日程の変更、株式数・資本政策の変更、主要製品の需要・利益率変化</p></p></details><details><summary>数値化の手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。</li><li>条件付き再計算：採用。正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。</li><li>市場予想改定：不採用・適用外。時点と単位を揃えた独立の市場予想改定データを取得していないため。</li><li>同社事例比較：不採用・適用外。決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。</li><li>同業事例比較：不採用・適用外。同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>供給能力の段階的拡大</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／個別確定日は未確認。長期計画を含む。</b></div><p>ローラブルリボンは2028年度下期より順次、海底用ファイバは2029年度まで、DFBレーザチップは2028年度下期フル稼働など会社計画。分析期間外の能力を即時売上へ足さない。</p><p>結果は当方の共通利益条件との比較。市場コンセンサスの実測ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">2,333円～2,489円</div><p>基準価格比 +29.4%～+38.0%</p><p>設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER15～16倍の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER15～16倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">2,022円～2,333円</div><p>基準価格比 +12.1%～+29.4%</p><p>設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER13～15倍の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER13～15倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">1,711円～2,022円</div><p>基準価格比 -5.1%～+12.1%</p><p>設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER11～13倍の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER11～13倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。</p><p>足りない情報：製品別の純増利益と設備稼働・投資回収、材料除外時の正常化利益と市場倍率</p><p>次に見る数字：次の決算の数量・単価・利益率・CF、設備能力と還元・資本構成の変更</p><p>再計算方法：各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>[S1] 公式決算に示された需要・収益・投資の進捗。 市況反転・設備立上げ・コスト・資金負担の不確実性。</p><p>先行指標：売上・営業利益・純利益、数量・単価・製品構成、設備投資・営業CF・資本政策</p><p>資金：投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。</p><p>材料出尽くし：好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。</p><p>更新：会社予想・事業環境・投資日程の変更、株式数・資本政策の変更、主要製品の需要・利益率変化</p></p></details><details><summary>数値化の手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。</li><li>条件付き再計算：採用。正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。</li><li>市場予想改定：不採用・適用外。時点と単位を揃えた独立の市場予想改定データを取得していないため。</li><li>同社事例比較：不採用・適用外。決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。</li><li>同業事例比較：不採用・適用外。同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>電力・自動車・銅価格と資金</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／個別確定日は未確認</b></div><p>電力・自動車需要、銅建値、在庫・運転資金を確認。銅価格による増収は利益率と合わせて読む。</p><p>結果は当方の共通利益条件との比較。市場コンセンサスの実測ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">2,134円～2,286円</div><p>基準価格比 +18.3%～+26.8%</p><p>資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の98～105%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の98～105%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">1,960円～2,134円</div><p>基準価格比 +8.7%～+18.3%</p><p>資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の90～98%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の90～98%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">1,524円～1,960円</div><p>基準価格比 -15.5%～+8.7%</p><p>資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の70～90%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の70～90%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。</p><p>足りない情報：製品別の純増利益と設備稼働・投資回収、材料除外時の正常化利益と市場倍率</p><p>次に見る数字：次の決算の数量・単価・利益率・CF、設備能力と還元・資本構成の変更</p><p>再計算方法：各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>[S1] 公式決算に示された需要・収益・投資の進捗。 市況反転・設備立上げ・コスト・資金負担の不確実性。</p><p>先行指標：売上・営業利益・純利益、数量・単価・製品構成、設備投資・営業CF・資本政策</p><p>資金：投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。</p><p>材料出尽くし：好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。</p><p>更新：会社予想・事業環境・投資日程の変更、株式数・資本政策の変更、主要製品の需要・利益率変化</p></p></details><details><summary>数値化の手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。</li><li>条件付き再計算：採用。正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。</li><li>市場予想改定：不採用・適用外。時点と単位を揃えた独立の市場予想改定データを取得していないため。</li><li>同社事例比較：不採用・適用外。決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。</li><li>同業事例比較：不採用・適用外。同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。</li></ul></p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>1Qと2Q</b><span class="up">連動</span></div><p>1Qが強くても、2Qで持続性が確認される必要があります。</p></div><div class="signal"><div><b>光通信と投資</b><span class="flat">重要</span></div><p>増産投資が高採算売上に変わるかを確認します。</p></div><div class="signal"><div><b>株価倍率</b><span class="down">注意</span></div><p>好材料の織り込みが進むほど決算ハードルは上がります。</p></div>
+    <p>全3材料を共通正常化利益グループに束ねます。個別の条件付き価格幅と割合は足しません。全体期待は失敗側と成功側株主価値の差で1回計算します。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>情報通信利益</b><span class="up">最重要</span></div><p>データセンタ関連の利益率が続くか。</p></div><div class="signal"><div><b>通期再修正</b><span class="up">重要</span></div><p>2Qでさらに上方修正余地があるか。</p></div><div class="signal"><div><b>設備投資</b><span class="flat">確認</span></div><p>光ファイバ投資の回収時期と採算。</p></div><div class="signal"><div><b>銅価格・為替</b><span class="down">注意</span></div><p>電線事業の採算影響を確認。</p></div>
+    <div class="signal"><div><b>光・データセンター製品の収益化</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div><div class="signal"><div><b>供給能力の段階的拡大</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div><div class="signal"><div><b>電力・自動車・銅価格と資金</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -206,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>3,793円</td><td>市場データで確認</td><td>2026-09-30</td><td>2026/08/05終値</td></tr><tr><td>1Q経常利益</td><td>310億円</td><td>決算速報・会社開示</td><td>2026/08/06</td><td>前年同期比で大幅増</td></tr><tr><td>通期営業利益予想</td><td>1,230億円</td><td>会社上方修正</td><td>2026/08/06</td><td>従来950億円</td></tr><tr><td>通期経常利益予想</td><td>1,430億円</td><td>会社上方修正</td><td>2026/08/06</td><td>従来1,000億円</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>1,804円</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-27T05:15:30+00:00</td></tr><tr><td>株式数</td><td>703.688百万株</td><td>このレポートの推定</td><td>2026-11-27</td><td>2026年7月1日に1株を10株へ分割。発行済706,669,170株からBBT信託を含む自己株式2,981,317株を控除し703,687,853株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等による変化を見込む当方仮定。</td></tr><tr><td>最新半期業績</td><td>2027年3月期上期（2026年4～9月）売上7376.91億円、営業利益576.18億円、親会社株主帰属純利益587.81億円。売上20.8%増、営業利益201.1%増。日本基準の連結累計。</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>S1</td></tr><tr><td>会社見通し</td><td>2027年3月期会社予想は売上1兆5700億円、営業利益1360億円、親会社株主帰属純利益1180億円、EPS167.71円。11月9日に上方修正。2028年3月期モデルは別の当方仮定。</td><td>会社の目標・予定</td><td>2026-11-27</td><td>S1</td></tr><tr><td>2028年3月モデル</td><td>2028年3月末の正常化親会社利益を悲観・標準・楽観で[70.0, 110.0, 145.0]十億円、PERを[10, 14, 18]倍とする当方仮定。足元の利益の単純年率換算や現値への逆算ではない。景気・需要・製品構成・価格の持続性に応じた幅。将来株式数は現在推定の1.015／1.005／1.000倍。公募増資の現金加算は仮定せず、報酬等の純増を見込む。</td><td>このレポートの推定</td><td>2026-11-27</td><td>会社予想ではない</td></tr><tr><td>確率</td><td>悲観30%・標準45%・楽観25%はこのレポートの主観確率。需要・市況・投資の不確実性を上下に置き、統計的な成功率とはしない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>統計確率ではない</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -215,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://www.furukawaelectric.com/ir/" target="_blank" rel="noopener noreferrer">公式IR</a></li><li><a href="https://www.furukawaelectric.com/ir/library/" target="_blank" rel="noopener noreferrer">IR資料室</a></li><li><a href="https://www.furukawaelectric.com/ir/achievements/highlight.html" target="_blank" rel="noopener noreferrer">業績概要・予想</a></li><li><a href="https://www.furukawaelectric.com/ir/library/mid_briefing/" target="_blank" rel="noopener noreferrer">経営方針説明会</a></li><li><a href="https://finance.yahoo.co.jp/quote/5801.T/history" target="_blank" rel="noopener noreferrer">株価時系列</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://www.furukawaelectric.com/ir/library/finalreport/pdf/2027/20261109.pdf" target="_blank" rel="noopener noreferrer">S1：2027年3月期中間決算短信</a>（取得 2026-11-27）</li><li><a href="https://www.furukawaelectric.com/ir/library/finalreport/pdf/2027/20261109_pre.pdf" target="_blank" rel="noopener noreferrer">S2：2027年3月期中間決算説明資料</a>（取得 2026-11-27）</li><li><a href="https://www.furukawaelectric.com/ir/library/sr/pdf/205_half.pdf" target="_blank" rel="noopener noreferrer">S3：第205期半期報告書</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/5801.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：基準株価・Yahoo Finance日足</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SB：日経225・Yahoo Finance日足</a>（取得 2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：公式IR、IR資料室、業績概要・予想、経営方針説明会、株価時系列を確認。1Q決算は2026年8月6日発表情報を反映。</p></div>
+      <div><p>JSON形式・算術・出典ID・確率・日程・依存関係を検証。以下は分析の制約。</p><ul><li>正常化利益・倍率・確率・将来株式数は当方仮定。</li><li>潜在株式や自己株式の時点差があり、新たな資本政策で更新が必要。</li><li>個別材料の期待割合は非表示。共通利益グループの条件付き逆算であり真の成功確率ではない。</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：初版作成。2027年3月期1Q決算、通期上方修正、光ファイバ投資、データセンタ関連需要を反映。</p></div>
+      <div><p>2026-11-27 全面再作成。旧版の予想と株式数を流用せず、最新半期資料・分割後価格で再構成。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の条件付き分析です。投資助言・売買推奨ではありません。市況・需給・為替・投資回収・倍率で結果は変わります。配当は価格比較へ含めません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜古河電気工業（5801）カタリスト｜作成日 2026-09-30</footer>
+  <footer>分析基準価格1,804円／市場時刻2026-11-27T05:15:30+00:00。分析基準日2026-11-27、対象2028年3月末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

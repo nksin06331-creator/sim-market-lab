@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="CRDO" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>クレド・テクノロジー・グループ <small>CRDO</small></h1>
-    <div class="sub">Nasdaq｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">Nasdaq／USD｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">Q1決算待ち</div>
-        <p>FY2027 Q2売上見通し、AEC・光接続需要、DustPhotonics統合、1.6T製品展開が主な材料です。</p>
-        <p class="sub">足りない情報は仮定を置き、主要材料の織り込み度を60%と推定します。</p>
+        <div class="status">最新開示で材料と不確実性を再評価</div>
+        <p>Q2会社売上予想525～535百万USDとの比較、粗利率・費用・次期予想を確認。</p>
+        <p class="sub">需要・採用・費用が同じ利益に重なるため1群へ集約。個別価格幅や割合を足し合わせません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>60%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ 中</small>
+        <b>14～34%</b>
+        <small>共通利益価値による条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>$192</b>
-        <small data-live-price-date>2026/09/29終値（分析基準値）</small>
+        <b data-live-price>$106.80</b>
+        <small data-live-price-date>2026-11-25T21:00:02+00:00 時点値（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>FY2027 Q2決算と次回ガイダンス</b>
-        <small>2026年12月ごろ</small>
+        <b>FY2027 Q2決算と次四半期見通し</b>
+        <small>2026年12月1日14:00米国PT／日本12月2日7:00</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>株価情報ページの決算予定</b>
+        <b>確定日・会社予定・未確認を区分</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">将来利益・倍率・確率・株式数は当方仮定。最新公表の会社予想と混同しないでください。Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>60%</b></div><p>仮定：FY2026 Q4好決算を80%、FY2027 Q1ガイダンスを65%、DustPhotonics/光接続の成長期待を45%、OCP/FMSなど追加製品発表を35%として置き、株価がすでに高成長を評価している点を控除しました。</p><p>読み方：好決算はかなり織り込み済みですが、光接続がFY2027の大きな成長ドライバーになるかはまだ一部織り込みです。</p><p>次に見る数字：FY2027 Q1売上、次回ガイダンス、非GAAP粗利率、現金、光接続の売上寄与、主要顧客の発注です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>
-      <p class="small">計算方法：FY2026 Q4決算、Q1ガイダンス、光接続、AEC需要、製品発表を標準ケース価値へ重み付けして推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>14～34%</b><span>このレポートの推定</span></div><p>raw中心23.8%。0～100%外は帯外と解釈し、表示だけ端へ固定します。</p><p>全材料を共通利益価値の1群に束ね、失敗側株主価値11,000,000,000と成功側53,550,000,000 USDを独立仮定。(基準株価×評価株式−失敗側)÷成功増分で逆算。中心23.8%。±10ポイントは統計区間ではなく当方の不確実性表示。真の成功確率ではない。</p></div>
+      <p class="small">計算方法：全材料を共通利益価値の1群に束ね、失敗側株主価値11,000,000,000と成功側53,550,000,000 USDを独立仮定。(基準株価×評価株式−失敗側)÷成功増分で逆算。中心23.8%。±10ポイントは統計区間ではなく当方の不確実性表示。真の成功確率ではない。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>Q1売上が見通し上限を超え、光接続の売上寄与と次回上方修正が同時に確認されることです。</p>
+        <p>顧客採用・継続と利益率が当方標準より改善し、費用と資本負担を吸収する。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>売上成長鈍化、粗利率低下、主要顧客発注減、DustPhotonics統合遅れです。</p>
+        <p>需要・顧客継続・費用・資本条件が下振れし、成長しても1株価値が改善しない。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>株価がAI接続の高成長をかなり織り込んでおり、良い決算でも期待を超えられない場合に下落しやすいことです。</p>
+        <p>Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。</p>
       </div>
     </div>
   </section>
@@ -131,72 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026/05/28</div><div class="time-dot"></div><div class="time-body"><b>DustPhotonics買収完了</b><p>シリコンフォトニクスを追加。</p><div class="time-meta"><span class="chip blue">光接続</span></div></div></div><div class="time-row"><div class="time-date">2026/06/01</div><div class="time-dot"></div><div class="time-body"><b>FY2026 Q4決算</b><p>売上$437M、非GAAP EPS $1.16。</p><div class="time-meta"><span class="chip">好決算</span></div></div></div><div class="time-row"><div class="time-date">2026/08</div><div class="time-dot"></div><div class="time-body"><b>OCP/FMS関連発表</b><p>AIメモリー・ストレージ接続の広がりを確認。</p><div class="time-meta"><span class="chip">製品</span></div></div></div><div class="time-row"><div class="time-date">2026/09/02</div><div class="time-dot"></div><div class="time-body"><b>FY2027 Q1決算予定</b><p>売上見通し達成と次回ガイダンスを確認。</p><div class="time-meta"><span class="chip">最重要</span></div></div></div>
+      <div class="time-row"><div class="time-date">確定</div><div class="time-dot"></div><div class="time-body"><b>FY2027 Q2決算と次四半期見通し</b><p>2026年12月1日14:00米国PT／日本12月2日7:00</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>AI接続製品の採用拡大</b><p>進行中／個別量産日は未確認</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>買収技術統合と株式報酬・費用</b><p>進行中／寄与時期は個別確認</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>FY2027 Q1決算と次回ガイダンス</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">最重要</span></div></div><div class="date-box"><b>2026/09/02</b><span>会社公表または予定</span></div></div>
-<p class="lead">FY2026 Q4の強さが続くかを確認する最重要イベントです。売上、非GAAP粗利率、営業費用、次回ガイダンスが焦点です。</p>
-<div class="mechanism"><span>売上</span><i>→</i><span>粗利率</span><i>→</i><span>ガイダンス</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+18〜40%</div><p>売上が見通し上限を超え、次回も上方感があれば楽観側です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-8〜+12%</div><p>見通しどおりなら標準ケースを維持します。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-20〜-35%</div><p>売上や粗利率が弱い、または次回見通しが保守的なら期待剥落です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>高成長株では次四半期の売上とガイダンスが評価レンジを直接動かすため最大材料です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>会社はFY2027 Q1売上を$465M〜$475Mと見通しました。</li><li>FY2026 Q4は売上$437M、前年比+157%でした。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>非GAAP粗利率の低下</li><li>主要顧客の発注減少</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>DustPhotonics統合と光接続の売上化</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">光接続</span></div></div><div class="date-box"><b>FY2027</b><span>会社公表または予定</span></div></div>
-<p class="lead">買収したシリコンフォトニクス技術が、ZeroFlap光トランシーバーや光DSPの採用拡大に変わるかを確認します。</p>
-<div class="mechanism"><span>買収</span><i>→</i><span>製品</span><i>→</i><span>採用</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+16〜35%</div><p>光製品がFY2027の明確な成長ドライバーになれば上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+10%</div><p>統合は進むが売上寄与は段階的なら中立です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-12〜-25%</div><p>統合遅延や顧客採用不足なら下押しです。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>光接続がFY2027の成長ドライバーになると、銅接続中心から評価が広がるためです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>DustPhotonics買収でシリコンフォトニクスを追加。</li><li>会社は光製品がFY2027の成長ドライバーになると説明。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>非GAAP粗利率の低下</li><li>主要顧客の発注減少</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>AECと大口AI顧客の需要継続</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">AI需要</span></div></div><div class="date-box"><b>継続確認</b><span>会社公表または予定</span></div></div>
-<p class="lead">AIクラスタ向けAECの需要が続くか、大口顧客以外にも採用が広がるかを見ます。</p>
-<div class="mechanism"><span>AI投資</span><i>→</i><span>AEC需要</span><i>→</i><span>売上</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+14〜32%</div><p>大口顧客の追加発注と顧客分散が確認できれば上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-7〜+9%</div><p>需要継続なら標準ケース維持です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-18〜-30%</div><p>AI投資鈍化や在庫調整が出ると下落要因です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>現在の売上成長を支える主因なので、需要継続は標準ケース維持に直結します。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>FY2026は売上が$1.335Bへ急拡大。</li><li>AECとICの成長がQ3時点でも強いと説明されました。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>非GAAP粗利率の低下</li><li>主要顧客の発注減少</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>OCP/FMSなど製品発表</h3><div class="chips"><span class="chip">重要度3</span><span class="chip blue">製品</span></div></div><div class="date-box"><b>2026年夏</b><span>会社公表または予定</span></div></div>
-<p class="lead">AIメモリー、ストレージ、標準化関連の発表が、実際の採用や売上見通しに結びつくかを確認します。</p>
-<div class="mechanism"><span>発表</span><i>→</i><span>標準化</span><i>→</i><span>採用</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+6〜16%</div><p>標準化や顧客採用が具体化すれば上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-3〜+6%</div><p>発表中心なら短期は中立です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-6〜-14%</div><p>採用や売上化が見えない場合は材料消化です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>製品発表は期待材料ですが、決算数字ほど直接価値を変えないため小さめです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>AIメモリー、ストレージ、OCP関連の発表が報じられています。</li><li>OmniConnectなど製品群の広がりを確認します。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>非GAAP粗利率の低下</li><li>主要顧客の発注減少</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>FY2027 Q2決算と次四半期見通し</h3><span class="chip">重要度5</span></div><div class="date-box"><b>2026年12月1日14:00米国PT／日本12月2日7:00</b></div><p>Q2会社売上予想525～535百万USDとの比較、粗利率・費用・次期予想を確認。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$145.00～$165.33</div><p>基準価格比 +35.8%～+54.8%</p><p>売上535百万USD超と良好な次期見通し、収益力が上側へ。</p><p>このレポートの条件付き2027年末再評価。売上2,900,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株 ／ 売上3,100,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$121.33～$140.00</div><p>基準価格比 +13.6%～+31.1%</p><p>525～535百万USDと利益率が会社予想内。</p><p>このレポートの条件付き2027年末再評価。売上2,600,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,800,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$73.33～$95.83</div><p>基準価格比 -31.3%～-10.3%</p><p>525百万USD未満または粗利率・次期見通し悪化。</p><p>このレポートの条件付き2027年末再評価。売上2,000,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,300,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>AI接続製品の採用拡大</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／個別量産日は未確認</b></div><p>AEC、光DSP等の顧客採用と売上集中を確認。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$160.00～$198.33</div><p>基準価格比 +49.8%～+85.7%</p><p>売上34億USD・純利益率35%へ向かう当方条件。</p><p>このレポートの条件付き2027年末再評価。売上3,000,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株 ／ 売上3,400,000,000 USD・純利益率35.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$116.67～$135.00</div><p>基準価格比 +9.2%～+26.4%</p><p>売上27億USD・純利益率30%の当方標準。</p><p>このレポートの条件付き2027年末再評価。売上2,500,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$73.33～$95.83</div><p>基準価格比 -31.3%～-10.3%</p><p>売上20億USD・純利益率22%の当方悲観。</p><p>このレポートの条件付き2027年末再評価。売上2,000,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,300,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>買収技術統合と株式報酬・費用</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／寄与時期は個別確認</b></div><p>買収資産の顧客認定・償却・報酬と資金負担を追う。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$144.00～$157.50</div><p>基準価格比 +34.8%～+47.5%</p><p>新製品採用が費用増を上回る。</p><p>このレポートの条件付き2027年末再評価。売上2,700,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率35.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$126.00～$135.00</div><p>基準価格比 +18.0%～+26.4%</p><p>統合は進むが償却・報酬が収益増と均衡。</p><p>このレポートの条件付き2027年末再評価。売上2,700,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$99.00～$112.50</div><p>基準価格比 -7.3%～+5.3%</p><p>統合遅延・採用未達・費用と希薄化増。</p><p>このレポートの条件付き2027年末再評価。売上2,700,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>Q1決算と倍率</b><span class="up">連動</span></div><p>高成長が続くほど高い倍率を維持しやすいです。</p></div><div class="signal"><div><b>光接続と粗利率</b><span class="flat">重要</span></div><p>新製品が粗利率を崩さず伸びるかを確認します。</p></div><div class="signal"><div><b>顧客集中</b><span class="down">注意</span></div><p>顧客分散が進むほどリスクは下がります。</p></div>
+    <p>需要・採用・費用・資本政策は同じ将来利益を共有する1グループ。個別の割合・価格幅を加算しません。</p><p>全体は株主価値端点と現在推定株式数、価格帯は各ケースの将来株式数を用いるため、逆算値は完全一致とは限りません。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>Q1売上</b><span class="up">最重要</span></div><p>$465M〜$475M見通しを上回るか。</p></div><div class="signal"><div><b>非GAAP粗利率</b><span class="up">重要</span></div><p>67〜69%近辺を維持できるか。</p></div><div class="signal"><div><b>光接続</b><span class="flat">AI</span></div><p>DustPhotonics統合と顧客採用。</p></div><div class="signal"><div><b>顧客発注</b><span class="down">注意</span></div><p>大口顧客の需要継続と分散。</p></div>
+    <div class="signal"><div><b>FY2027 Q2決算と次四半期見通し</b></div><p>2026年12月1日14:00米国PT／日本12月2日7:00：Q2会社売上予想525～535百万USDとの比較、粗利率・費用・次期予想を確認。</p></div><div class="signal"><div><b>AI接続製品の採用拡大</b></div><p>進行中／個別量産日は未確認：AEC、光DSP等の顧客採用と売上集中を確認。</p></div><div class="signal"><div><b>買収技術統合と株式報酬・費用</b></div><p>進行中／寄与時期は個別確認：買収資産の顧客認定・償却・報酬と資金負担を追う。</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -206,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>$192</td><td>市場データで確認</td><td>2026-09-30</td><td>2026/08/10場中確認</td></tr><tr><td>FY2026 Q4売上</td><td>$437M</td><td>会社リリース</td><td>2026/05/02</td><td>前年比+157%</td></tr><tr><td>FY2027 Q1売上見通し</td><td>$465M〜$475M</td><td>会社リリース</td><td>2026/08/01期</td><td>会社ガイダンス</td></tr><tr><td>現金・短期投資</td><td>$1.4B</td><td>会社リリース</td><td>2026/05/02</td><td>FY2026末</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>$106.80</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-25T21:00:02+00:00 [S5]</td></tr><tr><td>会社予想</td><td>FY2027 Q2会社予想は売上5.25～5.35億ドル、GAAP粗利率62.9～64.9%、非GAAP粗利率67～69%、GAAP営業費用1.99～2.04億ドル。Q2実績は2026年12月1日米国市場終了後に公表、説明会14時PT（日本12月2日7時）。</td><td>会社の目標・予定</td><td>2026-11-27</td><td>最新公表値、対象期間を確認 [S1,S3]</td></tr><tr><td>株式・財務</td><td>8月25日時点普通株187,951,918株。Q1の加重平均希薄化差8.371百万株と除外潜在株1.406百万株を加え評価株197.728918百万株とする概算。時点と平均の違いに注意。将来205／210／215百万株で株式報酬を反映。現金466.869百万・短期投資297.389百万USD。PER法ではこれらを再加算しない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>確定値と潜在株概算を区別 [S1,S2]</td></tr><tr><td>2027年末モデル</td><td>2027年末に見るFY2028前後の収益力をPERで評価。売上20／27／34億USD、GAAP寄りの純利益率22／30／35%、PER25／35／45倍、株式205／210／215百万。直近売上・利益率とQ2会社予想を足場に、AI接続需要・顧客集中・買収費・希薄化の幅を置く当方仮定。会社の通期予想ではない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>PE法。現金・負債を再加減しない。</td></tr><tr><td>確率</td><td>[0.3, 0.45, 0.25]</td><td>このレポートの推定</td><td>2026-11-27</td><td>主観配分、統計推定ではない。</td></tr><tr><td>重大リスク</td><td>Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>未確認の影響額をゼロにしない [S1–S4]</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -215,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://investors.credosemi.com/overview/default.aspx" target="_blank" rel="noopener noreferrer">公式IR</a></li><li><a href="https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx" target="_blank" rel="noopener noreferrer">FY2027 Q1決算リリース</a></li><li><a href="https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/default.aspx" target="_blank" rel="noopener noreferrer">FY2026 Q4決算リリース</a></li><li><a href="https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Completes-Acquisition-of-DustPhotonics/default.aspx" target="_blank" rel="noopener noreferrer">DustPhotonics買収リリース</a></li><li><a href="https://stockanalysis.com/stocks/crdo/" target="_blank" rel="noopener noreferrer">株価・統計</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx" target="_blank" rel="noopener noreferrer">S1：FY2027 Q1決算発表</a>（公開：2026-09-01／取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm" target="_blank" rel="noopener noreferrer">S2：FY2027 Q1 Form 10-Q</a>（公開：2026-09-02／取得：2026-11-27）</li><li><a href="https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Schedules-Second-Quarter-Fiscal-Year-2027-Financial-Results-Conference-Call/default.aspx" target="_blank" rel="noopener noreferrer">S3：FY2027 Q2決算公表予定</a>（公開：資料内参照／取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1807794/000162828026066139/crdo-20261016.htm" target="_blank" rel="noopener noreferrer">S4：2026年10月16日8-K（株主総会）</a>（公開：2026-10-16／取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：Yahoo Finance 市場価格（日足）</a>（公開：資料内参照／取得：2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：FY2027 Q1売上4.79億ドル、非GAAP粗利率68.0%、現金・短期投資7.643億ドル、Q2売上見通し5.25〜5.35億ドルを公式IRで確認。</p></div>
+      <div><p>共通JSON形式、算術、出典ID、日程、確率、依存関係、HTMLの未置換・安全性を検証。次は分析上の制約です。</p><ul><li>将来純利益・PER・確率・株式数は当方仮定で会社予想ではない。</li><li>潜在株式の時点・加重平均差と新しい資本政策で再評価が必要。</li><li>Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：FY2027 Q1実績、Q2会社見通し、1.6T光接続発表、9月29日終値を反映。</p></div>
+      <div><p>2026-11-27 全面再作成。全3レポートは同じ共通データ・基準株価を使用。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の条件付き試算であり売買推奨ではありません。将来利益・倍率・確率・株式数は当方仮定。会社見通しと確認済み事実を区別してください。配当は価格比較に含みません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜クレド・テクノロジー・グループ（CRDO）カタリスト｜作成日 2026-09-30</footer>
+  <footer>分析基準株価 $106.80／2026-11-25T21:00:02+00:00。時点値。分析基準日2026-11-27。対象2027年末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

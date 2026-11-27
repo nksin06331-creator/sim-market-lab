@@ -1,0 +1,1347 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "ASP Isotopes Inc.",
+    "ticker": "ASPI",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T14:32:50.531625+00:00",
+    "generated_at": "2026-11-27T14:32:50.531625+00:00",
+    "price": 1.3,
+    "price_as_of": "2026-11-25T21:00:01+00:00",
+    "benchmark": "S&P 500（相対リターン未採用）"
+  },
+  "capital_structure": {
+    "basic_shares": 155834430,
+    "diluted_shares": 165067440,
+    "market_cap": 214587672.0,
+    "cash": 222545000.0,
+    "liquid_securities": 0,
+    "restricted_cash": 20882000.0,
+    "minimum_operating_cash": 0,
+    "debt": 139309999.99999997,
+    "preferred_stock": 0,
+    "minority_interest": 9986000.0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "burn_one_off_adjustments": null,
+    "runway_months": null,
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5"
+    ],
+    "dilution_notes": [
+      "11月16日普通株155,834,430株。9月末未権利確定株8,334,892、オプション828,340、ワラント69,778株を保守的に全加算し評価用165,067,440株。オプション行使代金は加算しない。",
+      "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+      "TTMランウェイは事業再編・買収前後の期間が一致しないため未算出。最近のCFと期末現金、会社の資金見通しを本文で別々に説明。0の換金性資産等は追加価値を仮定しない入力方針で、存在しないとの断定ではない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "F1",
+      "statement": "会社：2021年設立。米国法人、本社Dallas。2022年Nasdaq上場。専門同位体、ヘリウム・LNG、核燃料開発を持つ。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F2",
+      "statement": "最新業績：2026年3Q売上$5.124M、粗利益$0.793M、営業損失$40.515M。継続事業純損失$30.868M、親会社株主帰属損失$30.371M。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F3",
+      "statement": "現金・負債：9月末の自由現金$201.663M、制限現金$20.882M。借入$52.958M、別途転換負債の公正価値$85.860M、ファイナンスリース$0.492M、非支配持分$9.986M。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F4",
+      "statement": "資金収支：1～9月営業CFは−$66.449M、現金設備投資$13.573M。会社は現金が財務諸表公表から12か月超の資金需要を満たすと見込むが、追加資本が必要になる可能性も明示。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F5",
+      "statement": "株式数：11月16日普通株155,834,430株。9月末未権利確定株8,334,892、オプション828,340、ワラント69,778株を保守的に全加算し評価用165,067,440株。オプション行使代金は加算しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F6",
+      "statement": "最新案件：10月26日にRenergenの安定液体ヘリウム生産を会社が報告。11月20日の425提出ではRenergen・Noble Africa・ENDRA取引は提案段階で、追加資金調達も必要と説明。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F7",
+      "statement": "核燃料：QLE・Necsaの合意はHALEU生産JVの構築を目指すもの。許認可・設備・商業生産・販売を同一視しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F8",
+      "statement": "株主総会：12月15日午前10時米東部時間に年次総会予定。これは通常のガバナンス日程で、事業価値上昇イベントとして採点しない。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL",
+      "statement": "合算価値は会社の評価額でも市場コンセンサスでもなく、2027年末の資産別条件付き仮定。現在売上に単一倍率を掛けず、同位体・ヘリウム・LNGと核燃料の異なる段階を分ける。端点は稼働・設備費・契約・許認可の不確実性を含む幅であり、独立DCFでの裏付けは未実施。現在現金は期末現金へ置換し、両方を加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": "case_EV_assumptions",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FINANCE",
+      "statement": "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": "equity=EV+ending_cash-debt-NCI;price=equity/future_shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SHARES",
+      "statement": "基本株式155,834,430、評価用希薄化株式165,067,440。潜在株の扱いと日付差を本文へ明記。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": "profile_share_bridge",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観・標準・楽観の確率は35%,45%,20%。成長実行と資金・規制・統合の不確実性を反映する主観配分で、統計確率でも会社予想でもない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": "subjective_scenario_weights",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "3レポート総合判定53.5・中立。株価評価40は条件付き価値・希薄化・資金負担を評価。材料65は予定の実行と既存期待、企業リスク88は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": "valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "現在株主価値214587672.00USDから、標準の期末現金・負債・非支配持分を固定した失敗側株主価値110704000.00USDを控除し、成功増分820000000.00USDで割ると12.67%。個別期待割合の平均ではない。帯外の場合、市場がより大きい現金流出・希薄化・事業悪化等を見込む可能性があり、算式の正しさは端点の妥当性を保証しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "calculation_id": "(P0*N0-failure_equity)/joint_success_increment*100",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE_STATS",
+      "statement": "株価1.3 USD、時刻2026-11-25T21:00:01+00:00。52週高値8.6・安値1.0USD。20営業日終値価格リターン-35.96%（配当調整なし）。値動きは総合判定の根拠に使わない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "SQUOTE"
+      ],
+      "calculation_id": "100*(close_t/close_tminus20-1)",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年3Q 10-Q",
+      "publisher": "ASP Isotopes Inc. / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1921865/000119312526463698/aspi-20260930.htm",
+      "published_at": "2026-11-16",
+      "accessed_at": "2026-11-27T14:32:50.531625+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Renergen/ENDRA取引の最新425",
+      "publisher": "ASP Isotopes Inc. / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1921865/000147793226007217/aspi_425.htm",
+      "published_at": "2026-11-20",
+      "accessed_at": "2026-11-27T14:32:50.531625+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "安定液体ヘリウム生産の会社発表",
+      "publisher": "ASP Isotopes Inc. / SEC",
+      "url": "https://ir.aspisotopes.com/news-events/press-releases/detail/121/asp-isotopes-inc-announces-that-renergen-limiteds",
+      "published_at": "2026-10-26",
+      "accessed_at": "2026-11-27T14:32:50.531625+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "QLE・Necsa合意",
+      "publisher": "ASP Isotopes Inc. / SEC",
+      "url": "https://ir.aspisotopes.com/news-events/press-releases/detail/120/quantum-leap-energy-and-necsa-sign-binding-heads-of",
+      "published_at": "2026-10-07",
+      "accessed_at": "2026-11-27T14:32:50.531625+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "年次株主総会委任状",
+      "publisher": "ASP Isotopes Inc. / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1921865/000147793226007283/aspi_def14a.htm",
+      "published_at": "2026-11-24",
+      "accessed_at": "2026-11-27T14:32:50.531625+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "SQUOTE",
+      "title": "Yahoo Finance価格・日足（暫定取得元）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ASPI?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T14:32:50.531625+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE_STATS"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "同位体を分離・濃縮し、医療・産業向け素材の供給を目指す企業です。Renergen買収後はヘリウム・LNG事業を持ち、核燃料開発も進めています。",
+    "section_claim_ids": {
+      "sec1": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec2": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec3": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec4": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec5": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec6": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec7": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "SOTP",
+    "method_explanation": "2027年末事業価値＋同時点自由現金−負債−非支配持分＝株主価値。これを同じケースの将来株式数で割る。合算価値は会社の評価額でも市場コンセンサスでもなく、2027年末の資産別条件付き仮定。現在売上に単一倍率を掛けず、同位体・ヘリウム・LNGと核燃料の異なる段階を分ける。端点は稼働・設備費・契約・許認可の不確実性を含む幅であり、独立DCFでの裏付けは未実施。現在現金は期末現金へ置換し、両方を加算しない。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.35,
+        "enterprise_value": 180000000.0,
+        "equity_value": 70704000.00000003,
+        "diluted_shares": 225067440,
+        "price": 0.31414584002021806,
+        "conditions": [
+          "同位体価値$40M、ヘリウム・LNG$120M、核燃料開発$20M。稼働・回収遅延を反映したリスク調整事業価値。新株50M＋報酬10M。",
+          "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 500000000.0,
+        "equity_value": 430704000.0,
+        "diluted_shares": 188067440,
+        "price": 2.290157190420628,
+        "conditions": [
+          "同位体$140M、ヘリウム・LNG$300M、核燃料開発$60M。商業出荷と設備利用が改善する条件。新株15M＋報酬8M。",
+          "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.2,
+        "enterprise_value": 1000000000.0,
+        "equity_value": 970704000.0,
+        "diluted_shares": 170067440,
+        "price": 5.707759227751062,
+        "conditions": [
+          "同位体$300M、ヘリウム・LNG$550M、核燃料開発$150M。高稼働と契約・許認可前進を仮定。将来報酬5M。",
+          "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 2.2820736252465714,
+      "expected_delta_pct": 75.54412501896704,
+      "raw_band_position_pct": 18.278176226393235,
+      "display_band_position_pct": 18.278176226393235,
+      "endpoint_rr": 4.4710053542214165,
+      "market_score": 18,
+      "own_score": 36,
+      "supplemental_score": 99
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "赤字、稼働率・設備費、許認可、Renergen再編、転換負債、為替・南アフリカ事業、少数株主と関連当事者取引が大きなリスクです。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "標準事業価値（USD）",
+        "low": 400000000.0,
+        "base": 500000000.0,
+        "high": 600000000.0,
+        "result_prices": [
+          1.758433038701436,
+          2.290157190420628,
+          2.8218813421398194
+        ]
+      },
+      {
+        "variable": "標準の将来株式数",
+        "low": 169260696.0,
+        "base": 188067440,
+        "high": 206874184.00000003,
+        "result_prices": [
+          2.544619100467364,
+          2.290157190420628,
+          2.0819610822005705
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "同位体・ヘリウムの出荷と資金回収",
+        "category": "CAPACITY",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／確定した次回公表日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "安定生産と継続出荷・顧客回収が進み採算改善する。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              3.1409158331713347,
+              3.9916744759220415
+            ],
+            "price_change_pct_range": [
+              141.60891024394883,
+              207.05188276323395
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：同位体$200M・ヘリウム/LNG$400M・核燃料$60M。事業価値$660.0M、自由現金$80.0M、将来株式188.067M ／ 同位体$260M・ヘリウム/LNG$500M・核燃料$60M。事業価値$820.0M、自由現金$80.0M、将来株式188.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "生産・出荷は進むが設備費・顧客認定の確認待ち。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              1.9179502842171936,
+              2.6623640966240623
+            ],
+            "price_change_pct_range": [
+              47.53463724747642,
+              104.79723820185094
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：同位体$120M・ヘリウム/LNG$250M・核燃料$60M。事業価値$430.0M、自由現金$80.0M、将来株式188.067M ／ 同位体$160M・ヘリウム/LNG$350M・核燃料$60M。事業価値$570.0M、自由現金$80.0M、将来株式188.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "稼働・品質・納入・回収が遅れ追加資金が必要になる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              0.49187034783885236,
+              1.3688374907298788
+            ],
+            "price_change_pct_range": [
+              -62.163819397011366,
+              5.295191594606052
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：同位体$40M・ヘリウム/LNG$120M・核燃料$60M、追加資金は悲観調達条件。事業価値$220.0M、自由現金$40.0M、将来株式225.067M ／ 同位体$90M・ヘリウム/LNG$220M・核燃料$60M、追加資金は中間ストレス条件。事業価値$370.0M、自由現金$60.0M、将来株式205.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "赤字、稼働率・設備費、許認可、Renergen再編、転換負債、為替・南アフリカ事業、少数株主と関連当事者取引が大きなリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "Renergen・Noble Africa・ENDRA提案取引",
+        "category": "M_AND_A",
+        "status": "CONTINGENT",
+        "importance": 4,
+        "date": {
+          "display_text": "承認・資金等の条件付き／時期未確定",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "承認・資金条件が明確化し、親会社の取り分と資金負担が改善する。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              2.928226172483658,
+              3.566295154546688
+            ],
+            "price_change_pct_range": [
+              125.24816711412754,
+              174.3303965035914
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：取引条件の改善をヘリウム/LNG$400Mと現金$100Mへ反映。事業価値$600.0M、自由現金$100.0M、将来株式188.067M ／ ヘリウム/LNG$500Mと現金$120Mへ反映。事業価値$700.0M、自由現金$120.0M、将来株式188.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "提案は維持されるが取引条件の確認が続く。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              1.9711226993891127,
+              2.5560192662802237
+            ],
+            "price_change_pct_range": [
+              51.62482302993175,
+              96.61686663694027
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：提案継続：ヘリウム/LNG$250M、現金$70M。事業価値$450.0M、自由現金$70.0M、将来株式188.067M ／ 提案継続：ヘリウム/LNG$350M、現金$80M。事業価値$550.0M、自由現金$80.0M、将来株式188.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "取引遅延・条件悪化や追加資金・希薄化負担が生じる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              0.936181617385438,
+              1.6126597181883189
+            ],
+            "price_change_pct_range": [
+              -27.98602943188938,
+              24.050747552947605
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：取引遅延：ヘリウム/LNG$120M、悲観調達条件。事業価値$320.0M、自由現金$40.0M、将来株式225.067M ／ 条件悪化：ヘリウム/LNG$220M、中間ストレス条件。事業価値$420.0M、自由現金$60.0M、将来株式205.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "赤字、稼働率・設備費、許認可、Renergen再編、転換負債、為替・南アフリカ事業、少数株主と関連当事者取引が大きなリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "QLE・Necsa核燃料JVと許認可",
+        "category": "REGULATORY",
+        "status": "CONTINGENT",
+        "importance": 4,
+        "date": {
+          "display_text": "前提条件あり／商業生産の確定日なし",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "設備・許認可・契約条件が明確になり事業化の不確実性が下がる。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              2.5028468511083046,
+              2.7687089269679004
+            ],
+            "price_change_pct_range": [
+              92.52668085448497,
+              112.97760976676155
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：核燃料開発のリスク調整価値$100M、他資産を標準固定。事業価値$540.0M、自由現金$80.0M、将来株式188.067M ／ 核燃料開発のリスク調整価値$150M、他資産を標準固定。事業価値$590.0M、自由現金$80.0M、将来株式188.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "研究・協議が継続し商業価値の確定には至らない。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              2.1838123600767894,
+              2.396502020764466
+            ],
+            "price_change_pct_range": [
+              67.98556615975302,
+              84.3463092895743
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：核燃料開発$40M、他資産を標準固定。事業価値$480.0M、自由現金$80.0M、将来株式188.067M ／ 核燃料開発$80M、他資産を標準固定。事業価値$520.0M、自由現金$80.0M、将来株式188.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "許認可・技術・資金上の制約で工程や収益化が遅れる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              1.8647778690452743,
+              2.0242951145610317
+            ],
+            "price_change_pct_range": [
+              43.444451465021096,
+              55.71500881238705
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：核燃料開発価値をゼロとし、追加純支出$20Mを現金から控除。事業価値$440.0M、自由現金$60.0M、将来株式188.067M ／ 核燃料開発$20M、追加純支出$10Mを現金から控除。事業価値$460.0M、自由現金$70.0M、将来株式188.067M。負債$139.310M・非支配持分$9.986Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "赤字、稼働率・設備費、許認可、Renergen再編、転換負債、為替・南アフリカ事業、少数株主と関連当事者取引が大きなリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "9月末以降2027年末までの仮定。新規株式資金は悲観$50Mを$1、標準$30Mを$2、楽観は0、費用5%。追加将来報酬を各10M/8M/5M株。期末自由現金$40M/$80M/$120Mは期首$201.663M＋純調達−純投資・運転支出$209.163M/$150.163M/$81.663Mで接続。追加借入・転換による普通株発行は仮定せず、現存転換負債を支払請求権として全ケース控除。企業再編の受取株や現金を別途加算しない。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "共通事業価値・資金・採用",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じ事業価値への影響を1回のみ計上し、個別価格幅・割合を加算しない。",
+        "full_success_incremental_equity_value": 820000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        2.6687404878048753,
+        22.668740487804875
+      ],
+      "raw_implied_pct": 12.668740487804875,
+      "all_events_excluded_equity_value": 110704000.00000003,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "標準の現金・負債・少数株主請求権を固定し共通事業価値の悲観・楽観端点から逆算。個別割合の平均ではない。表示は主観的な±10ポイント幅を0～100へ制限するが、生の値が範囲外なら本文に残す。真の成功確率や統計区間ではない。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "同位体・ヘリウムの出荷と資金回収",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "Renergen・Noble Africa・ENDRA提案取引",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "QLE・Necsa核燃料JVと許認可",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T14:32:50.531625+00:00",
+    "messages": [
+      "将来価値・倍率・確率・支出・株式数は当方仮定であり会社予想ではない。",
+      "潜在株と時点株式数には開示日の差がある。最新確定財務の期末を本文へ明示。",
+      "個別材料は同じ事業価値を共有し、価格幅や期待割合を足し合わせない。"
+    ]
+  }
+}

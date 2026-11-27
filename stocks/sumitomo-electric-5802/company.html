@@ -8,27 +8,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=DM+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-
+/*
+ ================================================================
+  STOCK GUIDE TEMPLATE v4  SiM MARKET LAB ダーク版 / ChatGPT index.html
+  ----------------------------------------------------------------
+  ★★ デザインロック（ぶれ防止）★★
+  ・この <style> ブロックとページ骨格は「改変禁止」。1文字も変えない。逐語コピーする。
+  ・色はSiMグリーンで固定。銘柄・業界でアクセント色を変えない。
+  ・差し替えてよいのは {{ }} プレースホルダーの中身（＝テキスト）だけ。
+  ・セクションの数・順番・各コンポーネントの個数（SEC1のcard-smは4枚 等）は固定。
+    追加・削除・並べ替えをしない。
+  ----------------------------------------------------------------
+  ブランド：黒背景 × ネオングリーン × 白文字（キーワードだけ緑）。Instagram(sim.marketlab)準拠。
+  設計思想：「表層＝3秒で意味が取れる／深層＝読みたい人だけ開く」の2層構造。
+  ・見出しの重要ワードは <span class="g">…</span> で緑ハイライト。
+ ================================================================
+*/
 
 :root {
-
+  /* ── ブランド・アクセント：SiMグリーンで固定（銘柄・業界で変えない＝デザインぶれ防止） ── */
   --accent:        #6EE24E;
   --accent-bright: #8BF56B;
   --accent-tint:   rgba(110,226,78,.12);
   --accent-line:   rgba(110,226,78,.38);
 
-
+  /* ── ダークシェル（変更不要・全銘柄共通） ── */
   --bg:        #0a0c0a;
-  --surface:   #141815;
-  --surface-2: #1b201c;
+  --surface:   #141815;   /* カード面 */
+  --surface-2: #1b201c;   /* 少し明るい面 */
 
-
+  /* レガシー変数マッピング（本文markupが参照。名前は据え置き、意味をダーク用に再定義） */
   --c-primary-50:  var(--accent-tint);        --c-primary-100: rgba(110,226,78,.18);
   --c-primary-200: rgba(110,226,78,.55);      --c-primary-400: var(--accent);
   --c-primary-600: var(--accent);             --c-primary-800: var(--accent-bright);
   --c-accent-50:   var(--accent-tint);        --c-accent-400:  var(--accent);   --c-accent-600: var(--accent-bright);
 
-
+  /* システム色（ダーク版：薄背景は半透明の暗色、文字は明るい色に反転） */
   --amber-50:  rgba(251,191,36,.13); --amber-400: #fbbf24; --amber-600: #fcd34d; --amber-800: #fde68a;
   --red-50:    rgba(248,113,113,.13); --red-400:  #f87171; --red-600:   #fca5a5;
   --blue-50:   rgba(96,165,250,.13); --blue-400:  #60a5fa; --blue-600:  #93c5fd; --blue-800: #bfdbfe;
@@ -47,12 +62,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-body); background: var(--bg); color: var(--gray-900); line-height: 1.85; font-size: 16px; -webkit-text-size-adjust: 100%; }
-.g { color: var(--accent); }
+.g { color: var(--accent); }               /* 緑キーワード */
 
-
+/* 読了プログレスバー */
 .progress-bar { position: fixed; top: 0; left: 0; height: 4px; width: 0%; z-index: 200; background: var(--accent); box-shadow: 0 0 12px var(--accent); transition: width .1s linear; }
 
-
+/* ── HERO（黒＋緑グロー＋ハーフトーン・ドット） ── */
 .hero {
   background: radial-gradient(120% 90% at 50% -10%, #12251a 0%, #0b0f0c 45%, var(--bg) 75%);
   color: #fff; padding: 58px 22px 66px; text-align: center; position: relative; overflow: hidden;
@@ -74,7 +89,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .hero-tag { background: rgba(255,255,255,.04); border: 1px solid var(--gray-200); border-radius: 999px; padding: 6px 14px; font-size: 13px; font-weight: 500; color: #d8ded8; }
 
-
+/* ── 30秒サマリー（でかい数字カード） ── */
 .tldr-hero { max-width: 820px; margin: -30px auto 0; padding: 0 16px; position: relative; z-index: 5; }
 .tldr-hero-inner { background: var(--surface); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 20px 20px 8px; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
 .tldr-hero-title { font-family: var(--font-display); font-weight: 900; font-size: 17px; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
@@ -86,17 +101,16 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .stat-label { font-size: 12px; color: var(--gray-500); margin-top: 4px; font-weight: 500; }
 .stat-note  { font-size: 11px; color: var(--gray-500); margin-top: 2px; }
 
-
+/* ── NAV ── */
 .nav-index { background: rgba(10,12,10,.82); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); position: sticky; top: 0; z-index: 100; }
 .nav-inner { max-width: 820px; margin: 0 auto; padding: 0 16px; display: flex; overflow-x: auto; scrollbar-width: none; }
 .nav-inner::-webkit-scrollbar { display: none; }
-.nav-item { appearance: none; flex-shrink: 0; padding: 14px 14px; font: inherit; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; background: transparent; border: 0; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; cursor: pointer; }
-.nav-item:hover,.nav-item:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
-.nav-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.nav-item { flex-shrink: 0; padding: 14px 14px; font-size: 13px; font-weight: 700; color: var(--gray-500); text-decoration: none; border-bottom: 3px solid transparent; transition: color .2s, border-color .2s; white-space: nowrap; }
+.nav-item:hover { color: var(--accent); border-bottom-color: var(--accent); }
 
 .container { max-width: 820px; margin: 0 auto; padding: 0 16px; }
 
-
+/* ── SECTION ── */
 .section { padding: 46px 0 34px; border-bottom: 1px solid var(--gray-200); opacity: 0; transform: translateY(16px); animation: fadeUp .5s ease forwards; }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -107,36 +121,36 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .section-title .g { color: var(--accent); }
 .section-sub { font-size: 13px; color: var(--gray-500); margin-top: 6px; font-weight: 500; }
 
-
+/* ── ⚡3秒まとめ ── */
 .tldr { background: var(--accent-tint); border: 1px solid var(--accent-line); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 22px; }
 .tldr-label { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-display); font-weight: 900; font-size: 14px; color: var(--accent); margin-bottom: 10px; }
 .tldr ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .tldr li { font-size: 15.5px; font-weight: 500; color: #eef2ee; line-height: 1.7; padding-left: 30px; position: relative; }
 .tldr li::before { content: attr(data-emoji); position: absolute; left: 0; top: 0; font-size: 18px; }
 
-
+/* ── 👉つまり ── */
 .sowhat { background: var(--surface); border: 1.5px dashed var(--accent); border-radius: 14px; padding: 12px 16px 12px 46px; margin: 14px 0; position: relative; }
 .sowhat::before { content: '👉'; position: absolute; left: 14px; top: 11px; font-size: 20px; }
 .sowhat b { color: var(--accent); }
 .sowhat p { font-size: 14.5px; color: var(--gray-700); line-height: 1.8; }
 
-
+/* ── シグナル判定ピル ── */
 .signal { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: 12.5px; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
 .signal.bull    { background: var(--green-50); color: var(--accent); }
 .signal.neutral { background: var(--amber-50); color: var(--amber-600); }
 .signal.bear    { background: var(--red-50);   color: var(--red-600); }
 
-
+/* ── ★重要度 ── */
 .rating { font-family: var(--font-num); letter-spacing: 1px; color: var(--accent); font-size: 14px; }
 .rating .off { color: var(--gray-300); }
 
-
+/* ── 絵文字箇条書き ── */
 .keypoints { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 8px 0; }
 .keypoints li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.7; color: #e4e9e4; }
 .keypoints .kp-emoji { font-size: 22px; flex-shrink: 0; line-height: 1.4; }
 .keypoints .kp-text b { color: var(--accent); }
 
-
+/* ── CARDS ── */
 .card { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 18px 20px; margin-bottom: 12px; }
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; margin-bottom: 12px; }
 .card-sm { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; padding: 16px 18px; }
@@ -144,7 +158,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .card-sm .card-title { font-family: var(--font-display); font-weight: 700; font-size: 15px; margin-bottom: 4px; color: var(--accent); }
 .card-sm .card-desc { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── 会社クイックデータ（企業詳細を厚くする一覧） ── */
 .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(148px,1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; margin: 4px 0 14px; }
 .facts > div { background: var(--surface); padding: 12px 14px; }
 .facts dt { font-size: 11px; color: var(--gray-500); font-weight: 700; margin-bottom: 3px; }
@@ -152,7 +166,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .block-label { font-family: var(--font-display); font-weight: 900; font-size: 15px; color: #fff; margin: 18px 0 8px; display: flex; align-items: center; gap: 7px; }
 .block-label .g { color: var(--accent); }
 
-
+/* ── TERM ACCORDION ── */
 .term-list { display: flex; flex-direction: column; gap: 10px; }
 .term-item { background: var(--surface); border: 1px solid var(--gray-200); border-radius: 14px; overflow: hidden; transition: border-color .2s; }
 .term-item:hover { border-color: var(--accent); }
@@ -167,7 +181,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .term-body p { font-size: 14.5px; color: var(--gray-700); line-height: 1.85; margin: 10px 0 0; }
 .term-body b { color: var(--accent); }
 
-
+/* ── CALL-OUT ── */
 .ex-box, .ex-box-accent, .ex-box-amber, .ex-box-red { border-radius: 0 8px 8px 0; padding: 12px 16px; margin-top: 12px; }
 .ex-box        { background: var(--accent-tint); border-left: 4px solid var(--accent); }
 .ex-box-accent { background: var(--accent-tint); border-left: 4px solid var(--accent); }
@@ -179,7 +193,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .ex-label-red { color: var(--red-600); }
 .ex-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── INFO BOXES（リスク4分類） ── */
 .info-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; margin-top: 16px; }
 .info-box { border-radius: 14px; padding: 16px 18px; border: 1px solid var(--gray-200); }
 .info-box-primary { background: var(--accent-tint); }
@@ -197,7 +211,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .info-title-gray { color: #d8ded8; }
 .info-text { font-size: 13.5px; color: var(--gray-700); line-height: 1.75; }
 
-
+/* ── TIMELINE ── */
 .timeline { position: relative; padding-left: 30px; }
 .timeline::before { content: ''; position: absolute; left: 9px; top: 8px; bottom: 6px; width: 3px; background: rgba(110,226,78,.25); border-radius: 3px; }
 .tl-row { position: relative; margin-bottom: 22px; }
@@ -206,7 +220,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .tl-title { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: #fff; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .tl-desc { font-size: 13.5px; color: var(--gray-500); line-height: 1.75; }
 
-
+/* ── BADGES ── */
 .badge { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 6px; font-weight: 700; }
 .badge-primary { background: var(--accent-tint); color: var(--accent); }
 .badge-accent  { background: var(--accent-tint); color: var(--accent); }
@@ -216,7 +230,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .badge-green   { background: var(--green-50);  color: var(--accent); }
 .badge-violet  { background: var(--violet-50); color: var(--violet-600); }
 
-
+/* ── COMPARE TABLE ── */
 .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--gray-200); border-radius: 14px; margin: 12px 0; }
 .compare-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 480px; }
 .compare-table th { background: var(--gray-50); padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; color: var(--gray-500); letter-spacing: .03em; border-bottom: 1px solid var(--gray-200); white-space: nowrap; }
@@ -225,7 +239,7 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .compare-table tr:hover td { background: rgba(255,255,255,.02); }
 .compare-table .me { background: var(--accent-tint); font-weight: 700; color: var(--accent); }
 
-
+/* ── HIGHLIGHT（インスタの“まとめ”枠：ダーク＋緑ボーダー） ── */
 .highlight { background: var(--surface); border: 1.5px solid var(--accent-line); border-radius: var(--radius); padding: 22px 24px; margin: 22px 0; position: relative; overflow: hidden; }
 .highlight::before { content:''; position:absolute; right:-30px; bottom:-30px; width:160px; height:160px;
   background-image: radial-gradient(var(--accent) 1px, transparent 1.5px); background-size: 13px 13px; opacity:.12; }
@@ -233,21 +247,21 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--gray-9
 .highlight p { font-size: 14.5px; color: #d8ded8; line-height: 1.85; position: relative; }
 .highlight b { color: var(--accent); }
 
-
+/* ── PRODUCT GRID ── */
 .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; margin: 16px 0; }
 .product-box { border-radius: 14px; padding: 18px 14px; text-align: center; border: 1px solid var(--gray-200); background: var(--surface); }
 .product-symbol { font-family: var(--font-num); font-size: 30px; font-weight: 700; margin-bottom: 4px; color: var(--accent); }
 .product-name { font-size: 11px; font-weight: 700; letter-spacing: .04em; margin-bottom: 6px; color: #fff; }
 .product-use { font-size: 12px; line-height: 1.55; color: var(--gray-700); }
 
-
+/* ── MISC ── */
 .lead { font-size: 16.5px; color: #dbe1db; line-height: 1.9; margin-bottom: 20px; font-weight: 500; }
 .lead .g { color: var(--accent); }
 strong { font-weight: 700; color: #fff; }
 strong.g { color: var(--accent); }
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; }
 
-
+/* ── FOOTER ── */
 .footer { padding: 40px 22px; text-align: center; color: var(--gray-500); font-size: 13px; border-top: 1px solid var(--gray-200); margin-top: 32px; }
 .footer .brandmark { margin-bottom: 14px; }
 
@@ -313,45 +327,54 @@ strong.g { color: var(--accent); }
 
 <div class="progress-bar" id="progressBar"></div>
 
-
+<!-- ========================================================
+  HERO
+  5802 住友電気工業 電線・光通信・電子部品 自動車用ワイヤーハーネス、電力ケーブル、光配線・光デバイス等を扱う多角的な電線・部品メーカー。自動車と電力・情報通信の需要が利益を左右する。 <span class="hero-tag">日本株</span><span class="hero-tag">東証プライム</span><span class="hero-tag">製造業</span><span class="hero-tag">需要・製品構成・投資</span> 2026-11-27
+  ※見出しの重要ワードは <span class="g">…</span> で緑ハイライト
+======================================================== -->
 <div class="hero">
   <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
-  <div class="hero-badge">5802 完全入門ガイド ・ 2026-09-30版</div>
+  <div class="hero-badge">5802 完全入門ガイド ・ 2026-11-27版</div>
   <h1>住友電気工業（5802）を<br><span class="g">まるっと</span>解説</h1>
-  <p>自動車用ワイヤーハーネス、電力ケーブル、光通信、エレクトロニクス、産業素材を展開する総合電線・部材メーカーです。</p>
+  <p>自動車用ワイヤーハーネス、電力ケーブル、光配線・光デバイス等を扱う多角的な電線・部品メーカー。自動車と電力・情報通信の需要が利益を左右する。</p>
   <div class="hero-tags">
-
-    <span class="hero-tag">日本株</span><span class="hero-tag">自動車部品</span><span class="hero-tag">電力ケーブル</span><span class="hero-tag">データセンター関連</span>
+    <!-- 例: <span class="hero-tag">⚛️ 同位体って何？</span> -->
+    <span class="hero-tag">日本株</span><span class="hero-tag">東証プライム</span><span class="hero-tag">製造業</span><span class="hero-tag">需要・製品構成・投資</span>
   </div>
 </div>
 
-
+<!-- 30秒サマリー：でかい数字カード3〜4枚（上昇は .up / 下落は .down） -->
 <div class="tldr-hero">
   <div class="tldr-hero-inner">
     <div class="tldr-hero-title">📊 まずは数字でざっくり</div>
     <div class="stat-strip">
-
-      <div class="stat"><div class="stat-value">2,248円</div><div class="stat-label">評価基準株価</div><div class="stat-note">2026/07/31終値</div></div><div class="stat"><div class="stat-value">7.1兆円</div><div class="stat-label">時価総額の目安</div><div class="stat-note">分割後概算株式数で計算</div></div><div class="stat"><div class="stat-value up">4.9兆円</div><div class="stat-label">2026年3月期売上</div><div class="stat-note">会社決算資料ベース</div></div><div class="stat"><div class="stat-value">中計2028</div><div class="stat-label">注目計画</div><div class="stat-note">2026年5月公表</div></div>
+      <!-- 例:
+      <div class="stat"><div class="stat-value">$12.34</div><div class="stat-label">現在の株価</div><div class="stat-note">52週 $4〜$18</div></div>
+      <div class="stat"><div class="stat-value up">+180%</div><div class="stat-label">直近1年</div></div>
+      <div class="stat"><div class="stat-value">$1.2B</div><div class="stat-label">時価総額</div></div>
+      <div class="stat"><div class="stat-value">2027</div><div class="stat-label">黒字化目標</div></div>
+      -->
+      <div class="stat"><div class="stat-value">1,356円</div><div class="stat-label">分析基準株価</div><div class="stat-note">分割後・価格時刻は本文</div></div><div class="stat"><div class="stat-value">4.23兆円</div><div class="stat-label">モデル時価総額</div><div class="stat-note">株価×推定希薄化株式</div></div><div class="stat"><div class="stat-value">2,251億円</div><div class="stat-label">現金・同等物</div><div class="stat-note">2026年9月末</div></div><div class="stat"><div class="stat-value">3,119.7百万株</div><div class="stat-label">評価用株式数</div><div class="stat-note">時点差・潜在株を注記</div></div>
     </div>
   </div>
 </div>
 
-
+<!-- STICKY NAV -->
 <nav class="nav-index">
   <div class="nav-inner">
-    <button class="nav-item" type="button" data-scroll-target="sec1">① どんな会社</button>
-    <button class="nav-item" type="button" data-scroll-target="sec2">② 事業モデル</button>
-    <button class="nav-item" type="button" data-scroll-target="sec3">③ 自動車</button>
-    <button class="nav-item" type="button" data-scroll-target="sec4">④ 電力・通信</button>
-    <button class="nav-item" type="button" data-scroll-target="sec5">⑤ 競合比較</button>
-    <button class="nav-item" type="button" data-scroll-target="sec6">⑥ 用語辞典</button>
-    <button class="nav-item" type="button" data-scroll-target="sec7">⑦ 株価の見方</button>
+    <a class="nav-item" href="#sec1">① どんな会社</a>
+    <a class="nav-item" href="#sec2">② 業界</a>
+    <a class="nav-item" href="#sec3">③ 製品</a>
+    <a class="nav-item" href="#sec4">④ 財務</a>
+    <a class="nav-item" href="#sec5">⑤ 競合</a>
+    <a class="nav-item" href="#sec6">⑥ 用語辞典</a>
+    <a class="nav-item" href="#sec7">⑦ 株価の見方</a>
   </div>
 </nav>
 
 <div class="container">
 
-
+  <!-- SEC1: 会社概要　⚡3秒まとめ → 会社データ → card-sm 4枚 → どう稼ぐ → highlight「基本ルール」 -->
   <section class="section" id="sec1">
     <div class="section-header">
       <div class="section-icon">🏢</div><div class="section-num">1</div>
@@ -363,101 +386,108 @@ strong.g { color: var(--accent); }
     <div class="tldr">
       <div class="tldr-label">⚡ このセクションの3秒まとめ</div>
       <ul>
-
-        <li data-emoji="*">住友電工は自動車、電力、通信、電子部材を持つ総合部材メーカーです。</li><li data-emoji="*">2026年5月に中期経営計画2028と株式分割を公表しました。</li><li data-emoji="!">株価は大きく上昇後に調整しており、1Q決算後の評価を慎重に見る局面です。</li>
+        <!-- 例: <li data-emoji="🏭">◯◯を作ってる△△業界の会社</li> -->
+        <li>最新の半期開示で事業・業績・資本構成を確認しました。</li><li>売上だけでなく利益、製品構成、キャッシュフローを見ます。</li><li>分割前後の価格と株式数を混ぜません。</li>
       </ul>
     </div>
 
-
+    <!-- 会社データ（クイックファクト）：設立/本社/従業員/CEO/上場/売上規模 等。不明は「非開示」 -->
     <div class="facts">
-      <div><dt>正式社名</dt><dd>住友電気工業株式会社</dd></div><div><dt>本社</dt><dd>大阪市中央区</dd></div><div><dt>上場</dt><dd>東証プライム（5802）</dd></div><div><dt>決算期</dt><dd>3月</dd></div><div><dt>主な領域</dt><dd>自動車、電力、通信、電子、産業素材</dd></div><div><dt>業種</dt><dd>非鉄金属</dd></div>
-
+      <div class="info-row"><div class="info-box"><div class="info-title">事業と上場</div><div class="info-text">自動車用ワイヤーハーネス、電力ケーブル、光配線・光デバイス等を扱う多角的な電線・部品メーカー。自動車と電力・情報通信の需要が利益を左右する。 東証プライム、円建て、3月決算。[S1]</div></div><div class="info-box"><div class="info-title">最新決算</div><div class="info-text">2027年3月期上期（2026年4～9月）売上高2兆7649.12億円、営業利益2195.67億円、親会社株主帰属中間純利益1593.84億円。売上16.5%増、営業利益43.5%増。日本基準の連結累計。 [S1]</div></div></div>
+      <!-- 例:
+      <div><dt>設立</dt><dd>2019年</dd></div>
+      <div><dt>本社</dt><dd>東京</dd></div>
+      <div><dt>従業員数</dt><dd>約12,000人</dd></div>
+      <div><dt>CEO</dt><dd>◯◯ ◯◯</dd></div>
+      <div><dt>上場</dt><dd>東証プライム（285A）</dd></div>
+      <div><dt>売上規模</dt><dd>約2.3兆円</dd></div>
+      -->
     </div>
 
-
+    <!-- 4枚カード：何をしてる/主力事業/直近の業績/なぜ注目 -->
     <div class="card-grid">
-      <div class="card-sm"><span class="card-emoji">🚗</span><div class="card-title">自動車</div><div class="card-desc">ワイヤーハーネスが主力。車の電動化で重要部品です。</div></div><div class="card-sm"><span class="card-emoji">⚡</span><div class="card-title">電力</div><div class="card-desc">電力ケーブルやインフラ投資関連が成長テーマです。</div></div><div class="card-sm"><span class="card-emoji">🌐</span><div class="card-title">通信</div><div class="card-desc">光ファイバやデータセンター関連需要が注目です。</div></div><div class="card-sm"><span class="card-emoji">🧱</span><div class="card-title">素材</div><div class="card-desc">電子部材、産業素材、超硬工具も事業ポートフォリオを支えます。</div></div>
-
+      <div class="card-grid"><div class="info-box"><div class="info-title">何をする会社</div><div class="info-text">自動車用ワイヤーハーネス、電力ケーブル、光配線・光デバイス等を扱う多角的な電線・部品メーカー。自動車と電力・情報通信の需要が利益を左右する。</div></div><div class="info-box"><div class="info-title">主な収益要因</div><div class="info-text">情報通信の上期営業利益612億円、前年同期比392億円増。光配線・光デバイスの販売数量と採算を確認。</div></div><div class="info-box"><div class="info-title">直近業績</div><div class="info-text">2027年3月期上期（2026年4～9月）売上高2兆7649.12億円、営業利益2195.67億円、親会社株主帰属中間純利益1593.84億円。売上16.5%増、営業利益43.5%増。日本基準の連結累計。</div></div><div class="info-box"><div class="info-title">今後の確認</div><div class="info-text">2027年3月期会社予想は売上5兆7500億円、営業利益5000億円、親会社株主帰属純利益3700億円、EPS118.60円。7月予想から増額。年間配当予想44円は分割後。2028年3月期のモデルと混同しない。</div></div></div>
+      <!-- 例: <div class="card-sm"><span class="card-emoji">🏭</span><div class="card-title">何をしてる</div><div class="card-desc">…</div></div> を4枚 -->
     </div>
 
-
+    <!-- どうやって稼ぐ？：ビジネスモデルと売上の内訳を平易に -->
     <div class="block-label">💰 どうやって<span class="g">稼いでる</span>？</div>
     <ul class="keypoints">
-      <li><span class="kp-emoji">🚗</span><span class="kp-text"><b>自動車</b>：ワイヤーハーネスを中心に世界の車両生産と電動化需要を取り込みます。</span></li><li><span class="kp-emoji">⚡</span><span class="kp-text"><b>電力</b>：再エネ、送電網、海底ケーブルなど電力インフラ需要が支えます。</span></li><li><span class="kp-emoji">🌐</span><span class="kp-text"><b>通信</b>：AI・データセンター投資で高速光通信関連の需要を狙います。</span></li>
-
+      <div class="info-row"><div class="info-box"><div class="info-title">収益の作り方</div><div class="info-text">製品の数量×単価と製品構成、歩留まり・原材料・稼働率が利益を決めます。需要増加と設備能力増加を同じものと数えません。[S1]</div></div><div class="info-box"><div class="info-title">現金と資本</div><div class="info-text">上期営業CF1393.94億円、有形固定資産取得支出1247.99億円。利益と投資回収を合わせて確認。 9月末有利子負債約7957億円。連結非支配持分896.33億円は親会社純利益と二重調整しない。 [S1]</div></div></div>
+      <!-- 例: <li><span class="kp-emoji">🧩</span><span class="kp-text"><b>主力</b>：◯◯を作って△△に売る。売上の約7割。</span></li> を2〜4件（売上構成・主要顧客・課金の仕組み等） -->
     </ul>
 
-
-    <div class="highlight"><h3>住友電工を見る基本ルール</h3><p>自動車の安定性、電力ケーブルの大型案件、データセンター関連の成長期待を分けて見ます。株式分割後の株価は過去データと単位が変わるため、比較時は注意が必要です。</p></div>
-
+    <!-- 会社の“基本ルール”（この銘柄を見るうえで最初に押さえる勘所） -->
+    <div class="highlight-box">2026年7月1日に1株を4株へ分割。発行済3,175,762,284株から自己株式56,085,955株を控除し3,119,676,329株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等の変化を小幅に見込む当方仮定。 [S1]</div>
+    <!-- 例: <div class="highlight"><h3>📏 ◯◯株の基本ルール</h3><p>…</p></div> -->
   </section>
 
-
+  <!-- SEC2: 業界の基本　⚡まとめ → lead(比喩) → sowhat → term-list 4〜6 -->
   <section class="section" id="sec2">
     <div class="section-header">
-      <div class="section-icon">🏭</div><div class="section-num">2</div>
-      <div><div class="section-title">事業モデルの<span class="g">基本</span></div><div class="section-sub">複数事業の組み合わせで景気変動をならす</div></div>
+      <div class="section-icon">◇</div><div class="section-num">2</div>
+      <div><div class="section-title">需要・価格・供給のつながり</div><div class="section-sub">設備を増やしても利益は自動的に増えない</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">自動車関連が大きく、電力・通信が成長テーマです。</li><li data-emoji="*">為替、銅価格、車両生産、設備投資が業績を動かします。</li><li data-emoji="!">中計2028で成長投資と収益力改善を確認します。</li></ul></div>
-    <p class="lead">住友電工は、ワイヤーハーネス、電力ケーブル、光通信、電子部材、産業素材を持つ総合部材メーカーです。景気敏感な面もありますが、複数事業で収益源が分散しています。</p><div class="sowhat"><p><b>つまり</b>、5802は「自動車部品株」と「電力・データセンター関連株」の両方として見る銘柄です。</p></div><div class="term-list"><details open><summary>自動車関連</summary><p>ワイヤーハーネスを中心とする主力事業です。車両生産、電動化、海外人件費、為替で利益が動きます。</p></details><details><summary>電力インフラ</summary><p>電力ケーブルは再エネ・送電網投資と関係します。大型案件の進捗と採算が重要です。</p></details><details><summary>情報通信</summary><p>光通信、データセンター関連需要が注目です。AI投資の継続が追い風になります。</p></details><details><summary>株式分割</summary><p>2026年に株式分割を発表しました。投資単位低下と流動性改善が狙いです。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>顧客の設備・製品需要が数量を左右します。</li><li>原材料・製品単価・製品構成を分けて見ます。</li><li>未確認の市場シェア・市場規模は置きません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">需要と製品構成</div><div class="info-text">情報通信の上期営業利益612億円、前年同期比392億円増。光配線・光デバイスの販売数量と採算を確認。 [S1]</div></div><div class="info-box"><div class="info-title">供給と投資</div><div class="info-text">電力ケーブル、平角巻線、ワイヤーハーネス等の需要と銅価格・生産性・販売価格を追う。銅価格による売上増を実需増と混同しない。 [S1]</div></div><div class="info-box"><div class="info-title">業界の循環</div><div class="info-text">高付加価値品でも需給緩和・顧客在庫調整・為替・原材料の影響があります。強い半期利益の単純年率換算を長期利益へ使いません。</div></div></div>
   </section>
 
-
+  <!-- SEC3: 主要製品・技術　⚡まとめ → product-grid → term-list 3〜5 -->
   <section class="section" id="sec3">
     <div class="section-header">
       <div class="section-icon">🔬</div><div class="section-num">3</div>
-      <div><div class="section-title">自動車関連と<span class="g">ワイヤーハーネス</span></div><div class="section-sub">安定収益とコスト管理が焦点</div></div>
+      <div><div class="section-title">製品・設備と収益化</div><div class="section-sub">開発、認定、量産、販売を分ける</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">ワイヤーハーネスは車の神経網のような部品です。</li><li data-emoji="*">電動化・高機能化で重要性は高まります。</li><li data-emoji="!">労務費、物流費、銅価格、為替が利益を左右します。</li></ul></div>
-    <div class="product-grid"><div class="product-box"><div class="product-symbol">WH</div><div class="product-name">ワイヤーハーネス</div><div class="product-use">車内の電力・信号をつなぐ主力部品。</div></div><div class="product-box"><div class="product-symbol">EV</div><div class="product-name">電動化部材</div><div class="product-use">高電圧・高機能化に対応。</div></div><div class="product-box"><div class="product-symbol">ADAS</div><div class="product-name">高機能車</div><div class="product-use">センサー・制御の配線需要。</div></div></div><div class="term-list"><details open><summary>ワイヤーハーネス</summary><p>車内の電線束です。EVや高機能車ほど配線と接続の重要性が上がります。</p></details><details><summary>利益率の注意</summary><p>部材価格、人件費、物流費、顧客との価格改定で利益が変わります。</p></details><details><summary>車両生産</summary><p>自動車メーカーの生産台数が需要に直結します。地域別の生産動向も重要です。</p></details><details><summary>電動化</summary><p>EV、HEV、ADASで高電圧・高速通信・軽量化ニーズが増えます。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>製品の高付加価値化と量産採算を確認。</li><li>設備の投資決定は直ちに稼働・売上ではありません。</li><li>会社の長期計画を分析期間へ全額先取りしません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">製品の位置づけ</div><div class="info-text">自動車用ワイヤーハーネス、電力ケーブル、光配線・光デバイス等を扱う多角的な電線・部品メーカー。自動車と電力・情報通信の需要が利益を左右する。 [S1]</div></div><div class="info-box"><div class="info-title">能力拡大</div><div class="info-text">電力ケーブル、平角巻線、ワイヤーハーネス等の需要と銅価格・生産性・販売価格を追う。銅価格による売上増を実需増と混同しない。 [S1]</div></div><div class="info-box"><div class="info-title">会社の見通し</div><div class="info-text">2027年3月期会社予想は売上5兆7500億円、営業利益5000億円、親会社株主帰属純利益3700億円、EPS118.60円。7月予想から増額。年間配当予想44円は分割後。2028年3月期のモデルと混同しない。 [S1]</div></div></div>
   </section>
 
-
+  <!-- SEC4: 技術詳細・規制　⚡まとめ → keypoints → term-list 4〜6 -->
   <section class="section" id="sec4">
     <div class="section-header">
       <div class="section-icon">🏛️</div><div class="section-num">4</div>
-      <div><div class="section-title">電力ケーブルと<span class="g">データセンター</span></div><div class="section-sub">インフラ投資とAI需要を確認</div></div>
+      <div><div class="section-title">資金・株式数・投資負担</div><div class="section-sub">利益と現金は別に確認</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">電力ケーブルは再エネ・送電網投資が追い風です。</li><li data-emoji="*">データセンター関連は光通信需要として注目です。</li><li data-emoji="!">大型案件は受注・納期・採算を分けて確認します。</li></ul></div>
-    <ul class="keypoints"><li><span class="kp-emoji">⚡</span><span class="kp-text"><b>電力ケーブル</b>：再エネ、送電網、海底ケーブルなどインフラ投資が追い風です。</span></li><li><span class="kp-emoji">🌐</span><span class="kp-text"><b>光通信</b>：AI・クラウド投資でデータセンター関連需要が増えています。</span></li><li><span class="kp-emoji">📄</span><span class="kp-text"><b>中計2028</b>：電力・通信関連の成長戦略と投資回収を確認します。</span></li></ul><div class="sowhat"><p><b>つまり</b>、自動車以外の評価拡大には、電力とデータセンター関連の利益成長が必要です。</p></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>投資と営業CF、還元後の現金を確認します。</li><li>分割・自己株式・潜在株の基準を揃えます。</li><li>借入・非支配持分を利益評価から重複控除しません。</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">財務の確認</div><div class="info-text">上期営業CF1393.94億円、有形固定資産取得支出1247.99億円。利益と投資回収を合わせて確認。 9月末有利子負債約7957億円。連結非支配持分896.33億円は親会社純利益と二重調整しない。 [S1]</div></div><div class="info-box"><div class="info-title">株式数</div><div class="info-text">2026年7月1日に1株を4株へ分割。発行済3,175,762,284株から自己株式56,085,955株を控除し3,119,676,329株。潜在株式調整後EPSは短信で該当なし。将来株式数は報酬等の変化を小幅に見込む当方仮定。 [S1]</div></div><div class="info-box"><div class="info-title">投資・資本政策</div><div class="info-text">設備投資と事業ポートフォリオ、ROIC、配当・財務余力を確認。2028年度目標の進捗であって確約ではない。 [S1]</div></div></div>
   </section>
 
-
+  <!-- SEC5: 競合比較　⚡まとめ → table-wrap>compare-table(自社=me) → highlight「差別化」 -->
   <section class="section" id="sec5">
     <div class="section-header">
       <div class="section-icon">⚔️</div><div class="section-num">5</div>
-      <div><div class="section-title">競合と<span class="g">比べる</span></div><div class="section-sub">電線・非鉄・自動車部品の横断企業</div></div>
+      <div><div class="section-title">同じ顧客課題で比較する</div><div class="section-sub">性能だけでなく供給・品質・価格を比較</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li data-emoji="*">比較対象は古河電工、フジクラ、SWCC、自動車部品大手です。</li><li data-emoji="*">住友電工は自動車と電力・通信を広く持つ分散型です。</li><li data-emoji="!">テーマ性だけでなく、各事業の利益率を確認します。</li></ul></div>
-    <div class="table-wrap"><table class="compare-table"><thead><tr><th>企業</th><th>主な強み</th><th>注意点</th></tr></thead><tbody><tr><td class="me">住友電工</td><td>自動車、電力、通信、電子、素材の分散。</td><td>事業が広く、全体成長率は複数要因で決まる。</td></tr><tr><td>古河電工</td><td>電線、光通信、インフラ関連。</td><td>採算改善と事業選別が焦点。</td></tr><tr><td>フジクラ</td><td>データセンター・光通信テーマで評価されやすい。</td><td>期待が高い局面では倍率に注意。</td></tr><tr><td>自動車部品大手</td><td>車両生産と電動化の恩恵。</td><td>顧客構成と価格転嫁で利益が変わる。</td></tr></tbody></table></div><div class="highlight"><h3>差別化の見方</h3><p>住友電工は、電線・光通信テーマだけでなく、自動車ハーネスという大きな基盤を持ちます。派手さよりも、複数事業の利益改善を積み上げる銘柄です。</p></div>
+    <div class="tldr"><div class="tldr-label">⚡ このセクションの3秒まとめ</div><ul><li>比較する製品・用途・地域・期間を揃えます。</li><li>同業の会社全体の利益率だけで製品の優劣を断定しません。</li><li>最新の独立シェア・同業予想倍率比較は未実施です。</li></ul></div>
+    <div class="table-wrap"><table class="compare-table"><thead><tr><th>比較軸</th><th>確認すること</th><th>限界</th></tr></thead><tbody><tr><td>技術・性能</td><td>同じ用途・世代・認定基準で比較</td><td>会社の説明を独立検証済み性能と扱わない。</td></tr><tr><td>価格・採算</td><td>数量、製品構成、原価、歩留まり</td><td>売上だけで高付加価値化を判定しない。</td></tr><tr><td>供給・品質</td><td>認定、量産、稼働、納期</td><td>投資計画を完成済み供給と数えない。</td></tr></tbody></table></div><p>競合企業ごとの最新市場シェアや市場コンセンサスは取得できていません。ゼロや推測値で埋めていません。</p>
   </section>
 
-
+  <!-- SEC6: 用語辞典　⚡まとめ(特にこの3つ) → term-list 10〜12（①定義→②なぜ重要→③この銘柄では） -->
   <section class="section" id="sec6">
     <div class="section-header">
       <div class="section-icon">📖</div><div class="section-num">6</div>
       <div><div class="section-title">5802のニュースで出る<span class="g">言葉</span> 全辞典</div><div class="section-sub">分からん単語はここで潰す</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li data-emoji="*">ワイヤーハーネス、電力ケーブル、データセンター、中計2028を押さえると読みやすいです。</li><li data-emoji="*">株式分割後の価格比較には注意が必要です。</li><li data-emoji="!">銅価格と為替は業績を動かします。</li></ul></div>
-    <div class="term-list"><details><summary>ワイヤーハーネス</summary><p>自動車内の電線束です。車の電動化・高機能化で重要度が高い部品です。</p></details><details><summary>電力ケーブル</summary><p>発電所、送電網、海底送電などに使う大型ケーブルです。再エネと電力インフラ投資が追い風です。</p></details><details><summary>情報通信</summary><p>光ファイバ、光部品、データセンター関連の通信インフラ事業です。</p></details><details><summary>エレクトロニクス</summary><p>FPC、電子線材、半導体関連などの部材事業です。</p></details><details><summary>産業素材</summary><p>超硬工具、焼結部品、特殊線など産業向け素材・部品です。</p></details><details><summary>自動車関連</summary><p>住友電工最大級の事業領域です。為替、車生産、銅価格、人件費が利益に影響します。</p></details><details><summary>データセンター関連</summary><p>光通信や高速接続部材の需要です。AI投資拡大で注目されています。</p></details><details><summary>中期経営計画2028</summary><p>会社が2026年5月に公表した中期計画です。事業ポートフォリオと成長投資の方向を示します。</p></details><details><summary>株式分割</summary><p>2026年5月に株式分割を発表しました。投資単位を下げ、流動性改善を狙う施策です。</p></details><details><summary>配当</summary><p>2026年3月期の配当と次期配当方針は、株主還元を見る材料です。</p></details><details><summary>銅価格</summary><p>電線・ケーブル材料として重要です。販売価格へ転嫁できるかが収益に影響します。</p></details><details><summary>為替感応度</summary><p>海外売上や海外生産が大きいため、円安・円高が業績に影響します。</p></details></div>
+    <div class="tldr"><div class="tldr-label">⚡ 特にこの3つだけは覚えて</div><ul><li>正常化利益は足元のピークをそのまま延長しません。</li><li>分割は企業価値を増やす操作ではありません。</li><li>会社予想とこのレポートの仮定は別です。</li></ul></div>
+    <div class="term-list"><details class="term-item"><summary class="term-header"><span class="term-name">正常化利益</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>景気の強弱や一時要因をならして考える利益。足元の最高利益を永続すると扱わないために使います。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">PER</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>株価を1株利益と比較する倍率。利益と倍率を別々に仮定し、現値から目標価格を作りません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">営業利益</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>本業の利益を示す指標。親会社に帰属する税引後利益とは異なります。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">営業キャッシュフロー</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>事業活動で生み出した現金。利益と在庫・売掛金の動きを合わせて確認します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">設備投資</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>生産能力や技術へ投じる資金。計画、支払、稼働、売上化は別の段階です。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">製品構成</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>売上に占める製品の組合せ。単なる数量増と高付加価値品の増加を区別します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">自己株式</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>会社が保有する自社株。1株価値の株式数から控除し、発行済総数と混同しません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">希薄化</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>潜在株や株式報酬などで1株の取り分が薄まること。分割とは異なります。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">株式分割</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>株数を増やし1株単位を小さくする操作。事業価値をその倍率で増やすものではありません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">非支配持分</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>子会社利益・純資産のうち親会社以外の取り分。親会社利益を使うPER法では再控除しません。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">ROIC</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>投下資本に対する利益の効率。投資額の大きい製造業では成長と同時に確認します。</p></div></details><details class="term-item"><summary class="term-header"><span class="term-name">会社予想</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p>会社が公表した見通し。当方モデルや独立の市場コンセンサスとは区別します。</p></div></details></div>
   </section>
 
-
+  <!-- SEC7: 株価の見方　⚡まとめ → timeline(signal+rating) → リスク4分類 info-row → highlight → 数字まとめ table -->
   <section class="section" id="sec7">
     <div class="section-header">
       <div class="section-icon">💹</div><div class="section-num">7</div>
       <div><div class="section-title">何が5802株を<span class="g">動かす</span>？</div><div class="section-sub">上がる理由・下がる理由を一目で</div></div>
     </div>
-    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li data-emoji="*">1Q決算、株式分割、中計2028、データセンター関連が主な材料です。</li><li data-emoji="*">7月31日の1Q決算発表後、株価は大きく動いています。</li><li data-emoji="!">期待先行の反動、為替、車両生産、銅価格には注意です。</li></ul></div>
-    <div class="timeline"><div class="tl-row"><div class="tl-date">2026/05/12</div><div class="tl-title">2026年3月期決算・株式分割 <span class="signal bull">追い風</span></div><div class="tl-desc">通期決算、中計2028、株式分割が公表されました。</div></div><div class="tl-row"><div class="tl-date">2026/07/31</div><div class="tl-title">2026年度1Q決算 <span class="signal neutral">重要</span></div><div class="tl-desc">IRカレンダー上の決算発表日。発表後の株価変動が大きくなっています。</div></div><div class="tl-row"><div class="tl-date">2026/10-11</div><div class="tl-title">2Q・中間決算 <span class="signal bull">確認</span></div><div class="tl-desc">自動車、電力、通信の利益進捗を確認します。</div></div></div><div class="info-row"><div class="info-box info-box-green"><div class="info-title info-title-green">追い風</div><div class="info-text">中計2028、電力ケーブル、データセンター関連、株式分割。</div></div><div class="info-box info-box-amber"><div class="info-title info-title-amber">確認</div><div class="info-text">1Q後の株価反応、2Q進捗、自動車関連の採算。</div></div><div class="info-box info-box-red"><div class="info-title info-title-red">リスク</div><div class="info-text">高値からの調整、為替、銅価格、車両生産、期待先行。</div></div></div><details class="term-item" open><summary class="term-header"><span class="term-name">主要出典</span><span class="term-arrow">⌄</span></summary><div class="term-body"><p><a href="https://sumitomoelectric.com/jp/ir" target="_blank" rel="noopener noreferrer">住友電工公式IR</a>、<a href="https://sumitomoelectric.com/jp/ir/library" target="_blank" rel="noopener noreferrer">IR資料室</a>、<a href="https://sumitomoelectric.com/ir/library" target="_blank" rel="noopener noreferrer">英文IR Library</a>、<a href="https://sumitomoelectric.com/jp/ir/calendar" target="_blank" rel="noopener noreferrer">IRカレンダー</a>、<a href="https://jp.investing.com/equities/sumitomo-electric-industries-ltd.-historical-data" target="_blank" rel="noopener noreferrer">株価時系列</a>を確認しました。本文の数値は2026年9月30日時点の公開情報に基づきます。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details>
+    <div class="tldr"><div class="tldr-label">⚡ 株価のツボ 3秒まとめ</div><ul><li>データセンター向け光製品</li><li>電力ケーブル・自動車</li><li>中計2028・利益還元</li></ul></div>
+    <div class="info-row"><div class="info-box"><div class="info-title">データセンター向け光製品</div><div class="info-text">情報通信の上期営業利益612億円、前年同期比392億円増。光配線・光デバイスの販売数量と採算を確認。 [S1]</div></div><div class="info-box"><div class="info-title">電力ケーブル・自動車</div><div class="info-text">電力ケーブル、平角巻線、ワイヤーハーネス等の需要と銅価格・生産性・販売価格を追う。銅価格による売上増を実需増と混同しない。 [S1]</div></div><div class="info-box"><div class="info-title">中計2028・利益還元</div><div class="info-text">設備投資と事業ポートフォリオ、ROIC、配当・財務余力を確認。2028年度目標の進捗であって確約ではない。 [S1]</div></div></div><div class="term-list"><details class="term-item"><summary class="term-header"><span class="term-name">主要出典・情報基準</span><span class="term-arrow">⌄</span></summary><div class="term-body"><ul><li><a href="https://sumitomoelectric.com/jp/sites/japan/files/2026-10/download_documents/2026_2m.pdf" target="_blank" rel="noopener noreferrer">S1：2027年3月期中間決算短信</a>（取得 2026-11-27）</li><li><a href="https://sumitomoelectric.com/jp/sites/japan/files/2026-10/download_documents/2026_2_hosokum.pdf" target="_blank" rel="noopener noreferrer">S2：2027年3月期中間決算補足資料</a>（取得 2026-11-27）</li><li><a href="https://sumitomoelectric.com/jp/sites/japan/files/2026-11/download_documents/yuuka157-1.pdf" target="_blank" rel="noopener noreferrer">S3：第157期半期報告書</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/5802.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：基準株価・Yahoo Finance日足</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SB：日経225・Yahoo Finance日足</a>（取得 2026-11-27）</li></ul><p>分析基準価格1,356円／市場時刻2026-11-27T05:15:21+00:00。分析基準日2026-11-27、対象2028年3月末。</p><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div></details></div>
   </section>
 
-</div>
+</div><!-- /container -->
 
 <div class="footer">
   <div class="brandmark">S<span class="g">i</span>M &nbsp;MARKET LAB</div>
   <p style="margin-bottom:8px;font-weight:700;color:#d8ded8">⚠️ 免責事項</p>
-  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。自動車部品・電線・光通信・電力インフラ株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-09-30時点の公開情報に基づきます。</p>
+  <p>本資料は情報提供・教育目的のみです。投資助言ではありません。電線・光通信・電子部品株は値動きが激しく、元本を失うリスクがあります。<br>投資判断はご自身の責任で。データは2026-11-27時点の公開情報に基づきます。</p>
 </div>
 
 <script>
@@ -471,13 +501,18 @@ document.querySelectorAll('details.term-item').forEach(d => {
   function u(){ var h=document.documentElement; var s=h.scrollTop/(h.scrollHeight-h.clientHeight); bar.style.width=Math.min(100,Math.max(0,s*100))+'%'; }
   document.addEventListener('scroll', u, {passive:true}); window.addEventListener('resize', u); u();
 })();
-document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
-  button.addEventListener('click', function () {
-    var target = document.getElementById(button.dataset.scrollTarget);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
 </script>
 
 </body>
 </html>
+
+<!--
+================================================================
+  デザインロック（重要）
+  ・アクセント色はSiMグリーンで固定。銘柄・業界で変えない。
+  ・以前あった「業界別カラー早見表」は廃止（色を変えると銘柄ごとに見た目がぶれるため）。
+  ・この <style> と骨格は改変禁止。{{ }} の中身だけ差し替える。
+================================================================
+  ChatGPT用ルール: 完成HTMLは必ず index.html というファイル名で保存・出力する。
+================================================================
+-->

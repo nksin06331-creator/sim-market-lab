@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ゼータ・グローバル・ホールディングス（ZETA）｜株価シナリオ</title>
+<title>ゼータ・グローバル（ZETA）｜ドパガキ株価シナリオ</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -17,209 +17,210 @@ main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(
 .zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
 details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
-.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav button{appearance:none;white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font:700 12px/1.75 'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}.report-nav button:hover,.report-nav button:focus-visible{border-color:var(--accent);color:var(--accent)}.report-nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav a{white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700}.report-nav a:hover{border-color:var(--accent);color:var(--accent)}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
 @media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
-@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav button{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav a{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
 @media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
 </style>
 
 </head>
 <body data-stock-ticker="ZETA" data-price-source="../../data/prices.json">
-
+<!-- ================================================================
+  SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
+  ・CSSと各セクション構成はキオクシア版と同一（サイト掲載の見た目を維持）。
+  ・{{ }} を report_data の値で置換して使う。数値・確率・結論は改変しない。
+  ・ファイル名は銘柄名（例: 285A.html / IONQ.html）。
+================================================================ -->
 <header class="hero">
 <div class="wrap">
   <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
-  <h1>ゼータ・グローバル・ホールディングス <small>ZETA</small></h1>
-  <div class="sub">NYSE｜評価基準日 2026-09-30｜使用手法 高成長SaaS・AIインフラ向けシナリオ評価</div>
+  <h1>ゼータ・グローバル <small>ZETA</small></h1>
+  <div class="sub">NYSE／USD｜評価基準日 2026-11-27｜使用手法 将来調整後EBITDA×倍率</div>
   <div class="verdict">
     <div class="verdict-main">
       <span class="pill">まず結論だけ</span>
-
-      <div class="status">好決算後の中立からやや強気</div>
-
-      <p>評価基準株価は悲観〜楽観レンジの40.7%地点です。成長とAI材料は強い一方、株価は高値圏に近づいています。</p>
-      <p class="sub">2026年9月30日時点の公開情報と株価を反映しました。2Q会社計画は維持し、3Q決算、Athena導入、Palantir連携を次に確認します。</p>
+      <!-- decision.status＋一言結論（絵文字は先頭1個まで、45文字目安） -->
+      <div class="status">価値・実行条件・資金を合わせて見る</div>
+      <!-- 現値ポジショニングと市場逆算を1〜2文で -->
+      <p>標準ケース$34.22。確率でならした価格は$35.00ですが、予測の確約ではありません。</p>
+      <p class="sub">公式の最新事実を反映し、2027年の事業・資金・株式数は当方の条件付き仮定として分けます。</p>
     </div>
-
-    <div class="score"><small>分析の参考スコア</small><b>51</b><small>/ 100　売買判断ではありません</small></div>
+    <!-- 総合スコアは“補助指標”。売買判断そのものではない旨を必ず添える -->
+    <div class="score"><small>分析の参考スコア</small><b>52</b><small>/ 100　売買判断ではありません</small></div>
   </div>
   <div class="kpis">
-    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$28.96</b><small data-live-price-date>2026/09/29終値（分析基準値）</small></div>
-    <div class="kpi"><span>標準ケースの株価</span><b>$32.00</b><small>+10.5%</small></div>
-    <div class="kpi"><span>3ケースを確率でならした値</span><b>$31.50</b><small>+8.8%</small></div>
-    <div class="kpi"><span>値動きリスク</span><b>中〜高</b><small>高成長AI株、期待織り込みと競争リスク</small></div>
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$31.97</b><small data-live-price-date>2026-11-25T21:00:02+00:00（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>$34.22</b><small>+7.1%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>$35.00</b><small>+9.5%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>やや高い</b><small>広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。</small></div>
   </div>
 
 </div>
 </header>
 
-
-
-
+<!-- Validation：WARNがあれば下の注意帯を残す（なければ丸ごと削除）。FAIL時は完成版にしない。 -->
+<div class="wrap"><p class="notice">将来価値・支出・確率・株式数は当方の条件付き仮定です。最新の確定財務と分析基準日を分けて表示しています。広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。</p></div>
+<!-- 例（WARN時）:
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>将来価値・支出・確率・株式数は当方の条件付き仮定です。最新の確定財務と分析基準日を分けて表示しています。広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。</div></div>
+-->
 
 <nav class="report-nav"><div class="wrap">
-<button type="button" data-scroll-target="snapshot">結論</button>
-<button type="button" data-scroll-target="scenarios">3シナリオ</button>
-<button type="button" data-scroll-target="logic">計算</button>
-<button type="button" data-scroll-target="sensitivity">感応度</button>
-<button type="button" data-scroll-target="assumptions">前提</button>
+<a href="#snapshot">結論</a>
+<a href="#scenarios">3シナリオ</a>
+<a href="#logic">計算</a>
+<a href="#sensitivity">感応度</a>
+<a href="#assumptions">前提</a>
 </div></nav>
 
 <main class="wrap">
 
-
+<!-- Layer2-1：いまどこ？（現値ポジショニング＋市場逆算） -->
 <section class="card" id="snapshot">
   <h2>いまの株価、どこにいる？</h2>
-  <p class="lead">今の株価は標準ケース手前です。2Q好決算とAI提携を評価しつつ、さらなる上値には3Q継続成長とAI商業化の証拠が必要です。</p>
+  <p class="lead">分析基準日2026-11-27。株価$31.97／2026-11-25T21:00:02+00:00。分析対象2027年末。価格表示が更新されても分析値は固定。</p>
   <div class="grid-2">
     <div>
       <h3>今の株価の位置</h3>
-      <p>悲観～楽観ケースの <b data-live-position-text>40.7%</b> 地点。判定は <b>標準ケース手前</b>。3QもBeat and Raiseなら標準〜楽観へ、成長鈍化なら悲観側へ寄ります。</p>
-
-      <div class="position"><div class="position-line"><i class="pin" data-live-position-pin style="left:40.7%"></i></div><div class="position-labels"><span>Bear $20.00</span><span>Base $32.00</span><span>Bull $42.00</span></div></div>
-      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>1.5倍</b>　3ケースを確率でならした値：<b>$31.50</b></p>
+      <p>悲観～楽観ケースの <b>36.0%</b> 地点。判定は <b>条件付き評価</b>。分析基準価格は悲観～楽観帯の中です。</p>
+      <!-- pin の left:% を band_position_pct に合わせる -->
+      <div class="position"><div class="position-line"><i class="pin" style="left:36.0%"></i></div><div class="position-labels"><span>Bear $22.18</span><span>Base $34.22</span><span>Bull $49.37</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>1.78倍（確率を含まない）</b>　3ケースを確率でならした値：<b>$35.00</b></p>
     </div>
     <div>
       <h3>今の株価と、この分析の違い</h3>
       <div class="compare">
-        <div><b data-live-market-score>今の株価 41/100</b><div class="meter"><i data-live-market-meter style="width:41%"></i></div></div>
-        <div><b>この分析 52/100</b><div class="meter"><i style="width:52%"></i></div></div>
+        <div><b>今の株価 36/100</b><div class="meter"><i style="width:36%"></i></div></div>
+        <div><b>この分析 47/100</b><div class="meter"><i style="width:47%"></i></div></div>
       </div>
-
-      <p>市場はAIインフラ化と好決算をかなり評価していますが、まだ楽観ケース全体までは織り込んでいません。</p>
+      <!-- market_reverse.conclusion：現値が自分のどの前提に相当するか -->
+      <p>現在の評価用株式数で現在株主価値は$8892.7M。標準期末現金・負債・少数株主請求権を固定すると必要事業価値は$8742.7M。将来株式数は変わるため標準価格の逆数ではありません。独立したDCF・同業倍率比較は未実施。</p>
     </div>
   </div>
 </section>
 
-
+<!-- Layer1/2：3シナリオ。dl の項目は使用手法に合わせて変える（rNPV/SOTP/EV-Sales/PER等） -->
 <section class="card" id="scenarios">
   <h2>未来はこの3パターン</h2>
-  <p class="lead">現在株価から独立して、売上成長、EBITDA、FCF、AI提携、競争リスクを置きました。</p>
+  <p class="lead">2027年の当方仮定。2026年会社売上予想中点$1.855Bからの成長率は約8%／24%／40%。倍率14／17／20倍は同業中央値として確認した数値ではなく感応度用の評価仮定。調整後EBITDAは株式報酬・償却等を除くため、株主利益や自由現金と同一視せず、将来株式数と現金収支を別に置く。資本化開発費もFCF照合で確認する。</p>
   <div class="scenarios">
     <article class="scenario bear">
       <div class="scenario-head"><span>悲観ケース</span><b>25%</b></div>
-      <div class="scenario-price">$20.00</div>
-      <div class="small">現値比 -30.9%</div>
-      <dl><div><dt>成長</dt><dd>30%台前半へ鈍化</dd></div><div><dt>AI</dt><dd>売上寄与限定</dd></div><div><dt>倍率</dt><dd>圧縮</dd></div><div><dt>株価</dt><dd>$20.00</dd></div></dl>
-
+      <div class="scenario-price">$22.18</div>
+      <div class="small">現値比 -30.6%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>$6,160.0M</dd></div><div><dt>株主価値</dt><dd>$6,210.0M</dd></div><div><dt>将来株式</dt><dd>280.00M</dd></div></dl>
+      <!-- 例: <div><dt>事業価値</dt><dd>25.9兆円</dd></div> を手法に応じて数行 -->
     </article>
     <article class="scenario base">
       <div class="scenario-head"><span>標準ケース</span><b>50%</b></div>
-      <div class="scenario-price">$32.00</div>
-      <div class="small">現値比 +10.5%</div>
-      <dl><div><dt>成長</dt><dd>40%前後維持</dd></div><div><dt>利益</dt><dd>EBITDA/FCF拡大</dd></div><div><dt>AI</dt><dd>ARPUに寄与</dd></div><div><dt>株価</dt><dd>$32.00</dd></div></dl>
+      <div class="scenario-price">$34.22</div>
+      <div class="small">現値比 +7.1%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>$9,775.0M</dd></div><div><dt>株主価値</dt><dd>$9,925.0M</dd></div><div><dt>将来株式</dt><dd>290.00M</dd></div></dl>
     </article>
     <article class="scenario bull">
       <div class="scenario-head"><span>楽観ケース</span><b>25%</b></div>
-      <div class="scenario-price">$42.00</div>
-      <div class="small">現値比 +45.0%</div>
-      <dl><div><dt>成長</dt><dd>40%超継続</dd></div><div><dt>提携</dt><dd>商業化加速</dd></div><div><dt>倍率</dt><dd>AIインフラ株として拡大</dd></div><div><dt>株価</dt><dd>$42.00</dd></div></dl>
+      <div class="scenario-price">$49.37</div>
+      <div class="small">現値比 +54.4%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>$14,560.0M</dd></div><div><dt>株主価値</dt><dd>$14,810.0M</dd></div><div><dt>将来株式</dt><dd>300.00M</dd></div></dl>
     </article></div>
 </section>
 
-
+<!-- Layer2：価格別アクションマップ ＋ 株価を動かす材料 -->
 <section class="grid-2">
   <div class="card">
     <h2>この値段ならどう見る？</h2>
-
-    <div class="zone"><div><b>$20未満</b><span>★★★</span></div><p>成長鈍化や倍率圧縮を強く織り込む価格帯です。</p></div><div class="zone"><div><b>$20〜$32</b><span>★★★</span></div><p>好決算後の中立圏。今の株価はここです。</p></div><div class="zone"><div><b>$32〜$42</b><span>★★</span></div><p>AI商業化と高成長継続を評価する価格帯です。</p></div><div class="zone"><div><b>$42超</b><span>★</span></div><p>複数四半期の上方修正とAI収益化が必要です。</p></div>
-
+    <!-- 4〜5帯。「買い/売り」は断定しない。星は割安度の目安 -->
+    <div class="zone"><div><b>$22.18未満</b></div><p>悲観ケースより低い。現金流出や事業悪化を再確認。</p></div><div class="zone"><div><b>$22.18～$34.22</b></div><p>悲観～標準。標準達成の保証ではない。</p></div><div class="zone"><div><b>$34.22～$49.37</b></div><p>より強い採用・採算・資金条件が必要。</p></div><div class="zone"><div><b>$49.37超</b></div><p>楽観ケース外。より強い根拠が必要。</p></div>
+    <!-- 例: <div class="zone"><div><b>48,000円未満</b><span>★★★★★</span></div><p>悲観ケース以下。下方リスクを相当織り込む</p></div> -->
   </div>
   <div class="card">
     <h2>株価を動かす4つ</h2>
-
-    <div class="signal"><div><b>2Q決算</b><span class="up">強い</span></div><p>売上+44%、GAAP黒字、FCF増加。</p></div><div class="signal"><div><b>AI提携</b><span class="up">材料</span></div><p>OpenAI、Snowflake、Palantirが評価材料です。</p></div><div class="signal"><div><b>株価水準</b><span class="flat">確認</span></div><p>52週高値に近く、期待織り込みを確認します。</p></div><div class="signal"><div><b>競争</b><span class="down">注意</span></div><p>Salesforce、Adobe、Oracleなど大手と競争します。</p></div>
-
+    <!-- 各材料に up=追い風 / down=注意 / flat を付ける -->
+    <div class="signal"><div><b>Athena採用・顧客利用と4Q業績</b></div><p>会社4Q予想と当方の標準仮定に沿って進む。</p></div><div class="signal"><div><b>買収事業の統合とデータ・AI連携</b></div><p>統合は進むが短期利益は会社見通し内。</p></div><div class="signal"><div><b>営業CF・株式報酬と資本配分</b></div><p>会社FCF予想に概ね沿い、株式数も標準仮定の範囲。</p></div><div class="signal"><div><b>資金と1株価値</b></div><p>広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。</p></div>
+    <!-- 例: <div class="signal"><div><b>AI向けSSD需要</b><span class="up">追い風</span></div><p>…</p></div> -->
   </div>
 </section>
 
-
+<!-- Layer2：良い点 / 気になる点（対比） -->
 <section class="grid-2">
   <div class="card">
     <h2>ここは普通に強い</h2>
-    <ul class="clean"><li>2Q売上は前年比44%で、20四半期連続Beat and Raiseです。</li><li>GAAP純利益とFCFが伸び、成長と収益性が両立しています。</li><li>Palantir、OpenAI、Snowflake連携でAIインフラ色が強まりました。</li><li>大型顧客数とARPUが伸びています。</li></ul>
-
+    <ul class="clean"><li>顧客データとAIを使い、企業の分析、顧客獲得・維持、複数チャネルのマーケティング施策を支援します。サブスクリプション、利用量課金、プロフェッショナルサービスが収益源です。</li><li>2026年3Q売上約$493M、前年同期比46%増。GAAP営業利益$45.948M、純利益$38.273M、希薄化EPS$0.14。調整後EBITDA約$121M・利益率24.6%。</li><li>10月7日にSenso Agenticを買収。概算対価$27.5Mは現金$7.5M、株式$10M、最大$10Mの株式アーンアウト。将来買収・報酬と買戻しの純額を将来株式数へ反映。</li></ul>
+    <!-- 例: <li>FY2025売上2.34兆円で過去最高。</li> を3〜5件 -->
   </div>
   <div class="card">
     <h2>ここで事故るかも</h2>
-    <ul class="clean"><li>株価が好決算後に上昇し、期待が高まっています。</li><li>広告・マーケティング予算は景気影響を受けます。</li><li>M&A統合と大型提携の売上化には実行リスクがあります。</li><li>大手ソフトウェア企業との競争が続きます。</li></ul>
-
+    <ul class="clean"><li>広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。</li><li>将来価値・倍率・確率に幅があり、実現は保証されません。</li><li>買収・投資・報酬と株式数を更新する必要があります。</li></ul>
+    <!-- 2つ目のカードのliは自動で赤「!」になる -->
   </div>
 </section>
 
-
+<!-- Layer3：計算ロジック -->
 <section class="card" id="logic">
   <h2>数字の作り方</h2>
-  <p class="lead">高成長SaaS/AI株のため、売上倍率、成長率、EBITDA、FCF、提携商業化をまとめたシナリオ法で見ました。</p>
+  <p class="lead">2027年末事業価値＋同時点自由現金−負債−非支配持分＝株主価値。これを同じケースの将来株式数で割る。2027年の当方仮定。2026年会社売上予想中点$1.855Bからの成長率は約8%／24%／40%。倍率14／17／20倍は同業中央値として確認した数値ではなく感応度用の評価仮定。調整後EBITDAは株式報酬・償却等を除くため、株主利益や自由現金と同一視せず、将来株式数と現金収支を別に置く。資本化開発費もFCF照合で確認する。</p>
   <div class="table-wrap"><table>
-  <thead><tr><th>ケース</th><th>主な前提</th><th>価値の見方</th><th>計算株価</th><th>確率</th><th>確率加重</th></tr></thead>
-  <tbody><tr><td>悲観</td><td>成長鈍化</td><td>倍率圧縮</td><td>$20.00</td><td>25%</td><td>$5.00</td></tr><tr><td>標準</td><td>高成長継続</td><td>好決算を評価</td><td>$32.00</td><td>50%</td><td>$16.00</td></tr><tr><td>楽観</td><td>AI商業化加速</td><td>AIインフラ株として再評価</td><td>$42.00</td><td>25%</td><td>$10.50</td></tr></tbody>
+  <thead><tr><th>ケース</th><th>事業価値</th><th>自由現金</th><th>負債・少数持分</th><th>株主価値</th><th>将来株式</th><th>1株価値</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>$6,160.0M</td><td>$300.0M</td><td>$250.0M</td><td>$6,210.0M</td><td>280.00M</td><td>$22.18</td></tr><tr><td>標準</td><td>$9,775.0M</td><td>$400.0M</td><td>$250.0M</td><td>$9,925.0M</td><td>290.00M</td><td>$34.22</td></tr><tr><td>楽観</td><td>$14,560.0M</td><td>$500.0M</td><td>$250.0M</td><td>$14,810.0M</td><td>300.00M</td><td>$49.37</td></tr></tbody>
   </table></div>
-
-  <p class="notice"><b>重要：</b>現在株価に合わせた逆算ではありません。高成長株のため、ガイダンスと倍率の変化で評価が大きく動きます。</p>
+  <!-- 現値に合わせた逆算ではない旨、未開示前提の注意など -->
+  <p class="notice"><b>重要：</b>2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p>
 </section>
 
-
+<!-- Layer3：成立条件 -->
 <section class="card" id="conditions">
   <h2>この未来になる条件</h2>
-  <details open><summary>悲観ケース：$20 / 確率25%</summary><p>広告予算や競争で成長が鈍化し、AI提携の売上寄与が限定的なケースです。</p></details><details><summary>標準ケース：$32 / 確率50%</summary><p>2Qの勢いが続き、ガイダンス達成と大型顧客拡大が確認されるケースです。</p></details><details><summary>楽観ケース：$42 / 確率25%</summary><p>AI提携が商業化し、AthenaがARPUと新規顧客獲得を押し上げるケースです。</p></details>
-
+  <details><summary>悲観：$22.18／主観確率25%</summary><p>2027年売上$2.0B、調整後EBITDA率22%、同倍率14倍。成長減速・統合費用を仮定。 2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。 現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。</p></details><details><summary>標準：$34.22／主観確率50%</summary><p>2027年売上$2.3B、調整後EBITDA率25%、同倍率17倍。採用と顧客利用が伸びる条件。 2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。 現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。</p></details><details><summary>楽観：$49.37／主観確率25%</summary><p>2027年売上$2.6B、調整後EBITDA率28%、同倍率20倍。高成長と運営レバレッジの強い条件。 2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。 現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。</p></details>
+  <!-- 例: <details open><summary>Base：$34.22 / 確率50%</summary><p>…</p></details> を3つ -->
 </section>
 
-
+<!-- Layer3：感応度 ＋ 分布（モンテカルロは実施時のみ） -->
 <section class="grid-2" id="sensitivity">
   <div class="card">
     <h2>数字がズレるとどうなる？</h2>
     <div class="table-wrap"><table>
-      <thead><tr><th>前提</th><th>弱い</th><th>標準</th><th>強い</th></tr></thead>
-      <tbody><tr><td>売上成長</td><td>30%台前半 → $20</td><td>40%前後 → $32</td><td>40%超継続 → $42</td></tr><tr><td>AI寄与</td><td>話題先行</td><td>ARPUに寄与</td><td>大型契約化</td></tr><tr><td>倍率</td><td>SaaS倍率圧縮</td><td>高成長SaaS評価</td><td>AIインフラ評価</td></tr></tbody>
+      <thead><tr><th>変数</th><th>低位</th><th>標準</th><th>高位</th></tr></thead>
+      <tbody><tr><td>標準事業価値（USD）</td><td>$27.48</td><td>$34.22</td><td>$40.97</td></tr><tr><td>標準の将来株式数</td><td>$38.03</td><td>$34.22</td><td>$31.11</td></tr></tbody>
     </table></div>
-    <p class="small">ZETAは利益も出始めていますが、株価はまだ成長率とAI期待への感応度が高いです。</p>
+    <p class="small">標準事業価値±20%、標準将来株式数±10%を1変数ずつ変更。他は標準に固定した局所感応度で、独立した確率を意味しません。</p>
   </div>
   <div class="card">
     <h2>どの価格に行きやすい？</h2>
-    <p class="lead">モンテカルロではなく、好決算後の3点シナリオです。</p>
-    <div class="dist-row"><span>$20</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div><div class="dist-row"><span>$32</span><div class="track"><i style="width:50%"></i></div><b>50%</b></div><div class="dist-row"><span>$42</span><div class="track"><i style="width:25%"></i></div><b>25%</b></div>
-
-    <p>期待値は標準ケース付近ですが、AI提携の売上化次第で楽観側へ寄ります。</p>
+    <p class="lead">モンテカルロは未実施。3つの離散ケースのみ。</p>
+    <div class="signal"><div><b>悲観：$22.18</b></div><p>主観確率 25%</p></div><div class="signal"><div><b>標準：$34.22</b></div><p>主観確率 50%</p></div><div class="signal"><div><b>楽観：$49.37</b></div><p>主観確率 25%</p></div>
+    <!-- 例: <div class="dist-row"><span>5万円未満</span><div class="track"><i style="width:7.6%"></i></div><b>7.6%</b></div> -->
+    <p>確率の合計は100%。仮定を変えれば期待値も変わります。</p>
   </div>
 </section>
 
-
+<!-- 次の決算/イベントで見る場所（watch_items） -->
 <section class="card">
   <h2>次の決算で見る場所</h2>
-  <div class="signal"><div><b>3Q決算</b></div><p>売上、EBITDA、FCF、ガイダンスを確認します。</p></div><div class="signal"><div><b>Athena導入</b></div><p>AI利用、商業化、ARPU寄与を確認します。</p></div><div class="signal"><div><b>Palantir提携</b></div><p>導入顧客、売上寄与、Foundry連携の進捗を確認します。</p></div>
-
+  <div class="signal"><div><b>Athena採用・顧客利用と4Q業績</b></div><p>公式発表・次の決算時：進捗、現金、資金・株式数と採用条件の変更</p></div><div class="signal"><div><b>買収事業の統合とデータ・AI連携</b></div><p>公式発表・次の決算時：進捗、現金、資金・株式数と採用条件の変更</p></div><div class="signal"><div><b>営業CF・株式報酬と資本配分</b></div><p>公式発表・次の決算時：進捗、現金、資金・株式数と採用条件の変更</p></div>
+  <!-- 例: <div class="signal"><div><b>2026年7月31日の1Q決算</b></div><p>…</p></div> -->
 </section>
 
-
+<!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
 <section class="card" id="assumptions">
   <h2>使った数字と前提</h2>
   <div class="table-wrap"><table>
   <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
-  <tbody><tr><td>評価基準株価</td><td>$28.96</td><td>市場データで確認</td><td>2026-09-30</td><td>2026/08/10場中確認</td></tr><tr><td>2Q売上</td><td>$443M</td><td>会社リリース</td><td>2026/06/30</td><td>前年比+44%</td></tr><tr><td>2026年売上見通し</td><td>$1.818B midpoint</td><td>会社リリース</td><td>2026/08/04</td><td>上方修正</td></tr><tr><td>時価総額</td><td>$7.3B</td><td>株価・株式数から計算</td><td>2026-09-30</td><td>概算</td></tr></tbody>
+  <tbody><tr><td>最新の確定業績</td><td>2026年3Q売上約$493M、前年同期比46%増。GAAP営業利益$45.948M、純利益$38.273M、希薄化EPS$0.14。調整後EBITDA約$121M・利益率24.6%。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>現在財務</td><td>会社はMarigoldと政治候補者売上を除く3Q成長率を30%と説明。総成長率46%と同一視しない。Super-Scaled顧客212社、同顧客ARPU約$2.0Mは会社定義のKPI。</td><td>公式情報で確認済み</td><td>確認期末・分析日を区別</td></tr><tr><td>株式と潜在株</td><td>11月2日A・B合計255,458,977株。9月末RSU等14,445,635とオプション14,554,628（平均行使価格$13.84）を把握。評価用株式はRSU等を全加算し、オプションを基準株価で自己株方式調整した約278.16M株。</td><td>このレポートの推定を含む</td><td>確認期末・分析日を区別</td></tr><tr><td>2027年価値仮定</td><td>2027年の当方仮定。2026年会社売上予想中点$1.855Bからの成長率は約8%／24%／40%。倍率14／17／20倍は同業中央値として確認した数値ではなく感応度用の評価仮定。調整後EBITDAは株式報酬・償却等を除くため、株主利益や自由現金と同一視せず、将来株式数と現金収支を別に置く。資本化開発費もFCF照合で確認する。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>資金と将来株式</td><td>2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr><tr><td>主観確率</td><td>25%, 50%, 25%</td><td>このレポートの推定</td><td>確認期末・分析日を区別</td></tr></tbody>
   </table></div>
 </section>
 
-
+<!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
 <section class="card">
   <h2>詳しく見たい人向け</h2>
-  <details open><summary>手法選定理由</summary><p>ZETAは利益が出始めた高成長AIソフト株です。PER単独ではなく、成長率、EBITDA、FCF、AI提携の商業化をシナリオ化します。</p></details><details><summary>株価水準について</summary><p>株価は好決算後に52週高値圏へ近づいています。良い会社でも期待が高い時は下振れに注意します。</p></details><details><summary>主要出典</summary><p><a href="https://www.businesswire.com/news/home/20260804939577/en/Zeta-Global-Reports-20th-Consecutive-Beat-and-Raise-Quarter-Achieves-the-Rule-of-64-and-Generates-Positive-GAAP-Net-Income-in-2Q26" target="_blank" rel="noopener noreferrer">2Q決算リリース</a>、<a href="https://zetaglobal.com/news/palantir-and-zeta-global-announce-strategic-partnership/" target="_blank" rel="noopener noreferrer">Palantir提携</a>、<a href="https://investors.zetaglobal.com/" target="_blank" rel="noopener noreferrer">公式IR</a>、<a href="https://stockanalysis.com/stocks/zeta/" target="_blank" rel="noopener noreferrer">株価・統計</a>。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></details>
-
+  <details><summary>計算・資金・希薄化</summary><p>2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&amp;A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</p></details><details><summary>分析上の制約・未取得情報</summary><p>TTM資金余力は再編・投資の対象期間を揃えられないため算出していません。最近のCFと現金、今後の投資・借入・株式数を別に確認します。オプション市場や空売り統計、独立した最新コンセンサスは未取得。</p></details><details><summary>市場データの補助情報</summary><p>株価31.97 USD、時刻2026-11-25T21:00:02+00:00。52週高値38.8・安値14.365USD。20営業日終値価格リターン-4.42%（配当調整なし）。値動きは総合判定の根拠に使わない。</p></details><details><summary>3レポート総合判定</summary><p>3レポート総合判定55.2・中立。株価評価55は条件付き価値・希薄化・資金負担を評価。材料60は予定の実行と既存期待、企業リスク48は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。</p></details><details><summary>主要出典と更新履歴</summary><p><ul><li><a href="https://s25.q4cdn.com/525061491/files/content_files/ZETA-3Q_26-Earnings-Press-Release_FINAL.pdf" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表・見通し</a>（公表2026-11-09／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1851003/000119312526453696/zeta-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q 10-Q</a>（公表2026-11-09／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul><p>2026-11-27全体更新。分析値は共通bundleから生成。</p></p></details>
+  <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
+       転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
+       それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->
 </section>
 
 <section class="card notice">
-  <h3>免責</h3><p>本資料は情報提供を目的とした試算です。投資助言ではありません。高成長株は決算、金利、倍率、ガイダンスで大きく変動します。</p>
+  <h3>免責</h3><p>情報提供・教育目的の資料です。投資助言・売買推奨ではありません。予測値・主観確率・資産価値は仮定で、実現や価格収束を保証しません。配当は価格比較に含みません。</p>
 </section>
-<footer>SiM MARKET LAB｜ゼータ・グローバル・ホールディングス（ZETA）株価シナリオ｜作成日 2026-09-30</footer>
+<footer>分析基準日2026-11-27。株価$31.97／2026-11-25T21:00:02+00:00。分析対象2027年末。価格表示が更新されても分析値は固定。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 <script src="../../lab/assets/js/live-report-price.js" defer></script>
-<script>
-document.querySelectorAll('[data-scroll-target]').forEach(function (button) {
-  button.addEventListener('click', function () {
-    var target = document.getElementById(button.dataset.scrollTarget);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
 </body></html>

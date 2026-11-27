@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="LAES" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>シールエスキュー <small>LAES</small></h1>
-    <div class="sub">Nasdaq｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">Nasdaq／USD｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">商用化進捗待ち</div>
-        <p>QS7001/QVault商用化、2.25億ドル超のパイプライン契約化、量子投資の実効性が主な材料です。</p>
-        <p class="sub">足りない情報は仮定を置き、主要材料の織り込み度を50%と推定します。</p>
+        <div class="status">最新の事実と条件付きの将来を分ける</div>
+        <p>会社が公表した今後の進捗を、採用・利益・投資・1株価値への経路で確認します。</p>
+        <p class="sub">同じ事業価値に重なる材料の価格幅や割合を足しません。未確認の確定日や確率を創作しません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>50%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ 中</small>
+        <b>0～0%</b>
+        <small>共通価値モデルの条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>$2.32</b>
-        <small data-live-price-date>2026/09/29終値（分析基準値）</small>
+        <b data-live-price>$1.07</b>
+        <small data-live-price-date>2026-11-25T21:00:02+00:00（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>QS7001/QVaultの認証・初期商用売上</b>
-        <small>H2 2026</small>
+        <b>QS7001最終監査・正式認証への手続き</b>
+        <small>最終拠点監査は2027年1月の会社予定</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>会社発表ベース</b>
+        <b>会社予定・条件付き・未定を区別</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">将来価値・支出・確率・株式数は当方の条件付き仮定です。最新の確定財務と分析基準日を分けて表示しています。赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>50%</b></div><p>仮定：H1 2026増収を70%、FY2026ガイダンスを60%、QS7001/QVault商用化を40%、量子投資ポートフォリオを30%として置き、パイプライン転換と希薄化リスクを控除しました。</p><p>読み方：足元の増収と現金余力はかなり評価されていますが、PQC製品の量産売上はまだ十分には織り込まれていません。</p><p>次に見る数字：H1正式売上、FY2026見通し、現金、株式数、QS7001/QVaultの認証と初期売上、パイプラインの契約化です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>
-      <p class="small">計算方法：H1増収、FY2026ガイダンス、PQC商用化、パイプライン、量子投資、希薄化リスクを重み付けして推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>0～0%</b><span>このレポートの推定</span></div><p>生の逆算値-41.3%。負や100超の場合はシナリオの帯外であり、表示だけを丸めています。株式数・支出・事業価値の仮定の不確実性が大きいことに注意。</p><p>標準の現金・負債・少数株主請求権を固定し共通事業価値の悲観・楽観端点から逆算。個別割合の平均ではない。表示は主観的な±10ポイント幅を0～100へ制限するが、生の値が範囲外なら本文に残す。真の成功確率や統計区間ではない。 現在時価総額が、標準の将来現金等を固定した失敗側価値より低く、市場は当方より大きな資金流出・投資損失・希薄化等を見込む可能性があります。</p></div>
+      <p class="small">計算方法：標準の現金・負債・少数株主請求権を固定し共通事業価値の悲観・楽観端点から逆算。個別割合の平均ではない。表示は主観的な±10ポイント幅を0～100へ制限するが、生の値が範囲外なら本文に残す。真の成功確率や統計区間ではない。 現在時価総額が、標準の将来現金等を固定した失敗側価値より低く、市場は当方より大きな資金流出・投資損失・希薄化等を見込む可能性があります。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>QS7001/QVaultの初期商用売上、パイプライン契約化、FY2026売上上限超えが同時に確認されることです。</p>
+        <p>監査と審査が順調で正式認証・顧客採用へ進む。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>正式決算での費用増、商用化遅れ、追加希薄化、パイプライン未転換です。</p>
+        <p>監査・審査・顧客実装が遅れ量産売上が後ろ倒しになる。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>パイプラインが大きくても受注残ではなく、商用化が遅れるとテーマ期待が剥落しやすいことです。</p>
+        <p>赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。</p>
       </div>
     </div>
   </section>
@@ -131,72 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026/06/05</div><div class="time-dot"></div><div class="time-body"><b>量子プラットフォーム拡大</b><p>Root-to-Qubit戦略を説明。</p><div class="time-meta"><span class="chip blue">量子</span></div></div></div><div class="time-row"><div class="time-date">2026/07/06</div><div class="time-dot"></div><div class="time-body"><b>H1 2026予備決算</b><p>売上約$11M、前年比+120%。</p><div class="time-meta"><span class="chip">増収</span></div></div></div><div class="time-row"><div class="time-date">H2 2026</div><div class="time-dot"></div><div class="time-body"><b>QS7001/QVault商用化</b><p>初期商用売上と認証進捗を確認。</p><div class="time-meta"><span class="chip">最重要</span></div></div></div><div class="time-row"><div class="time-date">2027</div><div class="time-dot"></div><div class="time-body"><b>量産売上の拡大</b><p>顧客評価から契約・量産へ進むか。</p><div class="time-meta"><span class="chip">確認</span></div></div></div>
+      <div class="time-row"><div class="time-date">予定</div><div class="time-dot"></div><div class="time-body"><b>Euronext Growth Paris取引開始</b><p>2026年12月2日開始予定</p></div></div><div class="time-row"><div class="time-date">予定</div><div class="time-dot"></div><div class="time-body"><b>QS7001最終監査・正式認証への手続き</b><p>最終拠点監査は2027年1月の会社予定</p></div></div><div class="time-row"><div class="time-date">進行中・未定</div><div class="time-dot"></div><div class="time-body"><b>Quantisimo再編・量子投資・買収協議</b><p>承認・契約条件付き／確定した完了日なし</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>H1 2026正式決算とFY2026見通し</h3><div class="chips"><span class="chip">重要度4</span><span class="chip">決算</span></div></div><div class="date-box"><b>H2 2026</b><span>会社公表または予定</span></div></div>
-<p class="lead">予備値で示されたH1売上約1,100万ドル、前年比120%増が正式値でも確認されるかを見ます。費用、現金、株式数も同時に確認します。</p>
-<div class="mechanism"><span>予備値</span><i>→</i><span>正式値</span><i>→</i><span>見通し</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+18〜38%</div><p>売上・見通し・現金が強く、株式数増加も限定的なら上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-8〜+10%</div><p>予備値どおりなら標準ケースを維持します。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-18〜-32%</div><p>売上未達や費用増、追加希薄化が目立つと下落要因です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>売上規模が小さいため、数百万ドルの差でも成長率と資金効率の見方が大きく変わるためです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>H1 2026予備売上は約$11M、前年比+120%。</li><li>FY2026売上は前年比50〜100%増を再確認。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>追加調達や株式数の増加</li><li>認証・顧客評価の遅延</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>QS7001とQVault TPMの認証・商用売上</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">PQC</span></div></div><div class="date-box"><b>H2 2026</b><span>会社公表または予定</span></div></div>
-<p class="lead">PQC対応セキュアエレメントとTPMが、評価キットや顧客検証から初期商用売上へ進むかを確認します。</p>
-<div class="mechanism"><span>認証</span><i>→</i><span>顧客評価</span><i>→</i><span>初期売上</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜55%</div><p>認証進捗と初期商用売上が同時に確認されれば楽観側です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+14%</div><p>評価継続と少額売上なら中立です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-20〜-40%</div><p>認証や顧客統合が遅れるとテーマ剥落です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>LAESの中核テーマそのもので、顧客評価から売上化へ移るかが評価レンジを直接変えるためです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>QS7001はNIST SP 800-90B ESVを取得。</li><li>QVault TPMはH2 2026の初期商用売上が期待されています。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>追加調達や株式数の増加</li><li>認証・顧客評価の遅延</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>パイプラインの契約化と顧客拡大</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">商談</span></div></div><div class="date-box"><b>2026〜2029</b><span>会社公表または予定</span></div></div>
-<p class="lead">会社が示す2.25億ドル超の商談機会が、実際の契約・量産・売上に変わるかを確認します。</p>
-<div class="mechanism"><span>商談</span><i>→</i><span>契約</span><i>→</i><span>量産</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+16〜36%</div><p>大口契約や顧客数拡大が確認されれば上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+10%</div><p>商談継続だけなら株価反応は限定的です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-15〜-30%</div><p>商談が売上化しない場合は下押しです。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>会社のパイプラインは大きい一方で受注残ではないため、契約化の確認が必要だからです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>会社は2029年までに$225M超のパイプラインを説明。</li><li>QS7001/QVault関連は$60M超と説明。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>追加調達や株式数の増加</li><li>認証・顧客評価の遅延</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>量子投資とRoot-to-Qubit戦略</h3><div class="chips"><span class="chip">重要度3</span><span class="chip blue">量子</span></div></div><div class="date-box"><b>継続確認</b><span>会社公表または予定</span></div></div>
-<p class="lead">EeroQ、Quobly、Miraexなどへの投資が、単なるテーマではなく事業上の優位性に変わるかを見ます。</p>
-<div class="mechanism"><span>投資</span><i>→</i><span>連携</span><i>→</i><span>事業化</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+10〜24%</div><p>投資先連携が製品・契約に結びつけば上振れです。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-4〜+8%</div><p>発表中心なら中立です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-8〜-18%</div><p>投資先評価損や資金流出が意識されると下落要因です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>テーマ評価は上げますが、短期売上への直結度は商用製品より低いためです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>会社はEeroQ、Quobly、Miraexなどを含む量子戦略を説明。</li><li>SEALQuantum Fundの目標配分は$200M。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>売上成長率の鈍化</li><li>追加調達や株式数の増加</li><li>認証・顧客評価の遅延</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>QS7001最終監査・正式認証への手続き</h3><span class="chip">重要度4</span></div><div class="date-box"><b>最終拠点監査は2027年1月の会社予定</b></div><p>結果条件は当方モデルとの比較で、市場コンセンサスとの差を実測したものではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$2.62～$2.94</div><p>現値比 +144.6%～+175.1%</p><p>監査と審査が順調で正式認証・顧客採用へ進む。</p><p>このレポートの条件付き2027年末再評価。端点入力：認証と顧客採用により半導体/PKI価値$220M、投資持分$80M。事業価値$300.0M、自由現金$350.0M、将来株式245.000M ／ 半導体/PKI価値$300M、投資持分$80M。事業価値$380.0M、自由現金$350.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$2.17～$2.41</div><p>現値比 +102.6%～+125.5%</p><p>技術評価済みだが監査・正式証書と顧客採用の確認が続く。</p><p>このレポートの条件付き2027年末再評価。端点入力：半導体/PKI価値$110M、投資持分$80M。事業価値$190.0M、自由現金$350.0M、将来株式245.000M ／ 半導体/PKI価値$170M、投資持分$80M。事業価値$250.0M、自由現金$350.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$1.66～$1.94</div><p>現値比 +55.0%～+81.7%</p><p>監査・審査・顧客実装が遅れ量産売上が後ろ倒しになる。</p><p>このレポートの条件付き2027年末再評価。端点入力：認証遅延で半導体/PKI$35M、追加支出$50Mを現金から控除。事業価値$115.0M、自由現金$300.0M、将来株式245.000M ／ 半導体/PKI$80M、追加支出$25Mを現金から控除。事業価値$160.0M、自由現金$325.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。</p><p>足りない情報：材料別の純利益・投資額と資金調達条件、持分・顧客採用・実行の確定条件</p><p>次に見る数字：公式な進捗・財務・契約・発行株式数、売上回収・顧客採用・費用の変化</p><p>再計算方法：対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。</p></div><details><summary>根拠・反証・資金と更新条件</summary><p>赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。 良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。 2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。 [S1,S2,S3,S4,S5,S6]</p></details><details><summary>価格幅の手法検討</summary><p>企業価値差分は共有する事業と資金を単独で切り分けられず不採用。共通条件付きモデルを採用。市場予想改定、同社・同業イベント比較は独立した標本・時点データを取得していないため適用外。</p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>Quantisimo再編・量子投資・買収協議</h3><span class="chip">重要度4</span></div><div class="date-box"><b>承認・契約条件付き／確定した完了日なし</b></div><p>結果条件は当方モデルとの比較で、市場コンセンサスとの差を実測したものではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$2.37～$2.45</div><p>現値比 +121.7%～+129.3%</p><p>株主に帰属する価値・支出・持分が明確になり事業連携が進む。</p><p>このレポートの条件付き2027年末再評価。端点入力：量子投資持分$120M、追加支出$20Mを現金から控除。事業価値$260.0M、自由現金$330.0M、将来株式245.000M ／ 量子投資持分$150M、追加支出$30Mを現金から控除。事業価値$290.0M、自由現金$320.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$2.21～$2.33</div><p>現値比 +106.4%～+117.9%</p><p>合併契約・非拘束LOIの条件確認が継続する。</p><p>このレポートの条件付き2027年末再評価。端点入力：量子投資持分$60M、現金は標準。事業価値$200.0M、自由現金$350.0M、将来株式245.000M ／ 量子投資持分$100M、追加支出$10M。事業価値$240.0M、自由現金$340.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$1.60～$1.92</div><p>現値比 +50.0%～+79.9%</p><p>希薄化・関連当事者条件・追加支出が大きくなる。</p><p>このレポートの条件付き2027年末再評価。端点入力：投資持分$20M、追加支出$100Mと報酬等による追加潜在株5M。事業価値$160.0M、自由現金$250.0M、将来株式250.000M ／ 投資持分$50M、追加支出$50Mと追加潜在株5M。事業価値$190.0M、自由現金$300.0M、将来株式250.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。</p><p>足りない情報：材料別の純利益・投資額と資金調達条件、持分・顧客採用・実行の確定条件</p><p>次に見る数字：公式な進捗・財務・契約・発行株式数、売上回収・顧客採用・費用の変化</p><p>再計算方法：対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。</p></div><details><summary>根拠・反証・資金と更新条件</summary><p>赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。 良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。 2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。 [S1,S2,S3,S4,S5,S6]</p></details><details><summary>価格幅の手法検討</summary><p>企業価値差分は共有する事業と資金を単独で切り分けられず不採用。共通条件付きモデルを採用。市場予想改定、同社・同業イベント比較は独立した標本・時点データを取得していないため適用外。</p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>Euronext Growth Paris取引開始</h3><span class="chip">重要度2</span></div><div class="date-box"><b>2026年12月2日開始予定</b></div><p>結果条件は当方モデルとの比較で、市場コンセンサスとの差を実測したものではありません。</p><div class="outcomes"><p>上場開始は新規売上や調達資金を生まないため、独立価格や確率は表示しません。</p><div class="outcome"><h4>期待以上</h4><p>予定どおり開始し欧州投資家アクセスが改善する。</p><p>既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><p>開始しても新規売上・調達資金は発生しない。</p><p>既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><p>日程遅延や市場間の価格差・流動性分散が生じる。</p><p>既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。</p></div><p>出していない理由：既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。</p><p>足りない情報：市場間の流動性・取引費用と投資家構成の実測値</p><p>次に見る数字：実際の取引開始・出来高・市場間価格差</p><p>再計算方法：上場後の実測流動性と価格差を集め、同時ニュースを除いたイベント分析が可能になった場合だけ価格反応を推定する。</p></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。</p><p>足りない情報：材料別の純利益・投資額と資金調達条件、持分・顧客採用・実行の確定条件</p><p>次に見る数字：公式な進捗・財務・契約・発行株式数、売上回収・顧客採用・費用の変化</p><p>再計算方法：対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。</p></div><details><summary>根拠・反証・資金と更新条件</summary><p>赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。 良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。 2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。 [S1,S2,S3,S4,S5,S6]</p></details><details><summary>価格幅の手法検討</summary><p>企業価値差分は共有する事業と資金を単独で切り分けられず不採用。共通条件付きモデルを採用。市場予想改定、同社・同業イベント比較は独立した標本・時点データを取得していないため適用外。</p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>認証と商用化</b><span class="up">連動</span></div><p>認証が進むほど顧客採用の確度が上がります。</p></div><div class="signal"><div><b>現金と希薄化</b><span class="flat">重要</span></div><p>現金余力は追い風ですが、追加調達は株価の重しです。</p></div><div class="signal"><div><b>量子投資</b><span class="down">注意</span></div><p>テーマ性は強い一方、短期売上との距離を確認します。</p></div>
+    <p>同じ事業と資金を共有するグループへまとめ、共通の失敗側・成功側価値を1回だけ評価します。個別割合の平均や価格幅の合算は行いません。価格シナリオはケースごとに現金・将来株式数を変えるため、固定した資金条件での全体逆算とは値が異なります。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>H1正式売上</b><span class="up">重要</span></div><p>予備値約$11Mとの差を確認します。</p></div><div class="signal"><div><b>QS7001/QVault</b><span class="up">最重要</span></div><p>認証、顧客評価、初期商用売上。</p></div><div class="signal"><div><b>株式数</b><span class="down">注意</span></div><p>希薄化と資金使途を確認します。</p></div><div class="signal"><div><b>パイプライン</b><span class="flat">確認</span></div><p>商談から契約への転換。</p></div>
+    <div class="signal"><div><b>QS7001最終監査・正式認証への手続き</b></div><p>公式発表・次の決算時：進捗、現金、資金・株式数と採用条件の変更</p></div><div class="signal"><div><b>Quantisimo再編・量子投資・買収協議</b></div><p>公式発表・次の決算時：進捗、現金、資金・株式数と採用条件の変更</p></div><div class="signal"><div><b>Euronext Growth Paris取引開始</b></div><p>公式発表・次の決算時：進捗、現金、資金・株式数と採用条件の変更</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -206,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>$2.32</td><td>市場データで確認</td><td>2026-09-30</td><td>2026/07/28確認値</td></tr><tr><td>H1 2026売上</td><td>約$11M</td><td>会社リリース</td><td>2026/07/06</td><td>予備値、前年比+120%</td></tr><tr><td>FY2026売上見通し</td><td>$27M〜$36M</td><td>会社リリース</td><td>2026/07/06</td><td>前年比50〜100%成長</td></tr><tr><td>現金・短期投資</td><td>約$495M</td><td>会社リリース</td><td>2026/06/30</td><td>資金調達後</td></tr></tbody>
+        <tbody><tr><td>最新の確定業績</td><td>2026年上期売上$11.2M、粗利益$5.4M、営業損失$32.2M、純損失$27.8M。これは四半期ではなく1～6月の合計。</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>確定期末は本文</td></tr><tr><td>現在財務</td><td>6月末自由現金$479.797M、制限現金$6.311M。借入$1.251Mとファイナンスリース$0.090M、非支配持分$7.457M。現金は11月末残高ではない。</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>確定期末は本文</td></tr><tr><td>株式と潜在株</td><td>6月末普通株223,430,764、F株1,499,800。F株は普通株5株との交換権を持つ。半期後の既知オプション行使45,000株を普通株へ加え、残存オプション166,158を含め評価用231,140,922普通株相当と推定。半期後未開示変動や買収対価発行の可能性に注意。</td><td>このレポートの推定を含む</td><td>2026-11-27</td><td>確定期末は本文</td></tr><tr><td>2027年価値仮定</td><td>未成熟な半導体・PKI事業と量子投資持分の合算。事業価値は2027年売上$30–80M程度、粗利益率45–55%、商業化投資後の利益改善を前提に幅を置く当方仮定。量子投資の仮定価値は出資額やSPAC発表評価額をそのまま持ち込んだものではない。営業リースは事業費に含み、別控除しない。市場価格が資産価値を保証しない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>確定期末は本文</td></tr><tr><td>資金と将来株式</td><td>2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。</td><td>このレポートの推定</td><td>2026-11-27</td><td>確定期末は本文</td></tr><tr><td>主観確率</td><td>35%, 45%, 20%</td><td>このレポートの推定</td><td>2026-11-27</td><td>確定期末は本文</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -215,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://www.sealsq.com/about/about-us" target="_blank" rel="noopener noreferrer">会社概要</a></li><li><a href="https://www.sealsq.com/investors/news-releases/sealsq-reports-h1-2026-financial-and-operational-results-revenue-increases-131-to-11.2-million-fy2026-guidance-reaffirmed" target="_blank" rel="noopener noreferrer">H1 2026正式決算</a></li><li><a href="https://www.sealsq.com/investors/news-releases/sealsq-establishes-pure-play-quantum-platform-through-strategic-acquisitions-and-investments-across-leading-quantum-computing-companies" target="_blank" rel="noopener noreferrer">量子プラットフォーム発表</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000110465926037706/laes-20251231x20f.htm" target="_blank" rel="noopener noreferrer">2025年Form 20-F</a></li><li><a href="https://stockanalysis.com/stocks/laes/" target="_blank" rel="noopener noreferrer">株価・統計</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026099476/ea030513901ex99-1.htm" target="_blank" rel="noopener noreferrer">S1：2026年上期財務諸表</a>（公表2026-09-14／取得2026-11-27）</li><li><a href="https://www.sealsq.com/investors/news-releases/sealsq-reports-h1-2026-financial-and-operational-results-revenue-increases-131-to-11.2-million-fy2026-guidance-reaffirmed" target="_blank" rel="noopener noreferrer">S2：2026年上期決算・会社見通し</a>（公表2026-09-11／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026113318/ea0309878-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S3：QS7001認証の更新6-K</a>（公表2026-10-28／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026109266/ea0308039-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S4：Quantisimo合併契約6-K</a>（公表2026-10-14／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026122291/ea0312819-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S5：QuintessenceLabs非拘束LOI6-K</a>（公表2026-11-19／取得2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1951222/000121390026124218/ea0313614-6k_sealsq.htm" target="_blank" rel="noopener noreferrer">S6：パリ上場承認6-K</a>（公表2026-11-25／取得2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/LAES?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQUOTE：Yahoo Finance価格・日足（暫定取得元）</a>（公表時刻別価格／取得2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：H1正式決算で売上1,120万ドル、粗利率約48%、営業損失3,220万ドル、現金等4.861億ドル、FY2026売上見通し2,700万〜3,600万ドルを確認。</p></div>
+      <div><p>JSON形式、算術、ID・日付・確率・共有価値、HTMLを検証。以下は分析上の制約です。</p><ul><li>将来価値・倍率・確率・支出・株式数は当方仮定であり会社予想ではない。</li><li>潜在株と時点株式数には開示日の差がある。最新確定財務の期末を本文へ明示。</li><li>個別材料は同じ事業価値を共有し、価格幅や期待割合を足し合わせない。</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：H1正式決算、2.25億ドル超の商談パイプライン、QVault連携、9月29日終値を反映。</p></div>
+      <div><p>2026-11-27公式決算・最新案件を再確認し全体更新。分析値はこの基準日で固定。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の資料です。投資助言・売買推奨ではありません。予測値・主観確率・資産価値は仮定で、実現や価格収束を保証しません。配当は価格比較に含みません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜シールエスキュー（LAES）カタリスト｜作成日 2026-09-30</footer>
+  <footer>分析基準日2026-11-27。株価$1.07／2026-11-25T21:00:02+00:00。分析対象2027年末。価格表示が更新されても分析値は固定。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="4015" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>ペイクラウドホールディングス <small>4015</small></h1>
-    <div class="sub">東京証券取引所グロース市場｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">東証グロース／JPY｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">重要材料が複数</div>
-        <p>2026年8月期通期決算、月次KPI、インド・タイ展開、優待電子化が今後の主な材料です。</p>
-        <p class="sub">足りない情報は仮定を置き、主要材料の織り込み度を46%と推定します。</p>
+        <div class="status">最新開示で材料と不確実性を再評価</div>
+        <p>再発防止・顧客保護と費用が収益力にどう影響するか。</p>
+        <p class="sub">需要・採用・費用が同じ利益に重なるため1群へ集約。個別価格幅や割合を足し合わせません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>46%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ ふつう</small>
+        <b>7～27%</b>
+        <small>共通利益価値による条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>511円</b>
-        <small data-live-price-date>2026/09/30 10時台（分析基準値）</small>
+        <b data-live-price>316円</b>
+        <small data-live-price-date>2026-11-27T04:51:30+00:00 時点値（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>2026年8月期通期決算</b>
-        <small>2026年10月ごろ</small>
+        <b>セキュリティ再点検・顧客対応と業績影響</b>
+        <small>進行中／影響額・最終完了日未確認</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>当方推定</b>
+        <b>確定日・会社予定・未確認を区分</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">将来利益・倍率・確率・株式数は当方仮定。最新公表の会社予想と混同しないでください。11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>46%</b></div><p>仮定：4Q決算の標準達成を50%、月次KPI改善を45%、優待電子化の導入拡大を40%、自社株取得後の需給改善を55%として置き、重複を控除しました。</p><p>読み方：3Q進捗は一部評価済みですが、通期決算と来期見通しがまだ残っているため、織り込みは半分弱です。</p><p>次に見る数字：通期売上、営業利益、調整後EBITDA、月次推移です。</p><p>再計算方法：EPS、PER、調整後EBITDA、株式数を分け、株価シナリオと同じモデルで更新します。</p></div>
-      <p class="small">計算方法：未確定情報に仮定確率を置き、4Q決算、月次KPI、優待電子化、自社株取得後の需給を標準ケース価値へ重み付けして推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>7～27%</b><span>このレポートの推定</span></div><p>raw中心16.8%。0～100%外は帯外と解釈し、表示だけ端へ固定します。</p><p>全材料を共通利益価値の1群に束ね、失敗側株主価値2,070,000,000と成功側19,200,000,000 JPYを独立仮定。(基準株価×評価株式−失敗側)÷成功増分で逆算。中心16.8%。±10ポイントは統計区間ではなく当方の不確実性表示。真の成功確率ではない。</p></div>
+      <p class="small">計算方法：全材料を共通利益価値の1群に束ね、失敗側株主価値2,070,000,000と成功側19,200,000,000 JPYを独立仮定。(基準株価×評価株式−失敗側)÷成功増分で逆算。中心16.8%。±10ポイントは統計区間ではなく当方の不確実性表示。真の成功確率ではない。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>通期上振れ、強い来期見通し、月次加速、優待電子化の導入拡大です。</p>
+        <p>顧客採用・継続と利益率が当方標準より改善し、費用と資本負担を吸収する。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>4Q失速、通期未達、来期成長鈍化、自社株買い終了後の需給悪化です。</p>
+        <p>需要・顧客継続・費用・資本条件が下振れし、成長しても1株価値が改善しない。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>3Qの好調が株価に入った後で、4Qや来期見通しが普通だと失望される可能性です。</p>
+        <p>11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</p>
       </div>
     </div>
   </section>
@@ -131,72 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">毎月</div><div class="time-dot"></div><div class="time-body"><b>月次業績報告</b><p>独自Payや事業KPIの勢いを確認します。</p><div class="time-meta"><span class="chip">継続材料</span></div></div></div><div class="time-row"><div class="time-date">2026/07/28</div><div class="time-dot"></div><div class="time-body"><b>自己株式取得終了</b><p>買付終了後の需給を確認します。</p><div class="time-meta"><span class="chip">開示済み</span></div></div></div><div class="time-row"><div class="time-date">2026/10ごろ</div><div class="time-dot"></div><div class="time-body"><b>通期決算</b><p>通期予想の達成度と来期見通しを確認します。</p><div class="time-meta"><span class="chip blue">時期推定</span></div></div></div>
+      <div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>セキュリティ再点検・顧客対応と業績影響</b><p>進行中／影響額・最終完了日未確認</p></div></div><div class="time-row"><div class="time-date">会社予定</div><div class="time-dot"></div><div class="time-body"><b>成長計画アップデート</b><p>2027年2月予定（会社資料）</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>通期売上・利益率と継続利用の確認</b><p>2027年8月期を通じて確認</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>2026年8月期通期決算</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">時期推定</span></div></div><div class="date-box"><b>2026/10ごろ</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">通期決算は、3Qまでの好調が最後まで続いたか、来期も成長できるかを確認する最大材料です。売上、営業利益、調整後EBITDA、来期見通しがそろって強いほど評価されやすくなります。</p>
-<div class="mechanism"><span>通期実績</span><i>→</i><span>EPS</span><i>→</i><span>PER</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+12〜28%</div><p>売上115億円・営業利益8億円を上回り、来期見通しも強い状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+8%</div><p>通期計画近辺で、来期見通しは慎重な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-14〜-28%</div><p>4Qが弱く、通期未達または来期成長率が低い状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>小型成長株では通期実績と来期見通しがPERを直接動かすため、最も大きいレンジです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>3Q売上進捗70.0%、調整後EBITDA進捗81.2%と公表。</li><li>通期予想は売上115億円、営業利益8億円です。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>月次の鈍化</li><li>サイネージ納品の遅れ</li><li>通期予想未達</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>月次業績報告</h3><div class="chips"><span class="chip">重要度4</span><span class="chip">継続材料</span></div></div><div class="date-box"><b>毎月</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">月次業績報告は、決算前に事業の勢いを確認できる継続材料です。独自Payや関連サービスの伸びが続けば、通期決算や来期見通しへの期待が高まります。</p>
-<div class="mechanism"><span>月次KPI</span><i>→</i><span>成長率</span><i>→</i><span>倍率</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+6〜16%</div><p>独自Payや関連KPIが加速し、4Q・来期の期待が上がる状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-3〜+5%</div><p>月次は安定推移し、決算確認待ちの状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-8〜-18%</div><p>月次が鈍化し、成長期待が下がる状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>毎月出る継続材料なので単発決算より小さい一方、トレンド変化には効きます。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>会社は月次業績報告を継続開示しています。</li><li>2026年6月月次も7月28日に開示されています。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>月次の鈍化</li><li>サイネージ納品の遅れ</li><li>通期予想未達</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>株主優待電子化の導入拡大</h3><div class="chips"><span class="chip">重要度4</span><span class="chip">導入事例</span></div></div><div class="date-box"><b>2026年後半</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">株主優待電子化は、同社のデジタルギフトや独自Payの用途が広がるかを見る材料です。導入企業が増えるほど、単発案件ではなく継続収益のテーマとして評価されます。</p>
-<div class="mechanism"><span>導入社数</span><i>→</i><span>利用額</span><i>→</i><span>継続収益</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+8〜20%</div><p>外食・小売で導入事例が増え、独自Payの用途が広がる状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-4〜+7%</div><p>導入事例は出るが、売上寄与は段階的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-8〜-16%</div><p>導入拡大が限定的で、テーマ先行と見られる状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>導入事例は成長テーマを補強しますが、売上寄与の確認まで時間差があるため中程度です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>力の源HDの株主優待券電子化支援が開示されています。</li><li>自社の株主優待も独自Pay導入顧客のデジタルギフトを活用します。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>月次の鈍化</li><li>サイネージ納品の遅れ</li><li>通期予想未達</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>自己株式取得終了後の需給</h3><div class="chips"><span class="chip amber">重要度3</span><span class="chip">終了済み</span></div></div><div class="date-box"><b>2026/07/28以降</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">自社株買い終了後の需給は、買い支えがなくなった後でも業績期待で株価を保てるかを見る材料です。事業価値を直接変えるものではないため、決算材料より影響は小さめです。</p>
-<div class="mechanism"><span>買付終了</span><i>→</i><span>需給</span><i>→</i><span>株価</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+3〜10%</div><p>買付終了後も業績評価で株価が保たれ、流動性も改善する状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-3〜+4%</div><p>自社株買い終了の需給影響は限定的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-6〜-14%</div><p>買い支え終了が意識され、出来高減少とともに下がる状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>需給材料であり事業価値を直接変えないため、他の事業材料より小さくしています。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>2026年7月28日に自己株式取得状況および取得終了が開示されています。</li><li>小型株では需給材料として確認が必要です。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>月次の鈍化</li><li>サイネージ納品の遅れ</li><li>通期予想未達</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>セキュリティ再点検・顧客対応と業績影響</h3><span class="chip">重要度5</span></div><div class="date-box"><b>進行中／影響額・最終完了日未確認</b></div><p>再発防止・顧客保護と費用が収益力にどう影響するか。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">770円～840円</div><p>基準価格比 +143.7%～+165.8%</p><p>顧客維持・費用限定が進み純利益率6%の条件。</p><p>このレポートの条件付き2027年末再評価。売上14,000,000,000 JPY・純利益率5.500%・PER16倍・希薄化株式16,000,000株 ／ 売上14,000,000,000 JPY・純利益率6.000%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">490円～630円</div><p>基準価格比 +55.1%～+99.4%</p><p>対応が継続し純利益率4.5%程度。</p><p>このレポートの条件付き2027年末再評価。売上14,000,000,000 JPY・純利益率3.500%・PER16倍・希薄化株式16,000,000株 ／ 売上14,000,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">210円～350円</div><p>基準価格比 -33.5%～+10.8%</p><p>補償・停止・解約負担で純利益率1.5%程度。</p><p>このレポートの条件付き2027年末再評価。売上14,000,000,000 JPY・純利益率1.500%・PER16倍・希薄化株式16,000,000株 ／ 売上14,000,000,000 JPY・純利益率2.500%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>成長計画アップデート</h3><span class="chip">重要度4</span></div><div class="date-box"><b>2027年2月予定（会社資料）</b></div><p>11月24日資料は2027年2月に投資計画・成長戦略のアップデートを予定。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">675円～720円</div><p>基準価格比 +113.6%～+127.8%</p><p>継続収益拡大と事故対応を両立する計画を開示。</p><p>このレポートの条件付き2027年末再評価。売上15,000,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株 ／ 売上16,000,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">585円～630円</div><p>基準価格比 +85.1%～+99.4%</p><p>従来計画を維持し詳細は確認待ち。</p><p>このレポートの条件付き2027年末再評価。売上13,000,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株 ／ 売上14,000,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">518円～562円</div><p>基準価格比 +63.8%～+78.0%</p><p>計画後退・収益見通し低下。</p><p>このレポートの条件付き2027年末再評価。売上11,500,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株 ／ 売上12,500,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>通期売上・利益率と継続利用の確認</h3><span class="chip">重要度4</span></div><div class="date-box"><b>2027年8月期を通じて確認</b></div><p>売上成長だけでなく営業CFと継続利用を追う。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">825円～960円</div><p>基準価格比 +161.1%～+203.8%</p><p>売上160億円・利益率6%側へ向かう条件。</p><p>このレポートの条件付き2027年末再評価。売上15,000,000,000 JPY・純利益率5.500%・PER16倍・希薄化株式16,000,000株 ／ 売上16,000,000,000 JPY・純利益率6.000%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">520円～630円</div><p>基準価格比 +64.6%～+99.4%</p><p>売上140億円・利益率4.5%の当方標準。</p><p>このレポートの条件付き2027年末再評価。売上13,000,000,000 JPY・純利益率4.000%・PER16倍・希薄化株式16,000,000株 ／ 売上14,000,000,000 JPY・純利益率4.500%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">172円～312円</div><p>基準価格比 -45.4%～-1.1%</p><p>売上115億円・利益率1.5%の当方悲観。</p><p>このレポートの条件付き2027年末再評価。売上11,500,000,000 JPY・純利益率1.500%・PER16倍・希薄化株式16,000,000株 ／ 売上12,500,000,000 JPY・純利益率2.500%・PER16倍・希薄化株式16,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>月次と通期決算</b><span class="up">連動</span></div><p>月次が強いほど通期達成と来期見通しを支えます。</p></div><div class="signal"><div><b>優待電子化と独自Pay</b><span class="up">同じ経路</span></div><p>導入事例は独自Pay利用拡大の一部として見ます。</p></div><div class="signal"><div><b>自社株買いと需給</b><span class="flat">確認</span></div><p>終了後は業績評価で株価を保てるかを見ます。</p></div>
+    <p>需要・採用・費用・資本政策は同じ将来利益を共有する1グループ。個別の割合・価格幅を加算しません。</p><p>全体は株主価値端点と現在推定株式数、価格帯は各ケースの将来株式数を用いるため、逆算値は完全一致とは限りません。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>売上進捗</b><span class="up">最重要</span></div><p>通期115億円に対する4Q達成度を確認します。</p></div><div class="signal"><div><b>営業利益率</b><span class="up">重要</span></div><p>売上成長が利益へ変わっているかを見ます。</p></div><div class="signal"><div><b>月次KPI</b><span class="flat">確認</span></div><p>決算前の勢いを確認します。</p></div><div class="signal"><div><b>出来高</b><span class="down">注意</span></div><p>小型株なので需給の荒れを確認します。</p></div>
+    <div class="signal"><div><b>セキュリティ再点検・顧客対応と業績影響</b></div><p>進行中／影響額・最終完了日未確認：再発防止・顧客保護と費用が収益力にどう影響するか。</p></div><div class="signal"><div><b>成長計画アップデート</b></div><p>2027年2月予定（会社資料）：11月24日資料は2027年2月に投資計画・成長戦略のアップデートを予定。</p></div><div class="signal"><div><b>通期売上・利益率と継続利用の確認</b></div><p>2027年8月期を通じて確認：売上成長だけでなく営業CFと継続利用を追う。</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -206,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>511円</td><td>市場データで確認済み</td><td>2026-09-30</td><td>2026/07/30終値</td></tr><tr><td>3Q売上</td><td>80.57億円</td><td>公開情報で確認済み</td><td>2026/07/14</td><td>進捗率70.0%</td></tr><tr><td>3Q営業利益</td><td>6.61億円</td><td>公開情報で確認済み</td><td>2026/07/14</td><td>前年同期比+6.2%</td></tr><tr><td>調整後EBITDA</td><td>10.56億円</td><td>公開情報で確認済み</td><td>2026/07/14</td><td>進捗率81.2%</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>316円</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-27T04:51:30+00:00 [S5]</td></tr><tr><td>会社予想</td><td>2027年8月期会社予想は売上130億円、営業利益8.4億円、純利益5.8億円、EPS37.61円。10月15日時点の予想であり、その後の不正アクセスの業績影響を織り込んだ改訂値ではない。11月24日の成長資料もこの時点を明記している。</td><td>会社の目標・予定</td><td>2026-11-27</td><td>最新公表値、対象期間を確認 [S1,S3]</td></tr><tr><td>株式・財務</td><td>2026年8月末の発行済16,022,148株−自己株600,771株＝15,421,377株。評価株式15,631,377株は潜在株式差を概算21万株加えた推定。将来16百万株は報酬・権利行使余地を含む仮定。現金38.3435億円、短長借入17.09914億円。</td><td>このレポートの推定</td><td>2026-11-27</td><td>確定値と潜在株概算を区別 [S1,S2]</td></tr><tr><td>2027年末モデル</td><td>2027年末時点から見る次年度収益力の条件付きPER評価。売上115／140／160億円、純利益率1.5／4.5／6%、PER12／16／20倍。事故の継続費用・顧客離反が長引く悲観と、継続課金・納品回復が進む標準・楽観を区別。会社予想ではない。PE法で現金・借入を再加減しない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>PE法。現金・負債を再加減しない。</td></tr><tr><td>確率</td><td>[0.35, 0.45, 0.2]</td><td>このレポートの推定</td><td>2026-11-27</td><td>主観配分、統計推定ではない。</td></tr><tr><td>重大リスク</td><td>11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>未確認の影響額をゼロにしない [S1–S4]</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -215,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://www.paycloud.inc/ir/?lang=ja" target="_blank" rel="noopener noreferrer">公式IR</a></li><li><a href="https://disclosure.catr.jp/companies/75be7/84566/tdnet/fbd5b/742154" target="_blank" rel="noopener noreferrer">3Q決算情報</a></li><li><a href="https://finance.yahoo.co.jp/quote/4015.T/disclosure" target="_blank" rel="noopener noreferrer">適時開示一覧</a></li><li><a href="https://www.paycloud.inc/ir/movie/?lang=japage%2F2%2Fpage%2F2%2Fpage%2F3%2Fpage%2F2%2Fpage%2F4%2F" target="_blank" rel="noopener noreferrer">3Q説明動画</a></li><li><a href="https://www.paycloud.inc/ir/benefit/" target="_blank" rel="noopener noreferrer">株主優待</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://contents.xj-storage.jp/xcontents/AS71226/817a7bc3/2600/4196/8f8d/c83727093631/140120261015551091.pdf" target="_blank" rel="noopener noreferrer">S1：2026年8月期本決算短信</a>（公開：2026-10-15／取得：2026-11-27）</li><li><a href="https://www.paycloud.inc/dcms_media/other/20261030_FY26_4Q.pdf" target="_blank" rel="noopener noreferrer">S2：2026年8月期決算説明資料</a>（公開：2026-10-30／取得：2026-11-27）</li><li><a href="https://www.paycloud.inc/dcms_media/other/20261124_Businessplanandgrowthpotential.pdf" target="_blank" rel="noopener noreferrer">S3：事業計画及び成長可能性に関する事項</a>（公開：2026-11-24／取得：2026-11-27）</li><li><a href="https://contents.xj-storage.jp/xcontents/AS71226/11457cb9/b53f/44df/8ad2/d28683c4156b/140120261118582408.pdf" target="_blank" rel="noopener noreferrer">S4：子会社システム不正アクセス第2報</a>（公開：2026-11-18／取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/4015.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：Yahoo Finance 市場価格（日足）</a>（公開：資料内参照／取得：2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：3Q決算、通期予想、月次開示、自己株式取得終了、株主優待関連を確認。WARN：通期決算日は当方推定のため確定日として扱っていません。</p></div>
+      <div><p>共通JSON形式、算術、出典ID、日程、確率、依存関係、HTMLの未置換・安全性を検証。次は分析上の制約です。</p><ul><li>将来純利益・PER・確率・株式数は当方仮定で会社予想ではない。</li><li>潜在株式の時点・加重平均差と新しい資本政策で再評価が必要。</li><li>11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：初版作成。3Q決算、月次、自己株式取得終了、株主優待電子化テーマを反映。</p></div>
+      <div><p>2026-11-27 全面再作成。全3レポートは同じ共通データ・基準株価を使用。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の条件付き試算であり売買推奨ではありません。将来利益・倍率・確率・株式数は当方仮定。会社見通しと確認済み事実を区別してください。配当は価格比較に含みません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜ペイクラウドホールディングス（4015）カタリスト｜作成日 2026-09-30</footer>
+  <footer>分析基準株価 316円／2026-11-27T04:51:30+00:00。時点値。分析基準日2026-11-27。対象2027年末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="6981" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>村田製作所 <small>6981</small></h1>
-    <div class="sub">東京証券取引所プライム市場｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">東証プライム／JPY｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">強い期待が株価に入っている</div>
-        <p>AIサーバー向け需要と通期上方修正は強い一方、現在株価には大幅な利益成長がかなり入っています。</p>
-        <p class="sub">重複する材料を一つの期待グループに束ね、全体の推定織り込み度を87%と逆算します。</p>
+        <div class="status">最新開示で材料と不確実性を再評価</div>
+        <p>コンデンサ・フィルタ・電源モジュール需要が稼働率と利益へつながるか。</p>
+        <p class="sub">需要・採用・費用が同じ利益に重なるため1群へ集約。個別価格幅や割合を足し合わせません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>87%</b>
-        <small>総合期待の推定織り込み｜推定の確かさ 低〜中</small>
+        <b>19～39%</b>
+        <small>共通利益価値による条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>7,932円</b>
-        <small data-live-price-date>2026/09/30 10時台（分析基準値）</small>
+        <b data-live-price>5,068円</b>
+        <small data-live-price-date>2026-11-27T05:15:59+00:00 時点値（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>2027年3月期 第2四半期決算</b>
-        <small>2026/10/30</small>
+        <b>AIサーバー向け部品需要と操業度</b>
+        <small>進行中／各決算で確認</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>高い</b>
+        <b>確定日・会社予定・未確認を区分</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>3</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-<div class="wrap"><div class="notice"><b>注意：</b>好決算の発表だけでは十分ではありません。現在の高い評価倍率を維持できる追加情報が必要です。</div></div>
+<div class="wrap"><p class="notice">将来利益・倍率・確率・株式数は当方仮定。最新公表の会社予想と混同しないでください。AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>総合期待の推定織り込み</span><b>87%</b></div><p><b>仮定：</b>2Q決算、IR Day、MLCC需給を別々に足さず、AI需要と利益率を確認する1つの依存グループとして扱います。Bear 4,200円を期待失敗側、Bull 8,500円を強い成功側の端点に置き、現在株価7,932円を逆算しました。</p><p><b>読み方：</b>広いシナリオレンジでは強気側への期待が約87%入っています。一方、Base 6,200円からBullまでの追加上値だけで見ると約75%であり、強気条件をすべて織り込んだ状態ではありません。</p><p><b>次に見る数字：</b>コンピュータ用途売上、コンデンサ受注、営業利益率、通期予想です。</p><p><b>再計算方法：</b>株価だけを更新して再計算する場合は同じBear・Bull端点を使い、決算で事業前提が変わったときは端点自体を更新します。現在のHTML表示は評価基準日時点の固定値です。</p></div>
-      <p class="small">計算方法：依存材料を1グループに束ね、(現在株価7,932円－Bear 4,200円)÷(Bull 8,500円－Bear 4,200円)で逆算。個別割合は平均していません。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>19～39%</b><span>このレポートの推定</span></div><p>raw中心29.3%。0～100%外は帯外と解釈し、表示だけ端へ固定します。</p><p>全材料を共通利益価値の1群に束ね、失敗側株主価値5,760,000,000,000と成功側17,400,000,000,000 JPYを独立仮定。(基準株価×評価株式−失敗側)÷成功増分で逆算。中心29.3%。±10ポイントは統計区間ではなく当方の不確実性表示。真の成功確率ではない。</p></div>
+      <p class="small">計算方法：全材料を共通利益価値の1群に束ね、失敗側株主価値5,760,000,000,000と成功側17,400,000,000,000 JPYを独立仮定。(基準株価×評価株式−失敗側)÷成功増分で逆算。中心29.3%。±10ポイントは統計区間ではなく当方の不確実性表示。真の成功確率ではない。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>追加上方修正とAI向け能力・採算の強い見通し</p>
+        <p>顧客採用・継続と利益率が当方標準より改善し、費用と資本負担を吸収する。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>AI需要鈍化、値下げ、円高、通期予想の未達</p>
+        <p>需要・顧客継続・費用・資本条件が下振れし、成長しても1株価値が改善しない。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>高い期待倍率の反動</p>
+        <p>AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。</p>
       </div>
     </div>
   </section>
@@ -131,61 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026/07/31</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期1Q決算</b><p>通期予想を上方修正し、AIサーバー需要の強さを確認。</p><div class="time-meta"><span class="chip">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/10/30</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期2Q決算</b><p>上方修正後の上期進捗と通期予想を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2026/11/30</div><div class="time-dot"></div><div class="time-body"><b>2026年度 IR Day</b><p>AIサーバー、能力増強、中期方針2027を確認。</p><div class="time-meta"><span class="chip blue">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2027/02/02</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期3Q決算</b><p>通期計画の達成確度を確認。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div>
+      <div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>AIサーバー向け部品需要と操業度</b><p>進行中／各決算で確認</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>2027年3月期会社予想の達成度</b><p>2027年3月期を通じて確認</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>設備投資・製品構成・株主還元</b><p>中期・個別実行日は未確認</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>2027年3月期 第2四半期決算</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">日程確定</span></div></div><div class="date-box"><b>2026/10/30</b><span>会社公表または継続確認</span></div></div>
-<p class="lead">上方修正後の上期計画に対し、AIサーバー向け部品と利益率が計画どおり伸びているかを確認します。現在の高い評価倍率を支えられるかが焦点です。</p>
-<div class="mechanism"><span>2Q実績</span><i>→</i><span>通期EPS</span><i>→</i><span>PER</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+8～+18%</div><p>上期会社予想を上回り、コンピュータ用途の高成長と追加上方修正が確認される状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5～+6%</div><p>会社計画線で着地し、通期予想を据え置く状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-18～-8%</div><p>AI需要鈍化、利益率低下、通期下方修正のいずれかが確認される状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>直近の数値更新であり、通期EPSと高い評価倍率の両方を直接動かすため、影響を大きめにしました。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>会社の上期予想は売上1兆400億円、営業利益2,020億円です。</li><li>1Q営業利益は985億円で、前年同期比59.8%増でした。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>コンピュータ用途の成長鈍化</li><li>営業利益率の低下</li><li>通期予想の据え置きでも市場期待に未達</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>2026年度 IR Day</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">日程確定</span></div></div><div class="date-box"><b>2026/11/30</b><span>会社公表または継続確認</span></div></div>
-<p class="lead">AIサーバー向けMLCC・電源部品の需要、供給能力、中期方針2027の進捗を会社が説明する予定です。成長の持続期間と投資回収を確認します。</p>
-<div class="mechanism"><span>需要見通し</span><i>→</i><span>能力増強</span><i>→</i><span>中期EPS</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+5～+12%</div><p>AI向け成長見通し、能力増強、収益性が市場期待を上回る状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-3～+4%</div><p>既存の中期方針を具体化するが、数値前提は大きく変わらない状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-12～-5%</div><p>需要や能力増強の慎重化、収益目標の確度低下が示される状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>中長期EPSと適用PERへ効きますが、決算ほど即時の数値更新を伴わないため、幅を抑えました。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>会社は中期方針2027でAIサーバーを重点機会としています。</li><li>IRカレンダーで開催日時が公表されています。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>能力増強計画の後ずれ</li><li>AI向け数量成長の鈍化</li><li>投資額に対する収益目標の不足</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>MLCC受注・稼働率と製品構成</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">継続材料</span></div></div><div class="date-box"><b>四半期ごと</b><span>会社公表または継続確認</span></div></div>
-<p class="lead">AIサーバー、モビリティ、一般品の受注と工場稼働が高水準を保てるかを四半期ごとに確認します。数量だけでなく高付加価値品の比率が重要です。</p>
-<div class="mechanism"><span>受注</span><i>→</i><span>稼働率</span><i>→</i><span>利益率</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+6～+15%</div><p>受注が出荷を上回り、AI・車向け高付加価値品の比率も上昇する状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-4～+5%</div><p>能力増強と需要が均衡し、会社予想どおりの利益率を維持する状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-16～-7%</div><p>顧客在庫調整、一般品の値下げ、工場稼働率低下が重なる状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>全社売上の過半を占めるコンデンサの数量、価格、利益率を動かす継続材料だからです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>1Qコンデンサ売上は前年同期比30.0%増でした。</li><li>データセンターとモビリティ向けが増加しました。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>受注出荷比率の低下</li><li>製品価格の下落</li><li>在庫増加と操業度益の縮小</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>AIサーバー向け部品需要と操業度</h3><span class="chip">重要度5</span></div><div class="date-box"><b>進行中／各決算で確認</b></div><p>コンデンサ・フィルタ・電源モジュール需要が稼働率と利益へつながるか。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">6,895円～7,691円</div><p>基準価格比 +36.1%～+51.7%</p><p>需要と操業度が改善し売上2.8兆円・利益5800億円側。</p><p>このレポートの条件付き2027年末再評価。売上2,600,000,000,000 JPY・純利益率20.000%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,800,000,000,000 JPY・純利益率20.714%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">5,490円～5,967円</div><p>基準価格比 +8.3%～+17.7%</p><p>売上2.4兆円・利益4500億円の当方標準条件。</p><p>このレポートの条件付き2027年末再評価。売上2,300,000,000,000 JPY・純利益率18.000%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,400,000,000,000 JPY・純利益率18.750%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">4,243円～4,734円</div><p>基準価格比 -16.3%～-6.6%</p><p>需要・単価低下で売上2.0兆円・利益3200億円側。</p><p>このレポートの条件付き2027年末再評価。売上2,000,000,000,000 JPY・純利益率16.000%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,100,000,000,000 JPY・純利益率17.000%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>2027年3月期会社予想の達成度</h3><span class="chip">重要度4</span></div><div class="date-box"><b>2027年3月期を通じて確認</b></div><p>会社予想5200億円営業利益と為替前提を確認。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">5,967円～6,630円</div><p>基準価格比 +17.7%～+30.8%</p><p>通期会社予想を上回る収益力が持続する条件。</p><p>このレポートの条件付き2027年末再評価。売上2,400,000,000,000 JPY・純利益率18.750%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,400,000,000,000 JPY・純利益率20.833%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">5,251円～5,967円</div><p>基準価格比 +3.6%～+17.7%</p><p>会社予想付近の達成と次年度確認。</p><p>このレポートの条件付き2027年末再評価。売上2,400,000,000,000 JPY・純利益率16.500%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,400,000,000,000 JPY・純利益率18.750%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">4,243円～4,773円</div><p>基準価格比 -16.3%～-5.8%</p><p>為替・価格・費用で計画未達。</p><p>このレポートの条件付き2027年末再評価。売上2,400,000,000,000 JPY・純利益率13.333%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,400,000,000,000 JPY・純利益率15.000%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>設備投資・製品構成・株主還元</h3><span class="chip">重要度4</span></div><div class="date-box"><b>中期・個別実行日は未確認</b></div><p>能力増強が利益へ寄与するまでの時間と資本効率を確認。</p><p>当方の条件付きモデルとの比較です。短期反応予測や市場コンセンサスとの実測比較ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">6,206円～6,592円</div><p>基準価格比 +22.4%～+30.1%</p><p>需要と能力投資が整合し純利益率20%台へ。</p><p>このレポートの条件付き2027年末再評価。売上2,400,000,000,000 JPY・純利益率19.500%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,400,000,000,000 JPY・純利益率20.714%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">5,728円～5,967円</div><p>基準価格比 +13.0%～+17.7%</p><p>投資と償却・収益改善が均衡。</p><p>このレポートの条件付き2027年末再評価。売上2,400,000,000,000 JPY・純利益率18.000%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,400,000,000,000 JPY・純利益率18.750%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">5,092円～5,410円</div><p>基準価格比 +0.5%～+6.7%</p><p>稼働不足・固定費増、資本効率低下。</p><p>このレポートの条件付き2027年末再評価。売上2,400,000,000,000 JPY・純利益率16.000%・PER24倍・希薄化株式1,810,000,000株 ／ 売上2,400,000,000,000 JPY・純利益率17.000%・PER24倍・希薄化株式1,810,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。</p><p>足りない情報：製品・施策別の純増利益と資金需要、結果条件ごとの顧客継続と費用</p><p>次に見る数字：最新決算・会社予想・顧客採用・費用開示</p><p>再計算方法：製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>出典 [S1–S4]。AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。</p><p>先行指標：売上・利益率・営業CF、顧客採用・継続・費用、株式数・資本政策</p><p>材料出尽くし：結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。</p><p>資金：自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。</p><p>更新条件：決算・会社予想更新、重要な顧客・事故・費用・資本政策の開示</p></p></details><details><summary>数値化手法の検討</summary><p><ul><li>単独価値差分：不採用・適用外。事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。</li><li>共通シナリオ再評価：採用。共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。</li><li>市場予想改定：不採用・適用外。取得時点を揃えた独立した市場予想改定データを保有しないため。</li><li>同社比較：不採用・適用外。同時ニュースの影響を分離した十分な同社比較標本を用意していないため。</li><li>他社比較：不採用・適用外。事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。</li></ul></p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>2Q決算とIR Day</b><span class="up">連動</span></div><p>同じAI需要と中期利益率を確認するため、価値を重複加算しません。</p></div><div class="signal"><div><b>MLCC需給と業績</b><span class="flat">共通前提</span></div><p>受注、稼働率、製品構成が決算数値へ反映されます。</p></div><div class="signal"><div><b>為替</b><span class="down">注意</span></div><p>会社予想155円/USDとの差を業績影響として一度だけ反映します。</p></div>
+    <p>需要・採用・費用・資本政策は同じ将来利益を共有する1グループ。個別の割合・価格幅を加算しません。</p><p>全体は株主価値端点と現在推定株式数、価格帯は各ケースの将来株式数を用いるため、逆算値は完全一致とは限りません。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>コンピュータ用途売上</b><span class="up">最重要</span></div><p>AIサーバー向け成長の持続性を確認します。</p></div><div class="signal"><div><b>コンデンサ受注</b><span class="up">重要</span></div><p>受注が出荷を上回る状態が続くかを確認します。</p></div><div class="signal"><div><b>営業利益率</b><span class="flat">確認</span></div><p>操業度益と高付加価値品の効果を確認します。</p></div><div class="signal"><div><b>為替・値下げ</b><span class="down">注意</span></div><p>155円/USD前提と製品価格低下の影響を確認します。</p></div>
+    <div class="signal"><div><b>AIサーバー向け部品需要と操業度</b></div><p>進行中／各決算で確認：コンデンサ・フィルタ・電源モジュール需要が稼働率と利益へつながるか。</p></div><div class="signal"><div><b>2027年3月期会社予想の達成度</b></div><p>2027年3月期を通じて確認：会社予想5200億円営業利益と為替前提を確認。</p></div><div class="signal"><div><b>設備投資・製品構成・株主還元</b></div><p>中期・個別実行日は未確認：能力増強が利益へ寄与するまでの時間と資本効率を確認。</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -195,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>7,932円</td><td>市場データで確認済み</td><td>2026-09-30</td><td>10時台</td></tr><tr><td>通期会社予想</td><td>売上2兆1,100億円</td><td>会社の目標・予定</td><td>2026/07/31</td><td>営業利益4,300億円</td></tr><tr><td>会社予想EPS</td><td>185.68円</td><td>会社の目標・予定</td><td>2026/07/31</td><td>2027年3月期</td></tr><tr><td>為替前提</td><td>155円/USD</td><td>会社の目標・予定</td><td>2026/07/31</td><td>第2四半期以降</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>5,068円</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-27T05:15:59+00:00 [S5]</td></tr><tr><td>会社予想</td><td>2027年3月期会社予想は売上2兆2600億円、営業利益5200億円、親会社帰属利益3960億円、EPS218.80円。ドル円155円前提、設備投資2700億円。AIサーバー向け需要、操業度益、為替を背景とするが達成保証ではない。</td><td>会社の目標・予定</td><td>2026-11-27</td><td>最新公表値、対象期間を確認 [S1,S3]</td></tr><tr><td>株式・財務</td><td>9月末発行済1,963,001,843−自己株153,092,489＝1,809,909,354株。希薄化EPS差を考慮した評価株式1,810.5百万株は当方概算。将来1820／1810／1800百万株は報酬・買戻しの純額仮定。現金6005.79億円、短長借入26.40億円。PE法で現金を重複加算しない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>確定値と潜在株概算を区別 [S1,S2]</td></tr><tr><td>2027年末モデル</td><td>2027年末時点の翌期収益力を評価。売上2.0／2.4／2.8兆円、純利益3200／4500／5800億円、PER18／24／30倍。利益率16／18.75／20.71%とする当方仮定。会社の2027年3月期予想3960億円を足場とし、需要・操業度・為替の幅を置く。現値に標準価格を合わせず、PE法で現金・借入を再加減しない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>PE法。現金・負債を再加減しない。</td></tr><tr><td>確率</td><td>[0.25, 0.5, 0.25]</td><td>このレポートの推定</td><td>2026-11-27</td><td>主観配分、統計推定ではない。</td></tr><tr><td>重大リスク</td><td>AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>未確認の影響額をゼロにしない [S1–S4]</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -204,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2026/0731/26q1-j-fls.ashx?cvid=20260731015630000000&la=ja-jp" target="_blank" rel="noopener noreferrer">1Q決算短信</a></li><li><a href="https://corporate.murata.com/ja-jp/ir" target="_blank" rel="noopener noreferrer">公式IR</a></li><li><a href="https://corporate.murata.com/ja-jp/ir/financial/forecast" target="_blank" rel="noopener noreferrer">業績予想</a></li><li><a href="https://corporate.murata.com/ir/calendar?sc_lang=ja-JP" target="_blank" rel="noopener noreferrer">IRカレンダー</a></li><li><a href="https://corporate.murata.com/ja-jp/company/business-strategy/mid-term-policy" target="_blank" rel="noopener noreferrer">中期方針2027</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2026/1030/26q2-j-fls.ashx?la=ja-jp&amp;cvid=20261030011056000000" target="_blank" rel="noopener noreferrer">S1：2027年3月期中間決算短信</a>（公開：2026-10-30／取得：2026-11-27）</li><li><a href="https://corporate.murata.com/-/media/corporate/about/newsroom/news/irnews/irnews/2026/1110/murata91gorep_semi.ashx?la=ja-jp&amp;cvid=20261109082304000000" target="_blank" rel="noopener noreferrer">S2：第91期半期報告書</a>（公開：2026-11-10／取得：2026-11-27）</li><li><a href="https://corporate.murata.com/ja-jp/ir/financial/forecast" target="_blank" rel="noopener noreferrer">S3：会社業績予想</a>（公開：2026-10-30／取得：2026-11-27）</li><li><a href="https://corporate.murata.com/ja-jp/ir" target="_blank" rel="noopener noreferrer">S4：株主・投資家情報</a>（公開：資料内参照／取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/6981.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：Yahoo Finance 市場価格（日足）</a>（公開：資料内参照／取得：2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：公式IR、1Q決算短信、業績予想、IRカレンダー、中期方針2027、株価時系列を確認。3結果の影響幅は共通のEPS・PERモデルで再計算し、重複材料は合算していません。</p></div>
+      <div><p>共通JSON形式、算術、出典ID、日程、確率、依存関係、HTMLの未置換・安全性を検証。次は分析上の制約です。</p><ul><li>将来純利益・PER・確率・株式数は当方仮定で会社予想ではない。</li><li>潜在株式の時点・加重平均差と新しい資本政策で再評価が必要。</li><li>AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：株価、現在地、2Q決算・IR Day日程の確認状況を更新。</p></div>
+      <div><p>2026-11-27 全面再作成。全3レポートは同じ共通データ・基準株価を使用。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本レポートは情報提供を目的とした条件付き試算であり、売買を推奨するものではありません。</p>
+    <p>情報提供・教育目的の条件付き試算であり売買推奨ではありません。将来利益・倍率・確率・株式数は当方仮定。会社見通しと確認済み事実を区別してください。配当は価格比較に含みません。</p>
   </section>
 
-  <footer>分析値は2026-09-30時点で固定しています。</footer>
+  <footer>分析基準株価 5,068円／2026-11-27T05:15:59+00:00。時点値。分析基準日2026-11-27。対象2027年末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

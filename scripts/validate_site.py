@@ -280,6 +280,13 @@ def main() -> int:
     validate_signals(signals_payload, stocks, validation)
     validate_frontend(validation)
 
+    # Public reports must also pass the shared evidence and calculation checks.
+    from validate_report_bundles import validate_report_bundles
+    report_errors, report_warnings, checked = validate_report_bundles(ROOT)
+    validation.errors.extend(report_errors)
+    validation.warnings.extend(report_warnings)
+    print(f"Report bundles checked: {checked}")
+
     for warning in validation.warnings:
         print(f"WARN: {warning}")
     for error in validation.errors:

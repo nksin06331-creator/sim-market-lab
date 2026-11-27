@@ -7,17 +7,17 @@
     "exchange": "Nasdaq",
     "currency": "USD",
     "fiscal_year_end": "12-31",
-    "valuation_date": "2026-11-24",
-    "source_cutoff": "2026-11-24T06:26:24.589451+00:00",
-    "generated_at": "2026-11-24T06:26:24.589451+00:00",
-    "price": 48.33,
-    "price_as_of": "2026-11-23T21:00:01+00:00",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T05:33:51.141926+00:00",
+    "generated_at": "2026-11-27T05:33:51.141926+00:00",
+    "price": 42.57,
+    "price_as_of": "2026-11-25T21:00:02+00:00",
     "benchmark": "S&P 500"
   },
   "capital_structure": {
     "basic_shares": 556125724,
     "diluted_shares": 614125724.0,
-    "market_cap": 29680696240.92,
+    "market_cap": 26143332070.68,
     "cash": 6404000000.0,
     "liquid_securities": 0,
     "restricted_cash": 2282000000.0,
@@ -45,7 +45,7 @@
       "id": "IDENTITY",
       "statement": "CoreWeave, Inc.／Nasdaq: CRWV／USD／12月決算。2017年設立、2020年クラウド開始、2025年3月上場。本社Livingston, New Jersey。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S4"
@@ -57,7 +57,7 @@
       "id": "BUSINESS",
       "statement": "GPUとネットワーク・ストレージを統合したAIクラウドを提供。学習・推論基盤と運用ソフトウェアで顧客の計算需要を支える。クラウド設備は電力・冷却・回線・GPUの全てが稼働して収益化する。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2",
@@ -70,7 +70,7 @@
       "id": "Q3",
       "statement": "2026年3Q売上36.61億ドル、GAAP営業利益2.07億ドル、純損失7.09億ドル、純支払利息8.46億ドル。調整後EBITDA22.56億ドル・同マージン62%、調整後営業利益3.79億ドル。償却・利息・設備投資を含めて読まなければならない。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2"
@@ -82,7 +82,7 @@
       "id": "GUIDANCE",
       "statement": "2026年会社予想は売上130～133億ドル、調整後営業利益12.75～13.75億ドル、設備投資370～390億ドル。年末稼働電力1.85GW超、年末ARR200～210億ドル。ARRは最終月売上×12であり年間売上ではない。4Q支払利息予想10.5～11.5億ドル。",
       "classification": "COMPANY_GUIDANCE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S3"
@@ -94,7 +94,7 @@
       "id": "BACKLOG",
       "statement": "9月末の会社定義のRevenue backlogは約1325億ドル。残存履行義務に加え、契約下で将来収益化を見込む額を含む。設備引渡し・可用性など条件を満たして初めて売上になる。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1"
       ],
@@ -105,7 +105,7 @@
       "id": "POWER",
       "statement": "9月末稼働電力は1.7GW超、契約電力は4.6GW超。契約電力を稼働済みと数えない。会社は年間1.85GW超を目標としている。",
       "classification": "COMPANY_GUIDANCE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1"
       ],
@@ -116,7 +116,7 @@
       "id": "CONCENTRATION",
       "statement": "3Qの顧客A・B売上比率は24%・30%。匿名区分と顧客実名を勝手に対応させない。会社はMicrosoft・OpenAI等を主要顧客と記載し、Metaとの長期契約も開示。大口顧客集中は続く見込み。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2"
       ],
@@ -127,7 +127,7 @@
       "id": "CAPITAL",
       "statement": "9月末現金・同等物41.22億ドル、制限現金22.82億ドル。借入元本475.05億ドルとファイナンスリース6.49億ドルを合わせた評価用負債は481.54億ドル。営業リース186.97億ドルは賃借料控除後利益への接続と整合させ、EVから二重控除しない。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2"
       ],
@@ -138,7 +138,7 @@
       "id": "CASHFLOW",
       "statement": "2026年1～9月営業CF56.38億ドル、現金設備投資235.58億ドル。前年同期間営業CF14.99億ドル・設備投資62.49億ドル、2025年通期30.58億ドル・103.09億ドル。売上成長・EBITDAの黒字とフリーCFは異なる。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2",
         "S4"
@@ -150,7 +150,7 @@
       "id": "FUNDING",
       "statement": "会社は決算発表後約3か月の顧客前受金・預託金を約90億ドルと予想。資金は借入・営業CF・前受金等に依存する。前受金は利益や恒久資本ではなく、借換えと契約履行も必要。ATMは最大3500万株、9月末時点で売却なし。",
       "classification": "COMPANY_GUIDANCE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2"
@@ -162,7 +162,7 @@
       "id": "SHARES",
       "statement": "10月30日時点A株465,847,732＋B株90,277,992＝556,125,724株。9月末のEPSから除外されたオプション2300万、RSU等3100万、ワラント400万を加え、評価用株式614,125,724株と推定。期間差があり確定時点希薄化株式数ではない。転換社債100百万株は別扱い。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2"
       ],
@@ -173,7 +173,7 @@
       "id": "CONVERTIBLE",
       "statement": "転換社債元本は2031年25.88億ドル、2032年40億ドル、2033年42億ドル。転換率は額面1000ドル当たり9.2764／8.3612／10.2194株。初期転換価格は約107.80／119.60／97.85ドル。実際の転換には契約条件がある。キャップドコールは存在するが評価で保護効果をゼロとする保守的仮定。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2",
         "S4"
@@ -185,7 +185,7 @@
       "id": "MODEL",
       "statement": "2027年末の条件付きEV/Sales評価。悲観・標準・楽観で2027年売上200／280／360億ドル、倍率3.5／4.0／4.5倍、賃借料・償却控除後のモデル営業利益率8／15／20%。倍率は最新同業中央値ではなく当方仮定。2026年末ARR予想を足場に、設備引渡しと稼働率で年売上を変える。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2",
@@ -198,7 +198,7 @@
       "id": "FUTURE_FINANCE",
       "statement": "9月末から2027年末までの仮定。純新規借入100／200／250億ドル、期末自由現金30／50／70億ドル。ATM3500万株を仮定価格50ドル・費用2%で発行し純調達17.15億ドル。既存評価用株式に将来報酬等1000万／2000万／3000万株を加える。公募の実施・価格は未確定。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2"
       ],
@@ -209,7 +209,7 @@
       "id": "BUDGET",
       "statement": "資金計画の整合用仮定。9月末～2027年末の営業CF（前受金を含む）120／180／250億ドル。期末現金を満たす投資等純支出は248.37／388.37／488.37億ドル。式は期首自由現金＋営業CF＋純新規借入＋ATM純調達−投資等純支出＝期末現金。前受金を別途重複加算しない。借換えは純借入の内訳に含める。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2",
@@ -222,7 +222,7 @@
       "id": "PROB",
       "statement": "悲観30%、標準45%、楽観25%は当方の主観配分。大型設備投資・借換えの下方リスクをやや厚くし、会社の需要見通しは標準と楽観へ反映。統計推定でも会社予想でもない。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2"
@@ -234,7 +234,7 @@
       "id": "RISK",
       "statement": "GPUの陳腐化、電力・建設・冷却遅延、NVIDIA等サプライヤー、顧客集中、金利・借換え、制限現金、希薄化がリスク。9月末の開示統制は重要な内部統制不備により有効でないと会社が記載。高い調整後EBITDAを株主CFと同一視しない。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2",
         "S4"
@@ -246,7 +246,7 @@
       "id": "C1",
       "statement": "契約済み計算能力の引渡しと売上化が進行中。契約残高の増加だけでなく、稼働電力・利用可能なGPU・売上計上を確認。今後の決算公表の確定日は取得資料から確認できず、日付を創作しない。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2"
@@ -258,7 +258,7 @@
       "id": "C2",
       "statement": "電力・データセンター・次世代GPUの立上げが進行中。年末1.85GW超は会社目標。個別工事・電力接続の確定稼働日は未確認。最新GPUの導入発表自体は完了済みとして、今後の稼働・採算を追う。",
       "classification": "COMPANY_GUIDANCE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S3"
@@ -270,7 +270,7 @@
       "id": "C3",
       "statement": "顧客前受金の受領、借換え、借入枠の実行、ATM等の資金調達が継続的な観測対象。2027年の借入元本返済予定は109.74億ドル。調達完了の発表を将来の確約と混同しない。",
       "classification": "COMPANY_GUIDANCE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2"
@@ -282,7 +282,7 @@
       "id": "COMPETITION",
       "statement": "AWS、Microsoft Azure、Google Cloud、Oracleや他のGPUクラウドが競合。大手クラウドには製品範囲・資金力の利点がある。CoreWeaveはAI向け運用・GPUクラスタ性能を訴求するが会社説明と独立評価を分ける。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2",
         "S4"
@@ -292,9 +292,9 @@
     },
     {
       "id": "QUOTE",
-      "statement": "分析株価48.33USD、価格時刻2026-11-23T21:00:01+00:00。暫定市場データ取得元はYahoo Finance。",
+      "statement": "分析株価42.57USD、価格時刻2026-11-25T21:00:02+00:00。暫定市場データ取得元はYahoo Finance。",
       "classification": "CONFIRMED",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S5"
       ],
@@ -303,9 +303,9 @@
     },
     {
       "id": "QUOTE_STATS",
-      "statement": "52週高値138.25ドル・安値39.28ドル。20営業日の終値価格リターンCRWV -12.43%、S&P 500 -5.73%、単純差-6.70ポイント。配当・リスク調整なし。総合判定の根拠には使わない。",
+      "statement": "52週高値138.25ドル・安値37.4ドル。20営業日の終値価格リターンCRWV -33.41%、S&P 500 -7.25%、単純差-26.16ポイント。配当・リスク調整なし。総合判定の根拠には使わない。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S5",
         "S6"
@@ -317,7 +317,7 @@
       "id": "CONVERSION_MODEL",
       "statement": "悲観・標準は株価が転換価格未満のため転換社債を負債として保持。楽観では価格が3銘柄の初期転換価格を上回り、各転換率で株式を追加し対応元本107.88億ドルを負債から除く経済的転換試算。実際の転換時期・現金決済・転換調整条項は別。株式追加と元本二重控除をしない。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S2",
         "S4"
@@ -329,7 +329,7 @@
       "id": "EVENT_MODEL",
       "statement": "各材料は同じ2027年企業価値モデルへ条件を置換して再評価。企業価値・純負債・株式数を同時に整合させる。個別価格幅を加算せず、短期反応率とも解釈しない。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2",
@@ -342,7 +342,7 @@
       "id": "SIGNAL",
       "statement": "株価評価50、カタリスト65、企業基盤リスク85の主観評価。価格位置に加え資金負担・モデル依存を株価評価へ調整。需要契約を評価しつつ設備引渡し・借換え期待の先行を材料65へ、顧客集中・重債務・負のフリーCF・統制不備を企業85へ反映。総合59.0＝50×.60＋65×.25＋85×.15で中立。日々の価格から自動生成しない。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2",
@@ -353,9 +353,9 @@
     },
     {
       "id": "OVERALL",
-      "statement": "全材料を1つの共通設備・契約価値グループへ集約。標準の資金条件（負債681.54億・自由現金50億ドル）を固定し、失敗側EV700億、成功側EV1620億から失敗側株主価値68.46億、成功増分920億ドルを置く。逆算中心24.82%。借入・転換・株式数が変わる3ケース帯の価格位置とは異なる。",
+      "statement": "全材料を1つの共通設備・契約価値グループへ集約。標準の資金条件（負債681.54億・自由現金50億ドル）を固定し、失敗側EV700億、成功側EV1620億から失敗側株主価値68.46億、成功増分920億ドルを置く。逆算中心20.98%。借入・転換・株式数が変わる3ケース帯の価格位置とは異なる。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2",
@@ -368,7 +368,7 @@
       "id": "RUNWAY",
       "statement": "TTM営業CF71.97億ドル、現金設備投資276.18億ドル。総現金64.04−制限現金22.82−仮定最低運転資金20＝使用可能21.22億ドル。過去投資ペースによる簡易ランウェイ1.25か月。これは資金枯渇日予測ではない。将来前受金・借入枠・投資時期・借換えを含まないため、各シナリオで資金調達を条件化。",
       "classification": "MODEL_ESTIMATE",
-      "as_of": "2026-11-24",
+      "as_of": "2026-11-27",
       "source_ids": [
         "S1",
         "S2",
@@ -376,6 +376,20 @@
       ],
       "calculation_id": "TTM=FY25+9M26-9M25;months=(6.404-2.282-2)/((27.618-7.197)/12)",
       "confidence": "LOW"
+    },
+    {
+      "id": "REFRESH",
+      "statement": "2026年11月27日に公式IR・SEC提出履歴・直近10-Q・年次資料・会社見通しを再取得。最新四半期は11月12日提出の2026年3Qで、売上・資金前提の根拠は前版から不変。11月24日の最新Form 4は役員等の保有取引であり、新たな四半期業績として扱わない。既存シナリオを基準株価と新しい評価日で再計算。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S4",
+        "S7"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
     }
   ],
   "sources": [
@@ -385,7 +399,7 @@
       "publisher": "CoreWeave / SEC",
       "url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
       "published_at": "2026-11-10",
-      "accessed_at": "2026-11-24T06:26:24.589451+00:00",
+      "accessed_at": "2026-11-27T05:33:51.141926+00:00",
       "source_type": "IR",
       "is_primary": true,
       "supports_claim_ids": [
@@ -414,7 +428,7 @@
       "publisher": "CoreWeave / SEC",
       "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm",
       "published_at": "2026-11-12",
-      "accessed_at": "2026-11-24T06:26:24.589451+00:00",
+      "accessed_at": "2026-11-27T05:33:51.141926+00:00",
       "source_type": "FILING",
       "is_primary": true,
       "supports_claim_ids": [
@@ -447,7 +461,7 @@
       "publisher": "CoreWeave / SEC",
       "url": "https://s205.q4cdn.com/133937190/files/content_files/CoreWeave-4Q-and-FY2026-Outlook-Presentation-_1_.pdf",
       "published_at": "2026-11-10",
-      "accessed_at": "2026-11-24T06:26:24.589451+00:00",
+      "accessed_at": "2026-11-27T05:33:51.141926+00:00",
       "source_type": "IR",
       "is_primary": true,
       "supports_claim_ids": [
@@ -465,7 +479,7 @@
       "publisher": "CoreWeave / SEC",
       "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm",
       "published_at": "2026-03-02",
-      "accessed_at": "2026-11-24T06:26:24.589451+00:00",
+      "accessed_at": "2026-11-27T05:33:51.141926+00:00",
       "source_type": "FILING",
       "is_primary": true,
       "supports_claim_ids": [
@@ -486,7 +500,7 @@
       "publisher": "Yahoo Finance",
       "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRWV?range=3mo&interval=1d",
       "published_at": null,
-      "accessed_at": "2026-11-24T06:26:24.589451+00:00",
+      "accessed_at": "2026-11-27T05:33:51.141926+00:00",
       "source_type": "MARKET_DATA",
       "is_primary": false,
       "supports_claim_ids": [
@@ -500,11 +514,24 @@
       "publisher": "Yahoo Finance",
       "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&interval=1d",
       "published_at": null,
-      "accessed_at": "2026-11-24T06:26:24.589451+00:00",
+      "accessed_at": "2026-11-27T05:33:51.141926+00:00",
       "source_type": "MARKET_DATA",
       "is_primary": false,
       "supports_claim_ids": [
         "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "SEC提出履歴（2026-11-27再確認）",
+      "publisher": "SEC",
+      "url": "https://data.sec.gov/submissions/CIK0001769628.json",
+      "published_at": null,
+      "accessed_at": "2026-11-27T05:33:51.141926+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "REFRESH"
       ]
     }
   ],
@@ -618,13 +645,13 @@
     ],
     "computed": {
       "expected_price": 73.80652948554354,
-      "expected_delta_pct": 52.71369643191297,
-      "raw_band_position_pct": 22.582703695002763,
-      "display_band_position_pct": 22.582703695002763,
-      "endpoint_rr": 3.4281677407000917,
-      "market_score": 23,
+      "expected_delta_pct": 73.37686043115701,
+      "raw_band_position_pct": 17.542199821399336,
+      "display_band_position_pct": 17.542199821399336,
+      "endpoint_rr": 4.700539329053376,
+      "market_score": 18,
       "own_score": 45,
-      "supplemental_score": 87
+      "supplemental_score": 100
     },
     "risk_class": "HIGH",
     "risk_reasons": [
@@ -703,8 +730,8 @@
               108.19035418874874
             ],
             "price_change_pct_range": [
-              75.78239983116606,
-              123.85755056641577
+              99.56691059056271,
+              154.14694430056085
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。売上のみ変更し倍率4倍、追加純借入200億ドル、自由現金50億ドル。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 売上300～340億ドル。",
@@ -749,8 +776,8 @@
               84.95563383840255
             ],
             "price_change_pct_range": [
-              26.3062995374135,
-              75.78239983116606
+              43.396369665097346,
+              99.56691059056271
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。売上のみ変更し倍率4倍、追加純借入200億ドル、自由現金50億ドル。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 売上260～300億ドル。",
@@ -795,8 +822,8 @@
               49.08793493044664
             ],
             "price_change_pct_range": [
-              -47.9078509032153,
-              1.5682493905372352
+              -40.859441723100666,
+              15.311099202364687
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。売上のみ変更し倍率4倍、追加純借入200億ドル、自由現金50億ドル。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 売上200～240億ドル。",
@@ -923,8 +950,8 @@
               93.92255856539151
             ],
             "price_change_pct_range": [
-              68.36098478710315,
-              94.33593744132322
+              91.14132945174289,
+              120.63086343761218
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。利益率の変化を倍率3.5～4.5倍の範囲へ対応させる評価仮定。売上280億ドル・資金条件固定。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 倍率4.2～4.5倍。",
@@ -969,8 +996,8 @@
               81.36886394760695
             ],
             "price_change_pct_range": [
-              33.727714581476384,
-              68.36098478710315
+              51.82195080391716,
+              91.14132945174289
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。利益率の変化を倍率3.5～4.5倍の範囲へ対応させる評価仮定。売上280億ドル・資金条件固定。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 倍率3.8～4.2倍。",
@@ -1015,8 +1042,8 @@
               64.63060445722753
             ],
             "price_change_pct_range": [
-              7.752761927256313,
-              33.727714581476384
+              22.33241681804785,
+              51.82195080391716
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。利益率の変化を倍率3.5～4.5倍の範囲へ対応させる評価仮定。売上280億ドル・資金条件固定。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 倍率3.5～3.8倍。",
@@ -1143,8 +1170,8 @@
               80.47217147490805
             ],
             "price_change_pct_range": [
-              57.228862221008846,
-              66.50563102608741
+              78.50295774351319,
+              89.03493416703793
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。売上280億ドル・倍率4倍・自由現金50億ドルを固定し、追加純借入を変更。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 追加純借入150～180億ドル。",
@@ -1189,8 +1216,8 @@
               75.98870911141357
             ],
             "price_change_pct_range": [
-              44.859837147570694,
-              57.228862221008846
+              64.46032251214686,
+              78.50295774351319
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。売上280億ドル・倍率4倍・自由現金50億ドルを固定し、追加純借入を変更。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 追加純借入180～220億ドル。",
@@ -1235,8 +1262,8 @@
               67.02178438442459
             ],
             "price_change_pct_range": [
-              29.398555805773018,
-              38.67532461085163
+              46.907028472938926,
+              57.4390048964637
             ],
             "probability": null,
             "method_note": "このレポートの条件付き2027年末再評価。売上280億ドル・倍率4倍・自由現金50億ドルを固定し、追加純借入を変更。全てATM3500万株、将来報酬2000万株。短期の値動き予測ではない。 追加純借入240～270億ドル。",
@@ -1342,10 +1369,10 @@
     "overall_priced_in": {
       "quantifiable": true,
       "percent_range": [
-        14.820322000999997,
-        34.820322000999994
+        10.975360946391305,
+        30.975360946391305
       ],
-      "raw_implied_pct": 24.820322000999997,
+      "raw_implied_pct": 20.975360946391305,
       "all_events_excluded_equity_value": 6846000000.0,
       "included_group_ids": [
         "G1"
@@ -1385,7 +1412,7 @@
     "status": "WARN",
     "fail_count": 0,
     "warn_count": 3,
-    "generated_at": "2026-11-24T06:26:24.589451+00:00",
+    "generated_at": "2026-11-27T05:33:51.141926+00:00",
     "messages": [
       "資金調達依存が高く、簡易ランウェイは将来資金調達を含まない。",
       "売上・倍率・将来負債・転換・ATM価格・株式報酬は当方の条件付き仮定。",

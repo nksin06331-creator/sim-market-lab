@@ -1,0 +1,1354 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Credo Technology Group Holding Ltd",
+    "ticker": "CRDO",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "05-01",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T05:45:00+00:00",
+    "generated_at": "2026-11-27T05:45:00+00:00",
+    "price": 106.795,
+    "price_as_of": "2026-11-25T21:00:02+00:00",
+    "benchmark": null
+  },
+  "capital_structure": {
+    "basic_shares": 187951918,
+    "diluted_shares": 197728918,
+    "market_cap": 21116459797.81,
+    "cash": 466869000,
+    "liquid_securities": 297389000,
+    "restricted_cash": 0,
+    "minimum_operating_cash": 0,
+    "debt": 0,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "runway_months": null,
+    "source_ids": [
+      "S1",
+      "S2"
+    ],
+    "dilution_notes": [
+      "8月25日時点普通株187,951,918株。Q1の加重平均希薄化差8.371百万株と除外潜在株1.406百万株を加え評価株197.728918百万株とする概算。時点と平均の違いに注意。将来205／210／215百万株で株式報酬を反映。現金466.869百万・短期投資297.389百万USD。PER法ではこれらを再加算しない。",
+      "0の非事業請求権・制限現金等は追加評価に用いない入力方針。存在しないという断定ではない。PER法で現金・借入を重複加減しない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "Credo Technology Group Holding Ltd、Nasdaq: CRDO。ケイマン籍、米国San Joseを中心に高速接続を開発する。52/53週制の決算を採用し、FY2027は2027年5月1日終了。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "BUSINESS",
+      "statement": "AIデータセンターのGPU・スイッチ間をつなぐAEC、光DSP、光トランシーバー、SerDes等を展開するファブレス半導体企業。設計・IP・接続製品の価値を作り、生産等を外部に依存する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "FINANCIAL",
+      "statement": "最新公表決算はFY2027 Q1（2026年8月1日終了）。売上4.79003億ドル、GAAP粗利率64.5%、営業利益1.207億ドル、純利益1.29425億ドル、希薄化EPS0.67ドル。非GAAP純利益2.363億ドルとは異なる。次のQ2実績は基準日で未発表。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RISK",
+      "statement": "Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "Broadcom、Marvell等の接続半導体や顧客の内製設計が代替候補。性能・消費電力・価格・顧客認定と供給で比較する。短距離銅と光は用途・距離が異なり、一方が全てを置換するとはしない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "FY2027 Q2会社予想は売上5.25～5.35億ドル、GAAP粗利率62.9～64.9%、非GAAP粗利率67～69%、GAAP営業費用1.99～2.04億ドル。Q2実績は2026年12月1日米国市場終了後に公表、説明会14時PT（日本12月2日7時）。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S3"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "8月25日時点普通株187,951,918株。Q1の加重平均希薄化差8.371百万株と除外潜在株1.406百万株を加え評価株197.728918百万株とする概算。時点と平均の違いに注意。将来205／210／215百万株で株式報酬を反映。現金466.869百万・短期投資297.389百万USD。PER法ではこれらを再加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "basic plus disclosed/proxy dilution; no double cash adjustment",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL",
+      "statement": "2027年末に見るFY2028前後の収益力をPERで評価。売上20／27／34億USD、GAAP寄りの純利益率22／30／35%、PER25／35／45倍、株式205／210／215百万。直近売上・利益率とQ2会社予想を足場に、AI接続需要・顧客集中・買収費・希薄化の幅を置く当方仮定。会社の通期予想ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "calculation_id": "price=revenue*net_margin*PE/future_diluted_shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観・標準・楽観の確率は[0.3, 0.45, 0.25]。決算・会社見通しとリスクを踏まえた粗い主観配分で統計確率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "subjective probability distribution",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "市場価格106.795 USD、価格時刻2026-11-25T21:00:02+00:00。JPは取引時間中の時点値、CRDOは米国11月25日取引分。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C1",
+      "statement": "Q2会社売上予想525～535百万USDとの比較、粗利率・費用・次期予想を確認。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "EVENT_1_SUCCESS",
+      "statement": "材料1・SUCCESSのモデル2端点：売上2,900,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株 ／ 売上3,100,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "EVENT_1_INLINE",
+      "statement": "材料1・INLINEのモデル2端点：売上2,600,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,800,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "EVENT_1_FAILURE",
+      "statement": "材料1・FAILUREのモデル2端点：売上2,000,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,300,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C2",
+      "statement": "AEC、光DSP等の顧客採用と売上集中を確認。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "EVENT_2_SUCCESS",
+      "statement": "材料2・SUCCESSのモデル2端点：売上3,000,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株 ／ 売上3,400,000,000 USD・純利益率35.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "EVENT_2_INLINE",
+      "statement": "材料2・INLINEのモデル2端点：売上2,500,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "EVENT_2_FAILURE",
+      "statement": "材料2・FAILUREのモデル2端点：売上2,000,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,300,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C3",
+      "statement": "買収資産の顧客認定・償却・報酬と資金負担を追う。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "EVENT_3_SUCCESS",
+      "statement": "材料3・SUCCESSのモデル2端点：売上2,700,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率35.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "EVENT_3_INLINE",
+      "statement": "材料3・INLINEのモデル2端点：売上2,700,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "EVENT_3_FAILURE",
+      "statement": "材料3・FAILUREのモデル2端点：売上2,700,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。純利益＝売上×純利益率、1株価値＝純利益×PER÷株式数。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "revenue*net_margin*PE/diluted_shares for each disclosed endpoint",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "株価評価40、カタリスト65、企業リスク65。総合50.0で中立。株価評価はモデル位置に利益・倍率不確実性を加味し、材料は事業進捗と期待先行、企業は財務・顧客・費用リスクで判断する主観評価。日々の株価から自動更新しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "calculation_id": "valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "FY2027 Q1決算発表",
+      "publisher": "Credo Technology Group Holding Ltd",
+      "url": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Technology-Group-Holding-Ltd-Reports-First-Quarter-of-Fiscal-Year-2027-Financial-Results/default.aspx",
+      "published_at": "2026-09-01",
+      "accessed_at": "2026-11-27T05:45:00+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "COMPETITION",
+        "GUIDANCE",
+        "CAPITAL",
+        "MODEL",
+        "PROB",
+        "C1",
+        "EVENT_1_SUCCESS",
+        "EVENT_1_INLINE",
+        "EVENT_1_FAILURE",
+        "C2",
+        "EVENT_2_SUCCESS",
+        "EVENT_2_INLINE",
+        "EVENT_2_FAILURE",
+        "C3",
+        "EVENT_3_SUCCESS",
+        "EVENT_3_INLINE",
+        "EVENT_3_FAILURE",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "FY2027 Q1 Form 10-Q",
+      "publisher": "Credo Technology Group Holding Ltd",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/crdo-20260801.htm",
+      "published_at": "2026-09-02",
+      "accessed_at": "2026-11-27T05:45:00+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "COMPETITION",
+        "CAPITAL",
+        "MODEL",
+        "PROB",
+        "C1",
+        "EVENT_1_SUCCESS",
+        "EVENT_1_INLINE",
+        "EVENT_1_FAILURE",
+        "C2",
+        "EVENT_2_SUCCESS",
+        "EVENT_2_INLINE",
+        "EVENT_2_FAILURE",
+        "C3",
+        "EVENT_3_SUCCESS",
+        "EVENT_3_INLINE",
+        "EVENT_3_FAILURE",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "FY2027 Q2決算公表予定",
+      "publisher": "Credo Technology Group Holding Ltd",
+      "url": "https://investors.credosemi.com/news-events/news/news-details/2026/Credo-Schedules-Second-Quarter-Fiscal-Year-2027-Financial-Results-Conference-Call/default.aspx",
+      "published_at": null,
+      "accessed_at": "2026-11-27T05:45:00+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "GUIDANCE",
+        "MODEL",
+        "C1",
+        "EVENT_1_SUCCESS",
+        "EVENT_1_INLINE",
+        "EVENT_1_FAILURE",
+        "C2",
+        "EVENT_2_SUCCESS",
+        "EVENT_2_INLINE",
+        "EVENT_2_FAILURE",
+        "C3",
+        "EVENT_3_SUCCESS",
+        "EVENT_3_INLINE",
+        "EVENT_3_FAILURE",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "2026年10月16日8-K（株主総会）",
+      "publisher": "Credo Technology Group Holding Ltd",
+      "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026066139/crdo-20261016.htm",
+      "published_at": "2026-10-16",
+      "accessed_at": "2026-11-27T05:45:00+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "C1",
+        "EVENT_1_SUCCESS",
+        "EVENT_1_INLINE",
+        "EVENT_1_FAILURE",
+        "C2",
+        "EVENT_2_SUCCESS",
+        "EVENT_2_INLINE",
+        "EVENT_2_FAILURE",
+        "C3",
+        "EVENT_3_SUCCESS",
+        "EVENT_3_INLINE",
+        "EVENT_3_FAILURE",
+        "SIGNAL"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Yahoo Finance 市場価格（日足）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/CRDO?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T05:45:00+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "AIデータセンターのGPU・スイッチ間をつなぐAEC、光DSP、光トランシーバー、SerDes等を展開するファブレス半導体企業。設計・IP・接続製品の価値を作り、生産等を外部に依存する。",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "FINANCIAL"
+      ],
+      "sec2": [
+        "BUSINESS"
+      ],
+      "sec3": [
+        "BUSINESS"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "RISK"
+      ],
+      "sec5": [
+        "COMPETITION"
+      ],
+      "sec6": [
+        "BUSINESS"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISK"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "PE",
+    "method_explanation": "将来純利益＝売上×純利益率。株主価値＝純利益×PER。1株価値＝株主価値÷将来希薄化株式。PER法では現金・借入を再加減しない。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.3,
+        "enterprise_value": null,
+        "equity_value": 11000000000,
+        "diluted_shares": 205000000,
+        "price": 53.65853658536585,
+        "conditions": [
+          "売上2,000,000,000 USD、純利益440,000,000 USD、PER25倍、株式205,000,000。",
+          "将来株式数に報酬・権利行使・買戻しの純額を仮定。新規公募増資を確約せず、必要時は資金と株式の両方を再評価。",
+          "PER法は株主利益を評価するため現金・借入を重複加減しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": null,
+        "equity_value": 28350000000,
+        "diluted_shares": 210000000,
+        "price": 135.0,
+        "conditions": [
+          "売上2,700,000,000 USD、純利益810,000,000 USD、PER35倍、株式210,000,000。",
+          "将来株式数に報酬・権利行使・買戻しの純額を仮定。新規公募増資を確約せず、必要時は資金と株式の両方を再評価。",
+          "PER法は株主利益を評価するため現金・借入を重複加減しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.25,
+        "enterprise_value": null,
+        "equity_value": 53550000000,
+        "diluted_shares": 215000000,
+        "price": 249.06976744186048,
+        "conditions": [
+          "売上3,400,000,000 USD、純利益1,190,000,000 USD、PER45倍、株式215,000,000。",
+          "将来株式数に報酬・権利行使・買戻しの純額を仮定。新規公募増資を確約せず、必要時は資金と株式の両方を再評価。",
+          "PER法は株主利益を評価するため現金・借入を重複加減しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "PROB"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 139.11500283607486,
+      "expected_delta_pct": 30.26359177496594,
+      "raw_band_position_pct": 27.192123595831763,
+      "display_band_position_pct": 27.192123595831763,
+      "endpoint_rr": 2.6775355057347876,
+      "market_score": 27,
+      "own_score": 44,
+      "supplemental_score": 65
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。",
+      "利益・倍率・資本政策の条件付き仮定に依存。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "純利益（現地通貨）",
+        "low": 648000000.0,
+        "base": 810000000,
+        "high": 972000000.0,
+        "result_prices": [
+          108.0,
+          135.0,
+          162.0
+        ]
+      },
+      {
+        "variable": "PER（倍）",
+        "low": 25,
+        "base": 35,
+        "high": 45,
+        "result_prices": [
+          96.42857142857143,
+          135.0,
+          173.57142857142858
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "FY2027 Q2決算と次四半期見通し",
+        "category": "EARNINGS",
+        "status": "SCHEDULED",
+        "importance": 5,
+        "date": {
+          "display_text": "2026年12月1日14:00米国PT／日本12月2日7:00",
+          "start_date": "2026-12-01",
+          "end_date": "2026-12-01",
+          "precision": "EXACT",
+          "basis": "CONFIRMED",
+          "confidence": "HIGH",
+          "timezone": "America/Los_Angeles",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+          ]
+        },
+        "plain_language": "Q2会社売上予想525～535百万USDとの比較、粗利率・費用・次期予想を確認。",
+        "mechanism": [
+          "需要・採用・費用・資本条件",
+          "将来純利益の変化",
+          "PERと株式数を用いる条件付き価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "売上535百万USD超と良好な次期見通し、収益力が上側へ。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              145.0,
+              165.33333333333334
+            ],
+            "price_change_pct_range": [
+              35.77414672971582,
+              54.81373971940011
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,900,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株 ／ 売上3,100,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "525～535百万USDと利益率が会社予想内。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              121.33333333333336,
+              140.0
+            ],
+            "price_change_pct_range": [
+              13.613308987624295,
+              31.09227960110492
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,600,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,800,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "525百万USD未満または粗利率・次期見通し悪化。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              73.33333333333333,
+              95.83333333333333
+            ],
+            "price_change_pct_range": [
+              -31.33261544704029,
+              -10.264213368291275
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,000,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,300,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と会社見通しに事業成長の根拠がある。"
+          ],
+          "evidence_against": [
+            "Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。"
+          ],
+          "caveats": [
+            "需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。",
+            "missing_information": [
+              "製品・施策別の純増利益と資金需要",
+              "結果条件ごとの顧客継続と費用"
+            ],
+            "next_checks": [
+              "最新決算・会社予想・顧客採用・費用開示"
+            ],
+            "recalculation_method": "製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・利益率・営業CF",
+          "顧客採用・継続・費用",
+          "株式数・資本政策"
+        ],
+        "sell_the_news_risk": "結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。",
+        "financing_risk": "自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。",
+        "update_triggers": [
+          "決算・会社予想更新",
+          "重要な顧客・事故・費用・資本政策の開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "claim_ids": [
+          "C1",
+          "MODEL",
+          "RISK"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "AI接続製品の採用拡大",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／個別量産日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+          ]
+        },
+        "plain_language": "AEC、光DSP等の顧客採用と売上集中を確認。",
+        "mechanism": [
+          "需要・採用・費用・資本条件",
+          "将来純利益の変化",
+          "PERと株式数を用いる条件付き価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "売上34億USD・純利益率35%へ向かう当方条件。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              160.0,
+              198.33333333333334
+            ],
+            "price_change_pct_range": [
+              49.81974811554848,
+              85.71406276823197
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上3,000,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株 ／ 売上3,400,000,000 USD・純利益率35.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "売上27億USD・純利益率30%の当方標準。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              116.66666666666669,
+              135.0
+            ],
+            "price_change_pct_range": [
+              9.243566334254115,
+              26.410412472494027
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,500,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "売上20億USD・純利益率22%の当方悲観。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              73.33333333333333,
+              95.83333333333333
+            ],
+            "price_change_pct_range": [
+              -31.33261544704029,
+              -10.264213368291275
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,000,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,300,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と会社見通しに事業成長の根拠がある。"
+          ],
+          "evidence_against": [
+            "Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。"
+          ],
+          "caveats": [
+            "需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。",
+            "missing_information": [
+              "製品・施策別の純増利益と資金需要",
+              "結果条件ごとの顧客継続と費用"
+            ],
+            "next_checks": [
+              "最新決算・会社予想・顧客採用・費用開示"
+            ],
+            "recalculation_method": "製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・利益率・営業CF",
+          "顧客採用・継続・費用",
+          "株式数・資本政策"
+        ],
+        "sell_the_news_risk": "結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。",
+        "financing_risk": "自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。",
+        "update_triggers": [
+          "決算・会社予想更新",
+          "重要な顧客・事故・費用・資本政策の開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "claim_ids": [
+          "C2",
+          "MODEL",
+          "RISK"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "買収技術統合と株式報酬・費用",
+        "category": "OTHER",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／寄与時期は個別確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+          ]
+        },
+        "plain_language": "買収資産の顧客認定・償却・報酬と資金負担を追う。",
+        "mechanism": [
+          "需要・採用・費用・資本条件",
+          "将来純利益の変化",
+          "PERと株式数を用いる条件付き価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "新製品採用が費用増を上回る。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              144.0,
+              157.49999999999997
+            ],
+            "price_change_pct_range": [
+              34.83777330399362,
+              47.47881455124301
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,700,000,000 USD・純利益率32.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率35.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "統合は進むが償却・報酬が収益増と均衡。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              126.00000000000001,
+              135.0
+            ],
+            "price_change_pct_range": [
+              17.98305164099443,
+              26.410412472494027
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,700,000,000 USD・純利益率28.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率30.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "統合遅延・採用未達・費用と希薄化増。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              99.0,
+              112.5
+            ],
+            "price_change_pct_range": [
+              -7.299030853504373,
+              5.3420103937450225
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。売上2,700,000,000 USD・純利益率22.000%・PER35倍・希薄化株式210,000,000株 ／ 売上2,700,000,000 USD・純利益率25.000%・PER35倍・希薄化株式210,000,000株。短期の反応予測ではない。直近イベント結果を将来収益へ対応させる当方仮定で、個別価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "事業要因が同じ利益に重なり単独の利益増分を一次開示から切り分けられないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の純利益・倍率・株式数を結果条件に対応させて再評価できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "取得時点を揃えた独立した市場予想改定データを保有しないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時ニュースの影響を分離した十分な同社比較標本を用意していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業・財務・顧客構成を揃えた他社イベント標本を確認していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と会社見通しに事業成長の根拠がある。"
+          ],
+          "evidence_against": [
+            "Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。"
+          ],
+          "caveats": [
+            "需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "需要、製品採用、費用、資本政策が同じ将来利益を共有し、個別材料を除外した価値を一次資料から一意に推定できない。",
+            "missing_information": [
+              "製品・施策別の純増利益と資金需要",
+              "結果条件ごとの顧客継続と費用"
+            ],
+            "next_checks": [
+              "最新決算・会社予想・顧客採用・費用開示"
+            ],
+            "recalculation_method": "製品・施策別純増利益が確認できた時点で共通モデルの除外前後を同じ倍率・株式数で比較し、個別期待割合を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・利益率・営業CF",
+          "顧客採用・継続・費用",
+          "株式数・資本政策"
+        ],
+        "sell_the_news_risk": "結果が良くても既存期待を超えない場合や次期予想が弱い場合は株価下落もあり得る。一定の下落率を機械的に置かない。",
+        "financing_risk": "自己資金・営業CFと株式報酬を確認。追加増資や借入が必要になった場合は純調達現金と株式数・負債を同時に再評価する。",
+        "update_triggers": [
+          "決算・会社予想更新",
+          "重要な顧客・事故・費用・資本政策の開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4"
+        ],
+        "claim_ids": [
+          "C3",
+          "MODEL",
+          "RISK"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "共通事業の利益・採用・費用",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じ将来利益に重なる材料は1つの共通価値として1回のみ計上。個別割合・価格幅を合算しない。",
+        "full_success_incremental_equity_value": 42550000000
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        13.775463684629848,
+        33.77546368462985
+      ],
+      "raw_implied_pct": 23.775463684629848,
+      "all_events_excluded_equity_value": 11000000000,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "全材料を共通利益価値の1群に束ね、失敗側株主価値11,000,000,000と成功側53,550,000,000 USDを独立仮定。(基準株価×評価株式−失敗側)÷成功増分で逆算。中心23.8%。±10ポイントは統計区間ではなく当方の不確実性表示。真の成功確率ではない。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "FY2027 Q2決算と次四半期見通し",
+        "frequency": "公式開示・各決算時",
+        "update_trigger": "会社予想・採用・費用・財務条件の変化",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "AI接続製品の採用拡大",
+        "frequency": "公式開示・各決算時",
+        "update_trigger": "会社予想・採用・費用・財務条件の変化",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "買収技術統合と株式報酬・費用",
+        "frequency": "公式開示・各決算時",
+        "update_trigger": "会社予想・採用・費用・財務条件の変化",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T05:45:00+00:00",
+    "messages": [
+      "将来純利益・PER・確率・株式数は当方仮定で会社予想ではない。",
+      "潜在株式の時点・加重平均差と新しい資本政策で再評価が必要。",
+      "Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。"
+    ]
+  }
+}

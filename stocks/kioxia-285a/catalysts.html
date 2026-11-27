@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="285A" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>キオクシアホールディングス <small>285A</small></h1>
-    <div class="sub">東京証券取引所プライム市場｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">東証プライム／JPY｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">重要材料が複数ある</div>
-        <p>決算、自社株取得、分割後の需給、AI向けSSDの立ち上がりが今後の主な材料です。</p>
-        <p class="sub">足りない情報は仮定を置き、主要材料の織り込み度を58%と推定します。</p>
+        <div class="status">需要・設備・財務の連動を確認</div>
+        <p>最新の半期開示に基づく今後18か月と重要な長期材料。日程未確認は時期未定と表示。</p>
+        <p class="sub">同じ正常化利益に影響する材料を1グループで扱い、個別価格・割合を加算しません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>58%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ ふつう</small>
+        <b>12～32%</b>
+        <small>共通利益モデルでの条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>18,345円</b>
-        <small data-live-price-date>2026/09/30 10時台（分析基準値）</small>
+        <b data-live-price>8,310円</b>
+        <small data-live-price-date>分析基準時点の市場価格（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>2Q決算</b>
-        <small>2026年11月ごろ</small>
+        <b>NAND価格・SSD製品構成</b>
+        <small>進行中／個別確定日は未確認</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>一部確定</b>
+        <b>会社計画・時期未定を含む</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">正常化利益・PER・確率・将来株式数は当方の仮定です。会社予想や保証価格ではありません。株式分割後の価格・株式数へ統一し、自己株式・潜在株の時点差を明示しています。</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>58%</b></div><p>仮定：2Q会社見通しの達成を60%、AI向けSSD採用を55%、自社株取得の実行を70%、株式分割後の需給改善を45%として置き、重複を控除しました。</p><p>読み方：AI需要と自社株取得はある程度株価に入っていますが、2Q実績とASPが強ければまだ標準ケース側へ余地があります。</p><p>次に見る数字：SSD & Storage売上、ASP、2Q実績、自社株取得進捗です。</p><p>再計算方法：売上、EPS、株式数へ分解し、株価シナリオと同じPERモデルで織り込み度を更新します。</p></div>
-      <p class="small">計算方法：未確定情報に仮定確率を置き、2Q実績、AI向けSSD、自社株取得、分割後の需給を標準ケース価値へ重み付けして推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>12～32%</b><span>条件付き推定</span></div><p>raw中心22.3%。0～100%外なら表示だけ端へ固定します。</p><p>全3材料を1つの正常化利益グループへ束ね、失敗側株主価値8.4e+12円と成功側3.08e+13円の差で逆算。中心22.3%。個別割合の平均ではなく、同じ価値モデルを市場が使う条件下の期待。真の成功確率ではない。</p></div>
+      <p class="small">計算方法：失敗側と成功側の独立した正常化利益・PERから共通グループの期待を逆算。表示±10ポイントは統計区間ではなく前提の不確実性を表す主観幅。rawが帯外なら端に丸め、その事実を明記する。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>2Q決算が会社見通しを上回り、SSD & Storage売上とASPの強さが続くことです。</p>
+        <p>数量・単価・製品構成・投資回収が当方標準の正常化利益を上回る。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>NAND価格の反落、AI向け需要の鈍化、在庫増加、訴訟費用の追加です。</p>
+        <p>需要・価格・稼働・コストが悪化し、標準利益を下回る。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>好業績がすでに株価へ入ったあとで、少しの未達でも失望になりやすい点です。</p>
+        <p>複数の材料が同じ利益へ影響する。景気・市況と投資の同時悪化。</p>
       </div>
     </div>
   </section>
@@ -131,72 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026/08-10</div><div class="time-dot"></div><div class="time-body"><b>自社株取得枠</b><p>上限8,000億円、3,000万株。市場買付。</p><div class="time-meta"><span class="chip">日程確定</span></div></div></div><div class="time-row"><div class="time-date">2026/09/29</div><div class="time-dot"></div><div class="time-body"><b>分割後価格で取引開始</b><p>1対3分割後の売買代金と投資家層の変化を確認します。</p><div class="time-meta"><span class="chip">実施済み</span></div></div></div><div class="time-row"><div class="time-date">2026/11ごろ</div><div class="time-dot"></div><div class="time-body"><b>2Q決算</b><p>会社見通しに対する達成度を確認します。</p><div class="time-meta"><span class="chip blue">当方推定</span></div></div></div><div class="time-row"><div class="time-date">2026後半</div><div class="time-dot"></div><div class="time-body"><b>AI向けSSD・BiCS10</b><p>サンプル、採用、量産への進み方を確認します。</p><div class="time-meta"><span class="chip blue">期間のみ公表</span></div></div></div>
+      <div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>NAND価格・SSD製品構成</b><p>進行中／個別確定日は未確認</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>次世代メモリと設備投資</b><p>進行中／個別確定日は未確認。長期計画を含む。</p></div></div><div class="time-row"><div class="time-date">進行中</div><div class="time-dot"></div><div class="time-body"><b>株主還元・訴訟・財務</b><p>進行中／個別確定日は未確認</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>2026年7〜9月期決算と会社見通しの達成度</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">当方推定の時期</span></div></div><div class="date-box"><b>2026年11月ごろ</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">次回決算は、NAND市況とAI向けSSD需要が利益にどれだけ反映されたかを見る材料です。売上、営業利益、ASP、在庫の方向感がそろうと、メモリ株として評価されやすくなります。</p>
-<div class="mechanism"><span>2Q実績</span><i>→</i><span>正規化EPS</span><i>→</i><span>PER評価</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+10〜24%</div><p>売上2.39兆円、営業利益1.89兆円を上回り、AI需要の持続が確認される状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+8%</div><p>会社見通し近辺で、AI需要の強さは続くが追加上振れは限られる状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-15〜-30%</div><p>見通し未達、ASP低下、在庫増加が見える状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>メモリ株では決算とASPがEPSを直接動かすため、短期材料として最大級です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>1Q決算で2Q売上2.39兆円、営業利益1.89兆円の見通しを開示。</li><li>会社はデータセンター需要が強いと説明。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>SSD & Storage売上の減速</li><li>ASP低下や在庫増加</li><li>設備投資負担の増加</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>自社株取得枠の実行</h3><div class="chips"><span class="chip">重要度4</span><span class="chip">日程確定</span></div></div><div class="date-box"><b>2026/08/03〜10/30</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">自社株取得は、株式数の減少と需給改善を通じて1株価値を押し上げる材料です。ただし事業利益そのものを増やすわけではないため、決算や市況材料とは分けて見ます。</p>
-<div class="mechanism"><span>取得額</span><i>→</i><span>株式数</span><i>→</i><span>EPS</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+6〜14%</div><p>上限8,000億円に近い取得が進み、平均取得単価も過度に高くない状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-3〜+5%</div><p>一部取得にとどまり、EPS押し上げ効果が限定的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-6〜-14%</div><p>市場環境により取得が少ない、または高値取得で効果が薄い状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>株式数と需給には効きますが、NAND市況や利益水準そのものは変えないため中程度です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>上限3,000万株、8,000億円の取得枠を公表。</li><li>期間は2026年8月3日から10月30日。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>SSD & Storage売上の減速</li><li>ASP低下や在庫増加</li><li>設備投資負担の増加</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>株式分割後の需給定着</h3><div class="chips"><span class="chip amber">重要度2</span><span class="chip">分割実施済み</span></div></div><div class="date-box"><b>2026/09/29以降</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">1対3の株式分割はすでに価格へ反映されています。ここで確認するのは、投資単位の低下が売買代金や個人投資家の参加につながるかです。</p>
-<div class="mechanism"><span>投資単位低下</span><i>→</i><span>流動性</span><i>→</i><span>投資家層</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+2〜7%</div><p>分割後に売買代金と個人投資家参加が増え、需給が安定する状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-2〜+3%</div><p>売買代金や投資家層に大きな変化がなく、企業価値への直接影響も小さい状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-4〜-8%</div><p>分割後に短期需給が荒れ、業績評価より値動きが先行する状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>分割後の売買代金と投資家層の変化は需給に影響しますが、企業価値を直接変えないため小さくしています。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>2026年9月29日から1対3分割後の価格で取引を開始。</li><li>法的な効力発生日は2026年10月1日。</li><li>投資単位を下げる目的と会社は説明。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>SSD & Storage売上の減速</li><li>ASP低下や在庫増加</li><li>設備投資負担の増加</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>第10世代BiCS FLASHとAI向けSSDの立ち上がり</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">期間のみ公表</span></div></div><div class="date-box"><b>2026年後半〜2027年</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">第10世代BiCS FLASHとAI向けSSDは、製品ミックスを高付加価値側へ寄せられるかを見る中期材料です。採用や量産が進めば、将来の利益率とPERを支えます。</p>
-<div class="mechanism"><span>サンプル</span><i>→</i><span>採用</span><i>→</i><span>高付加価値売上</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+12〜28%</div><p>CM/GP/LC系の採用が進み、AI向けSSDの売上比率が上がる状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-5〜+10%</div><p>サンプルや評価は進むが、売上寄与は段階的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-12〜-26%</div><p>顧客採用や量産が遅れ、設備投資だけが先行する状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>AI向けSSDは製品ミックスと将来PERを動かすため、決算に近い大きさで見ます。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>第10世代BiCS FLASH 1Tb TLC品のサンプル出荷開始を公表。</li><li>Investor DayでAI推論向け製品群を説明。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>SSD & Storage売上の減速</li><li>ASP低下や在庫増加</li><li>設備投資負担の増加</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>NAND価格・SSD製品構成</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／個別確定日は未確認</b></div><p>AI需要と高付加価値SSDの出荷・単価を確認。好市況の反転を正常化利益で扱う。</p><p>結果は当方の共通利益条件との比較。市場コンセンサスの実測ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">12,224円～13,335円</div><p>基準価格比 +47.1%～+60.5%</p><p>数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の110～120%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の110～120%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">10,001円～12,224円</div><p>基準価格比 +20.4%～+47.1%</p><p>数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の90～110%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の90～110%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">7,223円～10,001円</div><p>基準価格比 -13.1%～+20.4%</p><p>数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の65～90%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の65～90%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。</p><p>足りない情報：製品別の純増利益と設備稼働・投資回収、材料除外時の正常化利益と市場倍率</p><p>次に見る数字：次の決算の数量・単価・利益率・CF、設備能力と還元・資本構成の変更</p><p>再計算方法：各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>[S1] 公式決算に示された需要・収益・投資の進捗。 市況反転・設備立上げ・コスト・資金負担の不確実性。</p><p>先行指標：売上・営業利益・純利益、数量・単価・製品構成、設備投資・営業CF・資本政策</p><p>資金：投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。</p><p>材料出尽くし：好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。</p><p>更新：会社予想・事業環境・投資日程の変更、株式数・資本政策の変更、主要製品の需要・利益率変化</p></p></details><details><summary>数値化の手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。</li><li>条件付き再計算：採用。正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。</li><li>市場予想改定：不採用・適用外。時点と単位を揃えた独立の市場予想改定データを取得していないため。</li><li>同社事例比較：不採用・適用外。決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。</li><li>同業事例比較：不採用・適用外。同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>次世代メモリと設備投資</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／個別確定日は未確認。長期計画を含む。</b></div><p>四日市・北上での投資、製造歩留まり、設備投資の収益化を追う。投資決定と稼働・販売を区別。</p><p>結果は当方の共通利益条件との比較。市場コンセンサスの実測ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">12,347円～13,582円</div><p>基準価格比 +48.6%～+63.4%</p><p>設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER10～11倍の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER10～11倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">9,878円～12,347円</div><p>基準価格比 +18.9%～+48.6%</p><p>設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER8～10倍の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER8～10倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">7,408円～9,878円</div><p>基準価格比 -10.9%～+18.9%</p><p>設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER6～8倍の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER6～8倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。</p><p>足りない情報：製品別の純増利益と設備稼働・投資回収、材料除外時の正常化利益と市場倍率</p><p>次に見る数字：次の決算の数量・単価・利益率・CF、設備能力と還元・資本構成の変更</p><p>再計算方法：各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>[S1] 公式決算に示された需要・収益・投資の進捗。 市況反転・設備立上げ・コスト・資金負担の不確実性。</p><p>先行指標：売上・営業利益・純利益、数量・単価・製品構成、設備投資・営業CF・資本政策</p><p>資金：投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。</p><p>材料出尽くし：好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。</p><p>更新：会社予想・事業環境・投資日程の変更、株式数・資本政策の変更、主要製品の需要・利益率変化</p></p></details><details><summary>数値化の手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。</li><li>条件付き再計算：採用。正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。</li><li>市場予想改定：不採用・適用外。時点と単位を揃えた独立の市場予想改定データを取得していないため。</li><li>同社事例比較：不採用・適用外。決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。</li><li>同業事例比較：不採用・適用外。同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>株主還元・訴訟・財務</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／個別確定日は未確認</b></div><p>自社株取得・借入返済と配当方針、訴訟引当金、大株主売却による需給を確認。発表済み分割を未来イベントに数えない。 10月30日決定の中間配当の効力発生日は12月8日。90円は分割前の表記で、分割後相当30円。支払決定と今後の還元方針を区別する。</p><p>結果は当方の共通利益条件との比較。市場コンセンサスの実測ではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">10,890円～11,668円</div><p>基準価格比 +31.0%～+40.4%</p><p>資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の98～105%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の98～105%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">10,001円～10,890円</div><p>基準価格比 +20.4%～+31.0%</p><p>資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の90～98%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の90～98%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">7,779円～10,001円</div><p>基準価格比 -6.4%～+20.4%</p><p>資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の70～90%の当方仮定。</p><p>このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の70～90%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。</p><p>足りない情報：製品別の純増利益と設備稼働・投資回収、材料除外時の正常化利益と市場倍率</p><p>次に見る数字：次の決算の数量・単価・利益率・CF、設備能力と還元・資本構成の変更</p><p>再計算方法：各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p><p>[S1] 公式決算に示された需要・収益・投資の進捗。 市況反転・設備立上げ・コスト・資金負担の不確実性。</p><p>先行指標：売上・営業利益・純利益、数量・単価・製品構成、設備投資・営業CF・資本政策</p><p>資金：投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。</p><p>材料出尽くし：好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。</p><p>更新：会社予想・事業環境・投資日程の変更、株式数・資本政策の変更、主要製品の需要・利益率変化</p></p></details><details><summary>数値化の手法検討</summary><p><ul><li>企業価値差分：不採用・適用外。価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。</li><li>条件付き再計算：採用。正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。</li><li>市場予想改定：不採用・適用外。時点と単位を揃えた独立の市場予想改定データを取得していないため。</li><li>同社事例比較：不採用・適用外。決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。</li><li>同業事例比較：不採用・適用外。同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。</li></ul></p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>AI向けSSDとBiCS10</b><span class="up">同じ価値経路</span></div><p>技術発表、サンプル、顧客採用、売上認識は段階イベントです。単純に足しません。</p></div><div class="signal"><div><b>自社株取得と株式分割</b><span class="flat">別経路</span></div><p>自社株取得は株式数、株式分割は流動性に主に効きます。</p></div>
+    <p>全3材料を共通正常化利益グループに束ねます。個別の条件付き価格幅と割合は足しません。全体期待は失敗側と成功側株主価値の差で1回計算します。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>SSD & Storage売上</b><span class="up">最重要</span></div><p>AI需要の継続を見る中心指標です。</p></div><div class="signal"><div><b>ASPとビット出荷</b><span class="up">重要</span></div><p>価格と数量のどちらで伸びたかを分けます。</p></div><div class="signal"><div><b>自社株取得進捗</b><span class="flat">確認</span></div><p>取得株数、取得額、平均単価を確認します。</p></div><div class="signal"><div><b>訴訟の続報</b><span class="down">注意</span></div><p>追加費用や法的手続きの進展を確認します。</p></div>
+    <div class="signal"><div><b>NAND価格・SSD製品構成</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div><div class="signal"><div><b>次世代メモリと設備投資</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div><div class="signal"><div><b>株主還元・訴訟・財務</b></div><p>各決算・会社開示時：数量・単価・利益・投資・資本政策の変更</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -206,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>18,345円</td><td>公式市場データで確認済み</td><td>2026-09-30</td><td>2026/09/30 10時台</td></tr><tr><td>2Q会社見通し</td><td>売上2.39兆円、営業利益1.89兆円</td><td>会社の目標・予定</td><td>2026/07/31</td><td>2026年7〜9月</td></tr><tr><td>自社株取得枠</td><td>上限8,000億円</td><td>会社の目標・予定</td><td>2026/07/31</td><td>実際の取得は市場次第</td></tr><tr><td>株式分割</td><td>1株を3株</td><td>公式情報で確認済み</td><td>2026/09/29</td><td>分割後価格で取引開始（効力発生日は10/01）</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>8,310円</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-27T05:15:31+00:00</td></tr><tr><td>株式数</td><td>1611.744百万株</td><td>このレポートの推定</td><td>2026-11-27</td><td>2026年10月1日に1株を3株へ分割。11月6日公表株式数1,646,577,342株から9月末自己株式16,134,056株の分割後48,402,168株を控除。期中希薄化の目安として基本EPS/希薄化EPS比を適用する推定。自己株式時点差と潜在株の変化は未反映。</td></tr><tr><td>最新半期業績</td><td>2027年3月期上期（2026年4～9月）IFRS売上収益4兆2471.52億円、営業利益3兆2647.27億円、親会社所有者帰属利益2兆1978.71億円。Non-GAAP利益とIFRS利益は区別する。</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>S1</td></tr><tr><td>会社見通し</td><td>半期報告書提出時点の2027年3月期設備投資計画は支払ベース約4700億円。これは設備投資計画であり通期利益予想ではない。半期利益の単純2倍を将来利益にしない。</td><td>会社の目標・予定</td><td>2026-11-27</td><td>S1</td></tr><tr><td>2028年3月モデル</td><td>2028年3月末の正常化親会社利益を悲観・標準・楽観で[1200.0, 2000.0, 2800.0]十億円、PERを[7, 9, 11]倍とする当方仮定。足元の利益の単純年率換算や現値への逆算ではない。景気・需要・製品構成・価格の持続性に応じた幅。将来株式数は現在推定の1.015／1.005／1.000倍。公募増資の現金加算は仮定せず、報酬等の純増を見込む。</td><td>このレポートの推定</td><td>2026-11-27</td><td>会社予想ではない</td></tr><tr><td>確率</td><td>悲観30%・標準45%・楽観25%はこのレポートの主観確率。需要・市況・投資の不確実性を上下に置き、統計的な成功率とはしない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>統計確率ではない</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -215,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2859908/00.pdf" target="_blank" rel="noopener noreferrer">1Q決算短信</a></li><li><a href="https://www.kioxia-holdings.com/ja-jp/news/2026/20260602-1.html" target="_blank" rel="noopener noreferrer">Investor Day 2026</a></li><li><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2859923/00.pdf" target="_blank" rel="noopener noreferrer">自社株取得枠</a></li><li><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2859912/00.pdf" target="_blank" rel="noopener noreferrer">株式分割</a></li><li><a href="https://apac.kioxia.com/en-apac/about/news/2026/20260703-1.html" target="_blank" rel="noopener noreferrer">第10世代BiCS FLASH</a></li><li><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2861255/00.pdf" target="_blank" rel="noopener noreferrer">Viasat訴訟判断</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://ssl4.eir-parts.net/doc/285A/yuho_pdf/S100ZCHE/00.pdf" target="_blank" rel="noopener noreferrer">S1：2027年3月期半期報告書</a>（取得 2026-11-27）</li><li><a href="https://ssl4.eir-parts.net/doc/285A/tdnet/2902681/00.pdf" target="_blank" rel="noopener noreferrer">S2：株主還元方針・中間配当</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/285A.T?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：基準株価・Yahoo Finance日足</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SB：日経225・Yahoo Finance日足</a>（取得 2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：重要カタリストは公式資料で確認。WARN：2Q決算日は当方推定のため、確定日として表示していません。</p></div>
+      <div><p>JSON形式・算術・出典ID・確率・日程・依存関係を検証。以下は分析の制約。</p><ul><li>正常化利益・倍率・確率・将来株式数は当方仮定。</li><li>潜在株式や自己株式の時点差があり、新たな資本政策で更新が必要。</li><li>個別材料の期待割合は非表示。共通利益グループの条件付き逆算であり真の成功確率ではない。</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：初版作成。1Q決算、Investor Day、自社株取得枠、訴訟判断を反映。株価・EPS・株式数・シナリオは1対3分割後基準で統一。</p></div>
+      <div><p>2026-11-27 全面再作成。旧版の予想と株式数を流用せず、最新半期資料・分割後価格で再構成。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の条件付き分析です。投資助言・売買推奨ではありません。市況・需給・為替・投資回収・倍率で結果は変わります。配当は価格比較へ含めません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜キオクシアホールディングス（285A）カタリスト｜作成日 2026-09-30</footer>
+  <footer>分析基準価格8,310円／市場時刻2026-11-27T05:15:31+00:00。分析基準日2026-11-27、対象2028年3月末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

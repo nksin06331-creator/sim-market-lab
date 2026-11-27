@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="ABCL" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>アブセレラ <small>ABCL</small></h1>
-    <div class="sub">Nasdaq｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">Nasdaq／USD｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">Phase 2好結果後</div>
-        <p>ABCL635のIMS学会発表、後期試験計画、増資後の資金消費、ABCL575データが主な材料です。</p>
-        <p class="sub">足りない情報は仮定を置き、主要材料の織り込み度を64%と推定します。</p>
+        <div class="status">臨床・規制・事業化の条件を確認</div>
+        <p>最新の公式発表・決算と未完了の材料を区別。臨床段階の不確実性を残した条件付き評価です。</p>
+        <p class="sub">同じ資産の臨床・規制・上市・資金を共通価値グループに束ね、段階ごとの価格や割合を足しません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>64%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ 低〜中</small>
+        <b>100～100%</b>
+        <small>共通資産価値による推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>$14.82</b>
-        <small data-live-price-date>2026/09/29終値（分析基準値）</small>
+        <b data-live-price>$10.59</b>
+        <small data-live-price-date>米国2026/11/25取引分（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>ABCL635 Phase 2データのIMS学会発表</b>
-        <small>2026/10/01</small>
+        <b>ABCL635の後期開発準備</b>
+        <small>2027年・会社予定</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>時期未定</b>
+        <b>会社見通し・条件付き</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">未承認資産の価値を扱う高リスクの条件付き試算です。将来の患者数、価格、成功時CF、成功確率、開発費は当方仮定で、会社予想や臨床成功の統計予測ではありません。借入条件・規制判断・希薄化も確認してください。</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>64%</b></div><p>仮定：ABCL635 Phase 2好結果を80%、後期試験移行期待を55%、資金余力維持を60%、Jazz提携価値を30%、追加候補の臨床入り期待を25%として置き、株価急騰後の期待織り込みを控除しました。</p><p>読み方：Phase 2好結果はかなり織り込まれましたが、後期試験の設計、規制協議、資金計画はまだ一部織り込みです。</p><p>次に見る数字：Phase 2の効果量、安全性、投与間隔、後期試験開始時期、利用可能流動性、R&D費、下流権利付きプログラム数です。</p><p>再計算方法：各材料の成功確率を更新し、レポート2のシナリオ株価を再計算します。</p></div>
-      <p class="small">計算方法：Phase 2好結果、後期試験移行期待、資金余力、Jazz提携、追加候補を標準ケース価値へ重み付けして推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>100～100%</b><span>このレポートの条件付き推定</span></div><p>丸め前の逆算値110.1%。0～100%外は帯外として表示だけ端へ固定。</p><p>共通資産価値の悲観・楽観株主価値を端点として、(現在推定時価総額−悲観株主価値)÷両端点差を計算。表示±10ポイントは統計区間ではない。現在の自己株式方式株式と将来の行使現金・希薄化が異なるため、価格帯位置と株主価値端点の期待割合は一致しない。逆算の生値110.1%は0～100%外。市場は今回の楽観端点以外の価値・リスクを見ている可能性があり、端点仮定を要再確認。</p></div>
+      <p class="small">計算方法：共通資産価値の悲観・楽観株主価値を端点として、(現在推定時価総額−悲観株主価値)÷両端点差を計算。表示±10ポイントは統計区間ではない。現在の自己株式方式株式と将来の行使現金・希薄化が異なるため、価格帯位置と株主価値端点の期待割合は一致しない。逆算の生値110.1%は0～100%外。市場は今回の楽観端点以外の価値・リスクを見ている可能性があり、端点仮定を要再確認。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>ABCL635の効果量が強く、安全性と月1回投与の魅力が保たれ、後期試験計画が明確になることです。</p>
+        <p>公式な規制・臨床の進展で不確実性が下がり、当方標準の成功CF・費用条件を上回る。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>Phase 2詳細が期待ほど強くないこと、安全性懸念、後期試験遅延、キャッシュバーン拡大です。</p>
+        <p>追加試験、審査・上市遅延、安全性・採用・資金支出が標準を下回る。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>Phase 2好結果で株価が大きく反応したため、詳細データや後期試験計画が期待を下回ると下落しやすいことです。</p>
+        <p>ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。</p>
       </div>
     </div>
   </section>
@@ -131,72 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026/05/11</div><div class="time-dot"></div><div class="time-body"><b>Q1決算とABCL635 Phase 1中間データ</b><p>良好な忍容性、標的関与、月1回投与可能性を確認。</p><div class="time-meta"><span class="chip">公表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/06/17</div><div class="time-dot"></div><div class="time-body"><b>Jazz提携</b><p>多重特異性抗体探索の提携を発表。</p><div class="time-meta"><span class="chip blue">提携</span></div></div></div><div class="time-row"><div class="time-date">2026/08</div><div class="time-dot"></div><div class="time-body"><b>ABCL635 Phase 2好結果</b><p>頻度・重症度低下、睡眠改善、良好な忍容性が報じられました。</p><div class="time-meta"><span class="chip">好材料</span></div></div></div><div class="time-row"><div class="time-date">今後</div><div class="time-dot"></div><div class="time-body"><b>後期試験計画</b><p>試験設計、開始時期、規制協議を確認。</p><div class="time-meta"><span class="chip">最重要</span></div></div></div>
+      <div class="time-row"><div class="time-date">会社予定</div><div class="time-dot"></div><div class="time-body"><b>ABCL635の後期開発準備</b><p>2027年・会社予定</p></div></div><div class="time-row"><div class="time-date">会社予定</div><div class="time-dot"></div><div class="time-body"><b>VMS適応拡大・新規候補のIND準備</b><p>2027年・会社予定</p></div></div><div class="time-row"><div class="time-date">会社予定</div><div class="time-dot"></div><div class="time-body"><b>提携収益・資金と開発費</b><p>進行中／決算ごと</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>ABCL635 Phase 2詳細と後期試験計画</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">最重要</span></div></div><div class="date-box"><b>今後</b><span>会社公表または予定</span></div></div>
-<p class="lead">ABCL635は同社の自社開発パイプラインで最も株価への影響が大きい候補です。Phase 2好結果後は、効果量の詳細、安全性、投与間隔、後期試験へ進む計画が評価の中心です。</p>
-<div class="mechanism"><span>効果量</span><i>→</i><span>後期試験</span><i>→</i><span>株価レンジ</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜60%</div><p>効果量が強く、安全性も良好で、後期試験開始時期が明確なら楽観側です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+18%</div><p>好結果を維持しつつ詳細確認待ちなら、標準ケース中心です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-25〜-45%</div><p>詳細データが期待ほど強くない、または後期試験が遅れると下押しです。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>好結果後の次の評価軸は、後期試験に進めるデータの質と試験設計なので最大材料にしています。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>Phase 2で頻度・重症度低下と良好な忍容性が報じられました。</li><li>Phase 1中間データでは忍容性と標的関与が良好でした。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>有効性が弱い</li><li>安全性懸念</li><li>キャッシュバーン拡大</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>2026年Q2以降の決算詳細</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">確認</span></div></div><div class="date-box"><b>継続確認</b><span>会社公表または予定</span></div></div>
-<p class="lead">決算詳細では、臨床試験を続けるための資金余力、研究開発費の増え方、提携収入の有無を確認します。良い臨床材料があっても、資金消費が大きいと希薄化懸念が株価を抑えます。</p>
-<div class="mechanism"><span>資金</span><i>→</i><span>開発余力</span><i>→</i><span>希薄化リスク</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+8〜18%</div><p>資金余力が維持され、開発費も管理されていれば安心材料です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+6%</div><p>資金は十分だが赤字継続なら、臨床進捗待ちです。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-12〜-25%</div><p>キャッシュバーン拡大や見通し悪化なら下押しです。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>資金余力とバーン確認が中心で、臨床データほど企業価値を直接変えないため小さめです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>Q1末の利用可能流動性は約$655Mでした。</li><li>後期試験に進む場合、R&D費と資金計画の確認が重要です。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>有効性が弱い</li><li>安全性懸念</li><li>キャッシュバーン拡大</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Jazz Pharmaceuticals提携</h3><div class="chips"><span class="chip">重要度3</span><span class="chip blue">提携</span></div></div><div class="date-box"><b>2026/06/17</b><span>会社公表または予定</span></div></div>
-<p class="lead">Jazzとの提携は、ABCLの抗体探索プラットフォームが外部企業に使われる価値を示す材料です。短期売上よりも、将来のマイルストーンや下流権利が増えるかを見ます。</p>
-<div class="mechanism"><span>提携</span><i>→</i><span>研究収入</span><i>→</i><span>下流権利</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+10〜25%</div><p>追加提携や条件開示が強ければ、プラットフォーム価値が上がります。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-4〜+8%</div><p>研究提携として長期材料にとどまる状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-8〜-18%</div><p>進捗が見えなければ短期株価影響は限定的です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>提携はプラットフォーム価値を支えますが、短期売上化まで距離があるため中程度です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>2026年6月にJazz Pharmaceuticalsとの提携を発表。</li><li>多重特異性抗体探索が対象です。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>有効性が弱い</li><li>安全性懸念</li><li>キャッシュバーン拡大</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>ABCL688・ABCL386の臨床入り準備</h3><div class="chips"><span class="chip">重要度3</span><span class="chip blue">パイプライン</span></div></div><div class="date-box"><b>2026年内</b><span>会社公表または予定</span></div></div>
-<p class="lead">追加候補の臨床入り準備は、ABCL635だけに期待が集中する状態を和らげる材料です。複数候補が進むほど、会社全体のパイプライン価値が厚くなります。</p>
-<div class="mechanism"><span>候補追加</span><i>→</i><span>分散</span><i>→</i><span>評価</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+12〜30%</div><p>複数候補が臨床入りすれば、ABCL635単独依存が下がります。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+10%</div><p>準備進展だけなら中期材料です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-12〜-24%</div><p>遅延が続くとパイプライン厚みへの期待が下がります。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>主力候補依存を下げる材料ですが、まだ初期段階なのでPhase 2より小さくしています。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>Q1リリースでABCL688とABCL386がIND-enabling活動中と説明。</li><li>2026年の重点項目として追加候補選定も挙げられています。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>有効性が弱い</li><li>安全性懸念</li><li>キャッシュバーン拡大</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>ABCL635の後期開発準備</h3><span class="chip">重要度5</span></div><div class="date-box"><b>2027年・会社予定</b></div><p>会社は2027年にVMSの後期開発開始を見込む。米国IND受理・試験設計の確定を別途確認する。</p><p>結果は当方モデル条件との比較です。短期反応率・市場予想の実測差・臨床成功確率を示すものではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$4.57～$4.98</div><p>基準価格比 -56.9%～-52.9%</p><p>期待以上：規制・臨床の情報を主資産の成功確率へ反映する当方条件。</p><p>このレポートの条件付き試算。主資産の成功確率を47.5～52.5%へ変更。他資産の確率とCF・費用・株式条件は標準に固定。短期反応や市場の真の成功確率ではない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$3.74～$4.15</div><p>基準価格比 -64.7%～-60.8%</p><p>ほぼ想定どおり：規制・臨床の情報を主資産の成功確率へ反映する当方条件。</p><p>このレポートの条件付き試算。主資産の成功確率を37.5～42.5%へ変更。他資産の確率とCF・費用・株式条件は標準に固定。短期反応や市場の真の成功確率ではない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$2.91～$3.32</div><p>基準価格比 -72.5%～-68.6%</p><p>期待外れ・遅延：規制・臨床の情報を主資産の成功確率へ反映する当方条件。</p><p>このレポートの条件付き試算。主資産の成功確率を27.5～32.5%へ変更。他資産の確率とCF・費用・株式条件は標準に固定。短期反応や市場の真の成功確率ではない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。</p><p>足りない情報：適応別の承認範囲・ネット価格・普及率、残存開発費と提携経済条件</p><p>次に見る数字：公式な試験設計・データ・承認判断、資金支出と希薄化・商業化費用</p><p>再計算方法：適応別のCFと必要資金が判明したら、同じ割引率・株式基準で材料除外価値と追加価値を比較して逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p>出典 [S1,S2]。ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。<p>資金：8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。</p><p>先行指標：試験設計・主要評価項目・安全性、規制受理・追加試験・審査範囲、現金支出・希薄化・必要資金</p><p>更新：公式な開発・規制予定の変更、安全性・主要評価項目の新情報、融資・支出・株式発行条件の変更</p><p>材料出尽くし：良い結果でも事前期待を超えない場合や追加費用が判明する場合は株主価値が下がり得る。</p></p></details><details><summary>価格幅の手法検討</summary><p>企業価値差分は共有する開発資産を単独で分離できず不採用。共通条件付き資産モデルを採用。独立した市場予想改定、同社・他社イベント比較は同条件の標本を未取得のため不採用・適用外。</p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>VMS適応拡大・新規候補のIND準備</h3><span class="chip">重要度4</span></div><div class="date-box"><b>2027年・会社予定</b></div><p>乳がん・前立腺がん治療に伴うVMSの臨床試験は2027年開始予定。ABCL992、ABCL385、ABCL646はIND準備段階。635と992の重複価値を足さない。</p><p>結果は当方モデル条件との比較です。短期反応率・市場予想の実測差・臨床成功確率を示すものではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$4.20～$4.36</div><p>基準価格比 -60.4%～-58.8%</p><p>期待以上：VMSの適応・普及の見通しを635成功時CF幅へ反映する当方条件。IND準備だけで承認成功としない。</p><p>このレポートの条件付き試算。ABCL635の成功時CFを標準の1.075～1.125倍へ変更。確率・割引率・費用・株式条件は固定。新規IND候補の別価値は加算しない。短期反応や市場の真の成功確率ではない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$3.86～$4.03</div><p>基準価格比 -63.5%～-62.0%</p><p>ほぼ想定どおり：VMSの適応・普及の見通しを635成功時CF幅へ反映する当方条件。IND準備だけで承認成功としない。</p><p>このレポートの条件付き試算。ABCL635の成功時CFを標準の0.975～1.025倍へ変更。確率・割引率・費用・株式条件は固定。新規IND候補の別価値は加算しない。短期反応や市場の真の成功確率ではない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$3.53～$3.70</div><p>基準価格比 -66.7%～-65.1%</p><p>期待外れ・遅延：VMSの適応・普及の見通しを635成功時CF幅へ反映する当方条件。IND準備だけで承認成功としない。</p><p>このレポートの条件付き試算。ABCL635の成功時CFを標準の0.875～0.925倍へ変更。確率・割引率・費用・株式条件は固定。新規IND候補の別価値は加算しない。短期反応や市場の真の成功確率ではない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。</p><p>足りない情報：適応別の承認範囲・ネット価格・普及率、残存開発費と提携経済条件</p><p>次に見る数字：公式な試験設計・データ・承認判断、資金支出と希薄化・商業化費用</p><p>再計算方法：適応別のCFと必要資金が判明したら、同じ割引率・株式基準で材料除外価値と追加価値を比較して逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p>出典 [S1,S2]。ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。<p>資金：8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。</p><p>先行指標：試験設計・主要評価項目・安全性、規制受理・追加試験・審査範囲、現金支出・希薄化・必要資金</p><p>更新：公式な開発・規制予定の変更、安全性・主要評価項目の新情報、融資・支出・株式発行条件の変更</p><p>材料出尽くし：良い結果でも事前期待を超えない場合や追加費用が判明する場合は株主価値が下がり得る。</p></p></details><details><summary>価格幅の手法検討</summary><p>企業価値差分は共有する開発資産を単独で分離できず不採用。共通条件付き資産モデルを採用。独立した市場予想改定、同社・他社イベント比較は同条件の標本を未取得のため不採用・適用外。</p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>提携収益・資金と開発費</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／決算ごと</b></div><p>提携一時金、研究収益、政府支援と開発支出を追う。未使用政府枠を自由現金と混同しない。</p><p>結果は当方モデル条件との比較です。短期反応率・市場予想の実測差・臨床成功確率を示すものではありません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$4.00～$4.06</div><p>基準価格比 -62.2%～-61.7%</p><p>期待以上：開発・事業化準備の純支出と資金効率が標準より改善・維持・悪化する当方条件。</p><p>このレポートの条件付き試算。2027年末までの純支出を260～280百万USDへ変更。他の確率・CF・残存費・借入・株式は標準固定。追加借入は現金と負債を同額計上し、その受領だけで価値を増やさない。短期反応や市場の真の成功確率ではない。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$3.92～$3.97</div><p>基準価格比 -63.0%～-62.5%</p><p>ほぼ想定どおり：開発・事業化準備の純支出と資金効率が標準より改善・維持・悪化する当方条件。</p><p>このレポートの条件付き試算。2027年末までの純支出を290～310百万USDへ変更。他の確率・CF・残存費・借入・株式は標準固定。追加借入は現金と負債を同額計上し、その受領だけで価値を増やさない。短期反応や市場の真の成功確率ではない。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$3.84～$3.89</div><p>基準価格比 -63.8%～-63.3%</p><p>期待外れ・遅延：開発・事業化準備の純支出と資金効率が標準より改善・維持・悪化する当方条件。</p><p>このレポートの条件付き試算。2027年末までの純支出を320～340百万USDへ変更。他の確率・CF・残存費・借入・株式は標準固定。追加借入は現金と負債を同額計上し、その受領だけで価値を増やさない。短期反応や市場の真の成功確率ではない。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>出していない理由：臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。</p><p>足りない情報：適応別の承認範囲・ネット価格・普及率、残存開発費と提携経済条件</p><p>次に見る数字：公式な試験設計・データ・承認判断、資金支出と希薄化・商業化費用</p><p>再計算方法：適応別のCFと必要資金が判明したら、同じ割引率・株式基準で材料除外価値と追加価値を比較して逆算する。</p></div><details><summary>根拠・反証・資金・更新</summary><p>出典 [S1,S2]。ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。<p>資金：8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。</p><p>先行指標：試験設計・主要評価項目・安全性、規制受理・追加試験・審査範囲、現金支出・希薄化・必要資金</p><p>更新：公式な開発・規制予定の変更、安全性・主要評価項目の新情報、融資・支出・株式発行条件の変更</p><p>材料出尽くし：良い結果でも事前期待を超えない場合や追加費用が判明する場合は株主価値が下がり得る。</p></p></details><details><summary>価格幅の手法検討</summary><p>企業価値差分は共有する開発資産を単独で分離できず不採用。共通条件付き資産モデルを採用。独立した市場予想改定、同社・他社イベント比較は同条件の標本を未取得のため不採用・適用外。</p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>ABCL635と資金余力</b><span class="up">連動</span></div><p>良いデータでも次試験に進む資金余力が重要です。</p></div><div class="signal"><div><b>提携と下流権利</b><span class="flat">長期</span></div><p>短期株価より長期価値の材料です。</p></div><div class="signal"><div><b>追加候補</b><span class="up">分散</span></div><p>ABCL635依存を下げる材料になります。</p></div>
+    <p>同じ開発資産の臨床・規制・上市・資金を1回だけ評価。HSとPsAは別の患者需要を置いても、薬剤・資金・安全性の相関リスクが残ります。ABCLの未選択候補価値やMLTXのPPP価値を別加算しません。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>Phase 2詳細</b><span class="up">最重要</span></div><p>頻度・重症度の改善幅、睡眠、全体的状態、安全性を確認します。</p></div><div class="signal"><div><b>後期試験設計</b><span class="flat">必須</span></div><p>用量、試験規模、主要評価項目、開始時期を確認します。</p></div><div class="signal"><div><b>流動性</b><span class="up">重要</span></div><p>現金、有価証券、政府資金、バーンを確認します。</p></div><div class="signal"><div><b>提携進捗</b><span class="flat">長期</span></div><p>下流権利付きプログラムの質を確認します。</p></div>
+    <div class="signal"><div><b>ABCL635の後期開発準備</b></div><p>公式発表・各決算時：予定・データ・資金条件の変更</p></div><div class="signal"><div><b>VMS適応拡大・新規候補のIND準備</b></div><p>公式発表・各決算時：予定・データ・資金条件の変更</p></div><div class="signal"><div><b>提携収益・資金と開発費</b></div><p>公式発表・各決算時：予定・データ・資金条件の変更</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -206,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>$14.82</td><td>市場データで確認</td><td>2026-09-30</td><td>Phase 2好結果後の更新基準</td></tr><tr><td>利用可能流動性</td><td>約$655M</td><td>会社Q1リリース</td><td>2026/03/31</td><td>政府資金含む</td></tr><tr><td>ABCL635 Phase 2</td><td>好結果報道</td><td>報道・公式情報確認</td><td>2026/08</td><td>詳細確認を継続</td></tr><tr><td>次の材料</td><td>後期試験計画</td><td>会社方針と報道から推定</td><td>今後</td><td>最重要</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>$10.59</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-25T21:00:02+00:00 [S3]</td></tr><tr><td>株式数</td><td>373.94百万株</td><td>このレポートの推定</td><td>2026-11-27</td><td>現在評価用希薄化株式373,941,228株。普通株326,617,896、RSU等9,718,679、前払ワラント3,076,926、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。</td></tr><tr><td>成功確率・CF・費用</td><td>ケース別に表示</td><td>このレポートの推定</td><td>2026-11-27</td><td>患者数・単価・普及率・CF率を条件に置く。会社予想ではない。</td></tr><tr><td>現金・有価証券</td><td>$764.424M</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>2026年9月末 [S2]</td></tr><tr><td>将来支出・借入・株式</td><td>2027年末前後を分ける</td><td>このレポートの推定</td><td>2026-11-27</td><td>悲観は2027年末まで純支出350百万USD、新規借入0百万USD、その他請求権控除176.5百万USD、追加報酬5百万株。標準は2027年末まで純支出300百万USD、新規借入0百万USD、その他請求権控除78.271百万USD、追加報酬4百万株。楽観は2027年末まで純支出250百万USD、新規借入0百万USD、その他請求権控除78.271百万USD、追加報酬3百万株。政府支援の返済必要額78.271百万USDを標準/楽観で控除。悲観では条件付支援も含め176.5百万USDを控除。未使用枠は現金へ足さない。2027年末前の支出と2028年以降の残存開発費を分ける。行使されるオプションの行使現金と追加株式を同時計上する。</td></tr><tr><td>総合判定</td><td>3レポート総合判定83.2、買われすぎ。構成は株価評価90.0、カタリスト75.0、企業基盤リスク70.0。資産rNPVへの期待負担、公式予定と資金・単一資産リスクから付けた主観評価。株価指標から自動生成しない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>3レポートの事業・材料・評価リスクを分析日時点で再評価。</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -215,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://investors.abcellera.com/overview/" target="_blank" rel="noopener noreferrer">公式IR概要</a></li><li><a href="https://investors.abcellera.com/financials/quarterly-results/default.aspx" target="_blank" rel="noopener noreferrer">四半期決算資料</a></li><li><a href="https://investors.abcellera.com/news/news-releases/2026/AbCellera-Announces-Positive-Top-Line-Phase-2-Clinical-Trial-Results-for-ABCL635-Demonstrating-Significant-Reduction-in-Frequency-and-Severity-of-Vasomotor-Symptoms-and-a-Favorable-Tolerability-Profile/default.aspx" target="_blank" rel="noopener noreferrer">ABCL635 Phase 2公式発表</a></li><li><a href="https://investors.abcellera.com/news/news-releases/2026/AbCellera-Announces-Pricing-of-Oversubscribed-200-Million-Public-Offering-of-Common-Shares-and-Pre-Funded-Warrants/default.aspx" target="_blank" rel="noopener noreferrer">2億ドル増資</a></li><li><a href="https://investors.abcellera.com/news/news-releases/2026/AbCellera-Announces-Presentation-of-Phase-2-Data-for-ABCL635-at-the-IMS-World-Congress-on-Menopause-2026/default.aspx" target="_blank" rel="noopener noreferrer">IMS学会発表予定</a></li><li><a href="https://stockanalysis.com/stocks/abcl/" target="_blank" rel="noopener noreferrer">株価・統計</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000058/q32026earningspressrelease.htm" target="_blank" rel="noopener noreferrer">S1：ABCL 2026年3Q決算公式発表</a>（取得 2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000059/abcl-20260930.htm" target="_blank" rel="noopener noreferrer">S2：ABCL 2026年3Q Form 10-Q</a>（取得 2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ABCL?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S3：ABCL Yahoo Finance日足・価格</a>（取得 2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1703057/000170305726000012/abcl-20251231.htm" target="_blank" rel="noopener noreferrer">S4：AbCellera 2025年Form 10-K（創業・企業概要）</a>（取得 2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：公式IR、ABCL635 Phase 2公式発表、2億ドル増資、IMS学会発表予定、四半期決算資料を確認。増資による株式数増加を時価総額とシナリオへ反映しました。</p></div>
+      <div><p>JSON形式・算術・出典参照・確率・日程・依存関係・HTMLを検証。次は分析上の制約。</p><ul><li>将来CF・成功確率・価格・費用は会社予想ではなく当方仮定。</li><li>資金見通し・潜在株と希薄化には期間差・条件がある。</li><li>個別イベントの割合は分離せず共通資産を1回評価。表示±10ポイントは統計区間ではない。現在の自己株式方式株式と将来の行使現金・希薄化が異なるため、価格帯位置と株主価値端点の期待割合は一致しない。逆算の生値110.1%は0～100%外。市場は今回の楽観端点以外の価値・リスクを見ている可能性があり、端点仮定を要再確認。</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：Phase 2公式結果、2億ドル増資、IMS学会発表予定、9月29日終値を反映。</p></div>
+      <div><p>2026-11-27 全面再作成。各3レポートは同じ共通データと分析基準を使用。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の条件付き分析です。投資助言・売買推奨ではありません。未承認薬の有効性・安全性・販売成功を保証せず、臨床・規制・資金条件で大きく変わります。価格比較は配当を含みません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜アブセレラ（ABCL）カタリスト｜作成日 2026-09-30</footer>
+  <footer>評価基準株価$10.59／市場時刻2026-11-25T21:00:02+00:00。分析基準日2026-11-27、評価対象2027年末。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

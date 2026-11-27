@@ -1,0 +1,1163 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Redwire Corporation",
+    "ticker": "RDW",
+    "exchange": "NYSE",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T14:36:48.442004+00:00",
+    "generated_at": "2026-11-27T14:36:48.442004+00:00",
+    "price": 5.89,
+    "price_as_of": "2026-11-25T21:00:02+00:00",
+    "benchmark": "S&P 500"
+  },
+  "capital_structure": {
+    "basic_shares": 250219316,
+    "diluted_shares": 255964957,
+    "market_cap": 1507633596.73,
+    "cash": 488121000,
+    "liquid_securities": 0,
+    "restricted_cash": 745000,
+    "minimum_operating_cash": 50000000,
+    "debt": 47750000,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "burn_one_off_adjustments": null,
+    "runway_months": null,
+    "source_ids": [
+      "S2"
+    ],
+    "dilution_notes": [
+      "11月2日普通株250.219316百万株に、オプション1.313776百万、未確定RSU2.429018百万・PSU2.002847百万を加えて255.964957百万株の保守的評価用株式とする。条件付きPSU全確定を仮定し、確定時点実数ではない。優先株は9月末ゼロ。私募ワラントは2026年9月2日に満期を迎え、将来希薄化へ再加算しない。[S2]",
+      "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。",
+      "換金資産・請求権は出典記載範囲のみ。ゼロの非事業価値や非支配請求権は追加評価を仮定しない入力で、存在しないという断定ではない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "Redwire Corporation、NYSE: RDW、12月決算。北米・欧州で宇宙技術と防衛技術を展開。Edge Autonomy買収後の事業構成を反映。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RESULTS",
+      "statement": "2026年3Q売上109.035百万USD、GAAP純損失23.178百万USD。Space売上61.266百万、Defense Tech47.769百万。1～9月売上323.081百万USD、純損失140.651百万USD。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "会社は2026年通期売上450～500百万USDを維持。9月末受注残619.666百万USD、3Q受注188.7百万USD、book-to-bill1.73。売上計上には履行条件がある。[S1,S2]",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "9月末現金488.121百万USD、制限現金0.745百万、借入元本47.750百万USD。流動性538.9百万USDには借入可能枠50百万USDが含まれ、全額を現金として評価しない。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "SHARES",
+      "statement": "11月2日普通株250.219316百万株に、オプション1.313776百万、未確定RSU2.429018百万・PSU2.002847百万を加えて255.964957百万株の保守的評価用株式とする。条件付きPSU全確定を仮定し、確定時点実数ではない。優先株は9月末ゼロ。私募ワラントは2026年9月2日に満期を迎え、将来希薄化へ再加算しない。[S2]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FINANCE",
+      "statement": "1～9月営業CF−95.192百万USD、設備投資15.040百万USD。現金増にはATM等の発行純収入が寄与。現金余力は改善したが、赤字・在庫・契約資産・統合費用を確認。[S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "宇宙部品・システムは大手防衛宇宙企業や専門メーカー、無人機は防衛技術各社と競争。製品実績・価格・納期・国防調達条件が比較軸で、未確認の市場シェアを表示しない。[S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RISK",
+      "statement": "固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL",
+      "statement": "評価は2028年6月末。2026年会社売上予想450～500百万USDを出発点に、2028年近傍の年売上550／700／900百万USDを仮定。倍率2／3／4倍は当方評価仮定で市場コンセンサスではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FUNDING",
+      "statement": "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "RUNWAY",
+      "statement": "1～9月の営業CFと設備投資を単純年率換算すると年147百万USD前後の資金使用。現金から最低運転資金50百万USDを控除した粗い余力は約36か月。TTM実績ではなく、受注引渡し・資金調達・運転資金で変動する参考値。[S2]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": "scenario_and_finance_assumptions_v1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "5.89 USD / 2026-11-25T21:00:02+00:00。52週高値26.64、安値5.12。価格推移をレポート総合判定の根拠には使わない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "SQ"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C1",
+      "statement": "受注残619.7百万USDを売上と回収へ転換。納期、粗利率、在庫・契約資産を確認。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "C2",
+      "statement": "製造能力と顧客採用が進み、統合費用を吸収して利益へつながるか。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "C3",
+      "statement": "現金増が発行によるものか本業回収によるものかを区別。株式報酬と追加発行を監視。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年3Q決算発表",
+      "publisher": "Redwire Corporation / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819810/000181981026000139/exhibit991redwire09302026e.htm",
+      "published_at": "2026-11-04",
+      "accessed_at": "2026-11-27T14:36:48.442004+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "RESULTS",
+        "GUIDANCE",
+        "CAPITAL",
+        "MODEL",
+        "FUNDING",
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "2026年3Q Form 10-Q",
+      "publisher": "Redwire Corporation / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1819810/000181981026000142/rdw-20260930.htm",
+      "published_at": "2026-11-05",
+      "accessed_at": "2026-11-27T14:36:48.442004+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "RESULTS",
+        "GUIDANCE",
+        "CAPITAL",
+        "SHARES",
+        "FINANCE",
+        "COMPETITION",
+        "RISK",
+        "MODEL",
+        "FUNDING",
+        "RUNWAY",
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "公式投資家向け決算資料一覧",
+      "publisher": "Redwire Corporation / SEC",
+      "url": "https://ir.rdw.com/financial-information/financial-results",
+      "published_at": null,
+      "accessed_at": "2026-11-27T14:36:48.442004+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": []
+    },
+    {
+      "id": "SQ",
+      "title": "RDW日足・基準株価（暫定取得元）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/RDW?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T14:36:48.442004+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "宇宙インフラと防衛向け無人システムを開発・製造する、SpaceとDefense Techの2部門を持つ企業です。",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "RESULTS"
+      ],
+      "sec2": [
+        "GUIDANCE",
+        "FINANCE"
+      ],
+      "sec3": [
+        "IDENTITY",
+        "GUIDANCE"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "SHARES",
+        "FINANCE"
+      ],
+      "sec5": [
+        "COMPETITION"
+      ],
+      "sec6": [
+        "SHARES",
+        "GUIDANCE"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISK"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2028-06-30",
+    "primary_method": "EV_SALES",
+    "method_explanation": "事業価値＝将来年売上×売上倍率。株主価値＝事業価値＋将来自由現金−将来負債等。1株価値＝株主価値÷将来希薄化株式数。利益率への接続、調達資金と発行株式の両側を確認。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.3,
+        "enterprise_value": 1100000000.0,
+        "equity_value": 1350000000.0,
+        "diluted_shares": 265000000.0,
+        "price": 5.09433962264151,
+        "conditions": [
+          "売上5.5億USD、営業利益率3%。受注は増えるが統合費・契約コストが残り倍率2倍。",
+          "EV=売上550百万USD×2倍。現金300百万、負債等50百万USDを加減し、株式265百万で除す。",
+          "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FUNDING",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 2100000000.0,
+        "equity_value": 2400000000.0,
+        "diluted_shares": 270000000.0,
+        "price": 8.88888888888889,
+        "conditions": [
+          "売上7億USD、営業利益率10%。宇宙・防衛両部門の引渡しと費用管理が進む。",
+          "EV=売上700百万USD×3倍。現金350百万、負債等50百万USDを加減し、株式270百万で除す。",
+          "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FUNDING",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.25,
+        "enterprise_value": 3600000000.0,
+        "equity_value": 3950000000.0,
+        "diluted_shares": 275000000.0,
+        "price": 14.363636363636363,
+        "conditions": [
+          "売上9億USD、営業利益率15%。無人機と宇宙契約の増産が進み倍率4倍を維持する条件。",
+          "EV=売上900百万USD×4倍。現金400百万、負債等50百万USDを加減し、株式275百万で除す。",
+          "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FUNDING",
+          "SHARES"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 9.119210977701544,
+      "expected_delta_pct": 54.82531371309922,
+      "raw_band_position_pct": 8.583826794966686,
+      "display_band_position_pct": 8.583826794966686,
+      "endpoint_rr": 10.64981568111756,
+      "market_score": 9,
+      "own_score": 43,
+      "supplemental_score": 100
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]",
+      "価格幅と資金・開発・希薄化依存が大きい。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "年売上（USD）",
+        "low": 560000000.0,
+        "base": 700000000.0,
+        "high": 840000000.0,
+        "result_prices": [
+          7.333333333333333,
+          8.88888888888889,
+          10.444444444444445
+        ]
+      },
+      {
+        "variable": "EV/Sales倍率",
+        "low": 2.4000000000000004,
+        "base": 3,
+        "high": 3.5999999999999996,
+        "result_prices": [
+          7.333333333333334,
+          8.88888888888889,
+          10.444444444444443
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "Space・Defense Tech受注の引渡し",
+        "category": "EARNINGS",
+        "status": "ONGOING",
+        "importance": 5,
+        "date": {
+          "display_text": "進行中／各四半期",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "受注残619.7百万USDを売上と回収へ転換。納期、粗利率、在庫・契約資産を確認。",
+        "mechanism": [
+          "契約・技術・稼働・資金",
+          "売上・利益と資金需要",
+          "負債・希薄化後の1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "当方標準を上回る売上・引渡し・回収と資金条件が成立。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              9.277777777777779,
+              10.444444444444445
+            ],
+            "price_change_pct_range": [
+              57.517449537823076,
+              77.32503301263914
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上735～840百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "当方標準近辺の稼働・利益・資金条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              8.11111111111111,
+              9.277777777777779
+            ],
+            "price_change_pct_range": [
+              37.70986606300699,
+              57.517449537823076
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上630～735百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "遅延・コスト・回収または資金条件が標準を下回る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              6.944444444444445,
+              8.11111111111111
+            ],
+            "price_change_pct_range": [
+              17.90228258819091,
+              37.70986606300699
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上525～630百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と契約・設備の進捗。"
+          ],
+          "evidence_against": [
+            "固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]"
+          ],
+          "caveats": [
+            "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。",
+            "missing_information": [
+              "案件ごとの売上・利益・純資金需要",
+              "個別成功に必要な追加株式と調達条件"
+            ],
+            "next_checks": [
+              "公式な引渡し・稼働・会社見通し",
+              "現金・借入・株式発行と回収"
+            ],
+            "recalculation_method": "案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上と営業利益率",
+          "設備・契約の引渡しと回収",
+          "現金・借入・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。",
+        "financing_risk": "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。",
+        "update_triggers": [
+          "公式な会社見通し・日程変更",
+          "追加資金調達・契約の条件変更",
+          "現金回収・利益率の変化"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C1",
+          "MODEL",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "無人機・防衛技術の増産と統合",
+        "category": "CAPACITY",
+        "status": "ONGOING",
+        "importance": 5,
+        "date": {
+          "display_text": "進行中／個別確定日なし",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "製造能力と顧客採用が進み、統合費用を吸収して利益へつながるか。",
+        "mechanism": [
+          "契約・技術・稼働・資金",
+          "売上・利益と資金需要",
+          "負債・希薄化後の1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "当方標準を上回る売上・引渡し・回収と資金条件が成立。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              9.277777777777779,
+              10.444444444444445
+            ],
+            "price_change_pct_range": [
+              57.517449537823076,
+              77.32503301263914
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上735～840百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "当方標準近辺の稼働・利益・資金条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              8.11111111111111,
+              9.277777777777779
+            ],
+            "price_change_pct_range": [
+              37.70986606300699,
+              57.517449537823076
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上630～735百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "遅延・コスト・回収または資金条件が標準を下回る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              6.944444444444445,
+              8.11111111111111
+            ],
+            "price_change_pct_range": [
+              17.90228258819091,
+              37.70986606300699
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上525～630百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と契約・設備の進捗。"
+          ],
+          "evidence_against": [
+            "固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]"
+          ],
+          "caveats": [
+            "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。",
+            "missing_information": [
+              "案件ごとの売上・利益・純資金需要",
+              "個別成功に必要な追加株式と調達条件"
+            ],
+            "next_checks": [
+              "公式な引渡し・稼働・会社見通し",
+              "現金・借入・株式発行と回収"
+            ],
+            "recalculation_method": "案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上と営業利益率",
+          "設備・契約の引渡しと回収",
+          "現金・借入・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。",
+        "financing_risk": "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。",
+        "update_triggers": [
+          "公式な会社見通し・日程変更",
+          "追加資金調達・契約の条件変更",
+          "現金回収・利益率の変化"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C2",
+          "MODEL",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "営業CF・株式数・資本効率",
+        "category": "FINANCING",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／決算・資金調達開示時",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "現金増が発行によるものか本業回収によるものかを区別。株式報酬と追加発行を監視。",
+        "mechanism": [
+          "契約・技術・稼働・資金",
+          "売上・利益と資金需要",
+          "負債・希薄化後の1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "当方標準を上回る売上・引渡し・回収と資金条件が成立。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              9.277777777777779,
+              10.444444444444445
+            ],
+            "price_change_pct_range": [
+              57.517449537823076,
+              77.32503301263914
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上735～840百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "当方標準近辺の稼働・利益・資金条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              8.11111111111111,
+              9.277777777777779
+            ],
+            "price_change_pct_range": [
+              37.70986606300699,
+              57.517449537823076
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上630～735百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "遅延・コスト・回収または資金条件が標準を下回る。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              6.944444444444445,
+              8.11111111111111
+            ],
+            "price_change_pct_range": [
+              17.90228258819091,
+              37.70986606300699
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き再評価。年売上525～630百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ資本構成・事業範囲・条件の他社標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新決算と契約・設備の進捗。"
+          ],
+          "evidence_against": [
+            "固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]"
+          ],
+          "caveats": [
+            "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。",
+            "missing_information": [
+              "案件ごとの売上・利益・純資金需要",
+              "個別成功に必要な追加株式と調達条件"
+            ],
+            "next_checks": [
+              "公式な引渡し・稼働・会社見通し",
+              "現金・借入・株式発行と回収"
+            ],
+            "recalculation_method": "案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上と営業利益率",
+          "設備・契約の引渡しと回収",
+          "現金・借入・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。",
+        "financing_risk": "将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。",
+        "update_triggers": [
+          "公式な会社見通し・日程変更",
+          "追加資金調達・契約の条件変更",
+          "現金回収・利益率の変化"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C3",
+          "MODEL",
+          "FUNDING"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "共通の契約・稼働・資金価値",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "契約・稼働・資金は同じ事業価値に重なるため、全体の運営価値を1回のみ計上。",
+        "full_success_incremental_equity_value": 2500000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        0,
+        14.305343869200001
+      ],
+      "raw_implied_pct": 4.305343869200001,
+      "all_events_excluded_equity_value": 1400000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "全体期待は標準の現金・負債条件を固定し、悲観側・楽観側の運営価値端点で逆算。個別イベント割合の平均ではない。±10ポイントは主観的な表示幅で統計区間ではない。株式数と資金条件を変える3ケース価格帯とは異なる。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "Space・Defense Tech受注の引渡し",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "受注残619.7百万USDを売上と回収へ転換。納期、粗利率、在庫・契約資産を確認。",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "無人機・防衛技術の増産と統合",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "製造能力と顧客採用が進み、統合費用を吸収して利益へつながるか。",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "営業CF・株式数・資本効率",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "現金増が発行によるものか本業回収によるものかを区別。株式報酬と追加発行を監視。",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T14:36:48.442004+00:00",
+    "messages": [
+      "将来売上・倍率・確率・資金・株式数は会社予想ではなく当方仮定。",
+      "個別材料を独立価値へ分離できず、同じモデルの条件付き再評価として表示。",
+      "固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]"
+    ]
+  }
+}

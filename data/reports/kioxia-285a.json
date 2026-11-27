@@ -1,0 +1,1125 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "キオクシアホールディングス",
+    "ticker": "285A",
+    "exchange": "東京証券取引所プライム",
+    "currency": "JPY",
+    "fiscal_year_end": "03-31",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T05:35:55.638872+00:00",
+    "generated_at": "2026-11-27T05:35:55.638872+00:00",
+    "price": 8310.0,
+    "price_as_of": "2026-11-27T05:15:31+00:00",
+    "benchmark": "日経225（配当なし価格指数）"
+  },
+  "capital_structure": {
+    "basic_shares": 1598175174,
+    "diluted_shares": 1611744439.3621829,
+    "market_cap": 13393596291099.74,
+    "cash": 1397333000000.0,
+    "liquid_securities": 0,
+    "restricted_cash": 0,
+    "minimum_operating_cash": 0,
+    "debt": 802729000000.0,
+    "preferred_stock": 0,
+    "minority_interest": 152000000.0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "burn_one_off_adjustments": null,
+    "runway_months": null,
+    "source_ids": [
+      "S1"
+    ],
+    "dilution_notes": [
+      "2026年10月1日に1株を3株へ分割。11月6日公表株式数1,646,577,342株から9月末自己株式16,134,056株の分割後48,402,168株を控除。期中希薄化の目安として基本EPS/希薄化EPS比を適用する推定。自己株式時点差と潜在株の変化は未反映。",
+      "PER法で親会社利益を直接評価するため、現金・負債・非支配持分の再加減はしない。追加換金資産・制限現金・非普通株請求権0は評価上の追加調整を置かない方針であり存在しないという断定ではない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "BUSINESS",
+      "statement": "NANDフラッシュメモリとSSDを研究開発・製造・販売。データセンター、PC、スマートフォン等向けに不揮発性メモリを供給する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "LATEST",
+      "statement": "2027年3月期上期（2026年4～9月）IFRS売上収益4兆2471.52億円、営業利益3兆2647.27億円、親会社所有者帰属利益2兆1978.71億円。Non-GAAP利益とIFRS利益は区別する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "半期報告書提出時点の2027年3月期設備投資計画は支払ベース約4700億円。これは設備投資計画であり通期利益予想ではない。半期利益の単純2倍を将来利益にしない。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "SHARES",
+      "statement": "2026年10月1日に1株を3株へ分割。11月6日公表株式数1,646,577,342株から9月末自己株式16,134,056株の分割後48,402,168株を控除。期中希薄化の目安として基本EPS/希薄化EPS比を適用する推定。自己株式時点差と潜在株の変化は未反映。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "issued-treasury; diluted estimate as described",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "上期営業CF2兆3795.80億円、期末現金1兆3973.33億円。大幅な利益・CF改善はメモリ価格と製品構成に依存。 上期は自己株式取得に約8003億円を支出。設備投資・返済・還元後の流動性を確認。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "分析基準価格8310.0円、時刻2026-11-27T05:15:31+00:00。52週高値37566.668円・安値2816.667円。株価と全モデルを分割後に統一。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "SQ"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL",
+      "statement": "2028年3月末の正常化親会社利益を悲観・標準・楽観で[1200.0, 2000.0, 2800.0]十億円、PERを[7, 9, 11]倍とする当方仮定。足元の利益の単純年率換算や現値への逆算ではない。景気・需要・製品構成・価格の持続性に応じた幅。将来株式数は現在推定の1.015／1.005／1.000倍。公募増資の現金加算は仮定せず、報酬等の純増を見込む。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "equity=normalized_parent_profit*PE; price=equity/future_diluted_shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観30%・標準45%・楽観25%はこのレポートの主観確率。需要・市況・投資の不確実性を上下に置き、統計的な成功率とはしない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": ".30+.45+.25=1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "総合判定42.0・中立。株価評価26.6は分析時点の正常化利益モデルで悲観0・標準50・楽観100へ区分補間。材料65は各3材料の実現性と期待負担、企業基盤65は収益分散・財務・市況/投資リスクの主観評価。最新公式開示の3レポートを根拠とし、日々の株価更新で総合判定を変えない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "26.6*.6+65*.25+65*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C1",
+      "statement": "AI需要と高付加価値SSDの出荷・単価を確認。好市況の反転を正常化利益で扱う。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C2",
+      "statement": "四日市・北上での投資、製造歩留まり、設備投資の収益化を追う。投資決定と稼働・販売を区別。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C3",
+      "statement": "自社株取得・借入返済と配当方針、訴訟引当金、大株主売却による需給を確認。発表済み分割を未来イベントに数えない。 10月30日決定の中間配当の効力発生日は12月8日。90円は分割前の表記で、分割後相当30円。支払決定と今後の還元方針を区別する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "全3材料を1つの正常化利益グループへ束ね、失敗側株主価値8.4e+12円と成功側3.08e+13円の差で逆算。中心22.3%。個別割合の平均ではなく、同じ価値モデルを市場が使う条件下の期待。真の成功確率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "(P0*N0-EQbear)/(EQbull-EQbear)*100",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE_STATS",
+      "statement": "同じ日足系列の直近20営業日価格変化は当銘柄-42.1%、日経225-8.2%、単純差-33.8ポイント。配当調整・リスク調整なし、株式分割を跨ぐ系列の供給元調整へ依存。総合判定には使わない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27T05:15:31+00:00",
+      "source_ids": [
+        "SQ",
+        "SB"
+      ],
+      "calculation_id": "100*(close_t/close_tminus20-1);simple_relative_difference",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2027年3月期半期報告書",
+      "publisher": "キオクシアホールディングス",
+      "url": "https://ssl4.eir-parts.net/doc/285A/yuho_pdf/S100ZCHE/00.pdf",
+      "published_at": "2026-11-06",
+      "accessed_at": "2026-11-27T05:35:55.638872+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "BUSINESS",
+        "LATEST",
+        "GUIDANCE",
+        "SHARES",
+        "CAPITAL",
+        "MODEL",
+        "PROB",
+        "SIGNAL",
+        "C1",
+        "C2",
+        "C3",
+        "OVERALL"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "株主還元方針・中間配当",
+      "publisher": "キオクシアホールディングス",
+      "url": "https://ssl4.eir-parts.net/doc/285A/tdnet/2902681/00.pdf",
+      "published_at": "2026-10-30",
+      "accessed_at": "2026-11-27T05:35:55.638872+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "C3"
+      ]
+    },
+    {
+      "id": "SQ",
+      "title": "基準株価・Yahoo Finance日足",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/285A.T?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T05:35:55.638872+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "SB",
+      "title": "日経225・Yahoo Finance日足",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T05:35:55.638872+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE_STATS"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "NANDフラッシュメモリとSSDを研究開発・製造・販売。データセンター、PC、スマートフォン等向けに不揮発性メモリを供給する。",
+    "section_claim_ids": {
+      "sec1": [
+        "BUSINESS",
+        "LATEST"
+      ],
+      "sec2": [
+        "BUSINESS",
+        "CAPITAL"
+      ],
+      "sec3": [
+        "BUSINESS",
+        "C1"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "SHARES"
+      ],
+      "sec5": [
+        "BUSINESS"
+      ],
+      "sec6": [
+        "BUSINESS"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    "source_ids": [
+      "S1"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2028-03-31",
+    "primary_method": "PE",
+    "method_explanation": "正常化した親会社帰属利益×PER＝株主価値。株主価値÷将来希薄化後株式数＝1株価値。税・利息・非支配持分を反映した利益なので、現金・負債・非支配持分を再加減しない。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.3,
+        "enterprise_value": null,
+        "equity_value": 8400000000000.0,
+        "diluted_shares": 1635920605.9526155,
+        "price": 5134.723512519474,
+        "conditions": [
+          "正常化親会社利益1200十億円、PER7倍、将来株式数1635.921百万株。",
+          "PERは税・利息・非支配持分控除後の親会社利益を評価。現金・負債・非支配持分を重複加減しない。",
+          "発行済株式・自己株式・潜在株式・分割調整の前提が変われば全3レポートを更新する。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "PROB",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": null,
+        "equity_value": 18000000000000.0,
+        "diluted_shares": 1619803161.5589936,
+        "price": 11112.461333064533,
+        "conditions": [
+          "正常化親会社利益2000十億円、PER9倍、将来株式数1619.803百万株。",
+          "PERは税・利息・非支配持分控除後の親会社利益を評価。現金・負債・非支配持分を重複加減しない。",
+          "発行済株式・自己株式・潜在株式・分割調整の前提が変われば全3レポートを更新する。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "PROB",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.25,
+        "enterprise_value": null,
+        "equity_value": 30800000000000.0,
+        "diluted_shares": 1611744439.3621829,
+        "price": 19109.72933909331,
+        "conditions": [
+          "正常化親会社利益2800十億円、PER11倍、将来株式数1611.744百万株。",
+          "PERは税・利息・非支配持分控除後の親会社利益を評価。現金・負債・非支配持分を重複加減しない。",
+          "発行済株式・自己株式・潜在株式・分割調整の前提が変われば全3レポートを更新する。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "PROB",
+          "SHARES"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 11318.456988408208,
+      "expected_delta_pct": 36.20285184606749,
+      "raw_band_position_pct": 22.721110294227255,
+      "display_band_position_pct": 22.721110294227255,
+      "endpoint_rr": 3.4011933706165305,
+      "market_score": 23,
+      "own_score": 44,
+      "supplemental_score": 75
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "需要・市況・製品構成・倍率・投資回収の不確実性。",
+      "正常化利益・将来株式数は当方仮定で、会社予想ではない。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "正常化親会社利益（円）",
+        "low": 1600000000000.0,
+        "base": 2000000000000.0,
+        "high": 2400000000000.0,
+        "result_prices": [
+          8889.969066451627,
+          11112.461333064533,
+          13334.953599677441
+        ]
+      },
+      {
+        "variable": "PER（倍）",
+        "low": 7,
+        "base": 9,
+        "high": 11,
+        "result_prices": [
+          8643.025481272414,
+          11112.461333064533,
+          13581.897184856653
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "NAND価格・SSD製品構成",
+        "category": "EARNINGS",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／個別確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "LOW",
+          "timezone": "Asia/Tokyo",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        "plain_language": "AI需要と高付加価値SSDの出荷・単価を確認。好市況の反転を正常化利益で扱う。",
+        "mechanism": [
+          "数量・単価・設備・コストの変化",
+          "正常化親会社利益の変化",
+          "PERと株式数を揃えた株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の110～120%の当方仮定。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              12223.707466370988,
+              13334.95359967744
+            ],
+            "price_change_pct_range": [
+              47.09635940277963,
+              60.468755712123226
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の110～120%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の90～110%の当方仮定。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              10001.21519975808,
+              12223.707466370988
+            ],
+            "price_change_pct_range": [
+              20.351566784092423,
+              47.09635940277963
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の90～110%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の65～90%の当方仮定。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              7223.099866491947,
+              10001.21519975808
+            ],
+            "price_change_pct_range": [
+              -13.07942398926658,
+              20.351566784092423
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。数量・単価・製品構成が正常化利益へ反映される条件。倍率と株式数は標準へ固定。 標準利益の65～90%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "公式決算に示された需要・収益・投資の進捗。"
+          ],
+          "evidence_against": [
+            "市況反転・設備立上げ・コスト・資金負担の不確実性。"
+          ],
+          "caveats": [
+            "製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。",
+            "missing_information": [
+              "製品別の純増利益と設備稼働・投資回収",
+              "材料除外時の正常化利益と市場倍率"
+            ],
+            "next_checks": [
+              "次の決算の数量・単価・利益率・CF",
+              "設備能力と還元・資本構成の変更"
+            ],
+            "recalculation_method": "各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・営業利益・純利益",
+          "数量・単価・製品構成",
+          "設備投資・営業CF・資本政策"
+        ],
+        "sell_the_news_risk": "好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。",
+        "financing_risk": "投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。",
+        "update_triggers": [
+          "会社予想・事業環境・投資日程の変更",
+          "株式数・資本政策の変更",
+          "主要製品の需要・利益率変化"
+        ],
+        "source_ids": [
+          "S1"
+        ],
+        "claim_ids": [
+          "C1",
+          "MODEL"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "次世代メモリと設備投資",
+        "category": "CAPACITY",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／個別確定日は未確認。長期計画を含む。",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "LOW",
+          "timezone": "Asia/Tokyo",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        "plain_language": "四日市・北上での投資、製造歩留まり、設備投資の収益化を追う。投資決定と稼働・販売を区別。",
+        "mechanism": [
+          "数量・単価・設備・コストの変化",
+          "正常化親会社利益の変化",
+          "PERと株式数を揃えた株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER10～11倍の当方仮定。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              12347.179258960594,
+              13581.897184856653
+            ],
+            "price_change_pct_range": [
+              48.58218121492892,
+              63.440399336421805
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER10～11倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER8～10倍の当方仮定。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              9877.743407168475,
+              12347.179258960594
+            ],
+            "price_change_pct_range": [
+              18.865744971943133,
+              48.58218121492892
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER8～10倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER6～8倍の当方仮定。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              7408.307555376356,
+              9877.743407168475
+            ],
+            "price_change_pct_range": [
+              -10.850691271042656,
+              18.865744971943133
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。設備の立上げ・投資回収の見通しが評価倍率へ影響する条件。正常化利益と株式数は標準へ固定。 PER6～8倍を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "公式決算に示された需要・収益・投資の進捗。"
+          ],
+          "evidence_against": [
+            "市況反転・設備立上げ・コスト・資金負担の不確実性。"
+          ],
+          "caveats": [
+            "製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。",
+            "missing_information": [
+              "製品別の純増利益と設備稼働・投資回収",
+              "材料除外時の正常化利益と市場倍率"
+            ],
+            "next_checks": [
+              "次の決算の数量・単価・利益率・CF",
+              "設備能力と還元・資本構成の変更"
+            ],
+            "recalculation_method": "各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・営業利益・純利益",
+          "数量・単価・製品構成",
+          "設備投資・営業CF・資本政策"
+        ],
+        "sell_the_news_risk": "好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。",
+        "financing_risk": "投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。",
+        "update_triggers": [
+          "会社予想・事業環境・投資日程の変更",
+          "株式数・資本政策の変更",
+          "主要製品の需要・利益率変化"
+        ],
+        "source_ids": [
+          "S1"
+        ],
+        "claim_ids": [
+          "C2",
+          "MODEL"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "株主還元・訴訟・財務",
+        "category": "FINANCING",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／個別確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "LOW",
+          "timezone": "Asia/Tokyo",
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "自社株取得・借入返済と配当方針、訴訟引当金、大株主売却による需給を確認。発表済み分割を未来イベントに数えない。 10月30日決定の中間配当の効力発生日は12月8日。90円は分割前の表記で、分割後相当30円。支払決定と今後の還元方針を区別する。",
+        "mechanism": [
+          "数量・単価・設備・コストの変化",
+          "正常化親会社利益の変化",
+          "PERと株式数を揃えた株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の98～105%の当方仮定。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              10890.212106403242,
+              11668.08439971776
+            ],
+            "price_change_pct_range": [
+              31.049483831567294,
+              40.41016124810781
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の98～105%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の90～98%の当方仮定。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              10001.21519975808,
+              10890.212106403242
+            ],
+            "price_change_pct_range": [
+              20.351566784092423,
+              31.049483831567294
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の90～98%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の70～90%の当方仮定。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              7778.722933145173,
+              10001.21519975808
+            ],
+            "price_change_pct_range": [
+              -6.393225834594796,
+              20.351566784092423
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2028年3月末試算。資金負担・為替・原材料・還元後の投資効率が税引後利益へ影響する条件。倍率と株式数は標準へ固定。 標準利益の70～90%を同じPER式で再計算。短期反応率でも市場予想の実測でもない。個別レンジを合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "価格・数量・設備が共有利益へ影響し、単一材料の純増利益を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "正常化親会社利益とPERを共通シナリオへ置換して結果別に再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "時点と単位を揃えた独立の市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "決算・市況・複数材料が同時に動き、単一イベント反応を検証していないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ製品構成・期間・財務条件を持つ比較標本を独立検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "公式決算に示された需要・収益・投資の進捗。"
+          ],
+          "evidence_against": [
+            "市況反転・設備立上げ・コスト・資金負担の不確実性。"
+          ],
+          "caveats": [
+            "製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品需要・価格・設備稼働・投資の複数材料が同じ正常化利益へ影響し、個別材料を除いた価値を一次資料だけから分離できない。",
+            "missing_information": [
+              "製品別の純増利益と設備稼働・投資回収",
+              "材料除外時の正常化利益と市場倍率"
+            ],
+            "next_checks": [
+              "次の決算の数量・単価・利益率・CF",
+              "設備能力と還元・資本構成の変更"
+            ],
+            "recalculation_method": "各材料が親会社利益に与える増分が判明したら、同じPERと株式数で材料除外前後を再評価して期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・営業利益・純利益",
+          "数量・単価・製品構成",
+          "設備投資・営業CF・資本政策"
+        ],
+        "sell_the_news_risk": "好材料でも、すでに株価がより強い利益を要求していれば下落し得る。固定の反応率は仮定しない。",
+        "financing_risk": "投資・配当・買戻しとCFを合わせて確認。新たな増資・転換が判明したら現金と株式の両方を更新する。",
+        "update_triggers": [
+          "会社予想・事業環境・投資日程の変更",
+          "株式数・資本政策の変更",
+          "主要製品の需要・利益率変化"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C3",
+          "MODEL"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "共通正常化利益",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じ利益へ影響する材料を1グループで評価。個別価格幅・割合は加算しない。",
+        "full_success_incremental_equity_value": 22400000000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        12.292840585266696,
+        32.292840585266696
+      ],
+      "raw_implied_pct": 22.292840585266696,
+      "all_events_excluded_equity_value": 8400000000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "失敗側と成功側の独立した正常化利益・PERから共通グループの期待を逆算。表示±10ポイントは統計区間ではなく前提の不確実性を表す主観幅。rawが帯外なら端に丸め、その事実を明記する。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "NAND価格・SSD製品構成",
+        "frequency": "各決算・会社開示時",
+        "update_trigger": "数量・単価・利益・投資・資本政策の変更",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "次世代メモリと設備投資",
+        "frequency": "各決算・会社開示時",
+        "update_trigger": "数量・単価・利益・投資・資本政策の変更",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "株主還元・訴訟・財務",
+        "frequency": "各決算・会社開示時",
+        "update_trigger": "数量・単価・利益・投資・資本政策の変更",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T05:35:55.638872+00:00",
+    "messages": [
+      "正常化利益・倍率・確率・将来株式数は当方仮定。",
+      "潜在株式や自己株式の時点差があり、新たな資本政策で更新が必要。",
+      "個別材料の期待割合は非表示。共通利益グループの条件付き逆算であり真の成功確率ではない。"
+    ]
+  }
+}

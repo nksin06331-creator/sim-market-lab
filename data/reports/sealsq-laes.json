@@ -1,0 +1,1434 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "SEALSQ Corp",
+    "ticker": "LAES",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T14:32:50.537264+00:00",
+    "generated_at": "2026-11-27T14:32:50.537264+00:00",
+    "price": 1.07,
+    "price_as_of": "2026-11-25T21:00:02+00:00",
+    "benchmark": "S&P 500（相対リターン未採用）"
+  },
+  "capital_structure": {
+    "basic_shares": 230974764,
+    "diluted_shares": 231140922,
+    "market_cap": 247320786.54000002,
+    "cash": 486108000.0,
+    "liquid_securities": 0,
+    "restricted_cash": 6311000.0,
+    "minimum_operating_cash": 0,
+    "debt": 1341000.0,
+    "preferred_stock": 0,
+    "minority_interest": 7457000.0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "burn_one_off_adjustments": null,
+    "runway_months": null,
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+    ],
+    "dilution_notes": [
+      "6月末普通株223,430,764、F株1,499,800。F株は普通株5株との交換権を持つ。半期後の既知オプション行使45,000株を普通株へ加え、残存オプション166,158を含め評価用231,140,922普通株相当と推定。半期後未開示変動や買収対価発行の可能性に注意。",
+      "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+      "TTMランウェイは事業再編・買収前後の期間が一致しないため未算出。最近のCFと期末現金、会社の資金見通しを本文で別々に説明。0の換金性資産等は追加価値を仮定しない入力方針で、存在しないとの断定ではない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "F1",
+      "statement": "会社：BVI法人。スイスGrand-Lancyの本社へ11月9日頃から移転。2023年Nasdaq上場。セキュア半導体、PKI・デジタルID、ASIC設計と量子関連投資を行う。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F2",
+      "statement": "最新確定業績：2026年上期売上$11.2M、粗利益$5.4M、営業損失$32.2M、純損失$27.8M。これは四半期ではなく1～6月の合計。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F3",
+      "statement": "財務：6月末自由現金$479.797M、制限現金$6.311M。借入$1.251Mとファイナンスリース$0.090M、非支配持分$7.457M。現金は11月末残高ではない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F4",
+      "statement": "資金収支：2026年上期営業CF−$23.731M、現金設備投資$1.518M。投資支出にはQuobly等の持分投資が別途あり、これらを現金にも重複加算しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F5",
+      "statement": "会社見通し：会社は2026年売上$27–36Mを再確認。2029年までの商談パイプライン$225M超は会社推計で、確約売上・受注残高・当期売上とは異なる。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F6",
+      "statement": "認証日程：10月28日6-KではQS7001 V1の技術評価が完了し、最終の開発・製造・組立拠点監査を2027年1月予定と説明。監査後ANSSIへ報告書提出・正式認証手続きが必要。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F7",
+      "statement": "組織再編：10月14日の6-KはGigCapital8・Quantisimoの合併契約を開示。持分移管と売却対価は条件付き。11月18日QuintessenceLabsの100%取得に関する非拘束LOIを発表、確定買収と扱わない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F8",
+      "statement": "新規上場：11月25日発表でEuronext Growth Paris取引開始を12月2日予定。既存株の直接上場で新株・売出し・調達収入なし。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F9",
+      "statement": "株式数：6月末普通株223,430,764、F株1,499,800。F株は普通株5株との交換権を持つ。半期後の既知オプション行使45,000株を普通株へ加え、残存オプション166,158を含め評価用231,140,922普通株相当と推定。半期後未開示変動や買収対価発行の可能性に注意。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "disclosed_share_and_capital_bridge",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "MODEL",
+      "statement": "未成熟な半導体・PKI事業と量子投資持分の合算。事業価値は2027年売上$30–80M程度、粗利益率45–55%、商業化投資後の利益改善を前提に幅を置く当方仮定。量子投資の仮定価値は出資額やSPAC発表評価額をそのまま持ち込んだものではない。営業リースは事業費に含み、別控除しない。市場価格が資産価値を保証しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "case_EV_assumptions",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FINANCE",
+      "statement": "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "equity=EV+ending_cash-debt-NCI;price=equity/future_shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SHARES",
+      "statement": "基本株式230,974,764、評価用希薄化株式231,140,922。潜在株の扱いと日付差を本文へ明記。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "profile_share_bridge",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観・標準・楽観の確率は35%,45%,20%。成長実行と資金・規制・統合の不確実性を反映する主観配分で、統計確率でも会社予想でもない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "subjective_scenario_weights",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "3レポート総合判定40.8・中立。株価評価25は条件付き価値・希薄化・資金負担を評価。材料60は予定の実行と既存期待、企業リスク72は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "現在株主価値247320786.54USDから、標準の期末現金・負債・非支配持分を固定した失敗側株主価値406202000.00USDを控除し、成功増分385000000.00USDで割ると-41.27%。個別期待割合の平均ではない。帯外の場合、市場がより大きい現金流出・希薄化・事業悪化等を見込む可能性があり、算式の正しさは端点の妥当性を保証しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "calculation_id": "(P0*N0-failure_equity)/joint_success_increment*100",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE_STATS",
+      "statement": "株価1.07 USD、時刻2026-11-25T21:00:02+00:00。52週高値5.48・安値0.881USD。20営業日終値価格リターン-33.95%（配当調整なし）。値動きは総合判定の根拠に使わない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "SQUOTE"
+      ],
+      "calculation_id": "100*(close_t/close_tminus20-1)",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年上期財務諸表",
+      "publisher": "SEALSQ Corp / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1951222/000121390026099476/ea030513901ex99-1.htm",
+      "published_at": "2026-09-14",
+      "accessed_at": "2026-11-27T14:32:50.537264+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "2026年上期決算・会社見通し",
+      "publisher": "SEALSQ Corp / SEC",
+      "url": "https://www.sealsq.com/investors/news-releases/sealsq-reports-h1-2026-financial-and-operational-results-revenue-increases-131-to-11.2-million-fy2026-guidance-reaffirmed",
+      "published_at": "2026-09-11",
+      "accessed_at": "2026-11-27T14:32:50.537264+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "QS7001認証の更新6-K",
+      "publisher": "SEALSQ Corp / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1951222/000121390026113318/ea0309878-6k_sealsq.htm",
+      "published_at": "2026-10-28",
+      "accessed_at": "2026-11-27T14:32:50.537264+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Quantisimo合併契約6-K",
+      "publisher": "SEALSQ Corp / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1951222/000121390026109266/ea0308039-6k_sealsq.htm",
+      "published_at": "2026-10-14",
+      "accessed_at": "2026-11-27T14:32:50.537264+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "QuintessenceLabs非拘束LOI6-K",
+      "publisher": "SEALSQ Corp / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1951222/000121390026122291/ea0312819-6k_sealsq.htm",
+      "published_at": "2026-11-19",
+      "accessed_at": "2026-11-27T14:32:50.537264+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "パリ上場承認6-K",
+      "publisher": "SEALSQ Corp / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1951222/000121390026124218/ea0313614-6k_sealsq.htm",
+      "published_at": "2026-11-25",
+      "accessed_at": "2026-11-27T14:32:50.537264+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "SQUOTE",
+      "title": "Yahoo Finance価格・日足（暫定取得元）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/LAES?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T14:32:50.537264+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE_STATS"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "機器の秘密鍵と認証を守る半導体、PKI（公開鍵基盤）やASIC設計を提供します。耐量子暗号製品を開発・認証し、量子関連企業への投資も進めています。",
+    "section_claim_ids": {
+      "sec1": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "sec2": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "sec3": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "sec4": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "sec5": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "sec6": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ],
+      "sec7": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "SOTP",
+    "method_explanation": "2027年末事業価値＋同時点自由現金−負債−非支配持分＝株主価値。これを同じケースの将来株式数で割る。未成熟な半導体・PKI事業と量子投資持分の合算。事業価値は2027年売上$30–80M程度、粗利益率45–55%、商業化投資後の利益改善を前提に幅を置く当方仮定。量子投資の仮定価値は出資額やSPAC発表評価額をそのまま持ち込んだものではない。営業リースは事業費に含み、別控除しない。市場価格が資産価値を保証しない。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.35,
+        "enterprise_value": 65000000.0,
+        "equity_value": 276202000.0,
+        "diluted_shares": 250000000.0,
+        "price": 1.104808,
+        "conditions": [
+          "半導体・PKI事業$35M＋量子投資持分$30M。認証遅れと追加支出を反映。",
+          "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 220000000.0,
+        "equity_value": 561202000.0,
+        "diluted_shares": 245000000.0,
+        "price": 2.2906204081632655,
+        "conditions": [
+          "半導体・PKI事業$140M＋量子投資持分$80M。認証・採用の漸進的な進展。",
+          "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.2,
+        "enterprise_value": 450000000.0,
+        "equity_value": 861202000.0,
+        "diluted_shares": 240000000.0,
+        "price": 3.5883416666666665,
+        "conditions": [
+          "半導体・PKI事業$300M＋量子投資持分$150M。顧客採用と商業化の強い条件。",
+          "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 2.135130317006803,
+      "expected_delta_pct": 99.54488943988811,
+      "raw_band_position_pct": -1.401551364782517,
+      "display_band_position_pct": 0.0,
+      "endpoint_rr": null,
+      "market_score": 0,
+      "own_score": 41,
+      "supplemental_score": 100
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "標準事業価値（USD）",
+        "low": 176000000.0,
+        "base": 220000000.0,
+        "high": 264000000.0,
+        "result_prices": [
+          2.1110285714285713,
+          2.2906204081632655,
+          2.4702122448979593
+        ]
+      },
+      {
+        "variable": "標準の将来株式数",
+        "low": 220500000.0,
+        "base": 245000000.0,
+        "high": 269500000.0,
+        "result_prices": [
+          2.5451337868480723,
+          2.2906204081632655,
+          2.082382189239332
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "QS7001最終監査・正式認証への手続き",
+        "category": "REGULATORY",
+        "status": "WINDOWED",
+        "importance": 4,
+        "date": {
+          "display_text": "最終拠点監査は2027年1月の会社予定",
+          "start_date": "2027-01-01",
+          "end_date": "2027-01-31",
+          "precision": "MONTH",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "監査と審査が順調で正式認証・顧客採用へ進む。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              2.6171510204081634,
+              2.9436816326530613
+            ],
+            "price_change_pct_range": [
+              144.59355330917413,
+              175.11043295822998
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：認証と顧客採用により半導体/PKI価値$220M、投資持分$80M。事業価値$300.0M、自由現金$350.0M、将来株式245.000M ／ 半導体/PKI価値$300M、投資持分$80M。事業価値$380.0M、自由現金$350.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "技術評価済みだが監査・正式証書と顧客採用の確認が続く。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              2.1681714285714286,
+              2.413069387755102
+            ],
+            "price_change_pct_range": [
+              102.63284379172228,
+              125.52050352851421
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：半導体/PKI価値$110M、投資持分$80M。事業価値$190.0M、自由現金$350.0M、将来株式245.000M ／ 半導体/PKI価値$170M、投資持分$80M。事業価値$250.0M、自由現金$350.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "監査・審査・顧客実装が遅れ量産売上が後ろ倒しになる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              1.6579673469387755,
+              1.9436816326530613
+            ],
+            "price_change_pct_range": [
+              54.95021934007247,
+              81.65248903299639
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：認証遅延で半導体/PKI$35M、追加支出$50Mを現金から控除。事業価値$115.0M、自由現金$300.0M、将来株式245.000M ／ 半導体/PKI$80M、追加支出$25Mを現金から控除。事業価値$160.0M、自由現金$325.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "Quantisimo再編・量子投資・買収協議",
+        "category": "M_AND_A",
+        "status": "CONTINGENT",
+        "importance": 4,
+        "date": {
+          "display_text": "承認・契約条件付き／確定した完了日なし",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "株主に帰属する価値・支出・持分が明確になり事業連携が進む。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              2.3722530612244896,
+              2.4538857142857142
+            ],
+            "price_change_pct_range": [
+              121.70589357238222,
+              129.3351134846462
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：量子投資持分$120M、追加支出$20Mを現金から控除。事業価値$260.0M、自由現金$330.0M、将来株式245.000M ／ 量子投資持分$150M、追加支出$30Mを現金から控除。事業価値$290.0M、自由現金$320.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "合併契約・非拘束LOIの条件確認が継続する。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              2.208987755102041,
+              2.3314367346938774
+            ],
+            "price_change_pct_range": [
+              106.44745374785427,
+              117.89128361625019
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：量子投資持分$60M、現金は標準。事業価値$200.0M、自由現金$350.0M、将来株式245.000M ／ 量子投資持分$100M、追加支出$10M。事業価値$240.0M、自由現金$340.0M、将来株式245.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "希薄化・関連当事者条件・追加支出が大きくなる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              1.604808,
+              1.924808
+            ],
+            "price_change_pct_range": [
+              49.982056074766355,
+              79.88859813084113
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：投資持分$20M、追加支出$100Mと報酬等による追加潜在株5M。事業価値$160.0M、自由現金$250.0M、将来株式250.000M ／ 投資持分$50M、追加支出$50Mと追加潜在株5M。事業価値$190.0M、自由現金$300.0M、将来株式250.000M。負債$1.341M・非支配持分$7.457Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "Euronext Growth Paris取引開始",
+        "category": "OTHER",
+        "status": "SCHEDULED",
+        "importance": 2,
+        "date": {
+          "display_text": "2026年12月2日開始予定",
+          "start_date": "2026-12-02",
+          "end_date": "2026-12-02",
+          "precision": "EXACT",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "予定どおり開始し欧州投資家アクセスが改善する。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": false,
+            "price_range": null,
+            "price_change_pct_range": null,
+            "probability": null,
+            "method_note": "既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": {
+              "reason": "既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。",
+              "missing_information": [
+                "市場間の流動性・取引費用と投資家構成の実測値"
+              ],
+              "next_checks": [
+                "実際の取引開始・出来高・市場間価格差"
+              ],
+              "recalculation_method": "上場後の実測流動性と価格差を集め、同時ニュースを除いたイベント分析が可能になった場合だけ価格反応を推定する。"
+            }
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "開始しても新規売上・調達資金は発生しない。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": false,
+            "price_range": null,
+            "price_change_pct_range": null,
+            "probability": null,
+            "method_note": "既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": {
+              "reason": "既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。",
+              "missing_information": [
+                "市場間の流動性・取引費用と投資家構成の実測値"
+              ],
+              "next_checks": [
+                "実際の取引開始・出来高・市場間価格差"
+              ],
+              "recalculation_method": "上場後の実測流動性と価格差を集め、同時ニュースを除いたイベント分析が可能になった場合だけ価格反応を推定する。"
+            }
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "日程遅延や市場間の価格差・流動性分散が生じる。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": false,
+            "price_range": null,
+            "price_change_pct_range": null,
+            "probability": null,
+            "method_note": "既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "新規事業価値・調達収入のない直接上場で、独立価値入力や比較可能な価格反応標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": {
+              "reason": "既存株の直接上場で新株も調達収入もなく、取引開始自体を事業の売上・利益・投資へ独立に対応させる根拠がない。",
+              "missing_information": [
+                "市場間の流動性・取引費用と投資家構成の実測値"
+              ],
+              "next_checks": [
+                "実際の取引開始・出来高・市場間価格差"
+              ],
+              "recalculation_method": "上場後の実測流動性と価格差を集め、同時ニュースを除いたイベント分析が可能になった場合だけ価格反応を推定する。"
+            }
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "2027年末の自由現金を悲観$220M／標準$350M／楽観$420Mとする。6月末$479.797Mから累積純支出$259.797M／$129.797M／$59.797Mを控除した仮定で、投資持分・買収対価と運営赤字を含む。新規増資は仮定せず、将来普通株相当250M／245M／240Mに報酬や買収に伴う潜在希薄化を織り込む。未確定買収額やSPAC評価額を全額加算せず、投資持分価値は別途ヘアカットして算入。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "共通事業価値・資金・採用",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じ事業価値への影響を1回のみ計上し、個別価格幅・割合を加算しない。",
+        "full_success_incremental_equity_value": 385000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        0,
+        0
+      ],
+      "raw_implied_pct": -41.267847651948045,
+      "all_events_excluded_equity_value": 406202000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "標準の現金・負債・少数株主請求権を固定し共通事業価値の悲観・楽観端点から逆算。個別割合の平均ではない。表示は主観的な±10ポイント幅を0～100へ制限するが、生の値が範囲外なら本文に残す。真の成功確率や統計区間ではない。 現在時価総額が、標準の将来現金等を固定した失敗側価値より低く、市場は当方より大きな資金流出・投資損失・希薄化等を見込む可能性があります。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "QS7001最終監査・正式認証への手続き",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "Quantisimo再編・量子投資・買収協議",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "Euronext Growth Paris取引開始",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T14:32:50.537264+00:00",
+    "messages": [
+      "将来価値・倍率・確率・支出・株式数は当方仮定であり会社予想ではない。",
+      "潜在株と時点株式数には開示日の差がある。最新確定財務の期末を本文へ明示。",
+      "個別材料は同じ事業価値を共有し、価格幅や期待割合を足し合わせない。"
+    ]
+  }
+}

@@ -1,199 +1,199 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-11-24T06:30:17.184689+00:00",
+  "updatedAt": "2026-11-27T14:36:48.447376+00:00",
   "signals": {
     "kioxia-285a": {
-      "position": 56.5,
+      "position": 42.0,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 53.3,
-        "catalysts": 65.0,
-        "businessRisk": 55.0
+        "valuation": 26.6,
+        "catalysts": 65,
+        "businessRisk": 65
       },
-      "reportRevision": "kioxia-285a-2026-09-30",
-      "summary": "1対3分割後の標準ケース付近。AI向け需要と自社株取得が支えだが、NAND市況の反落リスクは残る。"
+      "reportRevision": "kioxia-285a-2026-11-27-v2",
+      "summary": "最新半期開示を反映。正常化利益の条件付き評価と、3材料・財務リスクを総合して中立。分割後株式基準。"
     },
     "rocket-lab-rklb": {
-      "position": 45.2,
+      "position": 58.0,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 26.5,
-        "catalysts": 74.0,
-        "businessRisk": 72.0
+        "valuation": 50,
+        "catalysts": 70,
+        "businessRisk": 70
       },
-      "reportRevision": "rocket-lab-rklb-2026-09-30",
-      "summary": "Q2の62%増収、受注残、防衛宇宙材料は強い一方、現在株価は高い成長期待と買収・Neutronリスクを織り込むため中立。"
+      "reportRevision": "rocket-lab-rklb-2026-11-27-v2",
+      "summary": "Neutronの初回目標を2027年以降へ修正。強い受注残を評価するが買収・開発・株式増と高倍率依存を考慮した中立。"
     },
     "redwire-rdw": {
-      "position": 37.7,
+      "position": 42.8,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 17.1,
-        "catalysts": 72.0,
-        "businessRisk": 63.0
+        "valuation": 30,
+        "catalysts": 60,
+        "businessRisk": 65
       },
-      "reportRevision": "redwire-rdw-2026-09-30",
-      "summary": "Q2売上急伸、受注残、防衛UAS材料は強い一方、赤字、買収統合、内部統制、希薄化リスクが残るため中立。"
+      "reportRevision": "redwire-rdw-2026-11-27-v2",
+      "summary": "現金余力と受注残を評価するが、赤字・固定価格契約・統合と増資後株式数を反映した中立。"
     },
     "paycloud-4015": {
-      "position": 47.5,
+      "position": 52.0,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 38.2,
-        "catalysts": 66.0,
-        "businessRisk": 54.0
+        "valuation": 43,
+        "catalysts": 60,
+        "businessRisk": 75
       },
-      "reportRevision": "paycloud-4015-2026-09-30",
-      "summary": "3Q増収増益と調整後EBITDA進捗は強い一方、現在株価は標準ケース付近で、通期決算と来期見通し確認前のため中立。"
+      "reportRevision": "paycloud-4015-2026-11-27-v2",
+      "summary": "最新公式開示で3レポートを再評価。11月18日開示ではバリューデザインの別サーバーからコード情報最大約3.1万件が流出、個人情報には該当せず、11月16日に無効化。再点検・顧客対応と業績影響は調査中。別件のアララメッセージ事故と混同しない。信用・補償・費用・解約の影響額は未確認でゼロと置かない。"
     },
     "sumitomo-electric-5802": {
-      "position": 41.8,
+      "position": 34.3,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 26.8,
-        "catalysts": 68.0,
-        "businessRisk": 58.0
+        "valuation": 24.3,
+        "catalysts": 55,
+        "businessRisk": 40
       },
-      "reportRevision": "sumitomo-electric-5802-2026-09-30",
-      "summary": "株価は標準ケース手前まで調整。中計2028、電力・通信テーマは支えだが、1Q後の進捗と需給確認前のため中立。"
+      "reportRevision": "sumitomo-electric-5802-2026-11-27-v2",
+      "summary": "最新半期開示を反映。正常化利益の条件付き評価と、3材料・財務リスクを総合して中立。分割後株式基準。"
     },
     "abcellera-abcl": {
-      "position": 76.6,
+      "position": 83.2,
       "zone": "買われすぎ",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 73.5,
-        "catalysts": 88.0,
+        "valuation": 90.0,
+        "catalysts": 75.0,
         "businessRisk": 70.0
       },
-      "reportRevision": "abcellera-abcl-2026-09-30",
-      "summary": "ABCL635のPhase 2好結果で株価は再評価。次は後期試験設計、資金消費、データ詳細を確認するため中立からやや強気。"
+      "reportRevision": "abcellera-abcl-2026-11-27-v2",
+      "summary": "11月9日3Q・最新株式/資金を確認。ABCL575は第1相以降開発しない方針で価値加算せず、ABCL635の後期開発と資産rNPV・希薄化を再評価。"
     },
     "asp-isotopes-aspi": {
-      "position": 31.4,
+      "position": 53.5,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 1.8,
-        "catalysts": 72.0,
-        "businessRisk": 82.0
+        "valuation": 40.0,
+        "catalysts": 65.0,
+        "businessRisk": 88.0
       },
-      "reportRevision": "asp-isotopes-aspi-2026-09-30",
-      "summary": "同位体出荷、Renergen、QLE/HALEUが材料。株価は悲観寄りだが、商業化と規制の実行リスクが高いため中立。"
+      "reportRevision": "asp-isotopes-aspi-2026-11-27-v2",
+      "summary": "赤字、稼働率・設備費、許認可、Renergen再編、転換負債、為替・南アフリカ事業、少数株主と関連当事者取引が大きなリスクです。 将来仮定と公式事実を区別し3レポートで評価。"
     },
     "moonlake-mltx": {
-      "position": 32.7,
+      "position": 64.2,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 1.5,
-        "catalysts": 78.0,
-        "businessRisk": 82.0
+        "valuation": 60.0,
+        "catalysts": 65.0,
+        "businessRisk": 80.0
       },
-      "reportRevision": "moonlake-mltx-2026-09-30",
-      "summary": "HS BLA提出とFDA受理が最大材料。Week 52と資金調達は支えだが、商業化前・単一資産依存のため中立。"
+      "reportRevision": "moonlake-mltx-2026-11-27-v2",
+      "summary": "HS BLA提出済み、受理・審査目標日は11月4日会社見通しと未確認事項を区別。VELA-2の不確実性、PsAデータ予定と資金・希薄化を再評価。"
     },
     "zeta-global-zeta": {
-      "position": 53.6,
+      "position": 55.2,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 40.7,
-        "catalysts": 82.0,
-        "businessRisk": 58.0
+        "valuation": 55.0,
+        "catalysts": 60.0,
+        "businessRisk": 48.0
       },
-      "reportRevision": "zeta-global-zeta-2026-09-30",
-      "summary": "2Q好決算、20四半期連続Beat and Raise、AI提携は強い。株価は高値圏に近く、期待織り込み確認前のため中立。"
+      "reportRevision": "zeta-global-zeta-2026-11-27-v2",
+      "summary": "広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。 将来仮定と公式事実を区別し3レポートで評価。"
     },
     "credo-crdo": {
-      "position": 33.4,
+      "position": 50.0,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 6.9,
-        "catalysts": 80.0,
-        "businessRisk": 62.0
+        "valuation": 40,
+        "catalysts": 65,
+        "businessRisk": 65
       },
-      "reportRevision": "credo-crdo-2026-09-30",
-      "summary": "FY2026 Q4決算とQ1ガイダンスは強い。AI接続需要と光接続拡大は追い風だが、株価は高期待を織り込むため中立。"
+      "reportRevision": "credo-crdo-2026-11-27-v2",
+      "summary": "最新公式開示で3レポートを再評価。Q1の顧客A・B売上比率43%・28%。実名との対応は推測しない。買収で現金支出・のれん・取得無形資産・条件付対価が増加。GAAPと非GAAPの差、株式報酬、顧客内製化、競争、輸出規制、サプライヤー集中がリスク。"
     },
     "sealsq-laes": {
-      "position": 35.8,
+      "position": 40.8,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 20.9,
-        "catalysts": 68.0,
-        "businessRisk": 42.0
+        "valuation": 25.0,
+        "catalysts": 60.0,
+        "businessRisk": 72.0
       },
-      "reportRevision": "sealsq-laes-2026-09-30",
-      "summary": "H1 2026予備売上は強く現金余力も大きい。QS7001/QVaultの商用化とパイプライン転換が確認できれば再評価余地がある一方、希薄化と小型株リスクは高い。"
+      "reportRevision": "sealsq-laes-2026-11-27-v2",
+      "summary": "赤字継続、認証・量産遅延、持分投資・買収、関連当事者取引、F株の経済的権利、株式発行と新事業の資本配分がリスクです。 将来仮定と公式事実を区別し3レポートで評価。"
     },
     "furukawa-electric-5801": {
-      "position": 47.2,
+      "position": 43.9,
       "zone": "中立",
-      "asOf": "2026-09-30",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 30.5,
-        "catalysts": 82.0,
-        "businessRisk": 56.0
+        "valuation": 34.4,
+        "catalysts": 60,
+        "businessRisk": 55
       },
-      "reportRevision": "furukawa-electric-5801-2026-09-30",
-      "summary": "1Q決算と通期上方修正は強い。光通信・データセンタ需要と増産投資は追い風だが、株価急騰後の材料織り込みと2Q進捗確認が必要。"
+      "reportRevision": "furukawa-electric-5801-2026-11-27-v2",
+      "summary": "最新半期開示を反映。正常化利益の条件付き評価と、3材料・財務リスクを総合して中立。分割後株式基準。"
     },
     "murata-6981": {
-      "position": 80.1,
-      "zone": "買われすぎ",
-      "asOf": "2026-09-30",
+      "position": 43.0,
+      "zone": "中立",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 86.8,
-        "catalysts": 76.0,
-        "businessRisk": 60.0
+        "valuation": 40,
+        "catalysts": 55,
+        "businessRisk": 35
       },
-      "reportRevision": "murata-6981-2026-09-30",
-      "summary": "AIサーバー需要と通期上方修正は強い一方、株価はBullケースに近く、高い成長期待が入っているため買われすぎ。"
+      "reportRevision": "murata-6981-2026-11-27-v2",
+      "summary": "最新公式開示で3レポートを再評価。AI関連需要と為替の追い風が大きい一方、スマホ・車載循環、価格低下、材料費、稼働率、円高、設備投資負担で利益が振れる。製品需要の増加を全ての事業へ一般化しない。"
     },
     "gorilla-technology-grrr": {
-      "position": 35.9,
+      "position": 63.0,
       "zone": "中立",
-      "asOf": "2026-10-03",
+      "asOf": "2026-11-27",
       "components": {
-        "valuation": 21.5,
-        "catalysts": 45.0,
-        "businessRisk": 78.0
+        "valuation": 50,
+        "catalysts": 75,
+        "businessRisk": 95
       },
-      "reportRevision": "gorilla-technology-grrr-2026-10-03",
-      "summary": "上期99%増収と大型AI案件は強い一方、赤字、納入・回収、$232Mの転換社債と希薄化リスクから中立。"
+      "reportRevision": "gorilla-technology-grrr-2026-11-27-v2",
+      "summary": "会社の2027年売上目標と設備投資を反映する一方、可変転換・資金調達・売掛金回収・低粗利率の不確実性を重くみる高リスク中立。"
     },
     "eli-lilly-lly": {
       "position": 47.5,
       "zone": "中立",
-      "asOf": "2026-10-31",
+      "asOf": "2026-11-27",
       "components": {
         "valuation": 45.0,
         "catalysts": 55.0,
         "businessRisk": 45.0
       },
-      "reportRevision": "eli-lilly-lly-2026-10-31-v1",
-      "summary": "主力薬の販売拡大と営業CFは強い一方、薬価低下・主力集中・開発規制・借入・倍率の不確実性を考慮。3レポートに分析根拠と当方仮定を明示。"
+      "reportRevision": "eli-lilly-lly-2026-11-27-v2",
+      "summary": "最新3Qの業績・資金・薬価を再確認し、12月7日Innovation Dayを会社予定として追加。2027年利益・倍率と主力薬集中リスクを再評価し中立。"
     },
     "coreweave-crwv": {
       "position": 59.0,
       "zone": "中立",
-      "asOf": "2026-11-24",
+      "asOf": "2026-11-27",
       "components": {
         "valuation": 50.0,
         "catalysts": 65.0,
         "businessRisk": 85.0
       },
-      "reportRevision": "coreweave-crwv-2026-11-24-v1",
-      "summary": "AI計算需要と契約残高を評価する一方、設備投資・借換え・希薄化・顧客集中と内部統制不備を考慮。将来資金調達の成立を条件とする高リスクの中立。"
+      "reportRevision": "coreweave-crwv-2026-11-27-v2",
+      "summary": "11月27日に最新公式資料を再取得。3Qの契約需要を評価する一方、設備投資・借換え・希薄化・顧客集中・統制不備の負担が残り総合59.0を維持。基準株価と分析指標は再計算。"
     }
   }
 }

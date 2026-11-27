@@ -26,7 +26,9 @@
           "path": "./stocks/kioxia-285a/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "kioxia-285a-2026-11-27-v2"
     },
     {
       "id": "rocket-lab-rklb",
@@ -53,7 +55,9 @@
           "path": "./stocks/rocket-lab-rklb/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "rocket-lab-rklb-2026-11-27-v2"
     },
     {
       "id": "redwire-rdw",
@@ -80,7 +84,9 @@
           "path": "./stocks/redwire-rdw/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "redwire-rdw-2026-11-27-v2"
     },
     {
       "id": "paycloud-4015",
@@ -107,7 +113,9 @@
           "path": "./stocks/paycloud-4015/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "paycloud-4015-2026-11-27-v2"
     },
     {
       "id": "sumitomo-electric-5802",
@@ -134,7 +142,9 @@
           "path": "./stocks/sumitomo-electric-5802/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "sumitomo-electric-5802-2026-11-27-v2"
     },
     {
       "id": "abcellera-abcl",
@@ -161,7 +171,9 @@
           "path": "./stocks/abcellera-abcl/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "abcellera-abcl-2026-11-27-v2"
     },
     {
       "id": "asp-isotopes-aspi",
@@ -188,7 +200,9 @@
           "path": "./stocks/asp-isotopes-aspi/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "asp-isotopes-aspi-2026-11-27-v2"
     },
     {
       "id": "moonlake-mltx",
@@ -215,7 +229,9 @@
           "path": "./stocks/moonlake-mltx/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "moonlake-mltx-2026-11-27-v2"
     },
     {
       "id": "credo-crdo",
@@ -242,7 +258,9 @@
           "path": "./stocks/credo-crdo/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "credo-crdo-2026-11-27-v2"
     },
     {
       "id": "zeta-global-zeta",
@@ -269,7 +287,9 @@
           "path": "./stocks/zeta-global-zeta/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "zeta-global-zeta-2026-11-27-v2"
     },
     {
       "id": "sealsq-laes",
@@ -301,7 +321,9 @@
           "path": "./stocks/sealsq-laes/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "sealsq-laes-2026-11-27-v2"
     },
     {
       "id": "furukawa-electric-5801",
@@ -333,7 +355,9 @@
           "path": "./stocks/furukawa-electric-5801/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "furukawa-electric-5801-2026-11-27-v2"
     },
     {
       "id": "murata-6981",
@@ -365,7 +389,9 @@
           "path": "./stocks/murata-6981/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "murata-6981-2026-11-27-v2"
     },
     {
       "id": "gorilla-technology-grrr",
@@ -397,7 +423,9 @@
           "path": "./stocks/gorilla-technology-grrr/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "gorilla-technology-grrr-2026-11-27-v2"
     },
     {
       "id": "eli-lilly-lly",
@@ -424,7 +452,9 @@
           "path": "./stocks/eli-lilly-lly/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "eli-lilly-lly-2026-11-27-v2"
     },
     {
       "id": "coreweave-crwv",
@@ -451,7 +481,9 @@
           "path": "./stocks/coreweave-crwv/catalysts.html",
           "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-27",
+      "reportRevision": "coreweave-crwv-2026-11-27-v2"
     }
   ]
 }

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="ゴリラ・テクノロジー・グループ（GRRR）の今後のカタリスト、予定時期、株価への影響、今の株価に入っている期待を整理したレポート">
-<title>ゴリラ・テクノロジー・グループ（GRRR）｜カタリストレポート</title>
+<meta name="description" content="ゴリラ・テクノロジー（GRRR）の今後のカタリスト、予定時期、株価への影響、今の株価に入っている期待を整理したレポート">
+<title>ゴリラ・テクノロジー（GRRR）｜カタリストレポート</title>
 
 <style>
 :root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="GRRR" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
-    <h1>ゴリラ・テクノロジー・グループ <small>GRRR</small></h1>
-    <div class="sub">Nasdaq｜評価基準日 2026-10-03｜最終更新 2026-10-03</div>
+    <h1>ゴリラ・テクノロジー <small>GRRR</small></h1>
+    <div class="sub">Nasdaq／USD｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">大型案件の実行確認待ち</div>
-        <p>Q3決算、Yotta稼働、Batam GPUaaS、契約資産の回収が主な材料です。</p>
-        <p class="sub">足りない情報に仮定を置き、主要材料の織り込み度を38%と推定します。</p>
+        <div class="status">最新開示に基づき条件を再点検</div>
+        <p>過去の完了済み発表と、今後の引渡し・稼働・資金を分けて確認します。</p>
+        <p class="sub">同じ事業価値に重なる3材料を1グループとして扱い、価格幅や個別割合は足しません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>38%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ 低〜中</small>
+        <b>7～27%</b>
+        <small>共通運営価値の条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>$13.17</b>
-        <small data-live-price-date>2026/10/02終値（分析基準値）</small>
+        <b data-live-price>$8.80</b>
+        <small data-live-price-date>2026-11-25T21:00:02+00:00（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>Q3決算とYotta実行確認</b>
-        <small>2026年秋</small>
+        <b>AI設備の稼働・利用率・売上化</b>
+        <small>進行中／個別確定日なし</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>一部推定</b>
+        <b>確定日未公表を含む</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">将来の売上・倍率・確率・株式数・資金条件は当方仮定です。会社予想や真の成功確率と区別してください。10月ノートには可変転換価格（過去VWAPの90%等）・フロア引下げ・現金決済105%等の条項がある。現在株価以下の発行による追加希薄化・担保・返済リスクが大きい。設備の売上化と回収の遅延にも注意。[S3]</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>38%</b></div><p>仮定：2026年$200M達成を60%、Yotta稼働を45%、Batam第1フェーズを35%、契約資産の良好な回収を40%と置き、転換社債・実行リスクを控除しました。</p><p>読み方：現在株価は上期増収を評価していますが、2027年計画の完全達成はまだ強く織り込んでいません。</p><p>次に見る数字：Q3売上、粗利、調整後EBITDA、営業現金、契約資産、実稼働GPU台数です。</p><p>再計算方法：納入・稼働・回収の成功確率と完全希薄化後株式数を更新し、Bear/Base/Bullを再計算します。</p></div>
-      <p class="small">計算方法：2026年通期決算、Yotta、Batam、回収・負債管理を同じ価値経路ごとに束ね、重複を除いて推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-10-03時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>7～27%</b><span>このレポートの条件付き推定</span></div><p>逆算中心16.8%。真の成功確率ではありません。</p><p>全体期待は標準の現金・負債条件を固定し、悲観側・楽観側の運営価値端点で逆算。個別イベント割合の平均ではない。±10ポイントは主観的な表示幅で統計区間ではない。株式数と資金条件を変える3ケース価格帯とは異なる。失敗側の負の残余-125.0百万USDは不足資金を示し、有限責任の普通株価値は0を下限にする。成功増分も0下限後の株主価値から再計算した。</p></div>
+      <p class="small">計算方法：標準資金条件を固定した共通運営価値の端点逆算。現在推定株主価値から失敗側価値を引き、成功増分価値で割る。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>YottaとBatamの納入・稼働が数値で確認され、Q3利益率と営業現金も改善することです。</p>
+        <p>引渡し・稼働・回収・資金が揃い、当方標準売上と利益の条件を上回る。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>納入遅延、利益率低下、契約資産の急増、追加増資、転換社債利払いの株式化です。</p>
+        <p>遅延、費用超過、回収難または不利な調達条件で、成長しても1株価値が伸びない。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>小さい企業に対して契約と資本投下が急拡大し、納入・稼働・回収・負債管理を同時に実行する必要がある点です。</p>
+        <p>10月ノートには可変転換価格（過去VWAPの90%等）・フロア引下げ・現金決済105%等の条項がある。現在株価以下の発行による追加希薄化・担保・返済リスクが大きい。設備の売上化と回収の遅延にも注意。[S3]</p>
       </div>
     </div>
   </section>
@@ -131,52 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026/09/08</div><div class="time-dot"></div><div class="time-body"><b>Yotta物理実行</b><p>電力・冷却・ステージングを進行。</p><div class="time-meta"><span class="chip">発表済み</span></div></div></div><div class="time-row"><div class="time-date">2026/09/22</div><div class="time-dot"></div><div class="time-body"><b>台湾案件</b><p>数千万ドル規模の複数年受注。</p><div class="time-meta"><span class="chip">受注</span></div></div></div><div class="time-row"><div class="time-date">2026年秋</div><div class="time-dot"></div><div class="time-body"><b>Q3決算</b><p>$48M〜$50Mの達成と利益・回収を確認。</p><div class="time-meta"><span class="chip blue">時期推定</span></div></div></div><div class="time-row"><div class="time-date">2026/12</div><div class="time-dot"></div><div class="time-body"><b>Batam第2トランシェ</b><p>GPUaaS導入と顧客利用を確認。</p><div class="time-meta"><span class="chip blue">会社計画</span></div></div></div>
+      <div class="time-row"><div class="time-date">条件付き</div><div class="time-dot"></div><div class="time-body"><b>AI設備の稼働・利用率・売上化</b><p>進行中／個別確定日なし</p></div></div><div class="time-row"><div class="time-date">条件付き</div><div class="time-dot"></div><div class="time-body"><b>顧客検収・売掛金回収</b><p>進行中／各決算</p></div></div><div class="time-row"><div class="time-date">条件付き</div><div class="time-dot"></div><div class="time-body"><b>ノート返済・転換・追加調達</b><p>10月ノート満期は2027年10月29日（短縮条件あり）</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Q3決算と通期$200M達成度</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">最重要</span></div></div><div class="date-box"><b>2026年秋</b><span>会社公表または推定</span></div></div>
-<p class="lead">Q3売上$48M〜$50Mの達成と、2026年通期売上$200M以上が現実的かを確認します。売上だけでなく粗利、調整後EBITDA、営業キャッシュフローが焦点です。</p><div class="mechanism"><span>売上</span><i>→</i><span>利益</span><i>→</i><span>現金</span></div><div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+25〜45%</div><p>Q3売上が$50Mを上回り、粗利・EBITDA・営業現金が同時に改善する状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-8〜+12%</div><p>Q3が会社計画内で、通期$200M以上を維持する状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-25〜-40%</div><p>売上未達、粗利低下、赤字拡大、通期見通し引き下げの状態です。</p></div></div>
-<p class="notice"><b>この％にした理由：</b>上期の高成長が続くかと、大型案件が利益に変わるかを同時に確認するためです。</p><div class="evidence"><div><h4>根拠</h4><ul><li>会社はQ3売上$48M〜$50Mを計画。</li><li>2026年通期売上見通しを$200M以上へ引き上げ。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>納入完了の公式確認がない</li><li>契約資産が売上より速く増える</li><li>利益率と営業キャッシュフローが改善しない</li></ul></div></div></article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Yotta GPU基盤の納入・稼働</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">インド</span></div></div><div class="date-box"><b>2026年Q4</b><span>会社公表または推定</span></div></div>
-<p class="lead">Yotta案件はインドのソブリンAI基盤です。9月・10月の納入、設置、通電、顧客利用、売上認識までを順に確認します。</p><div class="mechanism"><span>納入</span><i>→</i><span>稼働</span><i>→</i><span>売上認識</span></div><div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+35〜70%</div><p>B300・B200設備の納入台数、通電、顧客利用、売上認識が数値で確認できる状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-12〜+20%</div><p>物理導入は進むが、売上と回収は段階的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-30〜-50%</div><p>納入延期、資金条件悪化、顧客利用開始の遅延が出る状態です。</p></div></div>
-<p class="notice"><b>この％にした理由：</b>会社規模に対して非常に大きい案件で、完了確認の有無が信頼度を大きく変えるためです。</p><div class="evidence"><div><h4>根拠</h4><ul><li>9月8日に会社は物理実行段階への移行を発表。</li><li>4月発表の追加導入は9月30日までの完了計画。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>納入完了の公式確認がない</li><li>契約資産が売上より速く増える</li><li>利益率と営業キャッシュフローが改善しない</li></ul></div></div></article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Batam GPUaaS第1フェーズ</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">インドネシア</span></div></div><div class="date-box"><b>2026年Q4〜2027年上期</b><span>会社公表または推定</span></div></div>
-<p class="lead">Batamは初期約1,000台のB300 GPUサーバーを使う計画です。設備が実際に稼働し、複数年のサービス収入が始まるかを見ます。</p><div class="mechanism"><span>資金</span><i>→</i><span>設備</span><i>→</i><span>GPUaaS収入</span></div><div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+30〜65%</div><p>初期約1,000台が完成し、高稼働と長期顧客収入が確認される状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-10〜+18%</div><p>設備は段階稼働し、売上は2027年へ移行する状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-28〜-48%</div><p>融資未確定、建設・機器遅延、低稼働で収益化が遅れる状態です。</p></div></div>
-<p class="notice"><b>この％にした理由：</b>複数年の継続収入に変わる可能性がある一方、設備資金と稼働リスクが大きいためです。</p><div class="evidence"><div><h4>根拠</h4><ul><li>5年間で約$2.5Bの契約価値を会社が発表。</li><li>会社は機器等の想定コスト約70%を覆う融資提案を受領と説明。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>納入完了の公式確認がない</li><li>契約資産が売上より速く増える</li><li>利益率と営業キャッシュフローが改善しない</li></ul></div></div></article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>契約資産の回収と資金管理</h3><div class="chips"><span class="chip">重要度4</span><span class="chip amber">財務</span></div></div><div class="date-box"><b>次回決算以降</b><span>会社公表または推定</span></div></div>
-<p class="lead">6月末の契約資産は$104.8Mへ増加しました。請求マイルストーンの達成、現金回収、設備投資、転換社債の利払いを一緒に確認します。</p><div class="mechanism"><span>進捗</span><i>→</i><span>請求</span><i>→</i><span>現金回収</span></div><div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+18〜35%</div><p>契約資産が売掛金・現金へ変わり、営業キャッシュフローが黒字化する状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+10%</div><p>契約資産は増えるが、回収も並行し追加調達を避ける状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-20〜-35%</div><p>契約資産だけが増え、現金が急減し、追加増資や株式利払いが増える状態です。</p></div></div>
-<p class="notice"><b>この％にした理由：</b>売上発表よりも現金回収と負債管理が1株価値を支えるためです。</p><div class="evidence"><div><h4>根拠</h4><ul><li>6月末契約資産は$104.8M。</li><li>6月と7月の転換社債は合計$232M、年利7.5%。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>納入完了の公式確認がない</li><li>契約資産が売上より速く増える</li><li>利益率と営業キャッシュフローが改善しない</li></ul></div></div></article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>AI設備の稼働・利用率・売上化</h3><span class="chip">重要度5</span></div><div class="date-box"><b>進行中／個別確定日なし</b></div><p>Q3の設備投資を稼働・顧客利用へ変えられるか。会社2027年売上目標450～500百万USDとの乖離を確認。</p><p>結果は当方標準モデルとの条件比較です。市場期待との差を実測したものではなく、個別イベント確率も表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$13.58～$17.55</div><p>基準価格比 +54.3%～+99.4%</p><p>当方標準を上回る売上・引渡し・回収と資金条件が成立。</p><p>このレポートの条件付き再評価。年売上472.5～540百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$9.61～$13.58</div><p>基準価格比 +9.2%～+54.3%</p><p>当方標準近辺の稼働・利益・資金条件。</p><p>このレポートの条件付き再評価。年売上405～472.5百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$5.64～$9.61</div><p>基準価格比 -35.9%～+9.2%</p><p>遅延・コスト・回収または資金条件が標準を下回る。</p><p>このレポートの条件付き再評価。年売上337.5～405百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。</p><p>足りない情報：案件ごとの売上・利益・純資金需要、個別成功に必要な追加株式と調達条件</p><p>次に見る数字：公式な引渡し・稼働・会社見通し、現金・借入・株式発行と回収</p><p>再計算方法：案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典：S1、S2</p><p>会社は2026年売上200百万USD以上、2027年450～500百万USDを目標として維持。これは会社目標で、達成済み受注売上や市場コンセンサスではない。[S1] 10月ノートには可変転換価格（過去VWAPの90%等）・フロア引下げ・現金決済105%等の条項がある。現在株価以下の発行による追加希薄化・担保・返済リスクが大きい。設備の売上化と回収の遅延にも注意。[S3]</p><p>資金条件：追加公募を100／150／200百万USD、発行価格10USD、費用2%と仮定し、純現金98／147／196百万USDと株式10／15／20百万を両側計上。将来報酬3／4／5百万株も加え45／51／57百万株。現在プロフォーマ請求273.341百万から期末500／800／1000百万USDへ増える借入と、累積営業CF−30／+20／+60百万を仮定。期末現金を満たす投資等支出約325.4／699.4／963.4百万USDが予算上の上限。これは調達確約ではない。</p><p>材料出尽くし：良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。</p><p>先行指標：売上と営業利益率、設備・契約の引渡しと回収、現金・借入・株式数</p><p>更新条件：公式な会社見通し・日程変更、追加資金調達・契約の条件変更、現金回収・利益率の変化</p></p></details><details><summary>5手法の検討</summary><p><ul><li>企業価値差分：適用外。個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。</li><li>共通条件付き再評価：採用。共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。</li><li>市場予想改定：適用外。同時点の独立した市場予想改定データを取得していないため。</li><li>同社イベント比較：適用外。発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。</li><li>同業イベント比較：適用外。同じ資本構成・事業範囲・条件の他社標本を検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>顧客検収・売掛金回収</h3><span class="chip">重要度5</span></div><div class="date-box"><b>進行中／各決算</b></div><p>売掛金・契約資産203百万USDの回収、請求と営業CFを確認。契約発表額を現金と同一視しない。</p><p>結果は当方標準モデルとの条件比較です。市場期待との差を実測したものではなく、個別イベント確率も表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$13.58～$17.55</div><p>基準価格比 +54.3%～+99.4%</p><p>当方標準を上回る売上・引渡し・回収と資金条件が成立。</p><p>このレポートの条件付き再評価。年売上472.5～540百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$9.61～$13.58</div><p>基準価格比 +9.2%～+54.3%</p><p>当方標準近辺の稼働・利益・資金条件。</p><p>このレポートの条件付き再評価。年売上405～472.5百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$5.64～$9.61</div><p>基準価格比 -35.9%～+9.2%</p><p>遅延・コスト・回収または資金条件が標準を下回る。</p><p>このレポートの条件付き再評価。年売上337.5～405百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。</p><p>足りない情報：案件ごとの売上・利益・純資金需要、個別成功に必要な追加株式と調達条件</p><p>次に見る数字：公式な引渡し・稼働・会社見通し、現金・借入・株式発行と回収</p><p>再計算方法：案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典：S1、S2</p><p>会社は2026年売上200百万USD以上、2027年450～500百万USDを目標として維持。これは会社目標で、達成済み受注売上や市場コンセンサスではない。[S1] 10月ノートには可変転換価格（過去VWAPの90%等）・フロア引下げ・現金決済105%等の条項がある。現在株価以下の発行による追加希薄化・担保・返済リスクが大きい。設備の売上化と回収の遅延にも注意。[S3]</p><p>資金条件：追加公募を100／150／200百万USD、発行価格10USD、費用2%と仮定し、純現金98／147／196百万USDと株式10／15／20百万を両側計上。将来報酬3／4／5百万株も加え45／51／57百万株。現在プロフォーマ請求273.341百万から期末500／800／1000百万USDへ増える借入と、累積営業CF−30／+20／+60百万を仮定。期末現金を満たす投資等支出約325.4／699.4／963.4百万USDが予算上の上限。これは調達確約ではない。</p><p>材料出尽くし：良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。</p><p>先行指標：売上と営業利益率、設備・契約の引渡しと回収、現金・借入・株式数</p><p>更新条件：公式な会社見通し・日程変更、追加資金調達・契約の条件変更、現金回収・利益率の変化</p></p></details><details><summary>5手法の検討</summary><p><ul><li>企業価値差分：適用外。個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。</li><li>共通条件付き再評価：採用。共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。</li><li>市場予想改定：適用外。同時点の独立した市場予想改定データを取得していないため。</li><li>同社イベント比較：適用外。発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。</li><li>同業イベント比較：適用外。同じ資本構成・事業範囲・条件の他社標本を検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>ノート返済・転換・追加調達</h3><span class="chip">重要度4</span></div><div class="date-box"><b>10月ノート満期は2027年10月29日（短縮条件あり）</b></div><p>登記・登録・可変転換・フロア等の条件と資金需要を追う。未実行の後続調達75百万USDを確約として現金に足さない。</p><p>結果は当方標準モデルとの条件比較です。市場期待との差を実測したものではなく、個別イベント確率も表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$13.58～$17.55</div><p>基準価格比 +54.3%～+99.4%</p><p>当方標準を上回る売上・引渡し・回収と資金条件が成立。</p><p>このレポートの条件付き再評価。年売上472.5～540百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$9.61～$13.58</div><p>基準価格比 +9.2%～+54.3%</p><p>当方標準近辺の稼働・利益・資金条件。</p><p>このレポートの条件付き再評価。年売上405～472.5百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$5.64～$9.61</div><p>基準価格比 -35.9%～+9.2%</p><p>遅延・コスト・回収または資金条件が標準を下回る。</p><p>このレポートの条件付き再評価。年売上337.5～405百万USD、倍率3倍、現金75百万・負債等800百万USD、株式51百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。</p><p>足りない情報：案件ごとの売上・利益・純資金需要、個別成功に必要な追加株式と調達条件</p><p>次に見る数字：公式な引渡し・稼働・会社見通し、現金・借入・株式発行と回収</p><p>再計算方法：案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典：S2、S3</p><p>会社は2026年売上200百万USD以上、2027年450～500百万USDを目標として維持。これは会社目標で、達成済み受注売上や市場コンセンサスではない。[S1] 10月ノートには可変転換価格（過去VWAPの90%等）・フロア引下げ・現金決済105%等の条項がある。現在株価以下の発行による追加希薄化・担保・返済リスクが大きい。設備の売上化と回収の遅延にも注意。[S3]</p><p>資金条件：追加公募を100／150／200百万USD、発行価格10USD、費用2%と仮定し、純現金98／147／196百万USDと株式10／15／20百万を両側計上。将来報酬3／4／5百万株も加え45／51／57百万株。現在プロフォーマ請求273.341百万から期末500／800／1000百万USDへ増える借入と、累積営業CF−30／+20／+60百万を仮定。期末現金を満たす投資等支出約325.4／699.4／963.4百万USDが予算上の上限。これは調達確約ではない。</p><p>材料出尽くし：良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。</p><p>先行指標：売上と営業利益率、設備・契約の引渡しと回収、現金・借入・株式数</p><p>更新条件：公式な会社見通し・日程変更、追加資金調達・契約の条件変更、現金回収・利益率の変化</p></p></details><details><summary>5手法の検討</summary><p><ul><li>企業価値差分：適用外。個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。</li><li>共通条件付き再評価：採用。共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。</li><li>市場予想改定：適用外。同時点の独立した市場予想改定データを取得していないため。</li><li>同社イベント比較：適用外。発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。</li><li>同業イベント比較：適用外。同じ資本構成・事業範囲・条件の他社標本を検証していないため。</li></ul></p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>YottaとQ3売上</b><span class="up">同じ価値経路</span></div><p>納入が売上認識へ変わるため単純合算しません。</p></div><div class="signal"><div><b>Batamと資金調達</b><span class="flat">依存</span></div><p>融資条件が設備規模と1株価値を同時に動かします。</p></div><div class="signal"><div><b>台湾案件</b><span class="up">分散</span></div><p>AIデータセンター以外の政府・セキュリティ収入を支えます。</p></div>
+    <p>契約・開発/稼働・資金は同じ事業の成立条件。共通運営価値を1回のみ評価します。個別価格幅・割合は加算しません。</p><p>全体割合は標準の現金負債条件を固定。3ケース価格は資金・株式数や買収事業範囲が変わるため、価格位置と全体逆算値が異なります。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>Q3売上・粗利</b><span class="up">最重要</span></div><p>成長が利益へ変わるかを確認します。</p></div><div class="signal"><div><b>GPU納入・稼働台数</b><span class="up">実行</span></div><p>発表額ではなく実績を確認します。</p></div><div class="signal"><div><b>契約資産</b><span class="down">回収</span></div><p>$104.8Mから現金へ変わるかを確認します。</p></div><div class="signal"><div><b>完全希薄化後株式数</b><span class="down">注意</span></div><p>転換社債、RSU、ワラントを確認します。</p></div>
+    <div class="signal"><div><b>AI設備の稼働・利用率・売上化</b></div><p>各決算・公式開示時：Q3の設備投資を稼働・顧客利用へ変えられるか。会社2027年売上目標450～500百万USDとの乖離を確認。</p></div><div class="signal"><div><b>顧客検収・売掛金回収</b></div><p>各決算・公式開示時：売掛金・契約資産203百万USDの回収、請求と営業CFを確認。契約発表額を現金と同一視しない。</p></div><div class="signal"><div><b>ノート返済・転換・追加調達</b></div><p>各決算・公式開示時：登記・登録・可変転換・フロア等の条件と資金需要を追う。未実行の後続調達75百万USDを確約として現金に足さない。</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -186,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>$13.17</td><td>市場データで確認</td><td>2026-10-03</td><td>2026/10/02終値</td></tr><tr><td>Q3売上計画</td><td>$48M〜$50M</td><td>会社の目標・予定</td><td>2026/08/24</td><td>Q2決算で引き上げ</td></tr><tr><td>Yotta追加導入</td><td>B300 20,736枚</td><td>会社の目標・予定</td><td>2026/04/29</td><td>9/30までの完了計画。完了発表は確認待ち</td></tr><tr><td>契約資産</td><td>$104.8M</td><td>SEC提出資料</td><td>2026/06/30</td><td>請求マイルストーン前を含む</td></tr><tr><td>転換社債</td><td>$232M</td><td>SEC提出資料</td><td>2026/07/17</td><td>初期転換価格$25.4826</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>$8.80</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-25T21:00:02+00:00 [SQ]</td></tr><tr><td>最新決算</td><td>2026年3Q売上69.521百万USD、粗利8.889百万USD・粗利率12.8%、営業損失9.911百万USD。1～9月売上147.882百万USD、IFRS純損失63.498百万USD。公表値は未監査・未レビュー。[S1,S2]</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>[S1,S2]</td></tr><tr><td>会社見通し</td><td>会社は2026年売上200百万USD以上、2027年450～500百万USDを目標として維持。これは会社目標で、達成済み受注売上や市場コンセンサスではない。[S1]</td><td>会社の目標・予定</td><td>2026-11-27</td><td>[S1]</td></tr><tr><td>現在評価用株式</td><td>32.000000百万株</td><td>このレポートの推定</td><td>2026-11-27</td><td>9月末資本金28,057USD（1株額面0.001USD）から約28.057百万発行株を参照。10月の事前交付100万株、未確定報酬等と日付差を考慮し評価用32百万株を保守的に仮定。自己株・可変転換のため確定完全希薄化数ではない。[S2,S3]</td></tr><tr><td>企業価値モデル</td><td>評価は2027年12月末。売上倍率2／3／4倍は当方仮定で、会社売上目標と利益率を独立に吟味する。現在の派生負債を含む請求権は返済・現金決済で維持するケースを計算し、同じ転換ノート株式を重複して追加しない。実際に可変転換する場合は株式数と請求権を再計算する必要がある。</td><td>このレポートの推定</td><td>2026-11-27</td><td>株価に合わせて標準前提を逆算しない。</td></tr><tr><td>資金・将来株式</td><td>追加公募を100／150／200百万USD、発行価格10USD、費用2%と仮定し、純現金98／147／196百万USDと株式10／15／20百万を両側計上。将来報酬3／4／5百万株も加え45／51／57百万株。現在プロフォーマ請求273.341百万から期末500／800／1000百万USDへ増える借入と、累積営業CF−30／+20／+60百万を仮定。期末現金を満たす投資等支出約325.4／699.4／963.4百万USDが予算上の上限。これは調達確約ではない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>費用・純調達現金・株式を同時に整合。</td></tr><tr><td>資金余力</td><td>9か月営業CFと設備投資を月平均へ単純延長すると約29.6百万USDの月次資金使用。9月末現金56.5百万から最低運転資金20百万を控除した粗い余力は約1.2か月。TTMではなく設備投資時期に敏感で、枯渇日の予測ではない。追加調達・回収・設備支出の成立を条件とする。[S2,S3]</td><td>このレポートの推定</td><td>2026-11-27</td><td>簡易期間換算でTTMではない場合を明記。</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -195,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://investors.gorilla-technology.com/gorilla-technology-h1-revenue-surges-99-to-us78-4-million-raises-fy2026-revenue-outlook-to-at-least-us200-million/" target="_blank" rel="noopener noreferrer">2026年上期決算</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/1903145/000143774926028827/ex_974013.htm" target="_blank" rel="noopener noreferrer">SEC上期資料</a></li><li><a href="https://investors.gorilla-technology.com/gorilla-technology-yotta-expand-india-ai-infrastructure-collaboration-in-project-valued-at-approximately-us2-8-billion/" target="_blank" rel="noopener noreferrer">Yotta拡張案件</a></li><li><a href="https://investors.gorilla-technology.com/gorilla-technology-secures-transformational-us2-5-billion-five-year-ai-gpuaas-compute-contract-converting-ai-data-centre-capacity-into-long-term-contracted-revenue/" target="_blank" rel="noopener noreferrer">Batam GPUaaS契約</a></li><li><a href="https://investors.gorilla-technology.com/gorilla-technology-wins-major-national-ai-intelligence-infrastructure-expansion-in-taiwan/" target="_blank" rel="noopener noreferrer">台湾拡張契約</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/1903145/000121390026065898/ea0293736-6k_gorilla.htm" target="_blank" rel="noopener noreferrer">6月転換社債</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/1903145/000121390026079193/ea0298371-6k_gorilla.htm" target="_blank" rel="noopener noreferrer">7月転換社債</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1903145/000143774926037713/ex_1009886.htm" target="_blank" rel="noopener noreferrer">S1：2026年3Q・9か月決算発表</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1903145/000143774926037713/ex_1009887.htm" target="_blank" rel="noopener noreferrer">S2：2026年9か月中間財務諸表</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1903145/000121390026114094/ea0310294-6k_gorilla.htm" target="_blank" rel="noopener noreferrer">S3：10月29日可変転換証券取引の6-K</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1903145/000143774926012385/grrr20241231_20f.htm" target="_blank" rel="noopener noreferrer">S4：2025年年次報告20-F</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/GRRR?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：GRRR日足・基準株価（暫定取得元）</a>（取得：2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：2026年上期決算、SEC提出資料、Yotta、Batam、台湾契約を確認。WARN：Yottaの9月30日完了とBatamの実稼働は公式確認待ち。</p></div>
+      <div><p>JSON形式・算術・ID・確率・日程・依存関係・HTMLを検証。次の制約を明示します。</p><ul><li>将来売上・倍率・確率・資金・株式数は会社予想ではなく当方仮定。</li><li>個別材料を独立価値へ分離できず、同じモデルの条件付き再評価として表示。</li><li>10月ノートには可変転換価格（過去VWAPの90%等）・フロア引下げ・現金決済105%等の条項がある。現在株価以下の発行による追加希薄化・担保・返済リスクが大きい。設備の売上化と回収の遅延にも注意。[S3]</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-10-03：初版作成。2026年上期決算、Yotta・Batam・台湾案件、6月・7月転換社債を反映。</p></div>
+      <div><p>2026-11-27 全面改訂。最新決算・株式数・資金と会社日程を更新。分析値は基準日時点で固定。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の条件付き試算です。売買推奨・投資助言ではありません。前提や資金条件が変わると再評価が必要です。配当は価格比較に含めていません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜ゴリラ・テクノロジー・グループ（GRRR）カタリスト｜作成日 2026-10-03</footer>
+  <footer>分析基準日 2026-11-27／基準株価 $8.80／市場時刻 2026-11-25T21:00:02+00:00。分析値は固定。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

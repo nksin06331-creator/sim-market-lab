@@ -1,0 +1,1211 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "AbCellera Biologics Inc.",
+    "ticker": "ABCL",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T05:39:48.303269+00:00",
+    "generated_at": "2026-11-27T05:39:48.303269+00:00",
+    "price": 10.59,
+    "price_as_of": "2026-11-25T21:00:02+00:00",
+    "benchmark": "S&P 500（本更新で新規比較指数未取得）"
+  },
+  "capital_structure": {
+    "basic_shares": 326617896,
+    "diluted_shares": 373941227.57129365,
+    "market_cap": 3960037599.9799995,
+    "cash": 188800000,
+    "liquid_securities": 600624000,
+    "restricted_cash": 25000000,
+    "minimum_operating_cash": 50000000,
+    "debt": 0,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 78271000,
+    "ttm_operating_cash_flow": -15430000,
+    "ttm_capex": 17420000,
+    "burn_one_off_adjustments": 120000000,
+    "runway_months": 56.08824337585869,
+    "source_ids": [
+      "S2"
+    ],
+    "dilution_notes": [
+      "現在評価用希薄化株式373,941,228株。普通株326,617,896、RSU等9,718,679、前払ワラント3,076,926、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。",
+      "有利子負債以外の政府支援・条件付き借入を自由現金へ無条件に加算しない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "カナダ・バンクーバーを本拠とする臨床段階の抗体医薬開発企業。2012年創業、Nasdaq: ABCL、12月決算、報告通貨USD。抗体探索プラットフォームと自社臨床パイプラインを併せ持つ。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "FINANCIAL",
+      "statement": "2026年3Q売上10.639百万ドル、研究開発費43.535百万ドル、純損失40.758百万ドル。9月末の現金・同等物163.800百万ドル、有価証券600.624百万ドル。会社の約890百万ドルの流動性には制限現金・未使用政府支援等も含み、自由現金と同一ではない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "BUSINESS",
+      "statement": "抗体医薬候補を探索・開発する。提携契約から研究費、契約一時金、将来のマイルストーン・ロイヤルティを得る。自社候補の臨床開発にも投資する。提携一時金受領と売上計上は時点が異なる。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "PRODUCT",
+      "statement": "ABCL635は更年期の中等度～重度の血管運動症状（VMS）向け抗NK3R抗体。2026年8月のPhase2で主要評価項目達成を報告。92人の試験であり、後期試験・米国規制判断が必要。ABCL575はPhase1で全評価項目達成だが、現時点でPhase1以降の開発を進めないと明記。575を将来価値へ加算しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "VMSでは既存のホルモン療法や非ホルモン薬等が選択肢。月1回投与候補の持続性・安全性・忍容性・保険採用を比較する。Phase2と他剤の別試験を直接優劣比較しない。探索提携では他の抗体探索企業・製薬内製部門が競合。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "FUNDING",
+      "statement": "8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RISKS",
+      "statement": "ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "SHARES",
+      "statement": "現在評価用希薄化株式373,941,228株。普通株326,617,896、RSU等9,718,679、前払ワラント3,076,926、オプションは現在価格による自己株式方式で計算。将来ケースでは行使益のあるグループのみ全株追加と行使現金を同時加算。期日差を伴う推定で、EPSの加重平均を時点株式数と扱わない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": "basic+rsu+prefunded+sum(option_n*max(0,1-strike/P0))",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "評価基準株価10.59USD／価格時刻2026-11-25T21:00:02+00:00。11月26日は米国休場で直近取引は11月25日。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S3"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "QUOTE_STATS",
+      "statement": "52週高値15.015・安値2.745USD。20営業日価格リターン-22.36%。新しい比較指数・オプション・空売りは未取得。価格指標を総合判定や成功確率へ使わない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S3"
+      ],
+      "calculation_id": "100*(close_t/close_tminus20-1)",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "ASSETS",
+      "statement": "ABCL635 VMS：2028～2037年の成功時税後フリーCF。ピークは仮定15万人×年間ネット単価2万ドル×CF率45%＝13.5億ドル。患者数・価格・CF率は会社予想ではない。 将来CFは2027年末から割引し、成功確率は各資産で1回だけ乗じる。未承認資産に売上倍率と成功確率を重ねない。残存開発費は事業価値から控除し、2027年末前の支出を期末現金から控除。期間を分けて二重控除を防ぐ。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "asset_rNPV=prob*sum(CF_t/(1+r)^t)-remaining_dev_PV",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL",
+      "statement": "rNPVで資産を評価。悲観は主資産成功確率18%、成功時CF0.7倍、割引率14%、2028年以降の残存開発費PV180百万USD。標準は主資産成功確率40%、成功時CF1倍、割引率12%、2028年以降の残存開発費PV240百万USD。楽観は主資産成功確率60%、成功時CF1.5倍、割引率10%、2028年以降の残存開発費PV300百万USD。成功CF・確率・割引率は当方の条件付き仮定。ABCL575の継続価値は0。既存探索・提携は2028～2037年の年CF10百万USD×ケース倍率だけを別計上し、費用を配賦した後の仮定。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "rNPV_cases_by_asset_and_probability",
+      "confidence": "LOW"
+    },
+    {
+      "id": "BUDGET",
+      "statement": "悲観は2027年末まで純支出350百万USD、新規借入0百万USD、その他請求権控除176.5百万USD、追加報酬5百万株。標準は2027年末まで純支出300百万USD、新規借入0百万USD、その他請求権控除78.271百万USD、追加報酬4百万株。楽観は2027年末まで純支出250百万USD、新規借入0百万USD、その他請求権控除78.271百万USD、追加報酬3百万株。政府支援の返済必要額78.271百万USDを標準/楽観で控除。悲観では条件付支援も含め176.5百万USDを控除。未使用枠は現金へ足さない。2027年末前の支出と2028年以降の残存開発費を分ける。行使されるオプションの行使現金と追加株式を同時計上する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": "ending_cash=initial_cash+securities-spend+draw;debt=initial_debt+draw",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "3レポート総合判定83.2、買われすぎ。構成は株価評価90.0、カタリスト75.0、企業基盤リスク70.0。資産rNPVへの期待負担、公式予定と資金・単一資産リスクから付けた主観評価。株価指標から自動生成しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "RUNWAY",
+      "statement": "過去12か月営業CF-15.430、設備投資17.420百万USD。契約一時金・和解金120百万USDを正常化で除外。最低運転資金50百万USDは当方仮定。簡易資金余力は56.1か月。将来費用の増加を予測した値ではなく、会社の資金見通しと異なる。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S2"
+      ],
+      "calculation_id": "available_liquidity/max(0,-(TTM_CFO-TTM_capex-one_off)/12)",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C1",
+      "statement": "会社は2027年にVMSの後期開発開始を見込む。米国IND受理・試験設計の確定を別途確認する。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C2",
+      "statement": "乳がん・前立腺がん治療に伴うVMSの臨床試験は2027年開始予定。ABCL992、ABCL385、ABCL646はIND準備段階。635と992の重複価値を足さない。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C3",
+      "statement": "提携一時金、研究収益、政府支援と開発支出を追う。未使用政府枠を自由現金と混同しない。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "ABCL 2026年3Q決算公式発表",
+      "publisher": "AbCellera Biologics Inc.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1703057/000170305726000058/q32026earningspressrelease.htm",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-27T05:39:48.303269+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "FINANCIAL",
+        "BUSINESS",
+        "PRODUCT",
+        "COMPETITION",
+        "FUNDING",
+        "RISKS",
+        "ASSETS",
+        "MODEL",
+        "SIGNAL",
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "ABCL 2026年3Q Form 10-Q",
+      "publisher": "AbCellera Biologics Inc. / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1703057/000170305726000059/abcl-20260930.htm",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-27T05:39:48.303269+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "FINANCIAL",
+        "BUSINESS",
+        "PRODUCT",
+        "COMPETITION",
+        "FUNDING",
+        "RISKS",
+        "SHARES",
+        "ASSETS",
+        "MODEL",
+        "BUDGET",
+        "SIGNAL",
+        "RUNWAY",
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "ABCL Yahoo Finance日足・価格",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ABCL?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T05:39:48.303269+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "AbCellera 2025年Form 10-K（創業・企業概要）",
+      "publisher": "AbCellera / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1703057/000170305726000012/abcl-20251231.htm",
+      "published_at": "2026-02-24",
+      "accessed_at": "2026-11-27T14:35:38.945938+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "抗体医薬候補を探索・開発する。提携契約から研究費、契約一時金、将来のマイルストーン・ロイヤルティを得る。自社候補の臨床開発にも投資する。提携一時金受領と売上計上は時点が異なる。",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "FINANCIAL"
+      ],
+      "sec2": [
+        "BUSINESS",
+        "COMPETITION"
+      ],
+      "sec3": [
+        "PRODUCT"
+      ],
+      "sec4": [
+        "FUNDING",
+        "RISKS",
+        "RUNWAY"
+      ],
+      "sec5": [
+        "COMPETITION"
+      ],
+      "sec6": [
+        "PRODUCT",
+        "FINANCIAL"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISKS"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S4"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "RNPV",
+    "method_explanation": "2027年末からの資産別成功時税後CFを割引し、適応別成功確率を1回乗じて残存開発費を控除。2027年末の自由現金を加え、借入・その他請求権を控除。必要ならオプション行使現金と株式を同時反映する。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.3,
+        "enterprise_value": 191473494.1207021,
+        "equity_value": 453300081.640702,
+        "diluted_shares": 364499709.0,
+        "price": 1.2436226160079102,
+        "conditions": [
+          "2027年末評価。主要資産成功確率18%、CF倍率0.7、割引率14%。残存開発費PV180百万USD。",
+          "2027年末まで純支出350百万USD、新規借入0百万USD、その他請求権控除176.5百万USD。期末自由現金414.424百万USD、負債0.000百万USD。",
+          "追加報酬5百万株。行使現金23.903百万USDを株式追加と同時反映。開発の成功・融資・採用は確約されない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "ASSETS",
+          "BUDGET",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 1024306392.1256793,
+        "equity_value": 1434361979.6456792,
+        "diluted_shares": 363499709.0,
+        "price": 3.945978343673665,
+        "conditions": [
+          "2027年末評価。主要資産成功確率40%、CF倍率1、割引率12%。残存開発費PV240百万USD。",
+          "2027年末まで純支出300百万USD、新規借入0百万USD、その他請求権控除78.271百万USD。期末自由現金464.424百万USD、負債0.000百万USD。",
+          "追加報酬4百万株。行使現金23.903百万USDを株式追加と同時反映。開発の成功・融資・採用は確約されない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "ASSETS",
+          "BUDGET",
+          "SHARES"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.25,
+        "enterprise_value": 2889404462.961236,
+        "equity_value": 3639633569.501236,
+        "diluted_shares": 406599028.0,
+        "price": 8.95140745270359,
+        "conditions": [
+          "2027年末評価。主要資産成功確率60%、CF倍率1.5、割引率10%。残存開発費PV300百万USD。",
+          "2027年末まで純支出250百万USD、新規借入0百万USD、その他請求権控除78.271百万USD。期末自由現金514.424百万USD、負債0.000百万USD。",
+          "追加報酬3百万株。行使現金314.076百万USDを株式追加と同時反映。開発の成功・融資・採用は確約されない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "ASSETS",
+          "BUDGET",
+          "SHARES"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 4.386628902631419,
+      "expected_delta_pct": -58.57763075891012,
+      "raw_band_position_pct": 121.25892953699618,
+      "display_band_position_pct": 100.0,
+      "endpoint_rr": null,
+      "market_score": 100,
+      "own_score": 41,
+      "supplemental_score": 0
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "未承認資産に大きく依存し、推定CF・成功確率・希薄化に敏感。",
+      "臨床・規制と上市の成否で価値が大きく変わる。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "主要資産成功確率",
+        "low": 0.30000000000000004,
+        "base": 0.4,
+        "high": 0.5,
+        "result_prices": [
+          3.115300813584108,
+          3.945978343673665,
+          4.776655873763222
+        ]
+      },
+      {
+        "variable": "割引率",
+        "low": 0.1,
+        "base": 0.12,
+        "high": 0.14,
+        "result_prices": [
+          4.423801540159657,
+          3.945978343673665,
+          3.5366850779809127
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "ABCL635の後期開発準備",
+        "category": "REGULATORY",
+        "status": "WINDOWED",
+        "importance": 5,
+        "date": {
+          "display_text": "2027年・会社予定",
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "precision": "YEAR",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "会社は2027年にVMSの後期開発開始を見込む。米国IND受理・試験設計の確定を別途確認する。",
+        "mechanism": [
+          "規制・臨床・資金の進捗",
+          "成功確率・費用・将来CF",
+          "株主価値と希薄化後1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "期待以上：規制・臨床の情報を主資産の成功確率へ反映する当方条件。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              4.568986491240832,
+              4.984325256285611
+            ],
+            "price_change_pct_range": [
+              -56.85565164078534,
+              -52.93366141373361
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。主資産の成功確率を47.5～52.5%へ変更。他資産の確率とCF・費用・株式条件は標準に固定。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "ほぼ想定どおり：規制・臨床の情報を主資産の成功確率へ反映する当方条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              3.7383089611512754,
+              4.153647726196055
+            ],
+            "price_change_pct_range": [
+              -64.6996320948888,
+              -60.777641867837076
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。主資産の成功確率を37.5～42.5%へ変更。他資産の確率とCF・費用・株式条件は標準に固定。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "期待外れ・遅延：規制・臨床の情報を主資産の成功確率へ反映する当方条件。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              2.9076314310617195,
+              3.322970196106498
+            ],
+            "price_change_pct_range": [
+              -72.54361254899226,
+              -68.62162232194054
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。主資産の成功確率を27.5～32.5%へ変更。他資産の確率とCF・費用・株式条件は標準に固定。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新公式の開発・資金計画を確認。"
+          ],
+          "evidence_against": [
+            "ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。"
+          ],
+          "caveats": [
+            "臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。",
+            "missing_information": [
+              "適応別の承認範囲・ネット価格・普及率",
+              "残存開発費と提携経済条件"
+            ],
+            "next_checks": [
+              "公式な試験設計・データ・承認判断",
+              "資金支出と希薄化・商業化費用"
+            ],
+            "recalculation_method": "適応別のCFと必要資金が判明したら、同じ割引率・株式基準で材料除外価値と追加価値を比較して逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "試験設計・主要評価項目・安全性",
+          "規制受理・追加試験・審査範囲",
+          "現金支出・希薄化・必要資金"
+        ],
+        "sell_the_news_risk": "良い結果でも事前期待を超えない場合や追加費用が判明する場合は株主価値が下がり得る。",
+        "financing_risk": "8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。",
+        "update_triggers": [
+          "公式な開発・規制予定の変更",
+          "安全性・主要評価項目の新情報",
+          "融資・支出・株式発行条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C1",
+          "MODEL",
+          "BUDGET"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "VMS適応拡大・新規候補のIND準備",
+        "category": "R_AND_D",
+        "status": "WINDOWED",
+        "importance": 4,
+        "date": {
+          "display_text": "2027年・会社予定",
+          "start_date": "2027-01-01",
+          "end_date": "2027-12-31",
+          "precision": "YEAR",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "乳がん・前立腺がん治療に伴うVMSの臨床試験は2027年開始予定。ABCL992、ABCL385、ABCL646はIND準備段階。635と992の重複価値を足さない。",
+        "mechanism": [
+          "規制・臨床・資金の進捗",
+          "成功確率・費用・将来CF",
+          "株主価値と希薄化後1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "期待以上：VMSの適応・普及の見通しを635成功時CF幅へ反映する当方条件。IND準備だけで承認成功としない。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              4.195181602700533,
+              4.361317108718443
+            ],
+            "price_change_pct_range": [
+              -60.385442845131884,
+              -58.81664675431121
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。ABCL635の成功時CFを標準の1.075～1.125倍へ変更。確率・割引率・費用・株式条件は固定。新規IND候補の別価値は加算しない。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "ほぼ想定どおり：VMSの適応・普及の見通しを635成功時CF幅へ反映する当方条件。IND準備だけで承認成功としない。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              3.8629105906647085,
+              4.029046096682619
+            ],
+            "price_change_pct_range": [
+              -63.523035026773286,
+              -61.9542389359526
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。ABCL635の成功時CFを標準の0.975～1.025倍へ変更。確率・割引率・費用・株式条件は固定。新規IND候補の別価値は加算しない。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "期待外れ・遅延：VMSの適応・普及の見通しを635成功時CF幅へ反映する当方条件。IND準備だけで承認成功としない。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              3.530639578628886,
+              3.696775084646798
+            ],
+            "price_change_pct_range": [
+              -66.66062720841468,
+              -65.09183111759398
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。ABCL635の成功時CFを標準の0.875～0.925倍へ変更。確率・割引率・費用・株式条件は固定。新規IND候補の別価値は加算しない。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新公式の開発・資金計画を確認。"
+          ],
+          "evidence_against": [
+            "ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。"
+          ],
+          "caveats": [
+            "臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。",
+            "missing_information": [
+              "適応別の承認範囲・ネット価格・普及率",
+              "残存開発費と提携経済条件"
+            ],
+            "next_checks": [
+              "公式な試験設計・データ・承認判断",
+              "資金支出と希薄化・商業化費用"
+            ],
+            "recalculation_method": "適応別のCFと必要資金が判明したら、同じ割引率・株式基準で材料除外価値と追加価値を比較して逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "試験設計・主要評価項目・安全性",
+          "規制受理・追加試験・審査範囲",
+          "現金支出・希薄化・必要資金"
+        ],
+        "sell_the_news_risk": "良い結果でも事前期待を超えない場合や追加費用が判明する場合は株主価値が下がり得る。",
+        "financing_risk": "8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。",
+        "update_triggers": [
+          "公式な開発・規制予定の変更",
+          "安全性・主要評価項目の新情報",
+          "融資・支出・株式発行条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C2",
+          "MODEL",
+          "BUDGET"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "提携収益・資金と開発費",
+        "category": "FINANCING",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／決算ごと",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "COMPANY_GUIDANCE",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "提携一時金、研究収益、政府支援と開発支出を追う。未使用政府枠を自由現金と混同しない。",
+        "mechanism": [
+          "規制・臨床・資金の進捗",
+          "成功確率・費用・将来CF",
+          "株主価値と希薄化後1株価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "期待以上：開発・事業化準備の純支出と資金効率が標準より改善・維持・悪化する当方条件。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              4.000999020457756,
+              4.0560196972418465
+            ],
+            "price_change_pct_range": [
+              -62.2190838483687,
+              -61.699530715374436
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年末までの純支出を260～280百万USDへ変更。他の確率・CF・残存費・借入・株式は標準固定。追加借入は現金と負債を同額計上し、その受領だけで価値を増やさない。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "ほぼ想定どおり：開発・事業化準備の純支出と資金効率が標準より改善・維持・悪化する当方条件。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              3.91846800528162,
+              3.9734886820657103
+            ],
+            "price_change_pct_range": [
+              -62.99841354786005,
+              -62.478860414865814
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年末までの純支出を290～310百万USDへ変更。他の確率・CF・残存費・借入・株式は標準固定。追加借入は現金と負債を同額計上し、その受領だけで価値を増やさない。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "期待外れ・遅延：開発・事業化準備の純支出と資金効率が標準より改善・維持・悪化する当方条件。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              3.8359369901054836,
+              3.8909576668895745
+            ],
+            "price_change_pct_range": [
+              -63.77774324735144,
+              -63.258190114357184
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き試算。2027年末までの純支出を320～340百万USDへ変更。他の確率・CF・残存費・借入・株式は標準固定。追加借入は現金と負債を同額計上し、その受領だけで価値を増やさない。短期反応や市場の真の成功確率ではない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "承認、臨床、資金は同じ資産の価値を共有し個別の利益増分を分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "同じ資産別CF、成功確率、費用と株式計算を条件別に置換して再評価するため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "独立した市場予想のイベント前後改定値を同じ基準で確保していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "臨床・決算・資金ニュースを分離した十分な比較標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同じ薬効・開発段階・資本構成を揃えた異常リターン標本がないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "最新公式の開発・資金計画を確認。"
+          ],
+          "evidence_against": [
+            "ABCL635の臨床・規制への集中、米国INDの追加要求、後期試験費、資産価値の不確実性、株式報酬とオプション希薄化。ABCL575の停止方針を好材料として残さない。"
+          ],
+          "caveats": [
+            "臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "臨床・承認・上市・資金は同じ開発資産のCFを共有するため、個別材料を除いた企業価値を一次開示だけで切り分けられない。",
+            "missing_information": [
+              "適応別の承認範囲・ネット価格・普及率",
+              "残存開発費と提携経済条件"
+            ],
+            "next_checks": [
+              "公式な試験設計・データ・承認判断",
+              "資金支出と希薄化・商業化費用"
+            ],
+            "recalculation_method": "適応別のCFと必要資金が判明したら、同じ割引率・株式基準で材料除外価値と追加価値を比較して逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "試験設計・主要評価項目・安全性",
+          "規制受理・追加試験・審査範囲",
+          "現金支出・希薄化・必要資金"
+        ],
+        "sell_the_news_risk": "良い結果でも事前期待を超えない場合や追加費用が判明する場合は株主価値が下がり得る。",
+        "financing_risk": "8月公募は普通株17,435,897株と前払ワラント3,076,926株、純調達188.824百万ドル。9月末まで前払ワラント未行使。11月4日普通株326,617,896株。会社は既存流動性・政府支援で少なくとも今後36か月の運転資金・設備投資を賄える見込みと説明。政府支援の未使用枠を現金へ加算しない。",
+        "update_triggers": [
+          "公式な開発・規制予定の変更",
+          "安全性・主要評価項目の新情報",
+          "融資・支出・株式発行条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "C3",
+          "MODEL",
+          "BUDGET"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "同じ開発資産の臨床・規制・資金",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じ薬剤・資産の価値を1回評価し、段階イベントや個別価格幅を足さない。",
+        "full_success_incremental_equity_value": 3186333487.8605337
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        100,
+        100
+      ],
+      "raw_implied_pct": 110.05557113527055,
+      "all_events_excluded_equity_value": 453300081.640702,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "共通資産価値の悲観・楽観株主価値を端点として、(現在推定時価総額−悲観株主価値)÷両端点差を計算。表示±10ポイントは統計区間ではない。現在の自己株式方式株式と将来の行使現金・希薄化が異なるため、価格帯位置と株主価値端点の期待割合は一致しない。逆算の生値110.1%は0～100%外。市場は今回の楽観端点以外の価値・リスクを見ている可能性があり、端点仮定を要再確認。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "ABCL635の後期開発準備",
+        "frequency": "公式発表・各決算時",
+        "update_trigger": "予定・データ・資金条件の変更",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "VMS適応拡大・新規候補のIND準備",
+        "frequency": "公式発表・各決算時",
+        "update_trigger": "予定・データ・資金条件の変更",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "提携収益・資金と開発費",
+        "frequency": "公式発表・各決算時",
+        "update_trigger": "予定・データ・資金条件の変更",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T05:39:48.303269+00:00",
+    "messages": [
+      "将来CF・成功確率・価格・費用は会社予想ではなく当方仮定。",
+      "資金見通し・潜在株と希薄化には期間差・条件がある。",
+      "個別イベントの割合は分離せず共通資産を1回評価。表示±10ポイントは統計区間ではない。現在の自己株式方式株式と将来の行使現金・希薄化が異なるため、価格帯位置と株主価値端点の期待割合は一致しない。逆算の生値110.1%は0～100%外。市場は今回の楽観端点以外の価値・リスクを見ている可能性があり、端点仮定を要再確認。"
+    ]
+  }
+}

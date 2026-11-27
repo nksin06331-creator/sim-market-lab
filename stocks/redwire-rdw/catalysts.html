@@ -34,47 +34,51 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
 </head>
 
 <body data-stock-ticker="RDW" data-price-source="../../data/prices.json">
-
+<!--
+  SiM MARKET LAB / CATALYST TEMPLATE v1.0
+  CSSと骨格は変更せず、{{ }} の値と指定された動的ブロックだけを置換する。
+  ライブ更新対象は現在株価のみ。分析値は評価基準日時点で固定する。
+-->
 
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / CATALYST WATCH</div>
     <h1>レッドワイヤー <small>RDW</small></h1>
-    <div class="sub">NYSE｜評価基準日 2026-09-30｜最終更新 2026-09-30</div>
+    <div class="sub">NYSE／USD｜評価基準日 2026-11-27｜最終更新 2026-11-27</div>
 
     <div class="verdict">
       <div class="verdict-main">
         <span class="pill">今後の材料を先読み</span>
-        <div class="status">重要材料が集中</div>
-        <p>NITE-STAR個別受注、Stalker UAS、SpaceMD商業ミッション、Q3採算改善が今後の主な材料です。</p>
-        <p class="sub">足りない情報は仮定を置き、主要材料の織り込み度を54%と推定します。</p>
+        <div class="status">最新開示に基づき条件を再点検</div>
+        <p>過去の完了済み発表と、今後の引渡し・稼働・資金を分けて確認します。</p>
+        <p class="sub">同じ事業価値に重なる3材料を1グループとして扱い、価格幅や個別割合は足しません。</p>
       </div>
       <div class="priced-score">
         <small>今の株価に入っている期待（推定）</small>
-        <b>54%</b>
-        <small>主要材料の推定織り込み｜推定の確かさ ふつう</small>
+        <b>0～14%</b>
+        <small>共通運営価値の条件付き推定｜推定の確かさ 低い</small>
       </div>
     </div>
 
     <div class="kpis">
       <div class="kpi">
         <span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span>
-        <b data-live-price>$10.73</b>
-        <small data-live-price-date>2026/09/29終値（分析基準値）</small>
+        <b data-live-price>$5.89</b>
+        <small data-live-price-date>2026-11-25T21:00:02+00:00（分析基準値）</small>
       </div>
       <div class="kpi">
         <span>次の主要カタリスト</span>
-        <b>NITE-STAR個別受注とQ3決算</b>
-        <small>2026年後半</small>
+        <b>Space・Defense Tech受注の引渡し</b>
+        <small>進行中／各四半期</small>
       </div>
       <div class="kpi">
         <span>日程の確度</span>
-        <b>一部確定</b>
+        <b>確定日未公表を含む</b>
         <small>確定日・会社目標・当方推定を分離</small>
       </div>
       <div class="kpi">
         <span>掲載カタリスト</span>
-        <b>4件</b>
+        <b>3件</b>
         <small>今後18か月＋重要な長期材料</small>
       </div>
     </div>
@@ -87,7 +91,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   </div>
 </header>
 
-
+<div class="wrap"><p class="notice">将来の売上・倍率・確率・株式数・資金条件は当方仮定です。会社予想や真の成功確率と区別してください。固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]</p></div>
 
 
 <nav class="report-nav">
@@ -106,23 +110,23 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
   <section class="grid-2" id="priced-in">
     <div class="card">
       <h2>今の株価、どこまで期待済み？</h2>
-      <div class="priced"><div class="priced-head"><span>主要材料の推定織り込み</span><b>54%</b></div><p>仮定：Q2売上急伸の持続を60%、UAS注文拡大を55%、SpaceMDの中期価値を35%、内部統制改善を45%として置き、重複を控除しました。</p><p>読み方：防衛UASと売上成長はかなり評価されていますが、赤字、統合、内部統制の不安も残るため、織り込みは中程度です。</p><p>次に見る数字：売上、粗利率、Adjusted EBITDA、受注残、Stalker注文です。</p><p>再計算方法：売上、倍率、株式数、ネットデットを分け、株価シナリオと同じ売上倍率モデルで更新します。</p></div>
-      <p class="small">計算方法：未確定情報に仮定確率を置き、Q3決算、UAS注文、SpaceMD、内部統制を標準ケース価値へ重み付けして推定。</p>
-      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-09-30時点で固定されます。</p>
+      <div class="priced"><div class="priced-head"><b>0～14%</b><span>このレポートの条件付き推定</span></div><p>逆算中心4.3%。真の成功確率ではありません。</p><p>全体期待は標準の現金・負債条件を固定し、悲観側・楽観側の運営価値端点で逆算。個別イベント割合の平均ではない。±10ポイントは主観的な表示幅で統計区間ではない。株式数と資金条件を変える3ケース価格帯とは異なる。</p></div>
+      <p class="small">計算方法：標準資金条件を固定した共通運営価値の端点逆算。現在推定株主価値から失敗側価値を引き、成功増分価値で割る。</p>
+      <p class="notice"><b>注意：</b>期待がどれだけ株価に入っているかは推定です。この分析値は2026-11-27時点で固定されます。</p>
     </div>
     <div class="card">
       <h2>予想との差が株価を動かす</h2>
       <div class="surprise">
         <b class="up">上方サプライズの条件</b>
-        <p>Q3で増収と採算改善が両立し、NITE-STAR個別受注やUAS追加注文が続くことです。</p>
+        <p>引渡し・稼働・回収・資金が揃い、当方標準売上と利益の条件を上回る。</p>
       </div>
       <div class="surprise">
         <b class="down">下方サプライズの条件</b>
-        <p>Q3で損失拡大、粗利率悪化、統合遅延、希薄化が見えることです。</p>
+        <p>遅延、費用超過、回収難または不利な調達条件で、成長しても1株価値が伸びない。</p>
       </div>
       <div class="surprise">
         <b class="flat">最大リスク</b>
-        <p>売上急伸だけが先に評価され、利益率や統合リスクが後から嫌気される可能性です。</p>
+        <p>固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]</p>
       </div>
     </div>
   </section>
@@ -131,72 +135,28 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>これから何が、いつ起きる？</h2>
     <p class="lead">確定日を優先し、会社目標と当方推定は分けて表示します。</p>
     <div class="timeline">
-      <div class="time-row"><div class="time-date">2026年11月ごろ</div><div class="time-dot"></div><div class="time-body"><b>Q3決算</b><p>増収継続、粗利率、調整後EBITDA、受注残を確認します。</p><div class="time-meta"><span class="chip blue">時期目安</span></div></div></div><div class="time-row"><div class="time-date">2026後半</div><div class="time-dot"></div><div class="time-body"><b>NITE-STAR・UAS個別受注</b><p>契約枠からのタスク注文とStalker関連の追加受注を確認します。</p><div class="time-meta"><span class="chip">継続材料</span></div></div></div><div class="time-row"><div class="time-date">2026-2028</div><div class="time-dot"></div><div class="time-body"><b>SpaceMD商業化</b><p>提携、施設稼働、収益化の道筋を確認します。</p><div class="time-meta"><span class="chip blue">長期</span></div></div></div>
+      <div class="time-row"><div class="time-date">条件付き</div><div class="time-dot"></div><div class="time-body"><b>Space・Defense Tech受注の引渡し</b><p>進行中／各四半期</p></div></div><div class="time-row"><div class="time-date">条件付き</div><div class="time-dot"></div><div class="time-body"><b>無人機・防衛技術の増産と統合</b><p>進行中／個別確定日なし</p></div></div><div class="time-row"><div class="time-date">条件付き</div><div class="time-dot"></div><div class="time-body"><b>営業CF・株式数・資本効率</b><p>進行中／決算・資金調達開示時</p></div></div>
     </div>
   </section>
 
   <section id="details">
     <div class="card">
       <h2>今後の予定を1件ずつ確認</h2>
-      <p class="lead">どのような材料かを確認し、その結果になった場合に株価がどの程度動きやすいかを見ます。</p>
+      <p class="lead">結果の良し悪しではなく、市場予想との差と企業価値への伝わり方を見ます。</p>
     </div>
-    <article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Q3決算と採算改善</h3><div class="chips"><span class="chip">重要度5</span><span class="chip blue">時期目安</span></div></div><div class="date-box"><b>2026年11月ごろ</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">Q3決算は、Q2の売上急伸が継続し、利益改善まで伴うかを見る材料です。赤字や希薄化の不安が残るため、売上だけでなく粗利率、Adjusted EBITDA、現金も重要です。</p>
-<div class="mechanism"><span>売上・粗利率</span><i>→</i><span>倍率</span><i>→</i><span>株価</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+18〜40%</div><p>増収継続に加え、粗利率、受注残、Adjusted EBITDAも改善する状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-8〜+12%</div><p>売上は強いが、利益率と損失の改善は段階的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-22〜-42%</div><p>増収率の鈍化、粗利率悪化、赤字拡大のいずれかが嫌気される状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>Q2の大幅増収が利益改善へつながるかを確認する材料で、売上倍率と赤字見通しを直接動かすため最大級です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>Q2売上$117.1M、前年比+89.6%でした。</li><li>Q2粗利率27.8%、調整後EBITDAはマイナス$3.2Mでした。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>粗利率低下</li><li>受注残の伸び鈍化</li><li>内部統制の是正遅延</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>Stalker UASと防衛注文</h3><div class="chips"><span class="chip">重要度5</span><span class="chip">継続確認</span></div></div><div class="date-box"><b>2026年後半</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">Stalker UASと防衛注文は、Redwireの防衛ドローン事業が継続的な受注基盤になるかを見る材料です。追加注文、納入能力、採算がそろうと成長期待が強まります。</p>
-<div class="mechanism"><span>追加注文</span><i>→</i><span>受注残</span><i>→</i><span>売上成長</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+15〜35%</div><p>PAE RASや軍向け注文が継続し、納入能力も確認される状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+12%</div><p>追加注文は続くが、売上認識と利益貢献は段階的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-18〜-35%</div><p>注文減速、納入遅延、採算悪化が見える状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>防衛UASは成長期待の中心ですが、受注から売上・利益まで時間差があるため決算より少し小さめです。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>2026年4月、Stalker UAS向け$20Mフォローオン注文を発表。</li><li>Edge Autonomy統合で防衛事業がRedwireブランドへ移行。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>粗利率低下</li><li>受注残の伸び鈍化</li><li>内部統制の是正遅延</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>SpaceMDと宇宙医薬品施設</h3><div class="chips"><span class="chip amber">重要度3</span><span class="chip blue">長期テーマ</span></div></div><div class="date-box"><b>2026-2028</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">SpaceMDは宇宙環境を使った医薬品研究・製造の長期テーマです。話題性はありますが、短期売上への寄与はまだ限定的なので、顧客や商業化の具体化を確認します。</p>
-<div class="mechanism"><span>施設</span><i>→</i><span>実験</span><i>→</i><span>商業化</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+6〜18%</div><p>顧客・提携・収益化の道筋が具体化し、宇宙医薬品テーマが再評価される状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-4〜+6%</div><p>施設拡張と実験は進むが、売上寄与はまだ限定的な状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-8〜-18%</div><p>商業化が遅れ、テーマだけが先行したと見られる状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>長期テーマで短期業績への寄与が限定的なため、影響レンジは小さくしています。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>Indiana施設の開設で宇宙医薬品R&D・製造を強化。</li><li>SpaceMDを商業化テーマとして展開。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>粗利率低下</li><li>受注残の伸び鈍化</li><li>内部統制の是正遅延</li></ul></div></div>
-</article><article class="catalyst-card">
-<div class="catalyst-head"><div><span class="pill">重要材料</span><h3>内部統制と買収統合の改善</h3><div class="chips"><span class="chip">重要度4</span><span class="chip blue">継続確認</span></div></div><div class="date-box"><b>2026-2027</b><span>会社公表またはイベント期間</span></div></div>
-<p class="lead">内部統制と買収統合は、会社の数字を信頼して評価できるかに関わる材料です。売上を直接増やすものではありませんが、改善すれば評価倍率の重しが軽くなります。</p>
-<div class="mechanism"><span>統合改善</span><i>→</i><span>信頼性</span><i>→</i><span>倍率</span></div>
-<div class="outcomes">
-<div class="outcome success"><b>期待以上</b><div class="impact up">+8〜22%</div><p>重要な不備の是正が進み、買収事業の管理と開示信頼性が改善する状態です。</p></div>
-<div class="outcome inline"><b>ほぼ想定どおり</b><div class="impact flat">-6〜+8%</div><p>是正計画は進むが、完全解消には時間がかかる状態です。</p></div>
-<div class="outcome failure"><b>期待外れ・遅延</b><div class="impact down">-15〜-30%</div><p>是正遅延や追加問題が出て、評価倍率が下がる状態です。</p></div>
-</div>
-<p class="notice"><b>この％にした理由：</b>評価倍率の信頼性に効く材料ですが、売上を直接増やすものではないため中程度です。</p>
-<div class="evidence"><div><h4>根拠</h4><ul><li>2025年10-Kで内部統制の重要な不備と是正計画を説明。</li><li>Edge Autonomy統合が事業構造の中心課題です。</li></ul></div><div><h4>反証・先行指標</h4><ul><li>粗利率低下</li><li>受注残の伸び鈍化</li><li>内部統制の是正遅延</li></ul></div></div>
-</article><p class="small">※下の％は、この結果が出た後に市場が材料を評価し直した場合の上昇・下落幅の目安です。実際の値動きは地合い、直前の株価上昇、同時ニュースで変わります。</p>
+    <article class="catalyst-card"><div class="catalyst-head"><h3>Space・Defense Tech受注の引渡し</h3><span class="chip">重要度5</span></div><div class="date-box"><b>進行中／各四半期</b></div><p>受注残619.7百万USDを売上と回収へ転換。納期、粗利率、在庫・契約資産を確認。</p><p>結果は当方標準モデルとの条件比較です。市場期待との差を実測したものではなく、個別イベント確率も表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$9.28～$10.44</div><p>基準価格比 +57.5%～+77.3%</p><p>当方標準を上回る売上・引渡し・回収と資金条件が成立。</p><p>このレポートの条件付き再評価。年売上735～840百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$8.11～$9.28</div><p>基準価格比 +37.7%～+57.5%</p><p>当方標準近辺の稼働・利益・資金条件。</p><p>このレポートの条件付き再評価。年売上630～735百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$6.94～$8.11</div><p>基準価格比 +17.9%～+37.7%</p><p>遅延・コスト・回収または資金条件が標準を下回る。</p><p>このレポートの条件付き再評価。年売上525～630百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。</p><p>足りない情報：案件ごとの売上・利益・純資金需要、個別成功に必要な追加株式と調達条件</p><p>次に見る数字：公式な引渡し・稼働・会社見通し、現金・借入・株式発行と回収</p><p>再計算方法：案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典：S1、S2</p><p>会社は2026年通期売上450～500百万USDを維持。9月末受注残619.666百万USD、3Q受注188.7百万USD、book-to-bill1.73。売上計上には履行条件がある。[S1,S2] 固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]</p><p>資金条件：将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。</p><p>材料出尽くし：良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。</p><p>先行指標：売上と営業利益率、設備・契約の引渡しと回収、現金・借入・株式数</p><p>更新条件：公式な会社見通し・日程変更、追加資金調達・契約の条件変更、現金回収・利益率の変化</p></p></details><details><summary>5手法の検討</summary><p><ul><li>企業価値差分：適用外。個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。</li><li>共通条件付き再評価：採用。共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。</li><li>市場予想改定：適用外。同時点の独立した市場予想改定データを取得していないため。</li><li>同社イベント比較：適用外。発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。</li><li>同業イベント比較：適用外。同じ資本構成・事業範囲・条件の他社標本を検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>無人機・防衛技術の増産と統合</h3><span class="chip">重要度5</span></div><div class="date-box"><b>進行中／個別確定日なし</b></div><p>製造能力と顧客採用が進み、統合費用を吸収して利益へつながるか。</p><p>結果は当方標準モデルとの条件比較です。市場期待との差を実測したものではなく、個別イベント確率も表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$9.28～$10.44</div><p>基準価格比 +57.5%～+77.3%</p><p>当方標準を上回る売上・引渡し・回収と資金条件が成立。</p><p>このレポートの条件付き再評価。年売上735～840百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$8.11～$9.28</div><p>基準価格比 +37.7%～+57.5%</p><p>当方標準近辺の稼働・利益・資金条件。</p><p>このレポートの条件付き再評価。年売上630～735百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$6.94～$8.11</div><p>基準価格比 +17.9%～+37.7%</p><p>遅延・コスト・回収または資金条件が標準を下回る。</p><p>このレポートの条件付き再評価。年売上525～630百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。</p><p>足りない情報：案件ごとの売上・利益・純資金需要、個別成功に必要な追加株式と調達条件</p><p>次に見る数字：公式な引渡し・稼働・会社見通し、現金・借入・株式発行と回収</p><p>再計算方法：案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典：S1、S2</p><p>会社は2026年通期売上450～500百万USDを維持。9月末受注残619.666百万USD、3Q受注188.7百万USD、book-to-bill1.73。売上計上には履行条件がある。[S1,S2] 固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]</p><p>資金条件：将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。</p><p>材料出尽くし：良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。</p><p>先行指標：売上と営業利益率、設備・契約の引渡しと回収、現金・借入・株式数</p><p>更新条件：公式な会社見通し・日程変更、追加資金調達・契約の条件変更、現金回収・利益率の変化</p></p></details><details><summary>5手法の検討</summary><p><ul><li>企業価値差分：適用外。個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。</li><li>共通条件付き再評価：採用。共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。</li><li>市場予想改定：適用外。同時点の独立した市場予想改定データを取得していないため。</li><li>同社イベント比較：適用外。発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。</li><li>同業イベント比較：適用外。同じ資本構成・事業範囲・条件の他社標本を検証していないため。</li></ul></p></details></article><article class="catalyst-card"><div class="catalyst-head"><h3>営業CF・株式数・資本効率</h3><span class="chip">重要度4</span></div><div class="date-box"><b>進行中／決算・資金調達開示時</b></div><p>現金増が発行によるものか本業回収によるものかを区別。株式報酬と追加発行を監視。</p><p>結果は当方標準モデルとの条件比較です。市場期待との差を実測したものではなく、個別イベント確率も表示していません。</p><div class="outcomes"><div class="outcome"><h4>期待以上</h4><div class="impact">$9.28～$10.44</div><p>基準価格比 +57.5%～+77.3%</p><p>当方標準を上回る売上・引渡し・回収と資金条件が成立。</p><p>このレポートの条件付き再評価。年売上735～840百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>ほぼ想定どおり</h4><div class="impact">$8.11～$9.28</div><p>基準価格比 +37.7%～+57.5%</p><p>当方標準近辺の稼働・利益・資金条件。</p><p>このレポートの条件付き再評価。年売上630～735百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div><div class="outcome"><h4>期待外れ・遅延</h4><div class="impact">$6.94～$8.11</div><p>基準価格比 +17.9%～+37.7%</p><p>遅延・コスト・回収または資金条件が標準を下回る。</p><p>このレポートの条件付き再評価。年売上525～630百万USD、倍率3倍、現金350百万・負債等50百万USD、株式270百万で計算。個別材料の単独影響や短期反応率ではなく、3材料で共有する標準モデルの条件幅。</p></div></div><div class="priced unknown"><b>個別の期待割合は出していません</b><p>理由：契約、稼働、資金は同じ事業価値に重なり、個別イベントを除いた利益価値を一次開示から分離できない。</p><p>足りない情報：案件ごとの売上・利益・純資金需要、個別成功に必要な追加株式と調達条件</p><p>次に見る数字：公式な引渡し・稼働・会社見通し、現金・借入・株式発行と回収</p><p>再計算方法：案件別の売上と利益、純資金需要が判明した段階で同一の企業価値式へ入れ、案件を除く場合と加える場合の差分で逆算する。</p></div><details><summary>根拠・反証・資金・更新条件</summary><p><p>出典：S1、S2</p><p>会社は2026年通期売上450～500百万USDを維持。9月末受注残619.666百万USD、3Q受注188.7百万USD、book-to-bill1.73。売上計上には履行条件がある。[S1,S2] 固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]</p><p>資金条件：将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。</p><p>材料出尽くし：良い発表でも標準条件を超えなければ、費用や希薄化で株主価値が下がる可能性。一定の下落率は置かない。</p><p>先行指標：売上と営業利益率、設備・契約の引渡しと回収、現金・借入・株式数</p><p>更新条件：公式な会社見通し・日程変更、追加資金調達・契約の条件変更、現金回収・利益率の変化</p></p></details><details><summary>5手法の検討</summary><p><ul><li>企業価値差分：適用外。個別案件の価値差分を他の案件や資金調達から独立に切り出せないため。</li><li>共通条件付き再評価：採用。共通の売上・倍率・現金負債・株式数へ条件を反映し再計算できるため。</li><li>市場予想改定：適用外。同時点の独立した市場予想改定データを取得していないため。</li><li>同社イベント比較：適用外。発表に決算や調達等が重なり同社単独イベントの異常リターンを分離していないため。</li><li>同業イベント比較：適用外。同じ資本構成・事業範囲・条件の他社標本を検証していないため。</li></ul></p></details></article>
   </section>
 
   <section class="card" id="dependencies">
     <h2>予定のつながりと二重計算防止</h2>
     <p class="lead">同じ製品・契約・工場の段階イベントは、単純に足し算しません。</p>
-    <div class="signal"><div><b>Q3採算と倍率</b><span class="up">直結</span></div><p>売上だけでなく利益率が強いほど倍率を支えます。</p></div><div class="signal"><div><b>UAS受注とDefense</b><span class="up">連動</span></div><p>追加注文が受注残と将来売上へつながります。</p></div><div class="signal"><div><b>内部統制と信頼性</b><span class="down">注意</span></div><p>是正が遅れると評価倍率の重しになります。</p></div>
+    <p>契約・開発/稼働・資金は同じ事業の成立条件。共通運営価値を1回のみ評価します。個別価格幅・割合は加算しません。</p><p>全体割合は標準の現金負債条件を固定。3ケース価格は資金・株式数や買収事業範囲が変わるため、価格位置と全体逆算値が異なります。</p>
   </section>
 
   <section class="card" id="watch">
     <h2>次に確認する数字</h2>
     <p class="lead">結果発表を待つだけでなく、前提が変わる先行指標を追います。</p>
-    <div class="signal"><div><b>Q3粗利率</b><span class="up">最重要</span></div><p>売上成長が利益へ変わっているかを見ます。</p></div><div class="signal"><div><b>受注残</b><span class="up">重要</span></div><p>Q2の$542.1Mから増えたか確認します。</p></div><div class="signal"><div><b>NITE-STAR個別注文</b><span class="up">重要</span></div><p>契約上限額ではなく、実際のタスク注文額を確認します。</p></div>
+    <div class="signal"><div><b>Space・Defense Tech受注の引渡し</b></div><p>各決算・公式開示時：受注残619.7百万USDを売上と回収へ転換。納期、粗利率、在庫・契約資産を確認。</p></div><div class="signal"><div><b>無人機・防衛技術の増産と統合</b></div><p>各決算・公式開示時：製造能力と顧客採用が進み、統合費用を吸収して利益へつながるか。</p></div><div class="signal"><div><b>営業CF・株式数・資本効率</b></div><p>各決算・公式開示時：現金増が発行によるものか本業回収によるものかを区別。株式報酬と追加発行を監視。</p></div>
   </section>
 
   <section class="card" id="assumptions">
@@ -206,7 +166,7 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
         <thead>
           <tr><th>項目</th><th>値</th><th>分類</th><th>基準日</th><th>注記</th></tr>
         </thead>
-        <tbody><tr><td>評価基準株価</td><td>$10.73</td><td>市場データで確認済み</td><td>2026-09-30</td><td>2026/09/29終値</td></tr><tr><td>Q2売上</td><td>$117.1M</td><td>公式決算で確認</td><td>2026/08/05</td><td>前年比+89.6%</td></tr><tr><td>Q2受注残</td><td>$542.1M</td><td>会社発表</td><td>2026/08/05</td><td>2026/06/30時点</td></tr><tr><td>NITE-STAR IDIQ</td><td>上限$980M</td><td>会社発表</td><td>2026/09/24</td><td>個別注文は別途</td></tr></tbody>
+        <tbody><tr><td>基準株価</td><td>$5.89</td><td>市場データ</td><td>2026-11-27</td><td>2026-11-25T21:00:02+00:00 [SQ]</td></tr><tr><td>最新決算</td><td>2026年3Q売上109.035百万USD、GAAP純損失23.178百万USD。Space売上61.266百万、Defense Tech47.769百万。1～9月売上323.081百万USD、純損失140.651百万USD。[S1,S2]</td><td>公式情報で確認済み</td><td>2026-11-27</td><td>[S1,S2]</td></tr><tr><td>会社見通し</td><td>会社は2026年通期売上450～500百万USDを維持。9月末受注残619.666百万USD、3Q受注188.7百万USD、book-to-bill1.73。売上計上には履行条件がある。[S1,S2]</td><td>会社の目標・予定</td><td>2026-11-27</td><td>[S1]</td></tr><tr><td>現在評価用株式</td><td>255.964957百万株</td><td>このレポートの推定</td><td>2026-11-27</td><td>11月2日普通株250.219316百万株に、オプション1.313776百万、未確定RSU2.429018百万・PSU2.002847百万を加えて255.964957百万株の保守的評価用株式とする。条件付きPSU全確定を仮定し、確定時点実数ではない。優先株は9月末ゼロ。私募ワラントは2026年9月2日に満期を迎え、将来希薄化へ再加算しない。[S2]</td></tr><tr><td>企業価値モデル</td><td>評価は2028年6月末。2026年会社売上予想450～500百万USDを出発点に、2028年近傍の年売上550／700／900百万USDを仮定。倍率2／3／4倍は当方評価仮定で市場コンセンサスではない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>株価に合わせて標準前提を逆算しない。</td></tr><tr><td>資金・将来株式</td><td>将来株式265／270／275百万株は評価用現在株式へ株式報酬等を追加した仮定。追加公募増資・その調達現金は仮定しない。期末現金300／350／400百万USDは営業・投資支出と回収を反映した仮定。借入50百万USDを維持し借入枠を現金へ重複加算しない。</td><td>このレポートの推定</td><td>2026-11-27</td><td>費用・純調達現金・株式を同時に整合。</td></tr><tr><td>資金余力</td><td>1～9月の営業CFと設備投資を単純年率換算すると年147百万USD前後の資金使用。現金から最低運転資金50百万USDを控除した粗い余力は約36か月。TTM実績ではなく、受注引渡し・資金調達・運転資金で変動する参考値。[S2]</td><td>このレポートの推定</td><td>2026-11-27</td><td>簡易期間換算でTTMではない場合を明記。</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -215,24 +175,24 @@ details{border:1px solid var(--line);background:#101410;border-radius:12px;paddi
     <h2>根拠と更新履歴</h2>
     <details open>
       <summary>主要出典</summary>
-      <div><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000121/exhibit991redwire06302026e.htm" target="_blank" rel="noopener noreferrer">Q2公式決算</a></li><li><a href="https://ir.rdw.com/news-events/press-releases" target="_blank" rel="noopener noreferrer">NITE-STAR契約一覧</a></li><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000029/rdw-20251231.htm" target="_blank" rel="noopener noreferrer">2025年10-K</a></li><li><a href="https://rdw.com/newsroom/redwire-announces-sunsetting-of-edge-autonomy-brand-and-new-organizational-structure-to-align-with-market-opportunities-for-accelerated-growth/" target="_blank" rel="noopener noreferrer">Edge Autonomy統合</a></li><li><a href="https://rdw.com/newsroom/redwire-awarded-20-million-in-follow-on-orders-from-portfolio-acquisition-executive-robotic-autonomous-systems-pae-ras-to-deliver-stalker-uas-advanced-navigation-and-standard-systems/" target="_blank" rel="noopener noreferrer">Stalker注文</a></li><li><a href="https://rdw.com/newsroom/redwire-opens-state-of-the-art-facility-in-indiana-to-accelerate-space-enabled-rd-and-manufacturing-with-a-focus-on-next-gen-drug-development-and-human-health-breakthroughs/" target="_blank" rel="noopener noreferrer">SpaceMD施設</a></li></ul><p><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></p></div>
+      <div><ul><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000139/exhibit991redwire09302026e.htm" target="_blank" rel="noopener noreferrer">S1：2026年3Q決算発表</a>（取得：2026-11-27）</li><li><a href="https://www.sec.gov/Archives/edgar/data/1819810/000181981026000142/rdw-20260930.htm" target="_blank" rel="noopener noreferrer">S2：2026年3Q Form 10-Q</a>（取得：2026-11-27）</li><li><a href="https://ir.rdw.com/financial-information/financial-results" target="_blank" rel="noopener noreferrer">S3：公式投資家向け決算資料一覧</a>（取得：2026-11-27）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/RDW?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">SQ：RDW日足・基準株価（暫定取得元）</a>（取得：2026-11-27）</li></ul></div>
     </details>
     <details>
       <summary>Validation結果</summary>
-      <div><p>PASS：Q2公式決算で売上1.171億ドル、粗利率27.8%、調整後EBITDAマイナス320万ドル、受注残5.421億ドル、流動性6.078億ドルを確認。NITE-STAR IDIQ選定も確認。</p></div>
+      <div><p>JSON形式・算術・ID・確率・日程・依存関係・HTMLを検証。次の制約を明示します。</p><ul><li>将来売上・倍率・確率・資金・株式数は会社予想ではなく当方仮定。</li><li>個別材料を独立価値へ分離できず、同じモデルの条件付き再評価として表示。</li><li>固定価格契約の費用超過、顧客・政府予算、買収統合、在庫・契約資産、内部統制と株式報酬がリスク。受注残増と株主利益は同一ではない。[S2]</li></ul></div>
     </details>
     <details>
       <summary>更新履歴</summary>
-      <div><p>2026-09-30：Q2公式実績、NITE-STAR選定、SpaceMD初商用ミッション、9月29日終値を反映。</p></div>
+      <div><p>2026-11-27 全面改訂。最新決算・株式数・資金と会社日程を更新。分析値は基準日時点で固定。</p></div>
     </details>
   </section>
 
   <section class="card notice">
     <h3>免責</h3>
-    <p>本資料は情報提供を目的とした整理です。投資助言ではありません。カタリストの影響率は条件付き試算であり、短期株価を予測するものではありません。</p>
+    <p>情報提供・教育目的の条件付き試算です。売買推奨・投資助言ではありません。前提や資金条件が変わると再評価が必要です。配当は価格比較に含めていません。</p>
   </section>
 
-  <footer>SiM MARKET LAB｜レッドワイヤー（RDW）カタリスト｜作成日 2026-09-30</footer>
+  <footer>分析基準日 2026-11-27／基準株価 $5.89／市場時刻 2026-11-25T21:00:02+00:00。分析値は固定。<br><a href="../../index.html">SiM MARKET LABの銘柄一覧へ戻る</a></footer>
 </main>
 
 <script src="../../lab/assets/js/live-report-price.js" defer></script>

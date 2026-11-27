@@ -1,0 +1,1200 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Zeta Global Holdings Corp.",
+    "ticker": "ZETA",
+    "exchange": "NYSE",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-27",
+    "source_cutoff": "2026-11-27T14:32:50.540424+00:00",
+    "generated_at": "2026-11-27T14:32:50.540424+00:00",
+    "price": 31.97,
+    "price_as_of": "2026-11-25T21:00:02+00:00",
+    "benchmark": "S&P 500（相対リターン未採用）"
+  },
+  "capital_structure": {
+    "basic_shares": 255458977,
+    "diluted_shares": 278158456.4053801,
+    "market_cap": 8892725851.28,
+    "cash": 340085000.0,
+    "liquid_securities": 0,
+    "restricted_cash": 0,
+    "minimum_operating_cash": 0,
+    "debt": 250000000.0,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": null,
+    "ttm_capex": null,
+    "burn_one_off_adjustments": null,
+    "runway_months": null,
+    "source_ids": [
+      "S1",
+      "S2"
+    ],
+    "dilution_notes": [
+      "11月2日A・B合計255,458,977株。9月末RSU等14,445,635とオプション14,554,628（平均行使価格$13.84）を把握。評価用株式はRSU等を全加算し、オプションを基準株価で自己株方式調整した約278.16M株。",
+      "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+      "TTMランウェイは事業再編・買収前後の期間が一致しないため未算出。最近のCFと期末現金、会社の資金見通しを本文で別々に説明。0の換金性資産等は追加価値を仮定しない入力方針で、存在しないとの断定ではない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "F1",
+      "statement": "会社：2007年創業。本社New York。NYSE: ZETA。企業の顧客データ、AI、マーケティング実行をつなぐプラットフォームを提供。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F2",
+      "statement": "最新業績：2026年3Q売上約$493M、前年同期比46%増。GAAP営業利益$45.948M、純利益$38.273M、希薄化EPS$0.14。調整後EBITDA約$121M・利益率24.6%。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F3",
+      "statement": "成長の内訳：会社はMarigoldと政治候補者売上を除く3Q成長率を30%と説明。総成長率46%と同一視しない。Super-Scaled顧客212社、同顧客ARPU約$2.0Mは会社定義のKPI。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F4",
+      "statement": "会社予想：2026年通期売上$1.853–1.857B、調整後EBITDA$414.1–415.2M、FCF$270.6–271.6M、GAAP EPS$0.22–0.24。4Q売上$521–525M。将来非GAAP値をGAAP純利益として扱わない。",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F5",
+      "statement": "財務：9月末現金$340.085M、長期借入帳簿額$243.949M。評価では借入元本$250Mを控除。1～9月営業CF$210.260M、現金設備投資$10.862M。FCF計算には別途ソフトウェア開発支出などが含まれる。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F6",
+      "statement": "株式数：11月2日A・B合計255,458,977株。9月末RSU等14,445,635とオプション14,554,628（平均行使価格$13.84）を把握。評価用株式はRSU等を全加算し、オプションを基準株価で自己株方式調整した約278.16M株。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "disclosed_share_and_capital_bridge",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "F7",
+      "statement": "買収と希薄化：10月7日にSenso Agenticを買収。概算対価$27.5Mは現金$7.5M、株式$10M、最大$10Mの株式アーンアウト。将来買収・報酬と買戻しの純額を将来株式数へ反映。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "F8",
+      "statement": "次の観測：Athena/AthenaOSの採用と顧客利用、既存顧客拡大、Marigold・Senso統合、調整後利益から営業CFへの転換を追う。未確認の次回決算日を創作しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL",
+      "statement": "2027年の当方仮定。2026年会社売上予想中点$1.855Bからの成長率は約8%／24%／40%。倍率14／17／20倍は同業中央値として確認した数値ではなく感応度用の評価仮定。調整後EBITDAは株式報酬・償却等を除くため、株主利益や自由現金と同一視せず、将来株式数と現金収支を別に置く。資本化開発費もFCF照合で確認する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "case_EV_assumptions",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FINANCE",
+      "statement": "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "equity=EV+ending_cash-debt-NCI;price=equity/future_shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SHARES",
+      "statement": "基本株式255,458,977、評価用希薄化株式278,158,456。潜在株の扱いと日付差を本文へ明記。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "profile_share_bridge",
+      "confidence": "MEDIUM"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観・標準・楽観の確率は25%,50%,25%。成長実行と資金・規制・統合の不確実性を反映する主観配分で、統計確率でも会社予想でもない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "subjective_scenario_weights",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "3レポート総合判定55.2・中立。株価評価55は条件付き価値・希薄化・資金負担を評価。材料60は予定の実行と既存期待、企業リスク48は財務・競合・事業集中を評価。各点は分析時点の主観評価で日々の価格騰落から自動生成しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "現在株主価値8892725851.28USDから、標準の期末現金・負債・非支配持分を固定した失敗側株主価値6310000000.00USDを控除し、成功増分8400000000.00USDで割ると30.75%。個別期待割合の平均ではない。帯外の場合、市場がより大きい現金流出・希薄化・事業悪化等を見込む可能性があり、算式の正しさは端点の妥当性を保証しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "(P0*N0-failure_equity)/joint_success_increment*100",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE_STATS",
+      "statement": "株価31.97 USD、時刻2026-11-25T21:00:02+00:00。52週高値38.8・安値14.365USD。20営業日終値価格リターン-4.42%（配当調整なし）。値動きは総合判定の根拠に使わない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-27",
+      "source_ids": [
+        "SQUOTE"
+      ],
+      "calculation_id": "100*(close_t/close_tminus20-1)",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "2026年3Q決算発表・見通し",
+      "publisher": "Zeta Global Holdings Corp. / SEC",
+      "url": "https://s25.q4cdn.com/525061491/files/content_files/ZETA-3Q_26-Earnings-Press-Release_FINAL.pdf",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-27T14:32:50.540424+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "2026年3Q 10-Q",
+      "publisher": "Zeta Global Holdings Corp. / SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/1851003/000119312526453696/zeta-20260930.htm",
+      "published_at": "2026-11-09",
+      "accessed_at": "2026-11-27T14:32:50.540424+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "MODEL",
+        "FINANCE",
+        "SHARES",
+        "PROB",
+        "SIGNAL",
+        "OVERALL",
+        "QUOTE_STATS"
+      ]
+    },
+    {
+      "id": "SQUOTE",
+      "title": "Yahoo Finance価格・日足（暫定取得元）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZETA?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-27T14:32:50.540424+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE_STATS"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "顧客データとAIを使い、企業の分析、顧客獲得・維持、複数チャネルのマーケティング施策を支援します。サブスクリプション、利用量課金、プロフェッショナルサービスが収益源です。",
+    "section_claim_ids": {
+      "sec1": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec2": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec3": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec4": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec5": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec6": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ],
+      "sec7": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "EV_EBITDA",
+    "method_explanation": "2027年末事業価値＋同時点自由現金−負債−非支配持分＝株主価値。これを同じケースの将来株式数で割る。2027年の当方仮定。2026年会社売上予想中点$1.855Bからの成長率は約8%／24%／40%。倍率14／17／20倍は同業中央値として確認した数値ではなく感応度用の評価仮定。調整後EBITDAは株式報酬・償却等を除くため、株主利益や自由現金と同一視せず、将来株式数と現金収支を別に置く。資本化開発費もFCF照合で確認する。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.25,
+        "enterprise_value": 6160000000.0,
+        "equity_value": 6210000000.0,
+        "diluted_shares": 280000000.0,
+        "price": 22.178571428571427,
+        "conditions": [
+          "2027年売上$2.0B、調整後EBITDA率22%、同倍率14倍。成長減速・統合費用を仮定。",
+          "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.5,
+        "enterprise_value": 9775000000.0,
+        "equity_value": 9925000000.0,
+        "diluted_shares": 290000000.0,
+        "price": 34.224137931034484,
+        "conditions": [
+          "2027年売上$2.3B、調整後EBITDA率25%、同倍率17倍。採用と顧客利用が伸びる条件。",
+          "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.25,
+        "enterprise_value": 14560000000.000002,
+        "equity_value": 14810000000.000002,
+        "diluted_shares": 300000000.0,
+        "price": 49.366666666666674,
+        "conditions": [
+          "2027年売上$2.6B、調整後EBITDA率28%、同倍率20倍。高成長と運営レバレッジの強い条件。",
+          "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+          "現金は期末残高だけを加算。既存負債と少数株主請求権を控除し、他の市場価値・出資額を重複加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "FINANCE",
+          "PROB"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 34.99837848932677,
+      "expected_delta_pct": 9.472563307246705,
+      "raw_band_position_pct": 36.01366144145721,
+      "display_band_position_pct": 36.01366144145721,
+      "endpoint_rr": 1.7767240540803433,
+      "market_score": 36,
+      "own_score": 47,
+      "supplemental_score": 52
+    },
+    "risk_class": "MEDIUM",
+    "risk_reasons": [
+      "広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "標準事業価値（USD）",
+        "low": 7820000000.0,
+        "base": 9775000000.0,
+        "high": 11730000000.0,
+        "result_prices": [
+          27.482758620689655,
+          34.224137931034484,
+          40.96551724137931
+        ]
+      },
+      {
+        "variable": "標準の将来株式数",
+        "low": 261000000.0,
+        "base": 290000000.0,
+        "high": 319000000.0,
+        "result_prices": [
+          38.02681992337165,
+          34.224137931034484,
+          31.112852664576803
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "Athena採用・顧客利用と4Q業績",
+        "category": "EARNINGS",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "2026年4Q事業進捗／決算公表日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "利用拡大と顧客単価が伸び、当方の標準成長・利益率を上回る。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              39.248275862068965,
+              45.70344827586207
+            ],
+            "price_change_pct_range": [
+              22.765955151920437,
+              42.95729832925266
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：2027年売上$2.4B・EBITDA率26%・18倍。事業価値$11,232.0M、自由現金$400.0M、将来株式290.000M ／ 売上$2.6B・率28%・18倍。事業価値$13,104.0M、自由現金$400.0M、将来株式290.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "会社4Q予想と当方の標準仮定に沿って進む。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              31.46896551724138,
+              37.09655172413793
+            ],
+            "price_change_pct_range": [
+              -1.5672020105055307,
+              16.03550742614306
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：売上$2.2B・率24%・17倍。事業価値$8,976.0M、自由現金$400.0M、将来株式290.000M ／ 売上$2.4B・率26%・17倍。事業価値$10,608.0M、自由現金$400.0M、将来株式290.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "広告予算・顧客利用が鈍化し成長や利益率が下振れる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              22.178571428571427,
+              26.517241379310345
+            ],
+            "price_change_pct_range": [
+              -30.62692702980473,
+              -17.055860558929158
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：売上$2.0B・率22%・14倍、資金株式は悲観条件。事業価値$6,160.0M、自由現金$300.0M、将来株式280.000M ／ 売上$2.2B・率23%・15倍。事業価値$7,590.0M、自由現金$350.0M、将来株式290.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "買収事業の統合とデータ・AI連携",
+        "category": "M_AND_A",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "統合進行中／定量的な完了期限なし",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "Marigold・Sensoの連携が顧客拡大とCFに結びつく。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              36.851724137931036,
+              39.51379310344828
+            ],
+            "price_change_pct_range": [
+              15.269703277857483,
+              23.59647514372312
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：統合によりEBITDA率27%、追加統合現金支出$20M。事業価値$10,557.0M、自由現金$380.0M、将来株式290.000M ／ 率29%、追加支出$30M。事業価値$11,339.0M、自由現金$370.0M、将来株式290.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "統合は進むが短期利益は会社見通し内。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              32.87586206896552,
+              35.53793103448276
+            ],
+            "price_change_pct_range": [
+              2.833475348656611,
+              11.160247214522245
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：率24%、現金標準。事業価値$9,384.0M、自由現金$400.0M、将来株式290.000M ／ 率26%、追加支出$10M。事業価値$10,166.0M、自由現金$390.0M、将来株式290.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "統合費用・追加対価・人材や製品連携の問題が生じる。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              28.26206896551724,
+              29.6
+            ],
+            "price_change_pct_range": [
+              -11.598157755654547,
+              -7.413199874882692
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：統合難航で率22%・16倍、追加支出$50M。事業価値$8,096.0M、自由現金$350.0M、将来株式290.000M ／ 率23%・16倍、追加支出$30M。事業価値$8,464.0M、自由現金$370.0M、将来株式290.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "営業CF・株式報酬と資本配分",
+        "category": "FINANCING",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "各四半期・重要開示で確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "UNKNOWN",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "公式資料で示された内容と、以下の当方モデルによる結果条件を区別する。",
+        "mechanism": [
+          "進捗・条件の変化",
+          "顧客採用・利益・投資の変化",
+          "株主価値と1株の取り分"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "現金転換率が高まり、希薄化を上回る1株価値改善が進む。"
+            ],
+            "direction": "UP",
+            "quantifiable": true,
+            "price_range": [
+              35.625,
+              35.80357142857143
+            ],
+            "price_change_pct_range": [
+              11.432593055990004,
+              11.991152419679164
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：標準利益に対し自由現金$450M、将来株式280M。事業価値$9,775.0M、自由現金$450.0M、将来株式280.000M ／ 自由現金$500M、将来株式280M。事業価値$9,775.0M、自由現金$500.0M、将来株式280.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "会社FCF予想に概ね沿い、株式数も標準仮定の範囲。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              34.1551724137931,
+              34.293103448275865
+            ],
+            "price_change_pct_range": [
+              6.835071672796689,
+              7.266510629577305
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：自由現金$380M、株式290M。事業価値$9,775.0M、自由現金$380.0M、将来株式290.000M ／ 自由現金$420M、株式290M。事業価値$9,775.0M、自由現金$420.0M、将来株式290.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "調整後利益が増えてもCF転換が弱く、株式数増が大きい。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              31.693548387096776,
+              32.916666666666664
+            ],
+            "price_change_pct_range": [
+              -0.8647219671667927,
+              2.9611093733708627
+            ],
+            "probability": null,
+            "method_note": "このレポートの条件付き2027年末再評価。端点入力：現金転換悪化：自由現金$300M、株式310M。事業価値$9,775.0M、自由現金$300.0M、将来株式310.000M ／ 自由現金$350M、株式300M。事業価値$9,775.0M、自由現金$350.0M、将来株式300.000M。負債$250.000M・非支配持分$0.000Mを控除。単独材料の独立価値や短期反応ではなく、他の結果との合算はしない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "共有する製品・設備・採用・資金を単独イベントの価値へ分離できないため。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "共通2027年事業価値の端点を置換し、現金・負債・株式数を揃えて再計算できるため。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同一日時の独立した市場予想改定データを取得していないため。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社発表時の同時ニュースを分離した異常リターン標本を保有しないため。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "製品段階・資本構成が揃う他社イベントの独立標本を検証していないため。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "直近の公式決算・進捗資料を確認。"
+          ],
+          "evidence_against": [
+            "広告・企業予算、データ規制、競合、買収統合、非GAAP利益の調整項目、株式報酬・株式発行、顧客利用の変化が主なリスクです。"
+          ],
+          "caveats": [
+            "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "製品・設備・顧客採用・資金配分が同じ事業価値へ重なり、特定材料を除いた価値を一次開示から独立に分離できない。",
+            "missing_information": [
+              "材料別の純利益・投資額と資金調達条件",
+              "持分・顧客採用・実行の確定条件"
+            ],
+            "next_checks": [
+              "公式な進捗・財務・契約・発行株式数",
+              "売上回収・顧客採用・費用の変化"
+            ],
+            "recalculation_method": "対象材料の利益・投資・株式数が判明した時点で同じ評価モデルへ反映し、材料あり・なしの株主価値差分から逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "売上・粗利益・営業CF",
+          "正式な進捗・認証・契約条件",
+          "投資支出・現金・株式数"
+        ],
+        "sell_the_news_risk": "良い発表でも既存期待以上の利益やCFが伴わない場合は価格上昇を保証しない。",
+        "financing_risk": "2027年末の借入元本を$250Mに固定。自由現金を$300M／$400M／$500M、将来希薄化株式を280M／290M／300M株と置く。営業CF、ソフトウェア投資、M&A・買戻し等の累積純増減は9月末現金に対して−$40.085M／+$59.915M／+$159.915M。新規公募資金は仮定せず、将来株式報酬・買収等の純希薄化を株式数へ反映。Senso取得現金はこの累積差額に含む。 非支配持分は最新開示の帳簿額を代理入力とする当方仮定で、公正な事業価値を保証しない。持分や取引条件が変われば3レポートを再評価する。",
+        "update_triggers": [
+          "会社見通し・正式日程の変更",
+          "現金・借入・株式発行の更新",
+          "認証・採用・取引条件の変更"
+        ],
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "claim_ids": [
+          "MODEL",
+          "FINANCE"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "共通事業価値・資金・採用",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じ事業価値への影響を1回のみ計上し、個別価格幅・割合を加算しない。",
+        "full_success_incremental_equity_value": 8400000000.000002
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        20.74673632476191,
+        40.74673632476191
+      ],
+      "raw_implied_pct": 30.74673632476191,
+      "all_events_excluded_equity_value": 6310000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "標準の現金・負債・少数株主請求権を固定し共通事業価値の悲観・楽観端点から逆算。個別割合の平均ではない。表示は主観的な±10ポイント幅を0～100へ制限するが、生の値が範囲外なら本文に残す。真の成功確率や統計区間ではない。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "Athena採用・顧客利用と4Q業績",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "買収事業の統合とデータ・AI連携",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "営業CF・株式報酬と資本配分",
+        "frequency": "公式発表・次の決算時",
+        "update_trigger": "進捗、現金、資金・株式数と採用条件の変更",
+        "catalyst_ids": [
+          "C3"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 3,
+    "generated_at": "2026-11-27T14:32:50.540424+00:00",
+    "messages": [
+      "将来価値・倍率・確率・支出・株式数は当方仮定であり会社予想ではない。",
+      "潜在株と時点株式数には開示日の差がある。最新確定財務の期末を本文へ明示。",
+      "個別材料は同じ事業価値を共有し、価格幅や期待割合を足し合わせない。"
+    ]
+  }
+}
