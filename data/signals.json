@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "method": "three-report-weighted-synthesis-v1",
-  "updatedAt": "2026-11-27T18:14:33.736750+00:00",
+  "updatedAt": "2026-11-28T06:29:55.222803+00:00",
   "signals": {
     "kioxia-285a": {
       "position": 42.0,
@@ -218,6 +218,18 @@
       },
       "reportRevision": "tesla-tsla-2026-11-28-v1",
       "summary": "事業別SOTPの条件付き評価。高い成長期待と実現・資金・規制リスクを総合。会社の成功確率や売買推奨ではない。"
+    },
+    "anthropic-ant": {
+      "position": 72.9,
+      "zone": "買われすぎ",
+      "asOf": "2026-11-28",
+      "components": {
+        "valuation": 71.5,
+        "catalysts": 75,
+        "businessRisk": 75
+      },
+      "reportRevision": "anthropic-ant-2026-11-28-v1",
+      "summary": "最新の確定目論見書とIPO完了を反映。連結EV/Sales、独立DCF、希薄化・計算資源契約・公益目的構造を点検した条件付き評価。"
     }
   }
 }

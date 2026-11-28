@@ -152,6 +152,8 @@ def validate_stocks(payload: dict[str, Any], validation: Validation) -> tuple[di
         if not isinstance(reports, dict):
             validation.error(f"{location}: reportsがobjectではありません")
             continue
+        if any(not isinstance(reports.get(key), dict) or reports[key].get("available") is not True for key in REPORT_KEYS):
+            validation.error(f"{location}: 銘柄の公開には企業概要・株価シナリオ・カタリストの3レポート完成が必要です")
         for report_key in REPORT_KEYS:
             report = reports.get(report_key)
             if not isinstance(report, dict):

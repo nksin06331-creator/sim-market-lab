@@ -6,6 +6,9 @@ This repository contains the public SiM MARKET LAB static website and its stock-
 
 ## Durable rules
 
+- A request to add a company includes researching and creating all three reports (company, valuation, catalysts), updating the report-derived signal, validating, and publishing the completed set. Do not finish at catalogue registration with pending reports. This standing user instruction was confirmed on 2026-11-28.
+- Use the supplied v6.2 report rules and the standard site templates. Screenshot or condensed editions are separate deliverables outside the published site unless explicitly requested otherwise.
+
 - Keep the site deployable as a static GitHub Pages project.
 - Do not add frameworks or build dependencies unless the user explicitly approves them.
 - Keep stock metadata in `data/stocks.json` and dynamic quotes in `data/prices.json`.
