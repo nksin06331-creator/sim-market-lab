@@ -542,6 +542,33 @@
       },
       "reportAsOf": "2026-11-28",
       "reportRevision": "tesla-tsla-2026-11-28-v1"
+    },
+    {
+      "id": "anthropic-ant",
+      "order": 19,
+      "ticker": "ANT",
+      "quoteSymbol": "ANT",
+      "name": "アンソロピック",
+      "nameEn": "Anthropic, PBC",
+      "market": "US",
+      "marketLabel": "米国株",
+      "exchange": "Nasdaq",
+      "currency": "USD",
+      "sector": "生成AI・大規模言語モデル",
+      "reports": {
+        "company": {
+          "path": "./stocks/anthropic-ant/company.html",
+          "available": false
+        },
+        "valuation": {
+          "path": "./stocks/anthropic-ant/valuation.html",
+          "available": false
+        },
+        "catalysts": {
+          "path": "./stocks/anthropic-ant/catalysts.html",
+          "available": false
+        }
+      }
     }
   ]
 }
