@@ -1,0 +1,1770 @@
+{
+  "meta": {
+    "framework_version": "6.2",
+    "schema_version": "1.2",
+    "company_name": "Anthropic, PBC",
+    "ticker": "ANT",
+    "exchange": "Nasdaq",
+    "currency": "USD",
+    "fiscal_year_end": "12-31",
+    "valuation_date": "2026-11-28",
+    "source_cutoff": "2026-11-28T06:27:02.356566+00:00",
+    "generated_at": "2026-11-28T06:27:02.356566+00:00",
+    "price": 91.88,
+    "price_as_of": "2026-11-27T18:00:01+00:00",
+    "benchmark": "S&P 500 (^GSPC)"
+  },
+  "capital_structure": {
+    "basic_shares": 12549204009,
+    "diluted_shares": 17443759264.34447,
+    "market_cap": 1602732601207.97,
+    "cash": 208269000000,
+    "liquid_securities": 36283000000,
+    "restricted_cash": 0,
+    "minimum_operating_cash": 60000000000,
+    "debt": 1674000000,
+    "preferred_stock": 0,
+    "minority_interest": 0,
+    "other_non_equity_claims": 0,
+    "ttm_operating_cash_flow": 5956000000,
+    "ttm_capex": 945000000,
+    "runway_months": null,
+    "source_ids": [
+      "S1",
+      "S2",
+      "S7"
+    ],
+    "dilution_notes": [
+      "IPO後推計の経済的基本株式は12,549,204,009株。目論見書のA 7,583,103,996株・N 4,789,697,318株に、全量行使の追加147百万株、取得対価株1,410,845株、寄付対応の発行済27,991,850株を加算。議決権専用T/F/Eと子会社が保有する公益基金846,840,960株は除外。オプション1,774,342,693株・平均行使価格2.91ドルを基準株価で自己株式方式にし、未決済RSU1,073,701,297株、取得留保1,590,190株、既存寄付対応義務553,441,297株、Amazon残存転換分1,547,676,309株を加え、評価株式17,443,759,264株。RSUは税・失効を織り込まない保守的近似。Amazonは上場時に保有上限を撤廃しておらず、全転換は計算上の仮定。全転換扱いのため転換負債評価額1,097.42億ドルを再控除しない。金融リース16.74億のみ別途控除。将来株式185／188／195億株は基金の外部移転、報酬・寄付対応を含む当方仮定。[S1,S2]",
+      "将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+      "自由現金は制限現金を含まないためrestricted_cash=0として再控除しない。実際の別建て制限現金は2.54十億ドル。",
+      "未使用の融資・転換枠、買収済み事業価値や将来の無料クレジットは現金・その他資産へ加えない。制限現金25.40億ドルは自由現金と別のため再控除しない。公益基金の自己保有分は現在の経済株式数から除外し、将来外部移転は将来株式へ反映する。[S1]",
+      "現在の評価株式は全転換・潜在株の経済的近似で、実際の発行済株式や法定EPS分母ではない。",
+      "9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2]",
+      "設備等前払のTTM19.58億ドルを控除するとCF余力は30.53億。過去のプラスCFを将来の設備・供給契約の保証とはしない。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "IDENTITY",
+      "statement": "Anthropic, PBC。2021年1月設立、本社は米国San Francisco。Delawareの公益目的会社で12月決算、米国GAAP。2026年11月20日にIPOを完了、NasdaqのANT。上場後10-Qは基準日時点で未提出。最新財務は確定目論見書の9月末までの未監査情報。[S1,S2,S3]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "BUSINESS",
+      "statement": "Claudeのモデル、API、Claude Code等のアプリを開発・提供する。API等は利用量課金、Pro・Max等はサブスクリプションで収益化。直接販売とAWS・Google Cloud等の経路を使う。無料クレジットや研究利用を有償売上と混同しない。[S1,S4]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "FINANCIAL",
+      "statement": "2026年7〜9月の売上169.56億ドル、GAAP営業損失5.67億、純損失232.91億。1〜9月累計は売上332.42億、営業損失12.60億、純損失1,040.39億。累計純損失には転換証券等の評価変動損943.24億などが含まれ、現金流出額とは異なる。累計営業CF65.69億、設備取得9.25億、設備等の前払19.55億。[S1]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "RISK",
+      "statement": "計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "GUIDANCE",
+      "statement": "会社はモデル能力、安全性、企業への普及とAnthropic Direct（計算設備の直接調達・リース）の拡大を説明する。計算資源等の購入・リース契約は約9,009億ドルで、うち2026年9月末から12か月に約707億、2030年末までに約4,516億が予定される。全額を現在の借入負債とはしない。取得した資料に2027年通期の確定売上・利益予想や次回決算の確定日時はない。[S1]",
+      "classification": "COMPANY_GUIDANCE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "CAPITAL",
+      "statement": "IPO後推計の経済的基本株式は12,549,204,009株。目論見書のA 7,583,103,996株・N 4,789,697,318株に、全量行使の追加147百万株、取得対価株1,410,845株、寄付対応の発行済27,991,850株を加算。議決権専用T/F/Eと子会社が保有する公益基金846,840,960株は除外。オプション1,774,342,693株・平均行使価格2.91ドルを基準株価で自己株式方式にし、未決済RSU1,073,701,297株、取得留保1,590,190株、既存寄付対応義務553,441,297株、Amazon残存転換分1,547,676,309株を加え、評価株式17,443,759,264株。RSUは税・失効を織り込まない保守的近似。Amazonは上場時に保有上限を撤廃しておらず、全転換は計算上の仮定。全転換扱いのため転換負債評価額1,097.42億ドルを再控除しない。金融リース16.74億のみ別途控除。将来株式185／188／195億株は基金の外部移転、報酬・寄付対応を含む当方仮定。[S1,S2]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "latest point shares plus disclosed/proxy dilution; securities-by-security TSM unverified",
+      "confidence": "LOW"
+    },
+    {
+      "id": "LIQUIDITY",
+      "statement": "9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "cash+securities-minimum operating cash; disclosed cash-flow period; no assumed unused-facility cash",
+      "confidence": "LOW"
+    },
+    {
+      "id": "ASSETS",
+      "statement": "未使用の融資・転換枠、買収済み事業価値や将来の無料クレジットは現金・その他資産へ加えない。制限現金25.40億ドルは自由現金と別のため再控除しない。公益基金の自己保有分は現在の経済株式数から除外し、将来外部移転は将来株式へ反映する。[S1]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": "no additional nonoperating assets credited; restricted cash excluded from free cash; fund self-holdings excluded from economic current shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "COMPETITION",
+      "statement": "OpenAI、Google、Microsoft、Meta、他のモデル・オープンウェイトモデルが比較対象。推論・コーディング・信頼性・価格・データ管理・提供地域と評価時点をそろえる。クラウド企業は販売経路・投資家・供給者であると同時に競合にもなる。会社のベンチマーク説明を独立した優位性の保証とせず、未取得の最新シェア・同業倍率を置かない。[S1]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "qualitative comparison by customer function; market share and multiples unverified",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL",
+      "statement": "対象は2027年末。連結の2027年売上750／1,100／1,700億ドル、EV/Sales（売上に対する事業価値）6／10／16倍を当方仮定とする。2026年Q3売上169.56億と10月末Run-Rate Revenue810億（期間実績ではない）を足場に、成長鈍化・継続拡大・強い拡大を分ける。GAAP営業利益率-15／5／20%は報酬・研究・計算費を含む将来仮定。高い売上倍率には2027年以降の成長が必要で、独立DCFも併記して相違を隠さない。将来現金1,500／1,900／2,200億、最低運転現金600億、金融リース100／120／150億、株式185／188／195億で株主価値へ橋渡しする。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "sum(segment_sales*segment_EV_sales)+future_cash+other_assets-minimum_cash-future_debt-minority, divided by future shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "FUNDING",
+      "statement": "将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "future_cash = IPO_adjusted_cash_and_securities + operating_cash_flow - cash_capex_and_prepayments; new_cash_equity_financing=0; cash_debt_draws=0",
+      "confidence": "LOW"
+    },
+    {
+      "id": "PROB",
+      "statement": "悲観35%・標準45%・楽観20%。実績と事業化リスクを踏まえた粗い主観配分。高い成長倍率と資金・規制条件の不確実性から下側を厚く置くが統計的成功率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "subjective 0.35+0.45+0.20=1",
+      "confidence": "LOW"
+    },
+    {
+      "id": "QUOTE",
+      "statement": "基準株価$91.88、時刻2026-11-27T18:00:01+00:00。米国取引時間中の時点値で終値とは限らない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S5"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MODEL_BEAR",
+      "statement": "2027年末の悲観：Claude・API・法人・サブスク（連結）：売上75.00十億ドル×6倍、営業利益率-15%。自由現金・短期証券150.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等10.00十億ドル、非支配等0.00十億ドル、将来株式18.5十億株。IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-94.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "consolidated forward revenue*EV/Sales + future cash - minimum cash - finance leases; divided by if-converted future shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL_BASE",
+      "statement": "2027年末の標準：Claude・API・法人・サブスク（連結）：売上110.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-54.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "consolidated forward revenue*EV/Sales + future cash - minimum cash - finance leases; divided by if-converted future shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "MODEL_BULL",
+      "statement": "2027年末の楽観：Claude・API・法人・サブスク（連結）：売上170.00十億ドル×16倍、営業利益率20%。自由現金・短期証券220.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等15.00十億ドル、非支配等0.00十億ドル、将来株式19.5十億株。IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-24.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "consolidated forward revenue*EV/Sales + future cash - minimum cash - finance leases; divided by if-converted future shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C1",
+      "statement": "9月末のTTM売上10万ドル以上の顧客は11,900超。会社定義のNRRは約900%だが急成長初期の影響を含み、将来へ固定しない。10月末Run-Rate Revenue810億ドルは年次実績や受注残ではない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C1_CONDITIONS",
+      "statement": "採用と単価・継続が両立し、連結売上1,400〜1,700億ドルの経路。 ／ 連結売上1,000〜1,200億ドルの当方標準付近。 ／ 競争・利用鈍化・単価下落で連結売上650〜850億ドルの経路。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C2",
+      "statement": "計算設備・リースの契約と実際の稼働・費用削減は別段階。短期計算契約と長期設備を置き換えられるか、供給と費用を確認する。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C2_CONDITIONS",
+      "statement": "供給が需要に追い付き、費用効率も改善する。当方売上1,250〜1,450億ドルの利用可能量。 ／ 立上げが進む一方、費用負担が残る。売上1,050〜1,150億ドルの経路。 ／ 設備遅延・高価な短期調達で売上750〜950億ドルの経路。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C3",
+      "statement": "科学研究等の利用拡大と、外部顧客の有償・継続利用を区別する。AI for Scienceは無料クレジットを含むため、提携件数や無償枠を売上へ換算しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7",
+        "S4"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "C3_CONDITIONS",
+      "statement": "新用途が既存利用を置き換えるだけでなく純増し、連結売上1,200〜1,400億ドルの経路。 ／ 新用途は進むが寄与は段階的で売上1,050〜1,150億ドルの経路。 ／ 品質・規制・需要で収益寄与が遅れ、売上850〜1,050億ドルの経路。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7",
+        "S4"
+      ],
+      "calculation_id": "conditional segment revenue ranges; all other base-case inputs fixed",
+      "confidence": "LOW"
+    },
+    {
+      "id": "SIGNAL",
+      "statement": "現在株価評価71.5、カタリスト75、企業基盤リスク75。60/25/15%で総合72.9、買われすぎ。株価スコアは悲観→標準を0→50、標準→楽観を50→100で補間し、売上倍率・希薄化・事業化の不確実性で5点加算、0〜100へ制限。材料85は成長実績に対し複数の未完了条件と期待先行が大きいとの主観評価。企業リスクは財務・投資・集中・規制を根拠とする主観評価。日々の株価から自動再計算しない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "piecewise price position +5; valuation*.60+catalysts*.25+businessRisk*.15",
+      "confidence": "LOW"
+    },
+    {
+      "id": "OVERALL",
+      "statement": "共通の全事業・資金条件を1群にまとめ、失敗側株主価値530.00十億ドル、成功側2,865.00十億ドルから逆算。中心45.9%。表示幅は中心±10ポイントを0〜100へ制限し、統計区間・成功率ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "(price*current_diluted_shares-bear_equity)/(bull_equity-bear_equity)*100",
+      "confidence": "LOW"
+    },
+    {
+      "id": "IPO_CASH",
+      "statement": "9月末自由現金・短期証券1,318.45億。IPO等反映後の目論見書推計2,323.51億＋全量行使の追加147百万株×83ドル（手数料なし）＝2,445.52億ドル。実測の最新現金残高ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "232351e6 + 147000000*83; split as estimated cash 208269e6 plus securities 36283e6",
+      "confidence": "LOW"
+    },
+    {
+      "id": "DILUTION",
+      "statement": "IPO後推計の経済的基本株式は12,549,204,009株。目論見書のA 7,583,103,996株・N 4,789,697,318株に、全量行使の追加147百万株、取得対価株1,410,845株、寄付対応の発行済27,991,850株を加算。議決権専用T/F/Eと子会社が保有する公益基金846,840,960株は除外。オプション1,774,342,693株・平均行使価格2.91ドルを基準株価で自己株式方式にし、未決済RSU1,073,701,297株、取得留保1,590,190株、既存寄付対応義務553,441,297株、Amazon残存転換分1,547,676,309株を加え、評価株式17,443,759,264株。RSUは税・失効を織り込まない保守的近似。Amazonは上場時に保有上限を撤廃しておらず、全転換は計算上の仮定。全転換扱いのため転換負債評価額1,097.42億ドルを再控除しない。金融リース16.74億のみ別途控除。将来株式185／188／195億株は基金の外部移転、報酬・寄付対応を含む当方仮定。[S1,S2]",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S7"
+      ],
+      "calculation_id": "IPO-adjusted economic basic shares + options*(1-2.91/basis_price) + unsettled RSUs + acquisition holdback + matching obligation + Amazon if-converted shares; exclude voting-only shares and subsidiary-held fund stock",
+      "confidence": "LOW"
+    },
+    {
+      "id": "UNKNOWN_SCHEDULE",
+      "statement": "次回決算発表の確定日時と個別製品・設備稼働の確定日程は、取得した公式資料では確認できず。",
+      "classification": "UNKNOWN",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S6"
+      ],
+      "calculation_id": null,
+      "confidence": "LOW"
+    },
+    {
+      "id": "NRR_RUNRATE",
+      "statement": "9月末のTTM売上10万ドル以上の顧客は11,900超、会社定義のNRRは約900%。10月末Run-Rate Revenueは約810億ドル。NRRは対象顧客・期間定義があり、Run-Rateは利用・課金の年換算で年次実績・受注残ではない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "MARKET_CONTEXT",
+      "statement": "上場後の日足は6営業日で、観測安値$73.85〜高値$115.10。52週の上場履歴はない。ANTの20営業日騰落率・同期間の相対騰落は算出不可。S&P 500の直近20営業日騰落率は-5.5%（2026-11-27T18:38:39+00:00時点）だが、ANTの短い履歴とは同期間比較しない。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S5",
+        "S8"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    },
+    {
+      "id": "DCF",
+      "statement": "2028〜2037年の無杠杆FCFを-50／50／150／300／450／600／700／800／900／1,000億ドルとする独立の当方仮定。費用・税・現金投資と営業賃料の後、金融利息・元本支払前。設備リースの非現金取得を借入現金収入へは入れない。割引率12%、永久成長率3%、2037年末終価を2027年末へ割引く。EV 582.30十億ドル。標準の自由現金1,900億−最低運転現金600億−金融リース120億を加減し、188億株で割ると$37.25。主手法との平均は取らない。DCFも長期CFと終価への感応度が高く、独立した観測事実ではない。",
+      "classification": "MODEL_ESTIMATE",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": "sum(FCF_t/(1+r)^t) + FCF_10*(1+g)/(r-g)/(1+r)^10 + base_cash - minimum_cash - base_finance_leases; divide by base_future_shares",
+      "confidence": "LOW"
+    },
+    {
+      "id": "C4",
+      "statement": "一般保有者は目論見書日から最大180日、創業者等は最大365日の売却制限があるが、決算後等の早期解除と例外がある。解除可能な全株が売却されるとはしない。公益基金・報酬・転換と既存株の売却を分けて追う。",
+      "classification": "CONFIRMED",
+      "as_of": "2026-11-28",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "calculation_id": null,
+      "confidence": "HIGH"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "確定目論見書（424B4、2026年9月期財務・資本・契約）",
+      "publisher": "Anthropic, PBC",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+      "published_at": "2026-11-19",
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "GUIDANCE",
+        "CAPITAL",
+        "LIQUIDITY",
+        "ASSETS",
+        "COMPETITION",
+        "MODEL",
+        "FUNDING",
+        "PROB",
+        "MODEL_BEAR",
+        "MODEL_BASE",
+        "MODEL_BULL",
+        "C1",
+        "C1_CONDITIONS",
+        "C2",
+        "C2_CONDITIONS",
+        "C3",
+        "C3_CONDITIONS",
+        "SIGNAL",
+        "OVERALL",
+        "IPO_CASH",
+        "DILUTION",
+        "UNKNOWN_SCHEDULE",
+        "NRR_RUNRATE",
+        "DCF",
+        "C4"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "IPO・私募完了と資本構造の8-K",
+      "publisher": "Anthropic, PBC",
+      "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026075973/ant-20261119.htm",
+      "published_at": "2026-11-25",
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "BUSINESS",
+        "FINANCIAL",
+        "RISK",
+        "GUIDANCE",
+        "CAPITAL",
+        "LIQUIDITY",
+        "COMPETITION",
+        "MODEL",
+        "FUNDING",
+        "PROB",
+        "MODEL_BEAR",
+        "MODEL_BASE",
+        "MODEL_BULL",
+        "C1",
+        "C1_CONDITIONS",
+        "C2",
+        "C2_CONDITIONS",
+        "C3",
+        "C3_CONDITIONS",
+        "SIGNAL",
+        "OVERALL",
+        "IPO_CASH",
+        "DILUTION",
+        "UNKNOWN_SCHEDULE",
+        "DCF",
+        "C4"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "IPO・追加発行・同時私募完了の公式発表",
+      "publisher": "Anthropic, PBC",
+      "url": "https://www.anthropic.com/news/ipo-close",
+      "published_at": "2026-11-20",
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "UNKNOWN_SCHEDULE"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "AI for Science拡大（無料クレジットと研究段階の区別）",
+      "publisher": "SEC",
+      "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "published_at": "2026-10-28",
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "BUSINESS",
+        "C3",
+        "C3_CONDITIONS"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "最新SEC提出履歴",
+      "publisher": "Anthropic, PBC",
+      "url": "https://data.sec.gov/submissions/CIK0002130357.json",
+      "published_at": null,
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "FILING",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "UNKNOWN_SCHEDULE"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "公益基金・株式拠出の公式説明",
+      "publisher": "Anthropic, PBC",
+      "url": "https://www.anthropic.com/news/public-benefit-fund",
+      "published_at": "2026-10-18",
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "IR",
+      "is_primary": true,
+      "supports_claim_ids": [
+        "IDENTITY",
+        "FINANCIAL",
+        "RISK",
+        "GUIDANCE",
+        "CAPITAL",
+        "LIQUIDITY",
+        "COMPETITION",
+        "MODEL",
+        "FUNDING",
+        "PROB",
+        "MODEL_BEAR",
+        "MODEL_BASE",
+        "MODEL_BULL",
+        "C1",
+        "C1_CONDITIONS",
+        "C2",
+        "C2_CONDITIONS",
+        "C3",
+        "C3_CONDITIONS",
+        "SIGNAL",
+        "OVERALL",
+        "DILUTION"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "S&P 500日足・補助比較",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "MARKET_CONTEXT"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "市場価格（日足・時点値）",
+      "publisher": "Yahoo Finance",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/ANT?range=3mo&interval=1d",
+      "published_at": null,
+      "accessed_at": "2026-11-28T06:27:02.356566+00:00",
+      "source_type": "MARKET_DATA",
+      "is_primary": false,
+      "supports_claim_ids": [
+        "QUOTE",
+        "MARKET_CONTEXT"
+      ]
+    }
+  ],
+  "guide": {
+    "tagline": "Claudeのモデル、API、Claude Code等のアプリを開発・提供する。API等は利用量課金、Pro・Max等はサブスクリプションで収益化。直接販売とAWS・Google Cloud等の経路を使う。無料クレジットや研究利用を有償売上と混同しない。[S1,S4]",
+    "section_claim_ids": {
+      "sec1": [
+        "IDENTITY",
+        "FINANCIAL"
+      ],
+      "sec2": [
+        "BUSINESS",
+        "RISK"
+      ],
+      "sec3": [
+        "BUSINESS",
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "sec4": [
+        "CAPITAL",
+        "LIQUIDITY"
+      ],
+      "sec5": [
+        "COMPETITION"
+      ],
+      "sec6": [
+        "CAPITAL"
+      ],
+      "sec7": [
+        "C1",
+        "C2",
+        "C3",
+        "RISK",
+        "C4"
+      ]
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S7"
+    ]
+  },
+  "scenario": {
+    "horizon_date": "2027-12-31",
+    "primary_method": "EV_SALES",
+    "method_explanation": "対象は2027年末。連結の2027年売上750／1,100／1,700億ドル、EV/Sales（売上に対する事業価値）6／10／16倍を当方仮定とする。2026年Q3売上169.56億と10月末Run-Rate Revenue810億（期間実績ではない）を足場に、成長鈍化・継続拡大・強い拡大を分ける。GAAP営業利益率-15／5／20%は報酬・研究・計算費を含む将来仮定。高い売上倍率には2027年以降の成長が必要で、独立DCFも併記して相違を隠さない。将来現金1,500／1,900／2,200億、最低運転現金600億、金融リース100／120／150億、株式185／188／195億で株主価値へ橋渡しする。",
+    "cases": [
+      {
+        "label": "BEAR",
+        "probability": 0.35,
+        "enterprise_value": 450000000000.0,
+        "equity_value": 530000000000.0,
+        "diluted_shares": 18500000000.0,
+        "price": 28.64864864864865,
+        "conditions": [
+          "Claude・API・法人・サブスク（連結）：売上75.00十億ドル×6倍、営業利益率-15%。自由現金・短期証券150.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等10.00十億ドル、非支配等0.00十億ドル、将来株式18.5十億株。",
+          "IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-94.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。",
+          "将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BASE",
+        "probability": 0.45,
+        "enterprise_value": 1100000000000.0,
+        "equity_value": 1218000000000.0,
+        "diluted_shares": 18800000000.0,
+        "price": 64.7872340425532,
+        "conditions": [
+          "Claude・API・法人・サブスク（連結）：売上110.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。",
+          "IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-54.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。",
+          "将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      },
+      {
+        "label": "BULL",
+        "probability": 0.2,
+        "enterprise_value": 2720000000000.0,
+        "equity_value": 2865000000000.0,
+        "diluted_shares": 19500000000.0,
+        "price": 146.92307692307693,
+        "conditions": [
+          "Claude・API・法人・サブスク（連結）：売上170.00十億ドル×16倍、営業利益率20%。自由現金・短期証券220.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等15.00十億ドル、非支配等0.00十億ドル、将来株式19.5十億株。",
+          "IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-24.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。",
+          "将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+          "事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。"
+        ],
+        "assumption_claim_ids": [
+          "MODEL",
+          "CAPITAL",
+          "FUNDING",
+          "ASSETS",
+          "PROB"
+        ]
+      }
+    ],
+    "computed": {
+      "expected_price": 68.56589773079135,
+      "expected_delta_pct": -25.374512700488296,
+      "raw_band_position_pct": 53.46155739145719,
+      "display_band_position_pct": 53.46155739145719,
+      "endpoint_rr": 0.8705029348056245,
+      "market_score": 53,
+      "own_score": 34,
+      "supplemental_score": 1
+    },
+    "risk_class": "HIGH",
+    "risk_reasons": [
+      "計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]",
+      "大きな将来成長・高い売上倍率と未確定の事業化・資金条件に依存する。"
+    ],
+    "major_catalyst_id": "C1",
+    "sensitivity": [
+      {
+        "variable": "全セグメント売上倍率（標準の比率）",
+        "low": 0.8,
+        "base": 1,
+        "high": 1.2,
+        "result_prices": [
+          53.08510638297872,
+          64.7872340425532,
+          76.48936170212765
+        ]
+      },
+      {
+        "variable": "全セグメント売上（標準の比率）",
+        "low": 0.8,
+        "base": 1,
+        "high": 1.2,
+        "result_prices": [
+          53.08510638297872,
+          64.7872340425532,
+          76.48936170212765
+        ]
+      }
+    ],
+    "distribution_method": "THREE_POINT",
+    "monte_carlo": null
+  },
+  "catalyst_report": {
+    "status": "CATALYST_RICH",
+    "next_catalyst_id": "C1",
+    "catalysts": [
+      {
+        "id": "C1",
+        "title": "Claude・Claude Codeの有償採用と継続利用",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 5,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S7"
+          ]
+        },
+        "plain_language": "9月末のTTM売上10万ドル以上の顧客は11,900超。会社定義のNRRは約900%だが急成長初期の影響を含み、将来へ固定しない。10月末Run-Rate Revenue810億ドルは年次実績や受注残ではない。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "採用と単価・継続が両立し、連結売上1,400〜1,700億ドルの経路。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": true,
+            "price_range": [
+              80.74468085106383,
+              96.70212765957447
+            ],
+            "price_change_pct_range": [
+              -12.119415704109882,
+              5.248288702192516
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上140.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上170.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "連結売上1,000〜1,200億ドルの当方標準付近。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              59.46808510638298,
+              70.1063829787234
+            ],
+            "price_change_pct_range": [
+              -35.27635491251308,
+              -23.697885308311484
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上100.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上120.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "競争・利用鈍化・単価下落で連結売上650〜850億ドルの経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              40.851063829787236,
+              51.48936170212766
+            ],
+            "price_change_pct_range": [
+              -55.538676719865876,
+              -43.960207115664275
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上65.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上85.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月の売上169.56億ドル、GAAP営業損失5.67億、純損失232.91億。1〜9月累計は売上332.42億、営業損失12.60億、純損失1,040.39億。累計純損失には転換証券等の評価変動損943.24億などが含まれ、現金流出額とは異なる。累計営業CF65.69億、設備取得9.25億、設備等の前払19.55億。[S1]"
+          ],
+          "evidence_against": [
+            "計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "有償顧客数",
+          "同一定義の継続・拡大",
+          "利用量",
+          "単価",
+          "営業CF"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2] 将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S7"
+        ],
+        "claim_ids": [
+          "C1",
+          "C1_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C2",
+        "title": "Anthropic Directの稼働と計算費効率",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S7"
+          ]
+        },
+        "plain_language": "計算設備・リースの契約と実際の稼働・費用削減は別段階。短期計算契約と長期設備を置き換えられるか、供給と費用を確認する。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "供給が需要に追い付き、費用効率も改善する。当方売上1,250〜1,450億ドルの利用可能量。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              72.76595744680851,
+              83.40425531914893
+            ],
+            "price_change_pct_range": [
+              -20.80326790726108,
+              -9.2247983030595
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上125.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上145.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "立上げが進む一方、費用負担が残る。売上1,050〜1,150億ドルの経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              62.12765957446808,
+              67.44680851063829
+            ],
+            "price_change_pct_range": [
+              -32.38173751146268,
+              -26.592502709361888
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上105.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上115.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "設備遅延・高価な短期調達で売上750〜950億ドルの経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              46.170212765957444,
+              56.808510638297875
+            ],
+            "price_change_pct_range": [
+              -49.74944191776508,
+              -38.17097231356348
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上75.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上95.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月の売上169.56億ドル、GAAP営業損失5.67億、純損失232.91億。1〜9月累計は売上332.42億、営業損失12.60億、純損失1,040.39億。累計純損失には転換証券等の評価変動損943.24億などが含まれ、現金流出額とは異なる。累計営業CF65.69億、設備取得9.25億、設備等の前払19.55億。[S1]"
+          ],
+          "evidence_against": [
+            "計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "稼働・供給",
+          "計算費比率",
+          "GAAP営業利益率",
+          "設備・前払",
+          "現金"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2] 将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S7"
+        ],
+        "claim_ids": [
+          "C2",
+          "C2_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C3",
+        "title": "研究・新用途の有償利用への接続",
+        "category": "PRODUCT",
+        "status": "ONGOING",
+        "importance": 4,
+        "date": {
+          "display_text": "進行中／各決算・公式開示で確認。確定日は未確認",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "LOW",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2",
+            "S7"
+          ]
+        },
+        "plain_language": "科学研究等の利用拡大と、外部顧客の有償・継続利用を区別する。AI for Scienceは無料クレジットを含むため、提携件数や無償枠を売上へ換算しない。",
+        "mechanism": [
+          "事業KPI・費用の変化",
+          "対象事業売上・利益率への接続",
+          "共通SOTPによる条件付き株主価値"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "新用途が既存利用を置き換えるだけでなく純増し、連結売上1,200〜1,400億ドルの経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              70.1063829787234,
+              80.74468085106383
+            ],
+            "price_change_pct_range": [
+              -23.697885308311484,
+              -12.119415704109882
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上120.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上140.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "新用途は進むが寄与は段階的で売上1,050〜1,150億ドルの経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              62.12765957446808,
+              67.44680851063829
+            ],
+            "price_change_pct_range": [
+              -32.38173751146268,
+              -26.592502709361888
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上105.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上115.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "品質・規制・需要で収益寄与が遅れ、売上850〜1,050億ドルの経路。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": true,
+            "price_range": [
+              51.48936170212766,
+              62.12765957446808
+            ],
+            "price_change_pct_range": [
+              -43.960207115664275,
+              -32.38173751146268
+            ],
+            "probability": null,
+            "method_note": "2027年末の条件付き再評価で、発表直後の値動き予測ではない。対象事業売上のみ変更、倍率・他事業売上・利益率の解釈・資金・株式は標準に固定。下限：Claude・API・法人・サブスク（連結）：売上85.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 上限：Claude・API・法人・サブスク（連結）：売上105.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。。良い結果でも基準株価より低い試算となり得る。価格幅は合算しない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "同じ設備・顧客・利益を共有するためイベント単独の価値増分を分離できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "USED",
+                "reason": "対象セグメント売上だけを結果別に変更し、他の標準入力を固定して共通SOTP式で再計算できる。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "同時点の独立した市場予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "発表前後の異常リターンと同時ニュースを分離した比較標本を作成していない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "事業構成・規制・資本条件が一致する同業イベント標本を確認していない。"
+              }
+            ],
+            "non_quantified_explanation": null
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "2026年7〜9月の売上169.56億ドル、GAAP営業損失5.67億、純損失232.91億。1〜9月累計は売上332.42億、営業損失12.60億、純損失1,040.39億。累計純損失には転換証券等の評価変動損943.24億などが含まれ、現金流出額とは異なる。累計営業CF65.69億、設備取得9.25億、設備等の前払19.55億。[S1]"
+          ],
+          "evidence_against": [
+            "計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]"
+          ],
+          "caveats": [
+            "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "複数の材料は同じ顧客・設備・利益と将来倍率に重なり、イベント除外時の独立価値を一次資料から一意に切り出せない。",
+            "missing_information": [
+              "材料別の増分営業CFと設備費",
+              "重複を除いた顧客・売上と独立価値"
+            ],
+            "next_checks": [
+              "事業別収益と設備・資金開示",
+              "公式な顧客・運行・開発実績"
+            ],
+            "recalculation_method": "材料を除いたセグメント価値と追加時の価値を同じ倍率・株式・資金条件で再評価できた段階で、基準時価総額との差から個別期待を逆算する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": "G1",
+        "leading_indicators": [
+          "有償利用への接続",
+          "業務品質・安全性",
+          "契約・更新",
+          "連結収益"
+        ],
+        "sell_the_news_risk": "既存期待が高い場合は事業が進んでも価格を支えない。基準価格との差は短期反応の予測ではなく、当方の条件付き価値との比較。",
+        "financing_risk": "9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2] 将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+        "update_triggers": [
+          "事業別決算・会社計画の更新",
+          "規制・安全性・開発・資本政策の重要開示"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S7"
+        ],
+        "claim_ids": [
+          "C3",
+          "C3_CONDITIONS",
+          "MODEL",
+          "RISK",
+          "FUNDING"
+        ]
+      },
+      {
+        "id": "C4",
+        "title": "IPO後の売却制限・報酬・公益目的拠出",
+        "category": "FINANCING",
+        "status": "CONTINGENT",
+        "importance": 4,
+        "date": {
+          "display_text": "保有者別に目論見書日から最大180日／365日。決算後・価格等の早期解除条項あり",
+          "start_date": null,
+          "end_date": null,
+          "precision": "TBD",
+          "basis": "CONFIRMED",
+          "confidence": "MEDIUM",
+          "timezone": null,
+          "source_ids": [
+            "S1",
+            "S2"
+          ]
+        },
+        "plain_language": "一般保有者は目論見書日から最大180日、創業者等は最大365日の売却制限があるが、決算後等の早期解除と例外がある。解除可能な全株が売却されるとはしない。公益基金・報酬・転換と既存株の売却を分けて追う。",
+        "mechanism": [
+          "売却制限・実行条件",
+          "流通株・新株発行の区別",
+          "需給と1株の取り分の確認"
+        ],
+        "outcomes": [
+          {
+            "label": "SUCCESS",
+            "conditions": [
+              "売却・希薄化の実行が限定され、需要と資本配分・開示の透明性が保たれる。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": false,
+            "price_range": null,
+            "price_change_pct_range": null,
+            "probability": null,
+            "method_note": "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "企業価値差分：既存株の売却制限解除だけでは営業CFの増減を確定できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "REJECTED",
+                "reason": "共通シナリオ：新規発行・純調達現金・実行株数が未定で、解除株数を希薄化として流用できない。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "市場予想改定：前後をそろえた独立した業績予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社イベント比較：上場直後で同社の比較可能な解除イベント標本がない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同業イベント比較：時価総額・浮動株・成長・同時ニュースをそろえた十分な対照標本を作成していない。"
+              }
+            ],
+            "non_quantified_explanation": {
+              "reason": "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。",
+              "missing_information": [
+                "実際に売却する保有者・数量と時期",
+                "同時点の需給・市場予想改定・比較イベントの異常リターン"
+              ],
+              "next_checks": [
+                "目論見書の早期解除条件と今後の登録・保有開示",
+                "実際の売却、発行済株式、転換・報酬の更新"
+              ],
+              "recalculation_method": "新株発行と既存株売却を分ける。新規発行は純調達現金と追加株式を共通モデルへ反映。既存売却は同時ニュースを調整した十分な比較標本がそろった段階で短期需給を別途評価する。"
+            }
+          },
+          {
+            "label": "INLINE",
+            "conditions": [
+              "予定された売却可能化と株式報酬・転換が既存想定内で進む。"
+            ],
+            "direction": "MIXED",
+            "quantifiable": false,
+            "price_range": null,
+            "price_change_pct_range": null,
+            "probability": null,
+            "method_note": "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "企業価値差分：既存株の売却制限解除だけでは営業CFの増減を確定できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "REJECTED",
+                "reason": "共通シナリオ：新規発行・純調達現金・実行株数が未定で、解除株数を希薄化として流用できない。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "市場予想改定：前後をそろえた独立した業績予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社イベント比較：上場直後で同社の比較可能な解除イベント標本がない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同業イベント比較：時価総額・浮動株・成長・同時ニュースをそろえた十分な対照標本を作成していない。"
+              }
+            ],
+            "non_quantified_explanation": {
+              "reason": "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。",
+              "missing_information": [
+                "実際に売却する保有者・数量と時期",
+                "同時点の需給・市場予想改定・比較イベントの異常リターン"
+              ],
+              "next_checks": [
+                "目論見書の早期解除条件と今後の登録・保有開示",
+                "実際の売却、発行済株式、転換・報酬の更新"
+              ],
+              "recalculation_method": "新株発行と既存株売却を分ける。新規発行は純調達現金と追加株式を共通モデルへ反映。既存売却は同時ニュースを調整した十分な比較標本がそろった段階で短期需給を別途評価する。"
+            }
+          },
+          {
+            "label": "FAILURE",
+            "conditions": [
+              "売却・報酬・公益目的拠出・資金条件が既存株主の取り分や需給を想定以上に圧迫する。"
+            ],
+            "direction": "DOWN",
+            "quantifiable": false,
+            "price_range": null,
+            "price_change_pct_range": null,
+            "probability": null,
+            "method_note": "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。",
+            "quantification_attempts": [
+              {
+                "method": "ENTERPRISE_VALUE_DELTA",
+                "status": "REJECTED",
+                "reason": "企業価値差分：既存株の売却制限解除だけでは営業CFの増減を確定できない。"
+              },
+              {
+                "method": "CONDITIONAL_SCENARIO",
+                "status": "REJECTED",
+                "reason": "共通シナリオ：新規発行・純調達現金・実行株数が未定で、解除株数を希薄化として流用できない。"
+              },
+              {
+                "method": "CONSENSUS_REVISION",
+                "status": "NOT_APPLICABLE",
+                "reason": "市場予想改定：前後をそろえた独立した業績予想改定データを取得していない。"
+              },
+              {
+                "method": "SAME_COMPANY_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同社イベント比較：上場直後で同社の比較可能な解除イベント標本がない。"
+              },
+              {
+                "method": "PEER_EVENT_STUDY",
+                "status": "NOT_APPLICABLE",
+                "reason": "同業イベント比較：時価総額・浮動株・成長・同時ニュースをそろえた十分な対照標本を作成していない。"
+              }
+            ],
+            "non_quantified_explanation": {
+              "reason": "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。",
+              "missing_information": [
+                "実際に売却する保有者・数量と時期",
+                "同時点の需給・市場予想改定・比較イベントの異常リターン"
+              ],
+              "next_checks": [
+                "目論見書の早期解除条件と今後の登録・保有開示",
+                "実際の売却、発行済株式、転換・報酬の更新"
+              ],
+              "recalculation_method": "新株発行と既存株売却を分ける。新規発行は純調達現金と追加株式を共通モデルへ反映。既存売却は同時ニュースを調整した十分な比較標本がそろった段階で短期需給を別途評価する。"
+            }
+          }
+        ],
+        "priced_in": {
+          "quantifiable": false,
+          "method": "QUALITATIVE",
+          "percent_range": null,
+          "raw_implied_pct": null,
+          "event_excluded_equity_value": null,
+          "full_success_incremental_equity_value": null,
+          "confidence": "LOW",
+          "evidence_for": [
+            "IPO後の開示・資本政策を確認できる。"
+          ],
+          "evidence_against": [
+            "計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]"
+          ],
+          "caveats": [
+            "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。"
+          ],
+          "non_quantified_explanation": {
+            "reason": "売却制限の解除は新株発行そのものではない。実際の売却量・需要・同時ニュースが不明で、機械的な株価下落率や企業価値差分を置けない。",
+            "missing_information": [
+              "実際に売却する保有者・数量と時期",
+              "同時点の需給・市場予想改定・比較イベントの異常リターン"
+            ],
+            "next_checks": [
+              "目論見書の早期解除条件と今後の登録・保有開示",
+              "実際の売却、発行済株式、転換・報酬の更新"
+            ],
+            "recalculation_method": "新株発行と既存株売却を分ける。新規発行は純調達現金と追加株式を共通モデルへ反映。既存売却は同時ニュースを調整した十分な比較標本がそろった段階で短期需給を別途評価する。"
+          }
+        },
+        "dependencies": [],
+        "dependency_group_id": null,
+        "leading_indicators": [
+          "実際の売却・登録",
+          "発行済株式と転換",
+          "基金の外部移転と報酬"
+        ],
+        "sell_the_news_risk": "解除可能日を固定の売り日・下落率に置き換えない。良い事業ニュースと売却・追加報酬が同時に起こる場合もある。",
+        "financing_risk": "将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。",
+        "update_triggers": [
+          "解除・登録・保有・転換・報酬の公式開示",
+          "新規発行と純調達現金の確定"
+        ],
+        "source_ids": [
+          "S1",
+          "S2",
+          "S7"
+        ],
+        "claim_ids": [
+          "C4",
+          "CAPITAL",
+          "DILUTION",
+          "RISK"
+        ]
+      }
+    ],
+    "dependency_groups": [
+      {
+        "id": "G1",
+        "name": "Claude共通の有償需要・供給・品質",
+        "relationship_type": "SHARED_VALUE",
+        "catalyst_ids": [
+          "C1",
+          "C2",
+          "C3"
+        ],
+        "aggregation_rule": "同じClaude連結売上・資金条件を変える材料C1〜C3は共通価値を1回だけ評価。C4の純粋な既存株需給は事業価値の成功増分へ加算しない。",
+        "full_success_incremental_equity_value": 2335000000000.0
+      }
+    ],
+    "overall_priced_in": {
+      "quantifiable": true,
+      "percent_range": [
+        35.94143902389593,
+        55.94143902389593
+      ],
+      "raw_implied_pct": 45.94143902389593,
+      "all_events_excluded_equity_value": 530000000000.0,
+      "included_group_ids": [
+        "G1"
+      ],
+      "method_note": "共通の連結Claude事業・資金条件を1群にまとめ、失敗側株主価値530.00十億ドル、成功側2,865.00十億ドルから逆算。中心45.9%。表示幅は中心±10ポイントを0〜100へ制限し、統計区間・成功率ではない。 現在の評価株式と各ケースの将来株式が違うため、株価帯の位置とは一致しない。 この全体値はC1〜C3の事業・資本条件を対象とし、C4の純粋な既存株需給は含めない。",
+      "confidence": "LOW",
+      "non_quantified_explanation": null
+    },
+    "watch_items": [
+      {
+        "item": "有償顧客数、同一定義の継続・拡大、利用量、単価、営業CF",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C1"
+        ]
+      },
+      {
+        "item": "稼働・供給、計算費比率、GAAP営業利益率、設備・前払、現金",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C2"
+        ]
+      },
+      {
+        "item": "有償利用への接続、業務品質・安全性、契約・更新、連結収益",
+        "frequency": "各決算・公式開示時",
+        "update_trigger": "事業・資金・規制の重要変化",
+        "catalyst_ids": [
+          "C3"
+        ]
+      },
+      {
+        "item": "実際の売却、転換、報酬、基金の外部移転",
+        "frequency": "各公式開示時",
+        "update_trigger": "新規発行・純調達現金・保有状況の変化",
+        "catalyst_ids": [
+          "C4"
+        ]
+      }
+    ]
+  },
+  "validation_summary": {
+    "status": "WARN",
+    "fail_count": 0,
+    "warn_count": 5,
+    "generated_at": "2026-11-28T06:27:02.356566+00:00",
+    "messages": [
+      "最新財務はIPOの確定目論見書であり、上場後の最新実測残高や四半期報告書ではない。",
+      "IPO後現金と潜在株式は開示からの計算。全転換・RSU・寄付対応・基金移転には不確実性がある。",
+      "将来売上・利益率・倍率・確率・DCFは当方仮定。市場予想・同業横断倍率・短期イベント統計は未取得。",
+      "C4の既存株需給による価格幅は、代替5手法を検討しても根拠ある端点を作れず未算出。",
+      "9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2]"
+    ]
+  }
+}

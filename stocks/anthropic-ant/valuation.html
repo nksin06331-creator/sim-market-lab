@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>アンソロピック（ANT）｜株価シナリオ</title>
+
+<style>
+:root{--accent:#6EE24E;--accent-bright:#8BF56B;--accent-tint:rgba(110,226,78,.12);--accent-line:rgba(110,226,78,.38);--bg:#0a0c0a;--surface:#141815;--surface-2:#1b201c;--ink:#f1f5f1;--muted:#8a948a;--line:rgba(255,255,255,.09);--amber:#fbbf24;--red:#f87171;--blue:#60a5fa;--shadow:0 18px 48px rgba(0,0,0,.28);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(100% 80% at 50% -10%,#12251a 0%,#0b0f0c 45%,var(--bg) 76%);color:var(--ink);font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-text-size-adjust:100%}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(var(--accent) 1px,transparent 1.5px);background-size:18px 18px;mask-image:linear-gradient(#000,transparent 72%)}a{color:var(--accent)}.wrap{max-width:1040px;margin:auto;padding:0 20px}
+.hero{position:relative;color:#fff;padding:52px 0 34px;border-bottom:1px solid var(--line);overflow:hidden}.hero:after{content:"SiM";position:absolute;right:-18px;top:-18px;font-size:clamp(96px,22vw,230px);font-weight:900;letter-spacing:-.08em;color:transparent;-webkit-text-stroke:1px rgba(110,226,78,.10);pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--accent-line);border-radius:999px;font-size:11px;letter-spacing:.14em;color:var(--accent);background:var(--accent-tint);font-weight:800}.eyebrow:before{content:"●";font-size:8px}.hero h1{position:relative;z-index:1;font-size:clamp(38px,7vw,68px);line-height:1.02;letter-spacing:-.05em;margin:20px 0 10px;font-weight:900;max-width:900px}.hero h1 small{display:inline-block;font-size:.29em;padding:6px 11px;border-radius:8px;background:var(--accent);color:#06210a;vertical-align:middle;letter-spacing:0}.sub{color:#b9c1b9;position:relative;z-index:1;font-size:14px}
+.verdict{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr .5fr;gap:14px;margin-top:24px}.verdict-main,.score{border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.verdict-main{background:linear-gradient(145deg,rgba(110,226,78,.12),rgba(110,226,78,.03)),var(--surface)}.score{background:var(--accent);color:#06210a;display:flex;flex-direction:column;justify-content:center}.status{font-size:clamp(24px,4vw,38px);line-height:1.2;font-weight:900;letter-spacing:-.035em;margin-top:8px}.score b{font-size:54px;line-height:1;display:block}.score small{color:#173b1e;font-weight:800}
+.kpis{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.kpi{min-height:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;position:relative;overflow:hidden}.kpi:after{content:"";position:absolute;width:66px;height:66px;border-radius:50%;right:-28px;bottom:-32px;background:var(--accent);opacity:.09}.kpi span{font-size:11px;color:var(--muted);font-weight:700}.kpi b{font-size:clamp(21px,3vw,29px);display:block;margin-top:6px;letter-spacing:-.035em}.kpi small{color:#bfc7bf;font-size:12px}
+main{padding:24px 0 72px}section{margin:16px 0}.card{background:linear-gradient(180deg,var(--surface-2),var(--surface));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px;position:relative;overflow:hidden}.card:before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;right:-72px;top:-76px;background:var(--accent);filter:blur(12px);opacity:.08}h2{position:relative;z-index:1;font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;margin:0 0 9px;font-weight:900;padding-bottom:10px}h2:after{content:"";position:absolute;left:0;bottom:0;width:40px;height:3px;background:var(--accent);border-radius:3px}h3{margin:0 0 8px;font-size:18px}.lead{color:var(--muted);margin-top:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.scenario{border-radius:16px;padding:18px;border:1px solid var(--line);background:#101410;position:relative;overflow:hidden;min-height:320px}.scenario:after{position:absolute;right:4px;top:-12px;font-weight:900;font-size:66px;opacity:.05;line-height:1}.scenario.bear:after{content:"B"}.scenario.base:after{content:"A"}.scenario.bull:after{content:"↑"}.scenario-head{display:flex;justify-content:space-between;gap:10px;font-weight:800}.scenario-head b{padding:4px 9px;border-radius:999px;color:#06210a;background:var(--accent)}.scenario-price{font-size:clamp(31px,4vw,42px);font-weight:900;letter-spacing:-.05em;margin:14px 0 0}.scenario.bear{border-top:4px solid var(--red)}.scenario.base{border-top:4px solid var(--accent);box-shadow:0 0 0 1px rgba(110,226,78,.12)}.scenario.bull{border-top:4px solid var(--accent-bright)}
+.small{font-size:13px;color:var(--muted)}dl{margin:16px 0 0}dl div{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding:8px 0;gap:12px}dt{color:var(--muted)}dd{margin:0;font-weight:800}.position{margin-top:20px}.position-line{height:14px;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--amber),var(--accent));position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}.pin{position:absolute;top:-8px;width:7px;height:30px;background:#fff;border:2px solid #050805;border-radius:6px;left:36.1%;box-shadow:0 4px 14px rgba(0,0,0,.55)}.position-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:7px;gap:7px}.pill{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);font-weight:800;font-size:11px}
+.zone,.signal{border-top:1px solid var(--line);padding:14px 0}.zone div,.signal div{display:flex;justify-content:space-between;gap:12px}.zone span{color:var(--accent);letter-spacing:.08em}.zone p,.signal p{margin:4px 0;color:var(--muted);font-size:14px}.up{color:var(--accent);font-weight:800}.down{color:var(--red);font-weight:800}.flat{color:var(--amber);font-weight:800}ul.clean{padding:0;margin:12px 0;list-style:none}ul.clean li{margin:9px 0;padding:12px 14px 12px 40px;background:#101410;border:1px solid var(--line);border-radius:12px;position:relative}ul.clean li:before{content:"✓";position:absolute;left:14px;top:11px;color:var(--accent);font-weight:900}.grid-2 .card:nth-child(2) ul.clean li:before{content:"!";color:var(--red)}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}.meter,.track{background:#0d100d;border:1px solid var(--line);border-radius:999px;overflow:hidden}.meter{height:12px}.meter i{display:block;height:100%;background:var(--accent);border-radius:999px}.dist-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;margin:12px 0}.track{height:11px}.track i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px;background:#101410}table{border-collapse:collapse;width:100%;min-width:760px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right}th:first-child,td:first-child{text-align:left}th{font-size:11px;color:var(--accent);background:#0f120f;position:sticky;top:0}
+details{border:1px solid var(--line);background:#101410;border-radius:12px;padding:0;margin:10px 0;overflow:hidden}summary{font-weight:800;cursor:pointer;padding:14px 16px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:"＋";float:right;color:var(--accent);font-size:20px;line-height:1}details[open] summary:after{content:"−"}details>p,details>ul{padding:0 16px 16px;margin:0;color:#c4ccc4}.notice{border:1px solid rgba(251,191,36,.35);border-left:4px solid var(--amber);background:rgba(251,191,36,.08);padding:14px 16px;border-radius:12px}footer{color:var(--muted);font-size:12px;margin-top:28px;padding:20px 0 0;border-top:1px solid var(--line)}
+.report-nav{position:sticky;top:0;z-index:50;background:rgba(10,12,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.report-nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:9px;padding-bottom:9px}.report-nav a{white-space:nowrap;text-decoration:none;background:var(--surface);border:1px solid var(--line);color:#fff;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700}.report-nav a:hover{border-color:var(--accent);color:var(--accent)}.hero-tags{position:relative;z-index:1;margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.hero-tags span{background:var(--accent-tint);border:1px solid var(--accent-line);color:var(--accent);padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800}
+@media(max-width:800px){.verdict,.grid-2,.compare{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.scenarios{grid-template-columns:1fr}.hero{padding-top:34px}.scenario{min-height:auto}}
+@media(max-width:520px){body{font-size:14px;line-height:1.66;overflow-wrap:anywhere}.wrap{padding:0 12px}.hero{padding:22px 0 18px}.eyebrow{padding:4px 10px;font-size:10px}.hero h1{font-size:30px;line-height:1.18;margin:12px 0 7px}.hero h1 small{padding:4px 8px}.sub{font-size:11px;line-height:1.55}.verdict{margin-top:12px;gap:8px}.verdict-main,.score{padding:14px;border-radius:12px}.status{font-size:22px;margin-top:5px}.verdict-main p{margin:7px 0}.score{display:grid;grid-template-columns:1fr auto;align-items:end;gap:6px}.score b{font-size:30px}.score small{font-size:10px}.kpis{gap:6px;margin-top:8px}.kpi{padding:10px;min-height:86px;border-radius:11px}.kpi span,.kpi small{font-size:10px;line-height:1.45}.kpi b{font-size:16px;line-height:1.35;margin-top:3px}.hero-tags{margin-top:9px;gap:5px}.hero-tags span{padding:4px 7px;font-size:10px}.report-nav .wrap{padding-top:6px;padding-bottom:6px}.report-nav a{min-height:44px;display:flex;align-items:center;padding:6px 10px;font-size:11px}main{padding:14px 0 42px}section{margin:10px 0;scroll-margin-top:58px}.card{padding:14px;border-radius:12px}.grid-2,.compare{gap:8px}.scenarios{gap:8px}.scenario{padding:14px;border-radius:12px}.scenario-price{font-size:30px;margin-top:8px}h2{font-size:20px;margin-bottom:7px;padding-bottom:8px}h3{font-size:16px}.lead{font-size:14px;line-height:1.65}.zone,.signal{padding:10px 0}.zone p,.signal p{font-size:13px;line-height:1.6}.notice{padding:11px 12px}.dist-row{grid-template-columns:82px 1fr 40px;gap:7px;margin:9px 0;font-size:11px}.position-labels{font-size:9px}.table-wrap table{min-width:620px}th,td{padding:8px;font-size:11px}details summary{min-height:44px;padding:11px 12px}details>p,details>ul{padding:0 12px 12px}.small{font-size:11px}}
+@media print{body{background:#fff;color:#111}body:before,.hero:after{display:none}.hero,.card,.kpi,.scenario,details,.table-wrap{background:#fff!important;color:#111!important;box-shadow:none!important}.hero{border-bottom:2px solid #111}.sub,.lead,.small,.zone p,.signal p,footer{color:#555!important}.card,.kpi,.scenario,details{break-inside:avoid}}
+</style>
+
+<link rel="stylesheet" href="../../lab/assets/css/report-ui.css">
+</head>
+<body data-report-kind="valuation" data-stock-ticker="ANT" data-price-source="../../data/prices.json">
+<nav class="report-backbar" aria-label="サイトナビゲーション"><div class="wrap"><a href="../../index.html">← 銘柄一覧へ戻る</a></div></nav>
+<!-- ================================================================
+  SiM MARKET LAB / UNIFIED SCENARIO TEMPLATE
+  ・CSSと各セクション構成はキオクシア版と同一（サイト掲載の見た目を維持）。
+  ・{{ }} を report_data の値で置換して使う。数値・確率・結論は改変しない。
+  ・ファイル名は銘柄名（例: 285A.html / IONQ.html）。
+================================================================ -->
+<header class="hero">
+<div class="wrap">
+  <div class="eyebrow">S<span style="color:#fff">i</span>M MARKET LAB / PRICE SCENARIO</div>
+  <h1>アンソロピック <small>ANT</small></h1>
+  <div class="sub">Nasdaq／USD｜評価基準日 2026-11-28｜使用手法 連結EV/Sales／利益率・資金・希薄化</div>
+  <div class="verdict">
+    <div class="verdict-main">
+      <span class="pill">まず結論だけ</span>
+      <!-- decision.status＋一言結論（絵文字は先頭1個まで、45文字目安） -->
+      <div class="status">事業の進展と高い期待を分けて見る</div>
+      <!-- 現値ポジショニングと市場逆算を1〜2文で -->
+      <p>標準ケース$64.79。基準株価は標準〜楽観の間。将来の売上・利益率と資金条件が成立する場合の価値です。</p>
+      <p class="sub">独立DCFでは$37.25。主手法より低く、長期CF・終価・売上倍率に大きく依存します。平均して差を消さず、確信度を低く置きます。</p>
+    </div>
+    <!-- 総合スコアは“補助指標”。売買判断そのものではない旨を必ず添える -->
+    <details class="score-detail"><summary>シナリオの参考スコア（総合判定とは別）</summary><div class="score"><small>分析の参考スコア</small><b>1</b><small>/ 100　売買判断ではありません</small></div></details>
+  </div>
+  <div class="analysis-basis"><p><strong>計算に使った基準株価：$91.88</strong> ／ 2026-11-27T18:00:01+00:00 時点値（分析基準値）</p><p>シナリオ・騰落率・参考スコアはこの基準で固定。現在株価の更新では再計算しません。</p></div>
+<div class="kpis">
+    <div class="kpi"><span>現在株価 <em style="font-style:normal;color:var(--accent);font-size:10px">LIVE</em></span><b data-live-price>$91.88</b><small data-live-price-date>2026-11-27T18:00:01+00:00 時点値（分析基準値）</small></div>
+    <div class="kpi"><span>標準ケースの株価</span><b>$64.79</b><small>-29.5%</small></div>
+    <div class="kpi"><span>3ケースを確率でならした値</span><b>$68.57</b><small>-25.4%</small></div>
+    <div class="kpi"><span>値動きリスク</span><b>高い</b><small>事業化・高い倍率・資金・規制条件に依存</small></div>
+  </div>
+
+</div>
+</header>
+
+<!-- Validation：WARNがあれば下の注意帯を残す（なければ丸ごと削除）。FAIL時は完成版にしない。 -->
+<div class="wrap"><p class="notice">将来売上・利益率・倍率・資金・株式数は当方仮定です。計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]</p></div>
+<!-- 例（WARN時）:
+<div class="wrap"><div class="notice" style="margin-top:14px"><b>注意：</b>将来売上・利益率・倍率・資金・株式数は当方仮定です。計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]</div></div>
+-->
+
+<nav class="report-nav"><div class="wrap">
+<a href="#snapshot">結論</a>
+<a href="#scenarios">3シナリオ</a>
+<a href="#logic">計算</a>
+<a href="#sensitivity">感応度</a>
+<a href="#assumptions">前提</a>
+</div></nav>
+
+<main class="wrap">
+
+<!-- Layer2-1：いまどこ？（現値ポジショニング＋市場逆算） -->
+<section class="card" id="snapshot">
+  <h2>いまの株価、どこにいる？</h2>
+  <p class="lead">分析基準株価$91.88／2026-11-27T18:00:01+00:00。分析基準日2026-11-28。対象2027年末。時点値で終値とは限りません。</p>
+  <div class="grid-2">
+    <div>
+      <h3>今の株価の位置</h3>
+      <p>悲観～楽観ケースの <b>53.5%</b> 地点。判定は <b>標準〜楽観の間</b>。丸め前の帯位置53.5%。0〜100%外は表示ピンだけ端へ固定します。真の成功率ではありません。</p>
+      <!-- pin の left:% を band_position_pct に合わせる -->
+      <div class="position"><div class="position-line"><i class="pin" style="left:53.5%"></i></div><div class="position-labels"><span>Bear $28.65</span><span>Base $64.79</span><span>Bull $146.92</span></div></div>
+      <p>楽観側の余地 ÷ 悲観側の下落余地：<b>0.87倍（確率を含まない）</b>　3ケースを確率でならした値：<b>$68.57</b></p>
+    </div>
+    <div>
+      <h3>今の株価と、この分析の違い</h3>
+      <div class="compare">
+        <div><b>今の株価 53/100</b><div class="meter"><i style="width:53%"></i></div></div>
+        <div><b>この分析 34/100</b><div class="meter"><i style="width:34%"></i></div></div>
+      </div>
+      <!-- market_reverse.conclusion：現値が自分のどの前提に相当するか -->
+      <p>標準事業売上と資金条件・現在評価株式を固定すると、基準価格が要求する事業価値は1,484.73十億ドル。標準の全売上倍率を一斉に1.35倍する条件に相当します。実際の市場予想を観測した値ではありません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Layer1/2：3シナリオ。dl の項目は使用手法に合わせて変える（rNPV/SOTP/EV-Sales/PER等） -->
+<section class="card" id="scenarios">
+  <h2>未来はこの3パターン</h2>
+  <p class="lead">2027年末に2027年の通期収益力とそれ以降の成長期待を評価。現在株価に合わせて標準入力を作っていません。</p>
+  <div class="scenarios">
+    <article class="scenario bear">
+      <div class="scenario-head"><span>悲観ケース</span><b>35%</b></div>
+      <div class="scenario-price">$28.65</div>
+      <div class="small">現値比 -68.8%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>450.00十億ドル</dd></div><div><dt>株主価値</dt><dd>530.00十億ドル</dd></div><div><dt>将来株式</dt><dd>18.5十億株</dd></div></dl>
+      <!-- 例: <div><dt>事業価値</dt><dd>25.9兆円</dd></div> を手法に応じて数行 -->
+    </article>
+    <article class="scenario base">
+      <div class="scenario-head"><span>標準ケース</span><b>45%</b></div>
+      <div class="scenario-price">$64.79</div>
+      <div class="small">現値比 -29.5%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>1,100.00十億ドル</dd></div><div><dt>株主価値</dt><dd>1,218.00十億ドル</dd></div><div><dt>将来株式</dt><dd>18.8十億株</dd></div></dl>
+    </article>
+    <article class="scenario bull">
+      <div class="scenario-head"><span>楽観ケース</span><b>20%</b></div>
+      <div class="scenario-price">$146.92</div>
+      <div class="small">現値比 +59.9%</div>
+      <dl><div><dt>対象</dt><dd>2027年末</dd></div><div><dt>事業価値</dt><dd>2,720.00十億ドル</dd></div><div><dt>株主価値</dt><dd>2,865.00十億ドル</dd></div><div><dt>将来株式</dt><dd>19.5十億株</dd></div></dl>
+    </article></div>
+</section>
+
+<!-- Layer2：価格別アクションマップ ＋ 株価を動かす材料 -->
+<section class="grid-2">
+  <div class="card">
+    <h2>この値段ならどう見る？</h2>
+    <!-- 4〜5帯。「買い/売り」は断定しない。星は割安度の目安 -->
+    <div class="zone"><div><b>$28.65未満</b></div><p>当方悲観モデルより低い。前提の追加悪化や別のリスクを再検討。</p></div><div class="zone"><div><b>$28.65〜$64.79</b></div><p>悲観と標準の間。標準の達成を保証しない。</p></div><div class="zone"><div><b>$64.79〜$146.92</b></div><p>成長と高い評価倍率、資金・規制条件が必要。</p></div><div class="zone"><div><b>$146.92超</b></div><p>当方楽観ケース以上の収益化・倍率等が必要。売買指示ではない。</p></div>
+    <!-- 例: <div class="zone"><div><b>48,000円未満</b><span>★★★★★</span></div><p>悲観ケース以下。下方リスクを相当織り込む</p></div> -->
+  </div>
+  <div class="card">
+    <h2>株価を動かす4つ</h2>
+    <!-- 各材料に up=追い風 / down=注意 / flat を付ける -->
+    <div class="signal"><div><b>Claude・Claude Codeの有償採用と継続利用</b></div><p>9月末のTTM売上10万ドル以上の顧客は11,900超。会社定義のNRRは約900%だが急成長初期の影響を含み、将来へ固定しない。10月末Run-Rate Revenue810億ドルは年次実績や受注残ではない。 [S1,S2]</p></div><div class="signal"><div><b>Anthropic Directの稼働と計算費効率</b></div><p>計算設備・リースの契約と実際の稼働・費用削減は別段階。短期計算契約と長期設備を置き換えられるか、供給と費用を確認する。 [S1,S2]</p></div><div class="signal"><div><b>研究・新用途の有償利用への接続</b></div><p>科学研究等の利用拡大と、外部顧客の有償・継続利用を区別する。AI for Scienceは無料クレジットを含むため、提携件数や無償枠を売上へ換算しない。 [S1,S2]</p></div><div class="signal"><div><b>IPO後の売却制限・報酬・公益目的拠出</b></div><p>一般保有者は目論見書日から最大180日、創業者等は最大365日の売却制限があるが、決算後等の早期解除と例外がある。解除可能な全株が売却されるとはしない。公益基金・報酬・転換と既存株の売却を分けて追う。 [S1,S2]</p></div><div class="signal"><div><b>上場後の売却制限・株式報酬</b></div><p>一般保有者は目論見書日から最大180日、創業者等は最大365日の売却制限があるが、決算後等の早期解除と例外がある。解除可能な全株が売却されるとはしない。公益基金・報酬・転換と既存株の売却を分けて追う。 [S1,S2]</p></div>
+    <!-- 例: <div class="signal"><div><b>AI向けSSD需要</b><span class="up">追い風</span></div><p>…</p></div> -->
+  </div>
+</section>
+
+<!-- Layer2：良い点 / 気になる点（対比） -->
+<section class="grid-2">
+  <div class="card">
+    <h2>ここは普通に強い</h2>
+    <ul class="clean"><li>Claudeのモデル、API、Claude Code等のアプリを開発・提供する。API等は利用量課金、Pro・Max等はサブスクリプションで収益化。直接販売とAWS・Google Cloud等の経路を使う。無料クレジットや研究利用を有償売上と混同しない。[S1,S4]</li><li>2026年7〜9月の売上169.56億ドル、GAAP営業損失5.67億、純損失232.91億。1〜9月累計は売上332.42億、営業損失12.60億、純損失1,040.39億。累計純損失には転換証券等の評価変動損943.24億などが含まれ、現金流出額とは異なる。累計営業CF65.69億、設備取得9.25億、設備等の前払19.55億。[S1]</li><li>会社はモデル能力、安全性、企業への普及とAnthropic Direct（計算設備の直接調達・リース）の拡大を説明する。計算資源等の購入・リース契約は約9,009億ドルで、うち2026年9月末から12か月に約707億、2030年末までに約4,516億が予定される。全額を現在の借入負債とはしない。取得した資料に2027年通期の確定売上・利益予想や次回決算の確定日時はない。[S1]</li></ul>
+    <!-- 例: <li>FY2025売上2.34兆円で過去最高。</li> を3〜5件 -->
+  </div>
+  <div class="card">
+    <h2>ここで事故るかも</h2>
+    <ul class="clean"><li>計算資源の供給・価格、競合との性能・料金競争、モデル品質・安全性・規制、著作権・訴訟、SBC（株式報酬）と寄付・公益基金の希薄化が主要リスク。Claudeの採用が増えても単価と計算費が改善しないと利益にならない。創業者側のClass Fが議決権50.1%、独立LTBT側のClass Tが取締役過半を選ぶ構造で、経済的持分と支配権が異なる。[S1,S2]</li><li>9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2]</li><li>独立DCF・同業倍率・市場予想を用いる別手法の検証は未実施。</li></ul>
+    <!-- 2つ目のカードのliは自動で赤「!」になる -->
+  </div>
+</section>
+
+<!-- Layer3：計算ロジック -->
+<section class="card" id="logic">
+  <h2>数字の作り方</h2>
+  <p class="lead">EV＝Σ（事業別売上×売上倍率）。株主価値＝EV＋将来自由現金・短期証券＋その他資産−最低運転現金−負債・金融リース−非支配等。1株価値＝株主価値÷将来希薄化株式。</p>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
+  <thead><tr><th>ケース</th><th>領域</th><th>売上／合計EV</th><th>営業利益率／調整</th><th>倍率／株主価値</th><th>事業価値／1株価値</th></tr></thead>
+  <tbody><tr><td>悲観</td><td>Claude・API・法人・サブスク（連結）</td><td>75.00十億ドル</td><td>-15%</td><td>6倍</td><td>450.00十億ドル</td></tr><tr><td>悲観</td><td>合計EV→株主価値</td><td>450.00十億ドル</td><td>資金・請求権調整後</td><td>530.00十億ドル</td><td>$28.65／株</td></tr><tr><td>標準</td><td>Claude・API・法人・サブスク（連結）</td><td>110.00十億ドル</td><td>5%</td><td>10倍</td><td>1,100.00十億ドル</td></tr><tr><td>標準</td><td>合計EV→株主価値</td><td>1,100.00十億ドル</td><td>資金・請求権調整後</td><td>1,218.00十億ドル</td><td>$64.79／株</td></tr><tr><td>楽観</td><td>Claude・API・法人・サブスク（連結）</td><td>170.00十億ドル</td><td>20%</td><td>16倍</td><td>2,720.00十億ドル</td></tr><tr><td>楽観</td><td>合計EV→株主価値</td><td>2,720.00十億ドル</td><td>資金・請求権調整後</td><td>2,865.00十億ドル</td><td>$146.92／株</td></tr></tbody>
+  </table></div>
+  <!-- 現値に合わせた逆算ではない旨、未開示前提の注意など -->
+  <p class="notice"><b>重要：</b>対象は2027年末。連結の2027年売上750／1,100／1,700億ドル、EV/Sales（売上に対する事業価値）6／10／16倍を当方仮定とする。2026年Q3売上169.56億と10月末Run-Rate Revenue810億（期間実績ではない）を足場に、成長鈍化・継続拡大・強い拡大を分ける。GAAP営業利益率-15／5／20%は報酬・研究・計算費を含む将来仮定。高い売上倍率には2027年以降の成長が必要で、独立DCFも併記して相違を隠さない。将来現金1,500／1,900／2,200億、最低運転現金600億、金融リース100／120／150億、株式185／188／195億で株主価値へ橋渡しする。 未使用の融資・転換枠、買収済み事業価値や将来の無料クレジットは現金・その他資産へ加えない。制限現金25.40億ドルは自由現金と別のため再控除しない。公益基金の自己保有分は現在の経済株式数から除外し、将来外部移転は将来株式へ反映する。[S1]</p>
+</section>
+
+<!-- Layer3：成立条件 -->
+<section class="card" id="conditions">
+  <h2>この未来になる条件</h2>
+  <details><summary>悲観：$28.65／主観確率35%</summary><p>Claude・API・法人・サブスク（連結）：売上75.00十億ドル×6倍、営業利益率-15%。自由現金・短期証券150.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等10.00十億ドル、非支配等0.00十億ドル、将来株式18.5十億株。 IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-94.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。 将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。 事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。</p></details><details><summary>標準：$64.79／主観確率45%</summary><p>Claude・API・法人・サブスク（連結）：売上110.00十億ドル×10倍、営業利益率5%。自由現金・短期証券190.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等12.00十億ドル、非支配等0.00十億ドル、将来株式18.8十億株。 IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-54.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。 将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。 事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。</p></details><details><summary>楽観：$146.92／主観確率20%</summary><p>Claude・API・法人・サブスク（連結）：売上170.00十億ドル×16倍、営業利益率20%。自由現金・短期証券220.00十億ドル、その他資産0.00十億ドル、最低運転現金60.00十億ドル、負債等15.00十億ドル、非支配等0.00十億ドル、将来株式19.5十億株。 IPO後推計の自由現金・短期証券2,445.52億ドルを起点に、対象時点までの営業CF−設備投資・前払等を-24.552十億ドルと仮定。金融リース債務の増加は非現金の設備取得で、現金借入収入とはしない。 将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。 事業倍率は同業観測値ではなく当方の将来成長・資本収益に対する仮定。営業利益率と合わせて解釈し、最低運転現金を非事業資産として二重に加算しない。</p></details>
+  <!-- 例: <details open><summary>Base：$64.79 / 確率45%</summary><p>…</p></details> を3つ -->
+</section>
+
+<!-- Layer3：感応度 ＋ 分布（モンテカルロは実施時のみ） -->
+<section class="grid-2" id="sensitivity">
+  <div class="card">
+    <h2>数字がズレるとどうなる？</h2>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
+      <thead><tr><th>動かす変数</th><th>80%</th><th>100%</th><th>120%</th></tr></thead>
+      <tbody><tr><td>全セグメント売上倍率（標準の比率）</td><td>$53.09</td><td>$64.79</td><td>$76.49</td></tr><tr><td>全セグメント売上（標準の比率）</td><td>$53.09</td><td>$64.79</td><td>$76.49</td></tr></tbody>
+    </table></div>
+    <p class="small">標準の全事業売上、または全事業倍率を1つずつ80/100/120%へ変更。他の変数は固定。売上と倍率を独立確率とみなす表ではありません。</p>
+  </div>
+  <div class="card">
+    <h2>どの価格に行きやすい？</h2>
+    <p class="lead">3点の離散分布のみ。モンテカルロ未実施。</p>
+    <div class="signal"><div><b>悲観：$28.65</b></div><p>当方主観確率35%</p></div><div class="signal"><div><b>標準：$64.79</b></div><p>当方主観確率45%</p></div><div class="signal"><div><b>楽観：$146.92</b></div><p>当方主観確率20%</p></div>
+    <!-- 例: <div class="dist-row"><span>5万円未満</span><div class="track"><i style="width:7.6%"></i></div><b>7.6%</b></div> -->
+    <p>悲観35%・標準45%・楽観20%。実績と事業化リスクを踏まえた粗い主観配分。高い成長倍率と資金・規制条件の不確実性から下側を厚く置くが統計的成功率ではない。</p>
+  </div>
+</section>
+
+<!-- 次の決算/イベントで見る場所（watch_items） -->
+<section class="card">
+  <h2>次の決算で見る場所</h2>
+  <div class="signal"><div><b>Claude・Claude Codeの有償採用と継続利用</b></div><p>9月末のTTM売上10万ドル以上の顧客は11,900超。会社定義のNRRは約900%だが急成長初期の影響を含み、将来へ固定しない。10月末Run-Rate Revenue810億ドルは年次実績や受注残ではない。 [S1,S2]</p></div><div class="signal"><div><b>Anthropic Directの稼働と計算費効率</b></div><p>計算設備・リースの契約と実際の稼働・費用削減は別段階。短期計算契約と長期設備を置き換えられるか、供給と費用を確認する。 [S1,S2]</p></div><div class="signal"><div><b>研究・新用途の有償利用への接続</b></div><p>科学研究等の利用拡大と、外部顧客の有償・継続利用を区別する。AI for Scienceは無料クレジットを含むため、提携件数や無償枠を売上へ換算しない。 [S1,S2]</p></div><div class="signal"><div><b>IPO後の売却制限・報酬・公益目的拠出</b></div><p>一般保有者は目論見書日から最大180日、創業者等は最大365日の売却制限があるが、決算後等の早期解除と例外がある。解除可能な全株が売却されるとはしない。公益基金・報酬・転換と既存株の売却を分けて追う。 [S1,S2]</p></div>
+  <!-- 例: <div class="signal"><div><b>2026年7月31日の1Q決算</b></div><p>…</p></div> -->
+</section>
+
+<!-- 前提表（事実/市場データ/推定/仮定を分類明記） -->
+<section class="card" id="assumptions">
+  <h2>使った数字と前提</h2>
+  <div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table>
+  <thead><tr><th>項目</th><th>値</th><th>分類</th><th>注記</th></tr></thead>
+  <tbody><tr><td>基準株価</td><td>$91.88</td><td>市場の時点値</td><td>2026-11-27T18:00:01+00:00 [S5]</td></tr><tr><td>会社実績</td><td>2026年7〜9月の売上169.56億ドル、GAAP営業損失5.67億、純損失232.91億。1〜9月累計は売上332.42億、営業損失12.60億、純損失1,040.39億。累計純損失には転換証券等の評価変動損943.24億などが含まれ、現金流出額とは異なる。累計営業CF65.69億、設備取得9.25億、設備等の前払19.55億。[S1]</td><td>公式情報で確認</td><td>対象期間と通貨を固定 [S1]</td></tr><tr><td>会社計画</td><td>会社はモデル能力、安全性、企業への普及とAnthropic Direct（計算設備の直接調達・リース）の拡大を説明する。計算資源等の購入・リース契約は約9,009億ドルで、うち2026年9月末から12か月に約707億、2030年末までに約4,516億が予定される。全額を現在の借入負債とはしない。取得した資料に2027年通期の確定売上・利益予想や次回決算の確定日時はない。[S1]</td><td>会社の計画・予定</td><td>達成保証ではない [S1,S2]</td></tr><tr><td>連結評価</td><td>対象は2027年末。連結の2027年売上750／1,100／1,700億ドル、EV/Sales（売上に対する事業価値）6／10／16倍を当方仮定とする。2026年Q3売上169.56億と10月末Run-Rate Revenue810億（期間実績ではない）を足場に、成長鈍化・継続拡大・強い拡大を分ける。GAAP営業利益率-15／5／20%は報酬・研究・計算費を含む将来仮定。高い売上倍率には2027年以降の成長が必要で、独立DCFも併記して相違を隠さない。将来現金1,500／1,900／2,200億、最低運転現金600億、金融リース100／120／150億、株式185／188／195億で株主価値へ橋渡しする。</td><td>当方の条件付き仮定</td><td>同業観測倍率ではない。</td></tr><tr><td>株式・財務</td><td>IPO後推計の経済的基本株式は12,549,204,009株。目論見書のA 7,583,103,996株・N 4,789,697,318株に、全量行使の追加147百万株、取得対価株1,410,845株、寄付対応の発行済27,991,850株を加算。議決権専用T/F/Eと子会社が保有する公益基金846,840,960株は除外。オプション1,774,342,693株・平均行使価格2.91ドルを基準株価で自己株式方式にし、未決済RSU1,073,701,297株、取得留保1,590,190株、既存寄付対応義務553,441,297株、Amazon残存転換分1,547,676,309株を加え、評価株式17,443,759,264株。RSUは税・失効を織り込まない保守的近似。Amazonは上場時に保有上限を撤廃しておらず、全転換は計算上の仮定。全転換扱いのため転換負債評価額1,097.42億ドルを再控除しない。金融リース16.74億のみ別途控除。将来株式185／188／195億株は基金の外部移転、報酬・寄付対応を含む当方仮定。[S1,S2]</td><td>公式数値＋当方概算</td><td>時点と期間平均の違い、報酬の重複に注意。</td></tr><tr><td>資金</td><td>将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。</td><td>当方の条件付き仮定</td><td>9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2]</td></tr><tr><td>その他資産</td><td>未使用の融資・転換枠、買収済み事業価値や将来の無料クレジットは現金・その他資産へ加えない。制限現金25.40億ドルは自由現金と別のため再控除しない。公益基金の自己保有分は現在の経済株式数から除外し、将来外部移転は将来株式へ反映する。[S1]</td><td>帳簿値起点の当方計算</td><td>取得済み資産・子会社を再加算しない。</td></tr><tr><td>確率</td><td>悲観35%／標準45%／楽観20%</td><td>粗い主観配分</td><td>統計的確率や成功率ではない。</td></tr></tbody>
+  </table></div>
+</section>
+
+<!-- Layer3：ガチ勢向け深掘り（details折りたたみ） -->
+<section class="card">
+  <h2>詳しく見たい人向け</h2>
+  <details><summary>利益との接続・補助比較</summary><p>悲観の想定営業利益-11.25十億ドル、EV/営業利益算出対象外（営業赤字）。標準の想定営業利益5.50十億ドル、EV/営業利益200.0倍。楽観の想定営業利益34.00十億ドル、EV/営業利益80.0倍。これは連結評価と同じ入力に基づく妥当性点検で、独立したDCFではありません。赤字や極端な倍率はモデルの弱点として読みます。</p></details><details><summary>資金・希薄化</summary><p>IPO後推計の経済的基本株式は12,549,204,009株。目論見書のA 7,583,103,996株・N 4,789,697,318株に、全量行使の追加147百万株、取得対価株1,410,845株、寄付対応の発行済27,991,850株を加算。議決権専用T/F/Eと子会社が保有する公益基金846,840,960株は除外。オプション1,774,342,693株・平均行使価格2.91ドルを基準株価で自己株式方式にし、未決済RSU1,073,701,297株、取得留保1,590,190株、既存寄付対応義務553,441,297株、Amazon残存転換分1,547,676,309株を加え、評価株式17,443,759,264株。RSUは税・失効を織り込まない保守的近似。Amazonは上場時に保有上限を撤廃しておらず、全転換は計算上の仮定。全転換扱いのため転換負債評価額1,097.42億ドルを再控除しない。金融リース16.74億のみ別途控除。将来株式185／188／195億株は基金の外部移転、報酬・寄付対応を含む当方仮定。[S1,S2] 将来自由現金＝IPO後推計現金・短期投資＋営業CF−現金設備投資・前払等。新規株式調達と現金借入の収入は置かない。金融リース債務の増加は非現金の設備取得であり、現金の調達収入として加算しない。将来の運営費と賃貸料は営業CF等に含め、契約総額9,009億ドルを負債として重複控除しない。新規増資を使う場合は純調達現金と追加株式を同時に再計算する。 9月末自由現金955.62億＋短期投資362.83億＝1,318.45億ドル。目論見書のIPO・私募・RSU税金支払反映後推計2,323.51億に、追加147百万株×83ドル＝122.01億を加え、IPO後2,445.52億ドルと推定。追加分は引受手数料なし。これはIPO後の実測残高ではなく、その後の費用・資金移動を含まない。最低運転現金600億は当方仮定。TTM営業CF59.56億−設備取得9.45億は50.11億のプラスで、設備等前払19.58億も引くと30.53億。計算契約の負担増を過去CFから外挿せず、資金枯渇月を断定しない。[S1,S2]</p></details><details><summary>総合判定</summary><p>現在株価評価71.5、カタリスト75、企業基盤リスク75。60/25/15%で総合72.9、買われすぎ。株価スコアは悲観→標準を0→50、標準→楽観を50→100で補間し、売上倍率・希薄化・事業化の不確実性で5点加算、0〜100へ制限。材料85は成長実績に対し複数の未完了条件と期待先行が大きいとの主観評価。企業リスクは財務・投資・集中・規制を根拠とする主観評価。日々の株価から自動再計算しない。</p></details><details><summary>主要出典・制約</summary><ul><li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm" target="_blank" rel="noopener noreferrer">S1：確定目論見書（424B4、2026年9月期財務・資本・契約）</a>（公開：2026-11-19／取得：2026-11-28）</li><li><a href="https://www.sec.gov/Archives/edgar/data/2130357/000162828026075973/ant-20261119.htm" target="_blank" rel="noopener noreferrer">S2：IPO・私募完了と資本構造の8-K</a>（公開：2026-11-25／取得：2026-11-28）</li><li><a href="https://www.anthropic.com/news/ipo-close" target="_blank" rel="noopener noreferrer">S3：IPO・追加発行・同時私募完了の公式発表</a>（公開：2026-11-20／取得：2026-11-28）</li><li><a href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions" target="_blank" rel="noopener noreferrer">S4：AI for Science拡大（無料クレジットと研究段階の区別）</a>（公開：2026-10-28／取得：2026-11-28）</li><li><a href="https://data.sec.gov/submissions/CIK0002130357.json" target="_blank" rel="noopener noreferrer">S6：最新SEC提出履歴</a>（公開：取得時点で確認／取得：2026-11-28）</li><li><a href="https://www.anthropic.com/news/public-benefit-fund" target="_blank" rel="noopener noreferrer">S7：公益基金・株式拠出の公式説明</a>（公開：2026-10-18／取得：2026-11-28）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S8：S&amp;P 500日足・補助比較</a>（公開：取得時点で確認／取得：2026-11-28）</li><li><a href="https://query1.finance.yahoo.com/v8/finance/chart/ANT?range=3mo&amp;interval=1d" target="_blank" rel="noopener noreferrer">S5：市場価格（日足・時点値）</a>（公開：取得時点で確認／取得：2026-11-28）</li></ul><p>分析基準株価$91.88／2026-11-27T18:00:01+00:00。分析基準日2026-11-28。対象2027年末。時点値で終値とは限りません。</p><p>独立DCF・市場コンセンサス・同業横断倍率・オプション・空売りの取得は未実施。</p></details><details><summary>市場データ・取得範囲</summary><p>上場後の日足は6営業日で、観測安値$73.85〜高値$115.10。52週の上場履歴はない。ANTの20営業日騰落率・同期間の相対騰落は算出不可。S&amp;P 500の直近20営業日騰落率は-5.5%（2026-11-27T18:38:39+00:00時点）だが、ANTの短い履歴とは同期間比較しない。 [S5,S8]</p></details><details><summary>独立DCFとの照合</summary>2028〜2037年の無杠杆FCFを-50／50／150／300／450／600／700／800／900／1,000億ドルとする独立の当方仮定。費用・税・現金投資と営業賃料の後、金融利息・元本支払前。設備リースの非現金取得を借入現金収入へは入れない。割引率12%、永久成長率3%、2037年末終価を2027年末へ割引く。EV 582.30十億ドル。標準の自由現金1,900億−最低運転現金600億−金融リース120億を加減し、188億株で割ると$37.25。主手法との平均は取らない。DCFも長期CFと終価への感応度が高く、独立した観測事実ではない。<div class="table-wrap" tabindex="0" role="region" aria-label="横にスクロールできる表"><table><thead><tr><th>割引率／永久成長率</th><th>2%</th><th>3%</th><th>4%</th></tr></thead><tbody><tr><td>10%</td><td>$45.36</td><td>$49.38</td><td>$54.76</td></tr><tr><td>12%</td><td>$35.12</td><td>$37.25</td><td>$39.91</td></tr><tr><td>14%</td><td>$28.51</td><td>$29.75</td><td>$31.24</td></tr></tbody></table></div><p>主手法との差は将来成長・資本効率と終価の前提に依存。平均して差を消さず、確信度を低く置きます。</p></details>
+  <!-- 手法選定理由 / 市場逆算 / 倍率トラジェクトリ / 同業比較 / キャッシュバーン・希薄化 /
+       転換社債 / M&A / モンテカルロ・ベイズ（実施時）/ 前提と未確認事項 / 更新履歴 / 主要出典 を
+       それぞれ <details><summary>…</summary><p>…</p></details> で。出典はリンクの箇条書き -->
+</section>
+
+<section class="card notice">
+  <h3>免責</h3><p>情報提供・教育目的の条件付き分析であり、投資助言・売買推奨ではありません。会社実績・見通しと当方仮定を区別してください。分析値は固定し、配当を価格比較へ含めません。</p>
+</section>
+<footer>分析基準株価$91.88／2026-11-27T18:00:01+00:00。分析基準日2026-11-28。対象2027年末。時点値で終値とは限りません。<br><a href="../../index.html">銘柄一覧へ戻る</a></footer>
+</main>
+<script src="../../lab/assets/js/live-report-price.js" defer></script>
+</body></html>

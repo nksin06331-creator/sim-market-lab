@@ -558,17 +558,19 @@
       "reports": {
         "company": {
           "path": "./stocks/anthropic-ant/company.html",
-          "available": false
+          "available": true
         },
         "valuation": {
           "path": "./stocks/anthropic-ant/valuation.html",
-          "available": false
+          "available": true
         },
         "catalysts": {
           "path": "./stocks/anthropic-ant/catalysts.html",
-          "available": false
+          "available": true
         }
-      }
+      },
+      "reportAsOf": "2026-11-28",
+      "reportRevision": "anthropic-ant-2026-11-28-v1"
     }
   ]
 }
